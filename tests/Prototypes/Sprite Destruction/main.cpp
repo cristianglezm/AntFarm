@@ -15,8 +15,8 @@ void explode(sf::Sprite& sprite,sf::Vector2f position,float radius,sf::VertexArr
             for (yPos = position.y - radius;  yPos <= position.y + radius; yPos++) {
                 if (sqrtf(xPos - position.x) + sqrtf(yPos - position.y) <= radius * radius) {
                     if((xPos > spritePosX && xPos < spriteWidth)&&(yPos > spritePosY && yPos < spriteHeight)){
-                        liveParticles[spriteHeight * yPos + xPos] = staticParticles[spriteHeight * yPos  + xPos];
-                        staticParticles[spriteHeight * yPos + xPos].color.a = 0;
+                        liveParticles[spriteWidth * yPos + xPos] = staticParticles[spriteHeight * yPos  + xPos];
+                        staticParticles[spriteWidth * yPos + xPos].color.a = 0;
                     }
                 }
             }
@@ -28,7 +28,7 @@ void explode2(sf::Sprite& sprite,sf::Vector2f position,sf::VertexArray& staticPa
     int spritePosX = sprite.getTextureRect().left;
     int spritePosY = sprite.getTextureRect().top;
     if((position.x > spritePosX && position.x < spriteWidth)&&(position.y > spritePosY && position.y < spriteHeight)){
-            staticParticles[spriteHeight * position.y + position.x].color.a = 0;
+            staticParticles[spriteWidth * position.y + position.x].color.a = 0;
     }
 }
 void explodeCircle(sf::Sprite& sprite,sf::Vector2f position,sf::VertexArray& staticParticles,int radius){
@@ -151,21 +151,18 @@ int main()
         winBorders.setOutlineColor(sf::Color::Red);
         winBorders.setOutlineThickness(5);
         /// Hover Mouse to destruct
-    //sf::Vector2f position = app.mapPixelToCoords(sf::Mouse::getPosition(app),app.getView());
-    //explode(sprite,position,3,liveParticles,particles);
-    sf::Vector2f position(counterX,counterY);
-    counterX++;
-    counterY++;
-    explode(sprite,position,69,liveParticles,particles);
-/*
+    sf::Vector2f position = (sf::Vector2f) app.mapCoordsToPixel((sf::Vector2f) sf::Mouse::getPosition(app));
+    explode(sprite,position,3,liveParticles,particles);
+    //explode2(sprite,position,particles);
+
         for(int y=0;y<TextureHeight;++y){
             for(int x=0;x<TextureWidth;++x){
                     if(liveParticles[TextureWidth * y + x].position.y < 400){
-                            liveParticles[TextureWidth * y + x].position += sf::Vector2f(0,1);
+                            liveParticles[TextureHeight * y + x].position += sf::Vector2f(0,1);
                     }
             }
         }
-*/
+
 
 
         // Clear screen
@@ -176,7 +173,7 @@ int main()
         //app.draw(r);
         app.draw(winBorders);
         app.draw(particles,&texture);
-        //app.draw(liveParticles,&texture);
+        app.draw(liveParticles,&texture);
         // Update the window
         app.display();
         system("cls");
