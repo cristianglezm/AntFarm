@@ -90,7 +90,7 @@ int main()
     sf::RectangleShape r{};
     sf::View v{};
     bool pressedBtn = false;
-    v.setViewport(sf::FloatRect{0,0,1,1});
+    v.setViewport(sf::FloatRect(0,0,5,5));
     sf::View v2{};
     v2.setViewport(sf::FloatRect{0.75f, 0, 0.25f, 0.25f});
     sf::VertexArray particles(sf::Points,sprite.getTextureRect().width * sprite.getTextureRect().height);
@@ -98,6 +98,12 @@ int main()
     mapParticles(sprite,particles);
     int TextureWidth = sprite.getTextureRect().width;
     int TextureHeight = sprite.getTextureRect().height;
+
+    sf::VertexArray rain(sf::Points,500);
+    for(int i=0;i<500;++i){
+        rain[i].position = sf::Vector2f(0,0);
+        rain[i].color = sf::Color::Red;
+    }
 	// Start the game loop
 	sf::Time elapsedTime;
 	sf::Time lastFrame;
@@ -113,7 +119,7 @@ int main()
                 case sf::Event::MouseButtonPressed:
                     if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
                         //sprite.setPosition(sf::Mouse::getPosition(app).x,sf::Mouse::getPosition(app).y);
-                            sf::Vector2i position = app.mapCoordsToPixel((sf::Vector2f) sf::Mouse::getPosition(app));
+                            sf::Vector2f position = (sf::Vector2f) app.mapPixelToCoords(sf::Mouse::getPosition(app));
                             system("cls");
                             std::cout << "X: " << position.x << std::endl;
                             std::cout << "Y: " << position.y << std::endl;
@@ -131,6 +137,24 @@ int main()
                     }
                     if(event.key.code == sf::Keyboard::A){
                         sprite.setRotation(sprite.getRotation()-10);
+                    }
+                    if(event.key.code == sf::Keyboard::Left){
+                        v.move(-10,0);
+                    }
+                    if(event.key.code == sf::Keyboard::Right){
+                        v.move(10,0);
+                    }
+                    if(event.key.code == sf::Keyboard::Up){
+                        v.move(0,-10);
+                    }
+                    if(event.key.code == sf::Keyboard::Down){
+                        v.move(0,10);
+                    }
+                    if(event.key.code == sf::Keyboard::Add){
+                        v.zoom(0.5);
+                    }
+                    if(event.key.code == sf::Keyboard::Subtract){
+                        v.zoom(1.5);
                     }
                     break;
                 }
@@ -151,10 +175,10 @@ int main()
         winBorders.setOutlineColor(sf::Color::Red);
         winBorders.setOutlineThickness(5);
         /// Hover Mouse to destruct
-    sf::Vector2f position = (sf::Vector2f) app.mapCoordsToPixel((sf::Vector2f) sf::Mouse::getPosition(app));
+    sf::Vector2f position = (sf::Vector2f) app.mapPixelToCoords(sf::Mouse::getPosition(app));
     explode(sprite,position,3,liveParticles,particles);
     //explode2(sprite,position,particles);
-
+    std::cout << "\nPosition : " << position.x << "," << position.y << std::endl;
         for(int y=0;y<TextureHeight;++y){
             for(int x=0;x<TextureWidth;++x){
                     if(liveParticles[TextureWidth * y + x].position.y < 400){
@@ -162,18 +186,21 @@ int main()
                     }
             }
         }
-
+        for(int i=0;i<500;++i){
+            rain[i].position += sf::Vector2f(0,0.1);
+        }
 
 
         // Clear screen
-        app.clear(sf::Color::Black);
-        //app.setView(v);
+        app.clear();
+        app.setView(v);
         // Draw the sprite
         app.draw(background);
         //app.draw(r);
         app.draw(winBorders);
         app.draw(particles,&texture);
         app.draw(liveParticles,&texture);
+        app.draw(rain);
         // Update the window
         app.display();
         system("cls");
