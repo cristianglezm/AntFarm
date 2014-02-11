@@ -61,6 +61,7 @@ void mapParticles(sf::Sprite& sprite,sf::VertexArray& staticParticles){
             for(int x=spritePosX;x<SpriteWidth;++x){
                 staticParticles[SpriteWidth * y + x].position = sf::Vector2f(x,y);
                 staticParticles[SpriteWidth * y + x].texCoords = sf::Vector2f(x,y);
+                staticParticles[SpriteWidth * y + x].color.a = 255;
             }
     }
 }
@@ -119,6 +120,11 @@ int main()
                         particles = sf::VertexArray();
                     }
                     break;
+                case sf::Event::KeyPressed:
+                        if(sf::Keyboard::isKeyPressed(sf::Keyboard::R)){
+                            mapParticles(sprite,particles);
+                        }
+                    break;
                 }
         }
     /// Hover Mouse to destruct
@@ -127,7 +133,7 @@ int main()
     /// Only One
     //explode2(sprite,position,particles);
     /// Circle
-    explodeCircle(sprite,position,particles,20);
+    explodeCircle(sprite,position,particles,250);
         // Clear screen
         app.clear();
         // Draw the sprite

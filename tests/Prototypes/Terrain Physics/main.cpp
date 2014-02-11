@@ -1,8 +1,4 @@
 #include <iostream>
-#include <algorithm>
-#include <vector>
-#include <map>
-#include <cmath>
 #include <SFML/Graphics.hpp>
 
 void explode(sf::Sprite& sprite,sf::Vector2f position,float radius,sf::VertexArray& liveParticles,sf::VertexArray& staticParticles){
@@ -22,33 +18,39 @@ void explode(sf::Sprite& sprite,sf::Vector2f position,float radius,sf::VertexArr
             }
     }
 }
-void explode2(sf::Sprite& sprite,sf::Vector2f position,sf::VertexArray& staticParticles){
+void explode2(sf::Sprite& sprite,sf::Vector2f position,sf::VertexArray& staticParticles,sf::VertexArray& heightMap){
     int spriteHeight = sprite.getTextureRect().height;
     int spriteWidth = sprite.getTextureRect().width;
     int spritePosX = sprite.getTextureRect().left;
     int spritePosY = sprite.getTextureRect().top;
     if((position.x > spritePosX && position.x < spriteWidth)&&(position.y > spritePosY && position.y < spriteHeight)){
-            staticParticles[spriteWidth * position.y + position.x].color.a = 0;
+            if(heightMap[spriteWidth * position.y + position.x].color == sf::Color::White){
+                staticParticles[spriteWidth * position.y + position.x].color.a = 0;
+            }
     }
 }
-void explodeCircle(sf::Sprite& sprite,sf::Vector2f position,sf::VertexArray& staticParticles,int radius){
+void explodeCircle(sf::Sprite& sprite,sf::Vector2f position,sf::VertexArray& staticParticles,int radius,sf::VertexArray& heightMap){
     int x = radius, y = 0;
     int radiusError = 1-x;
   while(x >= y){
-    explode2(sprite,sf::Vector2f(x + position.x, y + position.y),staticParticles);
-    explode2(sprite,sf::Vector2f(y + position.x, x + position.y),staticParticles);
-    explode2(sprite,sf::Vector2f(-x + position.x, y + position.y),staticParticles);
-    explode2(sprite,sf::Vector2f(-y + position.x, x + position.y),staticParticles);
-    explode2(sprite,sf::Vector2f(-x + position.x, -y + position.y),staticParticles);
-    explode2(sprite,sf::Vector2f(-y + position.x, -x + position.y),staticParticles);
-    explode2(sprite,sf::Vector2f(x + position.x, -y + position.y),staticParticles);
-    explode2(sprite,sf::Vector2f(y + position.x, -x + position.y),staticParticles);
+    explode2(sprite,sf::Vector2f(x + position.x, y + position.y),staticParticles,heightMap);
+    explode2(sprite,sf::Vector2f(y + position.x, x + position.y),staticParticles,heightMap);
+    explode2(sprite,sf::Vector2f(-x + position.x, y + position.y),staticParticles,heightMap);
+    explode2(sprite,sf::Vector2f(-y + position.x, x + position.y),staticParticles,heightMap);
+    explode2(sprite,sf::Vector2f(-x + position.x, -y + position.y),staticParticles,heightMap);
+    explode2(sprite,sf::Vector2f(-y + position.x, -x + position.y),staticParticles,heightMap);
+    explode2(sprite,sf::Vector2f(x + position.x, -y + position.y),staticParticles,heightMap);
+    explode2(sprite,sf::Vector2f(y + position.x, -x + position.y),staticParticles,heightMap);
     y++;
 	if(radiusError<0)
 		radiusError+=2*y+1;
 	else{
 		x--;
 		radiusError+=2*(y-x+1);
+	}
+	while(radius > 0){
+            --radius;
+            explodeCircle(sprite,position,staticParticles,radius,heightMap);
 	}
   }
 }
@@ -64,6 +66,15 @@ void mapParticles(sf::Sprite& sprite,sf::VertexArray& staticParticles){
             }
     }
 }
+void mapImage(sf::Image& image,sf::VertexArray& staticParticles){
+    int imageWidth = image.getSize().x;
+    int imageHeight = image.getSize().y;
+    for(int y = 0;y<imageHeight;++y){
+        for(int x = 0;x<imageWidth;++x){
+            staticParticles[imageWidth * y + x].color = image.getPixel(x,y);
+        }
+    }
+}
 float getFPS(const sf::Time& time) {
      return (1000000.0f / time.asMicroseconds());
 }
@@ -71,7 +82,6 @@ float getFPS(const sf::Time& time) {
 
 int main()
 {
-    float counterX=0,counterY=0;
     // Create the main window
     sf::RenderWindow app(sf::VideoMode(800, 600), "AntFarm");
     sf::RectangleShape winBorders{};
@@ -84,8 +94,13 @@ int main()
     if(!texture1.loadFromFile("data/MapNestBackground.png")){
         return EXIT_FAILURE;
     }
+    sf::Image* heightMapImage = new sf::Image();
+    if(!heightMapImage->loadFromFile("data/MapNestHeightMap.png")){
+        return EXIT_FAILURE;
+    }
     sf::Sprite background(texture1);
     sf::Sprite sprite(texture);
+
     sprite.setPosition(0,0);
     sf::RectangleShape r{};
     sf::View v{};
@@ -95,7 +110,10 @@ int main()
     v2.setViewport(sf::FloatRect{0.75f, 0, 0.25f, 0.25f});
     sf::VertexArray particles(sf::Points,sprite.getTextureRect().width * sprite.getTextureRect().height);
     sf::VertexArray liveParticles(sf::Points,sprite.getTextureRect().width * sprite.getTextureRect().height);
+    sf::VertexArray heightMap(sf::Points,sprite.getTextureRect().width * sprite.getTextureRect().height);
     mapParticles(sprite,particles);
+    mapImage(*heightMapImage,heightMap);
+    delete heightMapImage;
     int TextureWidth = sprite.getTextureRect().width;
     int TextureHeight = sprite.getTextureRect().height;
 
@@ -119,12 +137,12 @@ int main()
                 case sf::Event::MouseButtonPressed:
                     if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
                         //sprite.setPosition(sf::Mouse::getPosition(app).x,sf::Mouse::getPosition(app).y);
-                            sf::Vector2i position = app.mapCoordsToPixel((sf::Vector2f) sf::Mouse::getPosition(app));
+                            sf::Vector2f position = app.mapPixelToCoords(sf::Mouse::getPosition(app));
                             system("cls");
                             std::cout << "X: " << position.x << std::endl;
                             std::cout << "Y: " << position.y << std::endl;
-                            explode(sprite,(sf::Vector2f)position,60,liveParticles,particles);
-                            //explodeCircle(sprite,(sf::Vector2f)position,particles,60);
+                            //explode(sprite,(sf::Vector2f)position,60,liveParticles,particles);
+                            explodeCircle(sprite,position,particles,10,heightMap);
                     }
                     if(sf::Mouse::isButtonPressed(sf::Mouse::Right)){
                         liveParticles = particles;
@@ -175,9 +193,9 @@ int main()
         winBorders.setOutlineColor(sf::Color::Red);
         winBorders.setOutlineThickness(5);
         /// Hover Mouse to destruct
-    sf::Vector2f position = (sf::Vector2f) app.mapCoordsToPixel((sf::Vector2f) sf::Mouse::getPosition(app),v);
-    explode(sprite,position,3,liveParticles,particles);
-    //explode2(sprite,position,particles);
+    sf::Vector2f position = (sf::Vector2f) app.mapPixelToCoords(sf::Mouse::getPosition(app));
+    //explode(sprite,position,3,liveParticles,particles);
+    explodeCircle(sprite,position,particles,6,heightMap);
     std::cout << "\nPosition : " << position.x << "," << position.y << std::endl;
         for(int y=0;y<TextureHeight;++y){
             for(int x=0;x<TextureWidth;++x){
@@ -193,14 +211,14 @@ int main()
 
         // Clear screen
         app.clear();
-        app.setView(v);
+        //app.setView(v);
         // Draw the sprite
         app.draw(background);
         //app.draw(r);
         app.draw(winBorders);
         app.draw(particles,&texture);
         app.draw(liveParticles,&texture);
-        app.draw(rain);
+        //app.draw(rain);
         // Update the window
         app.display();
         system("cls");
