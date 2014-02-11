@@ -102,7 +102,7 @@ int main()
     sf::VertexArray rain(sf::Points,500);
     for(int i=0;i<500;++i){
         rain[i].position = sf::Vector2f(0,0);
-        rain[i].color = sf::Color::Red;
+        rain[i].color.r = 255;
     }
 	// Start the game loop
 	sf::Time elapsedTime;

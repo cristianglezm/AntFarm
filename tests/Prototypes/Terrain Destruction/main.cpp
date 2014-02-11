@@ -47,6 +47,10 @@ void explodeCircle(sf::Sprite& sprite,sf::Vector2f position,sf::VertexArray& sta
 		radiusError+=2*(y-x+1);
 	}
   }
+  if(radius > 0){
+    --radius;
+    explodeCircle(sprite,position,staticParticles,radius);
+  }
 }
 void mapParticles(sf::Sprite& sprite,sf::VertexArray& staticParticles){
     int SpriteWidth = sprite.getGlobalBounds().width;
@@ -69,6 +73,8 @@ int main()
 {
     // Create the main window
     sf::RenderWindow app(sf::VideoMode(800, 600), "AntFarm");
+    app.setFramerateLimit(0);
+    app.setVerticalSyncEnabled(false);
     sf::RectangleShape winBorders{};
     // Load a sprite to display
     sf::Texture texture;
@@ -117,11 +123,11 @@ int main()
         }
     /// Hover Mouse to destruct
     sf::Vector2f position = (sf::Vector2f) app.mapPixelToCoords(sf::Mouse::getPosition(app));
-    //explode(sprite,position,3,liveParticles,particles);
+    //explode(sprite,position,21,liveParticles,particles);
     /// Only One
     //explode2(sprite,position,particles);
     /// Circle
-    explodeCircle(sprite,position,particles,4);
+    explodeCircle(sprite,position,particles,20);
         // Clear screen
         app.clear();
         // Draw the sprite
