@@ -129,9 +129,6 @@ int main()
                 case sf::Event::MouseButtonPressed:
                     if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
                         sf::Vector2f position =(sf::Vector2f)app.mapPixelToCoords(sf::Mouse::getPosition(app));
-                       // system("cls");
-                       // std::cout << "X: " << position.x << std::endl;
-                       // std::cout << "Y: " << position.y << std::endl;
                         //explode(sprite,position,60,liveParticles,particles);
                         explodeCircle(sprite,(sf::Vector2f)position,particles,500);
                     }

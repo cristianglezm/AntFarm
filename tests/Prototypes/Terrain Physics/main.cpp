@@ -48,7 +48,7 @@ void explodeCircle(sf::Sprite& sprite,sf::Vector2f position,sf::VertexArray& sta
 		x--;
 		radiusError+=2*(y-x+1);
 	}
-	while(radius > 0){
+	if(radius > 0){
             --radius;
             explodeCircle(sprite,position,staticParticles,radius,heightMap);
 	}
@@ -125,11 +125,8 @@ int main()
                     if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
                         //sprite.setPosition(sf::Mouse::getPosition(app).x,sf::Mouse::getPosition(app).y);
                             sf::Vector2f position = app.mapPixelToCoords(sf::Mouse::getPosition(app));
-                            system("cls");
-                            std::cout << "X: " << position.x << std::endl;
-                            std::cout << "Y: " << position.y << std::endl;
                             //explode(sprite,(sf::Vector2f)position,60,liveParticles,particles);
-                            explodeCircle(sprite,position,particles,20,heightMap);
+                            explodeCircle(sprite,position,particles,500,heightMap);
                     }
                     break;
                 case sf::Event::KeyPressed:
@@ -149,8 +146,6 @@ int main()
     sf::Vector2f position = (sf::Vector2f) app.mapPixelToCoords(sf::Mouse::getPosition(app));
     //explode(sprite,position,3,liveParticles,particles);
     explodeCircle(sprite,position,particles,12,heightMap);
-    std::cout << "\nPosition : " << position.x << "," << position.y << std::endl;
-
         // Clear screen
         app.clear();
         // Draw the sprite
@@ -158,8 +153,6 @@ int main()
         app.draw(particles,&texture);
         // Update the window
         app.display();
-        system("cls");
-        std::cout << "FPS: " << getFPS(clock.restart());
     }
 
     return EXIT_SUCCESS;
