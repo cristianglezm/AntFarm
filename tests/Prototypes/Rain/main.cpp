@@ -50,6 +50,10 @@ void explodeCircle(sf::Sprite& sprite,sf::Vector2f position,sf::VertexArray& sta
 		x--;
 		radiusError+=2*(y-x+1);
 	}
+	if(radius > 0){
+        --radius;
+        explodeCircle(sprite,position,staticParticles,radius);
+	}
   }
 }
 void mapParticles(sf::Sprite& sprite,sf::VertexArray& staticParticles){
@@ -61,6 +65,7 @@ void mapParticles(sf::Sprite& sprite,sf::VertexArray& staticParticles){
             for(int x=spritePosX;x<SpriteWidth;++x){
                 staticParticles[SpriteWidth * y + x].position = sf::Vector2f(x,y);
                 staticParticles[SpriteWidth * y + x].texCoords = sf::Vector2f(x,y);
+                staticParticles[SpriteWidth * y + x].color.a = 255;
             }
     }
 }
@@ -71,10 +76,9 @@ float getFPS(const sf::Time& time) {
 
 int main()
 {
-    float counterX=0,counterY=0;
     // Create the main window
     sf::RenderWindow app(sf::VideoMode(800, 600), "AntFarm");
-    sf::RectangleShape winBorders{};
+
     // Load a sprite to display
     sf::Texture texture;
     if (!texture.loadFromFile("data/MapNestFrontground.png")){
@@ -87,26 +91,25 @@ int main()
     sf::Sprite background(texture1);
     sf::Sprite sprite(texture);
     sprite.setPosition(0,0);
-    sf::RectangleShape r{};
     sf::View v{};
     bool pressedBtn = false;
     v.setViewport(sf::FloatRect(0,0,5,5));
-    sf::View v2{};
-    v2.setViewport(sf::FloatRect{0.75f, 0, 0.25f, 0.25f});
+
     sf::VertexArray particles(sf::Points,sprite.getTextureRect().width * sprite.getTextureRect().height);
     sf::VertexArray liveParticles(sf::Points,sprite.getTextureRect().width * sprite.getTextureRect().height);
     mapParticles(sprite,particles);
     int TextureWidth = sprite.getTextureRect().width;
     int TextureHeight = sprite.getTextureRect().height;
 
-    sf::VertexArray rain(sf::Points,500);
-    for(int i=0;i<500;++i){
-        rain[i].position = sf::Vector2f(0,0);
-        rain[i].color.r = 255;
+    sf::VertexArray rain(sf::Points,5000);
+    for(int i=0;i<5000;++i){
+        rain[i].position = sf::Vector2f(rand()%1+i,0);
+        rain[i].color.r = 0;
+        rain[i].color.g = 0;
+        rain[i].color.b = 220;
+        rain[i].color.a = 255;
     }
 	// Start the game loop
-	sf::Time elapsedTime;
-	sf::Time lastFrame;
 	sf::Clock clock;
     while (app.isOpen()){
         // Process events
@@ -118,13 +121,8 @@ int main()
                     break;
                 case sf::Event::MouseButtonPressed:
                     if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
-                        //sprite.setPosition(sf::Mouse::getPosition(app).x,sf::Mouse::getPosition(app).y);
-                            sf::Vector2f position = (sf::Vector2f) app.mapPixelToCoords(sf::Mouse::getPosition(app));
-                            system("cls");
-                            std::cout << "X: " << position.x << std::endl;
-                            std::cout << "Y: " << position.y << std::endl;
-                            explode(sprite,(sf::Vector2f)position,60,liveParticles,particles);
-                            //explodeCircle(sprite,(sf::Vector2f)position,particles,60);
+                            sf::Vector2f position = app.mapPixelToCoords(sf::Mouse::getPosition(app));
+                            explodeCircle(sprite,position,particles,60);
                     }
                     if(sf::Mouse::isButtonPressed(sf::Mouse::Right)){
                         liveParticles = particles;
@@ -132,11 +130,8 @@ int main()
                     }
                     break;
                 case sf::Event::KeyPressed:
-                    if(event.key.code == sf::Keyboard::D){
-                        sprite.setRotation(sprite.getRotation()+10);
-                    }
-                    if(event.key.code == sf::Keyboard::A){
-                        sprite.setRotation(sprite.getRotation()-10);
+                    if(event.key.code == sf::Keyboard::R){
+                        mapParticles(sprite,particles);
                     }
                     if(event.key.code == sf::Keyboard::Left){
                         v.move(-10,0);
@@ -159,35 +154,23 @@ int main()
                     break;
                 }
         }
-        //sprite.setPosition(sprite.getPosition().x+(0.3f * sin(sprite.getRotation()* (3.14159265 /180))),
-        //                   sprite.getPosition().y+(0.3f * -cos(sprite.getRotation()* (3.14159265 /180))));
-        r.setTextureRect((sf::Rect<int>) sprite.getGlobalBounds());
-        r.setPosition(sprite.getPosition());
-        r.setRotation(sprite.getRotation());
-        r.setSize(sf::Vector2f(sprite.getGlobalBounds().width,sprite.getGlobalBounds().height));
-        r.setFillColor(sf::Color::Transparent);
-        r.setOutlineColor(sf::Color::Red);
-        r.setOutlineThickness(5);
-
-        winBorders.setSize((sf::Vector2f)app.getSize()-sf::Vector2f(4,4));
-        winBorders.setPosition(2,2);
-        winBorders.setFillColor(sf::Color::Transparent);
-        winBorders.setOutlineColor(sf::Color::Red);
-        winBorders.setOutlineThickness(5);
-        /// Hover Mouse to destruct
+    /// Hover Mouse to destruct
     sf::Vector2f position = (sf::Vector2f) app.mapPixelToCoords(sf::Mouse::getPosition(app));
-    explode(sprite,position,3,liveParticles,particles);
-    //explode2(sprite,position,particles);
-    std::cout << "\nPosition : " << position.x << "," << position.y << std::endl;
-        for(int y=0;y<TextureHeight;++y){
-            for(int x=0;x<TextureWidth;++x){
-                    if(liveParticles[TextureWidth * y + x].position.y < 400){
-                            liveParticles[TextureHeight * y + x].position += sf::Vector2f(0,1);
-                    }
+    //explode(sprite,position,3,liveParticles,particles);
+    explodeCircle(sprite,position,particles,6);
+    sf::Image ss();
+        for(int i=0;i<5000;++i){
+            if(i%5 == 0){
+                ///rain[i].position = position - sf::Vector2f(i,i);
+                rain[i].position += sf::Vector2f(0,0.5);
+            }else{
+                rain[i].position += sf::Vector2f(0,1);
+                ///rain[i].position = position + sf::Vector2f(i,i);
             }
-        }
-        for(int i=0;i<500;++i){
-            rain[i].position += sf::Vector2f(0,0.1);
+            if(particles[TextureWidth * rain[i].position.y + rain[i].position.x].color.a == 255){
+                rain[i].position.y = 0;
+                rain[i].position.x = rand()%1+i;
+            }
         }
 
 
@@ -196,15 +179,10 @@ int main()
         app.setView(v);
         // Draw the sprite
         app.draw(background);
-        //app.draw(r);
-        app.draw(winBorders);
         app.draw(particles,&texture);
-        app.draw(liveParticles,&texture);
         app.draw(rain);
         // Update the window
         app.display();
-        system("cls");
-        std::cout << "FPS: " << getFPS(clock.restart());
     }
 
     return EXIT_SUCCESS;

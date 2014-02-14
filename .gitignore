@@ -3,6 +3,8 @@
 #################
 *.cbp
 *.pydevproject
+*.out
+*.o
 .project
 .metadata
 bin/

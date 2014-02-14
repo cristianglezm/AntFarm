@@ -52,6 +52,7 @@ void explodeCircle(sf::Sprite& sprite,sf::Vector2f position,sf::VertexArray& sta
     explodeCircle(sprite,position,staticParticles,radius);
   }
 }
+
 void mapParticles(sf::Sprite& sprite,sf::VertexArray& staticParticles){
     int SpriteWidth = sprite.getGlobalBounds().width;
     int SpriteHeight = sprite.getGlobalBounds().height;
@@ -98,22 +99,41 @@ int main()
 	sf::Time elapsedTime;
 	sf::Time lastFrame;
 	sf::Clock clock;
-    while (app.isOpen()){
+	sf::Text fps;
+	sf::Font font;
+	if(!font.loadFromFile("data/fonts/sewer.ttf")){
+        return EXIT_FAILURE;
+	}
+	fps.setFont(font);
+	fps.setCharacterSize(25);
+    fps.setPosition(680,550);
+    bool running=true;
+    while (running){
         // Process events
+        int FPS = getFPS(clock.restart());
+        /// TODO
+        fps.setString("ChangeME");
+        if(FPS < 5){
+            fps.setColor(sf::Color::Red);
+        }else if(FPS > 50){
+            fps.setColor(sf::Color::Green);
+        }else if(FPS < 40){
+            fps.setColor(sf::Color::Yellow);
+        }
         sf::Event event;
         while (app.pollEvent(event)){
                 switch(event.type){
                 case sf::Event::Closed:
-                    app.close();
+                    running = false;
                     break;
                 case sf::Event::MouseButtonPressed:
                     if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
                         sf::Vector2f position =(sf::Vector2f)app.mapPixelToCoords(sf::Mouse::getPosition(app));
-                        system("cls");
-                        std::cout << "X: " << position.x << std::endl;
-                        std::cout << "Y: " << position.y << std::endl;
-                        explode(sprite,position,60,liveParticles,particles);
-                        //explodeCircle(sprite,(sf::Vector2f)position,particles,60);
+                       // system("cls");
+                       // std::cout << "X: " << position.x << std::endl;
+                       // std::cout << "Y: " << position.y << std::endl;
+                        //explode(sprite,position,60,liveParticles,particles);
+                        explodeCircle(sprite,(sf::Vector2f)position,particles,500);
                     }
                     if(sf::Mouse::isButtonPressed(sf::Mouse::Right)){
                         liveParticles = particles;
@@ -133,17 +153,17 @@ int main()
     /// Only One
     //explode2(sprite,position,particles);
     /// Circle
-    explodeCircle(sprite,position,particles,250);
+    explodeCircle(sprite,position,particles,6);
         // Clear screen
         app.clear();
         // Draw the sprite
         app.draw(background);
         app.draw(particles,&texture);
         // Update the window
+        app.draw(fps);
         app.display();
-        system("cls");
-        std::cout << "FPS: " << getFPS(clock.restart());
     }
+    app.close();
     return EXIT_SUCCESS;
 }
 
