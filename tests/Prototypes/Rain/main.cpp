@@ -1,8 +1,3 @@
-#include <iostream>
-#include <algorithm>
-#include <vector>
-#include <map>
-#include <cmath>
 #include <SFML/Graphics.hpp>
 
 void explode(sf::Sprite& sprite,sf::Vector2f position,float radius,sf::VertexArray& liveParticles,sf::VertexArray& staticParticles){
@@ -157,7 +152,7 @@ int main()
     /// Hover Mouse to destruct
     sf::Vector2f position = (sf::Vector2f) app.mapPixelToCoords(sf::Mouse::getPosition(app));
     //explode(sprite,position,3,liveParticles,particles);
-    explodeCircle(sprite,position,particles,6);
+    explodeCircle(sprite,position,particles,12);
     sf::Image ss();
         for(int i=0;i<5000;++i){
             if(i%5 == 0){
@@ -176,7 +171,7 @@ int main()
 
         // Clear screen
         app.clear();
-        app.setView(v);
+        //app.setView(v);
         // Draw the sprite
         app.draw(background);
         app.draw(particles,&texture);
