@@ -1,8 +1,3 @@
-#include <iostream>
-#include <algorithm>
-#include <vector>
-#include <map>
-#include <cmath>
 #include <SFML/Graphics.hpp>
 
 void explode(sf::Sprite& sprite,sf::Vector2f position,float radius,sf::VertexArray& liveParticles,sf::VertexArray& staticParticles){
@@ -176,7 +171,7 @@ int main()
 
         // Clear screen
         app.clear();
-        app.setView(v);
+        //app.setView(v);
         // Draw the sprite
         app.draw(background);
         app.draw(particles,&texture);
