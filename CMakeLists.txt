@@ -30,22 +30,11 @@ if(CMAKE_BUILD_TYPE STREQUAL "Debug")
 endif()
 
 # Add External libraries
-find_package(OpenGL REQUIRED)
-find_package(GLEW REQUIRED)
+find_package(SFML REQUIRED)
 
-include_directories(${TYR_EXTERNAL_PATH}/SFML/include)
-include_directories(${TYR_EXTERNAL_PATH}/boost)
-include_directories(${TYR_EXTERNAL_PATH}/glm)
-include_directories(${TYR_EXTERNAL_PATH}/yaml-cpp/include)
-include_directories(${TYR_EXTERNAL_PATH}/lua/src)
-include_directories(${GLEW_INCLUDE_DIR} ${OPENGL_INCLUDE_DIR})
+include_directories(${ANTFARM_EXTERNAL_PATH}/SFML/include)
 
-link_directories(${TYR_EXTERNAL_PATH}/SFML/Build/lib)
-link_directories(${TYR_EXTERNAL_PATH}/yaml-cpp)
-link_directories(${TYR_EXTERNAL_PATH}/lua/src)
-link_directories(${GLEW_LIBRARY} ${OPENGL_LINK_PATH})
+link_directories(${ANTFARM_EXTERNAL_PATH}/SFML/Build/lib)
 
-
-add_subdirectory(Tyr)
-add_subdirectory(Test)
-add_subdirectory(Game)
+add_subdirectory(test)
+add_subdirectory(src)
