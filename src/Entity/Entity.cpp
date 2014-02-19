@@ -1,29 +1,19 @@
-#include "../Components/Component.cpp"
-#ifndef _SFML_
-#include <SFML/Graphics.hpp>
-#endif // _SFML_
-class Entity{
-    private:
-        std::string name;
-        long int id;
-        std::map<long,Component> Components;
-    public:
-        Entity(){
+#include "Entity.hpp"
+
+        Entity::Entity(){
 
         }
-        Entity(std::string name,std::map<long,Component> components){
+        Entity::Entity(std::string name,std::map<long,Component> components){
             this->name = name;
             this->Components = components;
-            for(auto &c: Components){
-
+            for(auto& c: Components){
+                this->id |= c.second.getId();
             }
         }
-        void addComponent(Component component){
-            id << component.getId();
+        void Entity::addComponent(Component component){
+            this->id |= component.getId();
             this->Components.insert(std::pair<long,Component>(component.getId(),component));
         }
-        inline const Component getComponent(long id){
+        inline const Component Entity::getComponent(long id){
             return Components.at(id);
         }
-
-};

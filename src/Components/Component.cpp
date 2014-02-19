@@ -1,15 +1,11 @@
+#include "Component.hpp"
 
-class Component{
-    private:
-        long int id;
-    public:
-        Component(long int id){
+        Component::Component(long int id){
             this->id = id;
         }
-       void setId(long int id){
+       void Component::setId(long int id){
            this->id = id;
        }
-       inline const long getId(){
+       const long Component::getId(){
            return this->id;
        }
-};

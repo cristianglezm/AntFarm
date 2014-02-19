@@ -49,8 +49,8 @@ void explodeCircle(sf::Sprite& sprite,sf::Vector2f position,sf::VertexArray& sta
 		radiusError+=2*(y-x+1);
 	}
 	if(radius > 0){
-            --radius;
-            explodeCircle(sprite,position,staticParticles,radius,heightMap);
+        --radius;
+        explodeCircle(sprite,position,staticParticles,radius,heightMap);
 	}
   }
 }
@@ -87,15 +87,15 @@ int main()
     sf::RenderWindow app(sf::VideoMode(800, 600), "AntFarm");
     // Load a sprite to display
     sf::Texture texture;
-    if (!texture.loadFromFile("data/MapNestFrontground.png")){
+    if (!texture.loadFromFile("../../../data/maps/nest/MapNestFrontground.png")){
         return EXIT_FAILURE;
     }
     sf::Texture texture1;
-    if(!texture1.loadFromFile("data/MapNestBackground.png")){
+    if(!texture1.loadFromFile("../../../data/maps/nest/MapNestBackground.png")){
         return EXIT_FAILURE;
     }
     sf::Image* heightMapImage = new sf::Image();
-    if(!heightMapImage->loadFromFile("data/MapNestHeightMap.png")){
+    if(!heightMapImage->loadFromFile("../../../data/maps/nest/MapNestHeightMap.png")){
         return EXIT_FAILURE;
     }
     sf::Sprite background(texture1);

@@ -1,10 +1,6 @@
 #################
 ## Eclipse
 #################
-*.cbp
-*.pydevproject
-*.out
-*.o
 .project
 .metadata
 bin/
@@ -34,12 +30,15 @@ local.properties
 ## Code::Blocks
 #################
 
-Build/*
+*Build/*
 *.depend
 *.layout
 *.cbn
 *~
-
+*.cbp
+*.pydevproject
+*.out
+*.o
 #################
 ## Visual Studio
 #################

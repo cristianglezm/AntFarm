@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include <cstdlib>
 int main()
 {
     std::cout << "Masking Test" << std::endl;
@@ -15,7 +15,7 @@ int main()
     std::cout << "REQUIRED MASK: " << REQ << std::endl;
     std::cout << "REQUIRED 2 MASK: " << REQ2 << std::endl;
     std::cout << "REQUIRED MASK TEST CONDITION: " << ((REQ & REQ2) == COMPONENT_ATTACK ? "TRUE":"FALSE") << std::endl;
-
+    system("PAUSE");
     return 0;
 }
 

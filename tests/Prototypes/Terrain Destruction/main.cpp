@@ -80,11 +80,11 @@ int main()
     sf::RectangleShape winBorders{};
     // Load a sprite to display
     sf::Texture texture;
-    if (!texture.loadFromFile("data/MapNestFrontground.png")){
+    if (!texture.loadFromFile("../../../data/maps/nest/MapNestFrontground.png")){
         return EXIT_FAILURE;
     }
     sf::Texture texture1;
-    if(!texture1.loadFromFile("data/MapNestBackground.png")){
+    if(!texture1.loadFromFile("../../../data/maps/nest/MapNestBackground.png")){
         return EXIT_FAILURE;
     }
     sf::Sprite background(texture1);
@@ -101,7 +101,7 @@ int main()
 	sf::Clock clock;
 	sf::Text fps;
 	sf::Font font;
-	if(!font.loadFromFile("data/fonts/sewer.ttf")){
+	if(!font.loadFromFile("../../../data/fonts/sewer.ttf")){
         return EXIT_FAILURE;
 	}
 	fps.setFont(font);

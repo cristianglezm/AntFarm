@@ -76,11 +76,11 @@ int main()
 
     // Load a sprite to display
     sf::Texture texture;
-    if (!texture.loadFromFile("data/MapNestFrontground.png")){
+    if (!texture.loadFromFile("../../../data/maps/nest/MapNestFrontground.png")){
         return EXIT_FAILURE;
     }
     sf::Texture texture1;
-    if(!texture1.loadFromFile("data/MapNestBackground.png")){
+    if(!texture1.loadFromFile("../../../data/maps/nest/MapNestBackground.png")){
         return EXIT_FAILURE;
     }
     sf::Sprite background(texture1);
@@ -89,7 +89,6 @@ int main()
     sf::View v{};
     bool pressedBtn = false;
     v.setViewport(sf::FloatRect(0,0,5,5));
-
     sf::VertexArray particles(sf::Points,sprite.getTextureRect().width * sprite.getTextureRect().height);
     sf::VertexArray liveParticles(sf::Points,sprite.getTextureRect().width * sprite.getTextureRect().height);
     mapParticles(sprite,particles);
@@ -99,9 +98,7 @@ int main()
     sf::VertexArray rain(sf::Points,5000);
     for(int i=0;i<5000;++i){
         rain[i].position = sf::Vector2f(rand()%1+i,0);
-        rain[i].color.r = 0;
-        rain[i].color.g = 0;
-        rain[i].color.b = 220;
+        rain[i].color = sf::Color::Blue;
         rain[i].color.a = 255;
     }
 	// Start the game loop
