@@ -1,11 +1,9 @@
-#include "Component.hpp"
-
+#include <Components/Component.hpp>
+        Component::Component():id(0){
+        }
         Component::Component(long int id){
             this->id = id;
         }
-       void Component::setId(long int id){
-           this->id = id;
-       }
-       const long Component::getId(){
-           return this->id;
+        void Component::setId(long int id){
+            this->id = id;
        }

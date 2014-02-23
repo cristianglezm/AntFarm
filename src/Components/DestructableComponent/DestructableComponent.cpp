@@ -1,4 +1,4 @@
-#include "DestructableComponent.hpp"
+#include <Components/DestructableComponent/DestructableComponent.hpp>
         DestructableComponent::DestructableComponent(long int id):Component(id){
 
         }

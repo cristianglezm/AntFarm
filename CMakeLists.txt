@@ -30,7 +30,14 @@ if(CMAKE_BUILD_TYPE STREQUAL "Debug")
 endif()
 
 # Add External libraries
-find_package(SFML REQUIRED)
+# Detect and add SFML
+set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake_modules" ${CMAKE_MODULE_PATH})
+#Find any version 2.X of SFML
+find_package(SFML 2 REQUIRED system window graphics network audio)
+if(SFML_FOUND)
+  include_directories(${SFML_INCLUDE_DIR})
+  target_link_libraries(${EXECUTABLE_NAME} ${SFML_LIBRARIES})
+endif()
 
 include_directories(${ANTFARM_EXTERNAL_PATH}/SFML/include)
 

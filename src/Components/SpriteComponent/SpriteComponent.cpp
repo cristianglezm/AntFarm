@@ -1,4 +1,4 @@
-#include "SpriteComponent.hpp"
+#include <Components/SpriteComponent/SpriteComponent.hpp>
 
         SpriteComponent::SpriteComponent(long int id):Component(id){
 
@@ -9,7 +9,3 @@
         SpriteComponent& SpriteComponent::operator=(const Component& c){
             return *this;
         }
-        inline const sf::Sprite& SpriteComponent::getSprite(){
-            return sprite;
-        }
-

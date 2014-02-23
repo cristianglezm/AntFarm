@@ -12,6 +12,6 @@ class Entity{
         Entity();
         Entity(std::string name,std::map<long,Component>);
         void addComponent(Component component);
-        inline const Component getComponent(long id);
+        inline Component getComponent(long id){ return Components.at(id); }
 };
 #endif // ENTITY_H

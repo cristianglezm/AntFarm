@@ -1,3 +1,8 @@
+/**
+ * Clase estatica para enumeracion de componentes.
+ * @author Cristian Gonzalez Moreno <Cristian.glez.m@gmail.com>
+ * @version 0.1
+ */
 class ComponentsMask{
      public:
          static const long int COMPONENT_NONE = 0;

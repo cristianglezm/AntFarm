@@ -1,4 +1,4 @@
-#include "Entity.hpp"
+#include <Entity/Entity.hpp>
 
         Entity::Entity(){
 
@@ -13,7 +13,4 @@
         void Entity::addComponent(Component component){
             this->id |= component.getId();
             this->Components.insert(std::pair<long,Component>(component.getId(),component));
-        }
-        inline const Component Entity::getComponent(long id){
-            return Components.at(id);
         }

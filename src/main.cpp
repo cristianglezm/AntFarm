@@ -1,5 +1,5 @@
-#include "Entity/Entity.hpp"
-#include "Components/SpriteComponent/SpriteComponent.hpp"
+#include <Entity/Entity.hpp>
+#include <Components/SpriteComponent/SpriteComponent.hpp>
 int main(){
 
     // Create the main window
