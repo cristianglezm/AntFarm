@@ -1,4 +1,5 @@
 #include <iostream>
+#include <sstream>
 #include <SFML/Graphics.hpp>
 
 void explode(sf::Sprite& sprite,sf::Vector2f position,float radius,sf::VertexArray& liveParticles,sf::VertexArray& staticParticles){
@@ -69,7 +70,11 @@ void mapParticles(sf::Sprite& sprite,sf::VertexArray& staticParticles){
 float getFPS(const sf::Time& time) {
      return (1000000.0f / time.asMicroseconds());
 }
-
+std::string toString(int s){
+    std::ostringstream oss;
+    oss << s;
+    return oss.str();
+}
 
 int main()
 {
@@ -101,18 +106,18 @@ int main()
 	sf::Clock clock;
 	sf::Text fps;
 	sf::Font font;
-	if(!font.loadFromFile("../../../data/fonts/sewer.ttf")){
+	if(!font.loadFromFile("../../../data/fonts/OLDFAX.ttf")){
         return EXIT_FAILURE;
 	}
 	fps.setFont(font);
 	fps.setCharacterSize(25);
-    fps.setPosition(680,550);
+    fps.setPosition(745,550);
     bool running=true;
     while (running){
         // Process events
         int FPS = getFPS(clock.restart());
         /// TODO
-        fps.setString("ChangeME");
+        fps.setString(toString(FPS));
         if(FPS < 5){
             fps.setColor(sf::Color::Red);
         }else if(FPS > 50){
@@ -150,7 +155,7 @@ int main()
     /// Only One
     //explode2(sprite,position,particles);
     /// Circle
-    explodeCircle(sprite,position,particles,6);
+    explodeCircle(sprite,position,particles,16);
         // Clear screen
         app.clear();
         // Draw the sprite
