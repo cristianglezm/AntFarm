@@ -1,3 +1,6 @@
+#ifndef COMPONENT_MASK_H
+#define COMPONENT_MASK_H
+
 /**
  * Clase estatica para enumeracion de componentes.
  * @author Cristian Gonzalez Moreno <Cristian.glez.m@gmail.com>
@@ -13,3 +16,4 @@ class ComponentsMask{
          static const long int COMPONENT_HORNS = 1 << 4;
          static const long int COMPONENT_DESTRUCTABLE = 1 << 5;
 };
+#endif // COMPONENT_MASK_H
