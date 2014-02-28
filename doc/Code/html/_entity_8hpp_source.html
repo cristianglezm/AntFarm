@@ -4,17 +4,10 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>AntFarm: Entity.hpp Source File</title>
+<title>AntFarm: include/Entity/Entity.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript">
-  $(document).ready(initResizable);
-  $(window).load(resizeHeight);
-</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
@@ -30,7 +23,9 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">AntFarm
+   &#160;<span id="projectnumber">0.1</span>
    </div>
+   <div id="projectbrief">A Game About Ants Wars</div>
   </td>
  </tr>
  </tbody>
@@ -44,6 +39,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -67,30 +63,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
-      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-$(document).ready(function(){initNavTree('_entity_8hpp_source.html','');});
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -99,6 +79,11 @@ $(document).ready(function(){initNavTree('_entity_8hpp_source.html','');});
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_55565bc6cea8f58e73511b81474a69a8.html">Entity</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">Entity.hpp</div>  </div>
@@ -107,35 +92,50 @@ $(document).ready(function(){initNavTree('_entity_8hpp_source.html','');});
 <a href="_entity_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef ENTITY_H</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define ENTITY_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#include &quot;../Components/Component.hpp&quot;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="class_entity.html">    6</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_entity.html">Entity</a>{</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        std::string name;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        <span class="keywordtype">long</span> <span class="keywordtype">int</span> id;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        std::map&lt;long,Component&gt; Components;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <a class="code" href="class_entity.html#a980f368aa07ce358583982821533a54a">Entity</a>();</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <a class="code" href="class_entity.html#a980f368aa07ce358583982821533a54a">Entity</a>(std::string name,std::map&lt;long,Component&gt;);</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_entity.html#a032bc5c0c4ef6fa60ac2fbf2f7c6cc32">addComponent</a>(<a class="code" href="class_component.html">Component</a> component);</div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_entity.html#a8206ec9e4226e9a0f6569aa1546762aa">   15</a></span>&#160;        <span class="keyword">inline</span> <a class="code" href="class_component.html">Component</a> <a class="code" href="class_entity.html#a8206ec9e4226e9a0f6569aa1546762aa">getComponent</a>(<span class="keywordtype">long</span> <span class="keywordtype">id</span>){ <span class="keywordflow">return</span> Components.at(<span class="keywordtype">id</span>); }</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;};</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#endif // ENTITY_H</span></div>
-<div class="ttc" id="class_component_html"><div class="ttname"><a href="class_component.html">Component</a></div><div class="ttdef"><b>Definition:</b> Component.hpp:7</div></div>
-<div class="ttc" id="class_entity_html_a980f368aa07ce358583982821533a54a"><div class="ttname"><a href="class_entity.html#a980f368aa07ce358583982821533a54a">Entity::Entity</a></div><div class="ttdeci">Entity()</div><div class="ttdef"><b>Definition:</b> Entity.cpp:3</div></div>
-<div class="ttc" id="class_entity_html"><div class="ttname"><a href="class_entity.html">Entity</a></div><div class="ttdef"><b>Definition:</b> Entity.hpp:6</div></div>
-<div class="ttc" id="class_entity_html_a8206ec9e4226e9a0f6569aa1546762aa"><div class="ttname"><a href="class_entity.html#a8206ec9e4226e9a0f6569aa1546762aa">Entity::getComponent</a></div><div class="ttdeci">Component getComponent(long id)</div><div class="ttdef"><b>Definition:</b> Entity.hpp:15</div></div>
-<div class="ttc" id="class_entity_html_a032bc5c0c4ef6fa60ac2fbf2f7c6cc32"><div class="ttname"><a href="class_entity.html#a032bc5c0c4ef6fa60ac2fbf2f7c6cc32">Entity::addComponent</a></div><div class="ttdeci">void addComponent(Component component)</div><div class="ttdef"><b>Definition:</b> Entity.cpp:13</div></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span>ant{</div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="classant_1_1_entity.html">    7</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classant_1_1_entity.html">Entity</a>{</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;            std::string name;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;            <span class="keywordtype">long</span> <span class="keywordtype">int</span> mask;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;            std::map&lt;long,Component&gt; Components;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;            <a class="code" href="classant_1_1_entity.html#a7fe02d14320908c7b5eb080a113f1442">Entity</a>();</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;            <a class="code" href="classant_1_1_entity.html#a7fe02d14320908c7b5eb080a113f1442">Entity</a>(std::string name);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;            <a class="code" href="classant_1_1_entity.html#a7fe02d14320908c7b5eb080a113f1442">Entity</a>(std::string name,std::map&lt;long,Component&gt; Components);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            <span class="keywordtype">void</span> <a class="code" href="classant_1_1_entity.html#acb789659ebe9dd7dfc0a599360bbc104">addComponent</a>(<a class="code" href="classant_1_1_component.html">Component</a> component);</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classant_1_1_entity.html#af1c4df5d7ef8ecc6312b685be7422e7b">   17</a></span>&#160;            <span class="keyword">inline</span> <a class="code" href="classant_1_1_component.html">Component</a> <a class="code" href="classant_1_1_entity.html#af1c4df5d7ef8ecc6312b685be7422e7b">getComponent</a>(<span class="keywordtype">long</span> mask){ <span class="keywordflow">return</span> Components.at(mask); }</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            <span class="keywordtype">void</span> <a class="code" href="classant_1_1_entity.html#a33fe2d7add83f9fd18c2ac47d1313b0e">removeComponent</a>(<span class="keywordtype">long</span> mask);</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classant_1_1_entity.html#a0301903178a8a2ee5a31630852c72c2f">   19</a></span>&#160;            <span class="keyword">inline</span> <span class="keyword">const</span> std::string <a class="code" href="classant_1_1_entity.html#a0301903178a8a2ee5a31630852c72c2f">getName</a>(){ <span class="keywordflow">return</span> name; }</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            <span class="keywordtype">void</span> <a class="code" href="classant_1_1_entity.html#af0d4541cfec26963b714d500f8fe5f48">setName</a>(std::string name);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            <span class="keywordtype">void</span> <a class="code" href="classant_1_1_entity.html#a16e9507bc9c9180b210bcc3895cf4648">setComponents</a>(std::map&lt;long,Component&gt; Components);</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classant_1_1_entity.html#a8e3c661b678e8fc9f7ae565980d1a14b">   22</a></span>&#160;            <span class="keyword">inline</span> std::map&lt;long,Component&gt; <a class="code" href="classant_1_1_entity.html#a8e3c661b678e8fc9f7ae565980d1a14b">getComponents</a>(){ <span class="keywordflow">return</span> Components; }</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classant_1_1_entity.html#a9fc1589241d55c31f5f98050cef949a2">   23</a></span>&#160;            <span class="keyword">inline</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> <span class="keyword">const</span> <a class="code" href="classant_1_1_entity.html#a9fc1589241d55c31f5f98050cef949a2">getMask</a>(){ <span class="keywordflow">return</span> mask; }</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <span class="keywordtype">bool</span> <a class="code" href="classant_1_1_entity.html#a379c70555ca47177ec607a992ef97f3f">operator==</a>(<span class="keyword">const</span> <a class="code" href="classant_1_1_entity.html">Entity</a>&amp; e) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            <a class="code" href="classant_1_1_entity.html#a125b5f8608b1ff872a842060003ffe32">~Entity</a>();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    };</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#endif // ENTITY_H</span></div>
+<div class="ttc" id="classant_1_1_entity_html_a125b5f8608b1ff872a842060003ffe32"><div class="ttname"><a href="classant_1_1_entity.html#a125b5f8608b1ff872a842060003ffe32">ant::Entity::~Entity</a></div><div class="ttdeci">~Entity()</div></div>
+<div class="ttc" id="classant_1_1_entity_html_a8e3c661b678e8fc9f7ae565980d1a14b"><div class="ttname"><a href="classant_1_1_entity.html#a8e3c661b678e8fc9f7ae565980d1a14b">ant::Entity::getComponents</a></div><div class="ttdeci">std::map&lt; long, Component &gt; getComponents()</div><div class="ttdef"><b>Definition:</b> <a href="_entity_8hpp_source.html#l00022">Entity.hpp:22</a></div></div>
+<div class="ttc" id="classant_1_1_entity_html_a7fe02d14320908c7b5eb080a113f1442"><div class="ttname"><a href="classant_1_1_entity.html#a7fe02d14320908c7b5eb080a113f1442">ant::Entity::Entity</a></div><div class="ttdeci">Entity()</div></div>
+<div class="ttc" id="classant_1_1_component_html"><div class="ttname"><a href="classant_1_1_component.html">ant::Component</a></div><div class="ttdef"><b>Definition:</b> <a href="_component_8hpp_source.html#l00008">Component.hpp:8</a></div></div>
+<div class="ttc" id="classant_1_1_entity_html_acb789659ebe9dd7dfc0a599360bbc104"><div class="ttname"><a href="classant_1_1_entity.html#acb789659ebe9dd7dfc0a599360bbc104">ant::Entity::addComponent</a></div><div class="ttdeci">void addComponent(Component component)</div></div>
+<div class="ttc" id="classant_1_1_entity_html_a0301903178a8a2ee5a31630852c72c2f"><div class="ttname"><a href="classant_1_1_entity.html#a0301903178a8a2ee5a31630852c72c2f">ant::Entity::getName</a></div><div class="ttdeci">const std::string getName()</div><div class="ttdef"><b>Definition:</b> <a href="_entity_8hpp_source.html#l00019">Entity.hpp:19</a></div></div>
+<div class="ttc" id="classant_1_1_entity_html_a379c70555ca47177ec607a992ef97f3f"><div class="ttname"><a href="classant_1_1_entity.html#a379c70555ca47177ec607a992ef97f3f">ant::Entity::operator==</a></div><div class="ttdeci">bool operator==(const Entity &amp;e) const </div></div>
+<div class="ttc" id="classant_1_1_entity_html_a33fe2d7add83f9fd18c2ac47d1313b0e"><div class="ttname"><a href="classant_1_1_entity.html#a33fe2d7add83f9fd18c2ac47d1313b0e">ant::Entity::removeComponent</a></div><div class="ttdeci">void removeComponent(long mask)</div></div>
+<div class="ttc" id="classant_1_1_entity_html_a9fc1589241d55c31f5f98050cef949a2"><div class="ttname"><a href="classant_1_1_entity.html#a9fc1589241d55c31f5f98050cef949a2">ant::Entity::getMask</a></div><div class="ttdeci">long int const getMask()</div><div class="ttdef"><b>Definition:</b> <a href="_entity_8hpp_source.html#l00023">Entity.hpp:23</a></div></div>
+<div class="ttc" id="classant_1_1_entity_html_af1c4df5d7ef8ecc6312b685be7422e7b"><div class="ttname"><a href="classant_1_1_entity.html#af1c4df5d7ef8ecc6312b685be7422e7b">ant::Entity::getComponent</a></div><div class="ttdeci">Component getComponent(long mask)</div><div class="ttdef"><b>Definition:</b> <a href="_entity_8hpp_source.html#l00017">Entity.hpp:17</a></div></div>
+<div class="ttc" id="classant_1_1_entity_html"><div class="ttname"><a href="classant_1_1_entity.html">ant::Entity</a></div><div class="ttdef"><b>Definition:</b> <a href="_entity_8hpp_source.html#l00007">Entity.hpp:7</a></div></div>
+<div class="ttc" id="classant_1_1_entity_html_a16e9507bc9c9180b210bcc3895cf4648"><div class="ttname"><a href="classant_1_1_entity.html#a16e9507bc9c9180b210bcc3895cf4648">ant::Entity::setComponents</a></div><div class="ttdeci">void setComponents(std::map&lt; long, Component &gt; Components)</div></div>
+<div class="ttc" id="classant_1_1_entity_html_af0d4541cfec26963b714d500f8fe5f48"><div class="ttname"><a href="classant_1_1_entity.html#af0d4541cfec26963b714d500f8fe5f48">ant::Entity::setName</a></div><div class="ttdeci">void setName(std::string name)</div></div>
 </div><!-- fragment --></div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_55565bc6cea8f58e73511b81474a69a8.html">Entity</a></li><li class="navelem"><a class="el" href="_entity_8hpp.html">Entity.hpp</a></li>
-    <li class="footer">Generated on Sun Feb 23 2014 20:15:48 for AntFarm by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated on Fri Feb 28 2014 13:34:05 for AntFarm by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
 </body>
 </html>

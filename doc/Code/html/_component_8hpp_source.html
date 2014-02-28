@@ -4,17 +4,10 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>AntFarm: Component.hpp Source File</title>
+<title>AntFarm: include/Components/Component.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript">
-  $(document).ready(initResizable);
-  $(window).load(resizeHeight);
-</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
@@ -30,7 +23,9 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">AntFarm
+   &#160;<span id="projectnumber">0.1</span>
    </div>
+   <div id="projectbrief">A Game About Ants Wars</div>
   </td>
  </tr>
  </tbody>
@@ -44,6 +39,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -67,30 +63,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
-      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-$(document).ready(function(){initNavTree('_component_8hpp_source.html','');});
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -99,6 +79,11 @@ $(document).ready(function(){initNavTree('_component_8hpp_source.html','');});
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_b5387289685bf4d85d4ad61551733121.html">Components</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">Component.hpp</div>  </div>
@@ -106,31 +91,30 @@ $(document).ready(function(){initNavTree('_component_8hpp_source.html','');});
 <div class="contents">
 <a href="_component_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef COMPONENT_H</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define COMPONENT_H</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="class_component.html">    7</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_component.html">Component</a>{</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        <span class="keywordtype">long</span> <span class="keywordtype">int</span> id;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <a class="code" href="class_component.html#a8775db6d1a2c1afc2e77cd3c8f39da6f">Component</a>();</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <a class="code" href="class_component.html#a8775db6d1a2c1afc2e77cd3c8f39da6f">Component</a>(<span class="keywordtype">long</span> <span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_component.html#abc106412e4bf68709eb41a2359ab9cc1">setId</a>(<span class="keywordtype">long</span> <span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_component.html#a7475041fdd5c053625022ccc6ebadf77">   14</a></span>&#160;        <span class="keyword">inline</span> <span class="keyword">const</span> <span class="keywordtype">long</span> <a class="code" href="class_component.html#a7475041fdd5c053625022ccc6ebadf77">getId</a>(){ <span class="keywordflow">return</span> this-&gt;id; }</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;};</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#endif // COMPONENT_H</span></div>
-<div class="ttc" id="class_component_html"><div class="ttname"><a href="class_component.html">Component</a></div><div class="ttdef"><b>Definition:</b> Component.hpp:7</div></div>
-<div class="ttc" id="class_component_html_abc106412e4bf68709eb41a2359ab9cc1"><div class="ttname"><a href="class_component.html#abc106412e4bf68709eb41a2359ab9cc1">Component::setId</a></div><div class="ttdeci">void setId(long int id)</div><div class="ttdef"><b>Definition:</b> Component.cpp:7</div></div>
-<div class="ttc" id="class_component_html_a7475041fdd5c053625022ccc6ebadf77"><div class="ttname"><a href="class_component.html#a7475041fdd5c053625022ccc6ebadf77">Component::getId</a></div><div class="ttdeci">const long getId()</div><div class="ttdef"><b>Definition:</b> Component.hpp:14</div></div>
-<div class="ttc" id="class_component_html_a8775db6d1a2c1afc2e77cd3c8f39da6f"><div class="ttname"><a href="class_component.html#a8775db6d1a2c1afc2e77cd3c8f39da6f">Component::Component</a></div><div class="ttdeci">Component()</div><div class="ttdef"><b>Definition:</b> Component.cpp:2</div></div>
+<div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="namespaceant.html">    3</a></span>&#160;<span class="preprocessor"></span><span class="keyword">namespace </span>ant{</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="classant_1_1_component.html">    8</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classant_1_1_component.html">Component</a>{</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;            <span class="keywordtype">long</span> <span class="keywordtype">int</span> id;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;            <a class="code" href="classant_1_1_component.html#ae195384bc2708a72924a3e7e0d28efb1">Component</a>();</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;            <a class="code" href="classant_1_1_component.html#ae195384bc2708a72924a3e7e0d28efb1">Component</a>(<span class="keywordtype">long</span> <span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;            <span class="keywordtype">void</span> <a class="code" href="classant_1_1_component.html#a31f6b495e24df1a2da55bc55461ba070">setId</a>(<span class="keywordtype">long</span> <span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="classant_1_1_component.html#a3b571acf05f03678e8f2bcd05d981cc4">   15</a></span>&#160;            <span class="keyword">inline</span> <span class="keyword">const</span> <span class="keywordtype">long</span> <a class="code" href="classant_1_1_component.html#a3b571acf05f03678e8f2bcd05d981cc4">getId</a>(){ <span class="keywordflow">return</span> this-&gt;id; }</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classant_1_1_component.html#a6d2a0fcaf2a5eb82b266c8be0eb7d160">operator==</a>(<span class="keyword">const</span> <a class="code" href="classant_1_1_component.html">Component</a>&amp; c) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    };</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#endif // COMPONENT_H</span></div>
+<div class="ttc" id="classant_1_1_component_html_ae195384bc2708a72924a3e7e0d28efb1"><div class="ttname"><a href="classant_1_1_component.html#ae195384bc2708a72924a3e7e0d28efb1">ant::Component::Component</a></div><div class="ttdeci">Component()</div></div>
+<div class="ttc" id="classant_1_1_component_html"><div class="ttname"><a href="classant_1_1_component.html">ant::Component</a></div><div class="ttdef"><b>Definition:</b> <a href="_component_8hpp_source.html#l00008">Component.hpp:8</a></div></div>
+<div class="ttc" id="classant_1_1_component_html_a6d2a0fcaf2a5eb82b266c8be0eb7d160"><div class="ttname"><a href="classant_1_1_component.html#a6d2a0fcaf2a5eb82b266c8be0eb7d160">ant::Component::operator==</a></div><div class="ttdeci">virtual bool operator==(const Component &amp;c) const </div></div>
+<div class="ttc" id="classant_1_1_component_html_a31f6b495e24df1a2da55bc55461ba070"><div class="ttname"><a href="classant_1_1_component.html#a31f6b495e24df1a2da55bc55461ba070">ant::Component::setId</a></div><div class="ttdeci">void setId(long int id)</div></div>
+<div class="ttc" id="classant_1_1_component_html_a3b571acf05f03678e8f2bcd05d981cc4"><div class="ttname"><a href="classant_1_1_component.html#a3b571acf05f03678e8f2bcd05d981cc4">ant::Component::getId</a></div><div class="ttdeci">const long getId()</div><div class="ttdef"><b>Definition:</b> <a href="_component_8hpp_source.html#l00015">Component.hpp:15</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_b5387289685bf4d85d4ad61551733121.html">Components</a></li><li class="navelem"><a class="el" href="_component_8hpp.html">Component.hpp</a></li>
-    <li class="footer">Generated on Sun Feb 23 2014 20:15:48 for AntFarm by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated on Fri Feb 28 2014 13:34:05 for AntFarm by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
 </body>
 </html>

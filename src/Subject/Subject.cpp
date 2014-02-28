@@ -12,7 +12,7 @@ namespace ant{
     }
     void Subject::notifyObservers(Event e){
         for(auto& o: Observers){
-
+            o.onNotify(e);
         }
     }
     Subject::~Subject(){

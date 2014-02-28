@@ -13,8 +13,8 @@ endif()
 
 project(AntFarm)
 
-set(ANTFARM_EXTERNAL_PATH "${CMAKE_SOURCE_DIR}/../External" CACHE PATH "Path to the folder containing external libraries.")
-set(CMAKE_INSTALL_PREFIX "${CMAKE_SOURCE_DIR}/dist" CACHE PATH "Path to the folder where we want to run the executable from.")
+set(ANTFARM_EXTERNAL_PATH "${CMAKE_SOURCE_DIR}/dll" CACHE PATH "Path to the folder containing external libraries.")
+set(CMAKE_INSTALL_PREFIX "${CMAKE_SOURCE_DIR}/bin" CACHE PATH "Path to the folder where we want to run the executable from.")
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_INSTALL_PREFIX})
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_INSTALL_PREFIX})
 
@@ -31,7 +31,7 @@ endif()
 
 # Add External libraries
 # Detect and add SFML
-set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake_modules" ${CMAKE_MODULE_PATH})
+set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/modules" ${CMAKE_MODULE_PATH})
 #Find any version 2.X of SFML
 find_package(SFML 2 REQUIRED system window graphics network audio)
 if(SFML_FOUND)
@@ -39,9 +39,6 @@ if(SFML_FOUND)
   target_link_libraries(${EXECUTABLE_NAME} ${SFML_LIBRARIES})
 endif()
 
-include_directories(${ANTFARM_EXTERNAL_PATH}/SFML/include)
-
-link_directories(${ANTFARM_EXTERNAL_PATH}/SFML/Build/lib)
-
-add_subdirectory(test)
+#add_subdirectory(test)
+add_subdirectory(include)
 add_subdirectory(src)

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['destructablecomponent',['DestructableComponent',['../class_destructable_component.html',1,'']]]
+  ['destructablecomponent',['DestructableComponent',['../classant_1_1_destructable_component.html',1,'ant']]]
 ];
