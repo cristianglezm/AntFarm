@@ -1,8 +1,11 @@
 #include <Entity/Entity.hpp>
-
+namespace ant{
         Entity::Entity(){
             this->name = "";
             this->mask = 0;
+        }
+        Entity::Entity(std::string name){
+            this->name = name;
         }
         Entity::Entity(std::string name,std::map<long,Component> components){
             this->name = name;
@@ -29,3 +32,14 @@
                 this->mask |= c.second.getId();
             }
         }
+        bool Entity::operator==(const Entity& e) const{
+            if(e.Components == Components && e.mask == mask && e.name == name){
+                return true;
+            }else{
+                return false;
+            }
+        }
+        Entity::~Entity(){
+
+        }
+}

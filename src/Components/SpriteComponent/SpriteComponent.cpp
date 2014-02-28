@@ -1,5 +1,5 @@
 #include <Components/SpriteComponent/SpriteComponent.hpp>
-
+namespace ant{
         SpriteComponent::SpriteComponent(long int id):Component(id){
 
         }
@@ -9,3 +9,4 @@
         SpriteComponent& SpriteComponent::operator=(const Component& c){
             return *this;
         }
+}

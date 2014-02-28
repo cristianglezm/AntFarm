@@ -2,12 +2,13 @@
 #define WORLD_H
 #include <Graphics.hpp>
 #include <EntityManager/EntityManager.hpp>
+namespace ant{
+    class World{
+        private:
 
-class World{
-    private:
-
-    public:
-        void update(sf::Time dt);
-        void render();
-};
+        public:
+            void update(sf::Time dt);
+            void render();
+    };
+}
 #endif // WORLD_H
