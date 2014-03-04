@@ -7,7 +7,7 @@ namespace ant{
         Entity::Entity(std::string name){
             this->name = name;
         }
-        Entity::Entity(std::string name,std::map<long,Component> components){
+        Entity::Entity(std::string name,std::map<long,shared_ptr<Component> > components){
             this->name = name;
             this->mask = 0;
             this->Components = components;
@@ -28,16 +28,13 @@ namespace ant{
         }
         void Entity::setComponents(std::map<long,Component> Components){
             this->Components = Components;
+            this->mask = 0;
             for(auto& c: Components){
                 this->mask |= c.second.getId();
             }
         }
         bool Entity::operator==(const Entity& e) const{
-            if(e.Components == Components && e.mask == mask && e.name == name){
-                return true;
-            }else{
-                return false;
-            }
+            return (e.Components == Components && e.mask == mask && e.name == name);
         }
         Entity::~Entity(){
 

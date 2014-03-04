@@ -8,7 +8,7 @@ namespace ant{
         private:
             std::string name;
             long int mask;
-            std::map<long,Component> Components;
+            std::map<long,shared_ptr<Component> > Components;
         public:
             Entity();
             Entity(std::string name);
