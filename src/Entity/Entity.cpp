@@ -7,17 +7,17 @@ namespace ant{
         Entity::Entity(std::string name){
             this->name = name;
         }
-        Entity::Entity(std::string name,std::map<long,shared_ptr<Component> > components){
+        Entity::Entity(std::string name,std::map<long,std::unique_ptr<Component> > components){
             this->name = name;
             this->mask = 0;
             this->Components = components;
             for(auto& c: Components){
-                this->mask |= c.second.getId();
+                this->mask |= c.second->getId();
             }
         }
-        void Entity::addComponent(Component component){
-            this->mask |= component.getId();
-            this->Components.insert(std::pair<long,Component>(component.getId(),component));
+        void Entity::addComponent(std::unique_ptr<Component> component){
+            this->mask |= component->getId();
+            this->Components.insert(std::make_pair(component->getId(),std::move(component)));
         }
         void Entity::removeComponent(long mask){
             this->mask &= ~mask;
@@ -26,11 +26,11 @@ namespace ant{
         void Entity::setName(std::string name){
             this->name = name;
         }
-        void Entity::setComponents(std::map<long,Component> Components){
+        void Entity::setComponents(std::map<long,std::unique_ptr<Component> > Components){
             this->Components = Components;
             this->mask = 0;
             for(auto& c: Components){
-                this->mask |= c.second.getId();
+                this->mask |= c.second->getId();
             }
         }
         bool Entity::operator==(const Entity& e) const{
