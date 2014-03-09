@@ -111,11 +111,14 @@ void unique_ptrExample(){
     l1.push_front(processMessageUPTR(std::move(l1.front())));
     std::cout << "Process Function End" << std::endl;
     {
-        std::cout << "Copy Message 2" << std::endl;
+        std::cout << "l1 size: " << l1.size() << std::endl;
+        std::cout << "Move Message 2" << std::endl;
         std::unique_ptr<message> spt2(std::move(l1.front()));
+        std::cout << "l1 size: " << l1.size() << std::endl;
         std::cout << "Borramos message 2" << std::endl;
-        l1.erase(l1.begin());
-        std::cout << "Message 2 Borrado" << std::endl;
+        l1.pop_front();
+        std::cout << "l1 size: " << l1.size() << std::endl;
+        std::cout << "Message 2 Borrado : " << std::endl;
         std::cout << "Contenido MSG 2 " << spt2->getString() << std::endl;
         std::cout << "añadimos MSG2 a l2 " << std::endl;
         l2.push_back(std::move(spt2));

@@ -3,16 +3,16 @@ namespace ant{
     EventQueue::EventQueue(){
 
     }
-    Event EventQueue::front(){
+    std::shared_ptr<Event>& EventQueue::front(){
         return eventQueue.front();
     }
-    Event EventQueue::pop(){
-        Event e = eventQueue.front();
+    std::shared_ptr<Event> EventQueue::pop(){
+        std::shared_ptr<Event> e = std::move(eventQueue.front());
         eventQueue.pop();
-        return e;
+        return std::move(e);
     }
-    void EventQueue::push(Event e){
-        eventQueue.push(e);
+    void EventQueue::push(std::shared_ptr<Event> e){
+        eventQueue.push(std::move(e));
     }
     EventQueue::~EventQueue(){
 

@@ -3,23 +3,32 @@
 #include <SFML/System/Time.hpp>
 #include <string>
 #include <EventQueue/EventQueue.hpp>
+#include <EntityManager/EntityManager.hpp>
 namespace ant{
+    /**
+     * @brief Clase base para los sistemas.
+     * @author Cristian Gonzalez Moreno <Cristian.glez.m@gmail.com>
+     * @version 0.1
+     */
     class System{
         private:
             long int RequiredComponents;
             EventQueue eventQueue;
+            std::shared_ptr<EntityManager> em;
             std::string name;
         public:
             System();
             void setRequiredComponents(long int req);
             inline long int getRequiredComponts(){ return RequiredComponents; }
             void setEventQueue(EventQueue& eq);
-            inline EventQueue getEventQueue(){ return eventQueue; }
+            inline EventQueue& getEventQueue(){ return eventQueue; }
             void setName(std::string name);
-            inline std::string getName(){ return this->name; }
+            inline std::string getName() const { return this->name; }
+            void setEntityManager(std::shared_ptr<EntityManager> em);
+            inline std::shared_ptr<EntityManager>& getEntityManager(){ return this->em; }
             virtual void render(){};
             virtual void update(sf::Time dt){};
-            ~System();
+            virtual ~System();
     };
 }
 #endif // SYSTEM_H

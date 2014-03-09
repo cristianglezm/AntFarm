@@ -12,6 +12,9 @@ namespace ant{
     void System::setName(std::string name){
         this->name = name;
     }
+    void System::setEntityManager(std::shared_ptr<EntityManager> em){
+        this->em = em;
+    }
     System::~System(){
 
     }

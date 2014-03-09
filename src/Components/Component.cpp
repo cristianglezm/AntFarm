@@ -15,4 +15,7 @@ namespace ant{
                 return false;
             }
        }
+       Component::~Component(){
+
+       }
 }
