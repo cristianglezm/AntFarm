@@ -13,24 +13,24 @@ bool EntityManagerTest(){
     em.addEntity(std::move(e0));
     em.addEntity(std::move(e1));
     std::cout << "Added Succesfully.." << std::endl;
-    //em.removeEntity();
-    std::unique_ptr<ant::Entity>& tmp = em.getEntity("Test0");
-    if(tmp->getName()!=""){
+    em.removeEntity("Test0");
+    auto tmp = em.getEntity("Test0");
+    if(tmp!=nullptr){
         std::cout << tmp->getName() << std::endl;
     }else{
         std::cout << "Item Not Found " << std::endl;
         std::cout << "Removed Succesfully.." << std::endl;
     }
     std::cout << "Testing Modifiying Entity.." << std::endl;
-    std::unique_ptr<ant::Entity>& t1 = em.getEntity("Test1");
-    if(t1->getName()!=""){
+    auto t1 = em.getEntity("Test1");
+    if(t1->getName()=="Test1"){
         std::cout << "Found t1 " << t1->getName() << " Mask = " << t1->getMask() << std::endl;
         std::unique_ptr<ant::Component> c1( new ant::Component(ComponentsMask::COMPONENT_DESTRUCTABLE));
         std::cout << "Adding Component..." << std::endl;
         t1->addComponent(std::move(c1));
         std::cout << "Found t1 " << t1->getName() << " Mask = " << t1->getMask() << std::endl;
     }
-    std::unique_ptr<ant::Entity>& t2 = em.getEntity("Test1");
+    auto t2 = em.getEntity("Test1");
     if(t2->getName()!=""){
         std::cout << "Found t2 " << t2->getName() << " Mask = " << t2->getMask() << std::endl;
         std::cout << "Removing Component..." << std::endl;
@@ -88,10 +88,24 @@ bool EntityManagerTest(){
     }
     std::cout << "Testing Tranfer" << std::endl;
     auto newOwner = em.Transfer("Test0");
-    auto& t3 = em.getEntity("Test0");
-    if(t3==nullptr){
-            std::cout << newOwner->getName() << std::endl;
-        std::cout << "Entity Test0 has been Transfered..." << std::endl;
+    auto newOwner2 = em.Transfer("Test1");
+    auto t3 = em.getEntity("Test0");
+    if(newOwner){
+        std::cout << "NewOwner: " << newOwner->getName() << " Points: " << newOwner.get() << std::endl;
+        std::cout << "Entity " << newOwner->getName() << " has been Transfered..." << std::endl;
+    }else{
+        std::cout << "Transfer failed" << std::endl;
+    }
+    if(newOwner2){
+        std::cout << "NewOwner: " << newOwner2->getName() << " Points: " << newOwner2.get() << std::endl;
+        std::cout << "Entity " << newOwner2->getName() << " has been Transfered..." << std::endl;
+    }else{
+        std::cout << "Transfer failed" << std::endl;
+    }
+    if(t3){
+        std::cout << "t3 found: " << t3->getName() << std::endl;
+    }else{
+        std::cout << "t3 not found" << std::endl;
     }
     return true;
 }
