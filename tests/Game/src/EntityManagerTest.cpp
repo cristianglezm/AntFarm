@@ -1,6 +1,6 @@
 #include <../include/EntityManagerTest.hpp>
 #include <EntityManager/EntityManager.hpp>
-#include <Utils/Utils.hpp>
+#include <Utils/String.hpp>
 #include <Components/ComponentMask.hpp>
 #include <iostream>
 #include <cassert>

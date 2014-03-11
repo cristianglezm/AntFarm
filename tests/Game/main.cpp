@@ -4,6 +4,7 @@
 #include <EventTest.hpp>
 #include <EventQueueTest.hpp>
 #include <SystemTest.hpp>
+#include <SystemManagerTest.hpp>
 int main(){
     ComponentTest();
     EntityTest();
@@ -11,5 +12,6 @@ int main(){
     EventTest();
     EventQueueTest();
     SystemTest();
+    SystemManagerTest();
     return 0;
 }

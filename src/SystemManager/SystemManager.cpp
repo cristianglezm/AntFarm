@@ -5,10 +5,10 @@ namespace ant{
 
     }
     bool SystemManager::addSystem(std::shared_ptr<System> s){
-        auto result = systems.insert(std::make_pair(s->getName(),s);
+        auto result = systems.insert(std::make_pair(s->getName(),s));
         return result.second;
     }
-    shared_ptr<System> SystemManager::getSystem(std::string name){
+    std::shared_ptr<System> SystemManager::getSystem(std::string name){
         return systems.at(name);
     }
     void SystemManager::setSystems(std::map<std::string,std::shared_ptr<System>> systems){

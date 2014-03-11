@@ -6,7 +6,7 @@ namespace ant{
      *  @version 0.1
      */
     class Component{
-        private:
+        protected:
             long int id;
         public:
             Component();
