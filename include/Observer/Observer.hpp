@@ -6,8 +6,8 @@ namespace ant{
     class Observer{
         public:
             Observer(){};
-            virtual void onNotify(std::shared_ptr<Event> e){};
-            ~Observer(){};
+            virtual void onNotify(std::shared_ptr<Event> e) = 0;
+            virtual ~Observer() = 0;
     };
 }
 #endif // OBSERVER_H

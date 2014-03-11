@@ -7,15 +7,15 @@ namespace ant{
         }
         void Component::setId(long int id){
             this->id = id;
-       }
+        }
         bool Component::operator==(const Component& c)const{
             if(c.id == this->id){
                 return true;
             }else{
                 return false;
             }
-       }
-       Component::~Component(){
+        }
+        Component::~Component(){
 
-       }
+        }
 }

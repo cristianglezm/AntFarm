@@ -3,8 +3,8 @@ namespace ant{
     GameEventDispatcher::GameEventDispatcher(){
 
     }
-    bool GameEventDispatcher::DispatchEvent(Event e){
-        switch(e.getType()){
+    bool GameEventDispatcher::DispatchEvent(std::shared_ptr<Event> e){
+        switch(e->getType()){
             case 0:
                 onCollision.notifyObservers(e);
                 break;

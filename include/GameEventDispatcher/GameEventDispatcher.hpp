@@ -5,7 +5,7 @@
 #include <Subject/Subject.hpp>
 namespace ant{
     /**
-     *  Clase encargada de processar eventos.
+     *  @brief Clase encargada de processar eventos.
      *  @author Cristian Gonzalez Moreno <Cristian.glez.m@gmail.com>
      *  @version 0.1
      */
@@ -17,7 +17,7 @@ namespace ant{
             GameEventDispatcher();
             inline Subject& OnCollision(){ return onCollision; }
             inline Subject& OnTransport(){ return onTransport; }
-            bool DispatchEvent(std::unique_ptr<Event> e);
+            bool DispatchEvent(std::shared_ptr<Event> e);
             ~GameEventDispatcher();
     };
 };

@@ -1,5 +1,8 @@
 #include <Systems/System.hpp>
 namespace ant{
+    System::System(long int req):RequiredComponents(req){
+
+    }
     System::System(){
 
     }

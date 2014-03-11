@@ -11,12 +11,13 @@ namespace ant{
      * @version 0.1
      */
     class System{
-        private:
+        protected:
             long int RequiredComponents;
             EventQueue eventQueue;
             std::shared_ptr<EntityManager> em;
             std::string name;
         public:
+            System(long int req);
             System();
             void setRequiredComponents(long int req);
             inline long int getRequiredComponts(){ return RequiredComponents; }
@@ -26,8 +27,8 @@ namespace ant{
             inline std::string getName() const { return this->name; }
             void setEntityManager(std::shared_ptr<EntityManager> em);
             inline std::shared_ptr<EntityManager>& getEntityManager(){ return this->em; }
-            virtual void render(){};
-            virtual void update(sf::Time dt){};
+            virtual void render() = 0;
+            virtual void update(sf::Time dt) = 0;
             virtual ~System();
     };
 }

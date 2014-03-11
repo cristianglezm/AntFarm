@@ -1,5 +1,5 @@
-#ifndef UTILS_H
-#define UTILS_H
+#ifndef STRING_UTILS_H
+#define STRING_UTILS_H
 #include <string>
 #include <sstream>
 namespace ant{
