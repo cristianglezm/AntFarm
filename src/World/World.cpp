@@ -22,6 +22,9 @@ namespace ant{
     void World::setEventQueue(std::shared_ptr<EventQueue> eventQueue){
         this->eventQueue = eventQueue;
     }
+    void World::setGameEventDispatcher(std::shared_ptr<GameEventDispatcher> ged){
+        this->gameEventDispatcher = ged;
+    }
     void World::update(sf::Time dt){
         this->systemManager->update(dt);
     }

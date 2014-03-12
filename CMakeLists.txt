@@ -1,5 +1,22 @@
 cmake_minimum_required(VERSION 2.8)
 
+project(AntFarm)
+
+# Set the include directory
+INCLUDE_DIRECTORIES(${CMAKE_SOURCE_DIR}/include)
+
+# Set the cmake search paths
+SET(CMAKE_INCLUDE_PATH ${CMAKE_SOURCE_DIR}/include)
+
+# Set the directory of Find<Library>.cmake modules
+SET(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/modules")
+
+# find all source files in the src directory
+FILE(GLOB AntFarm_SRC "src/*.cpp")
+
+# find all the files in the includes directory
+FILE(GLOB AntFarm_INCLUDES "include/*.h" "include/*.hpp")
+
 # Specify default build type if none provided (before project() command)
 if(NOT CMAKE_BUILD_TYPE)
 	set(CMAKE_BUILD_TYPE Release CACHE STRING "Choose the type of build (Debug or Release)" FORCE)
@@ -11,13 +28,6 @@ if(CMAKE_CONFIGURATION_TYPES)
 	mark_as_advanced(CMAKE_CONFIGURATION_TYPES)
 endif()
 
-project(AntFarm)
-
-set(ANTFARM_EXTERNAL_PATH "${CMAKE_SOURCE_DIR}/dll" CACHE PATH "Path to the folder containing external libraries.")
-set(CMAKE_INSTALL_PREFIX "${CMAKE_SOURCE_DIR}/bin" CACHE PATH "Path to the folder where we want to run the executable from.")
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_INSTALL_PREFIX})
-set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_INSTALL_PREFIX})
-
 # Compiler-specific flags and definitions
 if(CMAKE_COMPILER_IS_GNUCXX)
 	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -Wall -Wno-long-long -pedantic")
@@ -25,9 +35,7 @@ elseif(CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
 	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -stdlib=libc++")
 endif()
 
-if(CMAKE_BUILD_TYPE STREQUAL "Debug")
-	add_definitions(-DDEBUG)
-endif()
+add_definitions(-DSFML_STATIC)
 
 # Add External libraries
 # Detect and add SFML
