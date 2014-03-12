@@ -20,6 +20,26 @@ namespace ant{
     void SystemManager::removeSystem(std::string name){
         systems.erase(name);
     }
+    void SystemManager::setEntityManager(std::shared_ptr<EntityManager> entityManager){
+        for(auto& system : systems){
+            system.second->setEntityManager(entityManager);
+        }
+    }
+    void SystemManager::setEventQueue(std::shared_ptr<EventQueue> eventQueue){
+        for(auto& system : systems){
+            system.second->setEventQueue(eventQueue);
+        }
+    }
+    void SystemManager::update(sf::Time dt){
+        for(auto& system : systems){
+            system.second->update(dt);
+        }
+    }
+    void SystemManager::render(){
+        for(auto& system : systems){
+            system.second->render();
+        }
+    }
     SystemManager::~SystemManager(){
 
     }

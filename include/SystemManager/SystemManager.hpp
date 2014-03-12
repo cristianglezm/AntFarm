@@ -3,6 +3,8 @@
 #include <map>
 #include <memory>
 #include <Systems/System.hpp>
+#include <SFML/System/Time.hpp>
+
 namespace ant{
     class SystemManager{
         private:
@@ -14,6 +16,10 @@ namespace ant{
             void setSystems(std::map<std::string,std::shared_ptr<System>> systems);
             std::map<std::string,std::shared_ptr<System>> getSystems();
             void removeSystem(std::string name);
+            void setEntityManager(std::shared_ptr<EntityManager> entityManager);
+            void setEventQueue(std::shared_ptr<EventQueue> eventQueue);
+            void update(sf::Time dt);
+            void render();
             ~SystemManager();
     };
 }
