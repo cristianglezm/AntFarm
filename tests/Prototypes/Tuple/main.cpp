@@ -16,6 +16,7 @@ class Component{
         inline std::tuple<Ts...> getProperties(){ return this->properties; }
         ~Component(){}
 };
+
 class message{
     private:
         std::string str;
