@@ -10,7 +10,7 @@ namespace ant{
     void Subject::removeObserver(std::shared_ptr<Observer> o){
 
     }
-    void Subject::notifyObservers(std::shared_ptr<Event> e){
+    void Subject::notifyObservers(std::shared_ptr<baseEvent> e){
         for(auto& o: Observers){
             o->onNotify(e);
         }

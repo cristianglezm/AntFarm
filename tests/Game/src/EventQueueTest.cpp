@@ -6,7 +6,7 @@ bool EventQueueTest(){
     std::cout << "EventQueueTest:---------------" << std::endl;
     ant::EventQueue eventQueue;
     for(int i=0;i<10;++i){
-        eventQueue.push(std::shared_ptr<ant::Event>(new ant::Event(i)));
+        eventQueue.push(ant::makeSharedEvent<ant::Event<int,std::string>>(i,1,"Test Event"));
     }
     std::cout << "Processing Queue..." << std::endl;
     while(!eventQueue.isEmpty()){

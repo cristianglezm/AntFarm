@@ -11,12 +11,12 @@ namespace ant{
      */
     class EventQueue{
         private:
-            std::queue<std::shared_ptr<Event> > eventQueue;
+            std::queue<std::shared_ptr<baseEvent> > eventQueue;
         public:
             EventQueue();
-            void push(std::shared_ptr<Event> e);
-            std::shared_ptr<Event> pop();
-            std::shared_ptr<Event>& front();
+            void push(std::shared_ptr<baseEvent> e);
+            std::shared_ptr<baseEvent> pop();
+            std::shared_ptr<baseEvent>& front();
             inline bool isEmpty(){ return eventQueue.empty(); }
             ~EventQueue();
     };

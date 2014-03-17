@@ -11,7 +11,7 @@ namespace ant{
             Subject();
             void addObserver(std::shared_ptr<Observer> o);
             void removeObserver(std::shared_ptr<Observer> o);
-            void notifyObservers(std::shared_ptr<Event> e);
+            void notifyObservers(std::shared_ptr<baseEvent> e);
             ~Subject();
     };
 }

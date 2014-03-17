@@ -9,7 +9,7 @@
         for(auto& entity : em->getEntities()){
             if((entity->getMask() & RequiredComponents) == RequiredComponents){
                 std::cout << "Entity has the requeriments." << std::endl;
-                eventQueue->push(std::shared_ptr<ant::Event>(new ant::Event(RequiredComponents)));
+                eventQueue->push(ant::makeSharedEvent<ant::Event<int,std::string>>(3,3,"Test de evento con templates"));
             }else{
                 std::cout << "Entity hasnt the requeriments." << std::endl;
             }

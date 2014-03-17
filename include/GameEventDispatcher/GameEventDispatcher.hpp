@@ -17,7 +17,7 @@ namespace ant{
             GameEventDispatcher();
             inline Subject& OnCollision(){ return onCollision; }
             inline Subject& OnTransport(){ return onTransport; }
-            bool DispatchEvent(std::shared_ptr<Event> e);
+            bool DispatchEvent(std::shared_ptr<baseEvent> e);
             ~GameEventDispatcher();
     };
 };

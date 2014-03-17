@@ -26,24 +26,24 @@ class message{
             std::cout << "DTOR "<< str << std::endl;
         }
 };
-class base {
+class baseComponent {
 public:
-    virtual ~base() = default;
+    virtual ~baseComponent() = default;
     int id() const {
         return m_id;
     }
     template<typename...T>
     const std::tuple<T...>& virt_data() const;
 protected:
-    base(int id): m_id(id) {}
+    baseComponent(int id): m_id(id) {}
 private:
     int m_id;
 };
 
 template<typename...T>
-class derived: public base {
+class Component: public baseComponent {
 public:
-    derived(T...data, int id): base {id}, m_data {std::move(data)...} {}
+    Component(T...data, int id): baseComponent {id}, m_data {std::move(data)...} {}
     const std::tuple<T...>& data() const {
         return m_data;
     }
@@ -52,8 +52,8 @@ private:
 };
 
 template<typename...T>
-const std::tuple<T...>& base::virt_data() const {
-    auto& casted = dynamic_cast<const derived<T...>&>(*this);
+const std::tuple<T...>& baseComponent::virt_data() const {
+    auto& casted = dynamic_cast<const Component<T...>&>(*this);
     return casted.data();
 }
 
@@ -63,10 +63,10 @@ std::unique_ptr<T> make_unique(Args&&... args) {
 }
 
 int main() {
-    std::vector<std::unique_ptr<base>> misc_data;
-    misc_data.push_back(make_unique<derived<int, float>>(2, 3.4f, 0));
-    misc_data.push_back(make_unique<derived<double>>(43.23, 1));
-    misc_data.push_back(make_unique<derived<std::shared_ptr<message>,int,bool>>(std::shared_ptr<message>(new message("TEST")),2,true,4));
+    std::vector<std::unique_ptr<baseComponent>> misc_data;
+    misc_data.push_back(make_unique<Component<int, float>>(2, 3.4f, 0));
+    misc_data.push_back(make_unique<Component<double>>(43.23, 1));
+    misc_data.push_back(make_unique<Component<std::shared_ptr<message>,int,bool>>(std::shared_ptr<message>(new message("TEST")),2,true,4));
     auto data = misc_data.at(0)->virt_data<int, float>();
     assert(data == std::make_tuple(2, 3.4f));
     std::cout << "Obtenemos propiedad " << std::endl;
