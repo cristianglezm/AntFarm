@@ -6,7 +6,6 @@
 namespace ant{
     class ComponentFactory{
         private:
-
             std::shared_ptr<AssetManager> assets;
         public:
             ComponentFactory();

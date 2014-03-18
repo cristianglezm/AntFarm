@@ -9,11 +9,7 @@ namespace ant{
             this->id = id;
         }
         bool Component::operator==(const Component& c)const{
-            if(c.id == this->id){
-                return true;
-            }else{
-                return false;
-            }
+            return (c.id == this->id);
         }
         Component::~Component(){
 
