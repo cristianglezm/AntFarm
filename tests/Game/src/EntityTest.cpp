@@ -9,9 +9,9 @@ bool EntityTest(){
     std::cout << "Entity name: " << e.getName() << std::endl;
     assert(e.getName()=="Test");
     std::cout << "Adding Movement,Transform Components..." << std::endl;
-    std::unique_ptr<ant::Component> c1(new ant::Component(ComponentsMask::COMPONENT_MOVEMENT));
+    std::unique_ptr<ant::baseComponent> c1(new ant::Component<int>(ComponentsMask::COMPONENT_MOVEMENT,2));
     e.addComponent(std::move(c1));
-    std::unique_ptr<ant::Component> c2(new ant::Component(ComponentsMask::COMPONENT_TRANSFORM));
+    std::unique_ptr<ant::baseComponent> c2(new ant::Component<int>(ComponentsMask::COMPONENT_TRANSFORM,2));
     e.addComponent(std::move(c2));
     std::cout << "Entity mask: " << e.getMask() << std::endl;
     assert(e.getMask()==(ComponentsMask::COMPONENT_MOVEMENT | ComponentsMask::COMPONENT_TRANSFORM));

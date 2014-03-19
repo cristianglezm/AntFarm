@@ -1,6 +1,9 @@
 #ifndef QUADTREE_H
 #define QUADTREE_H
 #include <array>
+#include <memory>
+#include <list>
+#include <Entity/Entity.hpp>
 #include <SFML/Graphics/Rect.hpp>
 namespace ant{
     namespace Utils{

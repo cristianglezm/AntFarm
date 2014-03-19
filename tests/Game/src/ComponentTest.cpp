@@ -5,7 +5,7 @@
 #include <cassert>
 bool ComponentTest(){
     std::cout << "Component Test:-------------------------------- " << std::endl;
-    ant::Component c(ComponentsMask::COMPONENT_NONE);
+    ant::Component<int> c(ComponentsMask::COMPONENT_NONE,2);
     assert(c.getId()==ComponentsMask::COMPONENT_NONE);
     std::cout << "ID: " << c.getId() << std::endl;
     c.setId(ComponentsMask::COMPONENT_EGGS);

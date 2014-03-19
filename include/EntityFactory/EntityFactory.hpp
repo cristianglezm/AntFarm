@@ -20,6 +20,7 @@ namespace ant{
                 long int Battlefield = ComponentsMask::COMPONENT_SPRITE;
             EntityFactory();
             createEntity(long int mask);
+
             ~EntityFactory();
     };
 }

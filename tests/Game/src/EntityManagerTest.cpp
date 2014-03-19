@@ -25,7 +25,7 @@ bool EntityManagerTest(){
     auto t1 = em.getEntity("Test1");
     if(t1->getName()=="Test1"){
         std::cout << "Found t1 " << t1->getName() << " Mask = " << t1->getMask() << std::endl;
-        std::unique_ptr<ant::Component> c1( new ant::Component(ComponentsMask::COMPONENT_DESTRUCTABLE));
+        std::unique_ptr<ant::baseComponent> c1( new ant::Component<int>(ComponentsMask::COMPONENT_DESTRUCTABLE,1));
         std::cout << "Adding Component..." << std::endl;
         t1->addComponent(std::move(c1));
         std::cout << "Found t1 " << t1->getName() << " Mask = " << t1->getMask() << std::endl;
@@ -36,7 +36,7 @@ bool EntityManagerTest(){
         std::cout << "Removing Component..." << std::endl;
         t2->removeComponent(ComponentsMask::COMPONENT_DESTRUCTABLE);
         std::cout << "Found t2 " << t2->getName() << " Mask = " << t2->getMask() << std::endl;
-        std::unique_ptr<ant::Component> c2( new ant::Component(ComponentsMask::COMPONENT_EGGS));
+        std::unique_ptr<ant::baseComponent> c2( new ant::Component<int>(ComponentsMask::COMPONENT_EGGS,2));
         std::cout << "Adding Component..." << std::endl;
         t2->addComponent(std::move(c2));
         std::cout << "Found t2 " << t2->getName() << " Mask = " << t2->getMask() << std::endl;
@@ -51,32 +51,32 @@ bool EntityManagerTest(){
         auto dice = std::bind(distribution, generator);
         switch(dice()){
             case 1:{
-                std::unique_ptr<ant::Component> c1( new ant::Component(ComponentsMask::COMPONENT_EGGS));
+                std::unique_ptr<ant::baseComponent> c1( new ant::Component<int>(ComponentsMask::COMPONENT_EGGS,2));
                 e->addComponent(std::move(c1));
                 }
                 break;
             case 2:{
-                std::unique_ptr<ant::Component> c2( new ant::Component(ComponentsMask::COMPONENT_HORNS));
+                std::unique_ptr<ant::baseComponent> c2( new ant::Component<int>(ComponentsMask::COMPONENT_HORNS,2));
                 e->addComponent(std::move(c2));
                 }
                 break;
             case 3:{
-                std::unique_ptr<ant::Component> c3( new ant::Component(ComponentsMask::COMPONENT_DESTRUCTABLE));
+                std::unique_ptr<ant::baseComponent> c3( new ant::Component<int>(ComponentsMask::COMPONENT_DESTRUCTABLE,2));
                 e->addComponent(std::move(c3));
                 }
                 break;
             case 4:{
-                std::unique_ptr<ant::Component> c4( new ant::Component(ComponentsMask::COMPONENT_MOVEMENT));
+                std::unique_ptr<ant::baseComponent> c4( new ant::Component<int>(ComponentsMask::COMPONENT_MOVEMENT,2));
                 e->addComponent(std::move(c4));
                 }
                 break;
             case 5:{
-                std::unique_ptr<ant::Component> c5( new ant::Component(ComponentsMask::COMPONENT_SPRITE));
+                std::unique_ptr<ant::baseComponent> c5( new ant::Component<int>(ComponentsMask::COMPONENT_SPRITE,2));
                 e->addComponent(std::move(c5));
                 }
                 break;
             case 6:{
-                std::unique_ptr<ant::Component> c6( new ant::Component(ComponentsMask::COMPONENT_TRANSFORM));
+                std::unique_ptr<ant::baseComponent> c6( new ant::Component<int>(ComponentsMask::COMPONENT_TRANSFORM,2));
                 e->addComponent(std::move(c6));
                 }
                 break;

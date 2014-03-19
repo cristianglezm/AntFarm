@@ -9,7 +9,7 @@
         for(auto& entity : em->getEntities()){
             if((entity->getMask() & RequiredComponents) == RequiredComponents){
                 std::cout << "Entity has the requeriments." << std::endl;
-                eventQueue->push(ant::makeSharedEvent<ant::Event<int,std::string>>(3,3,"Test de evento con templates"));
+                eventQueue->push(ant::makeSharedPtr<ant::Event<int,std::string>>(3,3,"Test de evento con templates"));
             }else{
                 std::cout << "Entity hasnt the requeriments." << std::endl;
             }
@@ -30,8 +30,8 @@ bool SystemTest(){
     std::cout << "Creamos y agregamos entidades: " << std::endl;
     for(int i=0;i<3;++i){
         std::unique_ptr<ant::Entity> e1(new ant::Entity());
-        std::unique_ptr<ant::Component> c1(new ant::Component(ComponentsMask::COMPONENT_MOVEMENT));
-        std::unique_ptr<ant::Component> c2(new ant::Component(ComponentsMask::COMPONENT_HORNS));
+        std::unique_ptr<ant::baseComponent> c1(new ant::Component<int>(ComponentsMask::COMPONENT_MOVEMENT,2));
+        std::unique_ptr<ant::baseComponent> c2(new ant::Component<int>(ComponentsMask::COMPONENT_HORNS,2));
         e1->addComponent(std::move(c1));
         e1->addComponent(std::move(c2));
         s.getEntityManager()->addEntity(std::move(e1));
@@ -46,8 +46,8 @@ bool SystemTest(){
     testSystem s1(0);
     for(int i=0;i<2;++i){
         std::unique_ptr<ant::Entity> e1(new ant::Entity());
-        std::unique_ptr<ant::Component> c1(new ant::Component(ComponentsMask::COMPONENT_EGGS));
-        std::unique_ptr<ant::Component> c2(new ant::Component(ComponentsMask::COMPONENT_NONE));
+        std::unique_ptr<ant::baseComponent> c1(new ant::Component<int>(ComponentsMask::COMPONENT_EGGS,3));
+        std::unique_ptr<ant::baseComponent> c2(new ant::Component<int>(ComponentsMask::COMPONENT_NONE,2));
         e1->addComponent(std::move(c1));
         e1->addComponent(std::move(c2));
         s1.getEntityManager()->addEntity(std::move(e1));

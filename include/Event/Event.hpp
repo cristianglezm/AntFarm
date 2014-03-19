@@ -39,8 +39,8 @@ namespace ant{
         return casted.getAttributes();
     }
     template<typename T, typename... Args>
-    std::shared_ptr<T> makeSharedEvent(Args&&... args) {
-        return std::shared_ptr<T>(new T(std::forward<Args>(args)...));
+    std::shared_ptr<T> makeSharedPtr(Args&&... args) {
+        return std::shared_ptr<T>(new T(args...));
     }
 }
 #endif // EVENT_H

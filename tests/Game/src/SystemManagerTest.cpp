@@ -10,8 +10,8 @@ bool SystemManagerTest(){
     s->setName("testSystem");
     for(int i=0;i<3;++i){
         std::unique_ptr<ant::Entity> e1(new ant::Entity());
-        std::unique_ptr<ant::Component> c1(new ant::Component(ComponentsMask::COMPONENT_MOVEMENT));
-        std::unique_ptr<ant::Component> c2(new ant::Component(ComponentsMask::COMPONENT_HORNS));
+        std::unique_ptr<ant::baseComponent> c1(new ant::Component<int>(ComponentsMask::COMPONENT_MOVEMENT,2));
+        std::unique_ptr<ant::baseComponent> c2(new ant::Component<int>(ComponentsMask::COMPONENT_HORNS,2));
         e1->addComponent(std::move(c1));
         e1->addComponent(std::move(c2));
         s->getEntityManager()->addEntity(std::move(e1));
