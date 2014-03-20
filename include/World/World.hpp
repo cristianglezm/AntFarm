@@ -15,7 +15,8 @@ namespace ant{
             long int id;
         public:
             World();
-            World(std::shared_ptr<EntityManager> entityManager,std::unique_ptr<SystemManager> systemManager,std::shared_ptr<EventQueue> eventQueue);
+            World(long int id);
+            World(long int id,std::shared_ptr<EntityManager> entityManager,std::unique_ptr<SystemManager> systemManager,std::shared_ptr<EventQueue> eventQueue);
             void setEntityManager(std::shared_ptr<EntityManager> entityManager);
             inline std::shared_ptr<EntityManager> getEntityManager(){ return this->entityManager; }
             void setSystemManager(std::unique_ptr<SystemManager> systemManager);
@@ -24,6 +25,8 @@ namespace ant{
             inline std::shared_ptr<EventQueue> getEventQueue(){ return this->eventQueue; }
             void setGameEventDispatcher(std::shared_ptr<GameEventDispatcher> ged);
             inline std::shared_ptr<GameEventDispatcher> getGameEventDispatcher(){ return this->gameEventDispatcher; }
+            void setId(long int id);
+            inline long int getId(){ return id; }
             void update(sf::Time dt);
             void render();
             ~World();

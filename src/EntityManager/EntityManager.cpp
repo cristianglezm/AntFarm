@@ -12,7 +12,7 @@ namespace ant{
     void EntityManager::removeEntity(std::string name){
         for(auto& entity:entities){
             if(entity.get()!=nullptr){
-                if(entity->getName()==name){
+                if(entity->getName() == name){
                     entities.remove(entity);
                     return;
                 }

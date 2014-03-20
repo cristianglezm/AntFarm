@@ -36,7 +36,7 @@ namespace ant{
     template<typename...T>
     const std::tuple<T...>& baseComponent::getProperties() const {
         auto& casted = dynamic_cast<const Component<T...>&>(*this);
-        return casted.getAttributes();
+        return casted.getProperties();
     }
     template<typename T, typename... Args>
     std::unique_ptr<T> makeUniquePtr(Args&&... args) {

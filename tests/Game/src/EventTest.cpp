@@ -9,4 +9,5 @@ bool EventTest(){
     auto& attributes = e.getAttributes();
     std::cout << std::get<1>(attributes) << std::endl;
     std::cout << "Cambiamos Tipo: " << e.getType() << std::endl;
+    return true;
 }
