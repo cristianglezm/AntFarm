@@ -77,19 +77,19 @@ namespace ant{
                     if(nodes[0] == nullptr) {
                         this->split();
                     }
-                    for(auto entity: entities){
+                    for(auto& entity: entities){
                         int index = getIndex(entity);
                         if(index != -1){
-                            entities.remove(e);
-                            nodes[index]->insert(e);
+                            entities.remove(entity);
+                            nodes[index]->insert(entity);
                         }
                     }
                 }
         }
         void Quadtree::clear(){
             entities.clear();
-            for (int i = 0; i < nodes.size();++i) {
-                if (nodes[i] != nullptr) {
+            for(int i = 0; i < nodes.size();++i) {
+                if(nodes[i] != nullptr){
                     nodes[i]->clear();
                     nodes[i] = nullptr;
                 }
@@ -104,6 +104,17 @@ namespace ant{
                }
                entities->merge(this->entities);
                return *entities;
+        }
+        void Quadtree::render(sf::RenderWindow& win){
+            sf::RectangleShape boundsShape(sf::Vector2f(bounds.width,bounds.height));
+            sf::Color color(255,255,255,level+entities.size());
+            boundsShape.setFillColor(sf::Color::Transparent);
+            boundsShape.setOutlineColor(color);
+            boundsShape.setOutlineThickness(2);
+            win.draw(boundsShape);
+            for(int i=0;i<nodes.size();++i){
+                nodes[i]->render(win);
+            }
         }
         Quadtree::~Quadtree(){
 

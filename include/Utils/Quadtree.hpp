@@ -5,12 +5,16 @@
 #include <list>
 #include <Entity/Entity.hpp>
 #include <SFML/Graphics/Rect.hpp>
+#include <SFML/Graphics/RenderWindow.hpp>
+#include <SFML/Graphics/RectangleShape.hpp>
+#include <SFML/Graphics/Color.hpp>
+
 namespace ant{
     namespace Utils{
         class Quadtree{
             private:
-                const static int MAX_CAPACITY = 10;
-                const static int MAX_LEVEL = 5;
+                const static int MAX_CAPACITY = 10000;
+                const static int MAX_LEVEL = 1000;
                 int level;
                 std::array<std::unique_ptr<Quadtree>,4> nodes;
                 sf::FloatRect bounds;
@@ -24,6 +28,7 @@ namespace ant{
                 void insert(Entity* e);
                 void clear();
                 std::list<Entity*> retrieve(std::list<Entity*>* entities,Entity* e);
+                void render(sf::RenderWindow& win);
                 ~Quadtree();
         };
     };

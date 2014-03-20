@@ -12,15 +12,19 @@ bool QuadtreeTest(){
     std::cout << "QuadtreeTest -----------------"<<std::endl;
     ant::Utils::Quadtree qtree(sf::FloatRect(0,0,500,500));
     ant::EntityManager em;
-    for(int i=0;i<10;++i){
+    std::cout << "Insertando Entidades..." << std::endl;
+    for(int i=0;i<1000;++i){
         std::unique_ptr<ant::Entity> e1(new ant::Entity("Test" + ant::Utils::toString(i)));
         std::unique_ptr<ant::baseComponent> c1(new ant::Component<sf::FloatRect>(ComponentsMask::COMPONENT_TRANSFORM,sf::FloatRect(-i,i,20,20)));
         e1->addComponent(std::move(c1));
         em.addEntity(std::move(e1));
     }
+    std::cout << "Agregadas al Entity Manager" << std::endl;
+    int i=0;
     for(auto& entity:em.getEntities()){
         qtree.insert(entity.get());
     }
+    std::cout << "Agregadas al Quadtree" << std::endl;
     std::list<ant::Entity*> entities;
     for(auto& entity:em.getEntities()){
             entities.clear();
