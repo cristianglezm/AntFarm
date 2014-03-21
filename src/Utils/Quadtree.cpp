@@ -1,5 +1,6 @@
 #include <Utils/Quadtree.hpp>
 #include <Components/ComponentMask.hpp>
+
 namespace ant{
     namespace Utils{
         void Quadtree::split(){
@@ -7,33 +8,10 @@ namespace ant{
             int subHeight = (int)(bounds.height / 2);
             int x = (int)bounds.left;
             int y = (int)bounds.top;
-            nodes[0].reset(new Quadtree(level+1, sf::FloatRect(x + subWidth, y, subWidth, subHeight)));
-            nodes[1].reset(new Quadtree(level+1, sf::FloatRect(x, y, subWidth, subHeight)));
-            nodes[2].reset(new Quadtree(level+1, sf::FloatRect(x, y + subHeight, subWidth, subHeight)));
-            nodes[3].reset(new Quadtree(level+1, sf::FloatRect(x + subWidth, y + subHeight, subWidth, subHeight)));
-        }
-        Quadtree::Quadtree(int level){
-            this->level = level;
-            nodes[0] = nullptr;
-            nodes[1] = nullptr;
-            nodes[2] = nullptr;
-            nodes[3] = nullptr;
-        }
-        Quadtree::Quadtree(int level,sf::FloatRect bounds){
-            this->level = level;
-            this->bounds = bounds;
-            nodes[0] = nullptr;
-            nodes[1] = nullptr;
-            nodes[2] = nullptr;
-            nodes[3] = nullptr;
-        }
-        Quadtree::Quadtree(sf::FloatRect bounds){
-            this->bounds = bounds;
-            this->level = 0;
-            nodes[0] = nullptr;
-            nodes[1] = nullptr;
-            nodes[2] = nullptr;
-            nodes[3] = nullptr;
+            nodes[0].reset(new Quadtree((level+1), sf::FloatRect(x + subWidth, y, subWidth, subHeight)));
+            nodes[1].reset(new Quadtree((level+1), sf::FloatRect(x, y, subWidth, subHeight)));
+            nodes[2].reset(new Quadtree((level+1), sf::FloatRect(x, y + subHeight, subWidth, subHeight)));
+            nodes[3].reset(new Quadtree((level+1), sf::FloatRect(x + subWidth, y + subHeight, subWidth, subHeight)));
         }
         int Quadtree::getIndex(Entity* e){
                 int index = -1;
@@ -63,9 +41,32 @@ namespace ant{
                 }
                 return index;
         }
+        Quadtree::Quadtree(int level){
+            this->level = level;
+            nodes[0] = nullptr;
+            nodes[1] = nullptr;
+            nodes[2] = nullptr;
+            nodes[3] = nullptr;
+        }
+        Quadtree::Quadtree(int level,sf::FloatRect bounds){
+            this->level = level;
+            this->bounds = bounds;
+            nodes[0] = nullptr;
+            nodes[1] = nullptr;
+            nodes[2] = nullptr;
+            nodes[3] = nullptr;
+        }
+        Quadtree::Quadtree(sf::FloatRect bounds){
+            this->bounds = bounds;
+            this->level = 0;
+            nodes[0] = nullptr;
+            nodes[1] = nullptr;
+            nodes[2] = nullptr;
+            nodes[3] = nullptr;
+        }
         void Quadtree::insert(Entity* e){
                if (nodes[0] != nullptr) {
-                    int index = getIndex(e);
+                    int index = this->getIndex(e);
                     if (index != -1) {
                         nodes[index]->insert(e);
                         return;
@@ -73,15 +74,18 @@ namespace ant{
                 }
                 entities.push_back(e);
 
-                if(entities.size() > this->MAX_CAPACITY && level < this->MAX_LEVEL) {
+                if(entities.size() > this->MAX_CAPACITY && level < this->MAX_LEVEL){
                     if(nodes[0] == nullptr) {
                         this->split();
                     }
-                    for(auto& entity: entities){
-                        int index = getIndex(entity);
+                    std::list<Entity*>::iterator i = entities.begin();
+                    while(i != entities.end()){
+                        int index = getIndex(*i);
                         if(index != -1){
-                            entities.remove(entity);
-                            nodes[index]->insert(entity);
+                            nodes[index]->insert(*i);
+                            entities.erase(i++);
+                        }else{
+                            ++i;
                         }
                     }
                 }
@@ -96,7 +100,7 @@ namespace ant{
             }
         }
         std::list<Entity*> Quadtree::retrieve(std::list<Entity*>* entities,Entity* e){
-               int index = getIndex(e);
+               int index = this->getIndex(e);
                entities->sort();
                this->entities.sort();
                if (index != -1 && nodes[0] != nullptr) {
@@ -107,13 +111,16 @@ namespace ant{
         }
         void Quadtree::render(sf::RenderWindow& win){
             sf::RectangleShape boundsShape(sf::Vector2f(bounds.width,bounds.height));
-            sf::Color color(255,255,255,level+entities.size());
+            boundsShape.setPosition(bounds.left,bounds.top);
+            sf::Color color(level+1,255,255,255);
             boundsShape.setFillColor(sf::Color::Transparent);
             boundsShape.setOutlineColor(color);
             boundsShape.setOutlineThickness(2);
             win.draw(boundsShape);
             for(int i=0;i<nodes.size();++i){
-                nodes[i]->render(win);
+                if(nodes[0] != nullptr){
+                    nodes[i]->render(win);
+                }
             }
         }
         Quadtree::~Quadtree(){

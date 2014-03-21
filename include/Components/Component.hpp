@@ -17,7 +17,7 @@ namespace ant{
             void setId(int id){ this->id=id;}
             inline int getId() const{ return id; }
             template<typename...T>
-            const std::tuple<T...>& getProperties() const;
+            std::tuple<T...>& getProperties();
             template<typename...T>
             void setProperties(std::tuple<T...> properties);
     };
@@ -31,11 +31,11 @@ namespace ant{
             std::tuple<T...> properties;
         public:
             Component(int id,T...data): baseComponent{id}, properties{std::move(data)...} {}
-        inline const std::tuple<T...>& getProperties() const { return properties; }
+        inline std::tuple<T...>& getProperties(){ return properties; }
     };
     template<typename...T>
-    const std::tuple<T...>& baseComponent::getProperties() const {
-        auto& casted = dynamic_cast<const Component<T...>&>(*this);
+    std::tuple<T...>& baseComponent::getProperties(){
+        auto& casted = dynamic_cast<Component<T...>&>(*this);
         return casted.getProperties();
     }
     template<typename T, typename... Args>

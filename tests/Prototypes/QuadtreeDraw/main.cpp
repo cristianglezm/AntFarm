@@ -13,19 +13,8 @@ float getFPS(const sf::Time& time) {
 int main(){
     std::cout << "Iniciando...." << std::endl;
     // Create the main window
-    ant::Utils::Quadtree qtree(sf::FloatRect(0,0,800,600));
+    ant::Utils::Quadtree qtree(sf::FloatRect(3,3,795,595));
     ant::EntityManager em;
-    std::cout << "Insertando Entidades..." << std::endl;
-    for(int i=0;i<100;++i){
-        std::unique_ptr<ant::Entity> e1(new ant::Entity("Test" + ant::Utils::toString(i)));
-        std::unique_ptr<ant::baseComponent> c1(new ant::Component<sf::FloatRect>(ComponentsMask::COMPONENT_TRANSFORM,sf::FloatRect(-i,i,20,20)));
-        e1->addComponent(std::move(c1));
-        em.addEntity(std::move(e1));
-    }
-    std::cout << "Agregadas al Entity Manager" << std::endl;
-    for(auto& entity:em.getEntities()){
-        qtree.insert(entity.get());
-    }
     sf::RenderWindow app(sf::VideoMode(800, 600), "QuadTree Draw Demo");
 	// Start the game loop
     while (app.isOpen()){
@@ -36,12 +25,40 @@ int main(){
                     case sf::Event::Closed:
                         app.close();
                         break;
+                    case sf::Event::MouseButtonPressed:
+                        if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
+                            std::unique_ptr<ant::Entity> e1(new ant::Entity("Test"));
+                            int x = app.mapCoordsToPixel((sf::Vector2f)sf::Mouse::getPosition(app)).x;
+                            int y = app.mapCoordsToPixel((sf::Vector2f)sf::Mouse::getPosition(app)).y;
+                            std::unique_ptr<ant::baseComponent> c1(new ant::Component<sf::FloatRect>(ComponentsMask::COMPONENT_TRANSFORM,sf::FloatRect(x,y,20,20)));
+                            e1->addComponent(std::move(c1));
+                            em.addEntity(std::move(e1));
+                            std::unique_ptr<ant::Entity> e2(new ant::Entity("Test"));
+                            int x1 = app.mapCoordsToPixel((sf::Vector2f)sf::Mouse::getPosition(app)).x-5;
+                            int y1 = app.mapCoordsToPixel((sf::Vector2f)sf::Mouse::getPosition(app)).y+5;
+                            std::unique_ptr<ant::baseComponent> c2(new ant::Component<sf::FloatRect>(ComponentsMask::COMPONENT_TRANSFORM,sf::FloatRect(x1,y1,20,20)));
+                            e2->addComponent(std::move(c2));
+                            em.addEntity(std::move(e2));
+                        }
+                        break;
                 }
         }
-    /// Hover Mouse to destruct
+        qtree.clear();
+    for(auto& entity:em.getEntities()){
+        qtree.insert(entity.get());
+    }
         // Clear screen
         app.clear();
         // Draw the sprite
+        sf::VertexArray points(sf::Points,em.getEntities().size());
+        for(auto& e: em.getEntities()){
+            auto& properties = e->getComponent(ComponentsMask::COMPONENT_TRANSFORM)->getProperties<sf::FloatRect>();
+            sf::FloatRect eBounds = std::get<0>(properties);
+            sf::Vertex p(sf::Vector2f(eBounds.left,eBounds.top),sf::Color::Green);
+            points.append(p);
+            app.draw(points);
+            std::get<0>(properties) = sf::FloatRect(eBounds.left,eBounds.top+0.01,eBounds.width,eBounds.height);
+        }
         qtree.render(app);
         // Update the window
         app.display();
