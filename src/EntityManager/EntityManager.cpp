@@ -6,18 +6,21 @@ namespace ant{
     void EntityManager::addEntity(std::unique_ptr<Entity> e){
         entities.push_back(std::move(e));
     }
-    void EntityManager::removeEntity(std::unique_ptr<Entity> e){
+    void EntityManager::removeEntity(std::unique_ptr<Entity>& e){
        entities.remove(std::move(e));
     }
-    void EntityManager::removeEntity(std::string name){
-        for(auto& entity:entities){
-            if(entity.get()!=nullptr){
-                if(entity->getName() == name){
-                    entities.remove(entity);
-                    return;
+    EntityManager::iterator EntityManager::removeEntity(std::string name){
+        iterator i = entities.begin();
+        while(i != entities.end()){
+            if((*i).get()!=nullptr){
+                if((*i)->getName() == name){
+                    return entities.erase(i);
                 }
             }
         }
+    }
+    EntityManager::iterator EntityManager::removeEntity(EntityManager::iterator it){
+        return entities.erase(it);
     }
     Entity* EntityManager::getEntity(std::string name){
         for(auto& entity : entities){

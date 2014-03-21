@@ -32,13 +32,12 @@ int main(){
                                     std::unique_ptr<ant::Entity> e1(new ant::Entity("Test"));
                                     int x = app.mapCoordsToPixel((sf::Vector2f)sf::Mouse::getPosition(app)).x;
                                     int y = app.mapCoordsToPixel((sf::Vector2f)sf::Mouse::getPosition(app)).y;
-                                    std::unique_ptr<ant::baseComponent> c1(new ant::Component<sf::FloatRect>(ComponentsMask::COMPONENT_TRANSFORM,sf::FloatRect(x+i,y,1,1)));
+                                    std::unique_ptr<ant::baseComponent> c1(new ant::Component<sf::FloatRect>(ComponentsMask::COMPONENT_TRANSFORM,sf::FloatRect(x+i*2,y,1,1)));
                                     e1->addComponent(std::move(c1));
                                     em.addEntity(std::move(e1));
                                 }
                         }
                         if(sf::Mouse::isButtonPressed(sf::Mouse::Right)){
-                            qtree.clear();
                             em.getEntities().clear();
                         }
                         break;

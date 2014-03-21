@@ -26,7 +26,6 @@ namespace ant{
                 Quadtree(int level,sf::FloatRect bounds);
                 Quadtree(sf::FloatRect bounds);
                 void insert(Entity* e);
-
                 void clear();
                 std::list<Entity*> retrieve(std::list<Entity*>* entities,Entity* e);
                 void render(sf::RenderWindow& win);
