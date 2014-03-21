@@ -13,7 +13,7 @@ namespace ant{
     namespace Utils{
         class Quadtree{
             private:
-                const static int MAX_CAPACITY = 50;
+                const static int MAX_CAPACITY = 1;
                 const static int MAX_LEVEL = 1000;
                 int level;
                 std::array<std::unique_ptr<Quadtree>,4> nodes;

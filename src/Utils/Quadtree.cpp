@@ -110,18 +110,18 @@ namespace ant{
                return *entities;
         }
         void Quadtree::render(sf::RenderWindow& win){
-            sf::RectangleShape boundsShape(sf::Vector2f(bounds.width,bounds.height));
-            boundsShape.setPosition(bounds.left,bounds.top);
-            sf::Color color(level+1,255,255,255);
-            boundsShape.setFillColor(sf::Color::Transparent);
-            boundsShape.setOutlineColor(color);
-            boundsShape.setOutlineThickness(2);
-            win.draw(boundsShape);
             for(int i=0;i<nodes.size();++i){
                 if(nodes[0] != nullptr){
                     nodes[i]->render(win);
                 }
             }
+            sf::RectangleShape boundsShape(sf::Vector2f(bounds.width,bounds.height));
+            boundsShape.setPosition(bounds.left,bounds.top);
+            sf::Color color(entities.size(),255,255,255);
+            boundsShape.setOutlineThickness(1);
+            boundsShape.setFillColor(sf::Color::Transparent);
+            boundsShape.setOutlineColor(color);
+            win.draw(boundsShape);
         }
         Quadtree::~Quadtree(){
 
