@@ -13,10 +13,10 @@ float getFPS(const sf::Time& time) {
 int main(){
     std::cout << "Iniciando...." << std::endl;
     // Create the main window
-    ant::Utils::Quadtree qtree(sf::FloatRect(0,0,800,600));
+    ant::Utils::Quadtree qtree(sf::FloatRect(0,0,1280,800));
     ant::EntityManager em;
-    sf::RenderWindow app(sf::VideoMode(800, 600), "QuadTree Draw Demo");
-    sf::FloatRect worldBounds(0,0,800,600);
+    sf::RenderWindow app(sf::VideoMode(1280,800), "QuadTree Draw Demo",sf::Style::Fullscreen);
+    sf::FloatRect worldBounds(0,0,1280,800);
 	// Start the game loop
 	sf::Time elapsedTime;
 	sf::Time lastFrame;
@@ -28,7 +28,7 @@ int main(){
 	}
 	fps.setFont(font);
 	fps.setCharacterSize(25);
-    fps.setPosition(745,550);
+    fps.setPosition(1180,750);
     bool running=true;
     while(running){
         int FPS = getFPS(clock.restart());
@@ -53,13 +53,18 @@ int main(){
                                     std::unique_ptr<ant::Entity> e1(new ant::Entity("Test"));
                                     int x = app.mapCoordsToPixel((sf::Vector2f)sf::Mouse::getPosition(app)).x;
                                     int y = app.mapCoordsToPixel((sf::Vector2f)sf::Mouse::getPosition(app)).y;
-                                    std::unique_ptr<ant::baseComponent> c1(new ant::Component<sf::FloatRect>(ComponentsMask::COMPONENT_TRANSFORM,sf::FloatRect(x+i*2,y,1,1)));
+                                    std::unique_ptr<ant::baseComponent> c1(new ant::Component<sf::FloatRect>(ComponentsMask::COMPONENT_TRANSFORM,sf::FloatRect(x+i*2,y,5,5)));
                                     e1->addComponent(std::move(c1));
                                     em.addEntity(std::move(e1));
                                 }
                         }
                         if(sf::Mouse::isButtonPressed(sf::Mouse::Right)){
                             em.getEntities().clear();
+                        }
+                        break;
+                    case sf::Event::KeyPressed:
+                        if(sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)){
+                            running = false;
                         }
                         break;
                 }

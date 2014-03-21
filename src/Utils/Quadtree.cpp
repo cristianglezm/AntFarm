@@ -24,7 +24,7 @@ namespace ant{
                 // Object can completely fit within the bottom quadrants
                 bool bottomQuadrant = (eBounds.top > horizontalMidpoint);
                 // Object can completely fit within the left quadrants
-                if (eBounds.left < verticalMidpoint && eBounds.top + eBounds.height < verticalMidpoint) {
+                if (eBounds.left < verticalMidpoint && eBounds.left + eBounds.width < verticalMidpoint) {
                     if(topQuadrant) {
                         index = 1;
                     }else if(bottomQuadrant) {
@@ -120,7 +120,7 @@ namespace ant{
             int b,g,r;
             b = level > 255 ? 255: level+bounds.left;
             g = level > 255 ? 255: level+bounds.top;
-            r = level > 255 ? 255: level+bounds.height;
+            r = level > 255 ? 255: level+(bounds.top+bounds.height);
             if(b> 255 || b <0){b=255;}
             if(g> 255 || g <0){g=255;}
             if(r> 255 || r <0){r=255;}
