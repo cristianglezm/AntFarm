@@ -21,7 +21,7 @@ bool CollisionSpeedTest();
 bool CollisionSpeedTest(){
     ant::EntityManager em;
     std::cout << "Insertando Entidades..." << std::endl;
-    for(int i=0;i<1000;++i){
+    for(int i=0;i<5;++i){
         std::unique_ptr<ant::Entity> e1(new ant::Entity("Test" + ant::Utils::toString(i)));
         std::unique_ptr<ant::baseComponent> c1(new ant::Component<sf::FloatRect>(ComponentsMask::COMPONENT_TRANSFORM,sf::FloatRect(-i,i,20,20)));
         e1->addComponent(std::move(c1));
@@ -42,7 +42,6 @@ bool CollisionSpeedTest(){
     }
 }
 int main(){
-    /**
     ComponentTest();
     EntityTest();
     EntityManagerTest();
@@ -50,7 +49,6 @@ int main(){
     EventQueueTest();
     SystemTest();
     SystemManagerTest();
-    */
     QuadtreeTest(); // 1000 Entidades -> 0.156
     //CollisionSpeedTest(); // 1000 Entidades -> 59 secs
     return 0;

@@ -1,6 +1,6 @@
 #include <Utils/Quadtree.hpp>
 #include <Components/ComponentMask.hpp>
-#include <iostream>
+
 namespace ant{
     namespace Utils{
         void Quadtree::split(){
@@ -118,14 +118,13 @@ namespace ant{
             sf::RectangleShape boundsShape(sf::Vector2f(bounds.width,bounds.height));
             boundsShape.setPosition(bounds.left,bounds.top);
             int b,g,r;
-            b = level > 255 ? 255: level+150;
-            g = level > 255 ? 255: level+100;
-            r = level > 255 ? 255: level+50;
-            if(b> 255 && b <0){b=255;}
-            if(g> 255 && g <0){g=255;}
-            if(r> 255 && r <0){r=255;}
+            b = level > 255 ? 255: level+bounds.left;
+            g = level > 255 ? 255: level+bounds.top;
+            r = level > 255 ? 255: level+bounds.height;
+            if(b> 255 || b <0){b=255;}
+            if(g> 255 || g <0){g=255;}
+            if(r> 255 || r <0){r=255;}
             sf::Color color(r,b,g,255);
-            std::cout << level<< std::endl;
             boundsShape.setOutlineThickness(0.5);
             boundsShape.setFillColor(sf::Color::Transparent);
             boundsShape.setOutlineColor(color);

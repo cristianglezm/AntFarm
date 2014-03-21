@@ -18,13 +18,34 @@ int main(){
     sf::RenderWindow app(sf::VideoMode(800, 600), "QuadTree Draw Demo");
     sf::FloatRect worldBounds(0,0,800,600);
 	// Start the game loop
-    while (app.isOpen()){
+	sf::Time elapsedTime;
+	sf::Time lastFrame;
+	sf::Clock clock;
+	sf::Text fps;
+	sf::Font font;
+	if(!font.loadFromFile("../../../data/fonts/OLDFAX.ttf")){
+        return EXIT_FAILURE;
+	}
+	fps.setFont(font);
+	fps.setCharacterSize(25);
+    fps.setPosition(745,550);
+    bool running=true;
+    while(running){
+        int FPS = getFPS(clock.restart());
+        fps.setString(ant::Utils::toString(FPS));
+        if(FPS < 5){
+            fps.setColor(sf::Color::Red);
+        }else if(FPS > 50){
+            fps.setColor(sf::Color::Green);
+        }else if(FPS < 40){
+            fps.setColor(sf::Color::Yellow);
+        }
         // Process events
         sf::Event event;
         while (app.pollEvent(event)){
                 switch(event.type){
                     case sf::Event::Closed:
-                        app.close();
+                        running = false;
                         break;
                     case sf::Event::MouseButtonPressed:
                         if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
@@ -66,9 +87,10 @@ int main(){
         }
         qtree.render(app);
         // Update the window
+        app.draw(fps);
         app.display();
     }
-
+    app.close();
     return EXIT_SUCCESS;
 }
 
