@@ -1,5 +1,4 @@
 #include <Entity/Entity.hpp>
-#include <Components/SpriteComponent/SpriteComponent.hpp>
 #include <SFML/Graphics.hpp>
 int main(){
 

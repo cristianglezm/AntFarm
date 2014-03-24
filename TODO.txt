@@ -1,3 +1,37 @@
 TODO
 ===
 
+baseComponent		- Done
+Component		- Done
+ComponentSettings 	-
+ComponentFactory	-
+Entity			- Done
+EntityFactory		-
+EntityManager		- Done
+baseEvent		- Done
+Event			- Done
+EventQueue		- Done
+GameEventDispatcher	- 
+Subject			- Done
+Observer		- Done
+EventType 		-
+ComponentsMask		- 
+World			- Done
+WorldManager		- Done
+WorldFactory		-
+System			- Done
+renderSystem		-
+MovementSystem		-
+CollisionSystem		-
+QuadTree		- Done
+GravitySystem		-
+DiggingSystem		-
+TransportSystem		-
+UserTransportSystem	-
+ParticleSystem		-
+Level			-
+AssetManager		-
+Game			-
+Config			-
+SystemManager		-
+SystemFactory		-
