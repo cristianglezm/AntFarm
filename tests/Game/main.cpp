@@ -21,17 +21,15 @@
 bool CollisionSpeedTest();
 
 int main(){
-    ComponentTest();
-    /*
-    EntityTest();
-    EntityManagerTest();
-    EventTest();
-    EventQueueTest();
-    SystemTest();
-    SystemManagerTest();
-    QuadtreeTest(); // 1000 Entidades -> 0.156
+    //ComponentTest();
+    //EntityTest();
+    //EntityManagerTest();
+    //EventTest();
+    //EventQueueTest();
+    //SystemTest();
+    //SystemManagerTest();
+    //QuadtreeTest(); // 1000 Entidades -> 0.156
     WorldManagerTest();
-    */
     //CollisionSpeedTest(); // 1000 Entidades -> 59 secs
     return 0;
 }

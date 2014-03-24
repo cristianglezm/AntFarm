@@ -16,14 +16,22 @@ namespace ant{
     void WorldManager::setWorlds(std::map<long int,std::unique_ptr<World>> worlds){
         this->worlds = std::move(worlds);
     }
-    void WorldManager::update(sf::Time dt){
-        for(auto& world:worlds){
-            world.second->update(dt);
+    void WorldManager::update(long int id,sf::Time dt){
+        if(id==-1){
+            for(auto& world:worlds){
+                world.second->update(dt);
+            }
+        }else{
+            worlds.at(id)->update(dt);
         }
     }
-    void WorldManager::render(){
-        for(auto& world:worlds){
-            world.second->render();
+    void WorldManager::render(long int id){
+        if(id==-1){
+            for(auto& world:worlds){
+                world.second->render();
+            }
+        }else{
+            worlds.at(id)->render();
         }
     }
     WorldManager::~WorldManager(){

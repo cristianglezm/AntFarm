@@ -10,8 +10,7 @@ int main(){
 // Prepare reader and input stream.
 	rapidjson::Reader reader;
 	FILE* file = fopen("menu.json","ra");
-	std::iostream input("menu.json",std::ios::in | std::ios::app);
-	rapidjson::FileStream is(input);
+	rapidjson::FileStream is(file);
 
 	// Prepare writer and output stream.
 	rapidjson::FileStream os(stdout);

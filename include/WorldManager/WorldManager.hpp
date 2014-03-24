@@ -17,8 +17,8 @@ namespace ant{
             void removeWorld(long int id);
             inline std::map<long int,std::unique_ptr<World>>& getWorlds(){ return this->worlds; }
             void setWorlds(std::map<long int,std::unique_ptr<World>> worlds);
-            void update(sf::Time dt);
-            void render();
+            void update(long int id,sf::Time dt);
+            void render(long int id);
             ~WorldManager();
     };
 };

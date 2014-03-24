@@ -63,8 +63,8 @@ bool WorldManagerTest(){
         std::unique_ptr<ant::World> w1(new ant::World(i,em,std::move(sm),eq));
         wm.addWorld(std::move(w1));
     }
-    wm.update(sf::Time());
-    wm.render();
+    wm.update(-1,sf::Time());
+    wm.render(-1);
     std::cout << "Obtenemos mundo especifico para actualizarlo"<< std::endl;
     auto tmpWorld = wm.getWorld(1);
     assert(tmpWorld->getId()==1);

@@ -11,7 +11,7 @@ namespace ant{
             void setAssetManager(std::shared_ptr<AssetManager> assets);
             inline std::shared_ptr<AssetManager> getAssetManager(){ return this->assets; }
 
-            std::unique_ptr<baseComponent> createTransform(sf::Vector2f position,int rotation);
+            std::unique_ptr<baseComponent> createTransform(sf::Vector2f position,sf::Vector2f scale,int rotation);
             std::unique_ptr<baseComponent> createBounds(sf::FloatRect bounds);
 
 
