@@ -10,6 +10,7 @@ namespace ant{
         private:
             std::map<long int,std::unique_ptr<World>> worlds;
         public:
+            typedef std::map<long int,std::unique_ptr<World>>::iterator iterator;
             WorldManager();
             void addWorld(std::unique_ptr<World> w);
             World* getWorld(long int id);

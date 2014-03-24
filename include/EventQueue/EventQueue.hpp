@@ -18,6 +18,8 @@ namespace ant{
             std::shared_ptr<baseEvent> pop();
             std::shared_ptr<baseEvent>& front();
             inline bool isEmpty(){ return eventQueue.empty(); }
+            inline int size(){ return eventQueue.size(); }
+            void clear();
             ~EventQueue();
     };
 }

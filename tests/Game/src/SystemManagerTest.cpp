@@ -6,6 +6,7 @@
 bool SystemManagerTest(){
     std::cout << "System Manager Test---------------" << std::endl;
     ant::SystemManager sm;
+    for(int i=0;i<10;i++){
     std::shared_ptr<ant::System> s(new testSystem(ComponentsMask::COMPONENT_MOVEMENT));
     s->setName("testSystem");
     for(int i=0;i<3;++i){
@@ -17,6 +18,7 @@ bool SystemManagerTest(){
         s->getEntityManager()->addEntity(std::move(e1));
     }
     sm.addSystem(s);
+    }
     auto tmp = sm.getSystem("testSystem");
     std::cout << "System Name: " << tmp->getName() << std::endl;
     tmp->update(sf::Time());

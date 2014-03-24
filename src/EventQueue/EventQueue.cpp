@@ -14,6 +14,11 @@ namespace ant{
     void EventQueue::push(std::shared_ptr<baseEvent> e){
         eventQueue.push(std::move(e));
     }
+    void EventQueue::clear(){
+        while(!eventQueue.empty()){
+            eventQueue.pop();
+        }
+    }
     EventQueue::~EventQueue(){
 
     }

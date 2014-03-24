@@ -13,6 +13,7 @@ Requires CMake and one of the following compilers:
 Installing
 ===
 AntFarm requires the following dependencies:
+
 * [SFML](http://sfml-dev.org) 2.1 or newer
 
 
