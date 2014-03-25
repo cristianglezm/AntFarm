@@ -4,6 +4,7 @@
 #include <memory>
 #include <Systems/System.hpp>
 #include <SFML/System/Time.hpp>
+#include <SFML/Graphics/RenderWindow.hpp>
 
 namespace ant{
     class SystemManager{
@@ -19,7 +20,7 @@ namespace ant{
             void setEntityManager(std::shared_ptr<EntityManager> entityManager);
             void setEventQueue(std::shared_ptr<EventQueue> eventQueue);
             void update(sf::Time dt);
-            void render();
+            void render(sf::RenderWindow& win);
             ~SystemManager();
     };
 }

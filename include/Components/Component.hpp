@@ -31,7 +31,7 @@ namespace ant{
             std::tuple<T...> properties;
         public:
             Component(int id,T...data): baseComponent{id}, properties{std::move(data)...} {}
-        inline std::tuple<T...>& getProperties(){ return properties; }
+            inline std::tuple<T...>& getProperties(){ return properties; }
     };
     template<typename...T>
     std::tuple<T...>& baseComponent::getProperties(){

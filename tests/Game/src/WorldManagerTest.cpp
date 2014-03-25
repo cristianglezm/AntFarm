@@ -64,7 +64,6 @@ bool WorldManagerTest(){
         wm.addWorld(std::move(w1));
     }
     wm.update(-1,sf::Time());
-    wm.render(-1);
     std::cout << "Obtenemos mundo especifico para actualizarlo"<< std::endl;
     auto tmpWorld = wm.getWorld(1);
     assert(tmpWorld->getId()==1);

@@ -1,6 +1,7 @@
 #ifndef WORLD_H
 #define WORLD_H
 #include <SFML/System/Time.hpp>
+#include <SFML/Graphics/RenderWindow.hpp>
 #include <memory>
 #include <EntityManager/EntityManager.hpp>
 #include <SystemManager/SystemManager.hpp>
@@ -28,7 +29,7 @@ namespace ant{
             void setId(long int id);
             inline long int getId(){ return id; }
             void update(sf::Time dt);
-            void render();
+            void render(sf::RenderWindow& win);
             ~World();
     };
 }

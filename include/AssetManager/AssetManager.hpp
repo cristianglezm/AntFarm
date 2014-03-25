@@ -11,12 +11,14 @@ namespace ant{
             std::map<std::string,std::unique_ptr<sf::Texture>> textures;
             std::map<std::string,std::unique_ptr<sf::Image>> images;
         public:
+            AssetManager();
             void addTexture(std::string id,std::string filename);
             sf::Texture* getTexture(std::string id);
             void removeTexture(std::string id);
             void addImage(std::string id,std::string filename);
             sf::Image* getImage(std::string id);
             void removeImage(std::string id);
+            ~AssetManager();
     };
 }
 #endif // ASSET_MANAGER_H

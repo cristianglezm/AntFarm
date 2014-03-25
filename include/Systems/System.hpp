@@ -5,6 +5,7 @@
 #include <memory>
 #include <EventQueue/EventQueue.hpp>
 #include <EntityManager/EntityManager.hpp>
+#include <SFML/Graphics/RenderWindow.hpp>
 namespace ant{
     /**
      * @brief Clase base para los sistemas.
@@ -29,7 +30,7 @@ namespace ant{
             inline std::string getName() const { return this->name; }
             void setEntityManager(std::shared_ptr<EntityManager> em);
             inline std::shared_ptr<EntityManager> getEntityManager(){ return this->em; }
-            virtual void render() = 0;
+            virtual void render(sf::RenderWindow& win) = 0;
             virtual void update(sf::Time dt) = 0;
             virtual ~System();
     };

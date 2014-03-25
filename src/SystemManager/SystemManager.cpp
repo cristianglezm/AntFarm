@@ -35,9 +35,9 @@ namespace ant{
             system.second->update(dt);
         }
     }
-    void SystemManager::render(){
+    void SystemManager::render(sf::RenderWindow& win){
         for(auto& system : systems){
-            system.second->render();
+            system.second->render(win);
         }
     }
     SystemManager::~SystemManager(){

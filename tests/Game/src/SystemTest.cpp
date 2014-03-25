@@ -15,7 +15,7 @@
             }
         }
     }
-    void testSystem::render(){
+    void testSystem::render(sf::RenderWindow& win){
         std::cout << "render" << std::endl;
     }
 bool SystemTest(){
@@ -41,7 +41,6 @@ bool SystemTest(){
     s.getEntityManager()->addEntity(std::move(e1));
     std::cout << "S Update: " << std::endl;
     s.update(sf::Time());
-    s.render();
     std::cout << "Creamos otro sistema, agregamos el em y eventqueue" << std::endl;
     testSystem s1(0);
     for(int i=0;i<2;++i){

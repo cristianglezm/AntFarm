@@ -25,13 +25,13 @@ namespace ant{
             worlds.at(id)->update(dt);
         }
     }
-    void WorldManager::render(long int id){
+    void WorldManager::render(long int id,sf::RenderWindow& win){
         if(id==-1){
             for(auto& world:worlds){
-                world.second->render();
+                world.second->render(win);
             }
         }else{
-            worlds.at(id)->render();
+            worlds.at(id)->render(win);
         }
     }
     WorldManager::~WorldManager(){

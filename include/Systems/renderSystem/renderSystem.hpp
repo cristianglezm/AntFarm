@@ -8,13 +8,9 @@
 namespace ant{
     class renderSystem : public System{
         private:
-            std::shared_ptr<sf::RenderWindow> renderWindow;
         public:
-            renderSystem();
-            renderSystem(std::shared_ptr<sf::RenderWindow> rw);
-            void setRenderWindow(std::shared_ptr<sf::RenderWindow> rw);
-            inline std::shared_ptr<sf::RenderWindow> getRenderWindow(){ return renderWindow; }
-            virtual void render();
+            renderSystem(long int req);
+            virtual void render(sf::RenderWindow& win);
             virtual void update(sf::Time dt);
             ~renderSystem();
     };

@@ -38,8 +38,8 @@ namespace ant{
     void World::update(sf::Time dt){
         this->systemManager->update(dt);
     }
-    void World::render(){
-        this->systemManager->render();
+    void World::render(sf::RenderWindow& win){
+        this->systemManager->render(win);
     }
     World::~World(){
 

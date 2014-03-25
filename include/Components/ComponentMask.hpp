@@ -15,5 +15,6 @@ class ComponentsMask{
          static const long int COMPONENT_EGGS = 1 << 3;
          static const long int COMPONENT_HORNS = 1 << 4;
          static const long int COMPONENT_DESTRUCTABLE = 1 << 5;
+         static const long int COMPONENT_BOUNDS = 1 << 6;
 };
 #endif // COMPONENT_MASK_H

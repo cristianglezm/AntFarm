@@ -7,6 +7,7 @@
 #include <SystemManagerTest.hpp>
 #include <QuadtreeTest.hpp>
 #include <WorldManagerTest.hpp>
+#include <renderSystemTest.hpp>
 ////////////////////////////
 #include <Utils/Quadtree.hpp>
 #include <Utils/String.hpp>
@@ -29,8 +30,9 @@ int main(){
     //SystemTest();
     //SystemManagerTest();
     //QuadtreeTest(); // 1000 Entidades -> 0.156
-    WorldManagerTest();
     //CollisionSpeedTest(); // 1000 Entidades -> 59 secs
+    //WorldManagerTest();
+    renderSystemTest();
     return 0;
 }
 
