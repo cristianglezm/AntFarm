@@ -17,7 +17,7 @@ namespace ant{
                 return std::move(c);
             }
             std::unique_ptr<baseComponent> ComponentFactory::createSprite(std::string id){
-                std::unique_ptr<baseComponent> c(new Component<std::unique_ptr<sf::Sprite>>(ComponentsMask::COMPONENT_SPRITE,std::unique_ptr<sf::Sprite>(new sf::Sprite((*assets->getTexture(id))))));
+                std::unique_ptr<baseComponent> c(new Component<std::unique_ptr<sf::Sprite>>(ComponentsMask::COMPONENT_SPRITE,std::unique_ptr<sf::Sprite>(new sf::Sprite((assets->getTexture(id))))));
                 return std::move(c);
             }
             ComponentFactory::~ComponentFactory(){

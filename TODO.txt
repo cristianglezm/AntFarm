@@ -1,6 +1,12 @@
 TODO
 ===
 
+Completar CMake para crear el proyecto automaticamente.
+Poner licencia.
+Crear documentacion adecuada, en codigo, documento tecnico, etc.
+Mejorar README, descripcion proyecto, etc.
+
+
 baseComponent		- Done
 Component		- Done
 ComponentSettings 	-
