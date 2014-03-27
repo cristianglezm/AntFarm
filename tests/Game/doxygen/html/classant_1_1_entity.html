@@ -114,37 +114,40 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af3da175fdcde326a758aaa1dc438cc51"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af3da175fdcde326a758aaa1dc438cc51"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Entity</b> (std::string name)</td></tr>
 <tr class="separator:af3da175fdcde326a758aaa1dc438cc51"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a068a897fa86f4e258ca11e4e054fd71c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a068a897fa86f4e258ca11e4e054fd71c"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Entity</b> (std::string name, std::map&lt; long, std::unique_ptr&lt; <a class="el" href="classant_1_1_component.html">Component</a> &gt; &gt; Components)</td></tr>
-<tr class="separator:a068a897fa86f4e258ca11e4e054fd71c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2b1658bd2585afe66e21fba619f4b445"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2b1658bd2585afe66e21fba619f4b445"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>addComponent</b> (std::unique_ptr&lt; <a class="el" href="classant_1_1_component.html">Component</a> &gt; component)</td></tr>
-<tr class="separator:a2b1658bd2585afe66e21fba619f4b445"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aded0ba32e3161af7cad87ce5d8414a27"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aded0ba32e3161af7cad87ce5d8414a27"></a>
-std::unique_ptr&lt; <a class="el" href="classant_1_1_component.html">Component</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getComponent</b> (long mask)</td></tr>
-<tr class="separator:aded0ba32e3161af7cad87ce5d8414a27"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33fe2d7add83f9fd18c2ac47d1313b0e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a33fe2d7add83f9fd18c2ac47d1313b0e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>removeComponent</b> (long mask)</td></tr>
-<tr class="separator:a33fe2d7add83f9fd18c2ac47d1313b0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae730e90be8ea8032e08b723a345f7258"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae730e90be8ea8032e08b723a345f7258"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Entity</b> (std::string name, std::map&lt; long int, std::unique_ptr&lt; <a class="el" href="classant_1_1base_component.html">baseComponent</a> &gt; &gt; Components)</td></tr>
+<tr class="separator:ae730e90be8ea8032e08b723a345f7258"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fe4572015760b0e486df6c1b94d3f96"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4fe4572015760b0e486df6c1b94d3f96"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>addComponent</b> (std::unique_ptr&lt; <a class="el" href="classant_1_1base_component.html">baseComponent</a> &gt; component)</td></tr>
+<tr class="separator:a4fe4572015760b0e486df6c1b94d3f96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab216818cfb9d54fdc03eed5d055c58b7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab216818cfb9d54fdc03eed5d055c58b7"></a>
+std::unique_ptr&lt; <a class="el" href="classant_1_1base_component.html">baseComponent</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getComponent</b> (long int mask)</td></tr>
+<tr class="separator:ab216818cfb9d54fdc03eed5d055c58b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ff509e6876cbf11c434a797be43f239"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2ff509e6876cbf11c434a797be43f239"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>removeComponent</b> (long int mask)</td></tr>
+<tr class="separator:a2ff509e6876cbf11c434a797be43f239"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab22630399795df9625218fc158dd02b6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab22630399795df9625218fc158dd02b6"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getName</b> () const </td></tr>
 <tr class="separator:ab22630399795df9625218fc158dd02b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af0d4541cfec26963b714d500f8fe5f48"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af0d4541cfec26963b714d500f8fe5f48"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setName</b> (std::string name)</td></tr>
 <tr class="separator:af0d4541cfec26963b714d500f8fe5f48"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9bb312a6c31daed4530a6138020370fd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9bb312a6c31daed4530a6138020370fd"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setComponents</b> (std::map&lt; long, std::unique_ptr&lt; <a class="el" href="classant_1_1_component.html">Component</a> &gt; &gt; Components)</td></tr>
-<tr class="separator:a9bb312a6c31daed4530a6138020370fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa8348f1df3b6ecec0e17455f046cab19"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa8348f1df3b6ecec0e17455f046cab19"></a>
-std::map&lt; long, <br class="typebreak"/>
-std::unique_ptr&lt; <a class="el" href="classant_1_1_component.html">Component</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getComponents</b> ()</td></tr>
-<tr class="separator:aa8348f1df3b6ecec0e17455f046cab19"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa5c8aa977a00b2bb87ecd866a6bf77b4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa5c8aa977a00b2bb87ecd866a6bf77b4"></a>
-long&#160;</td><td class="memItemRight" valign="bottom"><b>getMask</b> () const </td></tr>
-<tr class="separator:aa5c8aa977a00b2bb87ecd866a6bf77b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e406c20ad9796cec0e7f0e95c70b919"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4e406c20ad9796cec0e7f0e95c70b919"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setComponents</b> (std::map&lt; long int, std::unique_ptr&lt; <a class="el" href="classant_1_1base_component.html">baseComponent</a> &gt;&gt; Components)</td></tr>
+<tr class="separator:a4e406c20ad9796cec0e7f0e95c70b919"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a549424e84294abb2b0e1634fac84698f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a549424e84294abb2b0e1634fac84698f"></a>
+std::map&lt; long int, <br class="typebreak"/>
+std::unique_ptr&lt; <a class="el" href="classant_1_1base_component.html">baseComponent</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getComponents</b> ()</td></tr>
+<tr class="separator:a549424e84294abb2b0e1634fac84698f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a508baf12c760f45032e24fae27af6f09"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a508baf12c760f45032e24fae27af6f09"></a>
+long int&#160;</td><td class="memItemRight" valign="bottom"><b>getMask</b> () const </td></tr>
+<tr class="separator:a508baf12c760f45032e24fae27af6f09"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a379c70555ca47177ec607a992ef97f3f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a379c70555ca47177ec607a992ef97f3f"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="classant_1_1_entity.html">Entity</a> &amp;e) const </td></tr>
 <tr class="separator:a379c70555ca47177ec607a992ef97f3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4965e92e1827c22718b8f13b67f7c66"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac4965e92e1827c22718b8f13b67f7c66"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const std::string &amp;name) const </td></tr>
+<tr class="separator:ac4965e92e1827c22718b8f13b67f7c66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="_entity_8hpp_source.html">Entity.hpp</a></li>
@@ -156,7 +159,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>ant</b></li><li class="navelem"><a class="el" href="classant_1_1_entity.html">Entity</a></li>
-    <li class="footer">Generated on Sat Mar 8 2014 01:56:32 for unitTest by
+    <li class="footer">Generated on Thu Mar 27 2014 00:26:45 for unitTest by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

@@ -1,6 +1,7 @@
 TODO
 ===
 
+Elegir libreria JSON para cargar los archivos de configuracion.
 Completar CMake para crear el proyecto automaticamente.
 Poner licencia.
 Crear documentacion adecuada, en codigo, documento tecnico, etc.
@@ -10,6 +11,8 @@ Mejorar README, descripcion proyecto, etc.
 baseComponent		- Done
 Component		- Done
 ComponentSettings 	-
+	Todos los componentes necesitan estar acabados para poner todo en comun
+	y poder hacerla.
 ComponentFactory	-
 Entity			- Done
 EntityFactory		-
@@ -18,15 +21,18 @@ baseEvent		- Done
 Event			- Done
 EventQueue		- Done
 GameEventDispatcher	- 
+	Agregar Subjects segun los sistemas y eventos.
 Subject			- Done
 Observer		- Done
 EventType 		-
+	Agregar eventos segun los sistemas.
 ComponentsMask		- 
+	agregar componentes segun se van creando.
 World			- Done
 WorldManager		- Done
 WorldFactory		-
 System			- Done
-renderSystem		-
+renderSystem		- Done
 MovementSystem		-
 CollisionSystem		-
 QuadTree		- Done
@@ -39,5 +45,6 @@ Level			-
 AssetManager		-
 Game			-
 Config			-
+	agregar cosas cuando se necesiten
 SystemManager		-
 SystemFactory		-

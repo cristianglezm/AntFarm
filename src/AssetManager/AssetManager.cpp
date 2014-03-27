@@ -3,6 +3,9 @@ namespace ant{
     AssetManager::AssetManager(){
 
     }
+    void AssetManager::loadAssets(std::string& json){
+
+    }
     void AssetManager::addTexture(std::string id,std::string filename){
         std::unique_ptr<sf::Texture> texture(new sf::Texture());
         if(!texture->loadFromFile(filename)){

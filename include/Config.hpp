@@ -6,6 +6,7 @@ namespace ant{
         private:
         public:
             const std::string version = "0.5 Milestone";
+            const std::string assetsJSON = "";
     };
 }
 #endif // CONFIG_H

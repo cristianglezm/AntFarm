@@ -105,26 +105,29 @@ $(document).ready(function(){initNavTree('_entity_manager_8hpp_source.html','');
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef ENTITY_MANAGER_H</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define ENTITY_MANAGER_H</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#include &lt;Entity/Entity.hpp&gt;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;list&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#include &lt;list&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;Entity/Entity.hpp&gt;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span>ant{</div>
 <div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="classant_1_1_entity_manager.html">    8</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classant_1_1_entity_manager.html">EntityManager</a>{</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;            std::list&lt;std::unique_ptr&lt;Entity&gt; &gt; entities;</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;            <a class="code" href="classant_1_1_entity_manager.html">EntityManager</a>();</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;            <span class="keywordtype">void</span> addEntity(std::unique_ptr&lt;Entity&gt; e);</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;            <span class="keywordtype">void</span> removeEntity(std::unique_ptr&lt;Entity&gt; e);</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;            <a class="code" href="classant_1_1_entity.html">Entity</a> getEntity(std::string name);</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            <span class="keywordtype">void</span> addEntities(std::list&lt;std::unique_ptr&lt;Entity&gt; &gt; e);</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            <span class="keyword">inline</span> std::list&lt;std::unique_ptr&lt;Entity&gt; &gt;&amp; getEntities(){ <span class="keywordflow">return</span> this-&gt;entities; }</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            std::unique_ptr&lt;Entity&gt; Transfer(std::unique_ptr&lt;Entity&gt; e);</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            ~<a class="code" href="classant_1_1_entity_manager.html">EntityManager</a>();</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    };</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;};</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#endif // ENTITY_MANAGER_H</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;            <span class="keyword">typedef</span> std::list&lt;std::unique_ptr&lt;Entity&gt;&gt;::iterator iterator;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;            <a class="code" href="classant_1_1_entity_manager.html">EntityManager</a>();</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;            <span class="keywordtype">void</span> addEntity(std::unique_ptr&lt;Entity&gt; e);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;            <span class="keywordtype">void</span> removeEntity(std::unique_ptr&lt;Entity&gt;&amp; e);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            iterator removeEntity(std::string name);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            iterator removeEntity(iterator it);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            <a class="code" href="classant_1_1_entity.html">Entity</a>* getEntity(std::string name);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            <span class="keywordtype">void</span> addEntities(std::list&lt;std::unique_ptr&lt;Entity&gt; &gt; e);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            <span class="keyword">inline</span> std::list&lt;std::unique_ptr&lt;Entity&gt; &gt;&amp; getEntities(){ <span class="keywordflow">return</span> this-&gt;entities; }</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            std::unique_ptr&lt;Entity&gt; Transfer(std::string name);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            ~<a class="code" href="classant_1_1_entity_manager.html">EntityManager</a>();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    };</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;};</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#endif // ENTITY_MANAGER_H</span></div>
 <div class="ttc" id="classant_1_1_entity_manager_html"><div class="ttname"><a href="classant_1_1_entity_manager.html">ant::EntityManager</a></div><div class="ttdef"><b>Definition:</b> EntityManager.hpp:8</div></div>
 <div class="ttc" id="classant_1_1_entity_html"><div class="ttname"><a href="classant_1_1_entity.html">ant::Entity</a></div><div class="ttdef"><b>Definition:</b> Entity.hpp:8</div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -133,7 +136,7 @@ $(document).ready(function(){initNavTree('_entity_manager_8hpp_source.html','');
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_f3ac5929d205dfcd8df7caa2c1aa6204.html">EntityManager</a></li><li class="navelem"><b>EntityManager.hpp</b></li>
-    <li class="footer">Generated on Sat Mar 8 2014 01:56:32 for unitTest by
+    <li class="footer">Generated on Thu Mar 27 2014 00:26:45 for unitTest by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

@@ -102,21 +102,25 @@ $(document).ready(function(){initNavTree('classant_1_1_event.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">ant::Event Member List</div>  </div>
+<div class="title">ant::Event&lt; T &gt; Member List</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>This is the complete list of members for <a class="el" href="classant_1_1_event.html">ant::Event</a>, including all inherited members.</p>
+<p>This is the complete list of members for <a class="el" href="classant_1_1_event.html">ant::Event&lt; T &gt;</a>, including all inherited members.</p>
 <table class="directory">
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>Event</b>(int type) (defined in <a class="el" href="classant_1_1_event.html">ant::Event</a>)</td><td class="entry"><a class="el" href="classant_1_1_event.html">ant::Event</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>getType</b>() (defined in <a class="el" href="classant_1_1_event.html">ant::Event</a>)</td><td class="entry"><a class="el" href="classant_1_1_event.html">ant::Event</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>setType</b>(int type) (defined in <a class="el" href="classant_1_1_event.html">ant::Event</a>)</td><td class="entry"><a class="el" href="classant_1_1_event.html">ant::Event</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>baseEvent</b>(int type) (defined in <a class="el" href="classant_1_1base_event.html">ant::baseEvent</a>)</td><td class="entry"><a class="el" href="classant_1_1base_event.html">ant::baseEvent</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">protected</span></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>Event</b>(int type, T...data) (defined in <a class="el" href="classant_1_1_event.html">ant::Event&lt; T &gt;</a>)</td><td class="entry"><a class="el" href="classant_1_1_event.html">ant::Event&lt; T &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>getAttributes</b>() const  (defined in <a class="el" href="classant_1_1_event.html">ant::Event&lt; T &gt;</a>)</td><td class="entry"><a class="el" href="classant_1_1_event.html">ant::Event&lt; T &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>getType</b>() const  (defined in <a class="el" href="classant_1_1base_event.html">ant::baseEvent</a>)</td><td class="entry"><a class="el" href="classant_1_1base_event.html">ant::baseEvent</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>setAttributes</b>(std::tuple&lt; T...&gt; attributes) (defined in <a class="el" href="classant_1_1base_event.html">ant::baseEvent</a>)</td><td class="entry"><a class="el" href="classant_1_1base_event.html">ant::baseEvent</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>setType</b>(int type) (defined in <a class="el" href="classant_1_1base_event.html">ant::baseEvent</a>)</td><td class="entry"><a class="el" href="classant_1_1base_event.html">ant::baseEvent</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>~baseEvent</b>()=default (defined in <a class="el" href="classant_1_1base_event.html">ant::baseEvent</a>)</td><td class="entry"><a class="el" href="classant_1_1base_event.html">ant::baseEvent</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sat Mar 8 2014 01:56:32 for unitTest by
+    <li class="footer">Generated on Thu Mar 27 2014 00:26:45 for unitTest by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

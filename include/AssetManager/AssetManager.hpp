@@ -13,6 +13,7 @@ namespace ant{
             std::map<std::string,std::unique_ptr<sf::Image>> images;
         public:
             AssetManager();
+            void loadAssets(std::string& json);
             void addTexture(std::string id,std::string filename);
             sf::Texture& getTexture(std::string id);
             void removeTexture(std::string id);

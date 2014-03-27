@@ -55,4 +55,5 @@ std::cout << "WorldManager Test -----------" << std::endl;
     auto tmpWorld = wm.getWorld(1);
     assert(tmpWorld->getId()==1);
     tmpWorld->update(sf::Time());
+    return true;
 }

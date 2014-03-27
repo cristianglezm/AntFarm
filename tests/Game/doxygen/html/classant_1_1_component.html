@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>unitTest: ant::Component Class Reference</title>
+<title>unitTest: ant::Component&lt; T &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -105,35 +105,45 @@ $(document).ready(function(){initNavTree('classant_1_1_component.html','');});
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classant_1_1_component-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">ant::Component Class Reference</div>  </div>
+<div class="title">ant::Component&lt; T &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="_component_8hpp_source.html">Component.hpp</a>&gt;</code></p>
-
-<p>Inherited by <a class="el" href="classant_1_1_destructable_component.html">ant::DestructableComponent</a>, and <a class="el" href="classant_1_1_sprite_component.html">ant::SpriteComponent</a>.</p>
+<p>Inherits <a class="el" href="classant_1_1base_component.html">ant::baseComponent</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a1a3be824f560c125c60331e865172a64"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1a3be824f560c125c60331e865172a64"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Component</b> (long int id)</td></tr>
-<tr class="separator:a1a3be824f560c125c60331e865172a64"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a31f6b495e24df1a2da55bc55461ba070"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a31f6b495e24df1a2da55bc55461ba070"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setId</b> (long int id)</td></tr>
-<tr class="separator:a31f6b495e24df1a2da55bc55461ba070"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b571acf05f03678e8f2bcd05d981cc4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3b571acf05f03678e8f2bcd05d981cc4"></a>
-const long&#160;</td><td class="memItemRight" valign="bottom"><b>getId</b> ()</td></tr>
-<tr class="separator:a3b571acf05f03678e8f2bcd05d981cc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a3c1bda0ceef38addfe5d97b2a5488f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1a3c1bda0ceef38addfe5d97b2a5488f"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="classant_1_1_component.html">Component</a> &amp;c) const </td></tr>
-<tr class="separator:a1a3c1bda0ceef38addfe5d97b2a5488f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19b1a7523008241f428a681b65823b15"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a19b1a7523008241f428a681b65823b15"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Component</b> (int id, T...data)</td></tr>
+<tr class="separator:a19b1a7523008241f428a681b65823b15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbf5db9e0be87eba019e193240ea9982"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acbf5db9e0be87eba019e193240ea9982"></a>
+std::tuple&lt; T...&gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getProperties</b> ()</td></tr>
+<tr class="separator:acbf5db9e0be87eba019e193240ea9982"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classant_1_1base_component"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classant_1_1base_component')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classant_1_1base_component.html">ant::baseComponent</a></td></tr>
+<tr class="memitem:ab321008abdeacef0d10462ee320b05fa inherit pub_methods_classant_1_1base_component"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab321008abdeacef0d10462ee320b05fa"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setId</b> (int id)</td></tr>
+<tr class="separator:ab321008abdeacef0d10462ee320b05fa inherit pub_methods_classant_1_1base_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a985c9f24f95e08def64858f45bba411a inherit pub_methods_classant_1_1base_component"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a985c9f24f95e08def64858f45bba411a"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>getId</b> () const </td></tr>
+<tr class="separator:a985c9f24f95e08def64858f45bba411a inherit pub_methods_classant_1_1base_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88bc0531ed99c8978e95257131653efe inherit pub_methods_classant_1_1base_component"><td class="memTemplParams" colspan="2"><a class="anchor" id="a88bc0531ed99c8978e95257131653efe"></a>
+template&lt;typename... T&gt; </td></tr>
+<tr class="memitem:a88bc0531ed99c8978e95257131653efe inherit pub_methods_classant_1_1base_component"><td class="memTemplItemLeft" align="right" valign="top">std::tuple&lt; T...&gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>getProperties</b> ()</td></tr>
+<tr class="separator:a88bc0531ed99c8978e95257131653efe inherit pub_methods_classant_1_1base_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85aa249d86676f21407ddc7ef321c6c4 inherit pub_methods_classant_1_1base_component"><td class="memTemplParams" colspan="2"><a class="anchor" id="a85aa249d86676f21407ddc7ef321c6c4"></a>
+template&lt;typename... T&gt; </td></tr>
+<tr class="memitem:a85aa249d86676f21407ddc7ef321c6c4 inherit pub_methods_classant_1_1base_component"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>setProperties</b> (std::tuple&lt; T...&gt; properties)</td></tr>
+<tr class="separator:a85aa249d86676f21407ddc7ef321c6c4 inherit pub_methods_classant_1_1base_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_methods_classant_1_1base_component"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classant_1_1base_component')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classant_1_1base_component.html">ant::baseComponent</a></td></tr>
+<tr class="memitem:a59617d571d23f2e8c28a0f8e975e941d inherit pro_methods_classant_1_1base_component"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a59617d571d23f2e8c28a0f8e975e941d"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>baseComponent</b> (int id)</td></tr>
+<tr class="separator:a59617d571d23f2e8c28a0f8e975e941d inherit pro_methods_classant_1_1base_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><dl class="section author"><dt>Author</dt><dd>Cristian Gonzalez Moreno <a href="#" onclick="location.href='mai'+'lto:'+'cri'+'st'+'ian'+'.g'+'lez'+'.m'+'@gm'+'ai'+'l.c'+'om'; return false;">crist<span style="display: none;">.nosp@m.</span>ian.<span style="display: none;">.nosp@m.</span>glez.<span style="display: none;">.nosp@m.</span>m@gm<span style="display: none;">.nosp@m.</span>ail.c<span style="display: none;">.nosp@m.</span>om</a> </dd></dl>
-<dl class="section version"><dt>Version</dt><dd>0.1 </dd></dl>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="_component_8hpp_source.html">Component.hpp</a></li>
-<li>Component.cpp</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -141,7 +151,7 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>ant</b></li><li class="navelem"><a class="el" href="classant_1_1_component.html">Component</a></li>
-    <li class="footer">Generated on Sat Mar 8 2014 01:56:32 for unitTest by
+    <li class="footer">Generated on Thu Mar 27 2014 00:26:45 for unitTest by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

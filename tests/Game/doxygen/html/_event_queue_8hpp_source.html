@@ -109,28 +109,29 @@ $(document).ready(function(){initNavTree('_event_queue_8hpp_source.html','');});
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;Event/Event.hpp&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span>ant{</div>
-<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="classant_1_1_event_queue.html">    7</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classant_1_1_event_queue.html">EventQueue</a>{</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;            std::queue&lt;std::unique_ptr&lt;Event&gt; &gt; eventQueue;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;            <a class="code" href="classant_1_1_event_queue.html">EventQueue</a>();</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;            <span class="keywordtype">void</span> push(std::unique_ptr&lt;Event&gt; e);</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;            <a class="code" href="classant_1_1_event.html">Event</a> pop();</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;            <a class="code" href="classant_1_1_event.html">Event</a> front();</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;            <span class="keyword">inline</span> <span class="keywordtype">bool</span> isEmpty(){ <span class="keywordflow">return</span> eventQueue.empty(); }</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            ~<a class="code" href="classant_1_1_event_queue.html">EventQueue</a>();</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    };</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#endif // EVENT_QUEUE_H</span></div>
-<div class="ttc" id="classant_1_1_event_queue_html"><div class="ttname"><a href="classant_1_1_event_queue.html">ant::EventQueue</a></div><div class="ttdef"><b>Definition:</b> EventQueue.hpp:7</div></div>
-<div class="ttc" id="classant_1_1_event_html"><div class="ttname"><a href="classant_1_1_event.html">ant::Event</a></div><div class="ttdef"><b>Definition:</b> Event.hpp:4</div></div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="classant_1_1_event_queue.html">   12</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classant_1_1_event_queue.html">EventQueue</a>{</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;            std::queue&lt;std::shared_ptr&lt;baseEvent&gt; &gt; eventQueue;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            <a class="code" href="classant_1_1_event_queue.html">EventQueue</a>();</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            <span class="keywordtype">void</span> push(std::shared_ptr&lt;baseEvent&gt; e);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            std::shared_ptr&lt;baseEvent&gt; pop();</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            std::shared_ptr&lt;baseEvent&gt;&amp; front();</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            <span class="keyword">inline</span> <span class="keywordtype">bool</span> isEmpty(){ <span class="keywordflow">return</span> eventQueue.empty(); }</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            <span class="keyword">inline</span> <span class="keywordtype">int</span> size(){ <span class="keywordflow">return</span> eventQueue.size(); }</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            <span class="keywordtype">void</span> clear();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            ~<a class="code" href="classant_1_1_event_queue.html">EventQueue</a>();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    };</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;}</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#endif // EVENT_QUEUE_H</span></div>
+<div class="ttc" id="classant_1_1_event_queue_html"><div class="ttname"><a href="classant_1_1_event_queue.html">ant::EventQueue</a></div><div class="ttdoc">Clase donde se almacenan los eventos para ser procesados despues. </div><div class="ttdef"><b>Definition:</b> EventQueue.hpp:12</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_702452b053ef9ac32c97dfbae4a2e918.html">EventQueue</a></li><li class="navelem"><b>EventQueue.hpp</b></li>
-    <li class="footer">Generated on Sat Mar 8 2014 01:56:32 for unitTest by
+    <li class="footer">Generated on Thu Mar 27 2014 00:26:45 for unitTest by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

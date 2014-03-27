@@ -102,23 +102,25 @@ $(document).ready(function(){initNavTree('classant_1_1_component.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">ant::Component Member List</div>  </div>
+<div class="title">ant::Component&lt; T &gt; Member List</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>This is the complete list of members for <a class="el" href="classant_1_1_component.html">ant::Component</a>, including all inherited members.</p>
+<p>This is the complete list of members for <a class="el" href="classant_1_1_component.html">ant::Component&lt; T &gt;</a>, including all inherited members.</p>
 <table class="directory">
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>Component</b>() (defined in <a class="el" href="classant_1_1_component.html">ant::Component</a>)</td><td class="entry"><a class="el" href="classant_1_1_component.html">ant::Component</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>Component</b>(long int id) (defined in <a class="el" href="classant_1_1_component.html">ant::Component</a>)</td><td class="entry"><a class="el" href="classant_1_1_component.html">ant::Component</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>getId</b>() (defined in <a class="el" href="classant_1_1_component.html">ant::Component</a>)</td><td class="entry"><a class="el" href="classant_1_1_component.html">ant::Component</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>operator==</b>(const Component &amp;c) const  (defined in <a class="el" href="classant_1_1_component.html">ant::Component</a>)</td><td class="entry"><a class="el" href="classant_1_1_component.html">ant::Component</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>setId</b>(long int id) (defined in <a class="el" href="classant_1_1_component.html">ant::Component</a>)</td><td class="entry"><a class="el" href="classant_1_1_component.html">ant::Component</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>baseComponent</b>(int id) (defined in <a class="el" href="classant_1_1base_component.html">ant::baseComponent</a>)</td><td class="entry"><a class="el" href="classant_1_1base_component.html">ant::baseComponent</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">protected</span></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>Component</b>(int id, T...data) (defined in <a class="el" href="classant_1_1_component.html">ant::Component&lt; T &gt;</a>)</td><td class="entry"><a class="el" href="classant_1_1_component.html">ant::Component&lt; T &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>getId</b>() const  (defined in <a class="el" href="classant_1_1base_component.html">ant::baseComponent</a>)</td><td class="entry"><a class="el" href="classant_1_1base_component.html">ant::baseComponent</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>getProperties</b>() (defined in <a class="el" href="classant_1_1_component.html">ant::Component&lt; T &gt;</a>)</td><td class="entry"><a class="el" href="classant_1_1_component.html">ant::Component&lt; T &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>setId</b>(int id) (defined in <a class="el" href="classant_1_1base_component.html">ant::baseComponent</a>)</td><td class="entry"><a class="el" href="classant_1_1base_component.html">ant::baseComponent</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>setProperties</b>(std::tuple&lt; T...&gt; properties) (defined in <a class="el" href="classant_1_1base_component.html">ant::baseComponent</a>)</td><td class="entry"><a class="el" href="classant_1_1base_component.html">ant::baseComponent</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>~baseComponent</b>()=default (defined in <a class="el" href="classant_1_1base_component.html">ant::baseComponent</a>)</td><td class="entry"><a class="el" href="classant_1_1base_component.html">ant::baseComponent</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sat Mar 8 2014 01:56:32 for unitTest by
+    <li class="footer">Generated on Thu Mar 27 2014 00:26:45 for unitTest by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

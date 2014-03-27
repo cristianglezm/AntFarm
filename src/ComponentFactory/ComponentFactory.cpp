@@ -1,6 +1,9 @@
 #include <ComponentFactory/ComponentFactory.hpp>
 
 namespace ant{
+            ComponentFactory::ComponentFactory(){
+                assets.reset(new AssetManager());
+            }
             ComponentFactory::ComponentFactory(std::shared_ptr<AssetManager> assets){
                 this->assets = assets;
             }

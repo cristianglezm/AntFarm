@@ -103,46 +103,77 @@ $(document).ready(function(){initNavTree('classant_1_1_system.html','');});
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classant_1_1_system-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">ant::System Class Reference</div>  </div>
+<div class="title">ant::System Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Clase base para los sistemas.  
+ <a href="classant_1_1_system.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_system_8hpp_source.html">System.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a0561fbb47b681fabd4ec27e632b57929"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0561fbb47b681fabd4ec27e632b57929"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>System</b> (long int req)</td></tr>
+<tr class="separator:a0561fbb47b681fabd4ec27e632b57929"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a276b368d0c1612d762c22a090772ae7b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a276b368d0c1612d762c22a090772ae7b"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>System</b> (long int req, std::shared_ptr&lt; <a class="el" href="classant_1_1_entity_manager.html">EntityManager</a> &gt; em, std::shared_ptr&lt; <a class="el" href="classant_1_1_event_queue.html">EventQueue</a> &gt; eventQueue)</td></tr>
+<tr class="separator:a276b368d0c1612d762c22a090772ae7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a35662ff3739ff4290df1106bfdccfaca"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a35662ff3739ff4290df1106bfdccfaca"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setRequiredComponents</b> (long int req)</td></tr>
 <tr class="separator:a35662ff3739ff4290df1106bfdccfaca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d94338969f43d4fd2fd972deb099258"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2d94338969f43d4fd2fd972deb099258"></a>
 long int&#160;</td><td class="memItemRight" valign="bottom"><b>getRequiredComponts</b> ()</td></tr>
 <tr class="separator:a2d94338969f43d4fd2fd972deb099258"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad6bf29e3f5e7f405be25de05ca0695ab"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad6bf29e3f5e7f405be25de05ca0695ab"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setEventQueue</b> (<a class="el" href="classant_1_1_event_queue.html">EventQueue</a> &amp;eq)</td></tr>
-<tr class="separator:ad6bf29e3f5e7f405be25de05ca0695ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae381302dadb0e6bc57c64dfba4da668c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae381302dadb0e6bc57c64dfba4da668c"></a>
-<a class="el" href="classant_1_1_event_queue.html">EventQueue</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getEventQueue</b> ()</td></tr>
-<tr class="separator:ae381302dadb0e6bc57c64dfba4da668c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1effe9f0e5615e516a34be02d5895434"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1effe9f0e5615e516a34be02d5895434"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setEventQueue</b> (std::shared_ptr&lt; <a class="el" href="classant_1_1_event_queue.html">EventQueue</a> &gt; eq)</td></tr>
+<tr class="separator:a1effe9f0e5615e516a34be02d5895434"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3e2bbbdb622276d194ad3a687d8e4f1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac3e2bbbdb622276d194ad3a687d8e4f1"></a>
+std::shared_ptr&lt; <a class="el" href="classant_1_1_event_queue.html">EventQueue</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getEventQueue</b> ()</td></tr>
+<tr class="separator:ac3e2bbbdb622276d194ad3a687d8e4f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a231f9fc93b55ee67deb9597ae6be13ba"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a231f9fc93b55ee67deb9597ae6be13ba"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setName</b> (std::string name)</td></tr>
 <tr class="separator:a231f9fc93b55ee67deb9597ae6be13ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac6b6f258e6ae08f1f55f89d44d4a67d0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac6b6f258e6ae08f1f55f89d44d4a67d0"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getName</b> ()</td></tr>
-<tr class="separator:ac6b6f258e6ae08f1f55f89d44d4a67d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afab672b61b516514066a47d9eb9cc9f2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afab672b61b516514066a47d9eb9cc9f2"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setEntityManager</b> (<a class="el" href="classant_1_1_entity_manager.html">EntityManager</a> &amp;em)</td></tr>
-<tr class="separator:afab672b61b516514066a47d9eb9cc9f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad438b6427d660feaa6b1ba1a0c3f84ef"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad438b6427d660feaa6b1ba1a0c3f84ef"></a>
-<a class="el" href="classant_1_1_entity_manager.html">EntityManager</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getEntityManager</b> ()</td></tr>
-<tr class="separator:ad438b6427d660feaa6b1ba1a0c3f84ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae710ecdf5c06d22466ec480bbfebceb0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae710ecdf5c06d22466ec480bbfebceb0"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>render</b> ()</td></tr>
-<tr class="separator:ae710ecdf5c06d22466ec480bbfebceb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae5aded47b8ac35e85044747b847a6440"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae5aded47b8ac35e85044747b847a6440"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> (sf::Time dt)</td></tr>
-<tr class="separator:ae5aded47b8ac35e85044747b847a6440"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52a559b2c3ddbec5c846df1badd7f7f8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a52a559b2c3ddbec5c846df1badd7f7f8"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getName</b> () const </td></tr>
+<tr class="separator:a52a559b2c3ddbec5c846df1badd7f7f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f983382d142ea697f1811f7f6f6ab17"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1f983382d142ea697f1811f7f6f6ab17"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setEntityManager</b> (std::shared_ptr&lt; <a class="el" href="classant_1_1_entity_manager.html">EntityManager</a> &gt; em)</td></tr>
+<tr class="separator:a1f983382d142ea697f1811f7f6f6ab17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adaad2087de7fc71924cfb5b134014b0a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adaad2087de7fc71924cfb5b134014b0a"></a>
+std::shared_ptr&lt; <a class="el" href="classant_1_1_entity_manager.html">EntityManager</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getEntityManager</b> ()</td></tr>
+<tr class="separator:adaad2087de7fc71924cfb5b134014b0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30a815d199fea90e9d2f7167eb2bf86e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a30a815d199fea90e9d2f7167eb2bf86e"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>render</b> (sf::RenderWindow &amp;win)=0</td></tr>
+<tr class="separator:a30a815d199fea90e9d2f7167eb2bf86e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d97de105123df07d4d90ac2914f9e6c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4d97de105123df07d4d90ac2914f9e6c"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> (sf::Time dt)=0</td></tr>
+<tr class="separator:a4d97de105123df07d4d90ac2914f9e6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a4ef41cfc496e41ac6730f90629524ec7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4ef41cfc496e41ac6730f90629524ec7"></a>
+long int&#160;</td><td class="memItemRight" valign="bottom"><b>RequiredComponents</b></td></tr>
+<tr class="separator:a4ef41cfc496e41ac6730f90629524ec7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27e1814e13d161b5ef0e848e3da16d29"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a27e1814e13d161b5ef0e848e3da16d29"></a>
+std::shared_ptr&lt; <a class="el" href="classant_1_1_event_queue.html">EventQueue</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>eventQueue</b></td></tr>
+<tr class="separator:a27e1814e13d161b5ef0e848e3da16d29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5661d872ff769be150bd4e9a9552f6b9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5661d872ff769be150bd4e9a9552f6b9"></a>
+std::shared_ptr&lt; <a class="el" href="classant_1_1_entity_manager.html">EntityManager</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>em</b></td></tr>
+<tr class="separator:a5661d872ff769be150bd4e9a9552f6b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60b3c00a760a3b4947ab1f1fc534a5b2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a60b3c00a760a3b4947ab1f1fc534a5b2"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td></tr>
+<tr class="separator:a60b3c00a760a3b4947ab1f1fc534a5b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this class was generated from the following files:<ul>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Clase base para los sistemas. </p>
+<dl class="section author"><dt>Author</dt><dd>Cristian Gonzalez Moreno <a href="#" onclick="location.href='mai'+'lto:'+'Cri'+'st'+'ian'+'.g'+'lez'+'.m'+'@gm'+'ai'+'l.c'+'om'; return false;">Crist<span style="display: none;">.nosp@m.</span>ian.<span style="display: none;">.nosp@m.</span>glez.<span style="display: none;">.nosp@m.</span>m@gm<span style="display: none;">.nosp@m.</span>ail.c<span style="display: none;">.nosp@m.</span>om</a> </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>0.1 </dd></dl>
+</div><hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="_system_8hpp_source.html">System.hpp</a></li>
 <li>System.cpp</li>
 </ul>
@@ -152,7 +183,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> (s
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>ant</b></li><li class="navelem"><a class="el" href="classant_1_1_system.html">System</a></li>
-    <li class="footer">Generated on Sat Mar 8 2014 01:56:32 for unitTest by
+    <li class="footer">Generated on Thu Mar 27 2014 00:26:45 for unitTest by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

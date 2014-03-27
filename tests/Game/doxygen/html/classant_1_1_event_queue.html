@@ -108,23 +108,38 @@ $(document).ready(function(){initNavTree('classant_1_1_event_queue.html','');});
 <div class="title">ant::EventQueue Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Clase donde se almacenan los eventos para ser procesados despues.  
+ <a href="classant_1_1_event_queue.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_event_queue_8hpp_source.html">EventQueue.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:afcea8dc906c572143ed5e1c5bb6139bc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afcea8dc906c572143ed5e1c5bb6139bc"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>push</b> (std::unique_ptr&lt; <a class="el" href="classant_1_1_event.html">Event</a> &gt; e)</td></tr>
-<tr class="separator:afcea8dc906c572143ed5e1c5bb6139bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0cfcbf2d905b8204b2e81f4db0408dfb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0cfcbf2d905b8204b2e81f4db0408dfb"></a>
-<a class="el" href="classant_1_1_event.html">Event</a>&#160;</td><td class="memItemRight" valign="bottom"><b>pop</b> ()</td></tr>
-<tr class="separator:a0cfcbf2d905b8204b2e81f4db0408dfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9bb87578df41b8f051d11188ad81bce3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9bb87578df41b8f051d11188ad81bce3"></a>
-<a class="el" href="classant_1_1_event.html">Event</a>&#160;</td><td class="memItemRight" valign="bottom"><b>front</b> ()</td></tr>
-<tr class="separator:a9bb87578df41b8f051d11188ad81bce3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bc551dd241d78fe32b13bebbd1dc5cb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2bc551dd241d78fe32b13bebbd1dc5cb"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>push</b> (std::shared_ptr&lt; <a class="el" href="classant_1_1base_event.html">baseEvent</a> &gt; e)</td></tr>
+<tr class="separator:a2bc551dd241d78fe32b13bebbd1dc5cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c3404775bb9e3c72ae0d0534b4be7e7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0c3404775bb9e3c72ae0d0534b4be7e7"></a>
+std::shared_ptr&lt; <a class="el" href="classant_1_1base_event.html">baseEvent</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>pop</b> ()</td></tr>
+<tr class="separator:a0c3404775bb9e3c72ae0d0534b4be7e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87f6c1295a1d66101f12239cecde3d4d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a87f6c1295a1d66101f12239cecde3d4d"></a>
+std::shared_ptr&lt; <a class="el" href="classant_1_1base_event.html">baseEvent</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>front</b> ()</td></tr>
+<tr class="separator:a87f6c1295a1d66101f12239cecde3d4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09b0e4a337d383abebf2e8adaa3e9c07"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a09b0e4a337d383abebf2e8adaa3e9c07"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>isEmpty</b> ()</td></tr>
 <tr class="separator:a09b0e4a337d383abebf2e8adaa3e9c07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac772190bcecf4b0807e00fe33a618d04"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac772190bcecf4b0807e00fe33a618d04"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>size</b> ()</td></tr>
+<tr class="separator:ac772190bcecf4b0807e00fe33a618d04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e14f5de369a44a3a780a389f8043e84"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2e14f5de369a44a3a780a389f8043e84"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>clear</b> ()</td></tr>
+<tr class="separator:a2e14f5de369a44a3a780a389f8043e84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this class was generated from the following files:<ul>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Clase donde se almacenan los eventos para ser procesados despues. </p>
+<dl class="section author"><dt>Author</dt><dd>Cristian Gonzalez Moreno <a href="#" onclick="location.href='mai'+'lto:'+'Cri'+'st'+'ian'+'.g'+'lez'+'.m'+'@gm'+'ai'+'l.c'+'om'; return false;">Crist<span style="display: none;">.nosp@m.</span>ian.<span style="display: none;">.nosp@m.</span>glez.<span style="display: none;">.nosp@m.</span>m@gm<span style="display: none;">.nosp@m.</span>ail.c<span style="display: none;">.nosp@m.</span>om</a> </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>0.1 </dd></dl>
+</div><hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="_event_queue_8hpp_source.html">EventQueue.hpp</a></li>
 <li>EventQueue.cpp</li>
 </ul>
@@ -134,7 +149,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>isEmpty</b> ()</td></
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>ant</b></li><li class="navelem"><a class="el" href="classant_1_1_event_queue.html">EventQueue</a></li>
-    <li class="footer">Generated on Sat Mar 8 2014 01:56:32 for unitTest by
+    <li class="footer">Generated on Thu Mar 27 2014 00:26:45 for unitTest by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

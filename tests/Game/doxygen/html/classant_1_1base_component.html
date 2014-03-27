@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>unitTest: Member List</title>
+<title>unitTest: ant::baseComponent Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -83,7 +83,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('classant_1_1_observer.html','');});
+$(document).ready(function(){initNavTree('classant_1_1base_component.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -101,21 +101,58 @@ $(document).ready(function(){initNavTree('classant_1_1_observer.html','');});
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="classant_1_1base_component-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">ant::Observer Member List</div>  </div>
+<div class="title">ant::baseComponent Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>This is the complete list of members for <a class="el" href="classant_1_1_observer.html">ant::Observer</a>, including all inherited members.</p>
-<table class="directory">
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>Observer</b>() (defined in <a class="el" href="classant_1_1_observer.html">ant::Observer</a>)</td><td class="entry"><a class="el" href="classant_1_1_observer.html">ant::Observer</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>onNotify</b>(std::shared_ptr&lt; baseEvent &gt; e)=0 (defined in <a class="el" href="classant_1_1_observer.html">ant::Observer</a>)</td><td class="entry"><a class="el" href="classant_1_1_observer.html">ant::Observer</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>~Observer</b>()=0 (defined in <a class="el" href="classant_1_1_observer.html">ant::Observer</a>)</td><td class="entry"><a class="el" href="classant_1_1_observer.html">ant::Observer</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-</table></div><!-- contents -->
+<p>Clase base de componente.  
+ <a href="classant_1_1base_component.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_component_8hpp_source.html">Component.hpp</a>&gt;</code></p>
+
+<p>Inherited by <a class="el" href="classant_1_1_component.html">ant::Component&lt; T &gt;</a>.</p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:ab321008abdeacef0d10462ee320b05fa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab321008abdeacef0d10462ee320b05fa"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setId</b> (int id)</td></tr>
+<tr class="separator:ab321008abdeacef0d10462ee320b05fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a985c9f24f95e08def64858f45bba411a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a985c9f24f95e08def64858f45bba411a"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>getId</b> () const </td></tr>
+<tr class="separator:a985c9f24f95e08def64858f45bba411a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88bc0531ed99c8978e95257131653efe"><td class="memTemplParams" colspan="2"><a class="anchor" id="a88bc0531ed99c8978e95257131653efe"></a>
+template&lt;typename... T&gt; </td></tr>
+<tr class="memitem:a88bc0531ed99c8978e95257131653efe"><td class="memTemplItemLeft" align="right" valign="top">std::tuple&lt; T...&gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>getProperties</b> ()</td></tr>
+<tr class="separator:a88bc0531ed99c8978e95257131653efe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85aa249d86676f21407ddc7ef321c6c4"><td class="memTemplParams" colspan="2"><a class="anchor" id="a85aa249d86676f21407ddc7ef321c6c4"></a>
+template&lt;typename... T&gt; </td></tr>
+<tr class="memitem:a85aa249d86676f21407ddc7ef321c6c4"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>setProperties</b> (std::tuple&lt; T...&gt; properties)</td></tr>
+<tr class="separator:a85aa249d86676f21407ddc7ef321c6c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a59617d571d23f2e8c28a0f8e975e941d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a59617d571d23f2e8c28a0f8e975e941d"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>baseComponent</b> (int id)</td></tr>
+<tr class="separator:a59617d571d23f2e8c28a0f8e975e941d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Clase base de componente. </p>
+<dl class="section author"><dt>Author</dt><dd>Cristian Gonzalez Moreno <a href="#" onclick="location.href='mai'+'lto:'+'cri'+'st'+'ian'+'.g'+'lez'+'.m'+'@gm'+'ai'+'l.c'+'om'; return false;">crist<span style="display: none;">.nosp@m.</span>ian.<span style="display: none;">.nosp@m.</span>glez.<span style="display: none;">.nosp@m.</span>m@gm<span style="display: none;">.nosp@m.</span>ail.c<span style="display: none;">.nosp@m.</span>om</a> </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>0.1 </dd></dl>
+</div><hr/>The documentation for this class was generated from the following file:<ul>
+<li><a class="el" href="_component_8hpp_source.html">Component.hpp</a></li>
+</ul>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
+    <li class="navelem"><b>ant</b></li><li class="navelem"><a class="el" href="classant_1_1base_component.html">baseComponent</a></li>
     <li class="footer">Generated on Thu Mar 27 2014 00:26:45 for unitTest by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
