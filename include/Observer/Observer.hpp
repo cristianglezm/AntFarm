@@ -7,7 +7,7 @@ namespace ant{
         public:
             Observer(){};
             virtual void onNotify(std::shared_ptr<baseEvent> e) = 0;
-            virtual ~Observer() = 0;
+            virtual ~Observer(){};
     };
 }
 #endif // OBSERVER_H

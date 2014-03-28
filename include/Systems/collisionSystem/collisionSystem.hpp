@@ -2,18 +2,17 @@
 #define COLLISION_SYSTEM_H
 #include <Systems/System.hpp>
 #include <Utils/Quadtree.hpp>
-#include <SFML/System/Time.hpp>
-#include <SFML/Graphics/RenderWindow.hpp>
+#include <SFML/Graphics/Rect.hpp>
 
 namespace ant{
     class collisionSystem : public System{
         private:
-            QuadTree qtree;
+            Utils::Quadtree qtree;
         public:
-            collisionSystem(long int req);
+            collisionSystem(long int req,sf::FloatRect bounds);
             virtual void render(sf::RenderWindow& win);
             virtual void update(sf::Time dt);
-            ~collisionSystem();
+            virtual ~collisionSystem();
     };
 }
 #endif // COLLISION_SYSTEM_H

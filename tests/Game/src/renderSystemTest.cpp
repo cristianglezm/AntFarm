@@ -15,15 +15,22 @@ std::cout << "WorldManager Test -----------" << std::endl;
     std::shared_ptr<ant::EventQueue> eq(new ant::EventQueue());
     std::shared_ptr<ant::AssetManager> assets(new ant::AssetManager());
     assets->addTexture("Ant","datatest/image.png");
+    assets->addTexture("p","datatest/image1.png");
     ant::ComponentFactory cf(assets);
     sf::RenderWindow win(sf::VideoMode(800,600),"TEST RenderSystem");
     ant::WorldManager wm;
-    for(int i=0;i<5;++i){
+    for(int i=0;i<1;++i){
         std::unique_ptr<ant::SystemManager> sm(new ant::SystemManager());
-        for(int j=0;j<10;++j){
-            std::unique_ptr<ant::Entity> e(new ant::Entity("Test-" + ant::Utils::toString(i)));
+        for(int j=0;j<1;++j){
+            std::unique_ptr<ant::Entity> e(new ant::Entity("red"));
+            e->addComponent(cf.createSprite("p"));
+            e->addComponent(cf.createTransform(sf::Vector2f(400,20),sf::Vector2f(1,50),0));
+            em->addEntity(std::move(e));
+        }
+        for(int j=0;j<1;++j){
+            std::unique_ptr<ant::Entity> e(new ant::Entity("black"));
             e->addComponent(cf.createSprite("Ant"));
-            e->addComponent(cf.createTransform(sf::Vector2f(j+i,i+j),sf::Vector2f(1,6),0));
+            e->addComponent(cf.createTransform(sf::Vector2f(400,20),sf::Vector2f(1,1),0));
             em->addEntity(std::move(e));
         }
         for(int k=0;k<1;++k){
@@ -44,6 +51,14 @@ std::cout << "WorldManager Test -----------" << std::endl;
                 case sf::Event::Closed:
                     running = false;
                     break;
+                case sf::Event::MouseButtonPressed:
+                    if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
+                        auto& properties = em->getEntity("black")->getComponent(ComponentsMask::COMPONENT_TRANSFORM)->getProperties<sf::Vector2f,sf::Vector2f,float>();
+                        auto& pos = std::get<0>(properties);
+                        auto mousePos = sf::Mouse::getPosition(win);
+                        pos = (sf::Vector2f)mousePos;
+                    }
+                    break;
             }
         }
         wm.update(-1,sf::Time());
@@ -51,9 +66,9 @@ std::cout << "WorldManager Test -----------" << std::endl;
         wm.render(0,win);
         win.display();
     }
-    win.close();
-    auto tmpWorld = wm.getWorld(1);
-    assert(tmpWorld->getId()==1);
+    auto tmpWorld = wm.getWorld(0);
+    assert(tmpWorld->getId()==0);
     tmpWorld->update(sf::Time());
+    win.close();
     return true;
 }

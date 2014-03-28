@@ -13,12 +13,12 @@ namespace ant{
             EntityManager();
             void addEntity(std::unique_ptr<Entity> e);
             void removeEntity(std::unique_ptr<Entity>& e);
-            iterator removeEntity(std::string name);
+            iterator removeEntity(const std::string& name);
             iterator removeEntity(iterator it);
-            Entity* getEntity(std::string name);
+            Entity* getEntity(const std::string& name);
             void addEntities(std::list<std::unique_ptr<Entity> > e);
             inline std::list<std::unique_ptr<Entity> >& getEntities(){ return this->entities; }
-            std::unique_ptr<Entity> Transfer(std::string name);
+            std::unique_ptr<Entity> Transfer(const std::string& name);
             ~EntityManager();
     };
 };

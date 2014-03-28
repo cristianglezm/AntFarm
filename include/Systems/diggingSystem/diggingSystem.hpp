@@ -1,8 +1,9 @@
- #ifndef DIGGING_SYSTEM_H
- #define DIGGING_SYSTEM_H
- #include <Systems/System.hpp>
+#ifndef DIGGING_SYSTEM_H
+#define DIGGING_SYSTEM_H
+#include <Systems/System.hpp>
+#include <SFML/Graphics/VertexArray.hpp>
 
- namespace ant{
+namespace ant{
     class diggingSystem : public System{
         private:
 
@@ -11,4 +12,4 @@
     };
  }
 
- #endif // DIGGING_SYSTEM_H
+#endif // DIGGING_SYSTEM_H

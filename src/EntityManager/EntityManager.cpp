@@ -1,4 +1,5 @@
 #include <EntityManager/EntityManager.hpp>
+
 namespace ant{
     EntityManager::EntityManager(){
 
@@ -9,20 +10,21 @@ namespace ant{
     void EntityManager::removeEntity(std::unique_ptr<Entity>& e){
        entities.remove(std::move(e));
     }
-    EntityManager::iterator EntityManager::removeEntity(std::string name){
+    EntityManager::iterator EntityManager::removeEntity(const std::string& name){
         iterator i = entities.begin();
         while(i != entities.end()){
             if((*i).get()!=nullptr){
                 if((*i)->getName() == name){
-                    return entities.erase(i);
+                    return entities.erase(i++);
                 }
             }
+            ++i;
         }
     }
     EntityManager::iterator EntityManager::removeEntity(EntityManager::iterator it){
         return entities.erase(it);
     }
-    Entity* EntityManager::getEntity(std::string name){
+    Entity* EntityManager::getEntity(const std::string& name){
         for(auto& entity : entities){
             if(entity->getName() == name){
                 return entity.get();
@@ -33,7 +35,7 @@ namespace ant{
     void EntityManager::addEntities(std::list<std::unique_ptr<Entity> > e){
         entities = std::move(e);
     }
-    std::unique_ptr<Entity> EntityManager::Transfer(std::string name){
+    std::unique_ptr<Entity> EntityManager::Transfer(const std::string& name){
         std::unique_ptr<Entity> ne;
         for(auto& entity : entities){
             if(entity){
