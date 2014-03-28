@@ -29,7 +29,7 @@ namespace ant{
 
     }
     void EntityFactory::setComponentFactory(std::shared_ptr<ComponentFactory> cf){
-        componentFactory = cf;
+        this->componentFactory = cf;
     }
     EntityFactory::~EntityFactory(){
 

@@ -7,7 +7,7 @@ namespace ant{
 
         public:
             ComponentSettings();
-            void loadSettings(std::string filename);
+            void loadSettings(const std::string& filename);
             ~ComponentSettings();
     };
 };

@@ -33,13 +33,14 @@ WorldManager		- Done
 WorldFactory		-
 System			- Done
 renderSystem		- Done
-MovementSystem		-
-CollisionSystem		-
+movementSystem		-
+collisionSystem		-
 QuadTree		- Done
-GravitySystem		-
-DiggingSystem		-
-TransportSystem		-
-UserTransportSystem	-
+gravitySystem		-
+diggingSystem		-
+inputSystem		-
+transportSystem		-
+userTransportSystem	-
 ParticleSystem		-
 Level			-
 AssetManager		-
