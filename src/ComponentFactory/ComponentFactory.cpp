@@ -1,7 +1,7 @@
 #include <ComponentFactory/ComponentFactory.hpp>
 
 namespace ant{
-            ComponentFactory::mapImage(const sf::Vector2f& position,sf::VertexArray& toMap,sf::Image& img){
+            std::unique_ptr<sf::VertexArray> ComponentFactory::mapImage(const sf::Vector2f& position,sf::Image& img){
 
             }
             ComponentFactory::ComponentFactory(){
@@ -23,8 +23,8 @@ namespace ant{
                 return std::move(c);
             }
             std::unique_ptr<baseComponent> ComponentFactory::createDestructable(sf::Vector2f position,const std::string& imageID){
-
-                std::unique_ptr<baseComponent> c(new Component<sf::VertexArray>(ComponentsMask::COMPONENT_DESTRUCTABLE,destructable));
+                std::unique_ptr<sf::VertexArray> destructable = mapImage(position,assets->getImage(imageID));
+                std::unique_ptr<baseComponent> c(new Component<std::unique_ptr<sf::VertexArray>>(ComponentsMask::COMPONENT_DESTRUCTABLE,std::move(destructable)));
             }
             std::unique_ptr<baseComponent> ComponentFactory::createSprite(std::string id){
                 std::unique_ptr<baseComponent> c(new Component<std::unique_ptr<sf::Sprite>>(ComponentsMask::COMPONENT_SPRITE,std::unique_ptr<sf::Sprite>(new sf::Sprite((assets->getTexture(id))))));

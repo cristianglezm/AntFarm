@@ -18,7 +18,7 @@ namespace ant{
                 double verticalMidpoint = bounds.left + (bounds.width / 2);
                 double horizontalMidpoint = bounds.top + (bounds.height / 2);
                 // Object can completely fit within the top quadrants
-                auto& properties = e->getComponent(ComponentsMask::COMPONENT_TRANSFORM)->getProperties<sf::FloatRect>();
+                auto& properties = e->getComponent(ComponentsMask::COMPONENT_BOUNDS)->getProperties<sf::FloatRect>();
                 sf::FloatRect eBounds = std::get<0>(properties);
                 bool topQuadrant = (eBounds.top < horizontalMidpoint && eBounds.top + eBounds.height < horizontalMidpoint);
                 // Object can completely fit within the bottom quadrants

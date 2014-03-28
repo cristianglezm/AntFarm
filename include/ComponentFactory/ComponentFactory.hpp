@@ -9,7 +9,7 @@ namespace ant{
     class ComponentFactory{
         private:
             std::shared_ptr<AssetManager> assets;
-            mapImage(const sf::Vector2f& position,sf::VertexArray& toMap,sf::Image& img);
+            std::unique_ptr<sf::VertexArray> mapImage(const sf::Vector2f& position,sf::Image& img);
         public:
             ComponentFactory();
             ComponentFactory(std::shared_ptr<AssetManager> assets);

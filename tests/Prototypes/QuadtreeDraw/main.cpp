@@ -4,6 +4,7 @@
 #include <Utils/String.hpp>
 #include <EntityManager/EntityManager.hpp>
 #include <memory>
+#include <ComponentFactory/ComponentFactory.hpp>
 #include <Components/ComponentMask.hpp>
 
 float getFPS(const sf::Time& time) {
@@ -17,6 +18,7 @@ int main(){
     ant::EntityManager em;
     sf::RenderWindow app(sf::VideoMode(800,600), "QuadTree Draw Demo");
     sf::FloatRect worldBounds(0,0,800,600);
+    ant::ComponentFactory cf;
 	// Start the game loop
 	sf::Time elapsedTime;
 	sf::Time lastFrame;
@@ -92,8 +94,7 @@ int main(){
             std::unique_ptr<ant::Entity> e1(new ant::Entity("Test"));
             int x = app.mapCoordsToPixel((sf::Vector2f)sf::Mouse::getPosition(app)).x;
             int y = app.mapCoordsToPixel((sf::Vector2f)sf::Mouse::getPosition(app)).y;
-            std::unique_ptr<ant::baseComponent> c1(new ant::Component<sf::FloatRect>(ComponentsMask::COMPONENT_TRANSFORM,sf::FloatRect(x,y,5,5)));
-            e1->addComponent(std::move(c1));
+            e1->addComponent(cf.createBounds(sf::FloatRect(x,y,5,5)));
             em.addEntity(std::move(e1));
     }
         // Clear screen
@@ -102,7 +103,7 @@ int main(){
         sf::VertexArray points(sf::Quads,em.getEntities().size()*4);
         ant::EntityManager::iterator e = em.getEntities().begin();
         while(e!=em.getEntities().end()){
-            auto& properties = (*e)->getComponent(ComponentsMask::COMPONENT_TRANSFORM)->getProperties<sf::FloatRect>();
+            auto& properties = (*e)->getComponent(ComponentsMask::COMPONENT_BOUNDS)->getProperties<sf::FloatRect>();
             sf::FloatRect eBounds = std::get<0>(properties);
             points.append(sf::Vertex(sf::Vector2f(eBounds.left,eBounds.top),sf::Color::Red));
             points.append(sf::Vertex(sf::Vector2f(eBounds.left+eBounds.width,eBounds.top),sf::Color::Yellow));
