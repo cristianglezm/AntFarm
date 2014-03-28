@@ -3,6 +3,7 @@
 #include <list>
 #include <memory>
 #include <SFML/System/Time.hpp>
+#include <SFML/Graphics/RenderWindow.hpp>
 
 #include <World/World.hpp>
 #include <WorldFactory/WorldFactory.hpp>
@@ -18,9 +19,15 @@ namespace ant{
             std::shared_ptr<WorldFactory> worldFactory;
 
         public:
+            static const long int BATTLEFIELD = 0;
+            static const long int NEST = 1;
             Level();
-            void update(sf::Time dt);
-            void render();
+            void setEventQueue(std::shared_ptr<EventQueue> eq);
+            inline std::shared_ptr<EventQueue> getEventQueue(){ return this->eventQueue; }
+            void setWorldFactory(std::shared_ptr<WorldFactory> wf);
+            inline std::shared_ptr<WorldFactory> getWorldFactory(){ return worldFactory; }
+            void update(long int id,long int type,sf::Time dt);
+            void render(long int id,long int type,sf::RenderWindow& win);
             ~Level();
     };
 }

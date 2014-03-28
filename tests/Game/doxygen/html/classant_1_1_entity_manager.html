@@ -102,6 +102,7 @@ $(document).ready(function(){initNavTree('classant_1_1_entity_manager.html','');
 
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classant_1_1_entity_manager-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -109,17 +110,31 @@ $(document).ready(function(){initNavTree('classant_1_1_entity_manager.html','');
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a60b5d97167e38d66d7d245a59735c1b5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a60b5d97167e38d66d7d245a59735c1b5"></a>
+typedef std::list<br class="typebreak"/>
+&lt; std::unique_ptr&lt; <a class="el" href="classant_1_1_entity.html">Entity</a> &gt;<br class="typebreak"/>
+ &gt;::iterator&#160;</td><td class="memItemRight" valign="bottom"><b>iterator</b></td></tr>
+<tr class="separator:a60b5d97167e38d66d7d245a59735c1b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:af8cba501bcdac99f43f12047c8f857c4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af8cba501bcdac99f43f12047c8f857c4"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>addEntity</b> (std::unique_ptr&lt; <a class="el" href="classant_1_1_entity.html">Entity</a> &gt; e)</td></tr>
 <tr class="separator:af8cba501bcdac99f43f12047c8f857c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae30dea3e59c83dfba913d5e79f8407ec"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae30dea3e59c83dfba913d5e79f8407ec"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>removeEntity</b> (std::unique_ptr&lt; <a class="el" href="classant_1_1_entity.html">Entity</a> &gt; e)</td></tr>
-<tr class="separator:ae30dea3e59c83dfba913d5e79f8407ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f577bfd80547a0fb6cd0b5e1f13a17b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4f577bfd80547a0fb6cd0b5e1f13a17b"></a>
-<a class="el" href="classant_1_1_entity.html">Entity</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getEntity</b> (std::string name)</td></tr>
-<tr class="separator:a4f577bfd80547a0fb6cd0b5e1f13a17b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3645cbade4566b1e035923d12688811"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac3645cbade4566b1e035923d12688811"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>removeEntity</b> (std::unique_ptr&lt; <a class="el" href="classant_1_1_entity.html">Entity</a> &gt; &amp;e)</td></tr>
+<tr class="separator:ac3645cbade4566b1e035923d12688811"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a630e6c364e031c463ec2609a53781fd6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a630e6c364e031c463ec2609a53781fd6"></a>
+iterator&#160;</td><td class="memItemRight" valign="bottom"><b>removeEntity</b> (std::string name)</td></tr>
+<tr class="separator:a630e6c364e031c463ec2609a53781fd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fe7570482ce955d895430e1c3f1b107"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9fe7570482ce955d895430e1c3f1b107"></a>
+iterator&#160;</td><td class="memItemRight" valign="bottom"><b>removeEntity</b> (iterator it)</td></tr>
+<tr class="separator:a9fe7570482ce955d895430e1c3f1b107"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae011ba46482217c2713de06b3e4bd76d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae011ba46482217c2713de06b3e4bd76d"></a>
+<a class="el" href="classant_1_1_entity.html">Entity</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getEntity</b> (std::string name)</td></tr>
+<tr class="separator:ae011ba46482217c2713de06b3e4bd76d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa95d9577ce06bf45b125913a2801b0b9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa95d9577ce06bf45b125913a2801b0b9"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>addEntities</b> (std::list&lt; std::unique_ptr&lt; <a class="el" href="classant_1_1_entity.html">Entity</a> &gt; &gt; e)</td></tr>
 <tr class="separator:aa95d9577ce06bf45b125913a2801b0b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -127,9 +142,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>addEntities</b> (std:
 std::list&lt; std::unique_ptr<br class="typebreak"/>
 &lt; <a class="el" href="classant_1_1_entity.html">Entity</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getEntities</b> ()</td></tr>
 <tr class="separator:ae8e22426301fbd535b1b990b3408ec17"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c2d8e069531ff8a0a56972cb69e93d9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2c2d8e069531ff8a0a56972cb69e93d9"></a>
-std::unique_ptr&lt; <a class="el" href="classant_1_1_entity.html">Entity</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Transfer</b> (std::unique_ptr&lt; <a class="el" href="classant_1_1_entity.html">Entity</a> &gt; e)</td></tr>
-<tr class="separator:a2c2d8e069531ff8a0a56972cb69e93d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cc17dc56a720898507f3c51a64eb338"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1cc17dc56a720898507f3c51a64eb338"></a>
+std::unique_ptr&lt; <a class="el" href="classant_1_1_entity.html">Entity</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Transfer</b> (std::string name)</td></tr>
+<tr class="separator:a1cc17dc56a720898507f3c51a64eb338"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="_entity_manager_8hpp_source.html">EntityManager.hpp</a></li>
@@ -141,7 +156,7 @@ std::unique_ptr&lt; <a class="el" href="classant_1_1_entity.html">Entity</a> &gt
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>ant</b></li><li class="navelem"><a class="el" href="classant_1_1_entity_manager.html">EntityManager</a></li>
-    <li class="footer">Generated on Sat Mar 8 2014 01:56:32 for unitTest by
+    <li class="footer">Generated on Thu Mar 27 2014 00:26:45 for unitTest by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

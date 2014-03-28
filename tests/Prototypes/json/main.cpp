@@ -1,13 +1,27 @@
+/*
 #include <rapidjson/rapidjson.h>
 #include <rapidjson/document.h>
 #include <rapidjson/prettywriter.h>
 #include <rapidjson/reader.h>
 #include <rapidjson/filestream.h>
+*/
+/// includes from json-cpp
+#include <json/json.h>
 #include <string>
-#include <iostream>
-#include <ios>
+#include <fstream>
 int main(){
-// Prepare reader and input stream.
+    std::ifstream input;
+    input.open("menu.json",std::ios::in);
+
+    /*
+    /// test with json-cpp
+    Json::Reader reader;
+    Json::Value root(Json::ValueType::objectValue);
+    reader.parse(input,root);
+    */
+
+    /*
+    // Prepare reader and input stream.
 	rapidjson::Reader reader;
 	FILE* file = fopen("menu.json","ra");
 	rapidjson::FileStream is(file);
@@ -20,6 +34,6 @@ int main(){
 	if (!reader.Parse<1>(is,writer)) {
 		fprintf(stderr, "\nError(%u): %s\n", (unsigned)reader.GetErrorOffset(), reader.GetParseError());
 	}
-
+    */
     return 0;
 }

@@ -9,6 +9,7 @@ namespace ant{
     class ComponentFactory{
         private:
             std::shared_ptr<AssetManager> assets;
+            mapImage(const sf::Vector2f& position,sf::VertexArray& toMap,sf::Image& img);
         public:
             ComponentFactory();
             ComponentFactory(std::shared_ptr<AssetManager> assets);
@@ -17,6 +18,7 @@ namespace ant{
 
             std::unique_ptr<baseComponent> createTransform(sf::Vector2f position,sf::Vector2f scale,float rotation);
             std::unique_ptr<baseComponent> createBounds(sf::FloatRect bounds);
+            std::unique_ptr<baseComponent> createDestructable(sf::Vector2f position,const std::string& imageID);
             std::unique_ptr<baseComponent> createSprite(std::string id);
 
             ~ComponentFactory();

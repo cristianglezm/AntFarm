@@ -1,6 +1,14 @@
 {
-"Entity":"ant"
-{
-	"id":"1",
-}
+    "Textures": {
+        "pairs": [
+            {
+                "id": "Ant",
+                "filename": "datatest/image.png"
+            },
+            {
+                "id": "AntQueen",
+                "filename": "datatest/image.png"
+            }
+        ]
+    }
 }

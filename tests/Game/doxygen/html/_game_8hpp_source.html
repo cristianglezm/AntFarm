@@ -105,23 +105,28 @@ $(document).ready(function(){initNavTree('_game_8hpp_source.html','');});
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef GAME_H</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define GAME_H</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span><span class="keyword">namespace </span>ant{</div>
-<div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="classant_1_1_game.html">    4</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classant_1_1_game.html">Game</a>{</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;        <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;        <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    };</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;}</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#endif // GAME_H</span></div>
-<div class="ttc" id="classant_1_1_game_html"><div class="ttname"><a href="classant_1_1_game.html">ant::Game</a></div><div class="ttdef"><b>Definition:</b> Game.hpp:4</div></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#include &lt;Level/Level.hpp&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;EventQueue/EventQueue.hpp&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">namespace </span>ant{</div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="classant_1_1_game.html">    6</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classant_1_1_game.html">Game</a>{</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;        <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;            std::shared_ptr&lt;EventQueue&gt; eventQueue;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;            std::shared_ptr&lt;Level&gt; level;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;            <a class="code" href="classant_1_1_game.html">Game</a>();</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;            <span class="keywordtype">void</span> run();</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;            ~<a class="code" href="classant_1_1_game.html">Game</a>();</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    };</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;}</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#endif // GAME_H</span></div>
+<div class="ttc" id="classant_1_1_game_html"><div class="ttname"><a href="classant_1_1_game.html">ant::Game</a></div><div class="ttdef"><b>Definition:</b> Game.hpp:6</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_42f88387b2411e5d672af5da212cf282.html">Game</a></li><li class="navelem"><b>Game.hpp</b></li>
-    <li class="footer">Generated on Sat Mar 8 2014 01:56:32 for unitTest by
+    <li class="footer">Generated on Thu Mar 27 2014 00:26:45 for unitTest by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

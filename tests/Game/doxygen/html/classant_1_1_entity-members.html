@@ -108,25 +108,26 @@ $(document).ready(function(){initNavTree('classant_1_1_entity.html','');});
 
 <p>This is the complete list of members for <a class="el" href="classant_1_1_entity.html">ant::Entity</a>, including all inherited members.</p>
 <table class="directory">
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>addComponent</b>(std::unique_ptr&lt; Component &gt; component) (defined in <a class="el" href="classant_1_1_entity.html">ant::Entity</a>)</td><td class="entry"><a class="el" href="classant_1_1_entity.html">ant::Entity</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>addComponent</b>(std::unique_ptr&lt; baseComponent &gt; component) (defined in <a class="el" href="classant_1_1_entity.html">ant::Entity</a>)</td><td class="entry"><a class="el" href="classant_1_1_entity.html">ant::Entity</a></td><td class="entry"></td></tr>
   <tr bgcolor="#f0f0f0"><td class="entry"><b>Entity</b>() (defined in <a class="el" href="classant_1_1_entity.html">ant::Entity</a>)</td><td class="entry"><a class="el" href="classant_1_1_entity.html">ant::Entity</a></td><td class="entry"></td></tr>
   <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>Entity</b>(std::string name) (defined in <a class="el" href="classant_1_1_entity.html">ant::Entity</a>)</td><td class="entry"><a class="el" href="classant_1_1_entity.html">ant::Entity</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>Entity</b>(std::string name, std::map&lt; long, std::unique_ptr&lt; Component &gt; &gt; Components) (defined in <a class="el" href="classant_1_1_entity.html">ant::Entity</a>)</td><td class="entry"><a class="el" href="classant_1_1_entity.html">ant::Entity</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>getComponent</b>(long mask) (defined in <a class="el" href="classant_1_1_entity.html">ant::Entity</a>)</td><td class="entry"><a class="el" href="classant_1_1_entity.html">ant::Entity</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>Entity</b>(std::string name, std::map&lt; long int, std::unique_ptr&lt; baseComponent &gt; &gt; Components) (defined in <a class="el" href="classant_1_1_entity.html">ant::Entity</a>)</td><td class="entry"><a class="el" href="classant_1_1_entity.html">ant::Entity</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>getComponent</b>(long int mask) (defined in <a class="el" href="classant_1_1_entity.html">ant::Entity</a>)</td><td class="entry"><a class="el" href="classant_1_1_entity.html">ant::Entity</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr bgcolor="#f0f0f0"><td class="entry"><b>getComponents</b>() (defined in <a class="el" href="classant_1_1_entity.html">ant::Entity</a>)</td><td class="entry"><a class="el" href="classant_1_1_entity.html">ant::Entity</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>getMask</b>() const  (defined in <a class="el" href="classant_1_1_entity.html">ant::Entity</a>)</td><td class="entry"><a class="el" href="classant_1_1_entity.html">ant::Entity</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr bgcolor="#f0f0f0"><td class="entry"><b>getName</b>() const  (defined in <a class="el" href="classant_1_1_entity.html">ant::Entity</a>)</td><td class="entry"><a class="el" href="classant_1_1_entity.html">ant::Entity</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>operator==</b>(const Entity &amp;e) const  (defined in <a class="el" href="classant_1_1_entity.html">ant::Entity</a>)</td><td class="entry"><a class="el" href="classant_1_1_entity.html">ant::Entity</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>removeComponent</b>(long mask) (defined in <a class="el" href="classant_1_1_entity.html">ant::Entity</a>)</td><td class="entry"><a class="el" href="classant_1_1_entity.html">ant::Entity</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>setComponents</b>(std::map&lt; long, std::unique_ptr&lt; Component &gt; &gt; Components) (defined in <a class="el" href="classant_1_1_entity.html">ant::Entity</a>)</td><td class="entry"><a class="el" href="classant_1_1_entity.html">ant::Entity</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>setName</b>(std::string name) (defined in <a class="el" href="classant_1_1_entity.html">ant::Entity</a>)</td><td class="entry"><a class="el" href="classant_1_1_entity.html">ant::Entity</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>~Entity</b>() (defined in <a class="el" href="classant_1_1_entity.html">ant::Entity</a>)</td><td class="entry"><a class="el" href="classant_1_1_entity.html">ant::Entity</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>operator==</b>(const std::string &amp;name) const  (defined in <a class="el" href="classant_1_1_entity.html">ant::Entity</a>)</td><td class="entry"><a class="el" href="classant_1_1_entity.html">ant::Entity</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>removeComponent</b>(long int mask) (defined in <a class="el" href="classant_1_1_entity.html">ant::Entity</a>)</td><td class="entry"><a class="el" href="classant_1_1_entity.html">ant::Entity</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>setComponents</b>(std::map&lt; long int, std::unique_ptr&lt; baseComponent &gt;&gt; Components) (defined in <a class="el" href="classant_1_1_entity.html">ant::Entity</a>)</td><td class="entry"><a class="el" href="classant_1_1_entity.html">ant::Entity</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>setName</b>(std::string name) (defined in <a class="el" href="classant_1_1_entity.html">ant::Entity</a>)</td><td class="entry"><a class="el" href="classant_1_1_entity.html">ant::Entity</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>~Entity</b>() (defined in <a class="el" href="classant_1_1_entity.html">ant::Entity</a>)</td><td class="entry"><a class="el" href="classant_1_1_entity.html">ant::Entity</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sat Mar 8 2014 01:56:32 for unitTest by
+    <li class="footer">Generated on Thu Mar 27 2014 00:26:45 for unitTest by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

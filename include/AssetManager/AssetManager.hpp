@@ -1,5 +1,6 @@
 #ifndef ASSET_MANAGER_H
 #define ASSET_MANAGER_H
+#include <stdexcept>
 #include <map>
 #include <memory>
 #include <SFML/Graphics/Texture.hpp>
@@ -12,11 +13,12 @@ namespace ant{
             std::map<std::string,std::unique_ptr<sf::Image>> images;
         public:
             AssetManager();
+            void loadAssets(const std::string& json);
             void addTexture(const std::string& id,const std::string& filename);
-            sf::Texture* getTexture(const std::string& id);
+            sf::Texture& getTexture(const std::string& id);
             void removeTexture(const std::string& id);
             void addImage(const std::string& id,const std::string& filename);
-            sf::Image* getImage(const std::string& id);
+            sf::Image& getImage(const std::string& id);
             void removeImage(const std::string& id);
             ~AssetManager();
     };

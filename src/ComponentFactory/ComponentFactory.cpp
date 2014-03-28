@@ -1,6 +1,12 @@
 #include <ComponentFactory/ComponentFactory.hpp>
 
 namespace ant{
+            ComponentFactory::mapImage(const sf::Vector2f& position,sf::VertexArray& toMap,sf::Image& img){
+
+            }
+            ComponentFactory::ComponentFactory(){
+                assets.reset(new AssetManager());
+            }
             ComponentFactory::ComponentFactory(std::shared_ptr<AssetManager> assets){
                 this->assets = assets;
             }
@@ -16,8 +22,12 @@ namespace ant{
                 std::unique_ptr<baseComponent> c(new Component<sf::FloatRect>(ComponentsMask::COMPONENT_BOUNDS,bounds));
                 return std::move(c);
             }
+            std::unique_ptr<baseComponent> ComponentFactory::createDestructable(sf::Vector2f position,const std::string& imageID){
+
+                std::unique_ptr<baseComponent> c(new Component<sf::VertexArray>(ComponentsMask::COMPONENT_DESTRUCTABLE,destructable));
+            }
             std::unique_ptr<baseComponent> ComponentFactory::createSprite(std::string id){
-                std::unique_ptr<baseComponent> c(new Component<std::unique_ptr<sf::Sprite>>(ComponentsMask::COMPONENT_SPRITE,std::unique_ptr<sf::Sprite>(new sf::Sprite((*assets->getTexture(id))))));
+                std::unique_ptr<baseComponent> c(new Component<std::unique_ptr<sf::Sprite>>(ComponentsMask::COMPONENT_SPRITE,std::unique_ptr<sf::Sprite>(new sf::Sprite((assets->getTexture(id))))));
                 return std::move(c);
             }
             ComponentFactory::~ComponentFactory(){
