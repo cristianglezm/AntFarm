@@ -2,7 +2,22 @@
 
 namespace ant{
             std::unique_ptr<sf::VertexArray> ComponentFactory::mapImage(const sf::Vector2f& position,sf::Image& img){
-
+                int xWidth = img.getSize().x;
+                int yHeight = img.getSize().y;
+                std::unique_ptr<sf::VertexArray> destructible(new sf::VertexArray(sf::Points,xWidth*yHeight));
+                for(int x=0;x<xWidth;++x){
+                    for(int y=0;y<yHeight;++y){
+                        (*destructible)[xWidth*x+y].color = img.getPixel(x,y);
+                    }
+                }
+                xWidth += position.x;
+                yHeight += position.y;
+                for(int x=position.x;x<xWidth;++x){
+                    for(int y=position.y;y<yHeight;++y){
+                        (*destructible)[xWidth*x+y].position = sf::Vector2f(x,y);
+                    }
+                }
+                return std::move(destructible);
             }
             ComponentFactory::ComponentFactory(){
                 assets.reset(new AssetManager());

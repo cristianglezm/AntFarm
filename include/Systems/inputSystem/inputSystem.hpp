@@ -7,7 +7,10 @@ namespace ant{
         private:
 
         public:
-
+            inputSystem();
+            virtual void render(sf::RenderWindow& win);
+            virtual void update(sf::Time dt);
+            ~inputSystem();
     };
 }
 
