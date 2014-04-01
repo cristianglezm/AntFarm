@@ -28,30 +28,31 @@ std::cout << "WorldManager Test -----------" << std::endl;
             std::unique_ptr<ant::Entity> e(new ant::Entity("red"));
             e->addComponent(cf.createSprite("p"));
             e->addComponent(cf.createTransform(sf::Vector2f(400,30),sf::Vector2f(50,50),0));
+            e->addComponent(cf.createBounds(sf::FloatRect(400,30,50,50)));
             em->addEntity(std::move(e));
         }
         for(int j=0;j<1;++j){
             std::unique_ptr<ant::Entity> e(new ant::Entity("black"));
             e->addComponent(cf.createSprite("Ant"));
-            e->addComponent(cf.createTransform(sf::Vector2f(0,0),sf::Vector2f(1,1),0));
+            e->addComponent(cf.createTransform(sf::Vector2f(0,0),sf::Vector2f(1,1),45));
+            e->addComponent(cf.createBounds(sf::FloatRect(0,0,1,1)));
             e->addComponent(cf.createVelocity(sf::Vector2f(0,0),0.1,0.1,1));
             em->addEntity(std::move(e));
         }
-        for(int k=0;k<1;++k){
+        {
             std::shared_ptr<ant::renderSystem> ts(new ant::renderSystem(ComponentsMask::COMPONENT_SPRITE | ComponentsMask::COMPONENT_TRANSFORM));
-            ts->setName("test-" + ant::Utils::toString(k));
             ts->setEntityManager(em);
             ts->setEventQueue(eq);
             sm->addSystem(ts);
         }
         {
-            std::shared_ptr<ant::collisionSystem> ts(new ant::collisionSystem(ComponentsMask::COMPONENT_BOUNDS | ComponentsMask::COMPONENT_TRANSFORM,sf::FloatRect(0,0,800,600)));
+            std::shared_ptr<ant::collisionSystem> ts(new ant::collisionSystem(sf::FloatRect(0,0,800,600)));
             ts->setEntityManager(em);
             ts->setEventQueue(eq);
             sm->addSystem(ts);
         }
         {
-            std::shared_ptr<ant::movementSystem> ts(new ant::movementSystem(ComponentsMask::COMPONENT_TRANSFORM | ComponentsMask::COMPONENT_VELOCITY));
+            std::shared_ptr<ant::movementSystem> ts(new ant::movementSystem());
             ts->setEntityManager(em);
             ts->setEventQueue(eq);
             sm->addSystem(ts);
@@ -75,6 +76,8 @@ std::cout << "WorldManager Test -----------" << std::endl;
                     if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
                         auto& properties = em->getEntity("black")->getComponent(ComponentsMask::COMPONENT_TRANSFORM)->getProperties<sf::Vector2f,sf::Vector2f,float>();
                         auto& pos = std::get<0>(properties);
+                        auto& rotation = std::get<2>(properties);
+                        rotation +=1;
                         auto mousePos = sf::Mouse::getPosition(win);
                         pos = (sf::Vector2f)mousePos;
                     }

@@ -4,9 +4,9 @@ int main()
 {
     std::cout << "Masking Test" << std::endl;
     const unsigned long COMPONENT_NONE = 0;
-    const unsigned long COMPONENT_MOVEMENT = 1 << 0;
-    const unsigned long COMPONENT_ATTACK = 1 << 1;
-    const unsigned long COMPONENT_DEFENSE = 1 << 2;
+    const unsigned long COMPONENT_MOVEMENT = 1 << 1;
+    const unsigned long COMPONENT_ATTACK = 1 << 2;
+    const unsigned long COMPONENT_DEFENSE = 1 << 3;
     unsigned long EntityMask = COMPONENT_ATTACK | COMPONENT_MOVEMENT | COMPONENT_DEFENSE;
     unsigned long ReqSystem = COMPONENT_MOVEMENT | COMPONENT_ATTACK | COMPONENT_DEFENSE;
     std::cout << "COMPONENT NONE MASK: " << COMPONENT_NONE<< std::endl;

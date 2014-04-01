@@ -20,7 +20,7 @@ namespace ant{
                  try{
                         return Components.at(mask);
                     }catch(std::exception& out){
-                        std::cout << out.what() << " COMPONENTE NO ENCONTRADO " << mask << std::endl;
+                        std::cout << out.what() << " Component not Found " << mask << std::endl;
                     }
                  }
             void removeComponent(long int mask);

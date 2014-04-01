@@ -16,7 +16,7 @@ namespace ant{
         public:
             virtual ~baseComponent() = default;
             void setId(long int id){ this->id=id;}
-            inline long int getId() const{ return id; }
+            inline const long int& getId() const{ return id; }
             template<typename...T>
             std::tuple<T...>& getProperties();
             template<typename...T>

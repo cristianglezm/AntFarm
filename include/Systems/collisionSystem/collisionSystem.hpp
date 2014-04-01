@@ -12,7 +12,7 @@ namespace ant{
         private:
             Utils::Quadtree qtree;
         public:
-            collisionSystem(long int req,sf::FloatRect bounds);
+            collisionSystem(sf::FloatRect bounds);
             virtual void render(sf::RenderWindow& win);
             virtual void update(sf::Time dt);
             virtual ~collisionSystem();
