@@ -17,6 +17,7 @@ namespace ant{
             inline std::shared_ptr<AssetManager> getAssetManager(){ return this->assets; }
 
             std::unique_ptr<baseComponent> createTransform(sf::Vector2f position,sf::Vector2f scale,float rotation);
+            std::unique_ptr<baseComponent> createVelocity(sf::Vector2f velocity,float speed,float minSpeed,float maxSpeed);
             std::unique_ptr<baseComponent> createBounds(sf::FloatRect bounds);
             std::unique_ptr<baseComponent> createDestructable(sf::Vector2f position,const std::string& imageID);
             std::unique_ptr<baseComponent> createSprite(std::string id);

@@ -4,6 +4,7 @@
 #include <memory>
 #include <map>
 #include <Components/Component.hpp>
+#include <iostream>
 namespace ant{
     class Entity{
         private:
@@ -15,7 +16,13 @@ namespace ant{
             Entity(std::string name);
             Entity(std::string name,std::map<long int,std::unique_ptr<baseComponent> > Components);
             void addComponent(std::unique_ptr<baseComponent> component);
-            inline std::unique_ptr<baseComponent>& getComponent(long int mask){ return Components.at(mask); }
+            inline std::unique_ptr<baseComponent>& getComponent(long int mask){
+                 try{
+                        return Components.at(mask);
+                    }catch(std::exception& out){
+                        std::cout << out.what() << " COMPONENTE NO ENCONTRADO " << mask << std::endl;
+                    }
+                 }
             void removeComponent(long int mask);
             inline std::string getName() const { return name; }
             void setName(std::string name);

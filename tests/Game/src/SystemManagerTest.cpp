@@ -7,11 +7,11 @@ bool SystemManagerTest(){
     std::cout << "System Manager Test---------------" << std::endl;
     ant::SystemManager sm;
     for(int i=0;i<10;i++){
-    std::shared_ptr<ant::System> s(new testSystem(ComponentsMask::COMPONENT_MOVEMENT));
+    std::shared_ptr<ant::System> s(new testSystem(ComponentsMask::COMPONENT_VELOCITY));
     s->setName("testSystem");
     for(int i=0;i<3;++i){
         std::unique_ptr<ant::Entity> e1(new ant::Entity());
-        std::unique_ptr<ant::baseComponent> c1(new ant::Component<int>(ComponentsMask::COMPONENT_MOVEMENT,2));
+        std::unique_ptr<ant::baseComponent> c1(new ant::Component<int>(ComponentsMask::COMPONENT_VELOCITY,2));
         std::unique_ptr<ant::baseComponent> c2(new ant::Component<int>(ComponentsMask::COMPONENT_HORNS,2));
         e1->addComponent(std::move(c1));
         e1->addComponent(std::move(c2));

@@ -10,10 +10,10 @@ namespace ant{
         private:
             std::shared_ptr<ComponentFactory> componentFactory;
         public:
-                static const long int Ant = ComponentsMask::COMPONENT_MOVEMENT
+                static const long int Ant = ComponentsMask::COMPONENT_VELOCITY
                                | ComponentsMask::COMPONENT_SPRITE
                                | ComponentsMask::COMPONENT_TRANSFORM;
-                static const long int AntQueen = ComponentsMask::COMPONENT_MOVEMENT
+                static const long int AntQueen = ComponentsMask::COMPONENT_VELOCITY
                                     | ComponentsMask::COMPONENT_SPRITE
                                     | ComponentsMask::COMPONENT_TRANSFORM
                                     | ComponentsMask::COMPONENT_EGGS;

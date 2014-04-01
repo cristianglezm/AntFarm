@@ -66,7 +66,7 @@ bool EntityManagerTest(){
                 }
                 break;
             case 4:{
-                std::unique_ptr<ant::baseComponent> c4( new ant::Component<int>(ComponentsMask::COMPONENT_MOVEMENT,2));
+                std::unique_ptr<ant::baseComponent> c4( new ant::Component<int>(ComponentsMask::COMPONENT_VELOCITY,2));
                 e->addComponent(std::move(c4));
                 }
                 break;

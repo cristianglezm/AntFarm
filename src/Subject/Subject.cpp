@@ -8,7 +8,7 @@ namespace ant{
         Observers.push_back(o);
     }
     void Subject::removeObserver(std::shared_ptr<Observer> o){
-
+        Observers.remove(o);
     }
     void Subject::notifyObservers(std::shared_ptr<baseEvent> e){
         for(auto& o: Observers){

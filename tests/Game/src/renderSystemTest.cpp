@@ -9,11 +9,14 @@
 #include <WorldManager/WorldManager.hpp>
 #include <Utils/String.hpp>
 #include <Components/ComponentMask.hpp>
+#include <Systems/collisionSystem/collisionSystem.hpp>
+#include <Systems/movementSystem/movementSystem.hpp>
 bool renderSystemTest(){
 std::cout << "WorldManager Test -----------" << std::endl;
     std::shared_ptr<ant::EntityManager> em(new ant::EntityManager());
     std::shared_ptr<ant::EventQueue> eq(new ant::EventQueue());
     std::shared_ptr<ant::AssetManager> assets(new ant::AssetManager());
+    std::shared_ptr<ant::GameEventDispatcher> ged(new ant::GameEventDispatcher());
     assets->addTexture("Ant","datatest/image.png");
     assets->addTexture("p","datatest/image1.png");
     ant::ComponentFactory cf(assets);
@@ -24,13 +27,14 @@ std::cout << "WorldManager Test -----------" << std::endl;
         for(int j=0;j<1;++j){
             std::unique_ptr<ant::Entity> e(new ant::Entity("red"));
             e->addComponent(cf.createSprite("p"));
-            e->addComponent(cf.createTransform(sf::Vector2f(400,20),sf::Vector2f(1,50),0));
+            e->addComponent(cf.createTransform(sf::Vector2f(400,30),sf::Vector2f(50,50),0));
             em->addEntity(std::move(e));
         }
         for(int j=0;j<1;++j){
             std::unique_ptr<ant::Entity> e(new ant::Entity("black"));
             e->addComponent(cf.createSprite("Ant"));
-            e->addComponent(cf.createTransform(sf::Vector2f(400,20),sf::Vector2f(1,1),0));
+            e->addComponent(cf.createTransform(sf::Vector2f(0,0),sf::Vector2f(1,1),0));
+            e->addComponent(cf.createVelocity(sf::Vector2f(0,0),0.1,0.1,1));
             em->addEntity(std::move(e));
         }
         for(int k=0;k<1;++k){
@@ -40,11 +44,27 @@ std::cout << "WorldManager Test -----------" << std::endl;
             ts->setEventQueue(eq);
             sm->addSystem(ts);
         }
+        {
+            std::shared_ptr<ant::collisionSystem> ts(new ant::collisionSystem(ComponentsMask::COMPONENT_BOUNDS | ComponentsMask::COMPONENT_TRANSFORM,sf::FloatRect(0,0,800,600)));
+            ts->setEntityManager(em);
+            ts->setEventQueue(eq);
+            sm->addSystem(ts);
+        }
+        {
+            std::shared_ptr<ant::movementSystem> ts(new ant::movementSystem(ComponentsMask::COMPONENT_TRANSFORM | ComponentsMask::COMPONENT_VELOCITY));
+            ts->setEntityManager(em);
+            ts->setEventQueue(eq);
+            sm->addSystem(ts);
+            ged->OnCollision().addObserver(ts);
+        }
         std::unique_ptr<ant::World> w1(new ant::World(i,em,std::move(sm),eq));
         wm.addWorld(std::move(w1));
     }
     bool running=true;
     while(running){
+        while(!eq->isEmpty()){
+            ged->DispatchEvent(eq->pop());
+        }
         sf::Event event;
         while(win.pollEvent(event)){
             switch(event.type){
@@ -61,14 +81,15 @@ std::cout << "WorldManager Test -----------" << std::endl;
                     break;
             }
         }
-        wm.update(-1,sf::Time());
+        sf::Time time;
+        wm.update(0,time);
         win.clear();
         wm.render(0,win);
         win.display();
     }
     auto tmpWorld = wm.getWorld(0);
     assert(tmpWorld->getId()==0);
-    tmpWorld->update(sf::Time());
+    //tmpWorld->update(sf::Time());
     win.close();
     return true;
 }

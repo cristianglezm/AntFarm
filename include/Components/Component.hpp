@@ -2,6 +2,7 @@
 #define COMPONENT_H
 #include <tuple>
 #include <memory>
+
 namespace ant{
     /** @brief Clase base de componente.
      *  @author Cristian Gonzalez Moreno <cristian.glez.m@gmail.com>
@@ -9,13 +10,13 @@ namespace ant{
      */
     class baseComponent{
         private:
-            int id;
+            long int id;
         protected:
-            baseComponent(int id):id(id){}
+            baseComponent(long int id):id(id){}
         public:
             virtual ~baseComponent() = default;
-            void setId(int id){ this->id=id;}
-            inline int getId() const{ return id; }
+            void setId(long int id){ this->id=id;}
+            inline long int getId() const{ return id; }
             template<typename...T>
             std::tuple<T...>& getProperties();
             template<typename...T>
@@ -30,7 +31,7 @@ namespace ant{
         private:
             std::tuple<T...> properties;
         public:
-            Component(int id,T...data): baseComponent{id}, properties{std::move(data)...} {}
+            Component(long int id,T...data): baseComponent{id}, properties{std::move(data)...} {}
             inline std::tuple<T...>& getProperties(){ return properties; }
     };
     template<typename...T>

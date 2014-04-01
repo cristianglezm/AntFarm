@@ -2,7 +2,10 @@
 #define COLLISION_SYSTEM_H
 #include <Systems/System.hpp>
 #include <Utils/Quadtree.hpp>
+#include <SFML/System/Vector2.hpp>
 #include <SFML/Graphics/Rect.hpp>
+#include <Components/ComponentMask.hpp>
+#include <Event/EventType.hpp>
 
 namespace ant{
     class collisionSystem : public System{

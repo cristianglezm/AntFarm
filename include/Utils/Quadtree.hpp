@@ -22,12 +22,13 @@ namespace ant{
                 void split();
                 int getIndex(Entity* e);
             public:
+                typedef std::list<Entity*> list;
                 Quadtree(int level);
                 Quadtree(int level,sf::FloatRect bounds);
                 Quadtree(sf::FloatRect bounds);
                 void insert(Entity* e);
                 void clear();
-                std::list<Entity*> retrieve(std::list<Entity*>* entities,Entity* e);
+                std::list<Entity*> retrieve(std::list<Entity*>& entities,Entity* e);
                 void render(sf::RenderWindow& win);
                 ~Quadtree();
         };

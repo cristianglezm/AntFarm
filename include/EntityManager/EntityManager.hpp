@@ -10,6 +10,7 @@ namespace ant{
             std::list<std::unique_ptr<Entity> > entities;
         public:
             typedef std::list<std::unique_ptr<Entity>>::iterator iterator;
+            typedef std::list<std::unique_ptr<Entity>> list;
             EntityManager();
             void addEntity(std::unique_ptr<Entity> e);
             void removeEntity(std::unique_ptr<Entity>& e);

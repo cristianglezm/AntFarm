@@ -2,6 +2,8 @@
 #define MOVEMENT_SYSTEM_H
 #include <Systems/System.hpp>
 #include <Observer/Observer.hpp>
+#include <Event/EventType.hpp>
+#include <Components/ComponentMask.hpp>
 
 namespace ant{
     class movementSystem : public System, public Observer{

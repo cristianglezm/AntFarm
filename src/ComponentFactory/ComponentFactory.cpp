@@ -7,14 +7,17 @@ namespace ant{
                 std::unique_ptr<sf::VertexArray> destructible(new sf::VertexArray(sf::Points,xWidth*yHeight));
                 for(int x=0;x<xWidth;++x){
                     for(int y=0;y<yHeight;++y){
-                        (*destructible)[xWidth*x+y].color = img.getPixel(x,y);
+                        (*destructible)[yHeight*x+y].color = img.getPixel(x,y);
+                        (*destructible)[yHeight*x+y].position = sf::Vector2f(x,y);
                     }
                 }
-                xWidth += position.x;
-                yHeight += position.y;
-                for(int x=position.x;x<xWidth;++x){
-                    for(int y=position.y;y<yHeight;++y){
-                        (*destructible)[xWidth*x+y].position = sf::Vector2f(x,y);
+                if(position.x != 0 && position.y != 0){
+                    xWidth += position.x;
+                    yHeight += position.y;
+                    for(int x=position.x;x<xWidth;++x){
+                        for(int y=position.y;y<yHeight;++y){
+                            (*destructible)[(yHeight-position.y)*(x-position.x)+(y-position.y)].position = sf::Vector2f(x,y);
+                        }
                     }
                 }
                 return std::move(destructible);
@@ -31,6 +34,11 @@ namespace ant{
             std::unique_ptr<baseComponent> ComponentFactory::createTransform(sf::Vector2f position,sf::Vector2f scale,float rotation){
                 std::unique_ptr<baseComponent> c(new Component<sf::Vector2f,sf::Vector2f,float>(ComponentsMask::COMPONENT_TRANSFORM,
                                                                                               position,scale,rotation));
+                return std::move(c);
+            }
+            std::unique_ptr<baseComponent> ComponentFactory::createVelocity(sf::Vector2f velocity,float speed,float minSpeed,float maxSpeed){
+                std::unique_ptr<baseComponent> c(new Component<sf::Vector2f,float,float,float>(ComponentsMask::COMPONENT_VELOCITY,
+                                                                                               velocity,speed,minSpeed,maxSpeed));
                 return std::move(c);
             }
             std::unique_ptr<baseComponent> ComponentFactory::createBounds(sf::FloatRect bounds){

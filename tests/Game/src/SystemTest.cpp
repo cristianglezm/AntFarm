@@ -21,7 +21,7 @@
 bool SystemTest(){
     std::shared_ptr<ant::EventQueue> eq(new ant::EventQueue());
     std::cout << "System Test------------------------"<< std::endl;
-    testSystem s(ComponentsMask::COMPONENT_HORNS | ComponentsMask::COMPONENT_MOVEMENT);
+    testSystem s(ComponentsMask::COMPONENT_HORNS | ComponentsMask::COMPONENT_VELOCITY);
     s.setEventQueue(eq);
     std::cout << "Required Components: " << s.getRequiredComponts() << std::endl;
     std::cout << "Creamos entityManager y agregamos al sistema. " << std::endl;
@@ -30,7 +30,7 @@ bool SystemTest(){
     std::cout << "Creamos y agregamos entidades: " << std::endl;
     for(int i=0;i<3;++i){
         std::unique_ptr<ant::Entity> e1(new ant::Entity());
-        std::unique_ptr<ant::baseComponent> c1(new ant::Component<int>(ComponentsMask::COMPONENT_MOVEMENT,2));
+        std::unique_ptr<ant::baseComponent> c1(new ant::Component<int>(ComponentsMask::COMPONENT_VELOCITY,2));
         std::unique_ptr<ant::baseComponent> c2(new ant::Component<int>(ComponentsMask::COMPONENT_HORNS,2));
         e1->addComponent(std::move(c1));
         e1->addComponent(std::move(c2));

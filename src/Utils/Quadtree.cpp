@@ -99,15 +99,15 @@ namespace ant{
                 }
             }
         }
-        std::list<Entity*> Quadtree::retrieve(std::list<Entity*>* entities,Entity* e){
+        std::list<Entity*> Quadtree::retrieve(std::list<Entity*>& entities,Entity* e){
                int index = this->getIndex(e);
-               entities->sort();
+               entities.sort();
                this->entities.sort();
                if (index != -1 && nodes[0] != nullptr) {
                  nodes[index]->retrieve(entities, e);
                }
-               entities->merge(this->entities);
-               return *entities;
+               entities.merge(this->entities);
+               return entities;
         }
         void Quadtree::render(sf::RenderWindow& win){
             for(int i=0;i<nodes.size();++i){

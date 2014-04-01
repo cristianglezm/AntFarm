@@ -38,7 +38,22 @@ collisionSystem		-
 QuadTree		- Done
 gravitySystem		-
 diggingSystem		-
+		Map
+		Width
+		Height
+		update
+			pasa las nuevas cordenadas si la hormiga esta llevando tierra-> actualiza esta.
+		render
+			si la hormiga tiene tierra -> dibuja el vertexarray
 inputSystem		-
+	Eventos
+			Selection
+				ej: Envia coordenadas x,y del primer click y las del release
+				    calcula el rectangulo, las entidades que tengan componente
+				    select y esten dentro se les activa.
+			Ordenes
+				ej: las ordenes son event<int(SEARCH_FOOD)>(TIPO(ORDER));
+				    las que esten seleccionadas se les activa el input de SEARCH FOOD
 transportSystem		-
 userTransportSystem	-
 ParticleSystem		-
@@ -49,3 +64,4 @@ Config			-
 	agregar cosas cuando se necesiten
 SystemManager		-
 SystemFactory		-
+-----------------------------------------------------

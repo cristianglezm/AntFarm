@@ -36,7 +36,7 @@ bool WorldManagerTest(){
                     }
                     break;
                 case 4:{
-                    std::unique_ptr<ant::baseComponent> c4( new ant::Component<int>(ComponentsMask::COMPONENT_MOVEMENT,2));
+                    std::unique_ptr<ant::baseComponent> c4( new ant::Component<int>(ComponentsMask::COMPONENT_VELOCITY,2));
                     e->addComponent(std::move(c4));
                     }
                     break;
@@ -54,7 +54,7 @@ bool WorldManagerTest(){
         em->addEntity(std::move(e));
         }
         for(int k=0;k<1;++k){
-            std::shared_ptr<testSystem> ts(new testSystem(ComponentsMask::COMPONENT_HORNS | ComponentsMask::COMPONENT_MOVEMENT));
+            std::shared_ptr<testSystem> ts(new testSystem(ComponentsMask::COMPONENT_HORNS | ComponentsMask::COMPONENT_VELOCITY));
             ts->setName("test-" + ant::Utils::toString(k));
             ts->setEntityManager(em);
             ts->setEventQueue(eq);

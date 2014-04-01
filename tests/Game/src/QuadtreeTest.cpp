@@ -15,7 +15,7 @@ bool QuadtreeTest(){
     std::cout << "Insertando Entidades..." << std::endl;
     for(int i=0;i<10;++i){
         std::unique_ptr<ant::Entity> e1(new ant::Entity("Test" + ant::Utils::toString(i)));
-        std::unique_ptr<ant::baseComponent> c1(new ant::Component<sf::FloatRect>(ComponentsMask::COMPONENT_TRANSFORM,sf::FloatRect(-i,i,20,20)));
+        std::unique_ptr<ant::baseComponent> c1(new ant::Component<sf::FloatRect>(ComponentsMask::COMPONENT_BOUNDS,sf::FloatRect(-i,i,20,20)));
         e1->addComponent(std::move(c1));
         em.addEntity(std::move(e1));
     }
@@ -28,11 +28,11 @@ bool QuadtreeTest(){
     std::list<ant::Entity*> entities;
     for(auto& entity:em.getEntities()){
             entities.clear();
-        qtree.retrieve(&entities,entity.get());
+        qtree.retrieve(entities,entity.get());
         for(auto entity1:entities){
-            auto& properties = entity->getComponent(ComponentsMask::COMPONENT_TRANSFORM)->getProperties<sf::FloatRect>();
+            auto& properties = entity->getComponent(ComponentsMask::COMPONENT_BOUNDS)->getProperties<sf::FloatRect>();
             sf::FloatRect eBounds = std::get<0>(properties);
-            auto& properties1 = entity1->getComponent(ComponentsMask::COMPONENT_TRANSFORM)->getProperties<sf::FloatRect>();
+            auto& properties1 = entity1->getComponent(ComponentsMask::COMPONENT_BOUNDS)->getProperties<sf::FloatRect>();
             sf::FloatRect eBounds1 = std::get<0>(properties1);
             if(eBounds.intersects(eBounds1)){
                 std::cout << "Entity 1 and Entity 2 Collide" << std::endl;
