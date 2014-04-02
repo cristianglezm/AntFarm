@@ -17,6 +17,10 @@ namespace ant{
                     win.draw(*spr);
                 }
             }
+            if((entity->getMask() & ComponentsMask::COMPONENT_DESTRUCTABLE) == ComponentsMask::COMPONENT_DESTRUCTABLE){
+                auto& destructable = entity->getComponent(ComponentsMask::COMPONENT_DESTRUCTABLE)->getProperties<std::unique_ptr<sf::VertexArray>>();
+                win.draw(*std::get<0>(destructable));
+            }
         }
     }
     void renderSystem::update(sf::Time dt){

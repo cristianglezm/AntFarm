@@ -19,6 +19,7 @@ std::cout << "WorldManager Test -----------" << std::endl;
     std::shared_ptr<ant::GameEventDispatcher> ged(new ant::GameEventDispatcher());
     assets->addTexture("Ant","datatest/image.png");
     assets->addTexture("p","datatest/image1.png");
+    assets->addImage("p","datatest/image1.png");
     ant::ComponentFactory cf(assets);
     sf::RenderWindow win(sf::VideoMode(800,600),"TEST RenderSystem");
     ant::WorldManager wm;
@@ -26,16 +27,17 @@ std::cout << "WorldManager Test -----------" << std::endl;
         std::unique_ptr<ant::SystemManager> sm(new ant::SystemManager());
         for(int j=0;j<1;++j){
             std::unique_ptr<ant::Entity> e(new ant::Entity("red"));
-            e->addComponent(cf.createSprite("p"));
-            e->addComponent(cf.createTransform(sf::Vector2f(400,30),sf::Vector2f(50,50),0));
-            e->addComponent(cf.createBounds(sf::FloatRect(400,30,50,50)));
+            //e->addComponent(cf.createSprite("p"));
+            //e->addComponent(cf.createTransform(sf::Vector2f(400,30),sf::Vector2f(50,50),0));
+            //e->addComponent(cf.createBounds(sf::FloatRect(400,30,50*10,50*10)));
+            e->addComponent(cf.createDestructable(sf::Vector2f(600,30),"p"));
             em->addEntity(std::move(e));
         }
-        for(int j=0;j<1;++j){
+        for(int j=0;j<10;++j){
             std::unique_ptr<ant::Entity> e(new ant::Entity("black"));
             e->addComponent(cf.createSprite("Ant"));
-            e->addComponent(cf.createTransform(sf::Vector2f(0,0),sf::Vector2f(1,1),45));
-            e->addComponent(cf.createBounds(sf::FloatRect(0,0,1,1)));
+            e->addComponent(cf.createTransform(sf::Vector2f(8,j),sf::Vector2f(1,1),j));
+            e->addComponent(cf.createBounds(sf::FloatRect(8,j,2,2)));
             e->addComponent(cf.createVelocity(sf::Vector2f(0,0),0.1,0.1,1));
             em->addEntity(std::move(e));
         }
@@ -77,6 +79,8 @@ std::cout << "WorldManager Test -----------" << std::endl;
                         auto& properties = em->getEntity("black")->getComponent(ComponentsMask::COMPONENT_TRANSFORM)->getProperties<sf::Vector2f,sf::Vector2f,float>();
                         auto& pos = std::get<0>(properties);
                         auto& rotation = std::get<2>(properties);
+                        auto& properties1 = em->getEntity("black")->getComponent(ComponentsMask::COMPONENT_VELOCITY)->getProperties<sf::Vector2f,float,float,float>();
+                        std::get<1>(properties1) +=0.1;
                         rotation +=1;
                         auto mousePos = sf::Mouse::getPosition(win);
                         pos = (sf::Vector2f)mousePos;

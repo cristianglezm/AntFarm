@@ -4,7 +4,7 @@
 #include <Observer/Observer.hpp>
 #include <Event/EventType.hpp>
 #include <Components/ComponentMask.hpp>
-#include <cmath>
+#include <Utils/Math.hpp>
 namespace ant{
     class movementSystem : public System, public Observer{
         private:
