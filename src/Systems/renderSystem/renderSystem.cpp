@@ -1,6 +1,9 @@
 #include <Systems/renderSystem/renderSystem.hpp>
 namespace ant{
-    renderSystem::renderSystem(long int req): System(req){}
+    renderSystem::renderSystem(){
+        name = "renderSystem";
+        RequiredComponents = ComponentsMask::COMPONENT_SPRITE | ComponentsMask::COMPONENT_TRANSFORM;
+    }
     void renderSystem::render(sf::RenderWindow& win){
         for(auto& entity: this->em->getEntities()){
             if((entity->getMask() & RequiredComponents)==RequiredComponents){

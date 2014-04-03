@@ -7,14 +7,17 @@ namespace ant{
     }
     void collisionSystem::render(sf::RenderWindow& win){
         return;
+        //qtree.render(win);
     }
     void collisionSystem::update(sf::Time dt){
         qtree.clear();
         for(auto& entity: em->getEntities()){
             if((entity->getMask() & RequiredComponents) == RequiredComponents){
-                auto& cBounds = entity->getComponent(ComponentsMask::COMPONENT_BOUNDS)->getProperties<sf::FloatRect>();
+                auto& cBounds = entity->getComponent(ComponentsMask::COMPONENT_BOUNDS)
+                                ->getProperties<sf::FloatRect>();
                 auto& bounds = std::get<0>(cBounds);
-                auto& cTransf = entity->getComponent(ComponentsMask::COMPONENT_TRANSFORM)->getProperties<sf::Vector2f,sf::Vector2f,float>();
+                auto& cTransf = entity->getComponent(ComponentsMask::COMPONENT_TRANSFORM)
+                                ->getProperties<sf::Vector2f,sf::Vector2f,float>();
                 auto& pos = std::get<0>(cTransf);
                 bounds.left = pos.x;
                 bounds.top = pos.y;
@@ -27,12 +30,17 @@ namespace ant{
             if((entity1->getMask() & RequiredComponents) == RequiredComponents){
                 qtree.retrieve(entities,entity1.get());
                 for(auto entity2:entities){
-                    auto& properties1 = entity1->getComponent(ComponentsMask::COMPONENT_BOUNDS)->getProperties<sf::FloatRect>();
-                    sf::FloatRect eBounds1 = std::get<0>(properties1);
-                    auto& properties2 = entity2->getComponent(ComponentsMask::COMPONENT_BOUNDS)->getProperties<sf::FloatRect>();
-                    sf::FloatRect eBounds2 = std::get<0>(properties2);
-                    if(eBounds1.intersects(eBounds2)){
-                        eventQueue->push(std::shared_ptr<baseEvent>(new Event<Entity*,Entity*>(EventType::COLLISION_EVENT,entity1.get(),entity2)));
+                    if(entity1.get()!=entity2){
+                        auto& properties1 = entity1->getComponent(ComponentsMask::COMPONENT_BOUNDS)
+                                            ->getProperties<sf::FloatRect>();
+                        auto& eBounds1 = std::get<0>(properties1);
+                        auto& properties2 = entity2->getComponent(ComponentsMask::COMPONENT_BOUNDS)
+                                            ->getProperties<sf::FloatRect>();
+                        auto& eBounds2 = std::get<0>(properties2);
+                        if(eBounds1.intersects(eBounds2)){
+                            eventQueue->push(std::shared_ptr<baseEvent>(new Event<Entity*,Entity*>(
+                                                EventType::COLLISION_EVENT,entity1.get(),entity2)));
+                        }
                     }
                 }
             }

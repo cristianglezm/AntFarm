@@ -34,7 +34,9 @@ WorldFactory		-
 System			- Done
 renderSystem		- Done
 movementSystem		-
+	implementar Evento Collision por pixel.
 collisionSystem		-
+	Implementar colision por pixel.
 QuadTree		- Done
 gravitySystem		-
 diggingSystem		-
@@ -45,6 +47,8 @@ diggingSystem		-
 			pasa las nuevas cordenadas si la hormiga esta llevando tierra-> actualiza esta.
 		render
 			si la hormiga tiene tierra -> dibuja el vertexarray
+IASystem		-
+	Respondera a las ordenes puestas por input system.
 inputSystem		-
 	Eventos
 			Selection
@@ -56,9 +60,9 @@ inputSystem		-
 				    las que esten seleccionadas se les activa el input de SEARCH FOOD
 transportSystem		-
 userTransportSystem	-
-ParticleSystem		-
 Level			-
 AssetManager		-
+	Implementar mas assets
 Game			-
 Config			-
 	agregar cosas cuando se necesiten

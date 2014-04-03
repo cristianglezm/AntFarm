@@ -10,7 +10,7 @@ namespace ant{
     class renderSystem : public System{
         private:
         public:
-            renderSystem(long int req);
+            renderSystem();
             virtual void render(sf::RenderWindow& win);
             virtual void update(sf::Time dt);
             ~renderSystem();

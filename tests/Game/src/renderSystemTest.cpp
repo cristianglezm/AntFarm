@@ -12,7 +12,7 @@
 #include <Systems/collisionSystem/collisionSystem.hpp>
 #include <Systems/movementSystem/movementSystem.hpp>
 bool renderSystemTest(){
-std::cout << "WorldManager Test -----------" << std::endl;
+std::cout << "renderSystemTest Test -----------" << std::endl;
     std::shared_ptr<ant::EntityManager> em(new ant::EntityManager());
     std::shared_ptr<ant::EventQueue> eq(new ant::EventQueue());
     std::shared_ptr<ant::AssetManager> assets(new ant::AssetManager());
@@ -28,21 +28,21 @@ std::cout << "WorldManager Test -----------" << std::endl;
         for(int j=0;j<1;++j){
             std::unique_ptr<ant::Entity> e(new ant::Entity("red"));
             //e->addComponent(cf.createSprite("p"));
-            //e->addComponent(cf.createTransform(sf::Vector2f(400,30),sf::Vector2f(50,50),0));
-            //e->addComponent(cf.createBounds(sf::FloatRect(400,30,50*10,50*10)));
-            e->addComponent(cf.createDestructable(sf::Vector2f(600,30),"p"));
+            e->addComponent(cf.createTransform(sf::Vector2f(100,360),sf::Vector2f(1,1),0));
+            e->addComponent(cf.createBounds(sf::FloatRect(100,360,50,50)));
+            e->addComponent(cf.createDestructable(sf::Vector2f(100,360),"p"));
             em->addEntity(std::move(e));
         }
-        for(int j=0;j<10;++j){
-            std::unique_ptr<ant::Entity> e(new ant::Entity("black"));
+        for(int j=0;j<6;++j){
+            std::unique_ptr<ant::Entity> e(new ant::Entity("black"+ant::Utils::toString(j)));
             e->addComponent(cf.createSprite("Ant"));
-            e->addComponent(cf.createTransform(sf::Vector2f(8,j),sf::Vector2f(1,1),j));
-            e->addComponent(cf.createBounds(sf::FloatRect(8,j,2,2)));
-            e->addComponent(cf.createVelocity(sf::Vector2f(0,0),0.1,0.1,1));
+            e->addComponent(cf.createTransform(sf::Vector2f(1,j+90*j),sf::Vector2f(1,1),45));
+            e->addComponent(cf.createBounds(sf::FloatRect(0,0,150,100)));
+            e->addComponent(cf.createVelocity(sf::Vector2f(0,0),0.06,0.1,1));
             em->addEntity(std::move(e));
         }
         {
-            std::shared_ptr<ant::renderSystem> ts(new ant::renderSystem(ComponentsMask::COMPONENT_SPRITE | ComponentsMask::COMPONENT_TRANSFORM));
+            std::shared_ptr<ant::renderSystem> ts(new ant::renderSystem());
             ts->setEntityManager(em);
             ts->setEventQueue(eq);
             sm->addSystem(ts);
@@ -76,10 +76,10 @@ std::cout << "WorldManager Test -----------" << std::endl;
                     break;
                 case sf::Event::MouseButtonPressed:
                     if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
-                        auto& properties = em->getEntity("black")->getComponent(ComponentsMask::COMPONENT_TRANSFORM)->getProperties<sf::Vector2f,sf::Vector2f,float>();
+                        auto& properties = em->getEntity("black0")->getComponent(ComponentsMask::COMPONENT_TRANSFORM)->getProperties<sf::Vector2f,sf::Vector2f,float>();
                         auto& pos = std::get<0>(properties);
                         auto& rotation = std::get<2>(properties);
-                        auto& properties1 = em->getEntity("black")->getComponent(ComponentsMask::COMPONENT_VELOCITY)->getProperties<sf::Vector2f,float,float,float>();
+                        auto& properties1 = em->getEntity("black0")->getComponent(ComponentsMask::COMPONENT_VELOCITY)->getProperties<sf::Vector2f,float,float,float>();
                         std::get<1>(properties1) +=0.1;
                         rotation +=1;
                         auto mousePos = sf::Mouse::getPosition(win);
