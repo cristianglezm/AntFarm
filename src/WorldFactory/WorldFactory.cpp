@@ -2,9 +2,9 @@
 
 namespace ant{
     WorldFactory::WorldFactory(): nestId(0),battlefieldId(0){
-    gameEventDispatcher.reset(new GameEventDispatcher());
-    eventQueue.reset(new EventQueue());
-    entityFactory.reset(new EntityFactory());
+        gameEventDispatcher.reset(new GameEventDispatcher());
+        eventQueue.reset(new EventQueue());
+        entityFactory.reset(new EntityFactory());
     }
     WorldFactory::WorldFactory(std::shared_ptr<GameEventDispatcher> ged,std::shared_ptr<EventQueue> eq){
         nestId = 0;
@@ -15,7 +15,8 @@ namespace ant{
     }
     std::unique_ptr<World> WorldFactory::createNest(){
         std::unique_ptr<World> w(new World(nestId));
-
+        auto em = w->getEntityManager();
+        em->addEntity(entityFactory->createEntity(EntityFactory::Ant));
         ++nestId;
         return std::move(w);
     }

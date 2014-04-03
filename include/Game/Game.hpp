@@ -6,6 +6,7 @@ namespace ant{
     class Game{
         private:
             std::shared_ptr<EventQueue> eventQueue;
+            std::shared_ptr<GameEventDispatcher> gameEventDispatcher;
             std::shared_ptr<Level> level;
         public:
             Game();

@@ -4,6 +4,7 @@ namespace ant{
         battlefields.reset(new WorldManager());
         nests.reset(new WorldManager());
         eventQueue.reset(new EventQueue());
+        gameEventDispatcher.reset(new GameEventDispatcher());
         worldFactory.reset(new WorldFactory(ged,eventQueue));
         init();
     }
@@ -16,6 +17,7 @@ namespace ant{
     void Level::setEventQueue(std::shared_ptr<EventQueue> eq){
         eventQueue = eq;
         worldFactory->setEventQueue(eventQueue);
+        worldFactory->setGameEventDispatcher(gameEventDispatcher);
     }
     void Level::setWorldFactory(std::shared_ptr<WorldFactory> wf){
         worldFactory = wf;

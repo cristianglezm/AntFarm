@@ -29,15 +29,15 @@ std::cout << "renderSystemTest Test -----------" << std::endl;
             std::unique_ptr<ant::Entity> e(new ant::Entity("red"));
             //e->addComponent(cf.createSprite("p"));
             e->addComponent(cf.createTransform(sf::Vector2f(100,360),sf::Vector2f(1,1),0));
-            e->addComponent(cf.createBounds(sf::FloatRect(100,360,50,50)));
+            e->addComponent(cf.createBounds(sf::FloatRect(0,0,50,50)));
             e->addComponent(cf.createDestructable(sf::Vector2f(100,360),"p"));
             em->addEntity(std::move(e));
         }
         for(int j=0;j<6;++j){
             std::unique_ptr<ant::Entity> e(new ant::Entity("black"+ant::Utils::toString(j)));
             e->addComponent(cf.createSprite("Ant"));
-            e->addComponent(cf.createTransform(sf::Vector2f(1,j+90*j),sf::Vector2f(1,1),45));
-            e->addComponent(cf.createBounds(sf::FloatRect(0,0,150,100)));
+            e->addComponent(cf.createTransform(sf::Vector2f(1,50*j),sf::Vector2f(1,1),45));
+            e->addComponent(cf.createBounds(sf::FloatRect(0,0,50,50)));
             e->addComponent(cf.createVelocity(sf::Vector2f(0,0),0.06,0.1,1));
             em->addEntity(std::move(e));
         }
@@ -64,6 +64,8 @@ std::cout << "renderSystemTest Test -----------" << std::endl;
         wm.addWorld(std::move(w1));
     }
     bool running=true;
+    auto& prop = em->getEntity("black0")->getComponent(ComponentsMask::COMPONENT_BOUNDS)->getProperties<sf::FloatRect>();
+    auto& bounds = std::get<0>(prop);
     while(running){
         while(!eq->isEmpty()){
             ged->DispatchEvent(eq->pop());
@@ -91,6 +93,10 @@ std::cout << "renderSystemTest Test -----------" << std::endl;
         sf::Time time;
         wm.update(0,time);
         win.clear();
+        sf::RectangleShape rectShape;
+            rectShape.setPosition(bounds.left,bounds.top);
+            rectShape.setSize(sf::Vector2f(bounds.width,bounds.height));
+        win.draw(rectShape);
         wm.render(0,win);
         win.display();
     }

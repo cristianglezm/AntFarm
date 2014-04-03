@@ -22,8 +22,8 @@ namespace ant{
                 static const long int Battlefield = ComponentsMask::COMPONENT_SPRITE;
             EntityFactory();
             EntityFactory(std::string json_filename);
-            void createEntity(long int mask);
-            void createEntity(long int mask, ComponentSettings& cs);
+            std::unique_ptr<Entity> createEntity(long int mask);
+            std::unique_ptr<Entity> createEntity(long int mask, ComponentSettings& cs);
             void setComponentFactory(std::shared_ptr<ComponentFactory> cf);
             inline std::shared_ptr<ComponentFactory> getComponentFactory(){ return this->componentFactory; }
             ~EntityFactory();

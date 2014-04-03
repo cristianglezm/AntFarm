@@ -7,7 +7,7 @@ namespace ant{
     EntityFactory::EntityFactory(std::string json_filename){
 
     }
-    void EntityFactory::createEntity(long int mask){
+    std::unique_ptr<Entity> EntityFactory::createEntity(long int mask){
         std::unique_ptr<Entity> e(new Entity());
         //ComponentSettings cs;
         switch(mask){
@@ -24,9 +24,11 @@ namespace ant{
         if((mask & ComponentsMask::COMPONENT_SPRITE) == ComponentsMask::COMPONENT_SPRITE){
 
         }
+        return std::move(e);
     }
-    void EntityFactory::createEntity(long int mask, ComponentSettings& cs){
-
+    std::unique_ptr<Entity> EntityFactory::createEntity(long int mask, ComponentSettings& cs){
+        std::unique_ptr<Entity> e(new Entity());
+        return std::move(e);
     }
     void EntityFactory::setComponentFactory(std::shared_ptr<ComponentFactory> cf){
         this->componentFactory = cf;

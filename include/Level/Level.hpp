@@ -13,8 +13,8 @@ namespace ant{
             std::shared_ptr<WorldManager> battlefields;
             std::shared_ptr<WorldManager> nests;
             std::shared_ptr<EventQueue> eventQueue;
+            std::shared_ptr<GameEventDispatcher> gameEventDispatcher;
             std::shared_ptr<WorldFactory> worldFactory;
-
         public:
             static const long int BATTLEFIELD = 0;
             static const long int NEST = 1;
