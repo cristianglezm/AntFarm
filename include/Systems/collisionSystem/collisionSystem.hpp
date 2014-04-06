@@ -6,7 +6,7 @@
 #include <SFML/Graphics/Rect.hpp>
 #include <Components/ComponentMask.hpp>
 #include <Event/EventType.hpp>
-
+#include <Utils/Math.hpp>
 namespace ant{
     class collisionSystem : public System{
         private:

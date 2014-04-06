@@ -27,7 +27,7 @@ std::cout << "renderSystemTest Test -----------" << std::endl;
         std::unique_ptr<ant::SystemManager> sm(new ant::SystemManager());
         for(int j=0;j<1;++j){
             std::unique_ptr<ant::Entity> e(new ant::Entity("red"));
-            //e->addComponent(cf.createSprite("p"));
+            e->addComponent(cf.createSprite("p"));
             e->addComponent(cf.createTransform(sf::Vector2f(100,360),sf::Vector2f(1,1),0));
             e->addComponent(cf.createBounds(sf::FloatRect(0,0,50,50)));
             e->addComponent(cf.createDestructable(sf::Vector2f(100,360),"p"));
@@ -36,7 +36,7 @@ std::cout << "renderSystemTest Test -----------" << std::endl;
         for(int j=0;j<6;++j){
             std::unique_ptr<ant::Entity> e(new ant::Entity("black"+ant::Utils::toString(j)));
             e->addComponent(cf.createSprite("Ant"));
-            e->addComponent(cf.createTransform(sf::Vector2f(1,50*j),sf::Vector2f(1,1),45));
+            e->addComponent(cf.createTransform(sf::Vector2f(100,50*j),sf::Vector2f(1,1),45));
             e->addComponent(cf.createBounds(sf::FloatRect(0,0,50,50)));
             e->addComponent(cf.createVelocity(sf::Vector2f(0,0),0.06,0.1,1));
             em->addEntity(std::move(e));
@@ -90,6 +90,7 @@ std::cout << "renderSystemTest Test -----------" << std::endl;
                     break;
             }
         }
+
         sf::Time time;
         wm.update(0,time);
         win.clear();

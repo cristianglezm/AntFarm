@@ -4,13 +4,14 @@
 #include <EventQueue/EventQueue.hpp>
 #include <GameEventDispatcher/GameEventDispatcher.hpp>
 #include <EntityFactory/EntityFactory.hpp>
-
+#include <SystemFactory/SystemFactory.hpp>
 namespace ant{
     class WorldFactory{
         private:
             long int nestId;
             long int battlefieldId;
             std::shared_ptr<EntityFactory> entityFactory;
+            std::shared_ptr<SystemFactory> systemFactory;
             std::shared_ptr<EventQueue> eventQueue;
             std::shared_ptr<GameEventDispatcher> gameEventDispatcher;
         public:

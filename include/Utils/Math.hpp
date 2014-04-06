@@ -1,7 +1,7 @@
 #ifndef UTILS_MATH_H
 #define UTILS_MATH_H
 #include <cmath>
-
+#include <SFML/Graphics/Rect.hpp>
 namespace ant{
     namespace Utils{
         const double PI = 3.14159265358979;
@@ -13,6 +13,7 @@ namespace ant{
         inline T toDegrees(T radians){
            return (T)(radians * (180 / PI));
         }
+        sf::FloatRect rotateRect(const sf::FloatRect& rect,const float& angle);
     }
 }
 #endif // UTILS_MATH_H

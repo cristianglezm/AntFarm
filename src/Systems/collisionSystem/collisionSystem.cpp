@@ -21,6 +21,9 @@ namespace ant{
                 auto& pos = std::get<0>(cTransf);
                 bounds.left = pos.x;
                 bounds.top = pos.y;
+                auto& rotation = std::get<2>(cTransf);
+                ///  FIXME rotation of boundingbox
+                bounds = Utils::rotateRect(bounds,rotation);
                 qtree.insert(entity.get());
             }
         }

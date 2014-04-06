@@ -8,6 +8,8 @@ namespace ant{
             std::shared_ptr<EventQueue> eventQueue;
             std::shared_ptr<GameEventDispatcher> gameEventDispatcher;
             std::shared_ptr<Level> level;
+            sf::RenderWindow win;
+            bool running;
         public:
             Game();
             void run();

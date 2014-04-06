@@ -5,6 +5,7 @@ namespace ant{
         gameEventDispatcher.reset(new GameEventDispatcher());
         eventQueue.reset(new EventQueue());
         entityFactory.reset(new EntityFactory());
+        systemFactory.reset(new SystemFactory(gameEventDispatcher,eventQueue));
     }
     WorldFactory::WorldFactory(std::shared_ptr<GameEventDispatcher> ged,std::shared_ptr<EventQueue> eq){
         nestId = 0;
@@ -12,11 +13,15 @@ namespace ant{
         entityFactory.reset(new EntityFactory());
         gameEventDispatcher = ged;
         eventQueue = eq;
+        systemFactory.reset(new SystemFactory(gameEventDispatcher,eventQueue));
     }
     std::unique_ptr<World> WorldFactory::createNest(){
         std::unique_ptr<World> w(new World(nestId));
         auto em = w->getEntityManager();
-        em->addEntity(entityFactory->createEntity(EntityFactory::Ant));
+        auto sm = w->getSystemManager();
+        //sm->addSystem(systemFactory->createCollisionSystem());
+        sm->addSystem(systemFactory->createRenderSystem());
+        em->addEntity(entityFactory->createEntity(EntityFactory::Nest));
         ++nestId;
         return std::move(w);
     }

@@ -1,18 +1,20 @@
 #include <Level/Level.hpp>
 namespace ant{
-    Level::Level(std::shared_ptr<GameEventDispatcher> ged){
+    Level::Level(const std::string& assetsFilename,std::shared_ptr<GameEventDispatcher> ged){
         battlefields.reset(new WorldManager());
         nests.reset(new WorldManager());
         eventQueue.reset(new EventQueue());
-        gameEventDispatcher.reset(new GameEventDispatcher());
+        gameEventDispatcher = ged;
         worldFactory.reset(new WorldFactory(ged,eventQueue));
+        /// TODO cargar assets
         init();
     }
     void Level::init(){
-
+        /// TODO crear mundos iniciales, etc.
+        nests->addWorld(worldFactory->createNest());
     }
     bool Level::loadLevel(const std::string& filename){
-
+        return false;
     }
     void Level::setEventQueue(std::shared_ptr<EventQueue> eq){
         eventQueue = eq;

@@ -1,0 +1,6 @@
+ISSUES
+===
+
+El componente de BOUNDS no rota si la entidad esta rotada
+es necesario que rote con la entidad para poder aplicar
+el test de colision adecuadamente.
