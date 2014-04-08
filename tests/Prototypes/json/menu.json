@@ -1,6 +1,5 @@
 {
-    "Textures": {
-        "pairs": [
+    "Textures": [
             {
                 "id": "Ant",
                 "filename": "datatest/image.png"
@@ -10,5 +9,4 @@
                 "filename": "datatest/image.png"
             }
         ]
-    }
 }

@@ -1,7 +1,6 @@
 TODO
 ===
 
-Elegir libreria JSON para cargar los archivos de configuracion.
 Completar CMake para crear el proyecto automaticamente.
 Poner licencia.
 Crear documentacion adecuada, en codigo, documento tecnico, etc.
