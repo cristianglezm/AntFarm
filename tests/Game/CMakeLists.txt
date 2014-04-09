@@ -1,21 +1,21 @@
 cmake_minimum_required(VERSION 2.8)
 
-project(AntFarm)
+project(AntFarm_UnitTest)
 
 # Set the include directory
-INCLUDE_DIRECTORIES("${CMAKE_SOURCE_DIR}/include")
+INCLUDE_DIRECTORIES("${CMAKE_SOURCE_DIR}../../include" "${CMAKE_SOURCE_DIR}/include")
 
 # Set the cmake search paths
 SET(CMAKE_INCLUDE_PATH ${CMAKE_SOURCE_DIR})
 
 # Set the directory of Find<Library>.cmake modules
-SET(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/modules")
+SET(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}../../modules")
 
 # find all source files in the src directory
-FILE(GLOB_RECURSE AntFarm_SOURCES "src/*.cpp" "src/*")
+FILE(GLOB_RECURSE AntFarm_UnitTest_SOURCES "../../src/*.cpp" "../../src/*" "main.cpp")
 
 # find all the files in the includes directory
-FILE(GLOB_RECURSE AntFarm_INCLUDES "include/*.h" "include/*.hpp" "include/*")
+FILE(GLOB_RECURSE AntFarm_UnitTest_INCLUDES "include/*" "include/*.hpp" "../../include/*.hpp" "../../include/*")
 
 # Specify default build type if none provided (before project() command)
 if(NOT CMAKE_BUILD_TYPE)
@@ -42,7 +42,7 @@ if(SFML_ROOT LESS 0)
   message("SELECT THE ROOT DIRECTORY OF SFML")
 endif()
 
-add_executable(AntFarm ${AntFarm_SOURCES} ${AntFarm_INCLUDES})
+add_executable(AntFarm_UnitTest ${AntFarm_UnitTest_SOURCES} ${AntFarm_UnitTest_INCLUDES})
 
 # Add External libraries
 # Detect and add SFML
@@ -50,6 +50,6 @@ add_executable(AntFarm ${AntFarm_SOURCES} ${AntFarm_INCLUDES})
 find_package(SFML 2.1 COMPONENTS graphics window system network audio REQUIRED)
 if(SFML_FOUND)
   include_directories(${SFML_INCLUDE_DIR})
-  target_link_libraries(AntFarm ${SFML_LIBRARIES})
+  target_link_libraries(AntFarm_UnitTest ${SFML_LIBRARIES})
 endif()
 
