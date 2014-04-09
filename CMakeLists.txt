@@ -12,10 +12,12 @@ SET(CMAKE_INCLUDE_PATH ${CMAKE_SOURCE_DIR}/include)
 SET(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/modules")
 
 # find all source files in the src directory
-FILE(GLOB AntFarm_SRC "src/*.cpp")
+FILE(GLOB_RECURSE AntFarm_SRC "src/*.cpp" "src/*")
 
 # find all the files in the includes directory
-FILE(GLOB AntFarm_INCLUDES "include/*.h" "include/*.hpp")
+FILE(GLOB_RECURSE AntFarm_INCLUDES "include/*.h" "include/*.hpp" "include/*")
+
+include_directories(${AntFarm_INCLUDES})
 
 # Specify default build type if none provided (before project() command)
 if(NOT CMAKE_BUILD_TYPE)
@@ -35,18 +37,16 @@ elseif(CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
 	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -stdlib=libc++")
 endif()
 
+SET(SFMLDIR "C:/SFML2.1")
 add_definitions(-DSFML_STATIC)
-
+SET(SFML_STATIC_LIBRARIES true)
+add_executable(AntFarm ${AntFarm_SRC})
 # Add External libraries
 # Detect and add SFML
 set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/modules" ${CMAKE_MODULE_PATH})
 #Find any version 2.X of SFML
-find_package(SFML 2 REQUIRED system window graphics network audio)
+find_package(SFML 2 REQUIRED window graphics system network audio)
 if(SFML_FOUND)
   include_directories(${SFML_INCLUDE_DIR})
-  target_link_libraries(${EXECUTABLE_NAME} ${SFML_LIBRARIES})
+  target_link_libraries(AntFarm ${SFML_LIBRARIES})
 endif()
-
-#add_subdirectory(test)
-add_subdirectory(include)
-add_subdirectory(src)
