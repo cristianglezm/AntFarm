@@ -2,11 +2,16 @@
 #define CONFIG_H
 #include <string>
 namespace ant{
+    /**
+     * Clase de configuracion con constantes de ficheros.
+     * @author Cristian Glez <Cristian.glez.m@gmail.com>
+     * @version 0.1
+     */
     class Config{
         private:
         public:
-            const std::string version = "0.5 Milestone";
-            const std::string assetsJSON = "";
+            static const std::string VERSION;
+            static const std::string ASSETS_GAME_JSON;
     };
 }
 #endif // CONFIG_H

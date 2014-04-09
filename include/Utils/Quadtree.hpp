@@ -32,6 +32,6 @@ namespace ant{
                 void render(sf::RenderWindow& win);
                 ~Quadtree();
         };
-    };
-};
+    }
+}
 #endif

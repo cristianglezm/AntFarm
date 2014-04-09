@@ -22,7 +22,7 @@ namespace ant{
                     }catch(std::exception& out){
                         std::cout << out.what() << " Component not Found " << mask << std::endl;
                     }
-                 }
+            }
             void removeComponent(long int mask);
             inline std::string getName() const { return name; }
             void setName(std::string name);
@@ -33,5 +33,5 @@ namespace ant{
             bool operator==(const std::string& name) const;
             ~Entity();
     };
-};
+}
 #endif // ENTITY_H

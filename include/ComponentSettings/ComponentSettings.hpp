@@ -10,5 +10,5 @@ namespace ant{
             void loadSettings(const std::string& filename);
             ~ComponentSettings();
     };
-};
+}
 #endif // COMPONENT_SETTINGS_H

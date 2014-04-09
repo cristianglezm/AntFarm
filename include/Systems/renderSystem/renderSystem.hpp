@@ -15,5 +15,5 @@ namespace ant{
             virtual void update(sf::Time dt);
             ~renderSystem();
     };
-};
+}
 #endif // RENDER_SYSTEM_H

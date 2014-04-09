@@ -20,5 +20,5 @@ namespace ant{
             bool DispatchEvent(std::shared_ptr<baseEvent> e);
             ~GameEventDispatcher();
     };
-};
+}
 #endif // GAME_EVENT_DISPATCHER_H

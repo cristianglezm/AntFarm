@@ -21,5 +21,5 @@ namespace ant{
             void render(long int id,sf::RenderWindow& win);
             ~WorldManager();
     };
-};
+}
 #endif // WORLD_MANAGER_H

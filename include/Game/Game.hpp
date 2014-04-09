@@ -1,6 +1,7 @@
 #ifndef GAME_H
 #define GAME_H
 #include <Level/Level.hpp>
+#include <Config.hpp>
 #include <EventQueue/EventQueue.hpp>
 namespace ant{
     class Game{

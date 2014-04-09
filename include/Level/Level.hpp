@@ -18,7 +18,7 @@ namespace ant{
         public:
             static const long int BATTLEFIELD = 0;
             static const long int NEST = 1;
-            Level(std::shared_ptr<GameEventDispatcher> ged);
+            Level(const std::string& assetsFilename,std::shared_ptr<GameEventDispatcher> ged);
             void init();
             bool loadLevel(const std::string& filename);
             void setEventQueue(std::shared_ptr<EventQueue> eq);

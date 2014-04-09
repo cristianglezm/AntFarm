@@ -13,4 +13,4 @@ namespace ant{
     GameEventDispatcher::~GameEventDispatcher(){
 
     }
-};
+}

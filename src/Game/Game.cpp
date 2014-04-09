@@ -3,7 +3,7 @@
 namespace ant{
     Game::Game()
     :gameEventDispatcher(new GameEventDispatcher())
-    ,level(new Level(gameEventDispatcher))
+    ,level(new Level(Config::ASSETS_GAME_JSON,gameEventDispatcher))
     ,win(sf::VideoMode(800,600),"AntFarm", sf::Style::Close)
     ,running(true){
         eventQueue = level->getEventQueue();

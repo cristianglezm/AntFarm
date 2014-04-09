@@ -22,5 +22,5 @@ namespace ant{
             std::unique_ptr<Entity> Transfer(const std::string& name);
             ~EntityManager();
     };
-};
+}
 #endif // ENTITY_MANAGER_H
