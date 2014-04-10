@@ -12,7 +12,7 @@ SET(CMAKE_INCLUDE_PATH ${CMAKE_SOURCE_DIR})
 SET(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}../../modules")
 
 # find all source files in the src directory
-FILE(GLOB_RECURSE AntFarm_UnitTest_SOURCES "../../src/*.cpp" "../../src/*" "main.cpp")
+FILE(GLOB_RECURSE AntFarm_UnitTest_SOURCES "../../src/*.cpp" "../../src/*")
 
 # find all the files in the includes directory
 FILE(GLOB_RECURSE AntFarm_UnitTest_INCLUDES "include/*" "include/*.hpp" "../../include/*.hpp" "../../include/*")

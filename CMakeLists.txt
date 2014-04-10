@@ -53,3 +53,15 @@ if(SFML_FOUND)
   target_link_libraries(AntFarm ${SFML_LIBRARIES})
 endif()
 
+#SET(JSONBOX_ROOT -1 CACHE PATH "SELECT THE ROOT DIR OF JsonBox")
+#if(JSONBOX_ROOT LESS 0)
+#  message("SELECT THE ROOT DIRECTORY OF JsonBox")
+#endif()
+
+#find any version of JsonBox
+#find_package(JsonBox REQUIRED)
+#if(JsonBox_FOUND)
+#  include_directories(${JSONBOX_INCLUDE_DIRS})
+#  target_link_libraries(AntFarm ${JSONBOX_LIBRARIES})
+#endif()
+

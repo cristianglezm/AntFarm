@@ -3,8 +3,16 @@ namespace ant{
     AssetManager::AssetManager(){
 
     }
-    void AssetManager::loadAssets(const std::string& json){
-
+    void AssetManager::loadAssets(const std::string& filename){
+        std::fstream file(filename);
+        JsonBox::Value v(file);
+        if(!v["textures"].isNull()){
+            int size = v["textures"].getArray().size();
+            for(int i=0;i<size;++i){
+                addTexture(v["textures"][size_t(i)]["id"].getString(),
+                           v["textures"][size_t(i)]["filepath"].getString());
+            }
+        }
     }
     void AssetManager::addTexture(const std::string& id,const std::string& filename){
         std::unique_ptr<sf::Texture> texture(new sf::Texture());

@@ -1,0 +1,6 @@
+{
+	"textures":[
+			{"id":"Ant","filepath":"data/entities/ant.png"},
+			{"id":"AntQueen","filepath":"data/entities/antQueen.png"},
+		   ]
+}

@@ -3,6 +3,8 @@
 #include <stdexcept>
 #include <map>
 #include <memory>
+#include <fstream>
+#include <JsonBox.h>
 #include <SFML/Graphics/Texture.hpp>
 #include <SFML/Graphics/Image.hpp>
 
@@ -13,7 +15,7 @@ namespace ant{
             std::map<std::string,std::unique_ptr<sf::Image>> images;
         public:
             AssetManager();
-            void loadAssets(const std::string& json);
+            void loadAssets(const std::string& filename);
             void addTexture(const std::string& id,const std::string& filename);
             sf::Texture& getTexture(const std::string& id);
             void removeTexture(const std::string& id);
