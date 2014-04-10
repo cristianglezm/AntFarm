@@ -46,9 +46,20 @@ SET(JSONBOX_ROOT -1 CACHE PATH "SELECT THE ROOT DIR OF JsonBox")
 if(JSONBOX_ROOT LESS 0)
   message("SELECT THE ROOT DIRECTORY OF JsonBox")
 endif()
+# glob all sources
+file(GLOB_RECURSE JSONBOX_SOURCES "${JSONBOX_ROOT}/src" "${JSONBOX_ROOT}/src/*.cpp")
+file(GLOB_RECURSE JSONBOX_HEADERS "${JSONBOX_ROOT}/include" "${JSONBOX_ROOT}/include/*.h")
+
+include_directories("${JSONBOX_ROOT}/include")
+
+# setup static archive
+add_library(JsonBox STATIC ${JSONBOX_SOURCES} ${JSONBOX_HEADERS})
+install(TARGETS JsonBox ARCHIVE DESTINATION "lib" COMPONENT lib)
 
 add_executable(AntFarm ${AntFarm_SOURCES} ${AntFarm_INCLUDES})
 
+add_dependencies(AntFarm JsonBox)
+target_link_libraries(AntFarm JsonBox)
 # Add External libraries
 # Detect and add SFML
 #Find any version 2.X of SFML
@@ -58,10 +69,5 @@ if(SFML_FOUND)
   target_link_libraries(AntFarm ${SFML_LIBRARIES})
 endif()
 
-#find any version of JsonBox
-find_package(jsonbox COMPONENTS lib REQUIRED)
-if(JSONBOX_FOUND)
-  include_directories(${JSONBOX_INCLUDE_DIRS})
-  target_link_libraries(AntFarm ${JSONBOX_LIBRARIES})
-endif()
+
 
