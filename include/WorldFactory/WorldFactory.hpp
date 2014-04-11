@@ -17,6 +17,10 @@ namespace ant{
         public:
             WorldFactory();
             WorldFactory(std::shared_ptr<GameEventDispatcher> ged,std::shared_ptr<EventQueue> eq);
+            bool loadAssets(const std::string& json);
+            bool unloadAssets();
+            void setAssetManager(std::shared_ptr<AssetManager> assets);
+            inline std::shared_ptr<AssetManager> getAssetManager(){ return entityFactory->getAssetManager(); }
             std::unique_ptr<World> createNest();
             std::unique_ptr<World> createBattlefield();
             void setEntityFactory(std::shared_ptr<EntityFactory> ef);

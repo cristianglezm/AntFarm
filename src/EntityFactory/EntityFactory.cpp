@@ -4,8 +4,18 @@ namespace ant{
     EntityFactory::EntityFactory(){
         componentFactory.reset(new ComponentFactory());
     }
-    EntityFactory::EntityFactory(std::string json_filename){
-
+    EntityFactory::EntityFactory(const std::string& json){
+        componentFactory.reset(new ComponentFactory());
+        componentFactory->loadAssets(json);
+    }
+    bool EntityFactory::loadAssets(const std::string& json){
+        return componentFactory->loadAssets(json);
+    }
+    bool EntityFactory::unloadAssets(){
+        return componentFactory->unloadAssets();
+    }
+    void EntityFactory::setAssetManager(std::shared_ptr<AssetManager> assets){
+        componentFactory->setAssetManager(assets);
     }
     std::unique_ptr<Entity> EntityFactory::createEntity(long int mask){
         std::unique_ptr<Entity> e(new Entity());

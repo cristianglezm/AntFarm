@@ -1,10 +1,18 @@
 TODO
 ===
 
-Completar CMake para crear el proyecto automaticamente.
+Completar CMake:
+	Falta completar CMake AntFarm/Tests
+	Falta Completar CMake AntFarm
+		añadir boolean para elegir si compilar los tests o no.
+		Añadir comando para copiar los datos para el juego
 Poner licencia.
-Crear documentacion adecuada, en codigo, documento tecnico, etc.
-Mejorar README, descripcion proyecto, etc.
+Crear documentacion adecuada:
+	Cabeceras
+	UML
+	documento tecnico
+Mejorar README:
+	descripcion proyecto, etc.
 
 
 baseComponent		- Done

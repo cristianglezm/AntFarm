@@ -6,6 +6,11 @@
 #include <Entity/Entity.hpp>
 
 namespace ant{
+    /**
+     * Clase para crear las entidades del juego.
+     * @author Cristian Glez <Cristian.glez.m@gmail.com>
+     * @version 0.1
+     */
     class EntityFactory{
         private:
             std::shared_ptr<ComponentFactory> componentFactory;
@@ -21,7 +26,11 @@ namespace ant{
                                 | ComponentsMask::COMPONENT_SPRITE;
                 static const long int Battlefield = ComponentsMask::COMPONENT_SPRITE;
             EntityFactory();
-            EntityFactory(std::string json_filename);
+            EntityFactory(const std::string& json);
+            bool loadAssets(const std::string& json);
+            bool unloadAssets();
+            void setAssetManager(std::shared_ptr<AssetManager> assets);
+            inline std::shared_ptr<AssetManager> getAssetManager(){ return componentFactory->getAssetManager(); }
             std::unique_ptr<Entity> createEntity(long int mask);
             std::unique_ptr<Entity> createEntity(long int mask, ComponentSettings& cs);
             void setComponentFactory(std::shared_ptr<ComponentFactory> cf);

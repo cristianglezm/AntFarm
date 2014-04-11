@@ -20,6 +20,7 @@ namespace ant{
             }
             ++i;
         }
+        return i;
     }
     EntityManager::iterator EntityManager::removeEntity(EntityManager::iterator it){
         return entities.erase(it);

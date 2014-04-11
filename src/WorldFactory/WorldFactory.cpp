@@ -15,6 +15,15 @@ namespace ant{
         eventQueue = eq;
         systemFactory.reset(new SystemFactory(gameEventDispatcher,eventQueue));
     }
+    bool WorldFactory::loadAssets(const std::string& json){
+        return entityFactory->loadAssets(json);
+    }
+    bool WorldFactory::unloadAssets(){
+        return entityFactory->unloadAssets();
+    }
+    void WorldFactory::setAssetManager(std::shared_ptr<AssetManager> assets){
+        entityFactory->setAssetManager(assets);
+    }
     std::unique_ptr<World> WorldFactory::createNest(){
         std::unique_ptr<World> w(new World(nestId));
         auto em = w->getEntityManager();

@@ -58,4 +58,5 @@ bool CollisionSpeedTest(){
             }
         }
     }
+    return true;
 }

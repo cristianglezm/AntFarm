@@ -6,6 +6,11 @@
 #include <Components/Component.hpp>
 #include <Components/ComponentMask.hpp>
 namespace ant{
+    /**
+     *
+     * @author Cristian Glez <Cristian.glez.m@gmail.com>
+     * @version 0.1
+     */
     class ComponentFactory{
         private:
             std::shared_ptr<AssetManager> assets;
@@ -13,6 +18,8 @@ namespace ant{
         public:
             ComponentFactory();
             ComponentFactory(std::shared_ptr<AssetManager> assets);
+            bool loadAssets(const std::string& json);
+            bool unloadAssets();
             void setAssetManager(std::shared_ptr<AssetManager> assets);
             inline std::shared_ptr<AssetManager> getAssetManager(){ return this->assets; }
 

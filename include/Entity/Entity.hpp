@@ -1,6 +1,7 @@
 #ifndef ENTITY_H
 #define ENTITY_H
 #include <string>
+#include <stdexcept>
 #include <memory>
 #include <map>
 #include <Components/Component.hpp>
@@ -20,7 +21,8 @@ namespace ant{
                  try{
                         return Components.at(mask);
                     }catch(std::exception& out){
-                        std::cout << out.what() << " Component not Found " << mask << std::endl;
+                        std::string ex = out.what();
+                        throw std::runtime_error("Component not Found: Mask " + ex);
                     }
             }
             void removeComponent(long int mask);

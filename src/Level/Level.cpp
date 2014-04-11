@@ -7,6 +7,7 @@ namespace ant{
         gameEventDispatcher = ged;
         worldFactory.reset(new WorldFactory(ged,eventQueue));
         /// TODO cargar assets
+        worldFactory->loadAssets(assetsFilename);
         init();
     }
     void Level::init(){
@@ -23,6 +24,9 @@ namespace ant{
     }
     void Level::setWorldFactory(std::shared_ptr<WorldFactory> wf){
         worldFactory = wf;
+    }
+    void Level::setAssetManager(std::shared_ptr<AssetManager> assets){
+        worldFactory->setAssetManager(assets);
     }
     void Level::update(long int id,long int type,sf::Time dt){
         switch(type){

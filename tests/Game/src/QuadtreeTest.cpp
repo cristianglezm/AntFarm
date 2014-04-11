@@ -20,7 +20,6 @@ bool QuadtreeTest(){
         em.addEntity(std::move(e1));
     }
     std::cout << "Agregadas al Entity Manager" << std::endl;
-    int i=0;
     for(auto& entity:em.getEntities()){
         qtree.insert(entity.get());
     }
@@ -41,4 +40,5 @@ bool QuadtreeTest(){
             }
         }
     }
+    return true;
 }

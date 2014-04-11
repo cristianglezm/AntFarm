@@ -3,4 +3,12 @@
 			{"id":"Ant","filepath":"data/entities/ant.png"},
 			{"id":"AntQueen","filepath":"data/entities/antQueen.png"},
 		   ]
+	"images":[
+			{"id":"NestDestructable","filepath":"data/maps/nest/MapNestFrontground.png"},
+			{"id":"NestBackground","filepath":"data/maps/nest/MapNestBackground.png"},
+		  ]
+	"fonts":[
+			{"id":"OLDFAX","filepath":"data/fonts/OLDFAX.ttf"},
+			{"id":"Outwrite","filepath":"data/fonts/Outwrite.ttf"},
+		  ]
 }

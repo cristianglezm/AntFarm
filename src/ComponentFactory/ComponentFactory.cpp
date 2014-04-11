@@ -28,6 +28,12 @@ namespace ant{
             ComponentFactory::ComponentFactory(std::shared_ptr<AssetManager> assets){
                 this->assets = assets;
             }
+            bool ComponentFactory::loadAssets(const std::string& json){
+                return assets->loadAssets(json);
+            }
+            bool ComponentFactory::unloadAssets(){
+                return assets->clear();
+            }
             void ComponentFactory::setAssetManager(std::shared_ptr<AssetManager> assets){
                 this->assets = assets;
             }

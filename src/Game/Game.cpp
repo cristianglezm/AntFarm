@@ -7,6 +7,7 @@ namespace ant{
     ,win(sf::VideoMode(800,600),"AntFarm", sf::Style::Close)
     ,running(true){
         eventQueue = level->getEventQueue();
+        assets = level->getAssetManager();
     }
     void Game::run(){
 

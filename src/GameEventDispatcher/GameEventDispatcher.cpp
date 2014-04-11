@@ -7,8 +7,10 @@ namespace ant{
         switch(e->getType()){
             case EventType::COLLISION_EVENT:
                 onCollision.notifyObservers(e);
+                return true;
                 break;
         }
+        return false;
     }
     GameEventDispatcher::~GameEventDispatcher(){
 
