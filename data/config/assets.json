@@ -1,14 +1,17 @@
 {
 	"textures":[
-			{"id":"Ant","filepath":"data/entities/ant.png"},
-			{"id":"AntQueen","filepath":"data/entities/antQueen.png"},
-		   ]
+			{"id":"Ant","filepath":"data/entities/Ant.png"},
+			{"id":"AntQueen","filepath":"data/entities/AntQueen.png"},
+			{"id":"Egg","filepath":"data/entities/Egg.png"},
+			{"id":"Larvae1","filepath":"data/entities/Larvae1.png"},
+			{"id":"Larvae2","filepath":"data/entities/Larvae2.png"},
+			{"id":"NestBackground","filepath":"data/maps/nest/MapNestBackground.png"},
+		   ],
 	"images":[
 			{"id":"NestDestructable","filepath":"data/maps/nest/MapNestFrontground.png"},
-			{"id":"NestBackground","filepath":"data/maps/nest/MapNestBackground.png"},
-		  ]
+		  ],
 	"fonts":[
 			{"id":"OLDFAX","filepath":"data/fonts/OLDFAX.ttf"},
 			{"id":"Outwrite","filepath":"data/fonts/Outwrite.ttf"},
-		  ]
+		  ],
 }

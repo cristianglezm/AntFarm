@@ -14,7 +14,9 @@ namespace ant{
         this->gameEventDispatcher = ged;
     }
     std::shared_ptr<renderSystem> SystemFactory::createRenderSystem(){
-        return std::shared_ptr<renderSystem>(new renderSystem());
+        std::shared_ptr<renderSystem> s(new renderSystem());
+        s->setEventQueue(eventQueue);
+        return s;
     }
     std::shared_ptr<inputSystem> SystemFactory::createInputSystem(){
         /// TODO implement

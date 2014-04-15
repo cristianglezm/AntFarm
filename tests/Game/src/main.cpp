@@ -15,9 +15,11 @@
 #include <Components/Component.hpp>
 #include <Components/ComponentMask.hpp>
 #include <EntityManager/EntityManager.hpp>
+#include <assetManagerTest.hpp>
 #include <cassert>
 #include <list>
 #include <iostream>
+#include <cstdlib>
 ////////////////////////////////////
 bool CollisionSpeedTest();
 
@@ -33,6 +35,8 @@ int main(){
     //CollisionSpeedTest(); // 1000 Entidades -> 59 secs
     //WorldManagerTest();
     renderSystemTest();
+    //assetManagerTest();
+    system("pause");
     return 0;
 }
 

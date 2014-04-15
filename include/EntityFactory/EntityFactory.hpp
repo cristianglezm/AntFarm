@@ -23,8 +23,10 @@ namespace ant{
                                     | ComponentsMask::COMPONENT_TRANSFORM
                                     | ComponentsMask::COMPONENT_EGGS;
                 static const long int Nest = ComponentsMask::COMPONENT_DESTRUCTABLE
+                                | ComponentsMask::COMPONENT_TRANSFORM
                                 | ComponentsMask::COMPONENT_SPRITE;
-                static const long int Battlefield = ComponentsMask::COMPONENT_SPRITE;
+                static const long int Battlefield = ComponentsMask::COMPONENT_TRANSFORM
+                                | ComponentsMask::COMPONENT_SPRITE;
             EntityFactory();
             EntityFactory(const std::string& json);
             bool loadAssets(const std::string& json);

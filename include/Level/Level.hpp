@@ -21,18 +21,18 @@ namespace ant{
             std::shared_ptr<GameEventDispatcher> gameEventDispatcher;
             std::shared_ptr<WorldFactory> worldFactory;
         public:
-            static const long int BATTLEFIELD = 0;
-            static const long int NEST = 1;
+            static const int BATTLEFIELD = 0;
+            static const int NEST = 1;
             /**
              *
              *
              */
-            Level(const std::string& assetsFilename,std::shared_ptr<GameEventDispatcher> ged);
+            Level(const std::string& assetsFilename,sf::FloatRect bounds,std::shared_ptr<GameEventDispatcher> ged);
             /**
              *
              *
              */
-            void init();
+            void init(sf::FloatRect bounds);
             /**
              *
              *

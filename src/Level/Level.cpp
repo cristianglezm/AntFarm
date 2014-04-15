@@ -1,18 +1,18 @@
 #include <Level/Level.hpp>
 namespace ant{
-    Level::Level(const std::string& assetsFilename,std::shared_ptr<GameEventDispatcher> ged){
+    Level::Level(const std::string& assetsFilename,sf::FloatRect bounds,std::shared_ptr<GameEventDispatcher> ged){
         battlefields.reset(new WorldManager());
         nests.reset(new WorldManager());
         eventQueue.reset(new EventQueue());
         gameEventDispatcher = ged;
         worldFactory.reset(new WorldFactory(ged,eventQueue));
-        /// TODO cargar assets
         worldFactory->loadAssets(assetsFilename);
-        init();
+        init(bounds);
     }
-    void Level::init(){
+    void Level::init(sf::FloatRect bounds){
         /// TODO crear mundos iniciales, etc.
-        nests->addWorld(worldFactory->createNest());
+        nests->addWorld(worldFactory->createNest(bounds));
+        battlefields->addWorld(worldFactory->createBattlefield(bounds));
     }
     bool Level::loadLevel(const std::string& filename){
         return false;

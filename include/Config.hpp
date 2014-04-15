@@ -1,5 +1,5 @@
-#ifndef CONFIG_H
-#define CONFIG_H
+#ifndef ANT_CONFIG_H
+#define ANT_CONFIG_H
 #include <string>
 namespace ant{
     /**

@@ -24,17 +24,22 @@ namespace ant{
     void WorldFactory::setAssetManager(std::shared_ptr<AssetManager> assets){
         entityFactory->setAssetManager(assets);
     }
-    std::unique_ptr<World> WorldFactory::createNest(){
+    std::unique_ptr<World> WorldFactory::createNest(sf::FloatRect bounds){
         std::unique_ptr<World> w(new World(nestId));
         auto em = w->getEntityManager();
-        auto sm = w->getSystemManager();
-        //sm->addSystem(systemFactory->createCollisionSystem());
+        std::unique_ptr<SystemManager> sm(new SystemManager());
+        sm->addSystem(systemFactory->createMovementSystem());
+        sm->addSystem(systemFactory->createCollisionSystem(bounds));
         sm->addSystem(systemFactory->createRenderSystem());
         em->addEntity(entityFactory->createEntity(EntityFactory::Nest));
+        em->addEntity(entityFactory->createEntity(EntityFactory::AntQueen));
+        w->setEventQueue(eventQueue);
+        w->setEntityManager(em);
+        w->setSystemManager(std::move(sm));
         ++nestId;
         return std::move(w);
     }
-    std::unique_ptr<World> WorldFactory::createBattlefield(){
+    std::unique_ptr<World> WorldFactory::createBattlefield(sf::FloatRect bounds){
         std::unique_ptr<World> w(new World(battlefieldId));
 
         ++battlefieldId;

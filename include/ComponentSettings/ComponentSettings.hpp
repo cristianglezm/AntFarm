@@ -4,7 +4,7 @@
 namespace ant{
     class ComponentSettings{
         private:
-
+            float Speed;
         public:
             ComponentSettings();
             void loadSettings(const std::string& filename);

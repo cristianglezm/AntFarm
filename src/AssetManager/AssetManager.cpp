@@ -37,7 +37,7 @@ namespace ant{
         textures.insert(std::make_pair(id,std::move(texture)));
     }
     sf::Texture& AssetManager::getTexture(const std::string& id){
-        return *textures.at(id).get();
+        return *(textures.at(id));
     }
     void AssetManager::removeTexture(const std::string& id){
         textures.erase(id);
@@ -50,7 +50,7 @@ namespace ant{
         images.insert(std::make_pair(id,std::move(image)));
     }
     sf::Image& AssetManager::getImage(const std::string& id){
-        return *images.at(id);
+        return *(images.at(id));
     }
     void AssetManager::removeImage(const std::string& id){
         images.erase(id);
@@ -63,7 +63,7 @@ namespace ant{
         fonts.insert(std::make_pair(id,std::move(font)));
     }
     sf::Font& AssetManager::getFont(const std::string& id){
-        return *fonts.at(id);
+        return *(fonts.at(id));
     }
     void AssetManager::removeFont(const std::string& id){
         fonts.erase(id);

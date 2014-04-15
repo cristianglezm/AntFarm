@@ -20,19 +20,32 @@ namespace ant{
     std::unique_ptr<Entity> EntityFactory::createEntity(long int mask){
         std::unique_ptr<Entity> e(new Entity());
         //ComponentSettings cs;
-        switch(mask){
-            case Ant:
-
-                break;
-            case AntQueen:
-
-                break;
+        /// TODO Limpiar y encontrar mejor forma de cargar variables para los componentes por defecto.
+        std::string id = "Ant";
+        if((mask & Ant) == Ant){
+            id = "Ant";
+        }
+        if((mask & AntQueen) == AntQueen){
+            id = "AntQueen";
+        }
+        if((mask & Nest) == Nest){
+            id = "NestBackground";
+        }
+        if((mask & ComponentsMask::COMPONENT_TRANSFORM) == ComponentsMask::COMPONENT_TRANSFORM){
+            e->addComponent(componentFactory->createTransform(sf::Vector2f(0,0),sf::Vector2f(1,1),0));
+        }
+        if((mask & ComponentsMask::COMPONENT_VELOCITY) == ComponentsMask::COMPONENT_VELOCITY){
+            e->addComponent(componentFactory->createVelocity(sf::Vector2f(0,0),0.1,0.0,1));
         }
         if((mask & ComponentsMask::COMPONENT_BOUNDS) == ComponentsMask::COMPONENT_BOUNDS){
-            e->addComponent(componentFactory->createBounds(sf::FloatRect(0,0,0,0)));
+            e->addComponent(componentFactory->createBounds(sf::FloatRect(0,0,1,1)));
         }
         if((mask & ComponentsMask::COMPONENT_SPRITE) == ComponentsMask::COMPONENT_SPRITE){
-
+            e->addComponent(componentFactory->createSprite(id));
+        }
+        if((mask & ComponentsMask::COMPONENT_DESTRUCTABLE) == ComponentsMask::COMPONENT_DESTRUCTABLE){
+                id= "NestDestructable";
+            e->addComponent(componentFactory->createDestructable(sf::Vector2f(0,0),id));
         }
         return std::move(e);
     }

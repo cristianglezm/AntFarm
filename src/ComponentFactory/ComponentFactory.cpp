@@ -43,6 +43,11 @@ namespace ant{
                 return std::move(c);
             }
             std::unique_ptr<baseComponent> ComponentFactory::createVelocity(sf::Vector2f velocity,float speed,float minSpeed,float maxSpeed){
+                if(speed > maxSpeed){
+                    speed = maxSpeed;
+                }else if(speed < minSpeed){
+                    speed = minSpeed;
+                }
                 std::unique_ptr<baseComponent> c(new Component<sf::Vector2f,float,float,float>(ComponentsMask::COMPONENT_VELOCITY,
                                                                                                velocity,speed,minSpeed,maxSpeed));
                 return std::move(c);
@@ -53,12 +58,19 @@ namespace ant{
             }
             std::unique_ptr<baseComponent> ComponentFactory::createDestructable(sf::Vector2f position,const std::string& imageID){
                 std::unique_ptr<sf::VertexArray> destructable = mapImage(position,assets->getImage(imageID));
-                std::unique_ptr<baseComponent> c(new Component<std::unique_ptr<sf::VertexArray>>(ComponentsMask::COMPONENT_DESTRUCTABLE,
-                                                                                                 std::move(destructable)));
+                std::unique_ptr<baseComponent> c(new Component<std::string,std::unique_ptr<sf::VertexArray>>(
+                                            ComponentsMask::COMPONENT_DESTRUCTABLE,imageID,std::move(destructable)));
+                return std::move(c);
+            }
+            std::unique_ptr<baseComponent> ComponentFactory::createAnimation(std::vector<std::string> ids){
+                std::unique_ptr<baseComponent> c(new Component<std::vector<std::string>>(
+                                                    ComponentsMask::COMPONENT_ANIMATION,ids));
                 return std::move(c);
             }
             std::unique_ptr<baseComponent> ComponentFactory::createSprite(std::string id){
-                std::unique_ptr<baseComponent> c(new Component<std::unique_ptr<sf::Sprite>>(ComponentsMask::COMPONENT_SPRITE,std::unique_ptr<sf::Sprite>(new sf::Sprite((assets->getTexture(id))))));
+                std::unique_ptr<baseComponent> c(new Component<std::string,std::unique_ptr<sf::Sprite>>(
+                        ComponentsMask::COMPONENT_SPRITE,id,std::unique_ptr<sf::Sprite>(
+                                                            new sf::Sprite((assets->getTexture(id))))));
                 return std::move(c);
             }
             ComponentFactory::~ComponentFactory(){

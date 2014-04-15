@@ -21,8 +21,8 @@ namespace ant{
             bool unloadAssets();
             void setAssetManager(std::shared_ptr<AssetManager> assets);
             inline std::shared_ptr<AssetManager> getAssetManager(){ return entityFactory->getAssetManager(); }
-            std::unique_ptr<World> createNest();
-            std::unique_ptr<World> createBattlefield();
+            std::unique_ptr<World> createNest(sf::FloatRect bounds);
+            std::unique_ptr<World> createBattlefield(sf::FloatRect bounds);
             void setEntityFactory(std::shared_ptr<EntityFactory> ef);
             inline std::shared_ptr<EntityFactory> getEntityFactory(){ return this->entityFactory; }
             void setEventQueue(std::shared_ptr<EventQueue> eq);

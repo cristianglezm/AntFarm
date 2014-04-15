@@ -1,7 +1,7 @@
 #ifndef COMPONENT_FACTORY_H
 #define COMPONENT_FACTORY_H
 #include <SFML/Graphics.hpp>
-
+#include <array>
 #include <AssetManager/AssetManager.hpp>
 #include <Components/Component.hpp>
 #include <Components/ComponentMask.hpp>
@@ -27,6 +27,7 @@ namespace ant{
             std::unique_ptr<baseComponent> createVelocity(sf::Vector2f velocity,float speed,float minSpeed,float maxSpeed);
             std::unique_ptr<baseComponent> createBounds(sf::FloatRect bounds);
             std::unique_ptr<baseComponent> createDestructable(sf::Vector2f position,const std::string& imageID);
+            std::unique_ptr<baseComponent> createAnimation(std::vector<std::string> ids);
             std::unique_ptr<baseComponent> createSprite(std::string id);
 
             ~ComponentFactory();
