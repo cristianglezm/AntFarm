@@ -35,7 +35,7 @@ namespace ant{
             e->addComponent(componentFactory->createTransform(sf::Vector2f(0,0),sf::Vector2f(1,1),0));
         }
         if((mask & ComponentsMask::COMPONENT_VELOCITY) == ComponentsMask::COMPONENT_VELOCITY){
-            e->addComponent(componentFactory->createVelocity(sf::Vector2f(0,0),0.1,0.0,1));
+            e->addComponent(componentFactory->createVelocity(0.1,0.0,1));
         }
         if((mask & ComponentsMask::COMPONENT_BOUNDS) == ComponentsMask::COMPONENT_BOUNDS){
             e->addComponent(componentFactory->createBounds(sf::FloatRect(0,0,1,1)));

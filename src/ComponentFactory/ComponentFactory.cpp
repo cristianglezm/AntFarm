@@ -42,14 +42,14 @@ namespace ant{
                                                                                               position,scale,rotation));
                 return std::move(c);
             }
-            std::unique_ptr<baseComponent> ComponentFactory::createVelocity(sf::Vector2f velocity,float speed,float minSpeed,float maxSpeed){
+            std::unique_ptr<baseComponent> ComponentFactory::createVelocity(float speed,float minSpeed,float maxSpeed){
                 if(speed > maxSpeed){
                     speed = maxSpeed;
                 }else if(speed < minSpeed){
                     speed = minSpeed;
                 }
                 std::unique_ptr<baseComponent> c(new Component<sf::Vector2f,float,float,float>(ComponentsMask::COMPONENT_VELOCITY,
-                                                                                               velocity,speed,minSpeed,maxSpeed));
+                                                                                               sf::Vector2f(0,0),speed,minSpeed,maxSpeed));
                 return std::move(c);
             }
             std::unique_ptr<baseComponent> ComponentFactory::createBounds(sf::FloatRect bounds){

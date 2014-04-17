@@ -33,6 +33,8 @@ namespace ant{
             level->render(0,Level::NEST,win);
             win.display();
         }
+        // liberamos recursos.
+        assets->clear();
         win.close();
     }
     Game::~Game(){

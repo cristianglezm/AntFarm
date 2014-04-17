@@ -8,6 +8,13 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
@@ -25,7 +32,7 @@
    <div id="projectname">AntFarm
    &#160;<span id="projectnumber">0.1</span>
    </div>
-   <div id="projectbrief">A Game About Ants Wars</div>
+   <div id="projectbrief">Game about Ants...</div>
   </td>
  </tr>
  </tbody>
@@ -73,15 +80,30 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="functions.html"><span>All</span></a></li>
       <li><a href="functions_func.html"><span>Functions</span></a></li>
       <li class="current"><a href="functions_vars.html"><span>Variables</span></a></li>
+      <li><a href="functions_type.html"><span>Typedefs</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('functions_vars.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -92,34 +114,82 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div class="contents">
 &#160;<ul>
+<li>Ant
+: <a class="el" href="db/d10/classant_1_1_entity_factory.html#ac2b28957b185c60643889aafa36badff">ant::EntityFactory</a>
+</li>
+<li>AntQueen
+: <a class="el" href="db/d10/classant_1_1_entity_factory.html#a594415115437cb5d4ed9a35c3a552725">ant::EntityFactory</a>
+</li>
+<li>ASSETS_GAME_JSON
+: <a class="el" href="de/d2d/classant_1_1_config.html#a76f6edfa4ffe448ff6d874d438d59feb">ant::Config</a>
+</li>
+<li>Battlefield
+: <a class="el" href="db/d10/classant_1_1_entity_factory.html#ac73a24695b1d67b330a0b826ff4ea8d7">ant::EntityFactory</a>
+</li>
+<li>BATTLEFIELD
+: <a class="el" href="d0/dcb/classant_1_1_level.html#aa0d3f6382b63d4fcb89c0ab0e96ded50">ant::Level</a>
+</li>
+<li>COLLISION_EVENT
+: <a class="el" href="dd/ded/class_event_type.html#a096fc66c6f900edf9f3a266c4c981bfa">EventType</a>
+</li>
+<li>COMPONENT_ANIMATION
+: <a class="el" href="d1/d0a/class_components_mask.html#ab32c9febcb2a0d312b03b41f777a23c2">ComponentsMask</a>
+</li>
+<li>COMPONENT_BOUNDS
+: <a class="el" href="d1/d0a/class_components_mask.html#a81ccaf0bf7344c970bc8474df2625ba7">ComponentsMask</a>
+</li>
 <li>COMPONENT_DESTRUCTABLE
-: <a class="el" href="class_components_mask.html#af9ec785367e18857389d34be89269879">ComponentsMask</a>
+: <a class="el" href="d1/d0a/class_components_mask.html#af9ec785367e18857389d34be89269879">ComponentsMask</a>
 </li>
 <li>COMPONENT_EGGS
-: <a class="el" href="class_components_mask.html#ae31122d75c7339ec59b7d28e14762f61">ComponentsMask</a>
+: <a class="el" href="d1/d0a/class_components_mask.html#ae31122d75c7339ec59b7d28e14762f61">ComponentsMask</a>
 </li>
 <li>COMPONENT_HORNS
-: <a class="el" href="class_components_mask.html#a808a78a4e70a408e3b5d6ab18f36d94e">ComponentsMask</a>
-</li>
-<li>COMPONENT_MOVEMENT
-: <a class="el" href="class_components_mask.html#ab7d94963e3212138f6fc628b1edf93e6">ComponentsMask</a>
+: <a class="el" href="d1/d0a/class_components_mask.html#a808a78a4e70a408e3b5d6ab18f36d94e">ComponentsMask</a>
 </li>
 <li>COMPONENT_NONE
-: <a class="el" href="class_components_mask.html#a65df1295d217a6d29d7221447fe06da5">ComponentsMask</a>
+: <a class="el" href="d1/d0a/class_components_mask.html#a65df1295d217a6d29d7221447fe06da5">ComponentsMask</a>
 </li>
 <li>COMPONENT_SPRITE
-: <a class="el" href="class_components_mask.html#ab05302f9381801724a58273ff83ad2a6">ComponentsMask</a>
+: <a class="el" href="d1/d0a/class_components_mask.html#ab05302f9381801724a58273ff83ad2a6">ComponentsMask</a>
 </li>
 <li>COMPONENT_TRANSFORM
-: <a class="el" href="class_components_mask.html#a3a66579e45c351c13abe63e61f2eaa0a">ComponentsMask</a>
+: <a class="el" href="d1/d0a/class_components_mask.html#a3a66579e45c351c13abe63e61f2eaa0a">ComponentsMask</a>
+</li>
+<li>COMPONENT_VELOCITY
+: <a class="el" href="d1/d0a/class_components_mask.html#ac7fff00913ea1c8b225c90b02ecd3243">ComponentsMask</a>
+</li>
+<li>em
+: <a class="el" href="de/d48/classant_1_1_system.html#a5661d872ff769be150bd4e9a9552f6b9">ant::System</a>
+</li>
+<li>eventQueue
+: <a class="el" href="de/d48/classant_1_1_system.html#a27e1814e13d161b5ef0e848e3da16d29">ant::System</a>
+</li>
+<li>name
+: <a class="el" href="de/d48/classant_1_1_system.html#a60b3c00a760a3b4947ab1f1fc534a5b2">ant::System</a>
+</li>
+<li>Nest
+: <a class="el" href="db/d10/classant_1_1_entity_factory.html#a335f884eb8637c7d0bd818253aa9fe8f">ant::EntityFactory</a>
+</li>
+<li>NEST
+: <a class="el" href="d0/dcb/classant_1_1_level.html#a13660bdd426e4d13128dd1390469087b">ant::Level</a>
+</li>
+<li>RequiredComponents
+: <a class="el" href="de/d48/classant_1_1_system.html#a4ef41cfc496e41ac6730f90629524ec7">ant::System</a>
+</li>
+<li>VERSION
+: <a class="el" href="de/d2d/classant_1_1_config.html#a9f3ed4719932faa38daf63c821959c0f">ant::Config</a>
 </li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 28 2014 13:34:06 for AntFarm by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated on Thu Apr 17 2014 20:51:05 for AntFarm by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+  </ul>
+</div>
 </body>
 </html>

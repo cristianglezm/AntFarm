@@ -8,39 +8,87 @@ namespace ant{
      *  @version 0.1
      */
     class baseEvent{
-        private:
-            int type;
         protected:
+            /**
+             * @brief Constructor protegido del evento base.
+             * @param type int Tipo de evento.
+             */
             baseEvent(int type):type(type){}
         public:
             virtual ~baseEvent() = default;
+            /**
+             * @brief Setter para poner el tipo al evento.
+             * @param type int tipo de evento.
+             */
             void setType(int type){ this->type=type;}
+            /**
+             * @brief Getter del tipo de evento.
+             * @return int tipo del evento.
+             */
             inline int getType()const{ return type; }
+            /**
+             * @brief Getter de los atributos del evento.
+             * @param ...T los parametros de los atributos del evento,
+             *             ej: baseEvent::getAttributes<float,int>();
+             * @return std::tuple<T...>& los attributos del evento(solo lectura)
+             */
             template<typename...T>
             const std::tuple<T...>& getAttributes() const;
+            /**
+             * @brief Setter de los atributos del evento.
+             * @param ...T los parametros de los atributos,
+             *             ej: baseEvent::setAttributes<float,int>(5.3,5);
+             */
             template<typename...T>
             void setAttributes(std::tuple<T...> attributes);
+        private:
+            int type;
     };
     /**
-     *
-     *
+     * @brief Clase Especializada de evento.
+     * @author Cristian Glez <Cristian.glez.m@gmail.com>
+     * @version 0.1
      */
     template<typename...T>
     class Event: public baseEvent{
+        public:
+            /**
+             * @brief Constructor del Evento Especializado.
+             *
+             * @param type int Tipo del evento.
+             * @param data T... attributos del evento.
+             */
+            Event(int type,T...data)
+            : baseEvent{type}
+            , attributes{std::move(data)...}{}
+            /**
+             * @brief Getter de los attributos del evento.
+             *
+             * Los datos del evento no se pueden modificar, son solo lectura.
+             *
+             * @return std::tuple<T...>& const reference a la tupla.
+             */
+            inline const std::tuple<T...>& getAttributes() const { return attributes; }
+            /**
+             * @brief Setter de los attributos del evento.
+             *
+             * @param attributes std::tuple<T...> attributos del evento.
+             */
+            void setAttributes(std::tuple<T...> attributes){ this->attributes = std::move(attributes); }
         private:
             std::tuple<T...> attributes;
-        public:
-            Event(int type,T...data): baseEvent{type}, attributes{std::move(data)...} {}
-        inline const std::tuple<T...>& getAttributes() const { return attributes; }
     };
+
+    template<typename...T>
+    void baseEvent::setAttributes(std::tuple<T...> attributes){
+        auto& casted = dynamic_cast<Event<T...>&>(*this);
+        casted.setAttributes(attributes);
+    }
     template<typename...T>
     const std::tuple<T...>& baseEvent::getAttributes() const {
         auto& casted = dynamic_cast<const Event<T...>&>(*this);
         return casted.getAttributes();
     }
-    template<typename T, typename... Args>
-    std::shared_ptr<T> makeSharedPtr(Args&&... args) {
-        return std::shared_ptr<T>(new T(args...));
-    }
+
 }
 #endif // EVENT_H

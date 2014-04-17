@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['removecomponent',['removeComponent',['../classant_1_1_entity.html#a33fe2d7add83f9fd18c2ac47d1313b0e',1,'ant::Entity']]],
-  ['removeentity',['removeEntity',['../classant_1_1_entity_manager.html#aee38d41556be9ed55ae00e43fa891aca',1,'ant::EntityManager']]],
-  ['removeobserver',['removeObserver',['../classant_1_1_subject.html#aa785c2de2b27a9c863e03f4c94054a64',1,'ant::Subject']]],
-  ['render',['render',['../classant_1_1_system.html#ae710ecdf5c06d22466ec480bbfebceb0',1,'ant::System::render()'],['../classant_1_1_world.html#a5635db988e4b9ecc0c951cf526d015a3',1,'ant::World::render()']]]
+  ['name',['name',['../de/d48/classant_1_1_system.html#a60b3c00a760a3b4947ab1f1fc534a5b2',1,'ant::System']]],
+  ['nest',['NEST',['../d0/dcb/classant_1_1_level.html#a13660bdd426e4d13128dd1390469087b',1,'ant::Level::NEST()'],['../db/d10/classant_1_1_entity_factory.html#a335f884eb8637c7d0bd818253aa9fe8f',1,'ant::EntityFactory::Nest()']]],
+  ['notifyobservers',['notifyObservers',['../d5/d29/classant_1_1_subject.html#aefef04b082bfba8c7117b4facf7af4e8',1,'ant::Subject']]]
 ];

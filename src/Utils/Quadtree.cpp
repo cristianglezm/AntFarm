@@ -41,13 +41,6 @@ namespace ant{
                 }
                 return index;
         }
-        Quadtree::Quadtree(int level){
-            this->level = level;
-            nodes[0] = nullptr;
-            nodes[1] = nullptr;
-            nodes[2] = nullptr;
-            nodes[3] = nullptr;
-        }
         Quadtree::Quadtree(int level,sf::FloatRect bounds){
             this->level = level;
             this->bounds = bounds;

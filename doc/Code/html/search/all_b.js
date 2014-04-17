@@ -1,20 +1,10 @@
 var searchData=
 [
-  ['setcomponents',['setComponents',['../classant_1_1_entity.html#a16e9507bc9c9180b210bcc3895cf4648',1,'ant::Entity']]],
-  ['seteventqueue',['setEventQueue',['../classant_1_1_system.html#ad6bf29e3f5e7f405be25de05ca0695ab',1,'ant::System']]],
-  ['setid',['setId',['../classant_1_1_component.html#a31f6b495e24df1a2da55bc55461ba070',1,'ant::Component']]],
-  ['setname',['setName',['../classant_1_1_entity.html#af0d4541cfec26963b714d500f8fe5f48',1,'ant::Entity::setName()'],['../classant_1_1_system.html#a231f9fc93b55ee67deb9597ae6be13ba',1,'ant::System::setName()']]],
-  ['setparticles',['setParticles',['../classant_1_1_destructable_component.html#a7aac5d28dbfe03a3b6094a5d673c324a',1,'ant::DestructableComponent']]],
-  ['setrequiredcomponents',['setRequiredComponents',['../classant_1_1_system.html#a35662ff3739ff4290df1106bfdccfaca',1,'ant::System']]],
-  ['setsprite',['setSprite',['../classant_1_1_sprite_component.html#acae1d90e181121c2335231900e19a4fc',1,'ant::SpriteComponent']]],
-  ['settype',['setType',['../classant_1_1_event.html#a0695bd2c25c8f139c9ba9a1f34073791',1,'ant::Event']]],
-  ['spritecomponent',['SpriteComponent',['../classant_1_1_sprite_component.html#a01927ad35eef2de224c8686cade6a0b3',1,'ant::SpriteComponent']]],
-  ['spritecomponent',['SpriteComponent',['../classant_1_1_sprite_component.html',1,'ant']]],
-  ['spritecomponent_2ehpp',['SpriteComponent.hpp',['../_sprite_component_8hpp.html',1,'']]],
-  ['subject',['Subject',['../classant_1_1_subject.html',1,'ant']]],
-  ['subject',['Subject',['../classant_1_1_subject.html#abead80bfd62dbf3e728c92c77662867c',1,'ant::Subject']]],
-  ['subject_2ehpp',['Subject.hpp',['../_subject_8hpp.html',1,'']]],
-  ['system',['System',['../classant_1_1_system.html',1,'ant']]],
-  ['system',['System',['../classant_1_1_system.html#aa989449604319d4b374b44f68fc8cf26',1,'ant::System']]],
-  ['system_2ehpp',['System.hpp',['../_system_8hpp.html',1,'']]]
+  ['observer',['Observer',['../d4/d50/classant_1_1_observer.html',1,'ant']]],
+  ['observer',['Observer',['../d4/d50/classant_1_1_observer.html#ae4bf1823b64695b67dd10d3f904b17e6',1,'ant::Observer']]],
+  ['observer_2ehpp',['Observer.hpp',['../da/dc7/_observer_8hpp.html',1,'']]],
+  ['oncollision',['OnCollision',['../dc/df5/classant_1_1_game_event_dispatcher.html#acc8de0bd6aa32b48a0c3cdb7c8b3b19f',1,'ant::GameEventDispatcher']]],
+  ['onnotify',['onNotify',['../d4/d50/classant_1_1_observer.html#a4f03efedb538d91297ebd7341bc4698c',1,'ant::Observer::onNotify()'],['../d9/d8f/classant_1_1digging_system.html#a7d7d26547db306b1187e0ede4d022836',1,'ant::diggingSystem::onNotify()'],['../d6/d6c/classant_1_1movement_system.html#ab950deb32094a7c4e2ee2663c72b7ed7',1,'ant::movementSystem::onNotify()']]],
+  ['ontransport',['OnTransport',['../dc/df5/classant_1_1_game_event_dispatcher.html#a15cd9f5aa3017bbcb29cf1cfc9d2f6fb',1,'ant::GameEventDispatcher']]],
+  ['operator_3d_3d',['operator==',['../dc/d73/classant_1_1_entity.html#a379c70555ca47177ec607a992ef97f3f',1,'ant::Entity::operator==(const Entity &amp;e) const '],['../dc/d73/classant_1_1_entity.html#ac4965e92e1827c22718b8f13b67f7c66',1,'ant::Entity::operator==(const std::string &amp;name) const ']]]
 ];

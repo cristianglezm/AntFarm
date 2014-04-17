@@ -8,6 +8,13 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
@@ -23,9 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">AntFarm
-   &#160;<span id="projectnumber">0.1</span>
    </div>
-   <div id="projectbrief">A Game About Ants Wars</div>
   </td>
  </tr>
  </tbody>
@@ -68,6 +73,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('class_components_mask.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -82,7 +102,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">ComponentsMask Member List</div>  </div>
@@ -91,19 +110,24 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <p>This is the complete list of members for <a class="el" href="class_components_mask.html">ComponentsMask</a>, including all inherited members.</p>
 <table class="directory">
+  <tr class="even"><td class="entry"><a class="el" href="class_components_mask.html#ab32c9febcb2a0d312b03b41f777a23c2">COMPONENT_ANIMATION</a></td><td class="entry"><a class="el" href="class_components_mask.html">ComponentsMask</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_components_mask.html#a81ccaf0bf7344c970bc8474df2625ba7">COMPONENT_BOUNDS</a></td><td class="entry"><a class="el" href="class_components_mask.html">ComponentsMask</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_components_mask.html#af9ec785367e18857389d34be89269879">COMPONENT_DESTRUCTABLE</a></td><td class="entry"><a class="el" href="class_components_mask.html">ComponentsMask</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
   <tr><td class="entry"><a class="el" href="class_components_mask.html#ae31122d75c7339ec59b7d28e14762f61">COMPONENT_EGGS</a></td><td class="entry"><a class="el" href="class_components_mask.html">ComponentsMask</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_components_mask.html#a808a78a4e70a408e3b5d6ab18f36d94e">COMPONENT_HORNS</a></td><td class="entry"><a class="el" href="class_components_mask.html">ComponentsMask</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_components_mask.html#ab7d94963e3212138f6fc628b1edf93e6">COMPONENT_MOVEMENT</a></td><td class="entry"><a class="el" href="class_components_mask.html">ComponentsMask</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_components_mask.html#a65df1295d217a6d29d7221447fe06da5">COMPONENT_NONE</a></td><td class="entry"><a class="el" href="class_components_mask.html">ComponentsMask</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_components_mask.html#ab05302f9381801724a58273ff83ad2a6">COMPONENT_SPRITE</a></td><td class="entry"><a class="el" href="class_components_mask.html">ComponentsMask</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_components_mask.html#a3a66579e45c351c13abe63e61f2eaa0a">COMPONENT_TRANSFORM</a></td><td class="entry"><a class="el" href="class_components_mask.html">ComponentsMask</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_components_mask.html#a65df1295d217a6d29d7221447fe06da5">COMPONENT_NONE</a></td><td class="entry"><a class="el" href="class_components_mask.html">ComponentsMask</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_components_mask.html#ab05302f9381801724a58273ff83ad2a6">COMPONENT_SPRITE</a></td><td class="entry"><a class="el" href="class_components_mask.html">ComponentsMask</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_components_mask.html#a3a66579e45c351c13abe63e61f2eaa0a">COMPONENT_TRANSFORM</a></td><td class="entry"><a class="el" href="class_components_mask.html">ComponentsMask</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_components_mask.html#ac7fff00913ea1c8b225c90b02ecd3243">COMPONENT_VELOCITY</a></td><td class="entry"><a class="el" href="class_components_mask.html">ComponentsMask</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
 </table></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 28 2014 13:34:05 for AntFarm by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated on Wed Apr 16 2014 20:46:40 for AntFarm by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+  </ul>
+</div>
 </body>
 </html>

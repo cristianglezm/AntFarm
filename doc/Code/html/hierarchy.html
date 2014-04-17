@@ -8,6 +8,13 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
@@ -25,7 +32,7 @@
    <div id="projectname">AntFarm
    &#160;<span id="projectnumber">0.1</span>
    </div>
-   <div id="projectbrief">A Game About Ants Wars</div>
+   <div id="projectbrief">Game about Ants...</div>
   </td>
  </tr>
  </tbody>
@@ -69,12 +76,26 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     </ul>
   </div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('hierarchy.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -90,27 +111,50 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <div class="textblock">This inheritance list is sorted roughly, but not completely, alphabetically:</div><div class="directory">
 <div class="levels">[detail level <span onclick="javascript:toggleLevel(1);">1</span><span onclick="javascript:toggleLevel(2);">2</span>]</div><table class="directory">
-<tr id="row_0_" class="even"><td class="entry"><img id="arr_0_" src="ftv2mnode.png" alt="o" width="16" height="22" onclick="toggleFolder('0_')"/><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classant_1_1_component.html" target="_self">ant::Component</a></td><td class="desc"></td></tr>
-<tr id="row_0_0_"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classant_1_1_destructable_component.html" target="_self">ant::DestructableComponent</a></td><td class="desc"></td></tr>
-<tr id="row_0_1_" class="even"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2lastnode.png" alt="\" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classant_1_1_sprite_component.html" target="_self">ant::SpriteComponent</a></td><td class="desc"></td></tr>
-<tr id="row_1_"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="class_components_mask.html" target="_self">ComponentsMask</a></td><td class="desc"></td></tr>
-<tr id="row_2_" class="even"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classant_1_1_entity.html" target="_self">ant::Entity</a></td><td class="desc"></td></tr>
-<tr id="row_3_"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classant_1_1_entity_manager.html" target="_self">ant::EntityManager</a></td><td class="desc"></td></tr>
-<tr id="row_4_" class="even"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classant_1_1_event.html" target="_self">ant::Event</a></td><td class="desc"></td></tr>
-<tr id="row_5_"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classant_1_1_event_queue.html" target="_self">ant::EventQueue</a></td><td class="desc"></td></tr>
-<tr id="row_6_" class="even"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classant_1_1_game.html" target="_self">ant::Game</a></td><td class="desc"></td></tr>
-<tr id="row_7_"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classant_1_1_observer.html" target="_self">ant::Observer</a></td><td class="desc"></td></tr>
-<tr id="row_8_" class="even"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classant_1_1_subject.html" target="_self">ant::Subject</a></td><td class="desc"></td></tr>
-<tr id="row_9_"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classant_1_1_system.html" target="_self">ant::System</a></td><td class="desc"></td></tr>
-<tr id="row_10_" class="even"><td class="entry"><img src="ftv2lastnode.png" alt="\" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="classant_1_1_world.html" target="_self">ant::World</a></td><td class="desc"></td></tr>
+<tr id="row_0_" class="even"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="d1/dd6/classant_1_1_asset_manager.html" target="_self">ant::AssetManager</a></td><td class="desc">Clase para tener todos los assets(imagenes,texturas,etc) del juego </td></tr>
+<tr id="row_1_"><td class="entry"><img id="arr_1_" src="ftv2mnode.png" alt="o" width="16" height="22" onclick="toggleFolder('1_')"/><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="d4/dd4/classant_1_1base_component.html" target="_self">ant::baseComponent</a></td><td class="desc">Clase base de componente </td></tr>
+<tr id="row_1_0_" class="even"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2lastnode.png" alt="\" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="d3/d70/classant_1_1_component.html" target="_self">ant::Component&lt; T &gt;</a></td><td class="desc">Clase especializada de <a class="el" href="d4/dd4/classant_1_1base_component.html" title="Clase base de componente. ">baseComponent</a> </td></tr>
+<tr id="row_2_"><td class="entry"><img id="arr_2_" src="ftv2mnode.png" alt="o" width="16" height="22" onclick="toggleFolder('2_')"/><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="d3/dce/classant_1_1base_event.html" target="_self">ant::baseEvent</a></td><td class="desc">Clase Base de eventos </td></tr>
+<tr id="row_2_0_" class="even"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2lastnode.png" alt="\" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="d3/d03/classant_1_1_event.html" target="_self">ant::Event&lt; T &gt;</a></td><td class="desc">Clase Especializada de evento </td></tr>
+<tr id="row_3_"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="d4/df6/classant_1_1_component_factory.html" target="_self">ant::ComponentFactory</a></td><td class="desc">Clase para crear los componentes de las entidades </td></tr>
+<tr id="row_4_" class="even"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="de/df0/classant_1_1_component_settings.html" target="_self">ant::ComponentSettings</a></td><td class="desc">Clase para la configuracion de los componentes en <a class="el" href="db/d10/classant_1_1_entity_factory.html" title="Clase para crear las entidades del juego. ">EntityFactory</a> </td></tr>
+<tr id="row_5_"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="d1/d0a/class_components_mask.html" target="_self">ComponentsMask</a></td><td class="desc">Clase estatica para enumeracion de componentes </td></tr>
+<tr id="row_6_" class="even"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="de/d2d/classant_1_1_config.html" target="_self">ant::Config</a></td><td class="desc"></td></tr>
+<tr id="row_7_"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="dc/d73/classant_1_1_entity.html" target="_self">ant::Entity</a></td><td class="desc">Clase para tener los componentes, solo puede tener un componente de cada tipo </td></tr>
+<tr id="row_8_" class="even"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="db/d10/classant_1_1_entity_factory.html" target="_self">ant::EntityFactory</a></td><td class="desc">Clase para crear las entidades del juego </td></tr>
+<tr id="row_9_"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="dd/d12/classant_1_1_entity_manager.html" target="_self">ant::EntityManager</a></td><td class="desc">Clase Para manejar las entidades </td></tr>
+<tr id="row_10_" class="even"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="db/dec/classant_1_1_event_queue.html" target="_self">ant::EventQueue</a></td><td class="desc">Clase donde se almacenan los eventos para ser procesados despues </td></tr>
+<tr id="row_11_"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="dd/ded/class_event_type.html" target="_self">EventType</a></td><td class="desc">Tipos de eventos </td></tr>
+<tr id="row_12_" class="even"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="d1/db7/classant_1_1_game.html" target="_self">ant::Game</a></td><td class="desc">Clase Principal del juego </td></tr>
+<tr id="row_13_"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="dc/df5/classant_1_1_game_event_dispatcher.html" target="_self">ant::GameEventDispatcher</a></td><td class="desc">Clase encargada de processar eventos </td></tr>
+<tr id="row_14_" class="even"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="d0/dcb/classant_1_1_level.html" target="_self">ant::Level</a></td><td class="desc"></td></tr>
+<tr id="row_15_"><td class="entry"><img id="arr_15_" src="ftv2mnode.png" alt="o" width="16" height="22" onclick="toggleFolder('15_')"/><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="d4/d50/classant_1_1_observer.html" target="_self">ant::Observer</a></td><td class="desc">Interfaz para los observadores </td></tr>
+<tr id="row_15_0_" class="even"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="d9/d8f/classant_1_1digging_system.html" target="_self">ant::diggingSystem</a></td><td class="desc"></td></tr>
+<tr id="row_15_1_"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2lastnode.png" alt="\" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="d6/d6c/classant_1_1movement_system.html" target="_self">ant::movementSystem</a></td><td class="desc"></td></tr>
+<tr id="row_16_" class="even"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="d6/d94/classant_1_1_utils_1_1_quadtree.html" target="_self">ant::Utils::Quadtree</a></td><td class="desc">Clase para reducir el numero de test de collisiones </td></tr>
+<tr id="row_17_"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="d5/d29/classant_1_1_subject.html" target="_self">ant::Subject</a></td><td class="desc">Tema al cual se suscriben los observadores <a class="el" href="d4/d50/classant_1_1_observer.html" title="Interfaz para los observadores. ">Observer</a> </td></tr>
+<tr id="row_18_" class="even"><td class="entry"><img id="arr_18_" src="ftv2mnode.png" alt="o" width="16" height="22" onclick="toggleFolder('18_')"/><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="de/d48/classant_1_1_system.html" target="_self">ant::System</a></td><td class="desc">Clase base para los sistemas </td></tr>
+<tr id="row_18_0_"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="dc/de8/classant_1_1collision_system.html" target="_self">ant::collisionSystem</a></td><td class="desc"></td></tr>
+<tr id="row_18_1_" class="even"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="d9/d8f/classant_1_1digging_system.html" target="_self">ant::diggingSystem</a></td><td class="desc"></td></tr>
+<tr id="row_18_2_"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="dd/d19/classant_1_1input_system.html" target="_self">ant::inputSystem</a></td><td class="desc"></td></tr>
+<tr id="row_18_3_" class="even"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="d6/d6c/classant_1_1movement_system.html" target="_self">ant::movementSystem</a></td><td class="desc"></td></tr>
+<tr id="row_18_4_"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2lastnode.png" alt="\" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="d1/def/classant_1_1render_system.html" target="_self">ant::renderSystem</a></td><td class="desc"></td></tr>
+<tr id="row_19_" class="even"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="d6/dcc/classant_1_1_system_factory.html" target="_self">ant::SystemFactory</a></td><td class="desc"></td></tr>
+<tr id="row_20_"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="de/dce/classant_1_1_system_manager.html" target="_self">ant::SystemManager</a></td><td class="desc"></td></tr>
+<tr id="row_21_" class="even"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="de/dc7/classant_1_1_world.html" target="_self">ant::World</a></td><td class="desc"></td></tr>
+<tr id="row_22_"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="d0/df7/classant_1_1_world_factory.html" target="_self">ant::WorldFactory</a></td><td class="desc"></td></tr>
+<tr id="row_23_" class="even"><td class="entry"><img src="ftv2lastnode.png" alt="\" width="16" height="22" /><img src="ftv2cl.png" alt="C" width="24" height="22" /><a class="el" href="dc/dbd/classant_1_1_world_manager.html" target="_self">ant::WorldManager</a></td><td class="desc"></td></tr>
 </table>
 </div><!-- directory -->
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 28 2014 13:34:05 for AntFarm by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated on Thu Apr 17 2014 20:51:05 for AntFarm by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+  </ul>
+</div>
 </body>
 </html>

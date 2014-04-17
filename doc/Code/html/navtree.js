@@ -2,16 +2,22 @@ var NAVTREE =
 [
   [ "AntFarm", "index.html", [
     [ "Namespaces", null, [
-      [ "Namespace List", "namespaces.html", "namespaces" ]
+      [ "Namespace List", "namespaces.html", "namespaces" ],
+      [ "Namespace Members", "namespacemembers.html", [
+        [ "All", "namespacemembers.html", null ],
+        [ "Functions", "namespacemembers_func.html", null ],
+        [ "Variables", "namespacemembers_vars.html", null ]
+      ] ]
     ] ],
     [ "Classes", null, [
       [ "Class List", "annotated.html", "annotated" ],
       [ "Class Index", "classes.html", null ],
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
-        [ "All", "functions.html", null ],
-        [ "Functions", "functions_func.html", null ],
-        [ "Variables", "functions_vars.html", null ]
+        [ "All", "functions.html", "functions_dup" ],
+        [ "Functions", "functions_func.html", "functions_func" ],
+        [ "Variables", "functions_vars.html", null ],
+        [ "Typedefs", "functions_type.html", null ]
       ] ]
     ] ],
     [ "Files", null, [
@@ -26,7 +32,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_component_8cpp.html"
+"annotated.html",
+"db/d10/classant_1_1_entity_factory.html#a771bc1c1e76874d157b3a58a8fbed3e2"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

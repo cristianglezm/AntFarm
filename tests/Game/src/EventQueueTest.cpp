@@ -1,12 +1,12 @@
 #include <../include/EventQueueTest.hpp>
 #include <iostream>
 #include <EventQueue/EventQueue.hpp>
-
+#include <Utils/Utility.hpp>
 bool EventQueueTest(){
     std::cout << "EventQueueTest:---------------" << std::endl;
     ant::EventQueue eventQueue;
     for(int i=0;i<10;++i){
-        eventQueue.push(ant::makeSharedPtr<ant::Event<int,std::string>>(i,1,"Test Event"));
+        eventQueue.push(ant::Utils::makeSharedPtr<ant::Event<int,std::string>>(i,1,"Test Event"));
     }
     std::cout << "Processing Queue..." << std::endl;
     while(!eventQueue.isEmpty()){

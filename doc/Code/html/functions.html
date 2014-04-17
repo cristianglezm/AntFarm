@@ -8,6 +8,13 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
@@ -25,7 +32,7 @@
    <div id="projectname">AntFarm
    &#160;<span id="projectnumber">0.1</span>
    </div>
-   <div id="projectbrief">A Game About Ants Wars</div>
+   <div id="projectbrief">Game about Ants...</div>
   </td>
  </tr>
  </tbody>
@@ -73,33 +80,55 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li class="current"><a href="functions.html"><span>All</span></a></li>
       <li><a href="functions_func.html"><span>Functions</span></a></li>
       <li><a href="functions_vars.html"><span>Variables</span></a></li>
+      <li><a href="functions_type.html"><span>Typedefs</span></a></li>
     </ul>
   </div>
   <div id="navrow4" class="tabs3">
     <ul class="tablist">
-      <li><a href="#index_a"><span>a</span></a></li>
-      <li><a href="#index_c"><span>c</span></a></li>
-      <li><a href="#index_d"><span>d</span></a></li>
-      <li><a href="#index_e"><span>e</span></a></li>
-      <li><a href="#index_f"><span>f</span></a></li>
-      <li><a href="#index_g"><span>g</span></a></li>
-      <li><a href="#index_i"><span>i</span></a></li>
-      <li><a href="#index_n"><span>n</span></a></li>
-      <li><a href="#index_o"><span>o</span></a></li>
-      <li><a href="#index_p"><span>p</span></a></li>
-      <li><a href="#index_r"><span>r</span></a></li>
-      <li><a href="#index_s"><span>s</span></a></li>
-      <li><a href="#index_u"><span>u</span></a></li>
-      <li class="current"><a href="#index_~"><span>~</span></a></li>
+      <li class="current"><a href="functions.html#index_a"><span>a</span></a></li>
+      <li><a href="functions_b.html#index_b"><span>b</span></a></li>
+      <li><a href="functions_c.html#index_c"><span>c</span></a></li>
+      <li><a href="functions_d.html#index_d"><span>d</span></a></li>
+      <li><a href="functions_e.html#index_e"><span>e</span></a></li>
+      <li><a href="functions_f.html#index_f"><span>f</span></a></li>
+      <li><a href="functions_g.html#index_g"><span>g</span></a></li>
+      <li><a href="functions_i.html#index_i"><span>i</span></a></li>
+      <li><a href="functions_l.html#index_l"><span>l</span></a></li>
+      <li><a href="functions_m.html#index_m"><span>m</span></a></li>
+      <li><a href="functions_n.html#index_n"><span>n</span></a></li>
+      <li><a href="functions_o.html#index_o"><span>o</span></a></li>
+      <li><a href="functions_p.html#index_p"><span>p</span></a></li>
+      <li><a href="functions_q.html#index_q"><span>q</span></a></li>
+      <li><a href="functions_r.html#index_r"><span>r</span></a></li>
+      <li><a href="functions_s.html#index_s"><span>s</span></a></li>
+      <li><a href="functions_t.html#index_t"><span>t</span></a></li>
+      <li><a href="functions_u.html#index_u"><span>u</span></a></li>
+      <li><a href="functions_v.html#index_v"><span>v</span></a></li>
+      <li><a href="functions_w.html#index_w"><span>w</span></a></li>
+      <li><a href="functions_~.html#index_~"><span>~</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('functions.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -113,249 +142,54 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <h3><a class="anchor" id="index_a"></a>- a -</h3><ul>
 <li>addComponent()
-: <a class="el" href="classant_1_1_entity.html#acb789659ebe9dd7dfc0a599360bbc104">ant::Entity</a>
+: <a class="el" href="dc/d73/classant_1_1_entity.html#a4fe4572015760b0e486df6c1b94d3f96">ant::Entity</a>
 </li>
 <li>addEntities()
-: <a class="el" href="classant_1_1_entity_manager.html#a05be99f0020b73a60d195eeb1cb86052">ant::EntityManager</a>
+: <a class="el" href="dd/d12/classant_1_1_entity_manager.html#a2f7ad52093982066f82a97c525501320">ant::EntityManager</a>
 </li>
 <li>addEntity()
-: <a class="el" href="classant_1_1_entity_manager.html#a6b7d7a04773c583250fec32b7810b34b">ant::EntityManager</a>
+: <a class="el" href="dd/d12/classant_1_1_entity_manager.html#af8cba501bcdac99f43f12047c8f857c4">ant::EntityManager</a>
+</li>
+<li>addFont()
+: <a class="el" href="d1/dd6/classant_1_1_asset_manager.html#a9a0d0fb10509492ef206e985d2a75636">ant::AssetManager</a>
+</li>
+<li>addImage()
+: <a class="el" href="d1/dd6/classant_1_1_asset_manager.html#ac318001e95d732e606cd13836869f9ae">ant::AssetManager</a>
 </li>
 <li>addObserver()
-: <a class="el" href="classant_1_1_subject.html#aff10466caf812154bede45606679a2ee">ant::Subject</a>
+: <a class="el" href="d5/d29/classant_1_1_subject.html#a827a268f281179d94cc92c1709a8283f">ant::Subject</a>
 </li>
-</ul>
-
-
-<h3><a class="anchor" id="index_c"></a>- c -</h3><ul>
-<li>Component()
-: <a class="el" href="classant_1_1_component.html#ae195384bc2708a72924a3e7e0d28efb1">ant::Component</a>
+<li>addSystem()
+: <a class="el" href="de/dce/classant_1_1_system_manager.html#a5a1222988ac6893cfeb16101509ee2bd">ant::SystemManager</a>
 </li>
-<li>COMPONENT_DESTRUCTABLE
-: <a class="el" href="class_components_mask.html#af9ec785367e18857389d34be89269879">ComponentsMask</a>
+<li>addTexture()
+: <a class="el" href="d1/dd6/classant_1_1_asset_manager.html#a5e98981fab8e9703cfd75c0d923dbb84">ant::AssetManager</a>
 </li>
-<li>COMPONENT_EGGS
-: <a class="el" href="class_components_mask.html#ae31122d75c7339ec59b7d28e14762f61">ComponentsMask</a>
+<li>addWorld()
+: <a class="el" href="dc/dbd/classant_1_1_world_manager.html#ae99e4466fbef273a555dd093bf46fbb5">ant::WorldManager</a>
 </li>
-<li>COMPONENT_HORNS
-: <a class="el" href="class_components_mask.html#a808a78a4e70a408e3b5d6ab18f36d94e">ComponentsMask</a>
+<li>Ant
+: <a class="el" href="db/d10/classant_1_1_entity_factory.html#ac2b28957b185c60643889aafa36badff">ant::EntityFactory</a>
 </li>
-<li>COMPONENT_MOVEMENT
-: <a class="el" href="class_components_mask.html#ab7d94963e3212138f6fc628b1edf93e6">ComponentsMask</a>
+<li>AntQueen
+: <a class="el" href="db/d10/classant_1_1_entity_factory.html#a594415115437cb5d4ed9a35c3a552725">ant::EntityFactory</a>
 </li>
-<li>COMPONENT_NONE
-: <a class="el" href="class_components_mask.html#a65df1295d217a6d29d7221447fe06da5">ComponentsMask</a>
+<li>AssetManager()
+: <a class="el" href="d1/dd6/classant_1_1_asset_manager.html#af830d626232696a9e2a7a652eccf3b0c">ant::AssetManager</a>
 </li>
-<li>COMPONENT_SPRITE
-: <a class="el" href="class_components_mask.html#ab05302f9381801724a58273ff83ad2a6">ComponentsMask</a>
-</li>
-<li>COMPONENT_TRANSFORM
-: <a class="el" href="class_components_mask.html#a3a66579e45c351c13abe63e61f2eaa0a">ComponentsMask</a>
-</li>
-</ul>
-
-
-<h3><a class="anchor" id="index_d"></a>- d -</h3><ul>
-<li>DestructableComponent()
-: <a class="el" href="classant_1_1_destructable_component.html#aa7b35114d171aedeffbe726f58867aa8">ant::DestructableComponent</a>
-</li>
-</ul>
-
-
-<h3><a class="anchor" id="index_e"></a>- e -</h3><ul>
-<li>Entity()
-: <a class="el" href="classant_1_1_entity.html#a7fe02d14320908c7b5eb080a113f1442">ant::Entity</a>
-</li>
-<li>EntityManager()
-: <a class="el" href="classant_1_1_entity_manager.html#a9d98e7cba15c2663b79df62f65b39a8f">ant::EntityManager</a>
-</li>
-<li>Event()
-: <a class="el" href="classant_1_1_event.html#a89f73ab742b467f6225a004ad2ba919a">ant::Event</a>
-</li>
-<li>EventQueue()
-: <a class="el" href="classant_1_1_event_queue.html#af570d6ef7f0c977c10194238773359ad">ant::EventQueue</a>
-</li>
-</ul>
-
-
-<h3><a class="anchor" id="index_f"></a>- f -</h3><ul>
-<li>front()
-: <a class="el" href="classant_1_1_event_queue.html#a9bb87578df41b8f051d11188ad81bce3">ant::EventQueue</a>
-</li>
-</ul>
-
-
-<h3><a class="anchor" id="index_g"></a>- g -</h3><ul>
-<li>getComponent()
-: <a class="el" href="classant_1_1_entity.html#af1c4df5d7ef8ecc6312b685be7422e7b">ant::Entity</a>
-</li>
-<li>getComponents()
-: <a class="el" href="classant_1_1_entity.html#a8e3c661b678e8fc9f7ae565980d1a14b">ant::Entity</a>
-</li>
-<li>getEntities()
-: <a class="el" href="classant_1_1_entity_manager.html#a7bb972b4ab9617ede99f6ffdd4e0a999">ant::EntityManager</a>
-</li>
-<li>getEntity()
-: <a class="el" href="classant_1_1_entity_manager.html#a4f577bfd80547a0fb6cd0b5e1f13a17b">ant::EntityManager</a>
-</li>
-<li>getEventQueue()
-: <a class="el" href="classant_1_1_system.html#ae381302dadb0e6bc57c64dfba4da668c">ant::System</a>
-</li>
-<li>getId()
-: <a class="el" href="classant_1_1_component.html#a3b571acf05f03678e8f2bcd05d981cc4">ant::Component</a>
-</li>
-<li>getMask()
-: <a class="el" href="classant_1_1_entity.html#a9fc1589241d55c31f5f98050cef949a2">ant::Entity</a>
-</li>
-<li>getName()
-: <a class="el" href="classant_1_1_entity.html#a0301903178a8a2ee5a31630852c72c2f">ant::Entity</a>
-, <a class="el" href="classant_1_1_system.html#ac6b6f258e6ae08f1f55f89d44d4a67d0">ant::System</a>
-</li>
-<li>getParticles()
-: <a class="el" href="classant_1_1_destructable_component.html#a4146962f572189ab775dbc487af71c80">ant::DestructableComponent</a>
-</li>
-<li>getRequiredComponts()
-: <a class="el" href="classant_1_1_system.html#a2d94338969f43d4fd2fd972deb099258">ant::System</a>
-</li>
-<li>getSprite()
-: <a class="el" href="classant_1_1_sprite_component.html#ac6c1d6f419d0ba8133e66b05f7d528f8">ant::SpriteComponent</a>
-</li>
-<li>getType()
-: <a class="el" href="classant_1_1_event.html#ae5e93906f5b3fdf0ed3d1423b114a65c">ant::Event</a>
-</li>
-</ul>
-
-
-<h3><a class="anchor" id="index_i"></a>- i -</h3><ul>
-<li>isEmpty()
-: <a class="el" href="classant_1_1_event_queue.html#a09b0e4a337d383abebf2e8adaa3e9c07">ant::EventQueue</a>
-</li>
-</ul>
-
-
-<h3><a class="anchor" id="index_n"></a>- n -</h3><ul>
-<li>notifyObservers()
-: <a class="el" href="classant_1_1_subject.html#abc49765402e9fb0616356d28f26c1437">ant::Subject</a>
-</li>
-</ul>
-
-
-<h3><a class="anchor" id="index_o"></a>- o -</h3><ul>
-<li>Observer()
-: <a class="el" href="classant_1_1_observer.html#ae4bf1823b64695b67dd10d3f904b17e6">ant::Observer</a>
-</li>
-<li>onNotify()
-: <a class="el" href="classant_1_1_observer.html#a18662e2363308e056ab1c2de145b34c0">ant::Observer</a>
-</li>
-<li>operator=()
-: <a class="el" href="classant_1_1_sprite_component.html#aa2881d478489be19c8dc81288b4c4649">ant::SpriteComponent</a>
-</li>
-<li>operator==()
-: <a class="el" href="classant_1_1_component.html#a6d2a0fcaf2a5eb82b266c8be0eb7d160">ant::Component</a>
-, <a class="el" href="classant_1_1_entity.html#a379c70555ca47177ec607a992ef97f3f">ant::Entity</a>
-</li>
-</ul>
-
-
-<h3><a class="anchor" id="index_p"></a>- p -</h3><ul>
-<li>pop()
-: <a class="el" href="classant_1_1_event_queue.html#a0cfcbf2d905b8204b2e81f4db0408dfb">ant::EventQueue</a>
-</li>
-<li>push()
-: <a class="el" href="classant_1_1_event_queue.html#a881e162519d4f8e1127d07fbdfb7107e">ant::EventQueue</a>
-</li>
-</ul>
-
-
-<h3><a class="anchor" id="index_r"></a>- r -</h3><ul>
-<li>removeComponent()
-: <a class="el" href="classant_1_1_entity.html#a33fe2d7add83f9fd18c2ac47d1313b0e">ant::Entity</a>
-</li>
-<li>removeEntity()
-: <a class="el" href="classant_1_1_entity_manager.html#aee38d41556be9ed55ae00e43fa891aca">ant::EntityManager</a>
-</li>
-<li>removeObserver()
-: <a class="el" href="classant_1_1_subject.html#aa785c2de2b27a9c863e03f4c94054a64">ant::Subject</a>
-</li>
-<li>render()
-: <a class="el" href="classant_1_1_system.html#ae710ecdf5c06d22466ec480bbfebceb0">ant::System</a>
-, <a class="el" href="classant_1_1_world.html#a5635db988e4b9ecc0c951cf526d015a3">ant::World</a>
-</li>
-</ul>
-
-
-<h3><a class="anchor" id="index_s"></a>- s -</h3><ul>
-<li>setComponents()
-: <a class="el" href="classant_1_1_entity.html#a16e9507bc9c9180b210bcc3895cf4648">ant::Entity</a>
-</li>
-<li>setEventQueue()
-: <a class="el" href="classant_1_1_system.html#ad6bf29e3f5e7f405be25de05ca0695ab">ant::System</a>
-</li>
-<li>setId()
-: <a class="el" href="classant_1_1_component.html#a31f6b495e24df1a2da55bc55461ba070">ant::Component</a>
-</li>
-<li>setName()
-: <a class="el" href="classant_1_1_entity.html#af0d4541cfec26963b714d500f8fe5f48">ant::Entity</a>
-, <a class="el" href="classant_1_1_system.html#a231f9fc93b55ee67deb9597ae6be13ba">ant::System</a>
-</li>
-<li>setParticles()
-: <a class="el" href="classant_1_1_destructable_component.html#a7aac5d28dbfe03a3b6094a5d673c324a">ant::DestructableComponent</a>
-</li>
-<li>setRequiredComponents()
-: <a class="el" href="classant_1_1_system.html#a35662ff3739ff4290df1106bfdccfaca">ant::System</a>
-</li>
-<li>setSprite()
-: <a class="el" href="classant_1_1_sprite_component.html#acae1d90e181121c2335231900e19a4fc">ant::SpriteComponent</a>
-</li>
-<li>setType()
-: <a class="el" href="classant_1_1_event.html#a0695bd2c25c8f139c9ba9a1f34073791">ant::Event</a>
-</li>
-<li>SpriteComponent()
-: <a class="el" href="classant_1_1_sprite_component.html#a01927ad35eef2de224c8686cade6a0b3">ant::SpriteComponent</a>
-</li>
-<li>Subject()
-: <a class="el" href="classant_1_1_subject.html#abead80bfd62dbf3e728c92c77662867c">ant::Subject</a>
-</li>
-<li>System()
-: <a class="el" href="classant_1_1_system.html#aa989449604319d4b374b44f68fc8cf26">ant::System</a>
-</li>
-</ul>
-
-
-<h3><a class="anchor" id="index_u"></a>- u -</h3><ul>
-<li>update()
-: <a class="el" href="classant_1_1_system.html#ae5aded47b8ac35e85044747b847a6440">ant::System</a>
-, <a class="el" href="classant_1_1_world.html#a5150296483f2b6f5dc7294faa9978344">ant::World</a>
-</li>
-</ul>
-
-
-<h3><a class="anchor" id="index_~"></a>- ~ -</h3><ul>
-<li>~Entity()
-: <a class="el" href="classant_1_1_entity.html#a125b5f8608b1ff872a842060003ffe32">ant::Entity</a>
-</li>
-<li>~EntityManager()
-: <a class="el" href="classant_1_1_entity_manager.html#af0dac6b2bdf3d16aa956ad82f23dc917">ant::EntityManager</a>
-</li>
-<li>~EventQueue()
-: <a class="el" href="classant_1_1_event_queue.html#a3aff7ae733fc695b0629e623741c377e">ant::EventQueue</a>
-</li>
-<li>~Observer()
-: <a class="el" href="classant_1_1_observer.html#a640011b3beb875ff8f9adf181aedefc3">ant::Observer</a>
-</li>
-<li>~Subject()
-: <a class="el" href="classant_1_1_subject.html#a6aefd4023994173e82fcef3c0ce9682f">ant::Subject</a>
-</li>
-<li>~System()
-: <a class="el" href="classant_1_1_system.html#aa8ab4b23645603d6f50934d3ebe8b37d">ant::System</a>
+<li>ASSETS_GAME_JSON
+: <a class="el" href="de/d2d/classant_1_1_config.html#a76f6edfa4ffe448ff6d874d438d59feb">ant::Config</a>
 </li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 28 2014 13:34:06 for AntFarm by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.6
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated on Thu Apr 17 2014 20:51:05 for AntFarm by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+  </ul>
+</div>
 </body>
 </html>

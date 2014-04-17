@@ -38,7 +38,7 @@ std::cout << "renderSystemTest Test -----------" << std::endl;
             e->addComponent(cf.createSprite("Ant"));
             e->addComponent(cf.createTransform(sf::Vector2f(100,50*j),sf::Vector2f(1,1),45));
             e->addComponent(cf.createBounds(sf::FloatRect(0,0,50,50)));
-            e->addComponent(cf.createVelocity(sf::Vector2f(0,0),0.06,0.1,1));
+            e->addComponent(cf.createVelocity(0.06,0.1,1));
             em->addEntity(std::move(e));
         }
         {

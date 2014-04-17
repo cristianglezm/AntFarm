@@ -1,6 +1,7 @@
 #include <../include/SystemTest.hpp>
 #include <Components/ComponentMask.hpp>
 #include <iostream>
+#include <Utils/Utility.hpp>
     testSystem::testSystem(long int req):ant::System(req){
         name = "testSystem";
     }
@@ -9,7 +10,7 @@
         for(auto& entity : em->getEntities()){
             if((entity->getMask() & RequiredComponents) == RequiredComponents){
                 std::cout << "Entity has the requeriments." << std::endl;
-                eventQueue->push(ant::makeSharedPtr<ant::Event<int,std::string>>(3,3,"Test de evento con templates"));
+                eventQueue->push(ant::Utils::makeSharedPtr<ant::Event<int,std::string>>(3,3,"Test de evento con templates"));
             }else{
                 std::cout << "Entity hasnt the requeriments." << std::endl;
             }

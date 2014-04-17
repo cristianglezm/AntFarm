@@ -5,22 +5,87 @@
 #include <memory>
 #include <Entity/Entity.hpp>
 namespace ant{
+    /**
+     * @brief Clase Para manejar las entidades.
+     * @author Cristian Glez <Cristian.glez.m@gmail.com>
+     * @version 0.1
+     */
     class EntityManager{
-        private:
-            std::list<std::unique_ptr<Entity> > entities;
         public:
+            /**
+             * @brief Iterador del EntityManager
+             */
             typedef std::list<std::unique_ptr<Entity>>::iterator iterator;
+            /**
+             * @brief Contenedor utilizado por el EntityManager.
+             */
             typedef std::list<std::unique_ptr<Entity>> list;
+            /**
+             * @brief Constructor por defecto.
+             */
             EntityManager();
+            /**
+             * @brief Añade una entidad al manager.
+             * @param e std::unique_ptr<Entity>
+             */
             void addEntity(std::unique_ptr<Entity> e);
+            /**
+             * @brief Elimina una entidad del manager.
+             *
+             * Elimina la primera entidad que sea igual a la proporcionada.
+             * @param e std::unique_ptr<Entity>
+             */
             void removeEntity(std::unique_ptr<Entity>& e);
+            /**
+             * @brief Elimina la primera entidad que coincida el nombre.
+             *
+             * Devuelve un iterador por si estas iterando y
+             * necesitas borrar alguna entidad.
+             *
+             * @param name std::string nombre de la entidad.
+             * @return iterator la posicion siguiente de la entidad eliminada.
+             */
             iterator removeEntity(const std::string& name);
+            /**
+             * @brief Elimina la primera entidad que coincida.
+             *
+             * Devuelve un iterador por si estas iterando y
+             * necesitas borrar alguna entidad.
+             *
+             * @return iterator la posicion siguiente de la entidad eliminada.
+             */
             iterator removeEntity(iterator it);
+            /**
+             * @brief Obtiene la primera entidad que tenga el nombre proporcionado.
+             *
+             * Si no encuentra la entidad devuelve un puntero nulo(nullptr).
+             *
+             * @param name std::string nombre de la entidad.
+             * @return Entity * naked pointer hacia la entidad o nullptr si no la encuentra.
+             */
             Entity* getEntity(const std::string& name);
-            void addEntities(std::list<std::unique_ptr<Entity> > e);
-            inline std::list<std::unique_ptr<Entity> >& getEntities(){ return this->entities; }
+            /**
+             * @brief Añade todas las entidades a la vez.
+             * @param e list lista de entidades.
+             */
+            void addEntities(list e);
+            /**
+             * @brief devuelve la lista de las entidades.
+             * @return list &
+             */
+            inline list& getEntities(){ return this->entities; }
+            /**
+             * @brief Transfiere la primera entidad que coincida con el nombre.
+             *
+             * Transfiere la posesion(ownership) de la entidad y la elimina del contenedor.
+             *
+             * @param name std::string nombre de la entidad a transferir.
+             * @return std::unique_ptr<Entity> entidad transferida o nullptr si no es encontrada.
+             */
             std::unique_ptr<Entity> Transfer(const std::string& name);
             ~EntityManager();
+        private:
+            list entities;
     };
 }
 #endif // ENTITY_MANAGER_H
