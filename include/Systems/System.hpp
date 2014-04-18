@@ -9,30 +9,82 @@
 namespace ant{
     /**
      * @brief Clase base para los sistemas.
-     * @author Cristian Gonzalez Moreno <Cristian.glez.m@gmail.com>
+     * @author Cristian Glez <Cristian.glez.m@gmail.com>
      * @version 0.1
      */
     class System{
+        public:
+            /**
+             * @brief Constructor por defecto.
+             */
+            System();
+            /**
+             * @brief Constructor con los requisitos de este sistema.
+             * @param req long int
+             */
+            System(long int req);
+            /**
+             * @brief Constructor con los requisitos, EventQueue y EntityManager
+             * @param req long int
+             * @param em std::shared_ptr<EntityManager>
+             * @param eventQueue std::shared_ptr<EventQueue>
+             */
+            System(long int req,std::shared_ptr<EntityManager> em,std::shared_ptr<EventQueue> eventQueue);
+            /**
+             * @brief Setter para los requisitos necesarios.
+             * @param req long int
+             */
+            void setRequiredComponents(long int req);
+            /**
+             * @brief Getter de los requisitos para el sistema.
+             */
+            inline long int getRequiredComponts(){ return RequiredComponents; }
+            /**
+             * @brief Setter para la EventQueue
+             * @param eq std::shared_ptr<EventQueue>
+             */
+            void setEventQueue(std::shared_ptr<EventQueue> eq);
+            /**
+             * @brief Getter para la EventQueue
+             * @return std::shared_ptr<EventQueue>
+             */
+            inline std::shared_ptr<EventQueue> getEventQueue(){ return eventQueue; }
+            /**
+             * @brief Setter Para el nombre del sistema.
+             * @param name std::string
+             */
+            void setName(std::string name);
+            /**
+             * @brief Getter para el nombre del sistema
+             * @return std::string
+             */
+            inline std::string getName() const { return this->name; }
+            /**
+             * @brief Setter para el EntityManager
+             * @param em std::shared_ptr<EntityManager>
+             */
+            void setEntityManager(std::shared_ptr<EntityManager> em);
+            /**
+             * @brief Getter para el EntityManager
+             * @return std::shared_ptr<EntityManager>
+             */
+            inline std::shared_ptr<EntityManager> getEntityManager(){ return this->em; }
+            /**
+             * @brief Metodo abstracto para dibujar en la pantalla.
+             * @param win sf::RenderWindow & referencia a la pantalla para dibujar.
+             */
+            virtual void render(sf::RenderWindow& win) = 0;
+            /**
+             * @brief Metodo abstracto para actualizar entidades.
+             * @param dt sf::Time delta time para los calculos.
+             */
+            virtual void update(sf::Time dt) = 0;
+            virtual ~System();
         protected:
             long int RequiredComponents;
             std::shared_ptr<EventQueue> eventQueue;
             std::shared_ptr<EntityManager> em;
             std::string name;
-        public:
-            System();
-            System(long int req);
-            System(long int req,std::shared_ptr<EntityManager> em,std::shared_ptr<EventQueue> eventQueue);
-            void setRequiredComponents(long int req);
-            inline long int getRequiredComponts(){ return RequiredComponents; }
-            void setEventQueue(std::shared_ptr<EventQueue> eq);
-            inline std::shared_ptr<EventQueue> getEventQueue(){ return eventQueue; }
-            void setName(std::string name);
-            inline std::string getName() const { return this->name; }
-            void setEntityManager(std::shared_ptr<EntityManager> em);
-            inline std::shared_ptr<EntityManager> getEntityManager(){ return this->em; }
-            virtual void render(sf::RenderWindow& win) = 0;
-            virtual void update(sf::Time dt) = 0;
-            virtual ~System();
     };
 }
 #endif // SYSTEM_H

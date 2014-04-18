@@ -4,7 +4,17 @@
 #include <sstream>
 namespace ant{
     namespace Utils{
-        std::string toString(int s);
+        /**
+         * @brief Convierte el Tipo a string
+         * @param s T dato a convertir a string.
+         * @return std::string
+         */
+        template<typename T>
+        inline std::string toString(T s){
+            std::ostringstream oss;
+            oss << s;
+            return oss.str();
+        }
     }
 }
 #endif // UTILS_H
