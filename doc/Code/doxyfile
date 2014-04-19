@@ -740,7 +740,8 @@ WARN_LOGFILE           = F:\Development\Cpp\AntFarm\doc\Code\doxygen.log
 # Note: If this tag is empty the current directory is searched.
 
 INPUT                  = ../../include \
-                         ../../src
+                         ../../src \
+                         ../../README.md
 
 # This tag can be used to specify the character encoding of the source files
 # that doxygen parses. Internally doxygen uses the UTF-8 encoding. Doxygen uses

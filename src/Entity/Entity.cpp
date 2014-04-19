@@ -8,7 +8,7 @@ namespace ant{
             this->name = name;
             this->mask = 0;
         }
-        Entity::Entity(std::string name,std::map<long int,std::unique_ptr<baseComponent> > components){
+        Entity::Entity(std::string name,map components){
             this->name = name;
             this->mask = 0;
             this->Components = std::move(components);
@@ -28,7 +28,7 @@ namespace ant{
         void Entity::setName(std::string name){
             this->name = name;
         }
-        void Entity::setComponents(std::map<long int,std::unique_ptr<baseComponent> > Components){
+        void Entity::setComponents(map Components){
             this->Components = std::move(Components);
             this->mask = 0;
             for(auto& c: Components){

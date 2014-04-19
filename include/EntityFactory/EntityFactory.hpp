@@ -65,7 +65,7 @@ namespace ant{
              * Se puede especificar otros componentes pero tendran los datos por defecto
              *
              * @param mask long int Mascara de la entidad o componentes.
-             *        ej: EntityFactory::createEntity( EntityFactory::ANT | Component::Wings | Component:Horns);
+             *        @code EntityFactory::createEntity( EntityFactory::ANT | Component::Wings | Component:Horns); @endcode
              *        Creas una entidad Hormiga con los componentes adicionales especificados los cuales tendran
              *        valores por defecto.
              * @return std::unique_ptr<Entity> entidad creada.

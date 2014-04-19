@@ -28,16 +28,17 @@ namespace ant{
             inline int getType()const{ return type; }
             /**
              * @brief Getter de los atributos del evento.
-             * @param ...T los parametros de los atributos del evento,
-             *             ej: baseEvent::getAttributes<float,int>();
-             * @return std::tuple<T...>& los attributos del evento(solo lectura)
+             * @code baseEvent::getAttributes<float,int>(); @endcode
+             * @tparam ...T tipo de datos que tiene el evento en el orden adecuado.
+             * @return std::tuple<T...> & los attributos del evento(solo lectura)
              */
             template<typename...T>
             const std::tuple<T...>& getAttributes() const;
             /**
              * @brief Setter de los atributos del evento.
-             * @param ...T los parametros de los atributos,
-             *             ej: baseEvent::setAttributes<float,int>(5.3,5);
+             * @code baseEvent::setAttributes<float,int>(5.3,5); @endcode
+             * @tparam ...T tipo de datos que tiene el evento en el orden adecuado.
+             * @param attributes ...T los parametros de los atributos.
              */
             template<typename...T>
             void setAttributes(std::tuple<T...> attributes);
@@ -46,6 +47,7 @@ namespace ant{
     };
     /**
      * @brief Clase Especializada de evento.
+     * @tparam ...T tipo de datos que tendra el evento.
      * @author Cristian Glez <Cristian.glez.m@gmail.com>
      * @version 0.1
      */

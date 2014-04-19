@@ -46,6 +46,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="../../index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="../../pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="../../namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="../../annotated.html"><span>Classes</span></a></li>
       <li><a href="../../files.html"><span>Files</span></a></li>
@@ -95,7 +96,7 @@ $(document).ready(function(){initNavTree('d6/dcc/classant_1_1_system_factory.htm
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -113,35 +114,52 @@ $(document).ready(function(){initNavTree('d6/dcc/classant_1_1_system_factory.htm
 </div><!--header-->
 <div class="contents">
 
+<p>Clase para crear sistemas.  
+ <a href="../../d6/dcc/classant_1_1_system_factory.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="../../d4/da0/_system_factory_8hpp_source.html">SystemFactory.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a8a60ed77666e3e07495e45040fd0de96"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dcc/classant_1_1_system_factory.html#a8a60ed77666e3e07495e45040fd0de96">SystemFactory</a> ()</td></tr>
+<tr class="memdesc:a8a60ed77666e3e07495e45040fd0de96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor por defecto.  <a href="#a8a60ed77666e3e07495e45040fd0de96">More...</a><br/></td></tr>
 <tr class="separator:a8a60ed77666e3e07495e45040fd0de96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a88f538f2817a297762047c95d4c8169a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dcc/classant_1_1_system_factory.html#a88f538f2817a297762047c95d4c8169a">SystemFactory</a> (std::shared_ptr&lt; <a class="el" href="../../dc/df5/classant_1_1_game_event_dispatcher.html">GameEventDispatcher</a> &gt; ged, std::shared_ptr&lt; <a class="el" href="../../db/dec/classant_1_1_event_queue.html">EventQueue</a> &gt; eq)</td></tr>
+<tr class="memdesc:a88f538f2817a297762047c95d4c8169a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor para compartir la misma cola y suscritor de eventos.  <a href="#a88f538f2817a297762047c95d4c8169a">More...</a><br/></td></tr>
 <tr class="separator:a88f538f2817a297762047c95d4c8169a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a759cba610a22c58876d4edb528690ece"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dcc/classant_1_1_system_factory.html#a759cba610a22c58876d4edb528690ece">setEventQueue</a> (std::shared_ptr&lt; <a class="el" href="../../db/dec/classant_1_1_event_queue.html">EventQueue</a> &gt; eq)</td></tr>
+<tr class="memdesc:a759cba610a22c58876d4edb528690ece"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setter para la cola de eventos.  <a href="#a759cba610a22c58876d4edb528690ece">More...</a><br/></td></tr>
 <tr class="separator:a759cba610a22c58876d4edb528690ece"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac7db589ce8fca629d7d871fa9ad4d663"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="../../db/dec/classant_1_1_event_queue.html">EventQueue</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dcc/classant_1_1_system_factory.html#ac7db589ce8fca629d7d871fa9ad4d663">getEventQueue</a> ()</td></tr>
+<tr class="memdesc:ac7db589ce8fca629d7d871fa9ad4d663"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter para la cola de eventos.  <a href="#ac7db589ce8fca629d7d871fa9ad4d663">More...</a><br/></td></tr>
 <tr class="separator:ac7db589ce8fca629d7d871fa9ad4d663"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4c382d78bd0214fb91e4e07ed3ee24d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dcc/classant_1_1_system_factory.html#ab4c382d78bd0214fb91e4e07ed3ee24d">setGameEventDispatcher</a> (std::shared_ptr&lt; <a class="el" href="../../dc/df5/classant_1_1_game_event_dispatcher.html">GameEventDispatcher</a> &gt; ged)</td></tr>
+<tr class="memdesc:ab4c382d78bd0214fb91e4e07ed3ee24d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setter para el suscritor de eventos.  <a href="#ab4c382d78bd0214fb91e4e07ed3ee24d">More...</a><br/></td></tr>
 <tr class="separator:ab4c382d78bd0214fb91e4e07ed3ee24d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33d785d8400849461d1e734c472308b4"><td class="memItemLeft" align="right" valign="top">std::shared_ptr<br class="typebreak"/>
 &lt; <a class="el" href="../../dc/df5/classant_1_1_game_event_dispatcher.html">GameEventDispatcher</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dcc/classant_1_1_system_factory.html#a33d785d8400849461d1e734c472308b4">getGameEventDispatcher</a> ()</td></tr>
+<tr class="memdesc:a33d785d8400849461d1e734c472308b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter para el suscritor de eventos.  <a href="#a33d785d8400849461d1e734c472308b4">More...</a><br/></td></tr>
 <tr class="separator:a33d785d8400849461d1e734c472308b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d6ae5e15504796eab9f0ebd13cae354"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="../../d1/def/classant_1_1render_system.html">renderSystem</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dcc/classant_1_1_system_factory.html#a3d6ae5e15504796eab9f0ebd13cae354">createRenderSystem</a> ()</td></tr>
+<tr class="memdesc:a3d6ae5e15504796eab9f0ebd13cae354"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crea un sistema de renderizado.  <a href="#a3d6ae5e15504796eab9f0ebd13cae354">More...</a><br/></td></tr>
 <tr class="separator:a3d6ae5e15504796eab9f0ebd13cae354"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f7cf216cfe4e50c41fb1e3cdc368ed7"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="../../dd/d19/classant_1_1input_system.html">inputSystem</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dcc/classant_1_1_system_factory.html#a2f7cf216cfe4e50c41fb1e3cdc368ed7">createInputSystem</a> ()</td></tr>
+<tr class="memdesc:a2f7cf216cfe4e50c41fb1e3cdc368ed7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crea un sistema de input.  <a href="#a2f7cf216cfe4e50c41fb1e3cdc368ed7">More...</a><br/></td></tr>
 <tr class="separator:a2f7cf216cfe4e50c41fb1e3cdc368ed7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a814ef55fba62d7dc290c12fbd108dfd3"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="../../dc/de8/classant_1_1collision_system.html">collisionSystem</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dcc/classant_1_1_system_factory.html#a814ef55fba62d7dc290c12fbd108dfd3">createCollisionSystem</a> (sf::FloatRect bounds)</td></tr>
+<tr class="memdesc:a814ef55fba62d7dc290c12fbd108dfd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crea un sistema de colision.  <a href="#a814ef55fba62d7dc290c12fbd108dfd3">More...</a><br/></td></tr>
 <tr class="separator:a814ef55fba62d7dc290c12fbd108dfd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69b79fce62ccf901996515e4528bc71d"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="../../d6/d6c/classant_1_1movement_system.html">movementSystem</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dcc/classant_1_1_system_factory.html#a69b79fce62ccf901996515e4528bc71d">createMovementSystem</a> ()</td></tr>
+<tr class="memdesc:a69b79fce62ccf901996515e4528bc71d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crea un sistema de movimiento.  <a href="#a69b79fce62ccf901996515e4528bc71d">More...</a><br/></td></tr>
 <tr class="separator:a69b79fce62ccf901996515e4528bc71d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a702fd13a4c1a4013f37cb6ec43461a19"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dcc/classant_1_1_system_factory.html#a702fd13a4c1a4013f37cb6ec43461a19">~SystemFactory</a> ()</td></tr>
 <tr class="separator:a702fd13a4c1a4013f37cb6ec43461a19"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Clase para crear sistemas. </p>
+<dl class="section author"><dt>Author</dt><dd>Cristian Glez <a href="#" onclick="location.href='mai'+'lto:'+'Cri'+'st'+'ian'+'.g'+'lez'+'.m'+'@gm'+'ai'+'l.c'+'om'; return false;">Crist<span style="display: none;">.nosp@m.</span>ian.<span style="display: none;">.nosp@m.</span>glez.<span style="display: none;">.nosp@m.</span>m@gm<span style="display: none;">.nosp@m.</span>ail.c<span style="display: none;">.nosp@m.</span>om</a> </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>0.1 </dd></dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a8a60ed77666e3e07495e45040fd0de96"></a>
 <div class="memitem">
 <div class="memproto">
@@ -154,6 +172,8 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Constructor por defecto. </p>
 
 </div>
 </div>
@@ -180,6 +200,15 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Constructor para compartir la misma cola y suscritor de eventos. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ged</td><td>std::shared_ptr&lt;GameEventDispatcher&gt; </td></tr>
+    <tr><td class="paramname">eq</td><td>std::shared_ptr&lt;EventQueue&gt; </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -213,6 +242,15 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Crea un sistema de colision. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bounds</td><td>sf::FloatRect rectangulo para zona que ocupa. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>std::shared_ptr&lt;collisionSystem&gt; </dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="a2f7cf216cfe4e50c41fb1e3cdc368ed7"></a>
@@ -227,7 +265,10 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>TODO implement </p>
+
+<p>Crea un sistema de input. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::shared_ptr&lt;inputSystem&gt; </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000010">Todo:</a></b></dt><dd>implement </dd></dl>
 
 </div>
 </div>
@@ -244,6 +285,9 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Crea un sistema de movimiento. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::shared_ptr&lt;movementSystem&gt; </dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="a3d6ae5e15504796eab9f0ebd13cae354"></a>
@@ -258,6 +302,9 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Crea un sistema de renderizado. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::shared_ptr&lt;renderSystem&gt; </dd></dl>
 
 </div>
 </div>
@@ -282,6 +329,9 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Getter para la cola de eventos. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::shared_ptr&lt;EventQueue&gt; </dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="a33d785d8400849461d1e734c472308b4"></a>
@@ -305,6 +355,9 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Getter para el suscritor de eventos. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::shared_ptr&lt;GameEventDispatcher&gt; </dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="a759cba610a22c58876d4edb528690ece"></a>
@@ -320,6 +373,14 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Setter para la cola de eventos. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">eq</td><td>std::shared_ptr&lt;EventQueue&gt; </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -337,6 +398,14 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Setter para el suscritor de eventos. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ged</td><td>std::shared_ptr&lt;GameEventDispatcher&gt; </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
@@ -349,7 +418,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dc/d6c/namespaceant.html">ant</a></li><li class="navelem"><a class="el" href="../../d6/dcc/classant_1_1_system_factory.html">SystemFactory</a></li>
-    <li class="footer">Generated on Thu Apr 17 2014 20:51:05 for AntFarm by
+    <li class="footer">Generated on Sat Apr 19 2014 11:35:20 for AntFarm by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

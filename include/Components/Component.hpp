@@ -5,6 +5,7 @@
 
 namespace ant{
     /**
+     * @class baseComponent
      * @brief Clase base de componente.
      *
      * @author Cristian Gonzalez Moreno <cristian.glez.m@gmail.com>
@@ -15,7 +16,7 @@ namespace ant{
             /**
              * @brief Contructor para la clase derivada.
              *
-             * TODO posible cambio en el id de long int a bitset<NBits>
+             * @todo posible cambio en el id de long int a bitset<NBits>
              *
              * @param id long int id del componente.
              */
@@ -37,16 +38,21 @@ namespace ant{
              *
              * Es necesario especificar los datos que tiene
              * el componente en el orden adecuado.
-             *
-             * @param ...T Tipo de datos, ej: getProperties<float,int,std::string>();
+             * @tparam ...T tipo de datos que contiene el componente en su orden adecuado.
+             * @code
+             * getProperties<float,int,std::string>();
+             * @endcode
              * @return std::tuple<T...> la tupla con los datos.
              */
             template<typename...T>
             std::tuple<T...>& getProperties();
             /**
              * @brief Setter de las propiedades del componente.
-             *
-             * @param ...T tipo de datos, ej: setProperties<float,int,int>(std::tuple<float,int,int>(2.4,5,6));
+             * @tparam ...T tipo de datos que contiene el componente en su orden adecuado.
+             * @param properties ...T tipo de datos
+             * @code
+             * setProperties<float,int,int>(std::tuple<float,int,int>(2.4,5,6));
+             * @endcode
              */
             template<typename...T>
             void setProperties(std::tuple<T...> properties);
@@ -54,11 +60,12 @@ namespace ant{
             long int id;
     };
     /**
+     * @class Component
      * @brief Clase especializada de baseComponent.
      *
      * Puede tener todas las propiedades que se definan
      * despues se tendran que acceder por el orden correcto.
-     *
+     * @tparam ...T tipo de datos que tendra este componente.
      * @author Cristian Glez <Cristian.glez.m@gmail.com>
      * @version 0.1
      */
@@ -87,7 +94,11 @@ namespace ant{
             /**
              * @brief Setter de las propiedades del componente.
              *
-             * @param std::tuple<T...> tipo de datos, ej: setProperties(std::tuple<float,int,int>(2.4,5,6));
+             * @param properties std::tuple<T...> tipo de datos
+             * @code
+             * Component<float,int,int> c;
+             * c.setProperties(std::tuple<float,int,int>(2.4,5,6));
+             * @endcode
              */
              void setProperties(std::tuple<T...> properties){ this->properties = std::move(properties); }
         private:

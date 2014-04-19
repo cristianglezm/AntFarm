@@ -6,7 +6,95 @@
 #include <EntityFactory/EntityFactory.hpp>
 #include <SystemFactory/SystemFactory.hpp>
 namespace ant{
+    /**
+     * @brief Clase para crear mundos.
+     *
+     * Utilizara el GameEventDispatcher, EventQueue que tenga para los mundos generados.
+     *
+     * @author Cristian Glez <Cristian.glez.m@gmail.com>
+     * @version 0.1
+     */
     class WorldFactory{
+        public:
+            /**
+             * @brief Constructor por defecto.
+             */
+            WorldFactory();
+            /**
+             * @brief Constructor con GameEventDispatcher y EventQueue.
+             * @param ged std::shared_ptr<GameEventDispatcher>
+             * @param eq std::shared_ptr<EventQueue>
+             */
+            WorldFactory(std::shared_ptr<GameEventDispatcher> ged,std::shared_ptr<EventQueue> eq);
+            /**
+             * @brief Carga los assets necesarios para crear los mundos.
+             * @param json const std::string & fichero json con los datos de configuracion.
+             * @return bool
+             */
+            bool loadAssets(const std::string& json);
+            /**
+             * @brief Descarga los assets que tenga.
+             * @return bool
+             */
+            bool unloadAssets();
+            /**
+             * @brief Establece el AssetManager que usara.
+             * @param assets std::shared_ptr<AssetManager>
+             */
+            void setAssetManager(std::shared_ptr<AssetManager> assets);
+            /**
+             * @brief Obtiene el AssetManager que usa.
+             * @return std::shared_ptr<AssetManager>
+             */
+            inline std::shared_ptr<AssetManager> getAssetManager(){ return entityFactory->getAssetManager(); }
+            /**
+             * @brief Crea un nido con una hormiga reina.
+             * @param bounds sf::FloatRect rectangulo con los limites del
+             *        mundo(Tienen que ser iguales a la imagenes de fondo.)
+             * @return std::unique_ptr<World> World creado
+             */
+            std::unique_ptr<World> createNest(sf::FloatRect bounds);
+            /**
+             * @brief Crea un Campo de batalla.
+             *
+             * Es donde las hormigas buscaran comida, lucharan contra otras etc.
+             *
+             * @param bounds sf::FloatRect rectangulo con los limites del
+             *        mundo(Tienen que ser iguales a la imagenes de fondo.)
+             * @return std::unique_ptr<World> World creado
+             */
+            std::unique_ptr<World> createBattlefield(sf::FloatRect bounds);
+            /**
+             * @brief Establece el EntityFactory que usara.
+             * @param ef std::shared_ptr<EntityFactory>
+             */
+            void setEntityFactory(std::shared_ptr<EntityFactory> ef);
+            /**
+             * @brief Obtiene el EntityFactory que usa.
+             * @return std::shared_ptr<EntityFactory>
+             */
+            inline std::shared_ptr<EntityFactory> getEntityFactory(){ return this->entityFactory; }
+            /**
+             * @brief Establece la EventQueue que usaran los sistemas.
+             * @param eq std::shared_ptr<EventQueue>
+             */
+            void setEventQueue(std::shared_ptr<EventQueue> eq);
+            /**
+             * @brief Obtiene la EventQueue que usa.
+             * @return std::shared_ptr<EventQueue>
+             */
+            inline std::shared_ptr<EventQueue> getEventQueue(){ return this->eventQueue; }
+            /**
+             * @brief Establece el GameEventDispatcher que usara.
+             * @param ged std::shared_ptr<GameEventDispatcher>
+             */
+            void setGameEventDispatcher(std::shared_ptr<GameEventDispatcher> ged);
+            /**
+             * @brief Obtiene el GameEventDispatcher que usa.
+             * @return std::shared_ptr<GameEventDispatcher>
+             */
+            inline std::shared_ptr<GameEventDispatcher> getGameEventDispatcher(){ return this->gameEventDispatcher; }
+            ~WorldFactory();
         private:
             long int nestId;
             long int battlefieldId;
@@ -14,22 +102,6 @@ namespace ant{
             std::shared_ptr<SystemFactory> systemFactory;
             std::shared_ptr<EventQueue> eventQueue;
             std::shared_ptr<GameEventDispatcher> gameEventDispatcher;
-        public:
-            WorldFactory();
-            WorldFactory(std::shared_ptr<GameEventDispatcher> ged,std::shared_ptr<EventQueue> eq);
-            bool loadAssets(const std::string& json);
-            bool unloadAssets();
-            void setAssetManager(std::shared_ptr<AssetManager> assets);
-            inline std::shared_ptr<AssetManager> getAssetManager(){ return entityFactory->getAssetManager(); }
-            std::unique_ptr<World> createNest(sf::FloatRect bounds);
-            std::unique_ptr<World> createBattlefield(sf::FloatRect bounds);
-            void setEntityFactory(std::shared_ptr<EntityFactory> ef);
-            inline std::shared_ptr<EntityFactory> getEntityFactory(){ return this->entityFactory; }
-            void setEventQueue(std::shared_ptr<EventQueue> eq);
-            inline std::shared_ptr<EventQueue> getEventQueue(){ return this->eventQueue; }
-            void setGameEventDispatcher(std::shared_ptr<GameEventDispatcher> ged);
-            inline std::shared_ptr<GameEventDispatcher> getGameEventDispatcher(){ return this->gameEventDispatcher; }
-            ~WorldFactory();
     };
 }
 #endif // WORLD_FACTORY_H

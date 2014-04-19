@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['readme_2emd',['README.md',['../d9/dd6/_r_e_a_d_m_e_8md.html',1,'']]],
   ['removecomponent',['removeComponent',['../dc/d73/classant_1_1_entity.html#a2ff509e6876cbf11c434a797be43f239',1,'ant::Entity']]],
   ['removeentity',['removeEntity',['../dd/d12/classant_1_1_entity_manager.html#ac3645cbade4566b1e035923d12688811',1,'ant::EntityManager::removeEntity(std::unique_ptr&lt; Entity &gt; &amp;e)'],['../dd/d12/classant_1_1_entity_manager.html#a62fcaeadb65e7580eb396d5a25e47071',1,'ant::EntityManager::removeEntity(const std::string &amp;name)'],['../dd/d12/classant_1_1_entity_manager.html#a9fe7570482ce955d895430e1c3f1b107',1,'ant::EntityManager::removeEntity(iterator it)']]],
   ['removefont',['removeFont',['../d1/dd6/classant_1_1_asset_manager.html#a7087f904f7989932dd1ce4dfafb2da23',1,'ant::AssetManager']]],

@@ -11,6 +11,7 @@
 
 namespace ant{
     /**
+     * @class AssetManager
      * @brief Clase para tener todos los assets(imagenes,texturas,etc) del juego
      *
      * @author Cristian Glez <Cristian.glez.m@gmail.com>
@@ -25,13 +26,14 @@ namespace ant{
             AssetManager();
             /**
              * @brief Carga un fichero json con el siguiente formato:
-             *
+             * @code
              * {
              *      "textures":[ {"id":"TEXTURE_ID","filepath":"data/entities/Example.png"},
              *                 ],
              *      "images":[ {"id":"IMAGE_ID","filepath":"data/entities/Example.png"},
              *               ],
              * }
+             * @endcode
              * @param filename std::string fichero a cargar.
              * @return true si ha cargado los datos correctamente, false si hay algun problema.
              */

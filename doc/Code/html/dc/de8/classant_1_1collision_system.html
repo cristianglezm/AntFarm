@@ -46,6 +46,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="../../index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="../../pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="../../namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="../../annotated.html"><span>Classes</span></a></li>
       <li><a href="../../files.html"><span>Files</span></a></li>
@@ -95,7 +96,7 @@ $(document).ready(function(){initNavTree('dc/de8/classant_1_1collision_system.ht
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -114,6 +115,9 @@ $(document).ready(function(){initNavTree('dc/de8/classant_1_1collision_system.ht
 </div><!--header-->
 <div class="contents">
 
+<p>Sistema que comprueba las colisiones entre entidades.  
+ <a href="../../dc/de8/classant_1_1collision_system.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="../../d0/d71/collision_system_8hpp_source.html">collisionSystem.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for ant::collisionSystem:</div>
@@ -128,28 +132,39 @@ Inheritance diagram for ant::collisionSystem:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:abe1687a67eb6be58b2ed905b29a4a586"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/de8/classant_1_1collision_system.html#abe1687a67eb6be58b2ed905b29a4a586">collisionSystem</a> (sf::FloatRect bounds)</td></tr>
+<tr class="memdesc:abe1687a67eb6be58b2ed905b29a4a586"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor por defecto.  <a href="#abe1687a67eb6be58b2ed905b29a4a586">More...</a><br/></td></tr>
 <tr class="separator:abe1687a67eb6be58b2ed905b29a4a586"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad42cc6cabd1798fa7a0d6ce1a6d106ca"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/de8/classant_1_1collision_system.html#ad42cc6cabd1798fa7a0d6ce1a6d106ca">render</a> (sf::RenderWindow &amp;win)</td></tr>
+<tr class="memdesc:ad42cc6cabd1798fa7a0d6ce1a6d106ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">No hace nada.  <a href="#ad42cc6cabd1798fa7a0d6ce1a6d106ca">More...</a><br/></td></tr>
 <tr class="separator:ad42cc6cabd1798fa7a0d6ce1a6d106ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abef6a9cb5378ddb9ddf6cfdd46b6dbfa"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/de8/classant_1_1collision_system.html#abef6a9cb5378ddb9ddf6cfdd46b6dbfa">update</a> (sf::Time dt)</td></tr>
+<tr class="memdesc:abef6a9cb5378ddb9ddf6cfdd46b6dbfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Comprueba las colisiones de las entidades.  <a href="#abef6a9cb5378ddb9ddf6cfdd46b6dbfa">More...</a><br/></td></tr>
 <tr class="separator:abef6a9cb5378ddb9ddf6cfdd46b6dbfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb5ba1573cd34e251caac81cb499094e"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/de8/classant_1_1collision_system.html#acb5ba1573cd34e251caac81cb499094e">~collisionSystem</a> ()</td></tr>
 <tr class="separator:acb5ba1573cd34e251caac81cb499094e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a35662ff3739ff4290df1106bfdccfaca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d48/classant_1_1_system.html#a35662ff3739ff4290df1106bfdccfaca">setRequiredComponents</a> (long int req)</td></tr>
+<tr class="memdesc:a35662ff3739ff4290df1106bfdccfaca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setter para los requisitos necesarios.  <a href="#a35662ff3739ff4290df1106bfdccfaca">More...</a><br/></td></tr>
 <tr class="separator:a35662ff3739ff4290df1106bfdccfaca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d94338969f43d4fd2fd972deb099258"><td class="memItemLeft" align="right" valign="top">long int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d48/classant_1_1_system.html#a2d94338969f43d4fd2fd972deb099258">getRequiredComponts</a> ()</td></tr>
+<tr class="memdesc:a2d94338969f43d4fd2fd972deb099258"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter de los requisitos para el sistema.  <a href="#a2d94338969f43d4fd2fd972deb099258">More...</a><br/></td></tr>
 <tr class="separator:a2d94338969f43d4fd2fd972deb099258"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1effe9f0e5615e516a34be02d5895434"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d48/classant_1_1_system.html#a1effe9f0e5615e516a34be02d5895434">setEventQueue</a> (std::shared_ptr&lt; <a class="el" href="../../db/dec/classant_1_1_event_queue.html">EventQueue</a> &gt; eq)</td></tr>
+<tr class="memdesc:a1effe9f0e5615e516a34be02d5895434"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setter para la <a class="el" href="../../db/dec/classant_1_1_event_queue.html" title="Clase donde se almacenan los eventos para ser procesados despues. ">EventQueue</a>.  <a href="#a1effe9f0e5615e516a34be02d5895434">More...</a><br/></td></tr>
 <tr class="separator:a1effe9f0e5615e516a34be02d5895434"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac3e2bbbdb622276d194ad3a687d8e4f1"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="../../db/dec/classant_1_1_event_queue.html">EventQueue</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d48/classant_1_1_system.html#ac3e2bbbdb622276d194ad3a687d8e4f1">getEventQueue</a> ()</td></tr>
+<tr class="memdesc:ac3e2bbbdb622276d194ad3a687d8e4f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter para la <a class="el" href="../../db/dec/classant_1_1_event_queue.html" title="Clase donde se almacenan los eventos para ser procesados despues. ">EventQueue</a>.  <a href="#ac3e2bbbdb622276d194ad3a687d8e4f1">More...</a><br/></td></tr>
 <tr class="separator:ac3e2bbbdb622276d194ad3a687d8e4f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a231f9fc93b55ee67deb9597ae6be13ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d48/classant_1_1_system.html#a231f9fc93b55ee67deb9597ae6be13ba">setName</a> (std::string <a class="el" href="../../de/d48/classant_1_1_system.html#a60b3c00a760a3b4947ab1f1fc534a5b2">name</a>)</td></tr>
+<tr class="memdesc:a231f9fc93b55ee67deb9597ae6be13ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setter Para el nombre del sistema.  <a href="#a231f9fc93b55ee67deb9597ae6be13ba">More...</a><br/></td></tr>
 <tr class="separator:a231f9fc93b55ee67deb9597ae6be13ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a52a559b2c3ddbec5c846df1badd7f7f8"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d48/classant_1_1_system.html#a52a559b2c3ddbec5c846df1badd7f7f8">getName</a> () const </td></tr>
+<tr class="memdesc:a52a559b2c3ddbec5c846df1badd7f7f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter para el nombre del sistema.  <a href="#a52a559b2c3ddbec5c846df1badd7f7f8">More...</a><br/></td></tr>
 <tr class="separator:a52a559b2c3ddbec5c846df1badd7f7f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f983382d142ea697f1811f7f6f6ab17"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d48/classant_1_1_system.html#a1f983382d142ea697f1811f7f6f6ab17">setEntityManager</a> (std::shared_ptr&lt; <a class="el" href="../../dd/d12/classant_1_1_entity_manager.html">EntityManager</a> &gt; <a class="el" href="../../de/d48/classant_1_1_system.html#a5661d872ff769be150bd4e9a9552f6b9">em</a>)</td></tr>
+<tr class="memdesc:a1f983382d142ea697f1811f7f6f6ab17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setter para el <a class="el" href="../../dd/d12/classant_1_1_entity_manager.html" title="Clase Para manejar las entidades. ">EntityManager</a>.  <a href="#a1f983382d142ea697f1811f7f6f6ab17">More...</a><br/></td></tr>
 <tr class="separator:a1f983382d142ea697f1811f7f6f6ab17"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adaad2087de7fc71924cfb5b134014b0a"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="../../dd/d12/classant_1_1_entity_manager.html">EntityManager</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d48/classant_1_1_system.html#adaad2087de7fc71924cfb5b134014b0a">getEntityManager</a> ()</td></tr>
+<tr class="memdesc:adaad2087de7fc71924cfb5b134014b0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter para el <a class="el" href="../../dd/d12/classant_1_1_entity_manager.html" title="Clase Para manejar las entidades. ">EntityManager</a>.  <a href="#adaad2087de7fc71924cfb5b134014b0a">More...</a><br/></td></tr>
 <tr class="separator:adaad2087de7fc71924cfb5b134014b0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
@@ -163,7 +178,17 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a60b3c00a760a3b4947ab1f1fc534a5b2"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d48/classant_1_1_system.html#a60b3c00a760a3b4947ab1f1fc534a5b2">name</a></td></tr>
 <tr class="separator:a60b3c00a760a3b4947ab1f1fc534a5b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Sistema que comprueba las colisiones entre entidades. </p>
+<p>Cuando detecta una colision añade un evento a la <a class="el" href="../../db/dec/classant_1_1_event_queue.html" title="Clase donde se almacenan los eventos para ser procesados despues. ">EventQueue</a> con las dos entidades que colisionaron. Event&lt;Entity*,Entity*&gt; -&gt; type: COLLISION_EVENT </p>
+<dl class="section author"><dt>Author</dt><dd>Cristian Glez <a href="#" onclick="location.href='mai'+'lto:'+'Cri'+'st'+'ian'+'.g'+'lez'+'.m'+'@gm'+'ai'+'l.c'+'om'; return false;">Crist<span style="display: none;">.nosp@m.</span>ian.<span style="display: none;">.nosp@m.</span>glez.<span style="display: none;">.nosp@m.</span>m@gm<span style="display: none;">.nosp@m.</span>ail.c<span style="display: none;">.nosp@m.</span>om</a> </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>0.1 </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000002">Todo:</a></b></dt><dd><ol type="1">
+<li>Event&lt;Entity*&gt; -&gt; type: OUT_OF_MAP_EVENT</li>
+<li>Event&lt;Entity*&gt; -&gt; type: PIXEL_COLLISION_EVENT </li>
+</ol>
+</dd></dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="abe1687a67eb6be58b2ed905b29a4a586"></a>
 <div class="memitem">
 <div class="memproto">
@@ -177,6 +202,14 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Constructor por defecto. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bounds</td><td>sf::FloatRect rectangulo del QuadTree. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -225,6 +258,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Getter para el <a class="el" href="../../dd/d12/classant_1_1_entity_manager.html" title="Clase Para manejar las entidades. ">EntityManager</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::shared_ptr&lt;EntityManager&gt; </dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="ac3e2bbbdb622276d194ad3a687d8e4f1"></a>
@@ -247,6 +283,9 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Getter para la <a class="el" href="../../db/dec/classant_1_1_event_queue.html" title="Clase donde se almacenan los eventos para ser procesados despues. ">EventQueue</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::shared_ptr&lt;EventQueue&gt; </dd></dl>
 
 </div>
 </div>
@@ -271,6 +310,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Getter para el nombre del sistema. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::string </dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="a2d94338969f43d4fd2fd972deb099258"></a>
@@ -293,6 +335,8 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Getter de los requisitos para el sistema. </p>
 
 </div>
 </div>
@@ -317,6 +361,8 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>No hace nada. </p>
 
 <p>Implements <a class="el" href="../../de/d48/classant_1_1_system.html#a30a815d199fea90e9d2f7167eb2bf86e">ant::System</a>.</p>
 
@@ -344,6 +390,14 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Setter para el <a class="el" href="../../dd/d12/classant_1_1_entity_manager.html" title="Clase Para manejar las entidades. ">EntityManager</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">em</td><td>std::shared_ptr&lt;EntityManager&gt; </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="a1effe9f0e5615e516a34be02d5895434"></a>
@@ -367,6 +421,14 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Setter para la <a class="el" href="../../db/dec/classant_1_1_event_queue.html" title="Clase donde se almacenan los eventos para ser procesados despues. ">EventQueue</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">eq</td><td>std::shared_ptr&lt;EventQueue&gt; </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -392,6 +454,14 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Setter Para el nombre del sistema. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>std::string </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="a35662ff3739ff4290df1106bfdccfaca"></a>
@@ -416,6 +486,14 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Setter para los requisitos necesarios. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">req</td><td>long int </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="abef6a9cb5378ddb9ddf6cfdd46b6dbfa"></a>
@@ -439,6 +517,14 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Comprueba las colisiones de las entidades. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dt</td><td>sf::Time delta time </td></tr>
+  </table>
+  </dd>
+</dl>
 <p>FIXME rotation of boundingbox </p>
 
 <p>Implements <a class="el" href="../../de/d48/classant_1_1_system.html#a4d97de105123df07d4d90ac2914f9e6c">ant::System</a>.</p>
@@ -536,7 +622,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dc/d6c/namespaceant.html">ant</a></li><li class="navelem"><a class="el" href="../../dc/de8/classant_1_1collision_system.html">collisionSystem</a></li>
-    <li class="footer">Generated on Thu Apr 17 2014 20:51:05 for AntFarm by
+    <li class="footer">Generated on Sat Apr 19 2014 11:35:20 for AntFarm by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

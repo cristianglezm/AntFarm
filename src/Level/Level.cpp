@@ -10,7 +10,7 @@ namespace ant{
         init(bounds);
     }
     void Level::init(sf::FloatRect bounds){
-        /// TODO crear mundos iniciales, etc.
+        /// @todo crear mundos iniciales, etc.
         nests->addWorld(worldFactory->createNest(bounds));
         battlefields->addWorld(worldFactory->createBattlefield(bounds));
     }

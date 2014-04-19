@@ -20,7 +20,7 @@ namespace ant{
     std::unique_ptr<Entity> EntityFactory::createEntity(long int mask){
         std::unique_ptr<Entity> e(new Entity());
         //ComponentSettings cs;
-        /// TODO Limpiar y encontrar mejor forma de cargar variables para los componentes por defecto.
+        /// @todo Limpiar y encontrar mejor forma de cargar variables para los componentes por defecto.
         std::string id = "Ant";
         if((mask & Ant) == Ant){
             id = "Ant";

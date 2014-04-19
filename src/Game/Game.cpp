@@ -27,7 +27,7 @@ namespace ant{
                 }
             }
             win.clear();
-            /// TODO cambiar por variables que interactuen con el sistema
+            /// @todo cambiar por variables que interactuen con el sistema
             /// de userTransport para renderizar y actualizar diferentes sistemas segun el estado etc.
             level->update(0,Level::NEST,sf::Time());
             level->render(0,Level::NEST,win);

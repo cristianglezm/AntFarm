@@ -12,9 +12,11 @@
 namespace ant{
     namespace Utils{
         /**
+         * @class Quadtree
          * @brief Clase para reducir el numero de test de collisiones.
          * @author Cristian Glez <Cristian.glez.m@gmail.com>
          * @version 0.1
+         * @todo posible feature hacer template para poder usar puntos y rectangulos ademas de entidades.
          */
         class Quadtree{
             public:
@@ -30,7 +32,7 @@ namespace ant{
                  * @brief Agrega un puntero a una entidad, la posiciona en el nodo correcto,
                  *        si no cabe en ningun nodo inferior se mantiene en el padre.
                  *
-                 * @param e Entity*
+                 * @param e Entity *
                  */
                 void insert(Entity* e);
                 /**
@@ -43,7 +45,7 @@ namespace ant{
                  *        la entidad especificada a la lista(la misma entidad especificada es agregada tambien)
                  *
                  * @param entities std::list<Entity*>& lista a la que agregan las entidades del mismo sector de la especificada.
-                 * @param e Entity* Entidad a comprobar.
+                 * @param e Entity * Entidad a comprobar.
                  * @return std::list<Entity*> lista de entidades
                  */
                 std::list<Entity*> retrieve(std::list<Entity*>& entities,Entity* e);

@@ -46,6 +46,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="../../index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="../../pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="../../namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="../../annotated.html"><span>Classes</span></a></li>
       <li><a href="../../files.html"><span>Files</span></a></li>
@@ -95,7 +96,7 @@ $(document).ready(function(){initNavTree('dc/dbd/classant_1_1_world_manager.html
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -114,20 +115,21 @@ $(document).ready(function(){initNavTree('dc/dbd/classant_1_1_world_manager.html
 <table class="directory">
   <tr class="even"><td class="entry"><a class="el" href="../../dc/dbd/classant_1_1_world_manager.html#ae99e4466fbef273a555dd093bf46fbb5">addWorld</a>(std::unique_ptr&lt; World &gt; w)</td><td class="entry"><a class="el" href="../../dc/dbd/classant_1_1_world_manager.html">ant::WorldManager</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="../../dc/dbd/classant_1_1_world_manager.html#a94e6d6054814eda8a3ec4f476ea8cf02">getWorld</a>(long int id)</td><td class="entry"><a class="el" href="../../dc/dbd/classant_1_1_world_manager.html">ant::WorldManager</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../dc/dbd/classant_1_1_world_manager.html#abbae68fc426a7e7398df85ae81806cb7">getWorlds</a>()</td><td class="entry"><a class="el" href="../../dc/dbd/classant_1_1_world_manager.html">ant::WorldManager</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="../../dc/dbd/classant_1_1_world_manager.html#a82173a79099e891297bbbcb07de7c715">iterator</a> typedef</td><td class="entry"><a class="el" href="../../dc/dbd/classant_1_1_world_manager.html">ant::WorldManager</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../dc/dbd/classant_1_1_world_manager.html#a13377656880523bc48ca4e963017a7e3">removeWorld</a>(long int id)</td><td class="entry"><a class="el" href="../../dc/dbd/classant_1_1_world_manager.html">ant::WorldManager</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="../../dc/dbd/classant_1_1_world_manager.html#a5050c12e78f005607394041e384ca297">render</a>(long int id, sf::RenderWindow &amp;win)</td><td class="entry"><a class="el" href="../../dc/dbd/classant_1_1_world_manager.html">ant::WorldManager</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../dc/dbd/classant_1_1_world_manager.html#a104549be0d473aa7522ac6d53cc6353d">setWorlds</a>(std::map&lt; long int, std::unique_ptr&lt; World &gt;&gt; worlds)</td><td class="entry"><a class="el" href="../../dc/dbd/classant_1_1_world_manager.html">ant::WorldManager</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="../../dc/dbd/classant_1_1_world_manager.html#ab9c6b7726219771e992a0c6714cd84b3">update</a>(long int id, sf::Time dt)</td><td class="entry"><a class="el" href="../../dc/dbd/classant_1_1_world_manager.html">ant::WorldManager</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../dc/dbd/classant_1_1_world_manager.html#a845389f52e654ff947b83c993c72ff08">WorldManager</a>()</td><td class="entry"><a class="el" href="../../dc/dbd/classant_1_1_world_manager.html">ant::WorldManager</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="../../dc/dbd/classant_1_1_world_manager.html#a6901058e71f2f0b1855c495ce060be76">~WorldManager</a>()</td><td class="entry"><a class="el" href="../../dc/dbd/classant_1_1_world_manager.html">ant::WorldManager</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../dc/dbd/classant_1_1_world_manager.html#ab3b9b8a1497007738f66539768491f7c">getWorlds</a>()</td><td class="entry"><a class="el" href="../../dc/dbd/classant_1_1_world_manager.html">ant::WorldManager</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="../../dc/dbd/classant_1_1_world_manager.html#a5271942cc141b1b903fd3648afcddea9">iterator</a> typedef</td><td class="entry"><a class="el" href="../../dc/dbd/classant_1_1_world_manager.html">ant::WorldManager</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../dc/dbd/classant_1_1_world_manager.html#a721c8e435f32fa2f9a3ac9b82bf042b2">map</a> typedef</td><td class="entry"><a class="el" href="../../dc/dbd/classant_1_1_world_manager.html">ant::WorldManager</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="../../dc/dbd/classant_1_1_world_manager.html#a13377656880523bc48ca4e963017a7e3">removeWorld</a>(long int id)</td><td class="entry"><a class="el" href="../../dc/dbd/classant_1_1_world_manager.html">ant::WorldManager</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../dc/dbd/classant_1_1_world_manager.html#a5050c12e78f005607394041e384ca297">render</a>(long int id, sf::RenderWindow &amp;win)</td><td class="entry"><a class="el" href="../../dc/dbd/classant_1_1_world_manager.html">ant::WorldManager</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="../../dc/dbd/classant_1_1_world_manager.html#aebeb93325dd1dfd83a8b4a13eb481620">setWorlds</a>(map worlds)</td><td class="entry"><a class="el" href="../../dc/dbd/classant_1_1_world_manager.html">ant::WorldManager</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../dc/dbd/classant_1_1_world_manager.html#ab9c6b7726219771e992a0c6714cd84b3">update</a>(long int id, sf::Time dt)</td><td class="entry"><a class="el" href="../../dc/dbd/classant_1_1_world_manager.html">ant::WorldManager</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="../../dc/dbd/classant_1_1_world_manager.html#a845389f52e654ff947b83c993c72ff08">WorldManager</a>()</td><td class="entry"><a class="el" href="../../dc/dbd/classant_1_1_world_manager.html">ant::WorldManager</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../dc/dbd/classant_1_1_world_manager.html#a6901058e71f2f0b1855c495ce060be76">~WorldManager</a>()</td><td class="entry"><a class="el" href="../../dc/dbd/classant_1_1_world_manager.html">ant::WorldManager</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Apr 17 2014 20:51:05 for AntFarm by
+    <li class="footer">Generated on Sat Apr 19 2014 11:35:20 for AntFarm by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

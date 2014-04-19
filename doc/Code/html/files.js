@@ -90,7 +90,7 @@ var files =
     [ "renderSystem.hpp", "d8/dba/render_system_8hpp.html", [
       [ "renderSystem", "d1/def/classant_1_1render_system.html", "d1/def/classant_1_1render_system" ]
     ] ],
-    [ "String.cpp", "d9/dae/_string_8cpp.html", "d9/dae/_string_8cpp" ],
+    [ "String.cpp", "d9/dae/_string_8cpp.html", null ],
     [ "String.hpp", "d9/dc5/_string_8hpp.html", "d9/dc5/_string_8hpp" ],
     [ "Subject.cpp", "d6/df5/_subject_8cpp.html", null ],
     [ "Subject.hpp", "dd/d59/_subject_8hpp.html", [

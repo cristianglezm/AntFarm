@@ -46,6 +46,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="../../index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="../../pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="../../namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="../../annotated.html"><span>Classes</span></a></li>
       <li><a href="../../files.html"><span>Files</span></a></li>
@@ -95,7 +96,7 @@ $(document).ready(function(){initNavTree('d4/dd4/classant_1_1base_component.html
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -181,7 +182,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Contructor para la clase derivada. </p>
-<p>TODO posible cambio en el id de long int a bitset&lt;NBits&gt;</p>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000001">Todo:</a></b></dt><dd>posible cambio en el id de long int a bitset&lt;NBits&gt;</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">id</td><td>long int id del componente. </td></tr>
@@ -257,10 +258,11 @@ template&lt;typename... T&gt; </div>
 </div><div class="memdoc">
 
 <p>Getter de las propiedades del componente,. </p>
-<p>Es necesario especificar los datos que tiene el componente en el orden adecuado.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">...T</td><td>Tipo de datos, ej: <a class="el" href="../../d4/dd4/classant_1_1base_component.html#a88bc0531ed99c8978e95257131653efe" title="Getter de las propiedades del componente,. ">getProperties&lt;float,int,std::string&gt;()</a>; </td></tr>
+<p>Es necesario especificar los datos que tiene el componente en el orden adecuado. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">...T</td><td>tipo de datos que contiene el componente en su orden adecuado. <div class="fragment"><div class="line">getProperties&lt;float,int,std::string&gt;();</div>
+</div><!-- fragment --> </td></tr>
   </table>
   </dd>
 </dl>
@@ -317,9 +319,16 @@ template&lt;typename... T&gt; </div>
 </div><div class="memdoc">
 
 <p>Setter de las propiedades del componente. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">...T</td><td>tipo de datos que contiene el componente en su orden adecuado. </td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">...T</td><td>tipo de datos, ej: setProperties&lt;float,int,int&gt;(std::tuple&lt;float,int,int&gt;(2.4,5,6)); </td></tr>
+    <tr><td class="paramname">properties</td><td>...T tipo de datos <div class="fragment"><div class="line">setProperties&lt;float,int,int&gt;(std::tuple&lt;float,int,int&gt;(2.4,5,6));</div>
+</div><!-- fragment --> </td></tr>
   </table>
   </dd>
 </dl>
@@ -335,7 +344,7 @@ template&lt;typename... T&gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dc/d6c/namespaceant.html">ant</a></li><li class="navelem"><a class="el" href="../../d4/dd4/classant_1_1base_component.html">baseComponent</a></li>
-    <li class="footer">Generated on Thu Apr 17 2014 20:51:05 for AntFarm by
+    <li class="footer">Generated on Sat Apr 19 2014 11:35:19 for AntFarm by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

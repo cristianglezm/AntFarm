@@ -46,6 +46,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="../../index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="../../pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="../../namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="../../annotated.html"><span>Classes</span></a></li>
       <li><a href="../../files.html"><span>Files</span></a></li>
@@ -95,7 +96,7 @@ $(document).ready(function(){initNavTree('d6/d94/classant_1_1_utils_1_1_quadtree
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -148,6 +149,7 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><p>Clase para reducir el numero de test de collisiones. </p>
 <dl class="section author"><dt>Author</dt><dd>Cristian Glez <a href="#" onclick="location.href='mai'+'lto:'+'Cri'+'st'+'ian'+'.g'+'lez'+'.m'+'@gm'+'ai'+'l.c'+'om'; return false;">Crist<span style="display: none;">.nosp@m.</span>ian.<span style="display: none;">.nosp@m.</span>glez.<span style="display: none;">.nosp@m.</span>m@gm<span style="display: none;">.nosp@m.</span>ail.c<span style="display: none;">.nosp@m.</span>om</a> </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>0.1 </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000006">Todo:</a></b></dt><dd>posible feature hacer template para poder usar puntos y rectangulos ademas de entidades. </dd></dl>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a class="anchor" id="a744668597e9815bc6cdeb44a48f527dd"></a>
 <div class="memitem">
@@ -236,7 +238,7 @@ Public Member Functions</h2></td></tr>
 <p>Agrega un puntero a una entidad, la posiciona en el nodo correcto, si no cabe en ningun nodo inferior se mantiene en el padre. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">e</td><td>Entity* </td></tr>
+    <tr><td class="paramname">e</td><td><a class="el" href="../../dc/d73/classant_1_1_entity.html" title="Clase para tener los componentes, solo puede tener un componente de cada tipo. ">Entity</a> * </td></tr>
   </table>
   </dd>
 </dl>
@@ -295,7 +297,7 @@ Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">entities</td><td>std::list&lt;Entity*&gt;&amp; lista a la que agregan las entidades del mismo sector de la especificada. </td></tr>
-    <tr><td class="paramname">e</td><td>Entity* Entidad a comprobar. </td></tr>
+    <tr><td class="paramname">e</td><td><a class="el" href="../../dc/d73/classant_1_1_entity.html" title="Clase para tener los componentes, solo puede tener un componente de cada tipo. ">Entity</a> * Entidad a comprobar. </td></tr>
   </table>
   </dd>
 </dl>
@@ -313,7 +315,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dc/d6c/namespaceant.html">ant</a></li><li class="navelem"><a class="el" href="../../db/dbc/namespaceant_1_1_utils.html">Utils</a></li><li class="navelem"><a class="el" href="../../d6/d94/classant_1_1_utils_1_1_quadtree.html">Quadtree</a></li>
-    <li class="footer">Generated on Thu Apr 17 2014 20:51:05 for AntFarm by
+    <li class="footer">Generated on Sat Apr 19 2014 11:35:20 for AntFarm by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

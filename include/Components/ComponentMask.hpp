@@ -2,8 +2,8 @@
 #define COMPONENT_MASK_H
 
 /**
- * @brief Clase estatica para enumeracion de componentes.
- * @author Cristian Gonzalez Moreno <Cristian.glez.m@gmail.com>
+ * @brief tipos de componentes.
+ * @author Cristian Glez <Cristian.glez.m@gmail.com>
  * @version 0.1
  */
 class ComponentsMask{

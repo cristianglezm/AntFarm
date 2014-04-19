@@ -46,6 +46,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="../../index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="../../pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="../../namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="../../annotated.html"><span>Classes</span></a></li>
       <li><a href="../../files.html"><span>Files</span></a></li>
@@ -95,7 +96,7 @@ $(document).ready(function(){initNavTree('d0/df7/classant_1_1_world_factory.html
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -113,43 +114,65 @@ $(document).ready(function(){initNavTree('d0/df7/classant_1_1_world_factory.html
 </div><!--header-->
 <div class="contents">
 
+<p>Clase para crear mundos.  
+ <a href="../../d0/df7/classant_1_1_world_factory.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="../../d1/df3/_world_factory_8hpp_source.html">WorldFactory.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a14b0c1669fe73a6773fcdc16478260d1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/df7/classant_1_1_world_factory.html#a14b0c1669fe73a6773fcdc16478260d1">WorldFactory</a> ()</td></tr>
+<tr class="memdesc:a14b0c1669fe73a6773fcdc16478260d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor por defecto.  <a href="#a14b0c1669fe73a6773fcdc16478260d1">More...</a><br/></td></tr>
 <tr class="separator:a14b0c1669fe73a6773fcdc16478260d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae3d047fa97001b82fc87ae13bd9d91e8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/df7/classant_1_1_world_factory.html#ae3d047fa97001b82fc87ae13bd9d91e8">WorldFactory</a> (std::shared_ptr&lt; <a class="el" href="../../dc/df5/classant_1_1_game_event_dispatcher.html">GameEventDispatcher</a> &gt; ged, std::shared_ptr&lt; <a class="el" href="../../db/dec/classant_1_1_event_queue.html">EventQueue</a> &gt; eq)</td></tr>
+<tr class="memdesc:ae3d047fa97001b82fc87ae13bd9d91e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor con <a class="el" href="../../dc/df5/classant_1_1_game_event_dispatcher.html" title="Clase encargada de processar eventos. ">GameEventDispatcher</a> y <a class="el" href="../../db/dec/classant_1_1_event_queue.html" title="Clase donde se almacenan los eventos para ser procesados despues. ">EventQueue</a>.  <a href="#ae3d047fa97001b82fc87ae13bd9d91e8">More...</a><br/></td></tr>
 <tr class="separator:ae3d047fa97001b82fc87ae13bd9d91e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a45e1b16aef0eeac9b09cb2b3a342f302"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/df7/classant_1_1_world_factory.html#a45e1b16aef0eeac9b09cb2b3a342f302">loadAssets</a> (const std::string &amp;json)</td></tr>
+<tr class="memdesc:a45e1b16aef0eeac9b09cb2b3a342f302"><td class="mdescLeft">&#160;</td><td class="mdescRight">Carga los assets necesarios para crear los mundos.  <a href="#a45e1b16aef0eeac9b09cb2b3a342f302">More...</a><br/></td></tr>
 <tr class="separator:a45e1b16aef0eeac9b09cb2b3a342f302"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa5883b005670e04006465ec2d2f58dfa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/df7/classant_1_1_world_factory.html#aa5883b005670e04006465ec2d2f58dfa">unloadAssets</a> ()</td></tr>
+<tr class="memdesc:aa5883b005670e04006465ec2d2f58dfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Descarga los assets que tenga.  <a href="#aa5883b005670e04006465ec2d2f58dfa">More...</a><br/></td></tr>
 <tr class="separator:aa5883b005670e04006465ec2d2f58dfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a10517a2948309249fd48d9a977531d90"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/df7/classant_1_1_world_factory.html#a10517a2948309249fd48d9a977531d90">setAssetManager</a> (std::shared_ptr&lt; <a class="el" href="../../d1/dd6/classant_1_1_asset_manager.html">AssetManager</a> &gt; assets)</td></tr>
+<tr class="memdesc:a10517a2948309249fd48d9a977531d90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Establece el <a class="el" href="../../d1/dd6/classant_1_1_asset_manager.html" title="Clase para tener todos los assets(imagenes,texturas,etc) del juego. ">AssetManager</a> que usara.  <a href="#a10517a2948309249fd48d9a977531d90">More...</a><br/></td></tr>
 <tr class="separator:a10517a2948309249fd48d9a977531d90"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42d36e353537dad2ab9069d8ce8bb99d"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="../../d1/dd6/classant_1_1_asset_manager.html">AssetManager</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/df7/classant_1_1_world_factory.html#a42d36e353537dad2ab9069d8ce8bb99d">getAssetManager</a> ()</td></tr>
+<tr class="memdesc:a42d36e353537dad2ab9069d8ce8bb99d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtiene el <a class="el" href="../../d1/dd6/classant_1_1_asset_manager.html" title="Clase para tener todos los assets(imagenes,texturas,etc) del juego. ">AssetManager</a> que usa.  <a href="#a42d36e353537dad2ab9069d8ce8bb99d">More...</a><br/></td></tr>
 <tr class="separator:a42d36e353537dad2ab9069d8ce8bb99d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a934c63fc650ff1dcee511b75ef12ca38"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="../../de/dc7/classant_1_1_world.html">World</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/df7/classant_1_1_world_factory.html#a934c63fc650ff1dcee511b75ef12ca38">createNest</a> (sf::FloatRect bounds)</td></tr>
+<tr class="memdesc:a934c63fc650ff1dcee511b75ef12ca38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crea un nido con una hormiga reina.  <a href="#a934c63fc650ff1dcee511b75ef12ca38">More...</a><br/></td></tr>
 <tr class="separator:a934c63fc650ff1dcee511b75ef12ca38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a29a33f09080a60221c0bad00a90d0647"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="../../de/dc7/classant_1_1_world.html">World</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/df7/classant_1_1_world_factory.html#a29a33f09080a60221c0bad00a90d0647">createBattlefield</a> (sf::FloatRect bounds)</td></tr>
+<tr class="memdesc:a29a33f09080a60221c0bad00a90d0647"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crea un Campo de batalla.  <a href="#a29a33f09080a60221c0bad00a90d0647">More...</a><br/></td></tr>
 <tr class="separator:a29a33f09080a60221c0bad00a90d0647"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab72d9d99bf005a10402c296ed8ec0d05"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/df7/classant_1_1_world_factory.html#ab72d9d99bf005a10402c296ed8ec0d05">setEntityFactory</a> (std::shared_ptr&lt; <a class="el" href="../../db/d10/classant_1_1_entity_factory.html">EntityFactory</a> &gt; ef)</td></tr>
+<tr class="memdesc:ab72d9d99bf005a10402c296ed8ec0d05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Establece el <a class="el" href="../../db/d10/classant_1_1_entity_factory.html" title="Clase para crear las entidades del juego. ">EntityFactory</a> que usara.  <a href="#ab72d9d99bf005a10402c296ed8ec0d05">More...</a><br/></td></tr>
 <tr class="separator:ab72d9d99bf005a10402c296ed8ec0d05"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5221d294fc01541a3859eb7ed8ed57e1"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="../../db/d10/classant_1_1_entity_factory.html">EntityFactory</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/df7/classant_1_1_world_factory.html#a5221d294fc01541a3859eb7ed8ed57e1">getEntityFactory</a> ()</td></tr>
+<tr class="memdesc:a5221d294fc01541a3859eb7ed8ed57e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtiene el <a class="el" href="../../db/d10/classant_1_1_entity_factory.html" title="Clase para crear las entidades del juego. ">EntityFactory</a> que usa.  <a href="#a5221d294fc01541a3859eb7ed8ed57e1">More...</a><br/></td></tr>
 <tr class="separator:a5221d294fc01541a3859eb7ed8ed57e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18ece24ada51e6f8d27649fb7635f514"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/df7/classant_1_1_world_factory.html#a18ece24ada51e6f8d27649fb7635f514">setEventQueue</a> (std::shared_ptr&lt; <a class="el" href="../../db/dec/classant_1_1_event_queue.html">EventQueue</a> &gt; eq)</td></tr>
+<tr class="memdesc:a18ece24ada51e6f8d27649fb7635f514"><td class="mdescLeft">&#160;</td><td class="mdescRight">Establece la <a class="el" href="../../db/dec/classant_1_1_event_queue.html" title="Clase donde se almacenan los eventos para ser procesados despues. ">EventQueue</a> que usaran los sistemas.  <a href="#a18ece24ada51e6f8d27649fb7635f514">More...</a><br/></td></tr>
 <tr class="separator:a18ece24ada51e6f8d27649fb7635f514"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5438acbbbb7b5046c35e061714629daf"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="../../db/dec/classant_1_1_event_queue.html">EventQueue</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/df7/classant_1_1_world_factory.html#a5438acbbbb7b5046c35e061714629daf">getEventQueue</a> ()</td></tr>
+<tr class="memdesc:a5438acbbbb7b5046c35e061714629daf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtiene la <a class="el" href="../../db/dec/classant_1_1_event_queue.html" title="Clase donde se almacenan los eventos para ser procesados despues. ">EventQueue</a> que usa.  <a href="#a5438acbbbb7b5046c35e061714629daf">More...</a><br/></td></tr>
 <tr class="separator:a5438acbbbb7b5046c35e061714629daf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a22b4c9a11d6d23d57390d14d590224ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/df7/classant_1_1_world_factory.html#a22b4c9a11d6d23d57390d14d590224ca">setGameEventDispatcher</a> (std::shared_ptr&lt; <a class="el" href="../../dc/df5/classant_1_1_game_event_dispatcher.html">GameEventDispatcher</a> &gt; ged)</td></tr>
+<tr class="memdesc:a22b4c9a11d6d23d57390d14d590224ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Establece el <a class="el" href="../../dc/df5/classant_1_1_game_event_dispatcher.html" title="Clase encargada de processar eventos. ">GameEventDispatcher</a> que usara.  <a href="#a22b4c9a11d6d23d57390d14d590224ca">More...</a><br/></td></tr>
 <tr class="separator:a22b4c9a11d6d23d57390d14d590224ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad33ce245eed1ba8e76ead4247d9b2724"><td class="memItemLeft" align="right" valign="top">std::shared_ptr<br class="typebreak"/>
 &lt; <a class="el" href="../../dc/df5/classant_1_1_game_event_dispatcher.html">GameEventDispatcher</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/df7/classant_1_1_world_factory.html#ad33ce245eed1ba8e76ead4247d9b2724">getGameEventDispatcher</a> ()</td></tr>
+<tr class="memdesc:ad33ce245eed1ba8e76ead4247d9b2724"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtiene el <a class="el" href="../../dc/df5/classant_1_1_game_event_dispatcher.html" title="Clase encargada de processar eventos. ">GameEventDispatcher</a> que usa.  <a href="#ad33ce245eed1ba8e76ead4247d9b2724">More...</a><br/></td></tr>
 <tr class="separator:ad33ce245eed1ba8e76ead4247d9b2724"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f2b1c3f3da8c188a3c5e98144dd5527"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/df7/classant_1_1_world_factory.html#a1f2b1c3f3da8c188a3c5e98144dd5527">~WorldFactory</a> ()</td></tr>
 <tr class="separator:a1f2b1c3f3da8c188a3c5e98144dd5527"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Clase para crear mundos. </p>
+<p>Utilizara el <a class="el" href="../../dc/df5/classant_1_1_game_event_dispatcher.html" title="Clase encargada de processar eventos. ">GameEventDispatcher</a>, <a class="el" href="../../db/dec/classant_1_1_event_queue.html" title="Clase donde se almacenan los eventos para ser procesados despues. ">EventQueue</a> que tenga para los mundos generados.</p>
+<dl class="section author"><dt>Author</dt><dd>Cristian Glez <a href="#" onclick="location.href='mai'+'lto:'+'Cri'+'st'+'ian'+'.g'+'lez'+'.m'+'@gm'+'ai'+'l.c'+'om'; return false;">Crist<span style="display: none;">.nosp@m.</span>ian.<span style="display: none;">.nosp@m.</span>glez.<span style="display: none;">.nosp@m.</span>m@gm<span style="display: none;">.nosp@m.</span>ail.c<span style="display: none;">.nosp@m.</span>om</a> </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>0.1 </dd></dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a14b0c1669fe73a6773fcdc16478260d1"></a>
 <div class="memitem">
 <div class="memproto">
@@ -162,6 +185,8 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Constructor por defecto. </p>
 
 </div>
 </div>
@@ -188,6 +213,15 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Constructor con <a class="el" href="../../dc/df5/classant_1_1_game_event_dispatcher.html" title="Clase encargada de processar eventos. ">GameEventDispatcher</a> y <a class="el" href="../../db/dec/classant_1_1_event_queue.html" title="Clase donde se almacenan los eventos para ser procesados despues. ">EventQueue</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ged</td><td>std::shared_ptr&lt;GameEventDispatcher&gt; </td></tr>
+    <tr><td class="paramname">eq</td><td>std::shared_ptr&lt;EventQueue&gt; </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -221,6 +255,16 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Crea un Campo de batalla. </p>
+<p>Es donde las hormigas buscaran comida, lucharan contra otras etc.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bounds</td><td>sf::FloatRect rectangulo con los limites del mundo(Tienen que ser iguales a la imagenes de fondo.) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>std::unique_ptr&lt;World&gt; <a class="el" href="../../de/dc7/classant_1_1_world.html" title="Clase para crear escenarios. ">World</a> creado </dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="a934c63fc650ff1dcee511b75ef12ca38"></a>
@@ -236,6 +280,15 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Crea un nido con una hormiga reina. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bounds</td><td>sf::FloatRect rectangulo con los limites del mundo(Tienen que ser iguales a la imagenes de fondo.) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>std::unique_ptr&lt;World&gt; <a class="el" href="../../de/dc7/classant_1_1_world.html" title="Clase para crear escenarios. ">World</a> creado </dd></dl>
 
 </div>
 </div>
@@ -260,6 +313,9 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Obtiene el <a class="el" href="../../d1/dd6/classant_1_1_asset_manager.html" title="Clase para tener todos los assets(imagenes,texturas,etc) del juego. ">AssetManager</a> que usa. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::shared_ptr&lt;AssetManager&gt; </dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="a5221d294fc01541a3859eb7ed8ed57e1"></a>
@@ -282,6 +338,9 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Obtiene el <a class="el" href="../../db/d10/classant_1_1_entity_factory.html" title="Clase para crear las entidades del juego. ">EntityFactory</a> que usa. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::shared_ptr&lt;EntityFactory&gt; </dd></dl>
 
 </div>
 </div>
@@ -306,6 +365,9 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Obtiene la <a class="el" href="../../db/dec/classant_1_1_event_queue.html" title="Clase donde se almacenan los eventos para ser procesados despues. ">EventQueue</a> que usa. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::shared_ptr&lt;EventQueue&gt; </dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="ad33ce245eed1ba8e76ead4247d9b2724"></a>
@@ -329,6 +391,9 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Obtiene el <a class="el" href="../../dc/df5/classant_1_1_game_event_dispatcher.html" title="Clase encargada de processar eventos. ">GameEventDispatcher</a> que usa. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::shared_ptr&lt;GameEventDispatcher&gt; </dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="a45e1b16aef0eeac9b09cb2b3a342f302"></a>
@@ -344,6 +409,15 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Carga los assets necesarios para crear los mundos. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">json</td><td>const std::string &amp; fichero json con los datos de configuracion. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
 
 </div>
 </div>
@@ -361,6 +435,14 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Establece el <a class="el" href="../../d1/dd6/classant_1_1_asset_manager.html" title="Clase para tener todos los assets(imagenes,texturas,etc) del juego. ">AssetManager</a> que usara. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">assets</td><td>std::shared_ptr&lt;AssetManager&gt; </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="ab72d9d99bf005a10402c296ed8ec0d05"></a>
@@ -376,6 +458,14 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Establece el <a class="el" href="../../db/d10/classant_1_1_entity_factory.html" title="Clase para crear las entidades del juego. ">EntityFactory</a> que usara. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ef</td><td>std::shared_ptr&lt;EntityFactory&gt; </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -393,6 +483,14 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Establece la <a class="el" href="../../db/dec/classant_1_1_event_queue.html" title="Clase donde se almacenan los eventos para ser procesados despues. ">EventQueue</a> que usaran los sistemas. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">eq</td><td>std::shared_ptr&lt;EventQueue&gt; </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="a22b4c9a11d6d23d57390d14d590224ca"></a>
@@ -409,6 +507,14 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Establece el <a class="el" href="../../dc/df5/classant_1_1_game_event_dispatcher.html" title="Clase encargada de processar eventos. ">GameEventDispatcher</a> que usara. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ged</td><td>std::shared_ptr&lt;GameEventDispatcher&gt; </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="aa5883b005670e04006465ec2d2f58dfa"></a>
@@ -424,6 +530,9 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Descarga los assets que tenga. </p>
+<dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
@@ -436,7 +545,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dc/d6c/namespaceant.html">ant</a></li><li class="navelem"><a class="el" href="../../d0/df7/classant_1_1_world_factory.html">WorldFactory</a></li>
-    <li class="footer">Generated on Thu Apr 17 2014 20:51:05 for AntFarm by
+    <li class="footer">Generated on Sat Apr 19 2014 11:35:20 for AntFarm by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

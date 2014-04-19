@@ -7,11 +7,25 @@
 #include <Systems/System.hpp>
 #include <Components/ComponentMask.hpp>
 namespace ant{
+    /**
+     * @brief Sistema encargado de mostrar las entidades que tengan los componentes necesarios.
+     * @author Cristian Glez <Cristian.glez.m@gmail.com>
+     * @version 0.1
+     */
     class renderSystem : public System{
-        private:
         public:
+            /**
+             * @brief Constructor por defecto.
+             */
             renderSystem();
+            /**
+             * @brief Renderiza las Entity con los componentes Transform y Sprite, Destructable.
+             * @param win sf::RenderWindow & Ventana a la cual dibujar.
+             */
             virtual void render(sf::RenderWindow& win);
+            /**
+             * @brief No hace nada.
+             */
             virtual void update(sf::Time dt);
             ~renderSystem();
     };

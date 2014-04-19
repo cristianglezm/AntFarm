@@ -6,7 +6,8 @@ namespace ant{
     namespace Utils{
         /**
          * @brief Convierte el Tipo a string
-         * @param s T dato a convertir a string.
+         * @tparam T  tipo a convertir a string.
+         * @param s T tipo a convertir a string.
          * @return std::string
          */
         template<typename T>

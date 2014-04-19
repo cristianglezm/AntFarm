@@ -19,7 +19,7 @@ namespace ant{
         return s;
     }
     std::shared_ptr<inputSystem> SystemFactory::createInputSystem(){
-        /// TODO implement
+        /// @todo implement
         //return std::shared_ptr<inputSystem>(new inputSystem());
     }
     std::shared_ptr<collisionSystem> SystemFactory::createCollisionSystem(sf::FloatRect bounds){

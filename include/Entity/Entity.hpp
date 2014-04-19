@@ -8,6 +8,7 @@
 #include <iostream>
 namespace ant{
     /**
+     * @class Entity
      * @brief Clase para tener los componentes, solo puede tener un componente de cada tipo.
      * @author Cristian Glez <Cristian.glez.m@gmail.com>
      * @version 0.1
@@ -45,7 +46,7 @@ namespace ant{
              * Si el componente no se encuentra tira excepcion,
              * se tiene que comprobar que la entidad tiene el componente,
              * se comprobaria con la mascara de la entidad.
-             * ej: (e.getMask() & Component::ID) == Component::ID
+             * @code (e.getMask() & Component::ID) == Component::ID @endcode
              * devolveria true si tiene el componente, false si no tiene.
              *
              * @param id long int id del componente.
@@ -89,7 +90,7 @@ namespace ant{
              *
              * Con este metodo comprobaras si una entidad tiene los componentes
              * que necesitas antes de utilizar el getComponent(Component::ID);
-             * ej: if((e.getMask() & Component:ID) == Component::ID)
+             * @code if((e.getMask() & Component:ID) == Component::ID) @endcode
              *
              * @return long int
              */

@@ -9,12 +9,15 @@
 
 namespace ant{
     /**
-     * Clase que tiene el nivel del juego
+     * @brief Clase que tiene el nivel del juego
      * @author Cristian Glez <Cristian.glez.m@gmail.com>
      * @version 0.1
      */
     class Level{
         public:
+            /**
+             * @brief Tipos de mundo
+             */
             static const int BATTLEFIELD = 0;
             static const int NEST = 1;
             /**

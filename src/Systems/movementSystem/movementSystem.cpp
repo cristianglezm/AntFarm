@@ -32,7 +32,7 @@ namespace ant{
                 auto& velocity = entity->getComponent(ComponentsMask::COMPONENT_VELOCITY)->getProperties<sf::Vector2f,float,float,float>();
                 std::get<0>(velocity) = sf::Vector2f(std::get<1>(velocity) *  std::sin(Utils::toRadians<float>(std::get<2>(transf))),
                                                      std::get<1>(velocity) *  std::cos(Utils::toRadians<float>(std::get<2>(transf))));
-                                                     /// TODO agregar al calculo delta time
+                                                     /// @todo agregar al calculo delta time
                                                      /// Arreglar problema de sin,cos y direccion de movimiento.
                 std::get<0>(transf) += std::get<0>(velocity);
             }

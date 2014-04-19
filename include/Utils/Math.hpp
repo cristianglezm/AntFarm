@@ -10,7 +10,8 @@ namespace ant{
         const double PI = 3.14159265358979;
         /**
          * @brief Convertira el valor introducido a radianes.
-         * @param T tipo(float,double,char,int,long) etc
+         * @tparam T tipo a convertir a radianes
+         * @param degrees T (float,double,char,int,long) etc
          * @return T
          */
         template<typename T>
@@ -19,7 +20,8 @@ namespace ant{
         }
         /**
          * @brief Convertira el valor introducido a grados.
-         * @param T tipo(float,double,char,int,long) etc
+         * @tparam T tipo a convertir a degrees
+         * @param radians T (float,double,char,int,long) etc
          * @return T
          */
         template<typename T>
@@ -27,9 +29,8 @@ namespace ant{
            return (T)(radians * (180 / PI));
         }
         /**
-         * @brief TODO ;Segun el angulo rotara el rectangulo
-         *
-         * !!! -Falta implementar esta funcion.
+         * @brief Segun el angulo rotara el rectangulo
+         * @todo !!! -Falta implementar esta funcion.
          *
          * @param rect sf::FloatRect
          * @param angle float

@@ -7,6 +7,7 @@
 #include <Components/ComponentMask.hpp>
 namespace ant{
     /**
+     * @class ComponentFactory
      * @brief Clase para crear los componentes de las entidades.
      * @author Cristian Glez <Cristian.glez.m@gmail.com>
      * @version 0.1

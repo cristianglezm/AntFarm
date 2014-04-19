@@ -46,6 +46,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="../../index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="../../pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="../../namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="../../annotated.html"><span>Classes</span></a></li>
       <li><a href="../../files.html"><span>Files</span></a></li>
@@ -95,7 +96,7 @@ $(document).ready(function(){initNavTree('de/dce/classant_1_1_system_manager.htm
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -106,6 +107,7 @@ $(document).ready(function(){initNavTree('de/dce/classant_1_1_system_manager.htm
 
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="../../dd/d9b/classant_1_1_system_manager-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -113,34 +115,72 @@ $(document).ready(function(){initNavTree('de/dce/classant_1_1_system_manager.htm
 </div><!--header-->
 <div class="contents">
 
+<p>Clase contenedor para los systemas.  
+ <a href="../../de/dce/classant_1_1_system_manager.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="../../d0/d80/_system_manager_8hpp_source.html">SystemManager.hpp</a>&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a4dfd264b3b229d3f4b64a9203c68090c"><td class="memItemLeft" align="right" valign="top">typedef std::map&lt; std::string, <br class="typebreak"/>
+std::shared_ptr&lt; <a class="el" href="../../de/d48/classant_1_1_system.html">System</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dce/classant_1_1_system_manager.html#a4dfd264b3b229d3f4b64a9203c68090c">map</a></td></tr>
+<tr class="memdesc:a4dfd264b3b229d3f4b64a9203c68090c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contenedor usado por la clase.  <a href="#a4dfd264b3b229d3f4b64a9203c68090c">More...</a><br/></td></tr>
+<tr class="separator:a4dfd264b3b229d3f4b64a9203c68090c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aa18f972d58796c53db6d48e4d94532f4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dce/classant_1_1_system_manager.html#aa18f972d58796c53db6d48e4d94532f4">SystemManager</a> ()</td></tr>
+<tr class="memdesc:aa18f972d58796c53db6d48e4d94532f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor por defecto.  <a href="#aa18f972d58796c53db6d48e4d94532f4">More...</a><br/></td></tr>
 <tr class="separator:aa18f972d58796c53db6d48e4d94532f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a1222988ac6893cfeb16101509ee2bd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dce/classant_1_1_system_manager.html#a5a1222988ac6893cfeb16101509ee2bd">addSystem</a> (std::shared_ptr&lt; <a class="el" href="../../de/d48/classant_1_1_system.html">System</a> &gt; s)</td></tr>
+<tr class="memdesc:a5a1222988ac6893cfeb16101509ee2bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Añade un sistema al manager.  <a href="#a5a1222988ac6893cfeb16101509ee2bd">More...</a><br/></td></tr>
 <tr class="separator:a5a1222988ac6893cfeb16101509ee2bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8360e89d83872c334e95cc0315e879ed"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="../../de/d48/classant_1_1_system.html">System</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dce/classant_1_1_system_manager.html#a8360e89d83872c334e95cc0315e879ed">getSystem</a> (std::string name)</td></tr>
+<tr class="memdesc:a8360e89d83872c334e95cc0315e879ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve el sistema con el nombre especificado.  <a href="#a8360e89d83872c334e95cc0315e879ed">More...</a><br/></td></tr>
 <tr class="separator:a8360e89d83872c334e95cc0315e879ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e615ed77a628b3fb3d6dc3d4708a4dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dce/classant_1_1_system_manager.html#a3e615ed77a628b3fb3d6dc3d4708a4dd">setSystems</a> (std::map&lt; std::string, std::shared_ptr&lt; <a class="el" href="../../de/d48/classant_1_1_system.html">System</a> &gt;&gt; systems)</td></tr>
-<tr class="separator:a3e615ed77a628b3fb3d6dc3d4708a4dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a38b8581600d71ffbe4919baedb782baf"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, <br class="typebreak"/>
-std::shared_ptr&lt; <a class="el" href="../../de/d48/classant_1_1_system.html">System</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dce/classant_1_1_system_manager.html#a38b8581600d71ffbe4919baedb782baf">getSystems</a> ()</td></tr>
+<tr class="memitem:a368e3a047fe8ab59bd6b680804e906ed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dce/classant_1_1_system_manager.html#a368e3a047fe8ab59bd6b680804e906ed">setSystems</a> (<a class="el" href="../../de/dce/classant_1_1_system_manager.html#a4dfd264b3b229d3f4b64a9203c68090c">map</a> systems)</td></tr>
+<tr class="memdesc:a368e3a047fe8ab59bd6b680804e906ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setter para poner el contenedor con todos los sistemas.  <a href="#a368e3a047fe8ab59bd6b680804e906ed">More...</a><br/></td></tr>
+<tr class="separator:a368e3a047fe8ab59bd6b680804e906ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38b8581600d71ffbe4919baedb782baf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/dce/classant_1_1_system_manager.html#a4dfd264b3b229d3f4b64a9203c68090c">map</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dce/classant_1_1_system_manager.html#a38b8581600d71ffbe4919baedb782baf">getSystems</a> ()</td></tr>
+<tr class="memdesc:a38b8581600d71ffbe4919baedb782baf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter para obtener el contenedor de los sistemas.  <a href="#a38b8581600d71ffbe4919baedb782baf">More...</a><br/></td></tr>
 <tr class="separator:a38b8581600d71ffbe4919baedb782baf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8f9691606440561bb4b921a38ea9a9a0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dce/classant_1_1_system_manager.html#a8f9691606440561bb4b921a38ea9a9a0">removeSystem</a> (std::string name)</td></tr>
+<tr class="memdesc:a8f9691606440561bb4b921a38ea9a9a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Elimina el sistema del manager.  <a href="#a8f9691606440561bb4b921a38ea9a9a0">More...</a><br/></td></tr>
 <tr class="separator:a8f9691606440561bb4b921a38ea9a9a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa875685c2cbcf4f4a72509d00f0904a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dce/classant_1_1_system_manager.html#aa875685c2cbcf4f4a72509d00f0904a8">setEntityManager</a> (std::shared_ptr&lt; <a class="el" href="../../dd/d12/classant_1_1_entity_manager.html">EntityManager</a> &gt; entityManager)</td></tr>
+<tr class="memdesc:aa875685c2cbcf4f4a72509d00f0904a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Establece el mismo <a class="el" href="../../dd/d12/classant_1_1_entity_manager.html" title="Clase Para manejar las entidades. ">EntityManager</a> a todos los sistemas que esten agregados.  <a href="#aa875685c2cbcf4f4a72509d00f0904a8">More...</a><br/></td></tr>
 <tr class="separator:aa875685c2cbcf4f4a72509d00f0904a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a857eb475d85f432d81d75756c4259931"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dce/classant_1_1_system_manager.html#a857eb475d85f432d81d75756c4259931">setEventQueue</a> (std::shared_ptr&lt; <a class="el" href="../../db/dec/classant_1_1_event_queue.html">EventQueue</a> &gt; eventQueue)</td></tr>
+<tr class="memdesc:a857eb475d85f432d81d75756c4259931"><td class="mdescLeft">&#160;</td><td class="mdescRight">Establece la misma <a class="el" href="../../db/dec/classant_1_1_event_queue.html" title="Clase donde se almacenan los eventos para ser procesados despues. ">EventQueue</a> a todos los sistemas que esten agregados.  <a href="#a857eb475d85f432d81d75756c4259931">More...</a><br/></td></tr>
 <tr class="separator:a857eb475d85f432d81d75756c4259931"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a301250d5639f08e39960134eeed2c1c1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dce/classant_1_1_system_manager.html#a301250d5639f08e39960134eeed2c1c1">update</a> (sf::Time dt)</td></tr>
+<tr class="memdesc:a301250d5639f08e39960134eeed2c1c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hace que todos los sistemas apliquen sus actualizaciones a sus <a class="el" href="../../dd/d12/classant_1_1_entity_manager.html" title="Clase Para manejar las entidades. ">EntityManager</a>.  <a href="#a301250d5639f08e39960134eeed2c1c1">More...</a><br/></td></tr>
 <tr class="separator:a301250d5639f08e39960134eeed2c1c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af7a916ef5a14b3b2fb147f4249165201"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dce/classant_1_1_system_manager.html#af7a916ef5a14b3b2fb147f4249165201">render</a> (sf::RenderWindow &amp;win)</td></tr>
+<tr class="memdesc:af7a916ef5a14b3b2fb147f4249165201"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hace que todos los sistemas renderizen a las Entidades que tengan que ser renderizadas.  <a href="#af7a916ef5a14b3b2fb147f4249165201">More...</a><br/></td></tr>
 <tr class="separator:af7a916ef5a14b3b2fb147f4249165201"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a9c7cb0a2f4a57f60b36e57660e1f16"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dce/classant_1_1_system_manager.html#a3a9c7cb0a2f4a57f60b36e57660e1f16">~SystemManager</a> ()</td></tr>
 <tr class="separator:a3a9c7cb0a2f4a57f60b36e57660e1f16"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Clase contenedor para los systemas. </p>
+<dl class="section author"><dt>Author</dt><dd>Cristian Glez <a href="#" onclick="location.href='mai'+'lto:'+'Cri'+'st'+'ian'+'.g'+'lez'+'.m'+'@gm'+'ai'+'l.c'+'om'; return false;">Crist<span style="display: none;">.nosp@m.</span>ian.<span style="display: none;">.nosp@m.</span>glez.<span style="display: none;">.nosp@m.</span>m@gm<span style="display: none;">.nosp@m.</span>ail.c<span style="display: none;">.nosp@m.</span>om</a> </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>0.1 </dd></dl>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a class="anchor" id="a4dfd264b3b229d3f4b64a9203c68090c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::map&lt;std::string,std::shared_ptr&lt;<a class="el" href="../../de/d48/classant_1_1_system.html">System</a>&gt; &gt; <a class="el" href="../../de/dce/classant_1_1_system_manager.html#a4dfd264b3b229d3f4b64a9203c68090c">ant::SystemManager::map</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Contenedor usado por la clase. </p>
+
+</div>
+</div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="aa18f972d58796c53db6d48e4d94532f4"></a>
 <div class="memitem">
@@ -154,6 +194,8 @@ std::shared_ptr&lt; <a class="el" href="../../de/d48/classant_1_1_system.html">S
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Constructor por defecto. </p>
 
 </div>
 </div>
@@ -187,6 +229,15 @@ std::shared_ptr&lt; <a class="el" href="../../de/d48/classant_1_1_system.html">S
       </table>
 </div><div class="memdoc">
 
+<p>Añade un sistema al manager. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s</td><td>std::shared_ptr&lt;System&gt; </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="a8360e89d83872c334e95cc0315e879ed"></a>
@@ -203,6 +254,15 @@ std::shared_ptr&lt; <a class="el" href="../../de/d48/classant_1_1_system.html">S
       </table>
 </div><div class="memdoc">
 
+<p>Devuelve el sistema con el nombre especificado. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>std::string nombre del sistema. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>std::shared_ptr&lt;System&gt; </dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="a38b8581600d71ffbe4919baedb782baf"></a>
@@ -217,6 +277,9 @@ std::shared_ptr&lt; <a class="el" href="../../de/d48/classant_1_1_system.html">S
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Getter para obtener el contenedor de los sistemas. </p>
+<dl class="section return"><dt>Returns</dt><dd>map </dd></dl>
 
 </div>
 </div>
@@ -234,6 +297,14 @@ std::shared_ptr&lt; <a class="el" href="../../de/d48/classant_1_1_system.html">S
       </table>
 </div><div class="memdoc">
 
+<p>Elimina el sistema del manager. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>std::string nombre del sistema. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="af7a916ef5a14b3b2fb147f4249165201"></a>
@@ -249,6 +320,15 @@ std::shared_ptr&lt; <a class="el" href="../../de/d48/classant_1_1_system.html">S
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Hace que todos los sistemas renderizen a las Entidades que tengan que ser renderizadas. </p>
+<p>Este metodo necesita ir entre sf::RenderWindow::clear() y sf::RenderWindow::display()</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">win</td><td>sf::RenderWindow &amp; </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -266,6 +346,14 @@ std::shared_ptr&lt; <a class="el" href="../../de/d48/classant_1_1_system.html">S
       </table>
 </div><div class="memdoc">
 
+<p>Establece el mismo <a class="el" href="../../dd/d12/classant_1_1_entity_manager.html" title="Clase Para manejar las entidades. ">EntityManager</a> a todos los sistemas que esten agregados. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">entityManager</td><td>std::shared_ptr&lt;EntityManager&gt; </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="a857eb475d85f432d81d75756c4259931"></a>
@@ -282,21 +370,37 @@ std::shared_ptr&lt; <a class="el" href="../../de/d48/classant_1_1_system.html">S
       </table>
 </div><div class="memdoc">
 
+<p>Establece la misma <a class="el" href="../../db/dec/classant_1_1_event_queue.html" title="Clase donde se almacenan los eventos para ser procesados despues. ">EventQueue</a> a todos los sistemas que esten agregados. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">eventQueue</td><td>std::shared_ptr&lt;EventQueue&gt; </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
-<a class="anchor" id="a3e615ed77a628b3fb3d6dc3d4708a4dd"></a>
+<a class="anchor" id="a368e3a047fe8ab59bd6b680804e906ed"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void ant::SystemManager::setSystems </td>
           <td>(</td>
-          <td class="paramtype">std::map&lt; std::string, std::shared_ptr&lt; <a class="el" href="../../de/d48/classant_1_1_system.html">System</a> &gt;&gt;&#160;</td>
+          <td class="paramtype"><a class="el" href="../../de/dce/classant_1_1_system_manager.html#a4dfd264b3b229d3f4b64a9203c68090c">map</a>&#160;</td>
           <td class="paramname"><em>systems</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Setter para poner el contenedor con todos los sistemas. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">systems</td><td>map </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -314,6 +418,14 @@ std::shared_ptr&lt; <a class="el" href="../../de/d48/classant_1_1_system.html">S
       </table>
 </div><div class="memdoc">
 
+<p>Hace que todos los sistemas apliquen sus actualizaciones a sus <a class="el" href="../../dd/d12/classant_1_1_entity_manager.html" title="Clase Para manejar las entidades. ">EntityManager</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dt</td><td>sf::Time delta time </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
@@ -326,7 +438,7 @@ std::shared_ptr&lt; <a class="el" href="../../de/d48/classant_1_1_system.html">S
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dc/d6c/namespaceant.html">ant</a></li><li class="navelem"><a class="el" href="../../de/dce/classant_1_1_system_manager.html">SystemManager</a></li>
-    <li class="footer">Generated on Thu Apr 17 2014 20:51:05 for AntFarm by
+    <li class="footer">Generated on Sat Apr 19 2014 11:35:20 for AntFarm by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

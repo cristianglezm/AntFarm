@@ -5,6 +5,8 @@ namespace ant{
     namespace Utils{
         /**
          * @brief Utilidad para crear un puntero unico.
+         * @tparam T clase para crear el puntero
+         * @tparam args Args argumentos
          * @return std::unique_ptr<T<Args>>
          */
         template<typename T, typename... Args>
@@ -13,6 +15,8 @@ namespace ant{
         }
         /**
          * @brief Utilidad para crear un puntero Compartido.
+         * @tparam T clase para crear el puntero
+         * @tparam args Args argumentos
          * @return std::shared_ptr<T<Args>>
          */
         template<typename T, typename... Args>

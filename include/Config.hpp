@@ -3,7 +3,7 @@
 #include <string>
 namespace ant{
     /**
-     * Clase de configuracion con constantes de ficheros.
+     * @brief Clase de configuracion con constantes de ficheros.
      * @author Cristian Glez <Cristian.glez.m@gmail.com>
      * @version 0.1
      */
