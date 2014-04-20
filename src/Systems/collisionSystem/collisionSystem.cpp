@@ -6,13 +6,16 @@ namespace ant{
         RequiredComponents = ComponentsMask::COMPONENT_TRANSFORM | ComponentsMask::COMPONENT_BOUNDS;
     }
     void collisionSystem::render(sf::RenderWindow& win){
-        return;
-        //qtree.render(win);
+        #ifdef RENDER_QTREE
+            qtree.render(win);
+        #else
+            return;
+        #endif
     }
     void collisionSystem::update(sf::Time dt){
         qtree.clear();
         for(auto& entity: em->getEntities()){
-            if((entity->getMask() & RequiredComponents) == RequiredComponents){
+            if((entity->hasComponent(RequiredComponents))){
                 auto& cBounds = entity->getComponent(ComponentsMask::COMPONENT_BOUNDS)
                                 ->getProperties<sf::FloatRect>();
                 auto& bounds = std::get<0>(cBounds);
@@ -30,7 +33,7 @@ namespace ant{
         Utils::Quadtree::list entities;
         for(auto& entity1: em->getEntities()){
             entities.clear();
-            if((entity1->getMask() & RequiredComponents) == RequiredComponents){
+            if((entity1->hasComponent(RequiredComponents))){
                 qtree.retrieve(entities,entity1.get());
                 for(auto entity2:entities){
                     if(entity1.get()!=entity2){

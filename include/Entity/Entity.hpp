@@ -43,28 +43,23 @@ namespace ant{
             /**
              * @brief Obtiene una referencia al componente.
              *
-             * Si el componente no se encuentra tira excepcion,
-             * se tiene que comprobar que la entidad tiene el componente,
-             * se comprobaria con la mascara de la entidad.
-             * @code (e.getMask() & Component::ID) == Component::ID @endcode
-             * devolveria true si tiene el componente, false si no tiene.
+             * Si el componente no se encuentra devuelve un nullptr.
              *
              * @param id long int id del componente.
-             * @return std::unique_ptr<baseComponent>& referencia al componente.
+             * @return baseComponent * puntero al componente.
              */
-            inline std::unique_ptr<baseComponent>& getComponent(long int id){
-                 try{
-                        return Components.at(id);
-                    }catch(std::exception& out){
-                        std::string ex = out.what();
-                        throw std::runtime_error("Component not Found: Mask " + ex);
-                    }
+            inline baseComponent* getComponent(long int id){
+                if(hasComponent(id)){
+                    return Components.at(id).get();
+                }else{
+                    return nullptr;
+                }
             }
             /**
              * @brief Elimina el componente de la entidad.
-             * @param mask long int
+             * @param id long int
              */
-            void removeComponent(long int mask);
+            void removeComponent(long int id);
             /**
              * @brief Getter del nombre de la entidad.
              * @return std::string nombre de la entidad.
@@ -95,6 +90,12 @@ namespace ant{
              * @return long int
              */
             inline long int getMask() const { return mask; }
+            /**
+             * @brief Devuelve si esta entidad tiene el componente.
+             * @param id long int Id del componente.
+             * @return bool
+             */
+            inline bool hasComponent(long int id){ return ((mask & id) == id); }
             /**
              * @brief Operator overload para comparar la entidad contra otra entidad.
              * @param e Entity entidad a la cual compararse.

@@ -28,7 +28,8 @@ namespace ant{
              */
             collisionSystem(sf::FloatRect bounds);
             /**
-             * @brief No hace nada.
+             * @brief Renderiza el Quadtree si RENDER_QTREE esta definido.
+             * si no no hace nada.
              */
             virtual void render(sf::RenderWindow& win);
             /**

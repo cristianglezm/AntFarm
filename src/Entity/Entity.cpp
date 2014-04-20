@@ -21,16 +21,17 @@ namespace ant{
             this->mask |= id;
             this->Components.insert(std::make_pair(id,std::move(component)));
         }
-        void Entity::removeComponent(long int mask){
-            this->mask &= ~mask;
-            this->Components.erase(mask);
+        void Entity::removeComponent(long int id){
+            if(hasComponent(id)){
+                this->mask &= ~id;
+                this->Components.erase(id);
+            }
         }
         void Entity::setName(std::string name){
             this->name = name;
         }
         void Entity::setComponents(map Components){
             this->Components = std::move(Components);
-            this->mask = 0;
             for(auto& c: Components){
                 this->mask |= c.second->getId();
             }
