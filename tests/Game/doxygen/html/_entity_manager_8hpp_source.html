@@ -44,6 +44,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -89,7 +90,7 @@ $(document).ready(function(){initNavTree('_entity_manager_8hpp_source.html','');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -110,33 +111,43 @@ $(document).ready(function(){initNavTree('_entity_manager_8hpp_source.html','');
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;Entity/Entity.hpp&gt;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span>ant{</div>
-<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="classant_1_1_entity_manager.html">    8</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classant_1_1_entity_manager.html">EntityManager</a>{</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;            std::list&lt;std::unique_ptr&lt;Entity&gt; &gt; entities;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;            <span class="keyword">typedef</span> std::list&lt;std::unique_ptr&lt;Entity&gt;&gt;::iterator iterator;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;            <a class="code" href="classant_1_1_entity_manager.html">EntityManager</a>();</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;            <span class="keywordtype">void</span> addEntity(std::unique_ptr&lt;Entity&gt; e);</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;            <span class="keywordtype">void</span> removeEntity(std::unique_ptr&lt;Entity&gt;&amp; e);</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            iterator removeEntity(std::string name);</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            iterator removeEntity(iterator it);</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            <a class="code" href="classant_1_1_entity.html">Entity</a>* getEntity(std::string name);</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            <span class="keywordtype">void</span> addEntities(std::list&lt;std::unique_ptr&lt;Entity&gt; &gt; e);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            <span class="keyword">inline</span> std::list&lt;std::unique_ptr&lt;Entity&gt; &gt;&amp; getEntities(){ <span class="keywordflow">return</span> this-&gt;entities; }</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            std::unique_ptr&lt;Entity&gt; Transfer(std::string name);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            ~<a class="code" href="classant_1_1_entity_manager.html">EntityManager</a>();</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    };</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;};</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#endif // ENTITY_MANAGER_H</span></div>
-<div class="ttc" id="classant_1_1_entity_manager_html"><div class="ttname"><a href="classant_1_1_entity_manager.html">ant::EntityManager</a></div><div class="ttdef"><b>Definition:</b> EntityManager.hpp:8</div></div>
-<div class="ttc" id="classant_1_1_entity_html"><div class="ttname"><a href="classant_1_1_entity.html">ant::Entity</a></div><div class="ttdef"><b>Definition:</b> Entity.hpp:8</div></div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classant_1_1_entity_manager.html">   13</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classant_1_1_entity_manager.html">EntityManager</a>{</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classant_1_1_entity_manager.html#a60b5d97167e38d66d7d245a59735c1b5">   18</a></span>&#160;            <span class="keyword">typedef</span> std::list&lt;std::unique_ptr&lt;Entity&gt;&gt;<a class="code" href="classant_1_1_entity_manager.html#a60b5d97167e38d66d7d245a59735c1b5">::iterator</a> <a class="code" href="classant_1_1_entity_manager.html#a60b5d97167e38d66d7d245a59735c1b5">iterator</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classant_1_1_entity_manager.html#a473e6ef8480bf2998f7c4d03e5ed20fc">   22</a></span>&#160;            <span class="keyword">typedef</span> std::list&lt;std::unique_ptr&lt;Entity&gt;&gt; <a class="code" href="classant_1_1_entity_manager.html#a473e6ef8480bf2998f7c4d03e5ed20fc">list</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            <a class="code" href="classant_1_1_entity_manager.html#a9d98e7cba15c2663b79df62f65b39a8f">EntityManager</a>();</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <span class="keywordtype">void</span> <a class="code" href="classant_1_1_entity_manager.html#af8cba501bcdac99f43f12047c8f857c4">addEntity</a>(std::unique_ptr&lt;Entity&gt; e);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            <span class="keywordtype">void</span> <a class="code" href="classant_1_1_entity_manager.html#ac3645cbade4566b1e035923d12688811">removeEntity</a>(std::unique_ptr&lt;Entity&gt;&amp; e);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <a class="code" href="classant_1_1_entity_manager.html#a60b5d97167e38d66d7d245a59735c1b5">iterator</a> <a class="code" href="classant_1_1_entity_manager.html#ac3645cbade4566b1e035923d12688811">removeEntity</a>(<span class="keyword">const</span> std::string&amp; name);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <a class="code" href="classant_1_1_entity_manager.html#a60b5d97167e38d66d7d245a59735c1b5">iterator</a> <a class="code" href="classant_1_1_entity_manager.html#ac3645cbade4566b1e035923d12688811">removeEntity</a>(<a class="code" href="classant_1_1_entity_manager.html#a60b5d97167e38d66d7d245a59735c1b5">iterator</a> it);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <a class="code" href="classant_1_1_entity.html">Entity</a>* <a class="code" href="classant_1_1_entity_manager.html#aa28e915d3d3460f04feae33c85bd3df3">getEntity</a>(<span class="keyword">const</span> std::string&amp; name);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            <span class="keywordtype">void</span> <a class="code" href="classant_1_1_entity_manager.html#a2f7ad52093982066f82a97c525501320">addEntities</a>(<a class="code" href="classant_1_1_entity_manager.html#a473e6ef8480bf2998f7c4d03e5ed20fc">list</a> e);</div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="classant_1_1_entity_manager.html#a1dbb77029a458daf2bce15e9405c9b84">   76</a></span>&#160;            <span class="keyword">inline</span> <a class="code" href="classant_1_1_entity_manager.html#a473e6ef8480bf2998f7c4d03e5ed20fc">list</a>&amp; <a class="code" href="classant_1_1_entity_manager.html#a1dbb77029a458daf2bce15e9405c9b84">getEntities</a>(){ <span class="keywordflow">return</span> this-&gt;entities; }</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            std::unique_ptr&lt;Entity&gt; <a class="code" href="classant_1_1_entity_manager.html#ae84ee9cc6de695914727dae5af4909ae">Transfer</a>(<span class="keyword">const</span> std::string&amp; name);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            ~<a class="code" href="classant_1_1_entity_manager.html">EntityManager</a>();</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            <a class="code" href="classant_1_1_entity_manager.html#a473e6ef8480bf2998f7c4d03e5ed20fc">list</a> entities;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    };</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;}</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor">#endif // ENTITY_MANAGER_H</span></div>
+<div class="ttc" id="classant_1_1_entity_manager_html_a2f7ad52093982066f82a97c525501320"><div class="ttname"><a href="classant_1_1_entity_manager.html#a2f7ad52093982066f82a97c525501320">ant::EntityManager::addEntities</a></div><div class="ttdeci">void addEntities(list e)</div><div class="ttdoc">Añade todas las entidades a la vez. </div><div class="ttdef"><b>Definition:</b> EntityManager.cpp:36</div></div>
+<div class="ttc" id="classant_1_1_entity_manager_html_a9d98e7cba15c2663b79df62f65b39a8f"><div class="ttname"><a href="classant_1_1_entity_manager.html#a9d98e7cba15c2663b79df62f65b39a8f">ant::EntityManager::EntityManager</a></div><div class="ttdeci">EntityManager()</div><div class="ttdoc">Constructor por defecto. </div><div class="ttdef"><b>Definition:</b> EntityManager.cpp:4</div></div>
+<div class="ttc" id="classant_1_1_entity_manager_html_a1dbb77029a458daf2bce15e9405c9b84"><div class="ttname"><a href="classant_1_1_entity_manager.html#a1dbb77029a458daf2bce15e9405c9b84">ant::EntityManager::getEntities</a></div><div class="ttdeci">list &amp; getEntities()</div><div class="ttdoc">devuelve la lista de las entidades. </div><div class="ttdef"><b>Definition:</b> EntityManager.hpp:76</div></div>
+<div class="ttc" id="classant_1_1_entity_manager_html_a60b5d97167e38d66d7d245a59735c1b5"><div class="ttname"><a href="classant_1_1_entity_manager.html#a60b5d97167e38d66d7d245a59735c1b5">ant::EntityManager::iterator</a></div><div class="ttdeci">std::list&lt; std::unique_ptr&lt; Entity &gt; &gt;::iterator iterator</div><div class="ttdoc">Iterador del EntityManager. </div><div class="ttdef"><b>Definition:</b> EntityManager.hpp:18</div></div>
+<div class="ttc" id="classant_1_1_entity_manager_html_af8cba501bcdac99f43f12047c8f857c4"><div class="ttname"><a href="classant_1_1_entity_manager.html#af8cba501bcdac99f43f12047c8f857c4">ant::EntityManager::addEntity</a></div><div class="ttdeci">void addEntity(std::unique_ptr&lt; Entity &gt; e)</div><div class="ttdoc">Añade una entidad al manager. </div><div class="ttdef"><b>Definition:</b> EntityManager.cpp:7</div></div>
+<div class="ttc" id="classant_1_1_entity_manager_html"><div class="ttname"><a href="classant_1_1_entity_manager.html">ant::EntityManager</a></div><div class="ttdoc">Clase Para manejar las entidades. </div><div class="ttdef"><b>Definition:</b> EntityManager.hpp:13</div></div>
+<div class="ttc" id="classant_1_1_entity_manager_html_ac3645cbade4566b1e035923d12688811"><div class="ttname"><a href="classant_1_1_entity_manager.html#ac3645cbade4566b1e035923d12688811">ant::EntityManager::removeEntity</a></div><div class="ttdeci">void removeEntity(std::unique_ptr&lt; Entity &gt; &amp;e)</div><div class="ttdoc">Elimina una entidad del manager. </div><div class="ttdef"><b>Definition:</b> EntityManager.cpp:10</div></div>
+<div class="ttc" id="classant_1_1_entity_html"><div class="ttname"><a href="classant_1_1_entity.html">ant::Entity</a></div><div class="ttdoc">Clase para tener los componentes, solo puede tener un componente de cada tipo. </div><div class="ttdef"><b>Definition:</b> Entity.hpp:16</div></div>
+<div class="ttc" id="classant_1_1_entity_manager_html_aa28e915d3d3460f04feae33c85bd3df3"><div class="ttname"><a href="classant_1_1_entity_manager.html#aa28e915d3d3460f04feae33c85bd3df3">ant::EntityManager::getEntity</a></div><div class="ttdeci">Entity * getEntity(const std::string &amp;name)</div><div class="ttdoc">Obtiene la primera entidad que tenga el nombre proporcionado. </div><div class="ttdef"><b>Definition:</b> EntityManager.cpp:28</div></div>
+<div class="ttc" id="classant_1_1_entity_manager_html_ae84ee9cc6de695914727dae5af4909ae"><div class="ttname"><a href="classant_1_1_entity_manager.html#ae84ee9cc6de695914727dae5af4909ae">ant::EntityManager::Transfer</a></div><div class="ttdeci">std::unique_ptr&lt; Entity &gt; Transfer(const std::string &amp;name)</div><div class="ttdoc">Transfiere la primera entidad que coincida con el nombre. </div><div class="ttdef"><b>Definition:</b> EntityManager.cpp:39</div></div>
+<div class="ttc" id="classant_1_1_entity_manager_html_a473e6ef8480bf2998f7c4d03e5ed20fc"><div class="ttname"><a href="classant_1_1_entity_manager.html#a473e6ef8480bf2998f7c4d03e5ed20fc">ant::EntityManager::list</a></div><div class="ttdeci">std::list&lt; std::unique_ptr&lt; Entity &gt; &gt; list</div><div class="ttdoc">Contenedor utilizado por el EntityManager. </div><div class="ttdef"><b>Definition:</b> EntityManager.hpp:22</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_f3ac5929d205dfcd8df7caa2c1aa6204.html">EntityManager</a></li><li class="navelem"><b>EntityManager.hpp</b></li>
-    <li class="footer">Generated on Thu Mar 27 2014 00:26:45 for unitTest by
+    <li class="footer">Generated on Sun Apr 20 2014 15:30:17 for unitTest by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

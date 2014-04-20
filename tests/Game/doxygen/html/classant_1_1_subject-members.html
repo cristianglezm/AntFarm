@@ -44,6 +44,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -69,6 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
       <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -91,7 +93,7 @@ $(document).ready(function(){initNavTree('classant_1_1_subject.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -108,17 +110,17 @@ $(document).ready(function(){initNavTree('classant_1_1_subject.html','');});
 
 <p>This is the complete list of members for <a class="el" href="classant_1_1_subject.html">ant::Subject</a>, including all inherited members.</p>
 <table class="directory">
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>addObserver</b>(std::shared_ptr&lt; Observer &gt; o) (defined in <a class="el" href="classant_1_1_subject.html">ant::Subject</a>)</td><td class="entry"><a class="el" href="classant_1_1_subject.html">ant::Subject</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>notifyObservers</b>(std::shared_ptr&lt; baseEvent &gt; e) (defined in <a class="el" href="classant_1_1_subject.html">ant::Subject</a>)</td><td class="entry"><a class="el" href="classant_1_1_subject.html">ant::Subject</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>removeObserver</b>(std::shared_ptr&lt; Observer &gt; o) (defined in <a class="el" href="classant_1_1_subject.html">ant::Subject</a>)</td><td class="entry"><a class="el" href="classant_1_1_subject.html">ant::Subject</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>Subject</b>() (defined in <a class="el" href="classant_1_1_subject.html">ant::Subject</a>)</td><td class="entry"><a class="el" href="classant_1_1_subject.html">ant::Subject</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classant_1_1_subject.html#a827a268f281179d94cc92c1709a8283f">addObserver</a>(std::shared_ptr&lt; Observer &gt; o)</td><td class="entry"><a class="el" href="classant_1_1_subject.html">ant::Subject</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classant_1_1_subject.html#aefef04b082bfba8c7117b4facf7af4e8">notifyObservers</a>(std::shared_ptr&lt; baseEvent &gt; e)</td><td class="entry"><a class="el" href="classant_1_1_subject.html">ant::Subject</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classant_1_1_subject.html#a8e74f416db7aadd170cb4cdfda2ec5e9">removeObserver</a>(std::shared_ptr&lt; Observer &gt; o)</td><td class="entry"><a class="el" href="classant_1_1_subject.html">ant::Subject</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classant_1_1_subject.html#abead80bfd62dbf3e728c92c77662867c">Subject</a>()</td><td class="entry"><a class="el" href="classant_1_1_subject.html">ant::Subject</a></td><td class="entry"></td></tr>
   <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>~Subject</b>() (defined in <a class="el" href="classant_1_1_subject.html">ant::Subject</a>)</td><td class="entry"><a class="el" href="classant_1_1_subject.html">ant::Subject</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Mar 27 2014 00:26:45 for unitTest by
+    <li class="footer">Generated on Sun Apr 20 2014 15:30:18 for unitTest by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

@@ -20,6 +20,9 @@ namespace ant{
          */
         class Quadtree{
             public:
+                /**
+                 * @brief Contenedor que usa el Quadtree
+                 */
                 typedef std::list<Entity*> list;
                 /**
                  * @brief Constructor principal, necesita que se especifique el rectangulo que
@@ -44,11 +47,11 @@ namespace ant{
                  * @brief Agrega las entidades del mismo sector que
                  *        la entidad especificada a la lista(la misma entidad especificada es agregada tambien)
                  *
-                 * @param entities std::list<Entity*>& lista a la que agregan las entidades del mismo sector de la especificada.
+                 * @param entities Quadtree::list& lista a la que agregan las entidades del mismo sector de la especificada.
                  * @param e Entity * Entidad a comprobar.
-                 * @return std::list<Entity*> lista de entidades
+                 * @return Quadtree::list lista de entidades
                  */
-                std::list<Entity*> retrieve(std::list<Entity*>& entities,Entity* e);
+                list retrieve(list& entities,Entity* e);
                 /**
                  * @brief Metodo para ver las divisiones en la pantalla.
                  * @param win sf::RenderWindow& ventana a la cual dibujar.
@@ -61,7 +64,7 @@ namespace ant{
                 int level;
                 std::array<std::unique_ptr<Quadtree>,4> nodes;
                 sf::FloatRect bounds;
-                std::list<Entity*> entities;
+                list entities;
                 /**
                  * @brief Constructor privado para la division de los nodos.
                  * @param level int numero del nivel.

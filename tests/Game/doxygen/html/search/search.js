@@ -7,14 +7,22 @@
 
 var indexSectionsWithContent =
 {
-  0: "bcegosw",
-  1: "bcegosw"
+  0: "abcdefgilmnopqrstuw",
+  1: "abcdegilmoqrstw",
+  2: "abcdefgilmnopqrstuw",
+  3: "b",
+  4: "ilm",
+  5: "t"
 };
 
 var indexSectionNames =
 {
   0: "all",
-  1: "classes"
+  1: "classes",
+  2: "functions",
+  3: "variables",
+  4: "typedefs",
+  5: "pages"
 };
 
 function convertToId(search)

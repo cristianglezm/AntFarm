@@ -41,9 +41,9 @@ namespace ant{
             void setSystems(map systems);
             /**
              * @brief Getter para obtener el contenedor de los sistemas.
-             * @return map
+             * @return SystemManager::map
              */
-            map getSystems();
+            inline SystemManager::map& getSystems(){ return systems; }
             /**
              * @brief Elimina el sistema del manager.
              * @param name std::string nombre del sistema.

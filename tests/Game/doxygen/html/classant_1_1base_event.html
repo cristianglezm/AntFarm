@@ -44,6 +44,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -69,6 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
       <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -91,7 +93,7 @@ $(document).ready(function(){initNavTree('classant_1_1base_event.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -119,32 +121,184 @@ $(document).ready(function(){initNavTree('classant_1_1base_event.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a6d6f1170cb6f01301d137d732c0f2704"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6d6f1170cb6f01301d137d732c0f2704"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setType</b> (int type)</td></tr>
+<tr class="memitem:a6d6f1170cb6f01301d137d732c0f2704"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classant_1_1base_event.html#a6d6f1170cb6f01301d137d732c0f2704">setType</a> (int type)</td></tr>
+<tr class="memdesc:a6d6f1170cb6f01301d137d732c0f2704"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setter para poner el tipo al evento.  <a href="#a6d6f1170cb6f01301d137d732c0f2704">More...</a><br/></td></tr>
 <tr class="separator:a6d6f1170cb6f01301d137d732c0f2704"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad6672f6ff1522b7b66ff7ae43613ed71"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad6672f6ff1522b7b66ff7ae43613ed71"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getType</b> () const </td></tr>
+<tr class="memitem:ad6672f6ff1522b7b66ff7ae43613ed71"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classant_1_1base_event.html#ad6672f6ff1522b7b66ff7ae43613ed71">getType</a> () const </td></tr>
+<tr class="memdesc:ad6672f6ff1522b7b66ff7ae43613ed71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter del tipo de evento.  <a href="#ad6672f6ff1522b7b66ff7ae43613ed71">More...</a><br/></td></tr>
 <tr class="separator:ad6672f6ff1522b7b66ff7ae43613ed71"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3385b5a287d0f6af5d39a79af1c21862"><td class="memTemplParams" colspan="2"><a class="anchor" id="a3385b5a287d0f6af5d39a79af1c21862"></a>
-template&lt;typename... T&gt; </td></tr>
-<tr class="memitem:a3385b5a287d0f6af5d39a79af1c21862"><td class="memTemplItemLeft" align="right" valign="top">const std::tuple&lt; T...&gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>getAttributes</b> () const </td></tr>
+<tr class="memitem:a3385b5a287d0f6af5d39a79af1c21862"><td class="memTemplParams" colspan="2">template&lt;typename... T&gt; </td></tr>
+<tr class="memitem:a3385b5a287d0f6af5d39a79af1c21862"><td class="memTemplItemLeft" align="right" valign="top">const std::tuple&lt; T...&gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classant_1_1base_event.html#a3385b5a287d0f6af5d39a79af1c21862">getAttributes</a> () const </td></tr>
+<tr class="memdesc:a3385b5a287d0f6af5d39a79af1c21862"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter de los atributos del evento.  <a href="#a3385b5a287d0f6af5d39a79af1c21862">More...</a><br/></td></tr>
 <tr class="separator:a3385b5a287d0f6af5d39a79af1c21862"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7724e30d398447f53442c6d915c521d5"><td class="memTemplParams" colspan="2"><a class="anchor" id="a7724e30d398447f53442c6d915c521d5"></a>
-template&lt;typename... T&gt; </td></tr>
-<tr class="memitem:a7724e30d398447f53442c6d915c521d5"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>setAttributes</b> (std::tuple&lt; T...&gt; attributes)</td></tr>
+<tr class="memitem:a7724e30d398447f53442c6d915c521d5"><td class="memTemplParams" colspan="2">template&lt;typename... T&gt; </td></tr>
+<tr class="memitem:a7724e30d398447f53442c6d915c521d5"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classant_1_1base_event.html#a7724e30d398447f53442c6d915c521d5">setAttributes</a> (std::tuple&lt; T...&gt; attributes)</td></tr>
+<tr class="memdesc:a7724e30d398447f53442c6d915c521d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setter de los atributos del evento.  <a href="#a7724e30d398447f53442c6d915c521d5">More...</a><br/></td></tr>
 <tr class="separator:a7724e30d398447f53442c6d915c521d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a54f4631555a56b376405a4bb8bdd839b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a54f4631555a56b376405a4bb8bdd839b"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>baseEvent</b> (int type)</td></tr>
+<tr class="memitem:a54f4631555a56b376405a4bb8bdd839b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classant_1_1base_event.html#a54f4631555a56b376405a4bb8bdd839b">baseEvent</a> (int type)</td></tr>
+<tr class="memdesc:a54f4631555a56b376405a4bb8bdd839b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor protegido del evento base.  <a href="#a54f4631555a56b376405a4bb8bdd839b">More...</a><br/></td></tr>
 <tr class="separator:a54f4631555a56b376405a4bb8bdd839b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Clase Base de eventos. </p>
 <dl class="section author"><dt>Author</dt><dd>Cristian Gonzalez Moreno <a href="#" onclick="location.href='mai'+'lto:'+'Cri'+'st'+'ian'+'.g'+'lez'+'.m'+'@gm'+'ai'+'l.c'+'om'; return false;">Crist<span style="display: none;">.nosp@m.</span>ian.<span style="display: none;">.nosp@m.</span>glez.<span style="display: none;">.nosp@m.</span>m@gm<span style="display: none;">.nosp@m.</span>ail.c<span style="display: none;">.nosp@m.</span>om</a> </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>0.1 </dd></dl>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a54f4631555a56b376405a4bb8bdd839b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ant::baseEvent::baseEvent </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor protegido del evento base. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>int Tipo de evento. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a3385b5a287d0f6af5d39a79af1c21862"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::tuple&lt; T...&gt; &amp; ant::baseEvent::getAttributes </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Getter de los atributos del evento. </p>
+<div class="fragment"><div class="line">baseEvent::getAttributes&lt;float,int&gt;(); </div>
+</div><!-- fragment --> <dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">...T</td><td>tipo de datos que tiene el evento en el orden adecuado. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>std::tuple&lt;T...&gt; &amp; los attributos del evento(solo lectura) </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad6672f6ff1522b7b66ff7ae43613ed71"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ant::baseEvent::getType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Getter del tipo de evento. </p>
+<dl class="section return"><dt>Returns</dt><dd>int tipo del evento. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a7724e30d398447f53442c6d915c521d5"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void ant::baseEvent::setAttributes </td>
+          <td>(</td>
+          <td class="paramtype">std::tuple&lt; T...&gt;&#160;</td>
+          <td class="paramname"><em>attributes</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Setter de los atributos del evento. </p>
+<div class="fragment"><div class="line">baseEvent::setAttributes&lt;float,int&gt;(5.3,5); </div>
+</div><!-- fragment --> <dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">...T</td><td>tipo de datos que tiene el evento en el orden adecuado. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">attributes</td><td>...T los parametros de los atributos. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a6d6f1170cb6f01301d137d732c0f2704"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ant::baseEvent::setType </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Setter para poner el tipo al evento. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>int tipo de evento. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="_event_8hpp_source.html">Event.hpp</a></li>
 </ul>
 </div><!-- contents -->
@@ -153,7 +307,7 @@ Protected Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>ant</b></li><li class="navelem"><a class="el" href="classant_1_1base_event.html">baseEvent</a></li>
-    <li class="footer">Generated on Thu Mar 27 2014 00:26:45 for unitTest by
+    <li class="footer">Generated on Sun Apr 20 2014 15:30:18 for unitTest by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

@@ -44,6 +44,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -69,6 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
       <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -91,7 +93,7 @@ $(document).ready(function(){initNavTree('classant_1_1_component.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -109,39 +111,173 @@ $(document).ready(function(){initNavTree('classant_1_1_component.html','');});
 </div><!--header-->
 <div class="contents">
 
+<p>Clase especializada de <a class="el" href="classant_1_1base_component.html" title="Clase base de componente. ">baseComponent</a>.  
+ <a href="classant_1_1_component.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_component_8hpp_source.html">Component.hpp</a>&gt;</code></p>
+
 <p>Inherits <a class="el" href="classant_1_1base_component.html">ant::baseComponent</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a19b1a7523008241f428a681b65823b15"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a19b1a7523008241f428a681b65823b15"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Component</b> (int id, T...data)</td></tr>
-<tr class="separator:a19b1a7523008241f428a681b65823b15"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acbf5db9e0be87eba019e193240ea9982"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acbf5db9e0be87eba019e193240ea9982"></a>
-std::tuple&lt; T...&gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getProperties</b> ()</td></tr>
+<tr class="memitem:a6116af875d9cfb98a00c8d45644069a1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classant_1_1_component.html#a6116af875d9cfb98a00c8d45644069a1">Component</a> (long int id, T...data)</td></tr>
+<tr class="memdesc:a6116af875d9cfb98a00c8d45644069a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor del componente especializado.  <a href="#a6116af875d9cfb98a00c8d45644069a1">More...</a><br/></td></tr>
+<tr class="separator:a6116af875d9cfb98a00c8d45644069a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbf5db9e0be87eba019e193240ea9982"><td class="memItemLeft" align="right" valign="top">std::tuple&lt; T...&gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classant_1_1_component.html#acbf5db9e0be87eba019e193240ea9982">getProperties</a> ()</td></tr>
+<tr class="memdesc:acbf5db9e0be87eba019e193240ea9982"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter de las propiedades del componente,.  <a href="#acbf5db9e0be87eba019e193240ea9982">More...</a><br/></td></tr>
 <tr class="separator:acbf5db9e0be87eba019e193240ea9982"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99536facf527f1df3c366a6f9f425fe6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classant_1_1_component.html#a99536facf527f1df3c366a6f9f425fe6">setProperties</a> (std::tuple&lt; T...&gt; properties)</td></tr>
+<tr class="memdesc:a99536facf527f1df3c366a6f9f425fe6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setter de las propiedades del componente.  <a href="#a99536facf527f1df3c366a6f9f425fe6">More...</a><br/></td></tr>
+<tr class="separator:a99536facf527f1df3c366a6f9f425fe6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classant_1_1base_component"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classant_1_1base_component')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classant_1_1base_component.html">ant::baseComponent</a></td></tr>
-<tr class="memitem:ab321008abdeacef0d10462ee320b05fa inherit pub_methods_classant_1_1base_component"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab321008abdeacef0d10462ee320b05fa"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setId</b> (int id)</td></tr>
-<tr class="separator:ab321008abdeacef0d10462ee320b05fa inherit pub_methods_classant_1_1base_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a985c9f24f95e08def64858f45bba411a inherit pub_methods_classant_1_1base_component"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a985c9f24f95e08def64858f45bba411a"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getId</b> () const </td></tr>
-<tr class="separator:a985c9f24f95e08def64858f45bba411a inherit pub_methods_classant_1_1base_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88bc0531ed99c8978e95257131653efe inherit pub_methods_classant_1_1base_component"><td class="memTemplParams" colspan="2"><a class="anchor" id="a88bc0531ed99c8978e95257131653efe"></a>
-template&lt;typename... T&gt; </td></tr>
-<tr class="memitem:a88bc0531ed99c8978e95257131653efe inherit pub_methods_classant_1_1base_component"><td class="memTemplItemLeft" align="right" valign="top">std::tuple&lt; T...&gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>getProperties</b> ()</td></tr>
+<tr class="memitem:ae033339154fcd331683f5864741b9bba inherit pub_methods_classant_1_1base_component"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classant_1_1base_component.html#ae033339154fcd331683f5864741b9bba">setId</a> (long int id)</td></tr>
+<tr class="memdesc:ae033339154fcd331683f5864741b9bba inherit pub_methods_classant_1_1base_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setter para el id.  <a href="#ae033339154fcd331683f5864741b9bba">More...</a><br/></td></tr>
+<tr class="separator:ae033339154fcd331683f5864741b9bba inherit pub_methods_classant_1_1base_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a497d74829d42df8216d4ea0c2d351335 inherit pub_methods_classant_1_1base_component"><td class="memItemLeft" align="right" valign="top">const long int &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classant_1_1base_component.html#a497d74829d42df8216d4ea0c2d351335">getId</a> () const </td></tr>
+<tr class="memdesc:a497d74829d42df8216d4ea0c2d351335 inherit pub_methods_classant_1_1base_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter para el id.  <a href="#a497d74829d42df8216d4ea0c2d351335">More...</a><br/></td></tr>
+<tr class="separator:a497d74829d42df8216d4ea0c2d351335 inherit pub_methods_classant_1_1base_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88bc0531ed99c8978e95257131653efe inherit pub_methods_classant_1_1base_component"><td class="memTemplParams" colspan="2">template&lt;typename... T&gt; </td></tr>
+<tr class="memitem:a88bc0531ed99c8978e95257131653efe inherit pub_methods_classant_1_1base_component"><td class="memTemplItemLeft" align="right" valign="top">std::tuple&lt; T...&gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classant_1_1base_component.html#a88bc0531ed99c8978e95257131653efe">getProperties</a> ()</td></tr>
+<tr class="memdesc:a88bc0531ed99c8978e95257131653efe inherit pub_methods_classant_1_1base_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter de las propiedades del componente,.  <a href="#a88bc0531ed99c8978e95257131653efe">More...</a><br/></td></tr>
 <tr class="separator:a88bc0531ed99c8978e95257131653efe inherit pub_methods_classant_1_1base_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a85aa249d86676f21407ddc7ef321c6c4 inherit pub_methods_classant_1_1base_component"><td class="memTemplParams" colspan="2"><a class="anchor" id="a85aa249d86676f21407ddc7ef321c6c4"></a>
-template&lt;typename... T&gt; </td></tr>
-<tr class="memitem:a85aa249d86676f21407ddc7ef321c6c4 inherit pub_methods_classant_1_1base_component"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>setProperties</b> (std::tuple&lt; T...&gt; properties)</td></tr>
+<tr class="memitem:a85aa249d86676f21407ddc7ef321c6c4 inherit pub_methods_classant_1_1base_component"><td class="memTemplParams" colspan="2">template&lt;typename... T&gt; </td></tr>
+<tr class="memitem:a85aa249d86676f21407ddc7ef321c6c4 inherit pub_methods_classant_1_1base_component"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classant_1_1base_component.html#a85aa249d86676f21407ddc7ef321c6c4">setProperties</a> (std::tuple&lt; T...&gt; properties)</td></tr>
+<tr class="memdesc:a85aa249d86676f21407ddc7ef321c6c4 inherit pub_methods_classant_1_1base_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setter de las propiedades del componente.  <a href="#a85aa249d86676f21407ddc7ef321c6c4">More...</a><br/></td></tr>
 <tr class="separator:a85aa249d86676f21407ddc7ef321c6c4 inherit pub_methods_classant_1_1base_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_methods_classant_1_1base_component"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classant_1_1base_component')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classant_1_1base_component.html">ant::baseComponent</a></td></tr>
-<tr class="memitem:a59617d571d23f2e8c28a0f8e975e941d inherit pro_methods_classant_1_1base_component"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a59617d571d23f2e8c28a0f8e975e941d"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>baseComponent</b> (int id)</td></tr>
-<tr class="separator:a59617d571d23f2e8c28a0f8e975e941d inherit pro_methods_classant_1_1base_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8033039184654f8e1337bc78d3299d57 inherit pro_methods_classant_1_1base_component"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classant_1_1base_component.html#a8033039184654f8e1337bc78d3299d57">baseComponent</a> (long int id)</td></tr>
+<tr class="memdesc:a8033039184654f8e1337bc78d3299d57 inherit pro_methods_classant_1_1base_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contructor para la clase derivada.  <a href="#a8033039184654f8e1337bc78d3299d57">More...</a><br/></td></tr>
+<tr class="separator:a8033039184654f8e1337bc78d3299d57 inherit pro_methods_classant_1_1base_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><h3>template&lt;typename... T&gt;<br/>
+class ant::Component&lt; T &gt;</h3>
+
+<p>Clase especializada de <a class="el" href="classant_1_1base_component.html" title="Clase base de componente. ">baseComponent</a>. </p>
+<p>Puede tener todas las propiedades que se definan despues se tendran que acceder por el orden correcto. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">...T</td><td>tipo de datos que tendra este componente. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section author"><dt>Author</dt><dd>Cristian Glez <a href="#" onclick="location.href='mai'+'lto:'+'Cri'+'st'+'ian'+'.g'+'lez'+'.m'+'@gm'+'ai'+'l.c'+'om'; return false;">Crist<span style="display: none;">.nosp@m.</span>ian.<span style="display: none;">.nosp@m.</span>glez.<span style="display: none;">.nosp@m.</span>m@gm<span style="display: none;">.nosp@m.</span>ail.c<span style="display: none;">.nosp@m.</span>om</a> </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>0.1 </dd></dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a6116af875d9cfb98a00c8d45644069a1"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classant_1_1_component.html">ant::Component</a>&lt; T &gt;::<a class="el" href="classant_1_1_component.html">Component</a> </td>
+          <td>(</td>
+          <td class="paramtype">long int&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T...&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor del componente especializado. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>long int id del componente. </td></tr>
+    <tr><td class="paramname">data</td><td>T... propiedades del componente. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="acbf5db9e0be87eba019e193240ea9982"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::tuple&lt;T...&gt;&amp; <a class="el" href="classant_1_1_component.html">ant::Component</a>&lt; T &gt;::getProperties </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Getter de las propiedades del componente,. </p>
+<p>Cuando el Componente que tienes es una especializacion no hace falta especificar los componentes ya que estan definidos al crear el objecto.</p>
+<dl class="section return"><dt>Returns</dt><dd>std::tuple&lt;T...&gt; la tupla con los datos. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a99536facf527f1df3c366a6f9f425fe6"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classant_1_1_component.html">ant::Component</a>&lt; T &gt;::setProperties </td>
+          <td>(</td>
+          <td class="paramtype">std::tuple&lt; T...&gt;&#160;</td>
+          <td class="paramname"><em>properties</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Setter de las propiedades del componente. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">properties</td><td>std::tuple&lt;T...&gt; tipo de datos <div class="fragment"><div class="line">Component&lt;float,int,int&gt; c;</div>
+<div class="line">c.setProperties(std::tuple&lt;float,int,int&gt;(2.4,5,6));</div>
+</div><!-- fragment --> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="_component_8hpp_source.html">Component.hpp</a></li>
 </ul>
@@ -151,7 +287,7 @@ Additional Inherited Members</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>ant</b></li><li class="navelem"><a class="el" href="classant_1_1_component.html">Component</a></li>
-    <li class="footer">Generated on Thu Mar 27 2014 00:26:45 for unitTest by
+    <li class="footer">Generated on Sun Apr 20 2014 15:30:18 for unitTest by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

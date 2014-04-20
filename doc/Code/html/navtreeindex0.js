@@ -82,7 +82,9 @@ var NAVTREEINDEX0 =
 "d1/df3/_world_factory_8hpp.html":[4,0,59],
 "d1/df3/_world_factory_8hpp_source.html":[4,0,59],
 "d1/df6/_math_8cpp.html":[4,0,35],
-"d1/df6/_math_8cpp.html#af4038d2832c96f2ce257570054bf1cae":[4,0,35,0],
+"d1/df6/_math_8cpp.html#a412fa3ff3e1fd4c0ac6caca589e38a15":[4,0,35,1],
+"d1/df6/_math_8cpp.html#af4038d2832c96f2ce257570054bf1cae":[4,0,35,2],
+"d1/df6/_math_8cpp.html#af65f1f5f416379049a8406f62775b798":[4,0,35,0],
 "d2/d03/_asset_manager_8hpp.html":[4,0,1],
 "d2/d03/_asset_manager_8hpp_source.html":[4,0,1],
 "d2/d07/_game_8hpp.html":[4,0,27],
@@ -173,9 +175,9 @@ var NAVTREEINDEX0 =
 "d6/d94/classant_1_1_utils_1_1_quadtree.html#a2dc005f81ddcd318dac8d1d53460e3ff":[3,0,0,0,0,1],
 "d6/d94/classant_1_1_utils_1_1_quadtree.html#a744668597e9815bc6cdeb44a48f527dd":[3,0,0,0,0,0],
 "d6/d94/classant_1_1_utils_1_1_quadtree.html#a8d8e7d44a86d3a453684e4ead13ac8cb":[3,0,0,0,0,2],
-"d6/d94/classant_1_1_utils_1_1_quadtree.html#a953b72eaf8ca8fa8f1142a890446f9aa":[3,0,0,0,0,6],
 "d6/d94/classant_1_1_utils_1_1_quadtree.html#aace6744ed7023825a1863f9953421a4b":[3,0,0,0,0,3],
 "d6/d94/classant_1_1_utils_1_1_quadtree.html#acb64f3de7ac64139734c78c074a5509c":[3,0,0,0,0,5],
+"d6/d94/classant_1_1_utils_1_1_quadtree.html#acef35673069f1edbafd93579e0a64df7":[3,0,0,0,0,6],
 "d6/d94/classant_1_1_utils_1_1_quadtree.html#af1f8e490445ee493d7639dc6f621bdfc":[3,0,0,0,0,4],
 "d6/dc3/_event_8hpp.html":[4,0,22],
 "d6/dc3/_event_8hpp_source.html":[4,0,22],
@@ -247,7 +249,5 @@ var NAVTREEINDEX0 =
 "da/dc7/_observer_8hpp_source.html":[4,0,39],
 "db/d10/classant_1_1_entity_factory.html":[3,0,0,8],
 "db/d10/classant_1_1_entity_factory.html#a3562d6b2a68372465ec4518070b956d3":[3,0,0,8,6],
-"db/d10/classant_1_1_entity_factory.html#a3ac763b7d893ee9cd6b64fe00597a928":[3,0,0,8,8],
-"db/d10/classant_1_1_entity_factory.html#a61c45ac377e5a9783cffaca1eeba6973":[3,0,0,8,7],
-"db/d10/classant_1_1_entity_factory.html#a66fee3669089d284296bbfed30e4ff00":[3,0,0,8,2]
+"db/d10/classant_1_1_entity_factory.html#a3ac763b7d893ee9cd6b64fe00597a928":[3,0,0,8,8]
 };

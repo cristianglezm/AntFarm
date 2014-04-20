@@ -44,6 +44,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -69,6 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
       <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -91,7 +93,7 @@ $(document).ready(function(){initNavTree('classant_1_1_system.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -114,44 +116,51 @@ $(document).ready(function(){initNavTree('classant_1_1_system.html','');});
  <a href="classant_1_1_system.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_system_8hpp_source.html">System.hpp</a>&gt;</code></p>
+
+<p>Inherited by <a class="el" href="classant_1_1collision_system.html">ant::collisionSystem</a>, <a class="el" href="classant_1_1digging_system.html">ant::diggingSystem</a>, <a class="el" href="classant_1_1input_system.html">ant::inputSystem</a>, <a class="el" href="classant_1_1movement_system.html">ant::movementSystem</a>, <a class="el" href="classant_1_1render_system.html">ant::renderSystem</a>, and <a class="el" href="classtest_system.html">testSystem</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a0561fbb47b681fabd4ec27e632b57929"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0561fbb47b681fabd4ec27e632b57929"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>System</b> (long int req)</td></tr>
+<tr class="memitem:aa989449604319d4b374b44f68fc8cf26"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa989449604319d4b374b44f68fc8cf26"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classant_1_1_system.html#aa989449604319d4b374b44f68fc8cf26">System</a> ()</td></tr>
+<tr class="memdesc:aa989449604319d4b374b44f68fc8cf26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor por defecto. <br/></td></tr>
+<tr class="separator:aa989449604319d4b374b44f68fc8cf26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0561fbb47b681fabd4ec27e632b57929"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classant_1_1_system.html#a0561fbb47b681fabd4ec27e632b57929">System</a> (long int req)</td></tr>
+<tr class="memdesc:a0561fbb47b681fabd4ec27e632b57929"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor con los requisitos de este sistema.  <a href="#a0561fbb47b681fabd4ec27e632b57929">More...</a><br/></td></tr>
 <tr class="separator:a0561fbb47b681fabd4ec27e632b57929"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a276b368d0c1612d762c22a090772ae7b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a276b368d0c1612d762c22a090772ae7b"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>System</b> (long int req, std::shared_ptr&lt; <a class="el" href="classant_1_1_entity_manager.html">EntityManager</a> &gt; em, std::shared_ptr&lt; <a class="el" href="classant_1_1_event_queue.html">EventQueue</a> &gt; eventQueue)</td></tr>
+<tr class="memitem:a276b368d0c1612d762c22a090772ae7b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classant_1_1_system.html#a276b368d0c1612d762c22a090772ae7b">System</a> (long int req, std::shared_ptr&lt; <a class="el" href="classant_1_1_entity_manager.html">EntityManager</a> &gt; em, std::shared_ptr&lt; <a class="el" href="classant_1_1_event_queue.html">EventQueue</a> &gt; eventQueue)</td></tr>
+<tr class="memdesc:a276b368d0c1612d762c22a090772ae7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor con los requisitos, <a class="el" href="classant_1_1_event_queue.html" title="Clase donde se almacenan los eventos para ser procesados despues. ">EventQueue</a> y <a class="el" href="classant_1_1_entity_manager.html" title="Clase Para manejar las entidades. ">EntityManager</a>.  <a href="#a276b368d0c1612d762c22a090772ae7b">More...</a><br/></td></tr>
 <tr class="separator:a276b368d0c1612d762c22a090772ae7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a35662ff3739ff4290df1106bfdccfaca"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a35662ff3739ff4290df1106bfdccfaca"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setRequiredComponents</b> (long int req)</td></tr>
+<tr class="memitem:a35662ff3739ff4290df1106bfdccfaca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classant_1_1_system.html#a35662ff3739ff4290df1106bfdccfaca">setRequiredComponents</a> (long int req)</td></tr>
+<tr class="memdesc:a35662ff3739ff4290df1106bfdccfaca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setter para los requisitos necesarios.  <a href="#a35662ff3739ff4290df1106bfdccfaca">More...</a><br/></td></tr>
 <tr class="separator:a35662ff3739ff4290df1106bfdccfaca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d94338969f43d4fd2fd972deb099258"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2d94338969f43d4fd2fd972deb099258"></a>
-long int&#160;</td><td class="memItemRight" valign="bottom"><b>getRequiredComponts</b> ()</td></tr>
+long int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classant_1_1_system.html#a2d94338969f43d4fd2fd972deb099258">getRequiredComponts</a> ()</td></tr>
+<tr class="memdesc:a2d94338969f43d4fd2fd972deb099258"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter de los requisitos para el sistema. <br/></td></tr>
 <tr class="separator:a2d94338969f43d4fd2fd972deb099258"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1effe9f0e5615e516a34be02d5895434"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1effe9f0e5615e516a34be02d5895434"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setEventQueue</b> (std::shared_ptr&lt; <a class="el" href="classant_1_1_event_queue.html">EventQueue</a> &gt; eq)</td></tr>
+<tr class="memitem:a1effe9f0e5615e516a34be02d5895434"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classant_1_1_system.html#a1effe9f0e5615e516a34be02d5895434">setEventQueue</a> (std::shared_ptr&lt; <a class="el" href="classant_1_1_event_queue.html">EventQueue</a> &gt; eq)</td></tr>
+<tr class="memdesc:a1effe9f0e5615e516a34be02d5895434"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setter para la <a class="el" href="classant_1_1_event_queue.html" title="Clase donde se almacenan los eventos para ser procesados despues. ">EventQueue</a>.  <a href="#a1effe9f0e5615e516a34be02d5895434">More...</a><br/></td></tr>
 <tr class="separator:a1effe9f0e5615e516a34be02d5895434"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac3e2bbbdb622276d194ad3a687d8e4f1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac3e2bbbdb622276d194ad3a687d8e4f1"></a>
-std::shared_ptr&lt; <a class="el" href="classant_1_1_event_queue.html">EventQueue</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getEventQueue</b> ()</td></tr>
+<tr class="memitem:ac3e2bbbdb622276d194ad3a687d8e4f1"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classant_1_1_event_queue.html">EventQueue</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classant_1_1_system.html#ac3e2bbbdb622276d194ad3a687d8e4f1">getEventQueue</a> ()</td></tr>
+<tr class="memdesc:ac3e2bbbdb622276d194ad3a687d8e4f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter para la <a class="el" href="classant_1_1_event_queue.html" title="Clase donde se almacenan los eventos para ser procesados despues. ">EventQueue</a>.  <a href="#ac3e2bbbdb622276d194ad3a687d8e4f1">More...</a><br/></td></tr>
 <tr class="separator:ac3e2bbbdb622276d194ad3a687d8e4f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a231f9fc93b55ee67deb9597ae6be13ba"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a231f9fc93b55ee67deb9597ae6be13ba"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setName</b> (std::string name)</td></tr>
+<tr class="memitem:a231f9fc93b55ee67deb9597ae6be13ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classant_1_1_system.html#a231f9fc93b55ee67deb9597ae6be13ba">setName</a> (std::string name)</td></tr>
+<tr class="memdesc:a231f9fc93b55ee67deb9597ae6be13ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setter Para el nombre del sistema.  <a href="#a231f9fc93b55ee67deb9597ae6be13ba">More...</a><br/></td></tr>
 <tr class="separator:a231f9fc93b55ee67deb9597ae6be13ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a52a559b2c3ddbec5c846df1badd7f7f8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a52a559b2c3ddbec5c846df1badd7f7f8"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getName</b> () const </td></tr>
+<tr class="memitem:a52a559b2c3ddbec5c846df1badd7f7f8"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classant_1_1_system.html#a52a559b2c3ddbec5c846df1badd7f7f8">getName</a> () const </td></tr>
+<tr class="memdesc:a52a559b2c3ddbec5c846df1badd7f7f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter para el nombre del sistema.  <a href="#a52a559b2c3ddbec5c846df1badd7f7f8">More...</a><br/></td></tr>
 <tr class="separator:a52a559b2c3ddbec5c846df1badd7f7f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f983382d142ea697f1811f7f6f6ab17"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1f983382d142ea697f1811f7f6f6ab17"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setEntityManager</b> (std::shared_ptr&lt; <a class="el" href="classant_1_1_entity_manager.html">EntityManager</a> &gt; em)</td></tr>
+<tr class="memitem:a1f983382d142ea697f1811f7f6f6ab17"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classant_1_1_system.html#a1f983382d142ea697f1811f7f6f6ab17">setEntityManager</a> (std::shared_ptr&lt; <a class="el" href="classant_1_1_entity_manager.html">EntityManager</a> &gt; em)</td></tr>
+<tr class="memdesc:a1f983382d142ea697f1811f7f6f6ab17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setter para el <a class="el" href="classant_1_1_entity_manager.html" title="Clase Para manejar las entidades. ">EntityManager</a>.  <a href="#a1f983382d142ea697f1811f7f6f6ab17">More...</a><br/></td></tr>
 <tr class="separator:a1f983382d142ea697f1811f7f6f6ab17"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adaad2087de7fc71924cfb5b134014b0a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adaad2087de7fc71924cfb5b134014b0a"></a>
-std::shared_ptr&lt; <a class="el" href="classant_1_1_entity_manager.html">EntityManager</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getEntityManager</b> ()</td></tr>
+<tr class="memitem:adaad2087de7fc71924cfb5b134014b0a"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classant_1_1_entity_manager.html">EntityManager</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classant_1_1_system.html#adaad2087de7fc71924cfb5b134014b0a">getEntityManager</a> ()</td></tr>
+<tr class="memdesc:adaad2087de7fc71924cfb5b134014b0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter para el <a class="el" href="classant_1_1_entity_manager.html" title="Clase Para manejar las entidades. ">EntityManager</a>.  <a href="#adaad2087de7fc71924cfb5b134014b0a">More...</a><br/></td></tr>
 <tr class="separator:adaad2087de7fc71924cfb5b134014b0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a30a815d199fea90e9d2f7167eb2bf86e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a30a815d199fea90e9d2f7167eb2bf86e"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>render</b> (sf::RenderWindow &amp;win)=0</td></tr>
+<tr class="memitem:a30a815d199fea90e9d2f7167eb2bf86e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classant_1_1_system.html#a30a815d199fea90e9d2f7167eb2bf86e">render</a> (sf::RenderWindow &amp;win)=0</td></tr>
+<tr class="memdesc:a30a815d199fea90e9d2f7167eb2bf86e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metodo abstracto para dibujar en la pantalla.  <a href="#a30a815d199fea90e9d2f7167eb2bf86e">More...</a><br/></td></tr>
 <tr class="separator:a30a815d199fea90e9d2f7167eb2bf86e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d97de105123df07d4d90ac2914f9e6c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4d97de105123df07d4d90ac2914f9e6c"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> (sf::Time dt)=0</td></tr>
+<tr class="memitem:a4d97de105123df07d4d90ac2914f9e6c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classant_1_1_system.html#a4d97de105123df07d4d90ac2914f9e6c">update</a> (sf::Time dt)=0</td></tr>
+<tr class="memdesc:a4d97de105123df07d4d90ac2914f9e6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metodo abstracto para actualizar entidades.  <a href="#a4d97de105123df07d4d90ac2914f9e6c">More...</a><br/></td></tr>
 <tr class="separator:a4d97de105123df07d4d90ac2914f9e6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
@@ -171,9 +180,319 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td><
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Clase base para los sistemas. </p>
-<dl class="section author"><dt>Author</dt><dd>Cristian Gonzalez Moreno <a href="#" onclick="location.href='mai'+'lto:'+'Cri'+'st'+'ian'+'.g'+'lez'+'.m'+'@gm'+'ai'+'l.c'+'om'; return false;">Crist<span style="display: none;">.nosp@m.</span>ian.<span style="display: none;">.nosp@m.</span>glez.<span style="display: none;">.nosp@m.</span>m@gm<span style="display: none;">.nosp@m.</span>ail.c<span style="display: none;">.nosp@m.</span>om</a> </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Cristian Glez <a href="#" onclick="location.href='mai'+'lto:'+'Cri'+'st'+'ian'+'.g'+'lez'+'.m'+'@gm'+'ai'+'l.c'+'om'; return false;">Crist<span style="display: none;">.nosp@m.</span>ian.<span style="display: none;">.nosp@m.</span>glez.<span style="display: none;">.nosp@m.</span>m@gm<span style="display: none;">.nosp@m.</span>ail.c<span style="display: none;">.nosp@m.</span>om</a> </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>0.1 </dd></dl>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a0561fbb47b681fabd4ec27e632b57929"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ant::System::System </td>
+          <td>(</td>
+          <td class="paramtype">long int&#160;</td>
+          <td class="paramname"><em>req</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor con los requisitos de este sistema. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">req</td><td>long int </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a276b368d0c1612d762c22a090772ae7b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ant::System::System </td>
+          <td>(</td>
+          <td class="paramtype">long int&#160;</td>
+          <td class="paramname"><em>req</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classant_1_1_entity_manager.html">EntityManager</a> &gt;&#160;</td>
+          <td class="paramname"><em>em</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classant_1_1_event_queue.html">EventQueue</a> &gt;&#160;</td>
+          <td class="paramname"><em>eventQueue</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor con los requisitos, <a class="el" href="classant_1_1_event_queue.html" title="Clase donde se almacenan los eventos para ser procesados despues. ">EventQueue</a> y <a class="el" href="classant_1_1_entity_manager.html" title="Clase Para manejar las entidades. ">EntityManager</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">req</td><td>long int </td></tr>
+    <tr><td class="paramname">em</td><td>std::shared_ptr&lt;EntityManager&gt; </td></tr>
+    <tr><td class="paramname">eventQueue</td><td>std::shared_ptr&lt;EventQueue&gt; </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="adaad2087de7fc71924cfb5b134014b0a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="classant_1_1_entity_manager.html">EntityManager</a>&gt; ant::System::getEntityManager </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Getter para el <a class="el" href="classant_1_1_entity_manager.html" title="Clase Para manejar las entidades. ">EntityManager</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::shared_ptr&lt;EntityManager&gt; </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac3e2bbbdb622276d194ad3a687d8e4f1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="classant_1_1_event_queue.html">EventQueue</a>&gt; ant::System::getEventQueue </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Getter para la <a class="el" href="classant_1_1_event_queue.html" title="Clase donde se almacenan los eventos para ser procesados despues. ">EventQueue</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::shared_ptr&lt;EventQueue&gt; </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a52a559b2c3ddbec5c846df1badd7f7f8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string ant::System::getName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Getter para el nombre del sistema. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::string </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a30a815d199fea90e9d2f7167eb2bf86e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ant::System::render </td>
+          <td>(</td>
+          <td class="paramtype">sf::RenderWindow &amp;&#160;</td>
+          <td class="paramname"><em>win</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Metodo abstracto para dibujar en la pantalla. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">win</td><td>sf::RenderWindow &amp; referencia a la pantalla para dibujar. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="classant_1_1collision_system.html#ad42cc6cabd1798fa7a0d6ce1a6d106ca">ant::collisionSystem</a>, <a class="el" href="classant_1_1input_system.html#af99fd06a4acdbd31b0c6b63437ed497d">ant::inputSystem</a>, <a class="el" href="classant_1_1movement_system.html#a23af25667217b499e894d87e1097a52b">ant::movementSystem</a>, <a class="el" href="classant_1_1digging_system.html#a6720f61de99020ac3297b0ceaed95d5d">ant::diggingSystem</a>, <a class="el" href="classant_1_1render_system.html#ad5284fb701e3d9ea1c3645e553083ba6">ant::renderSystem</a>, and <a class="el" href="classtest_system.html#a47c35c6f5bd2b24061d05e044fda6c4e">testSystem</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1f983382d142ea697f1811f7f6f6ab17"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ant::System::setEntityManager </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classant_1_1_entity_manager.html">EntityManager</a> &gt;&#160;</td>
+          <td class="paramname"><em>em</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Setter para el <a class="el" href="classant_1_1_entity_manager.html" title="Clase Para manejar las entidades. ">EntityManager</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">em</td><td>std::shared_ptr&lt;EntityManager&gt; </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a1effe9f0e5615e516a34be02d5895434"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ant::System::setEventQueue </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classant_1_1_event_queue.html">EventQueue</a> &gt;&#160;</td>
+          <td class="paramname"><em>eq</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Setter para la <a class="el" href="classant_1_1_event_queue.html" title="Clase donde se almacenan los eventos para ser procesados despues. ">EventQueue</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">eq</td><td>std::shared_ptr&lt;EventQueue&gt; </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a231f9fc93b55ee67deb9597ae6be13ba"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ant::System::setName </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Setter Para el nombre del sistema. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>std::string </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a35662ff3739ff4290df1106bfdccfaca"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ant::System::setRequiredComponents </td>
+          <td>(</td>
+          <td class="paramtype">long int&#160;</td>
+          <td class="paramname"><em>req</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Setter para los requisitos necesarios. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">req</td><td>long int </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a4d97de105123df07d4d90ac2914f9e6c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ant::System::update </td>
+          <td>(</td>
+          <td class="paramtype">sf::Time&#160;</td>
+          <td class="paramname"><em>dt</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Metodo abstracto para actualizar entidades. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dt</td><td>sf::Time delta time para los calculos. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="classant_1_1collision_system.html#abef6a9cb5378ddb9ddf6cfdd46b6dbfa">ant::collisionSystem</a>, <a class="el" href="classant_1_1movement_system.html#af7017a1d594b18a8a8d3bf925cd00881">ant::movementSystem</a>, <a class="el" href="classant_1_1input_system.html#aa68bbe84d26af41e5ec6254de168f50e">ant::inputSystem</a>, <a class="el" href="classant_1_1digging_system.html#a1edc207f78ecc86de904698f160da2d8">ant::diggingSystem</a>, <a class="el" href="classant_1_1render_system.html#a9a8fd550b795db266510831276bfe957">ant::renderSystem</a>, and <a class="el" href="classtest_system.html#af7430fbf5791d9e988f587ccc22cf054">testSystem</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="_system_8hpp_source.html">System.hpp</a></li>
 <li>System.cpp</li>
 </ul>
@@ -183,7 +502,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td><
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>ant</b></li><li class="navelem"><a class="el" href="classant_1_1_system.html">System</a></li>
-    <li class="footer">Generated on Thu Mar 27 2014 00:26:45 for unitTest by
+    <li class="footer">Generated on Sun Apr 20 2014 15:30:18 for unitTest by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

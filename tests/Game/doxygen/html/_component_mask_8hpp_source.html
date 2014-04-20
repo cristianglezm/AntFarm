@@ -44,6 +44,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -89,7 +90,7 @@ $(document).ready(function(){initNavTree('_component_mask_8hpp_source.html','');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -110,22 +111,23 @@ $(document).ready(function(){initNavTree('_component_mask_8hpp_source.html','');
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;     <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;         <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> COMPONENT_NONE = 0;</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;         <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> COMPONENT_SPRITE = 1 &lt;&lt; 0;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;         <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> COMPONENT_MOVEMENT = 1 &lt;&lt; 1;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;         <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> COMPONENT_TRANSFORM = 1 &lt;&lt; 2;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;         <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> COMPONENT_EGGS = 1 &lt;&lt; 3;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;         <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> COMPONENT_HORNS = 1 &lt;&lt; 4;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;         <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> COMPONENT_DESTRUCTABLE = 1 &lt;&lt; 5;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;         <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> COMPONENT_BOUNDS = 1 &lt;&lt; 6;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;};</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#endif // COMPONENT_MASK_H</span></div>
-<div class="ttc" id="class_components_mask_html"><div class="ttname"><a href="class_components_mask.html">ComponentsMask</a></div><div class="ttdef"><b>Definition:</b> ComponentMask.hpp:9</div></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;         <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> COMPONENT_ANIMATION = 1 &lt;&lt; 1;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;         <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> COMPONENT_VELOCITY = 1 &lt;&lt; 2;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;         <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> COMPONENT_TRANSFORM = 1 &lt;&lt; 3;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;         <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> COMPONENT_EGGS = 1 &lt;&lt; 4;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;         <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> COMPONENT_HORNS = 1 &lt;&lt; 5;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;         <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> COMPONENT_DESTRUCTABLE = 1 &lt;&lt; 6;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;         <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> COMPONENT_BOUNDS = 1 &lt;&lt; 7;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;};</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#endif // COMPONENT_MASK_H</span></div>
+<div class="ttc" id="class_components_mask_html"><div class="ttname"><a href="class_components_mask.html">ComponentsMask</a></div><div class="ttdoc">tipos de componentes. </div><div class="ttdef"><b>Definition:</b> ComponentMask.hpp:9</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_b5387289685bf4d85d4ad61551733121.html">Components</a></li><li class="navelem"><b>ComponentMask.hpp</b></li>
-    <li class="footer">Generated on Thu Mar 27 2014 00:26:45 for unitTest by
+    <li class="footer">Generated on Sun Apr 20 2014 15:30:17 for unitTest by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

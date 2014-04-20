@@ -1,8 +1,8 @@
 #include <Entity/Entity.hpp>
 namespace ant{
         Entity::Entity(){
-            this->name = "";
-            this->mask = 0;
+            name = "";
+            mask = 0;
         }
         Entity::Entity(std::string name){
             this->name = name;

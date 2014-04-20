@@ -44,6 +44,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -69,6 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
       <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -91,7 +93,7 @@ $(document).ready(function(){initNavTree('classant_1_1_subject.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -108,19 +110,105 @@ $(document).ready(function(){initNavTree('classant_1_1_subject.html','');});
 <div class="title">ant::Subject Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Tema al cual se suscriben los observadores <a class="el" href="classant_1_1_observer.html" title="Interfaz para los observadores. ">Observer</a>.  
+ <a href="classant_1_1_subject.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_subject_8hpp_source.html">Subject.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a827a268f281179d94cc92c1709a8283f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a827a268f281179d94cc92c1709a8283f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>addObserver</b> (std::shared_ptr&lt; <a class="el" href="classant_1_1_observer.html">Observer</a> &gt; o)</td></tr>
+<tr class="memitem:abead80bfd62dbf3e728c92c77662867c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abead80bfd62dbf3e728c92c77662867c"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classant_1_1_subject.html#abead80bfd62dbf3e728c92c77662867c">Subject</a> ()</td></tr>
+<tr class="memdesc:abead80bfd62dbf3e728c92c77662867c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor por defecto. <br/></td></tr>
+<tr class="separator:abead80bfd62dbf3e728c92c77662867c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a827a268f281179d94cc92c1709a8283f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classant_1_1_subject.html#a827a268f281179d94cc92c1709a8283f">addObserver</a> (std::shared_ptr&lt; <a class="el" href="classant_1_1_observer.html">Observer</a> &gt; o)</td></tr>
+<tr class="memdesc:a827a268f281179d94cc92c1709a8283f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Añade un observador.  <a href="#a827a268f281179d94cc92c1709a8283f">More...</a><br/></td></tr>
 <tr class="separator:a827a268f281179d94cc92c1709a8283f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e74f416db7aadd170cb4cdfda2ec5e9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8e74f416db7aadd170cb4cdfda2ec5e9"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>removeObserver</b> (std::shared_ptr&lt; <a class="el" href="classant_1_1_observer.html">Observer</a> &gt; o)</td></tr>
+<tr class="memitem:a8e74f416db7aadd170cb4cdfda2ec5e9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classant_1_1_subject.html#a8e74f416db7aadd170cb4cdfda2ec5e9">removeObserver</a> (std::shared_ptr&lt; <a class="el" href="classant_1_1_observer.html">Observer</a> &gt; o)</td></tr>
+<tr class="memdesc:a8e74f416db7aadd170cb4cdfda2ec5e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Elimina el primer observador que coincida.  <a href="#a8e74f416db7aadd170cb4cdfda2ec5e9">More...</a><br/></td></tr>
 <tr class="separator:a8e74f416db7aadd170cb4cdfda2ec5e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aefef04b082bfba8c7117b4facf7af4e8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aefef04b082bfba8c7117b4facf7af4e8"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>notifyObservers</b> (std::shared_ptr&lt; <a class="el" href="classant_1_1base_event.html">baseEvent</a> &gt; e)</td></tr>
+<tr class="memitem:aefef04b082bfba8c7117b4facf7af4e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classant_1_1_subject.html#aefef04b082bfba8c7117b4facf7af4e8">notifyObservers</a> (std::shared_ptr&lt; <a class="el" href="classant_1_1base_event.html">baseEvent</a> &gt; e)</td></tr>
+<tr class="memdesc:aefef04b082bfba8c7117b4facf7af4e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notifica a los Observadores que esten en suscritos a este tema.  <a href="#aefef04b082bfba8c7117b4facf7af4e8">More...</a><br/></td></tr>
 <tr class="separator:aefef04b082bfba8c7117b4facf7af4e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Tema al cual se suscriben los observadores <a class="el" href="classant_1_1_observer.html" title="Interfaz para los observadores. ">Observer</a>. </p>
+<dl class="section author"><dt>Author</dt><dd>Cristian Glez <a href="#" onclick="location.href='mai'+'lto:'+'Cri'+'st'+'ian'+'.g'+'lez'+'.m'+'@gm'+'ai'+'l.c'+'om'; return false;">Crist<span style="display: none;">.nosp@m.</span>ian.<span style="display: none;">.nosp@m.</span>glez.<span style="display: none;">.nosp@m.</span>m@gm<span style="display: none;">.nosp@m.</span>ail.c<span style="display: none;">.nosp@m.</span>om</a> </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>0.1 </dd></dl>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a827a268f281179d94cc92c1709a8283f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ant::Subject::addObserver </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classant_1_1_observer.html">Observer</a> &gt;&#160;</td>
+          <td class="paramname"><em>o</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Añade un observador. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">o</td><td>std::shared_ptr&lt;Observer&gt; </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aefef04b082bfba8c7117b4facf7af4e8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ant::Subject::notifyObservers </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classant_1_1base_event.html">baseEvent</a> &gt;&#160;</td>
+          <td class="paramname"><em>e</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Notifica a los Observadores que esten en suscritos a este tema. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>std::shared_ptr&lt;baseEvent&gt; evento que se envia. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a8e74f416db7aadd170cb4cdfda2ec5e9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ant::Subject::removeObserver </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classant_1_1_observer.html">Observer</a> &gt;&#160;</td>
+          <td class="paramname"><em>o</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Elimina el primer observador que coincida. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">o</td><td>std::shared_ptr&lt;Observer&gt; observador a eliminar. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="_subject_8hpp_source.html">Subject.hpp</a></li>
 <li>Subject.cpp</li>
@@ -131,7 +219,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>notifyObservers</b> (
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>ant</b></li><li class="navelem"><a class="el" href="classant_1_1_subject.html">Subject</a></li>
-    <li class="footer">Generated on Thu Mar 27 2014 00:26:45 for unitTest by
+    <li class="footer">Generated on Sun Apr 20 2014 15:30:18 for unitTest by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

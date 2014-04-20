@@ -7,12 +7,15 @@ namespace ant{
     void renderSystem::render(sf::RenderWindow& win){
         for(auto& entity: this->em->getEntities()){
             if((entity->getMask() & RequiredComponents)==RequiredComponents){
+                // obtenemos las propiedades del componente
                 auto& sprite = entity->getComponent(ComponentsMask::COMPONENT_SPRITE)->getProperties<std::string,std::unique_ptr<sf::Sprite>>();
                 auto& transform = entity->getComponent(ComponentsMask::COMPONENT_TRANSFORM)->getProperties<sf::Vector2f,sf::Vector2f,float>();
+                // obtenemos la sprite
                 auto& spr = std::get<1>(sprite);
                 sf::Vector2f& position = std::get<0>(transform);
                 sf::Vector2f& scale = std::get<1>(transform);
                 float& rotation = std::get<2>(transform);
+                // si esta dentro de la pantalla actual se muestra.
                 if(win.getViewport(win.getView()).contains(position.x,position.y)){
                     spr->setPosition(position);
                     spr->setScale(scale);
@@ -20,6 +23,7 @@ namespace ant{
                     win.draw(*spr);
                 }
             }
+            // si tiene el destructable se renderiza tambien.
             if((entity->getMask() & ComponentsMask::COMPONENT_DESTRUCTABLE) == ComponentsMask::COMPONENT_DESTRUCTABLE){
                 auto& destructable = entity->getComponent(ComponentsMask::COMPONENT_DESTRUCTABLE)->getProperties<std::string,std::unique_ptr<sf::VertexArray>>();
                 win.draw(*std::get<1>(destructable));

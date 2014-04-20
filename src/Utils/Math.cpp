@@ -15,5 +15,19 @@ namespace ant{
             nRect.height = rect.height;
             return nRect;
         }
+        sf::Vector2f normalize(const sf::Vector2f& v){
+            float length{std::sqrt((v.x * v.x) + (v.y*v.y))};
+            sf::Vector2f v1;
+            if(length > 1 ){
+                v1.x = v.x / length;
+                v1.y = v.y / length;
+            }
+            return v1;
+        }
+        float getDirection(const sf::Vector2f& currentPosition,const sf::Vector2f& wantedPosition){
+            sf::Vector2f result(wantedPosition.x - currentPosition.x,wantedPosition.y - currentPosition.y);
+            result = normalize(result);
+            return std::atan2(-result.x, result.y);
+        }
     }
 }

@@ -1,7 +1,9 @@
 var _math_8hpp =
 [
+    [ "getDirection", "dc/dba/_math_8hpp.html#af65f1f5f416379049a8406f62775b798", null ],
+    [ "normalize", "dc/dba/_math_8hpp.html#a412fa3ff3e1fd4c0ac6caca589e38a15", null ],
     [ "rotateRect", "dc/dba/_math_8hpp.html#af4038d2832c96f2ce257570054bf1cae", null ],
     [ "toDegrees", "dc/dba/_math_8hpp.html#a2292728caa47103c8150e5f50d7e5bd0", null ],
     [ "toRadians", "dc/dba/_math_8hpp.html#a5238d91325cffcd5d052d055767bfc36", null ],
-    [ "PI", "dc/dba/_math_8hpp.html#a44d89475d65dcfc853a34b953723f481", null ]
+    [ "PI", "dc/dba/_math_8hpp.html#ae9b5ccdeb3ee02a6f4f26c1e2a6f02be", null ]
 ];

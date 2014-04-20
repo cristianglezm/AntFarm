@@ -44,6 +44,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -69,6 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
       <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -91,7 +93,7 @@ $(document).ready(function(){initNavTree('classant_1_1_entity_manager.html','');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -109,43 +111,259 @@ $(document).ready(function(){initNavTree('classant_1_1_entity_manager.html','');
 <div class="title">ant::EntityManager Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Clase Para manejar las entidades.  
+ <a href="classant_1_1_entity_manager.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_entity_manager_8hpp_source.html">EntityManager.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr class="memitem:a60b5d97167e38d66d7d245a59735c1b5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a60b5d97167e38d66d7d245a59735c1b5"></a>
 typedef std::list<br class="typebreak"/>
 &lt; std::unique_ptr&lt; <a class="el" href="classant_1_1_entity.html">Entity</a> &gt;<br class="typebreak"/>
- &gt;::iterator&#160;</td><td class="memItemRight" valign="bottom"><b>iterator</b></td></tr>
+ &gt;::<a class="el" href="classant_1_1_entity_manager.html#a60b5d97167e38d66d7d245a59735c1b5">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classant_1_1_entity_manager.html#a60b5d97167e38d66d7d245a59735c1b5">iterator</a></td></tr>
+<tr class="memdesc:a60b5d97167e38d66d7d245a59735c1b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterador del <a class="el" href="classant_1_1_entity_manager.html" title="Clase Para manejar las entidades. ">EntityManager</a>. <br/></td></tr>
 <tr class="separator:a60b5d97167e38d66d7d245a59735c1b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a473e6ef8480bf2998f7c4d03e5ed20fc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a473e6ef8480bf2998f7c4d03e5ed20fc"></a>
+typedef std::list<br class="typebreak"/>
+&lt; std::unique_ptr&lt; <a class="el" href="classant_1_1_entity.html">Entity</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classant_1_1_entity_manager.html#a473e6ef8480bf2998f7c4d03e5ed20fc">list</a></td></tr>
+<tr class="memdesc:a473e6ef8480bf2998f7c4d03e5ed20fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contenedor utilizado por el <a class="el" href="classant_1_1_entity_manager.html" title="Clase Para manejar las entidades. ">EntityManager</a>. <br/></td></tr>
+<tr class="separator:a473e6ef8480bf2998f7c4d03e5ed20fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:af8cba501bcdac99f43f12047c8f857c4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af8cba501bcdac99f43f12047c8f857c4"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>addEntity</b> (std::unique_ptr&lt; <a class="el" href="classant_1_1_entity.html">Entity</a> &gt; e)</td></tr>
+<tr class="memitem:a9d98e7cba15c2663b79df62f65b39a8f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9d98e7cba15c2663b79df62f65b39a8f"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classant_1_1_entity_manager.html#a9d98e7cba15c2663b79df62f65b39a8f">EntityManager</a> ()</td></tr>
+<tr class="memdesc:a9d98e7cba15c2663b79df62f65b39a8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor por defecto. <br/></td></tr>
+<tr class="separator:a9d98e7cba15c2663b79df62f65b39a8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8cba501bcdac99f43f12047c8f857c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classant_1_1_entity_manager.html#af8cba501bcdac99f43f12047c8f857c4">addEntity</a> (std::unique_ptr&lt; <a class="el" href="classant_1_1_entity.html">Entity</a> &gt; e)</td></tr>
+<tr class="memdesc:af8cba501bcdac99f43f12047c8f857c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Añade una entidad al manager.  <a href="#af8cba501bcdac99f43f12047c8f857c4">More...</a><br/></td></tr>
 <tr class="separator:af8cba501bcdac99f43f12047c8f857c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac3645cbade4566b1e035923d12688811"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac3645cbade4566b1e035923d12688811"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>removeEntity</b> (std::unique_ptr&lt; <a class="el" href="classant_1_1_entity.html">Entity</a> &gt; &amp;e)</td></tr>
+<tr class="memitem:ac3645cbade4566b1e035923d12688811"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classant_1_1_entity_manager.html#ac3645cbade4566b1e035923d12688811">removeEntity</a> (std::unique_ptr&lt; <a class="el" href="classant_1_1_entity.html">Entity</a> &gt; &amp;e)</td></tr>
+<tr class="memdesc:ac3645cbade4566b1e035923d12688811"><td class="mdescLeft">&#160;</td><td class="mdescRight">Elimina una entidad del manager.  <a href="#ac3645cbade4566b1e035923d12688811">More...</a><br/></td></tr>
 <tr class="separator:ac3645cbade4566b1e035923d12688811"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a630e6c364e031c463ec2609a53781fd6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a630e6c364e031c463ec2609a53781fd6"></a>
-iterator&#160;</td><td class="memItemRight" valign="bottom"><b>removeEntity</b> (std::string name)</td></tr>
-<tr class="separator:a630e6c364e031c463ec2609a53781fd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9fe7570482ce955d895430e1c3f1b107"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9fe7570482ce955d895430e1c3f1b107"></a>
-iterator&#160;</td><td class="memItemRight" valign="bottom"><b>removeEntity</b> (iterator it)</td></tr>
+<tr class="memitem:a62fcaeadb65e7580eb396d5a25e47071"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classant_1_1_entity_manager.html#a60b5d97167e38d66d7d245a59735c1b5">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classant_1_1_entity_manager.html#a62fcaeadb65e7580eb396d5a25e47071">removeEntity</a> (const std::string &amp;name)</td></tr>
+<tr class="memdesc:a62fcaeadb65e7580eb396d5a25e47071"><td class="mdescLeft">&#160;</td><td class="mdescRight">Elimina la primera entidad que coincida el nombre.  <a href="#a62fcaeadb65e7580eb396d5a25e47071">More...</a><br/></td></tr>
+<tr class="separator:a62fcaeadb65e7580eb396d5a25e47071"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fe7570482ce955d895430e1c3f1b107"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classant_1_1_entity_manager.html#a60b5d97167e38d66d7d245a59735c1b5">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classant_1_1_entity_manager.html#a9fe7570482ce955d895430e1c3f1b107">removeEntity</a> (<a class="el" href="classant_1_1_entity_manager.html#a60b5d97167e38d66d7d245a59735c1b5">iterator</a> it)</td></tr>
+<tr class="memdesc:a9fe7570482ce955d895430e1c3f1b107"><td class="mdescLeft">&#160;</td><td class="mdescRight">Elimina la primera entidad que coincida.  <a href="#a9fe7570482ce955d895430e1c3f1b107">More...</a><br/></td></tr>
 <tr class="separator:a9fe7570482ce955d895430e1c3f1b107"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae011ba46482217c2713de06b3e4bd76d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae011ba46482217c2713de06b3e4bd76d"></a>
-<a class="el" href="classant_1_1_entity.html">Entity</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getEntity</b> (std::string name)</td></tr>
-<tr class="separator:ae011ba46482217c2713de06b3e4bd76d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa95d9577ce06bf45b125913a2801b0b9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa95d9577ce06bf45b125913a2801b0b9"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>addEntities</b> (std::list&lt; std::unique_ptr&lt; <a class="el" href="classant_1_1_entity.html">Entity</a> &gt; &gt; e)</td></tr>
-<tr class="separator:aa95d9577ce06bf45b125913a2801b0b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8e22426301fbd535b1b990b3408ec17"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae8e22426301fbd535b1b990b3408ec17"></a>
-std::list&lt; std::unique_ptr<br class="typebreak"/>
-&lt; <a class="el" href="classant_1_1_entity.html">Entity</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getEntities</b> ()</td></tr>
-<tr class="separator:ae8e22426301fbd535b1b990b3408ec17"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1cc17dc56a720898507f3c51a64eb338"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1cc17dc56a720898507f3c51a64eb338"></a>
-std::unique_ptr&lt; <a class="el" href="classant_1_1_entity.html">Entity</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Transfer</b> (std::string name)</td></tr>
-<tr class="separator:a1cc17dc56a720898507f3c51a64eb338"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa28e915d3d3460f04feae33c85bd3df3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classant_1_1_entity.html">Entity</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classant_1_1_entity_manager.html#aa28e915d3d3460f04feae33c85bd3df3">getEntity</a> (const std::string &amp;name)</td></tr>
+<tr class="memdesc:aa28e915d3d3460f04feae33c85bd3df3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtiene la primera entidad que tenga el nombre proporcionado.  <a href="#aa28e915d3d3460f04feae33c85bd3df3">More...</a><br/></td></tr>
+<tr class="separator:aa28e915d3d3460f04feae33c85bd3df3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f7ad52093982066f82a97c525501320"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classant_1_1_entity_manager.html#a2f7ad52093982066f82a97c525501320">addEntities</a> (<a class="el" href="classant_1_1_entity_manager.html#a473e6ef8480bf2998f7c4d03e5ed20fc">list</a> e)</td></tr>
+<tr class="memdesc:a2f7ad52093982066f82a97c525501320"><td class="mdescLeft">&#160;</td><td class="mdescRight">Añade todas las entidades a la vez.  <a href="#a2f7ad52093982066f82a97c525501320">More...</a><br/></td></tr>
+<tr class="separator:a2f7ad52093982066f82a97c525501320"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1dbb77029a458daf2bce15e9405c9b84"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classant_1_1_entity_manager.html#a473e6ef8480bf2998f7c4d03e5ed20fc">list</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classant_1_1_entity_manager.html#a1dbb77029a458daf2bce15e9405c9b84">getEntities</a> ()</td></tr>
+<tr class="memdesc:a1dbb77029a458daf2bce15e9405c9b84"><td class="mdescLeft">&#160;</td><td class="mdescRight">devuelve la lista de las entidades.  <a href="#a1dbb77029a458daf2bce15e9405c9b84">More...</a><br/></td></tr>
+<tr class="separator:a1dbb77029a458daf2bce15e9405c9b84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae84ee9cc6de695914727dae5af4909ae"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classant_1_1_entity.html">Entity</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classant_1_1_entity_manager.html#ae84ee9cc6de695914727dae5af4909ae">Transfer</a> (const std::string &amp;name)</td></tr>
+<tr class="memdesc:ae84ee9cc6de695914727dae5af4909ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transfiere la primera entidad que coincida con el nombre.  <a href="#ae84ee9cc6de695914727dae5af4909ae">More...</a><br/></td></tr>
+<tr class="separator:ae84ee9cc6de695914727dae5af4909ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Clase Para manejar las entidades. </p>
+<dl class="section author"><dt>Author</dt><dd>Cristian Glez <a href="#" onclick="location.href='mai'+'lto:'+'Cri'+'st'+'ian'+'.g'+'lez'+'.m'+'@gm'+'ai'+'l.c'+'om'; return false;">Crist<span style="display: none;">.nosp@m.</span>ian.<span style="display: none;">.nosp@m.</span>glez.<span style="display: none;">.nosp@m.</span>m@gm<span style="display: none;">.nosp@m.</span>ail.c<span style="display: none;">.nosp@m.</span>om</a> </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>0.1 </dd></dl>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a2f7ad52093982066f82a97c525501320"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ant::EntityManager::addEntities </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classant_1_1_entity_manager.html#a473e6ef8480bf2998f7c4d03e5ed20fc">list</a>&#160;</td>
+          <td class="paramname"><em>e</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Añade todas las entidades a la vez. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>list lista de entidades. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="af8cba501bcdac99f43f12047c8f857c4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ant::EntityManager::addEntity </td>
+          <td>(</td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="classant_1_1_entity.html">Entity</a> &gt;&#160;</td>
+          <td class="paramname"><em>e</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Añade una entidad al manager. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>std::unique_ptr&lt;Entity&gt; </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a1dbb77029a458daf2bce15e9405c9b84"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classant_1_1_entity_manager.html#a473e6ef8480bf2998f7c4d03e5ed20fc">list</a>&amp; ant::EntityManager::getEntities </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>devuelve la lista de las entidades. </p>
+<dl class="section return"><dt>Returns</dt><dd>list &amp; </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa28e915d3d3460f04feae33c85bd3df3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classant_1_1_entity.html">Entity</a> * ant::EntityManager::getEntity </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtiene la primera entidad que tenga el nombre proporcionado. </p>
+<p>Si no encuentra la entidad devuelve un puntero nulo(nullptr).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>std::string nombre de la entidad. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classant_1_1_entity.html" title="Clase para tener los componentes, solo puede tener un componente de cada tipo. ">Entity</a> * naked pointer hacia la entidad o nullptr si no la encuentra. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac3645cbade4566b1e035923d12688811"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ant::EntityManager::removeEntity </td>
+          <td>(</td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="classant_1_1_entity.html">Entity</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>e</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Elimina una entidad del manager. </p>
+<p>Elimina la primera entidad que sea igual a la proporcionada. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>std::unique_ptr&lt;Entity&gt; </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a62fcaeadb65e7580eb396d5a25e47071"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classant_1_1_entity_manager.html#a60b5d97167e38d66d7d245a59735c1b5">EntityManager::iterator</a> ant::EntityManager::removeEntity </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Elimina la primera entidad que coincida el nombre. </p>
+<p>Devuelve un iterador por si estas iterando y necesitas borrar alguna entidad.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>std::string nombre de la entidad. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>iterator la posicion siguiente de la entidad eliminada. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a9fe7570482ce955d895430e1c3f1b107"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classant_1_1_entity_manager.html#a60b5d97167e38d66d7d245a59735c1b5">EntityManager::iterator</a> ant::EntityManager::removeEntity </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classant_1_1_entity_manager.html#a60b5d97167e38d66d7d245a59735c1b5">EntityManager::iterator</a>&#160;</td>
+          <td class="paramname"><em>it</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Elimina la primera entidad que coincida. </p>
+<p>Devuelve un iterador por si estas iterando y necesitas borrar alguna entidad.</p>
+<dl class="section return"><dt>Returns</dt><dd>iterator la posicion siguiente de la entidad eliminada. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae84ee9cc6de695914727dae5af4909ae"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt; <a class="el" href="classant_1_1_entity.html">Entity</a> &gt; ant::EntityManager::Transfer </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Transfiere la primera entidad que coincida con el nombre. </p>
+<p>Transfiere la posesion(ownership) de la entidad y la elimina del contenedor.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>std::string nombre de la entidad a transferir. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>std::unique_ptr&lt;Entity&gt; entidad transferida o nullptr si no es encontrada. </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="_entity_manager_8hpp_source.html">EntityManager.hpp</a></li>
 <li>EntityManager.cpp</li>
@@ -156,7 +374,7 @@ std::unique_ptr&lt; <a class="el" href="classant_1_1_entity.html">Entity</a> &gt
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>ant</b></li><li class="navelem"><a class="el" href="classant_1_1_entity_manager.html">EntityManager</a></li>
-    <li class="footer">Generated on Thu Mar 27 2014 00:26:45 for unitTest by
+    <li class="footer">Generated on Sun Apr 20 2014 15:30:18 for unitTest by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

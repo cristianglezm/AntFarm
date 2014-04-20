@@ -44,6 +44,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -69,6 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
       <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -91,7 +93,7 @@ $(document).ready(function(){initNavTree('classant_1_1_entity.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -108,26 +110,27 @@ $(document).ready(function(){initNavTree('classant_1_1_entity.html','');});
 
 <p>This is the complete list of members for <a class="el" href="classant_1_1_entity.html">ant::Entity</a>, including all inherited members.</p>
 <table class="directory">
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>addComponent</b>(std::unique_ptr&lt; baseComponent &gt; component) (defined in <a class="el" href="classant_1_1_entity.html">ant::Entity</a>)</td><td class="entry"><a class="el" href="classant_1_1_entity.html">ant::Entity</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>Entity</b>() (defined in <a class="el" href="classant_1_1_entity.html">ant::Entity</a>)</td><td class="entry"><a class="el" href="classant_1_1_entity.html">ant::Entity</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>Entity</b>(std::string name) (defined in <a class="el" href="classant_1_1_entity.html">ant::Entity</a>)</td><td class="entry"><a class="el" href="classant_1_1_entity.html">ant::Entity</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>Entity</b>(std::string name, std::map&lt; long int, std::unique_ptr&lt; baseComponent &gt; &gt; Components) (defined in <a class="el" href="classant_1_1_entity.html">ant::Entity</a>)</td><td class="entry"><a class="el" href="classant_1_1_entity.html">ant::Entity</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>getComponent</b>(long int mask) (defined in <a class="el" href="classant_1_1_entity.html">ant::Entity</a>)</td><td class="entry"><a class="el" href="classant_1_1_entity.html">ant::Entity</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>getComponents</b>() (defined in <a class="el" href="classant_1_1_entity.html">ant::Entity</a>)</td><td class="entry"><a class="el" href="classant_1_1_entity.html">ant::Entity</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>getMask</b>() const  (defined in <a class="el" href="classant_1_1_entity.html">ant::Entity</a>)</td><td class="entry"><a class="el" href="classant_1_1_entity.html">ant::Entity</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>getName</b>() const  (defined in <a class="el" href="classant_1_1_entity.html">ant::Entity</a>)</td><td class="entry"><a class="el" href="classant_1_1_entity.html">ant::Entity</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>operator==</b>(const Entity &amp;e) const  (defined in <a class="el" href="classant_1_1_entity.html">ant::Entity</a>)</td><td class="entry"><a class="el" href="classant_1_1_entity.html">ant::Entity</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>operator==</b>(const std::string &amp;name) const  (defined in <a class="el" href="classant_1_1_entity.html">ant::Entity</a>)</td><td class="entry"><a class="el" href="classant_1_1_entity.html">ant::Entity</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>removeComponent</b>(long int mask) (defined in <a class="el" href="classant_1_1_entity.html">ant::Entity</a>)</td><td class="entry"><a class="el" href="classant_1_1_entity.html">ant::Entity</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>setComponents</b>(std::map&lt; long int, std::unique_ptr&lt; baseComponent &gt;&gt; Components) (defined in <a class="el" href="classant_1_1_entity.html">ant::Entity</a>)</td><td class="entry"><a class="el" href="classant_1_1_entity.html">ant::Entity</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>setName</b>(std::string name) (defined in <a class="el" href="classant_1_1_entity.html">ant::Entity</a>)</td><td class="entry"><a class="el" href="classant_1_1_entity.html">ant::Entity</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>~Entity</b>() (defined in <a class="el" href="classant_1_1_entity.html">ant::Entity</a>)</td><td class="entry"><a class="el" href="classant_1_1_entity.html">ant::Entity</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classant_1_1_entity.html#a4fe4572015760b0e486df6c1b94d3f96">addComponent</a>(std::unique_ptr&lt; baseComponent &gt; component)</td><td class="entry"><a class="el" href="classant_1_1_entity.html">ant::Entity</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classant_1_1_entity.html#a7fe02d14320908c7b5eb080a113f1442">Entity</a>()</td><td class="entry"><a class="el" href="classant_1_1_entity.html">ant::Entity</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classant_1_1_entity.html#af3da175fdcde326a758aaa1dc438cc51">Entity</a>(std::string name)</td><td class="entry"><a class="el" href="classant_1_1_entity.html">ant::Entity</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classant_1_1_entity.html#a57a565f2520d69915f565ba093a7f27a">Entity</a>(std::string name, map Components)</td><td class="entry"><a class="el" href="classant_1_1_entity.html">ant::Entity</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classant_1_1_entity.html#a70743b11b5e10b948155a04722ae70cd">getComponent</a>(long int id)</td><td class="entry"><a class="el" href="classant_1_1_entity.html">ant::Entity</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classant_1_1_entity.html#a81bcfa152047d1c653eb7af21daf3c10">getComponents</a>()</td><td class="entry"><a class="el" href="classant_1_1_entity.html">ant::Entity</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classant_1_1_entity.html#a508baf12c760f45032e24fae27af6f09">getMask</a>() const </td><td class="entry"><a class="el" href="classant_1_1_entity.html">ant::Entity</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classant_1_1_entity.html#ab22630399795df9625218fc158dd02b6">getName</a>() const </td><td class="entry"><a class="el" href="classant_1_1_entity.html">ant::Entity</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classant_1_1_entity.html#aa823933535346583f2a1edc2b989b037">map</a> typedef</td><td class="entry"><a class="el" href="classant_1_1_entity.html">ant::Entity</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classant_1_1_entity.html#a379c70555ca47177ec607a992ef97f3f">operator==</a>(const Entity &amp;e) const </td><td class="entry"><a class="el" href="classant_1_1_entity.html">ant::Entity</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classant_1_1_entity.html#ac4965e92e1827c22718b8f13b67f7c66">operator==</a>(const std::string &amp;name) const </td><td class="entry"><a class="el" href="classant_1_1_entity.html">ant::Entity</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classant_1_1_entity.html#a2ff509e6876cbf11c434a797be43f239">removeComponent</a>(long int mask)</td><td class="entry"><a class="el" href="classant_1_1_entity.html">ant::Entity</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classant_1_1_entity.html#a68d0751b571edf04c39319c81fd16861">setComponents</a>(map Components)</td><td class="entry"><a class="el" href="classant_1_1_entity.html">ant::Entity</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classant_1_1_entity.html#af0d4541cfec26963b714d500f8fe5f48">setName</a>(std::string name)</td><td class="entry"><a class="el" href="classant_1_1_entity.html">ant::Entity</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>~Entity</b>() (defined in <a class="el" href="classant_1_1_entity.html">ant::Entity</a>)</td><td class="entry"><a class="el" href="classant_1_1_entity.html">ant::Entity</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Mar 27 2014 00:26:45 for unitTest by
+    <li class="footer">Generated on Sun Apr 20 2014 15:30:18 for unitTest by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

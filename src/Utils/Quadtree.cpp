@@ -92,7 +92,7 @@ namespace ant{
                 }
             }
         }
-        std::list<Entity*> Quadtree::retrieve(std::list<Entity*>& entities,Entity* e){
+        Quadtree::list Quadtree::retrieve(list& entities,Entity* e){
                int index = this->getIndex(e);
                entities.sort();
                this->entities.sort();

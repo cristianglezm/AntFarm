@@ -44,6 +44,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -69,6 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
       <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -91,7 +93,7 @@ $(document).ready(function(){initNavTree('classant_1_1base_event.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -108,18 +110,18 @@ $(document).ready(function(){initNavTree('classant_1_1base_event.html','');});
 
 <p>This is the complete list of members for <a class="el" href="classant_1_1base_event.html">ant::baseEvent</a>, including all inherited members.</p>
 <table class="directory">
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>baseEvent</b>(int type) (defined in <a class="el" href="classant_1_1base_event.html">ant::baseEvent</a>)</td><td class="entry"><a class="el" href="classant_1_1base_event.html">ant::baseEvent</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>getAttributes</b>() const  (defined in <a class="el" href="classant_1_1base_event.html">ant::baseEvent</a>)</td><td class="entry"><a class="el" href="classant_1_1base_event.html">ant::baseEvent</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>getType</b>() const  (defined in <a class="el" href="classant_1_1base_event.html">ant::baseEvent</a>)</td><td class="entry"><a class="el" href="classant_1_1base_event.html">ant::baseEvent</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>setAttributes</b>(std::tuple&lt; T...&gt; attributes) (defined in <a class="el" href="classant_1_1base_event.html">ant::baseEvent</a>)</td><td class="entry"><a class="el" href="classant_1_1base_event.html">ant::baseEvent</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>setType</b>(int type) (defined in <a class="el" href="classant_1_1base_event.html">ant::baseEvent</a>)</td><td class="entry"><a class="el" href="classant_1_1base_event.html">ant::baseEvent</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classant_1_1base_event.html#a54f4631555a56b376405a4bb8bdd839b">baseEvent</a>(int type)</td><td class="entry"><a class="el" href="classant_1_1base_event.html">ant::baseEvent</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classant_1_1base_event.html#a3385b5a287d0f6af5d39a79af1c21862">getAttributes</a>() const </td><td class="entry"><a class="el" href="classant_1_1base_event.html">ant::baseEvent</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classant_1_1base_event.html#ad6672f6ff1522b7b66ff7ae43613ed71">getType</a>() const </td><td class="entry"><a class="el" href="classant_1_1base_event.html">ant::baseEvent</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classant_1_1base_event.html#a7724e30d398447f53442c6d915c521d5">setAttributes</a>(std::tuple&lt; T...&gt; attributes)</td><td class="entry"><a class="el" href="classant_1_1base_event.html">ant::baseEvent</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classant_1_1base_event.html#a6d6f1170cb6f01301d137d732c0f2704">setType</a>(int type)</td><td class="entry"><a class="el" href="classant_1_1base_event.html">ant::baseEvent</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr bgcolor="#f0f0f0"><td class="entry"><b>~baseEvent</b>()=default (defined in <a class="el" href="classant_1_1base_event.html">ant::baseEvent</a>)</td><td class="entry"><a class="el" href="classant_1_1base_event.html">ant::baseEvent</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Mar 27 2014 00:26:45 for unitTest by
+    <li class="footer">Generated on Sun Apr 20 2014 15:30:18 for unitTest by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

@@ -44,6 +44,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -69,6 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
       <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -91,7 +93,7 @@ $(document).ready(function(){initNavTree('classant_1_1_entity_manager.html','');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -108,23 +110,24 @@ $(document).ready(function(){initNavTree('classant_1_1_entity_manager.html','');
 
 <p>This is the complete list of members for <a class="el" href="classant_1_1_entity_manager.html">ant::EntityManager</a>, including all inherited members.</p>
 <table class="directory">
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>addEntities</b>(std::list&lt; std::unique_ptr&lt; Entity &gt; &gt; e) (defined in <a class="el" href="classant_1_1_entity_manager.html">ant::EntityManager</a>)</td><td class="entry"><a class="el" href="classant_1_1_entity_manager.html">ant::EntityManager</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>addEntity</b>(std::unique_ptr&lt; Entity &gt; e) (defined in <a class="el" href="classant_1_1_entity_manager.html">ant::EntityManager</a>)</td><td class="entry"><a class="el" href="classant_1_1_entity_manager.html">ant::EntityManager</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>EntityManager</b>() (defined in <a class="el" href="classant_1_1_entity_manager.html">ant::EntityManager</a>)</td><td class="entry"><a class="el" href="classant_1_1_entity_manager.html">ant::EntityManager</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>getEntities</b>() (defined in <a class="el" href="classant_1_1_entity_manager.html">ant::EntityManager</a>)</td><td class="entry"><a class="el" href="classant_1_1_entity_manager.html">ant::EntityManager</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>getEntity</b>(std::string name) (defined in <a class="el" href="classant_1_1_entity_manager.html">ant::EntityManager</a>)</td><td class="entry"><a class="el" href="classant_1_1_entity_manager.html">ant::EntityManager</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>iterator</b> typedef (defined in <a class="el" href="classant_1_1_entity_manager.html">ant::EntityManager</a>)</td><td class="entry"><a class="el" href="classant_1_1_entity_manager.html">ant::EntityManager</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>removeEntity</b>(std::unique_ptr&lt; Entity &gt; &amp;e) (defined in <a class="el" href="classant_1_1_entity_manager.html">ant::EntityManager</a>)</td><td class="entry"><a class="el" href="classant_1_1_entity_manager.html">ant::EntityManager</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>removeEntity</b>(std::string name) (defined in <a class="el" href="classant_1_1_entity_manager.html">ant::EntityManager</a>)</td><td class="entry"><a class="el" href="classant_1_1_entity_manager.html">ant::EntityManager</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>removeEntity</b>(iterator it) (defined in <a class="el" href="classant_1_1_entity_manager.html">ant::EntityManager</a>)</td><td class="entry"><a class="el" href="classant_1_1_entity_manager.html">ant::EntityManager</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>Transfer</b>(std::string name) (defined in <a class="el" href="classant_1_1_entity_manager.html">ant::EntityManager</a>)</td><td class="entry"><a class="el" href="classant_1_1_entity_manager.html">ant::EntityManager</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>~EntityManager</b>() (defined in <a class="el" href="classant_1_1_entity_manager.html">ant::EntityManager</a>)</td><td class="entry"><a class="el" href="classant_1_1_entity_manager.html">ant::EntityManager</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classant_1_1_entity_manager.html#a2f7ad52093982066f82a97c525501320">addEntities</a>(list e)</td><td class="entry"><a class="el" href="classant_1_1_entity_manager.html">ant::EntityManager</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classant_1_1_entity_manager.html#af8cba501bcdac99f43f12047c8f857c4">addEntity</a>(std::unique_ptr&lt; Entity &gt; e)</td><td class="entry"><a class="el" href="classant_1_1_entity_manager.html">ant::EntityManager</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classant_1_1_entity_manager.html#a9d98e7cba15c2663b79df62f65b39a8f">EntityManager</a>()</td><td class="entry"><a class="el" href="classant_1_1_entity_manager.html">ant::EntityManager</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classant_1_1_entity_manager.html#a1dbb77029a458daf2bce15e9405c9b84">getEntities</a>()</td><td class="entry"><a class="el" href="classant_1_1_entity_manager.html">ant::EntityManager</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classant_1_1_entity_manager.html#aa28e915d3d3460f04feae33c85bd3df3">getEntity</a>(const std::string &amp;name)</td><td class="entry"><a class="el" href="classant_1_1_entity_manager.html">ant::EntityManager</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classant_1_1_entity_manager.html#a60b5d97167e38d66d7d245a59735c1b5">iterator</a> typedef</td><td class="entry"><a class="el" href="classant_1_1_entity_manager.html">ant::EntityManager</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classant_1_1_entity_manager.html#a473e6ef8480bf2998f7c4d03e5ed20fc">list</a> typedef</td><td class="entry"><a class="el" href="classant_1_1_entity_manager.html">ant::EntityManager</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classant_1_1_entity_manager.html#ac3645cbade4566b1e035923d12688811">removeEntity</a>(std::unique_ptr&lt; Entity &gt; &amp;e)</td><td class="entry"><a class="el" href="classant_1_1_entity_manager.html">ant::EntityManager</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classant_1_1_entity_manager.html#a62fcaeadb65e7580eb396d5a25e47071">removeEntity</a>(const std::string &amp;name)</td><td class="entry"><a class="el" href="classant_1_1_entity_manager.html">ant::EntityManager</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classant_1_1_entity_manager.html#a9fe7570482ce955d895430e1c3f1b107">removeEntity</a>(iterator it)</td><td class="entry"><a class="el" href="classant_1_1_entity_manager.html">ant::EntityManager</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classant_1_1_entity_manager.html#ae84ee9cc6de695914727dae5af4909ae">Transfer</a>(const std::string &amp;name)</td><td class="entry"><a class="el" href="classant_1_1_entity_manager.html">ant::EntityManager</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>~EntityManager</b>() (defined in <a class="el" href="classant_1_1_entity_manager.html">ant::EntityManager</a>)</td><td class="entry"><a class="el" href="classant_1_1_entity_manager.html">ant::EntityManager</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Mar 27 2014 00:26:45 for unitTest by
+    <li class="footer">Generated on Sun Apr 20 2014 15:30:18 for unitTest by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

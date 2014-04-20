@@ -44,6 +44,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -69,6 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
       <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -91,7 +93,7 @@ $(document).ready(function(){initNavTree('class_components_mask.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -109,6 +111,9 @@ $(document).ready(function(){initNavTree('class_components_mask.html','');});
 </div><!--header-->
 <div class="contents">
 
+<p>tipos de componentes.  
+ <a href="class_components_mask.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_component_mask_8hpp_source.html">ComponentMask.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
@@ -119,28 +124,31 @@ static const long int&#160;</td><td class="memItemRight" valign="bottom"><b>COMP
 <tr class="memitem:ab05302f9381801724a58273ff83ad2a6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab05302f9381801724a58273ff83ad2a6"></a>
 static const long int&#160;</td><td class="memItemRight" valign="bottom"><b>COMPONENT_SPRITE</b> = 1 &lt;&lt; 0</td></tr>
 <tr class="separator:ab05302f9381801724a58273ff83ad2a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab7d94963e3212138f6fc628b1edf93e6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab7d94963e3212138f6fc628b1edf93e6"></a>
-static const long int&#160;</td><td class="memItemRight" valign="bottom"><b>COMPONENT_MOVEMENT</b> = 1 &lt;&lt; 1</td></tr>
-<tr class="separator:ab7d94963e3212138f6fc628b1edf93e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab32c9febcb2a0d312b03b41f777a23c2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab32c9febcb2a0d312b03b41f777a23c2"></a>
+static const long int&#160;</td><td class="memItemRight" valign="bottom"><b>COMPONENT_ANIMATION</b> = 1 &lt;&lt; 1</td></tr>
+<tr class="separator:ab32c9febcb2a0d312b03b41f777a23c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7fff00913ea1c8b225c90b02ecd3243"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac7fff00913ea1c8b225c90b02ecd3243"></a>
+static const long int&#160;</td><td class="memItemRight" valign="bottom"><b>COMPONENT_VELOCITY</b> = 1 &lt;&lt; 2</td></tr>
+<tr class="separator:ac7fff00913ea1c8b225c90b02ecd3243"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a66579e45c351c13abe63e61f2eaa0a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3a66579e45c351c13abe63e61f2eaa0a"></a>
-static const long int&#160;</td><td class="memItemRight" valign="bottom"><b>COMPONENT_TRANSFORM</b> = 1 &lt;&lt; 2</td></tr>
+static const long int&#160;</td><td class="memItemRight" valign="bottom"><b>COMPONENT_TRANSFORM</b> = 1 &lt;&lt; 3</td></tr>
 <tr class="separator:a3a66579e45c351c13abe63e61f2eaa0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae31122d75c7339ec59b7d28e14762f61"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae31122d75c7339ec59b7d28e14762f61"></a>
-static const long int&#160;</td><td class="memItemRight" valign="bottom"><b>COMPONENT_EGGS</b> = 1 &lt;&lt; 3</td></tr>
+static const long int&#160;</td><td class="memItemRight" valign="bottom"><b>COMPONENT_EGGS</b> = 1 &lt;&lt; 4</td></tr>
 <tr class="separator:ae31122d75c7339ec59b7d28e14762f61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a808a78a4e70a408e3b5d6ab18f36d94e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a808a78a4e70a408e3b5d6ab18f36d94e"></a>
-static const long int&#160;</td><td class="memItemRight" valign="bottom"><b>COMPONENT_HORNS</b> = 1 &lt;&lt; 4</td></tr>
+static const long int&#160;</td><td class="memItemRight" valign="bottom"><b>COMPONENT_HORNS</b> = 1 &lt;&lt; 5</td></tr>
 <tr class="separator:a808a78a4e70a408e3b5d6ab18f36d94e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af9ec785367e18857389d34be89269879"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af9ec785367e18857389d34be89269879"></a>
-static const long int&#160;</td><td class="memItemRight" valign="bottom"><b>COMPONENT_DESTRUCTABLE</b> = 1 &lt;&lt; 5</td></tr>
+static const long int&#160;</td><td class="memItemRight" valign="bottom"><b>COMPONENT_DESTRUCTABLE</b> = 1 &lt;&lt; 6</td></tr>
 <tr class="separator:af9ec785367e18857389d34be89269879"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a81ccaf0bf7344c970bc8474df2625ba7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a81ccaf0bf7344c970bc8474df2625ba7"></a>
-static const long int&#160;</td><td class="memItemRight" valign="bottom"><b>COMPONENT_BOUNDS</b> = 1 &lt;&lt; 6</td></tr>
+static const long int&#160;</td><td class="memItemRight" valign="bottom"><b>COMPONENT_BOUNDS</b> = 1 &lt;&lt; 7</td></tr>
 <tr class="separator:a81ccaf0bf7344c970bc8474df2625ba7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Clase estatica para enumeracion de componentes. </p>
-<dl class="section author"><dt>Author</dt><dd>Cristian Gonzalez Moreno <a href="#" onclick="location.href='mai'+'lto:'+'Cri'+'st'+'ian'+'.g'+'lez'+'.m'+'@gm'+'ai'+'l.c'+'om'; return false;">Crist<span style="display: none;">.nosp@m.</span>ian.<span style="display: none;">.nosp@m.</span>glez.<span style="display: none;">.nosp@m.</span>m@gm<span style="display: none;">.nosp@m.</span>ail.c<span style="display: none;">.nosp@m.</span>om</a> </dd></dl>
+<div class="textblock"><p>tipos de componentes. </p>
+<dl class="section author"><dt>Author</dt><dd>Cristian Glez <a href="#" onclick="location.href='mai'+'lto:'+'Cri'+'st'+'ian'+'.g'+'lez'+'.m'+'@gm'+'ai'+'l.c'+'om'; return false;">Crist<span style="display: none;">.nosp@m.</span>ian.<span style="display: none;">.nosp@m.</span>glez.<span style="display: none;">.nosp@m.</span>m@gm<span style="display: none;">.nosp@m.</span>ail.c<span style="display: none;">.nosp@m.</span>om</a> </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>0.1 </dd></dl>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="_component_mask_8hpp_source.html">ComponentMask.hpp</a></li>
@@ -151,7 +159,7 @@ static const long int&#160;</td><td class="memItemRight" valign="bottom"><b>COMP
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_components_mask.html">ComponentsMask</a></li>
-    <li class="footer">Generated on Thu Mar 27 2014 00:26:45 for unitTest by
+    <li class="footer">Generated on Sun Apr 20 2014 15:30:17 for unitTest by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

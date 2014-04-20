@@ -1,7 +1,7 @@
 #ifndef COMPONENT_TEST_H
 #define COMPONENT_TEST_H
 /**
- * test Suit for Components
+ * @brief Comprueba que los componentes mantienen el id y los datos.
  */
 bool ComponentTest();
 #endif // COMPONENT_TEST_HPP

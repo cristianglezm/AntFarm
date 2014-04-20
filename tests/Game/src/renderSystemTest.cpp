@@ -11,6 +11,7 @@
 #include <Components/ComponentMask.hpp>
 #include <Systems/collisionSystem/collisionSystem.hpp>
 #include <Systems/movementSystem/movementSystem.hpp>
+#include <Utils/Math.hpp>
 bool renderSystemTest(){
 std::cout << "renderSystemTest Test -----------" << std::endl;
     std::shared_ptr<ant::EntityManager> em(new ant::EntityManager());
@@ -27,7 +28,7 @@ std::cout << "renderSystemTest Test -----------" << std::endl;
         std::unique_ptr<ant::SystemManager> sm(new ant::SystemManager());
         for(int j=0;j<1;++j){
             std::unique_ptr<ant::Entity> e(new ant::Entity("red"));
-            e->addComponent(cf.createSprite("p"));
+            //e->addComponent(cf.createSprite("p"));
             e->addComponent(cf.createTransform(sf::Vector2f(100,360),sf::Vector2f(1,1),0));
             e->addComponent(cf.createBounds(sf::FloatRect(0,0,50,50)));
             e->addComponent(cf.createDestructable(sf::Vector2f(100,360),"p"));
@@ -78,24 +79,29 @@ std::cout << "renderSystemTest Test -----------" << std::endl;
                     break;
                 case sf::Event::MouseButtonPressed:
                     if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
-                        auto& properties = em->getEntity("black0")->getComponent(ComponentsMask::COMPONENT_TRANSFORM)->getProperties<sf::Vector2f,sf::Vector2f,float>();
-                        auto& pos = std::get<0>(properties);
-                        auto& rotation = std::get<2>(properties);
-                        auto& properties1 = em->getEntity("black0")->getComponent(ComponentsMask::COMPONENT_VELOCITY)->getProperties<sf::Vector2f,float,float,float>();
+                        auto& properties1 = em->getEntity("black0")->getComponent(ComponentsMask::COMPONENT_VELOCITY)
+                                                                    ->getProperties<sf::Vector2f,float,float,float>();
                         std::get<1>(properties1) +=0.1;
-                        rotation +=1;
-                        auto mousePos = sf::Mouse::getPosition(win);
-                        pos = (sf::Vector2f)mousePos;
                     }
                     break;
             }
         }
-
+        //for(auto& e : em->getEntities()){
+            //auto& properties = e->getComponent(ComponentsMask::COMPONENT_TRANSFORM)
+            //                        ->getProperties<sf::Vector2f,sf::Vector2f,float>();
+            auto& properties = em->getEntity("black0")->getComponent(ComponentsMask::COMPONENT_TRANSFORM)
+                                                        ->getProperties<sf::Vector2f,sf::Vector2f,float>();
+            auto& pos = std::get<0>(properties);
+            auto& rotation = std::get<2>(properties);
+            auto mousePos = sf::Mouse::getPosition(win);
+            rotation = ant::Utils::toDegrees(ant::Utils::getDirection(pos,(sf::Vector2f)mousePos));
+        //}
         sf::Time time;
         wm.update(0,time);
-        win.clear();
+        win.clear(sf::Color::White);
         sf::RectangleShape rectShape;
             rectShape.setPosition(bounds.left,bounds.top);
+            rectShape.setFillColor(sf::Color::Red);
             rectShape.setSize(sf::Vector2f(bounds.width,bounds.height));
         win.draw(rectShape);
         wm.render(0,win);

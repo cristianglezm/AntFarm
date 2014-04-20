@@ -44,6 +44,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -69,6 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
       <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -91,7 +93,7 @@ $(document).ready(function(){initNavTree('classant_1_1_event_queue.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -116,30 +118,163 @@ $(document).ready(function(){initNavTree('classant_1_1_event_queue.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a2bc551dd241d78fe32b13bebbd1dc5cb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2bc551dd241d78fe32b13bebbd1dc5cb"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>push</b> (std::shared_ptr&lt; <a class="el" href="classant_1_1base_event.html">baseEvent</a> &gt; e)</td></tr>
+<tr class="memitem:af570d6ef7f0c977c10194238773359ad"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classant_1_1_event_queue.html#af570d6ef7f0c977c10194238773359ad">EventQueue</a> ()</td></tr>
+<tr class="separator:af570d6ef7f0c977c10194238773359ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bc551dd241d78fe32b13bebbd1dc5cb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classant_1_1_event_queue.html#a2bc551dd241d78fe32b13bebbd1dc5cb">push</a> (std::shared_ptr&lt; <a class="el" href="classant_1_1base_event.html">baseEvent</a> &gt; e)</td></tr>
+<tr class="memdesc:a2bc551dd241d78fe32b13bebbd1dc5cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Añade un evento al final de la cola.  <a href="#a2bc551dd241d78fe32b13bebbd1dc5cb">More...</a><br/></td></tr>
 <tr class="separator:a2bc551dd241d78fe32b13bebbd1dc5cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c3404775bb9e3c72ae0d0534b4be7e7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0c3404775bb9e3c72ae0d0534b4be7e7"></a>
-std::shared_ptr&lt; <a class="el" href="classant_1_1base_event.html">baseEvent</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>pop</b> ()</td></tr>
+<tr class="memitem:a0c3404775bb9e3c72ae0d0534b4be7e7"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classant_1_1base_event.html">baseEvent</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classant_1_1_event_queue.html#a0c3404775bb9e3c72ae0d0534b4be7e7">pop</a> ()</td></tr>
+<tr class="memdesc:a0c3404775bb9e3c72ae0d0534b4be7e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Elimina el evento de la cola y lo devuelve.  <a href="#a0c3404775bb9e3c72ae0d0534b4be7e7">More...</a><br/></td></tr>
 <tr class="separator:a0c3404775bb9e3c72ae0d0534b4be7e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a87f6c1295a1d66101f12239cecde3d4d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a87f6c1295a1d66101f12239cecde3d4d"></a>
-std::shared_ptr&lt; <a class="el" href="classant_1_1base_event.html">baseEvent</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>front</b> ()</td></tr>
+<tr class="memitem:a87f6c1295a1d66101f12239cecde3d4d"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classant_1_1base_event.html">baseEvent</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classant_1_1_event_queue.html#a87f6c1295a1d66101f12239cecde3d4d">front</a> ()</td></tr>
+<tr class="memdesc:a87f6c1295a1d66101f12239cecde3d4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Consulta el evento que esta al frente de la cola.  <a href="#a87f6c1295a1d66101f12239cecde3d4d">More...</a><br/></td></tr>
 <tr class="separator:a87f6c1295a1d66101f12239cecde3d4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a09b0e4a337d383abebf2e8adaa3e9c07"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a09b0e4a337d383abebf2e8adaa3e9c07"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isEmpty</b> ()</td></tr>
+<tr class="memitem:a09b0e4a337d383abebf2e8adaa3e9c07"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classant_1_1_event_queue.html#a09b0e4a337d383abebf2e8adaa3e9c07">isEmpty</a> ()</td></tr>
+<tr class="memdesc:a09b0e4a337d383abebf2e8adaa3e9c07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Si la cola esta vacia o no.  <a href="#a09b0e4a337d383abebf2e8adaa3e9c07">More...</a><br/></td></tr>
 <tr class="separator:a09b0e4a337d383abebf2e8adaa3e9c07"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac772190bcecf4b0807e00fe33a618d04"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac772190bcecf4b0807e00fe33a618d04"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>size</b> ()</td></tr>
+<tr class="memitem:ac772190bcecf4b0807e00fe33a618d04"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classant_1_1_event_queue.html#ac772190bcecf4b0807e00fe33a618d04">size</a> ()</td></tr>
+<tr class="memdesc:ac772190bcecf4b0807e00fe33a618d04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve el numero de eventos en la cola.  <a href="#ac772190bcecf4b0807e00fe33a618d04">More...</a><br/></td></tr>
 <tr class="separator:ac772190bcecf4b0807e00fe33a618d04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e14f5de369a44a3a780a389f8043e84"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2e14f5de369a44a3a780a389f8043e84"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>clear</b> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classant_1_1_event_queue.html#a2e14f5de369a44a3a780a389f8043e84">clear</a> ()</td></tr>
+<tr class="memdesc:a2e14f5de369a44a3a780a389f8043e84"><td class="mdescLeft">&#160;</td><td class="mdescRight">limpia la cola. <br/></td></tr>
 <tr class="separator:a2e14f5de369a44a3a780a389f8043e84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Clase donde se almacenan los eventos para ser procesados despues. </p>
 <dl class="section author"><dt>Author</dt><dd>Cristian Gonzalez Moreno <a href="#" onclick="location.href='mai'+'lto:'+'Cri'+'st'+'ian'+'.g'+'lez'+'.m'+'@gm'+'ai'+'l.c'+'om'; return false;">Crist<span style="display: none;">.nosp@m.</span>ian.<span style="display: none;">.nosp@m.</span>glez.<span style="display: none;">.nosp@m.</span>m@gm<span style="display: none;">.nosp@m.</span>ail.c<span style="display: none;">.nosp@m.</span>om</a> </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>0.1 </dd></dl>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="af570d6ef7f0c977c10194238773359ad"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ant::EventQueue::EventQueue </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Constructor por defecto. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a87f6c1295a1d66101f12239cecde3d4d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="classant_1_1base_event.html">baseEvent</a> &gt; &amp; ant::EventQueue::front </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Consulta el evento que esta al frente de la cola. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::shared_ptr&lt;baseEvent&gt; &amp; referencia al evento. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a09b0e4a337d383abebf2e8adaa3e9c07"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ant::EventQueue::isEmpty </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Si la cola esta vacia o no. </p>
+<dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a0c3404775bb9e3c72ae0d0534b4be7e7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="classant_1_1base_event.html">baseEvent</a> &gt; ant::EventQueue::pop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Elimina el evento de la cola y lo devuelve. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::shared_ptr&lt;baseEvent&gt; </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2bc551dd241d78fe32b13bebbd1dc5cb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ant::EventQueue::push </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classant_1_1base_event.html">baseEvent</a> &gt;&#160;</td>
+          <td class="paramname"><em>e</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Añade un evento al final de la cola. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>std::shared_ptr&lt;baseEvent&gt; Evento a añadir. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ac772190bcecf4b0807e00fe33a618d04"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ant::EventQueue::size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Devuelve el numero de eventos en la cola. </p>
+<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="_event_queue_8hpp_source.html">EventQueue.hpp</a></li>
 <li>EventQueue.cpp</li>
 </ul>
@@ -149,7 +284,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>clear</b> ()</td></tr
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>ant</b></li><li class="navelem"><a class="el" href="classant_1_1_event_queue.html">EventQueue</a></li>
-    <li class="footer">Generated on Thu Mar 27 2014 00:26:45 for unitTest by
+    <li class="footer">Generated on Sun Apr 20 2014 15:30:18 for unitTest by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

@@ -127,11 +127,13 @@ Functions</h2></td></tr>
 <tr class="separator:a5238d91325cffcd5d052d055767bfc36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2292728caa47103c8150e5f50d7e5bd0"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a2292728caa47103c8150e5f50d7e5bd0"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../db/dbc/namespaceant_1_1_utils.html#a2292728caa47103c8150e5f50d7e5bd0">toDegrees</a> (T radians)</td></tr>
-<tr class="memdesc:a2292728caa47103c8150e5f50d7e5bd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convertira el valor introducido a grados.  <a href="#a2292728caa47103c8150e5f50d7e5bd0">More...</a><br/></td></tr>
 <tr class="separator:a2292728caa47103c8150e5f50d7e5bd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af4038d2832c96f2ce257570054bf1cae"><td class="memItemLeft" align="right" valign="top">sf::FloatRect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dbc/namespaceant_1_1_utils.html#af4038d2832c96f2ce257570054bf1cae">rotateRect</a> (const sf::FloatRect &amp;rect, const float &amp;angle)</td></tr>
-<tr class="memdesc:af4038d2832c96f2ce257570054bf1cae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Segun el angulo rotara el rectangulo.  <a href="#af4038d2832c96f2ce257570054bf1cae">More...</a><br/></td></tr>
 <tr class="separator:af4038d2832c96f2ce257570054bf1cae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a412fa3ff3e1fd4c0ac6caca589e38a15"><td class="memItemLeft" align="right" valign="top">sf::Vector2f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dbc/namespaceant_1_1_utils.html#a412fa3ff3e1fd4c0ac6caca589e38a15">normalize</a> (const sf::Vector2f &amp;v)</td></tr>
+<tr class="separator:a412fa3ff3e1fd4c0ac6caca589e38a15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af65f1f5f416379049a8406f62775b798"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dbc/namespaceant_1_1_utils.html#af65f1f5f416379049a8406f62775b798">getDirection</a> (const sf::Vector2f &amp;currentPosition, const sf::Vector2f &amp;wantedPosition)</td></tr>
+<tr class="separator:af65f1f5f416379049a8406f62775b798"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b61d8737e7d43b9c1c2a99360542f50"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a1b61d8737e7d43b9c1c2a99360542f50"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../db/dbc/namespaceant_1_1_utils.html#a1b61d8737e7d43b9c1c2a99360542f50">toString</a> (T s)</td></tr>
 <tr class="memdesc:a1b61d8737e7d43b9c1c2a99360542f50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convierte el Tipo a string.  <a href="#a1b61d8737e7d43b9c1c2a99360542f50">More...</a><br/></td></tr>
@@ -147,11 +149,37 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a44d89475d65dcfc853a34b953723f481"><td class="memItemLeft" align="right" valign="top">const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dbc/namespaceant_1_1_utils.html#a44d89475d65dcfc853a34b953723f481">PI</a> = 3.14159265358979</td></tr>
-<tr class="memdesc:a44d89475d65dcfc853a34b953723f481"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definicion de PI.  <a href="#a44d89475d65dcfc853a34b953723f481">More...</a><br/></td></tr>
-<tr class="separator:a44d89475d65dcfc853a34b953723f481"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9b5ccdeb3ee02a6f4f26c1e2a6f02be"><td class="memItemLeft" align="right" valign="top">constexpr double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dbc/namespaceant_1_1_utils.html#ae9b5ccdeb3ee02a6f4f26c1e2a6f02be">PI</a> = 3.14159265358979</td></tr>
+<tr class="memdesc:ae9b5ccdeb3ee02a6f4f26c1e2a6f02be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definicion de PI.  <a href="#ae9b5ccdeb3ee02a6f4f26c1e2a6f02be">More...</a><br/></td></tr>
+<tr class="separator:ae9b5ccdeb3ee02a6f4f26c1e2a6f02be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="af65f1f5f416379049a8406f62775b798"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float ant::Utils::getDirection </td>
+          <td>(</td>
+          <td class="paramtype">const sf::Vector2f &amp;&#160;</td>
+          <td class="paramname"><em>currentPosition</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const sf::Vector2f &amp;&#160;</td>
+          <td class="paramname"><em>wantedPosition</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="af110086ca94443bd1aa42f01008db7cb"></a>
 <div class="memitem">
 <div class="memproto">
@@ -208,6 +236,22 @@ template&lt;typename T , typename... Args&gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a412fa3ff3e1fd4c0ac6caca589e38a15"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Vector2f ant::Utils::normalize </td>
+          <td>(</td>
+          <td class="paramtype">const sf::Vector2f &amp;&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="af4038d2832c96f2ce257570054bf1cae"></a>
 <div class="memitem">
 <div class="memproto">
@@ -231,17 +275,6 @@ template&lt;typename T , typename... Args&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Segun el angulo rotara el rectangulo. </p>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000005">Todo:</a></b></dt><dd>!!! -Falta implementar esta funcion.</dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">rect</td><td>sf::FloatRect </td></tr>
-    <tr><td class="paramname">angle</td><td>float </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>sf::FloatRect rectangulo rotado. </dd></dl>
 
 </div>
 </div>
@@ -268,21 +301,6 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Convertira el valor introducido a grados. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">T</td><td>tipo a convertir a degrees </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">radians</td><td>T (float,double,char,int,long) etc </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>T </dd></dl>
 
 </div>
 </div>
@@ -369,12 +387,12 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
-<a class="anchor" id="a44d89475d65dcfc853a34b953723f481"></a>
+<a class="anchor" id="ae9b5ccdeb3ee02a6f4f26c1e2a6f02be"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const double ant::Utils::PI = 3.14159265358979</td>
+          <td class="memname">constexpr double ant::Utils::PI = 3.14159265358979</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -389,7 +407,7 @@ template&lt;typename T &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dc/d6c/namespaceant.html">ant</a></li><li class="navelem"><a class="el" href="../../db/dbc/namespaceant_1_1_utils.html">Utils</a></li>
-    <li class="footer">Generated on Sat Apr 19 2014 11:35:20 for AntFarm by
+    <li class="footer">Generated on Sun Apr 20 2014 15:35:27 for AntFarm by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

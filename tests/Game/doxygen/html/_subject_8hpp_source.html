@@ -44,6 +44,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -89,7 +90,7 @@ $(document).ready(function(){initNavTree('_subject_8hpp_source.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -109,26 +110,30 @@ $(document).ready(function(){initNavTree('_subject_8hpp_source.html','');});
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;Observer/Observer.hpp&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span>ant{</div>
-<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="classant_1_1_subject.html">    7</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classant_1_1_subject.html">Subject</a>{</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;            std::list&lt;std::shared_ptr&lt;Observer&gt; &gt; Observers;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;            <a class="code" href="classant_1_1_subject.html">Subject</a>();</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;            <span class="keywordtype">void</span> addObserver(std::shared_ptr&lt;Observer&gt; o);</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;            <span class="keywordtype">void</span> removeObserver(std::shared_ptr&lt;Observer&gt; o);</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;            <span class="keywordtype">void</span> notifyObservers(std::shared_ptr&lt;baseEvent&gt; e);</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;            ~<a class="code" href="classant_1_1_subject.html">Subject</a>();</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    };</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#endif // SUBJECT_H</span></div>
-<div class="ttc" id="classant_1_1_subject_html"><div class="ttname"><a href="classant_1_1_subject.html">ant::Subject</a></div><div class="ttdef"><b>Definition:</b> Subject.hpp:7</div></div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="classant_1_1_subject.html">   12</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classant_1_1_subject.html">Subject</a>{</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            <a class="code" href="classant_1_1_subject.html#abead80bfd62dbf3e728c92c77662867c">Subject</a>();</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            <span class="keywordtype">void</span> <a class="code" href="classant_1_1_subject.html#a827a268f281179d94cc92c1709a8283f">addObserver</a>(std::shared_ptr&lt;Observer&gt; o);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            <span class="keywordtype">void</span> <a class="code" href="classant_1_1_subject.html#a8e74f416db7aadd170cb4cdfda2ec5e9">removeObserver</a>(std::shared_ptr&lt;Observer&gt; o);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            <span class="keywordtype">void</span> <a class="code" href="classant_1_1_subject.html#aefef04b082bfba8c7117b4facf7af4e8">notifyObservers</a>(std::shared_ptr&lt;baseEvent&gt; e);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            ~<a class="code" href="classant_1_1_subject.html">Subject</a>();</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            std::list&lt;std::shared_ptr&lt;Observer&gt; &gt; Observers;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    };</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#endif // SUBJECT_H</span></div>
+<div class="ttc" id="classant_1_1_subject_html_abead80bfd62dbf3e728c92c77662867c"><div class="ttname"><a href="classant_1_1_subject.html#abead80bfd62dbf3e728c92c77662867c">ant::Subject::Subject</a></div><div class="ttdeci">Subject()</div><div class="ttdoc">Constructor por defecto. </div><div class="ttdef"><b>Definition:</b> Subject.cpp:4</div></div>
+<div class="ttc" id="classant_1_1_subject_html"><div class="ttname"><a href="classant_1_1_subject.html">ant::Subject</a></div><div class="ttdoc">Tema al cual se suscriben los observadores Observer. </div><div class="ttdef"><b>Definition:</b> Subject.hpp:12</div></div>
+<div class="ttc" id="classant_1_1_subject_html_aefef04b082bfba8c7117b4facf7af4e8"><div class="ttname"><a href="classant_1_1_subject.html#aefef04b082bfba8c7117b4facf7af4e8">ant::Subject::notifyObservers</a></div><div class="ttdeci">void notifyObservers(std::shared_ptr&lt; baseEvent &gt; e)</div><div class="ttdoc">Notifica a los Observadores que esten en suscritos a este tema. </div><div class="ttdef"><b>Definition:</b> Subject.cpp:13</div></div>
+<div class="ttc" id="classant_1_1_subject_html_a8e74f416db7aadd170cb4cdfda2ec5e9"><div class="ttname"><a href="classant_1_1_subject.html#a8e74f416db7aadd170cb4cdfda2ec5e9">ant::Subject::removeObserver</a></div><div class="ttdeci">void removeObserver(std::shared_ptr&lt; Observer &gt; o)</div><div class="ttdoc">Elimina el primer observador que coincida. </div><div class="ttdef"><b>Definition:</b> Subject.cpp:10</div></div>
+<div class="ttc" id="classant_1_1_subject_html_a827a268f281179d94cc92c1709a8283f"><div class="ttname"><a href="classant_1_1_subject.html#a827a268f281179d94cc92c1709a8283f">ant::Subject::addObserver</a></div><div class="ttdeci">void addObserver(std::shared_ptr&lt; Observer &gt; o)</div><div class="ttdoc">Añade un observador. </div><div class="ttdef"><b>Definition:</b> Subject.cpp:7</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_5e663fcb99dea7bd7d2f9fdd7ec833e3.html">Subject</a></li><li class="navelem"><b>Subject.hpp</b></li>
-    <li class="footer">Generated on Thu Mar 27 2014 00:26:45 for unitTest by
+    <li class="footer">Generated on Sun Apr 20 2014 15:30:17 for unitTest by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>
