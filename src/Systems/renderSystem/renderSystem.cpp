@@ -26,7 +26,7 @@ namespace ant{
             // si tiene el destructable se renderiza tambien.
             if(entity->hasComponent(ComponentsMask::COMPONENT_DESTRUCTABLE)){
                 auto& destructable = entity->getComponent(ComponentsMask::COMPONENT_DESTRUCTABLE)
-                                            ->getProperties<std::string,std::unique_ptr<sf::VertexArray>>();
+                                            ->getProperties<std::string,std::unique_ptr<sf::VertexArray>,sf::FloatRect>();
                 win.draw(*std::get<1>(destructable));
             }
         }

@@ -1,9 +1,13 @@
 #include <ComponentFactory/ComponentFactory.hpp>
 
 namespace ant{
-            std::unique_ptr<sf::VertexArray> ComponentFactory::mapImage(const sf::Vector2f& position,sf::Image& img){
+            std::unique_ptr<sf::VertexArray> ComponentFactory::mapImage(const sf::Vector2f& position,sf::Image& img,sf::FloatRect* bounds){
                 int xWidth = img.getSize().x;
                 int yHeight = img.getSize().y;
+                bounds->height = yHeight;
+                bounds->width = xWidth;
+                bounds->left = position.x;
+                bounds->top = position.y;
                 std::unique_ptr<sf::VertexArray> destructible(new sf::VertexArray(sf::Points,xWidth*yHeight));
                 for(int x=0;x<xWidth;++x){
                     for(int y=0;y<yHeight;++y){
@@ -57,9 +61,10 @@ namespace ant{
                 return std::move(c);
             }
             std::unique_ptr<baseComponent> ComponentFactory::createDestructable(sf::Vector2f position,const std::string& imageID){
-                std::unique_ptr<sf::VertexArray> destructable = mapImage(position,assets->getImage(imageID));
-                std::unique_ptr<baseComponent> c(new Component<std::string,std::unique_ptr<sf::VertexArray>>(
-                                            ComponentsMask::COMPONENT_DESTRUCTABLE,imageID,std::move(destructable)));
+                sf::FloatRect bounds;
+                std::unique_ptr<sf::VertexArray> destructable = mapImage(position,assets->getImage(imageID),&bounds);
+                std::unique_ptr<baseComponent> c(new Component<std::string,std::unique_ptr<sf::VertexArray>,sf::FloatRect>(
+                                            ComponentsMask::COMPONENT_DESTRUCTABLE,imageID,std::move(destructable),bounds));
                 return std::move(c);
             }
             std::unique_ptr<baseComponent> ComponentFactory::createAnimation(std::vector<std::string> ids){
@@ -72,6 +77,15 @@ namespace ant{
                         ComponentsMask::COMPONENT_SPRITE,id,std::unique_ptr<sf::Sprite>(
                                                             new sf::Sprite((assets->getTexture(id))))));
                 return std::move(c);
+            }
+            std::unique_ptr<baseComponent> createDirtBag(){
+
+            }
+            std::unique_ptr<baseComponent> createFoodBag(){
+
+            }
+            std::unique_ptr<baseComponent> createPassport(long int id,long int from,long int fromType, long int dest,long int destType){
+
             }
             ComponentFactory::~ComponentFactory(){
 

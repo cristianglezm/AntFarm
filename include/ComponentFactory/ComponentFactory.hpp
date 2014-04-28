@@ -127,7 +127,9 @@ namespace ant{
              * @return std::unique_ptr<baseComponent> componente creado.
              */
             std::unique_ptr<baseComponent> createSprite(std::string id);
-
+            std::unique_ptr<baseComponent> createDirtBag();
+            std::unique_ptr<baseComponent> createFoodBag();
+            std::unique_ptr<baseComponent> createPassport(long int id,long int from,long int fromType, long int dest,long int destType);
             ~ComponentFactory();
         private:
             std::shared_ptr<AssetManager> assets;
@@ -140,8 +142,9 @@ namespace ant{
              *
              * @param position sf::Vector2f Donde empezara a poner la posicion de cada pixel.
              * @param img sf::Image& referencia de la imagen a mapear.
+             * @param bounds * sf::FloatRect la posicion y tamaño del destuctible
              */
-            std::unique_ptr<sf::VertexArray> mapImage(const sf::Vector2f& position,sf::Image& img);
+            std::unique_ptr<sf::VertexArray> mapImage(const sf::Vector2f& position,sf::Image& img,sf::FloatRect* bounds);
     };
 }
 
