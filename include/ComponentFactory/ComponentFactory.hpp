@@ -56,9 +56,9 @@ namespace ant{
              *
              * Este componente basico es el cual permite a la entidad tener posicion.
              * necesario para poder renderizar, moverse, etc.
-             *
+             * @code
              * Component<sf::Vector2f,sf::Vector2f,float>
-             *
+             * @endcode
              * @param position sf::Vector2f posicion de la entidad.
              * @param scale sf::Vector2f escala de la entidad.
              * @param rotation float rotacion de la entidad.
@@ -70,9 +70,9 @@ namespace ant{
              *
              * Este componente basico es el cual permite a la entidad moverse.
              * necesario para poder moverse.
-             *
+             * @code
              * Component<sf::Vector2f,float,float,float>
-             *
+             * @endcode
              * @param speed float Velocidad actual.
              * @param minSpeed float Velocidad minima a la cual puede ir.
              * @param maxSpeed float Velocidad Maxima a la cual puede ir.
@@ -83,9 +83,9 @@ namespace ant{
              * @brief Crea un componente Tipo Bounds.
              *
              * Este componente basico es el cual permite a la entidad tener colisiones.
-             *
+             * @code
              * Component<sf::FloatReact>
-             *
+             * @endcode
              * @param bounds sf::FloatRect rectangulo de colision.
              * @return std::unique_ptr<baseComponent> componente Creado.
              */
@@ -96,9 +96,9 @@ namespace ant{
              * Este componente basico es el cual permite a la entidad ser destruida.
              * Son pixeles individuales las operaciones de mover no se pueden aplicar
              * sin tener un coste elevado, tarda mas segun lo grande que sea la imagen.
-             *
+             * @code
              * Component<std::string,sf::VertexArray>
-             *
+             * @endcode
              * @param position sf::Vector2f posicion en la que dibuja el primer pixel.
              * @param imageID std::string& id de la imagen a mapear.
              * @return std::unique_ptr<baseComponent> componente creado.
@@ -109,9 +109,9 @@ namespace ant{
              *
              * Este componente basico es el cual permite hacer animaciones.
              * necesita un sistema especifico por cada animacion.
-             *
-             * Component<std::vector<std::string>>>
-             *
+             * @code
+             *  Component<std::vector<std::string>>>
+             * @endcode
              * @param ids std::vector<std::string> id de las texturas para la animacion.
              * @return std::unique_ptr<baseComponent> componente creado.
              */
@@ -120,16 +120,21 @@ namespace ant{
              * @brief Crea un componente tipo Sprite
              *
              * Este componente basico es el cual permite a una entidad ser renderizada en 2d.
-             *
-             * Component<std::string,sf::Sprite>
-             *
+             * @code
+             *  Component<std::string,sf::Sprite>
+             * @endcode
              * @param id std::string id de la textura.
              * @return std::unique_ptr<baseComponent> componente creado.
              */
             std::unique_ptr<baseComponent> createSprite(std::string id);
-            std::unique_ptr<baseComponent> createDirtBag();
-            std::unique_ptr<baseComponent> createFoodBag();
-            std::unique_ptr<baseComponent> createPassport(long int id,long int from,long int fromType, long int dest,long int destType);
+            /**
+             * @brief Crea un componente tipo Passage
+             *
+             * Este componente permite ir de un sitio a otro.
+             *
+             * @return std::unique_ptr<baseComponent> componente creado.
+             */
+            std::unique_ptr<baseComponent> createPassage(sf::Vector2f dest);
             ~ComponentFactory();
         private:
             std::shared_ptr<AssetManager> assets;

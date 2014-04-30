@@ -18,8 +18,7 @@ namespace ant{
                                | ComponentsMask::COMPONENT_TRANSFORM;
                 static const long int AntQueen = ComponentsMask::COMPONENT_VELOCITY
                                     | ComponentsMask::COMPONENT_SPRITE
-                                    | ComponentsMask::COMPONENT_TRANSFORM
-                                    | ComponentsMask::COMPONENT_EGGS;
+                                    | ComponentsMask::COMPONENT_TRANSFORM;
                 static const long int Nest = ComponentsMask::COMPONENT_DESTRUCTABLE
                                 | ComponentsMask::COMPONENT_TRANSFORM
                                 | ComponentsMask::COMPONENT_SPRITE;

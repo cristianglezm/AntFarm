@@ -49,6 +49,19 @@ namespace ant{
         }
         return nullptr;
     }
+    std::unique_ptr<Entity> EntityManager::Transfer(const Entity* e){
+        std::unique_ptr<Entity> ne;
+        for(auto& entity : entities){
+            if(entity){
+                if(entity.get()== e){
+                    ne = std::move(entity);
+                    entities.remove(entity);
+                    return std::move(ne);
+                }
+            }
+        }
+        return nullptr;
+    }
     EntityManager::~EntityManager(){
 
     }

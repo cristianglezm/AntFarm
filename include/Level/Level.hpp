@@ -2,6 +2,7 @@
 #define LEVEL_H
 #include <memory>
 #include <SFML/System/Time.hpp>
+#include <Utils/String.hpp>
 #include <WorldManager/WorldManager.hpp>
 #include <WorldFactory/WorldFactory.hpp>
 #include <EventQueue/EventQueue.hpp>
@@ -15,11 +16,6 @@ namespace ant{
      */
     class Level{
         public:
-            /**
-             * @brief Tipos de mundo
-             */
-            static const int BATTLEFIELD = 0;
-            static const int NEST = 1;
             /**
              * @brief Constructor principal
              *
@@ -35,12 +31,12 @@ namespace ant{
              * Añade los mundos iniciales al nivel.
              * @param bounds sf::FloatRect rectangulo con los limites del nivel.
              */
-            void init(sf::FloatRect bounds);
+            void init(const sf::FloatRect& bounds);
             /**
              * @brief Carga el nivel de un fichero json.
              * @return bool
              */
-            bool loadLevel(const std::string& filename);
+            bool loadLevel(const sf::FloatRect& bounds,const std::string& filename);
             /**
              * @brief Setter para la cola de eventos.
              * @param eq std::shared_ptr<EventQueue> Cola para que los sistemas añadan los eventos que sucenden en el juego.
@@ -76,23 +72,19 @@ namespace ant{
              *
              * Actualiza el mundo especificado, si se pone un -1 se actualizaran todos.
              * @param id long int Mundo a actualizar
-             * @param type long int Tipo de mundo(Level::BATTLEFIELD o Level::NEST)
              * @param dt sf::Time delta time.
              */
-            void update(long int id,long int type,sf::Time dt);
+            void update(long int id,sf::Time dt);
             /**
              * @brief Renderiza el mundo especificado.
              *
-             * Renderiza el mundo especificado
              * @param id long int Mundo a actualizar
-             * @param type long int Tipo de mundo(Level::BATTLEFIELD o Level::NEST)
              * @param win sf::RenderWindow & ventana a la cual dibujar.
              */
-            void render(long int id,long int type,sf::RenderWindow& win);
+            void render(long int id,sf::RenderWindow& win);
             ~Level();
         private:
-            std::shared_ptr<WorldManager> battlefields;
-            std::shared_ptr<WorldManager> nests;
+            std::shared_ptr<WorldManager> levels;
             std::shared_ptr<EventQueue> eventQueue;
             std::shared_ptr<GameEventDispatcher> gameEventDispatcher;
             std::shared_ptr<WorldFactory> worldFactory;

@@ -21,12 +21,12 @@ bool WorldManagerTest(){
             auto dice = std::bind(distribution, generator);
             switch(dice()){
                 case 1:{
-                    std::unique_ptr<ant::baseComponent> c1( new ant::Component<int>(ComponentsMask::COMPONENT_EGGS,2));
+                    std::unique_ptr<ant::baseComponent> c1( new ant::Component<int>(ComponentsMask::COMPONENT_ANIMATION,2));
                     e->addComponent(std::move(c1));
                     }
                     break;
                 case 2:{
-                    std::unique_ptr<ant::baseComponent> c2( new ant::Component<int>(ComponentsMask::COMPONENT_HORNS,2));
+                    std::unique_ptr<ant::baseComponent> c2( new ant::Component<int>(ComponentsMask::COMPONENT_PASSAGE,2));
                     e->addComponent(std::move(c2));
                     }
                     break;
@@ -54,7 +54,7 @@ bool WorldManagerTest(){
         em->addEntity(std::move(e));
         }
         for(int k=0;k<1;++k){
-            std::shared_ptr<testSystem> ts(new testSystem(ComponentsMask::COMPONENT_HORNS | ComponentsMask::COMPONENT_VELOCITY));
+            std::shared_ptr<testSystem> ts(new testSystem(ComponentsMask::COMPONENT_ANIMATION | ComponentsMask::COMPONENT_VELOCITY));
             ts->setName("test-" + ant::Utils::toString(k));
             ts->setEntityManager(em);
             ts->setEventQueue(eq);

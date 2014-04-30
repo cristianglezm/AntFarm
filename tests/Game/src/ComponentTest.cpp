@@ -13,11 +13,11 @@ bool ComponentTest(){
                                 ComponentsMask::COMPONENT_DESTRUCTABLE,4.5));
     assert(c.getId()==ComponentsMask::COMPONENT_NONE);
     std::cout << "ID: " << c.getId() << std::endl;
-    c.setId(ComponentsMask::COMPONENT_EGGS);
+    c.setId(ComponentsMask::COMPONENT_PASSAGE);
     auto& properties = c.getProperties();
     std::cout << "Propiedad 1(int): " << std::get<0>(properties) << std::endl;
     std::cout << "Propiedad 2(Component)->propiedad 1(float): " << std::get<0>(std::get<1>(properties).getProperties()) << std::endl;
-    assert(c.getId()==ComponentsMask::COMPONENT_EGGS);
+    assert(c.getId()==ComponentsMask::COMPONENT_PASSAGE);
     std::cout << "Cambiamos ID\nID: " << c.getId() << std::endl;
     return true;
 }

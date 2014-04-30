@@ -48,22 +48,19 @@ namespace ant{
              */
             inline std::shared_ptr<AssetManager> getAssetManager(){ return entityFactory->getAssetManager(); }
             /**
-             * @brief Crea un nido con una hormiga reina.
+             * @brief Crea un nivel segun la imagen especificada.
+             *
+             * La imagen especificada tiene que tener algo asi:
+             * @todo Descripcion etc.
+             *
+             * @param lvl sf::Image imagen a cargar con la informacion del nivel.
+             * @param nEntities int numero de entidades que tendra el nivel.
+             * @param overTime sf::Time tiempo maximo para pasarse el nivel.
              * @param bounds sf::FloatRect rectangulo con los limites del
              *        mundo(Tienen que ser iguales a la imagenes de fondo.)
              * @return std::unique_ptr<World> World creado
              */
-            std::unique_ptr<World> createNest(sf::FloatRect bounds);
-            /**
-             * @brief Crea un Campo de batalla.
-             *
-             * Es donde las hormigas buscaran comida, lucharan contra otras etc.
-             *
-             * @param bounds sf::FloatRect rectangulo con los limites del
-             *        mundo(Tienen que ser iguales a la imagenes de fondo.)
-             * @return std::unique_ptr<World> World creado
-             */
-            std::unique_ptr<World> createBattlefield(sf::FloatRect bounds);
+            std::unique_ptr<World> create(const sf::Image& lvl,int nEntities,sf::Time overTime,sf::FloatRect bounds);
             /**
              * @brief Establece el EntityFactory que usara.
              * @param ef std::shared_ptr<EntityFactory>
@@ -96,8 +93,6 @@ namespace ant{
             inline std::shared_ptr<GameEventDispatcher> getGameEventDispatcher(){ return this->gameEventDispatcher; }
             ~WorldFactory();
         private:
-            long int nestId;
-            long int battlefieldId;
             std::shared_ptr<EntityFactory> entityFactory;
             std::shared_ptr<SystemFactory> systemFactory;
             std::shared_ptr<EventQueue> eventQueue;

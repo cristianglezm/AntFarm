@@ -3,7 +3,6 @@
 namespace ant{
     diggingSystem::diggingSystem(sf::VertexArray* map,sf::FloatRect boundsMap){
         name = "diggingSystem";
-        RequiredComponents = ComponentsMask::COMPONENT_TRANSFORM | ComponentsMask::COMPONENT_DIRT_BAG;
         this->map = map;
         this->boundsMap = boundsMap;
     }

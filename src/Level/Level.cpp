@@ -1,20 +1,34 @@
 #include <Level/Level.hpp>
 namespace ant{
     Level::Level(const std::string& assetsFilename,sf::FloatRect bounds,std::shared_ptr<GameEventDispatcher> ged){
-        battlefields.reset(new WorldManager());
-        nests.reset(new WorldManager());
+        levels.reset(new WorldManager());
         eventQueue.reset(new EventQueue());
         gameEventDispatcher = ged;
         worldFactory.reset(new WorldFactory(ged,eventQueue));
         worldFactory->loadAssets(assetsFilename);
         init(bounds);
     }
-    void Level::init(sf::FloatRect bounds){
+    void Level::init(const sf::FloatRect& bounds){
         /// @todo crear mundos iniciales, etc.
-        nests->addWorld(worldFactory->createNest(bounds));
-        battlefields->addWorld(worldFactory->createBattlefield(bounds));
+
     }
-    bool Level::loadLevel(const std::string& filename){
+    bool Level::loadLevel(const sf::FloatRect& bounds,const std::string& filename){
+        /// @todo Implement
+        std::fstream file(filename);
+        JsonBox::Value v(file);
+        int size = v.getArray().size();
+        for(int i=0;i<size;++i){
+            sf::Image img;
+            if(!img.loadFromFile(v["levels"][i]["image"].getString())){
+                throw std::runtime_error("Error loading image from level "
+                                         + v["levels"][i]["image"].getString()
+                                         + " \nindex: " + Utils::toString<int>(i));
+            }
+            int nEntities = v["levels"][i]["nEntities"].getInt();
+            sf::Time overTime;
+            overTime = sf::seconds(v["levels"][i]["overtime"].getInt());
+            worldFactory->create(img,nEntities,overTime,bounds);
+        }
         return false;
     }
     void Level::setEventQueue(std::shared_ptr<EventQueue> eq){
@@ -28,25 +42,11 @@ namespace ant{
     void Level::setAssetManager(std::shared_ptr<AssetManager> assets){
         worldFactory->setAssetManager(assets);
     }
-    void Level::update(long int id,long int type,sf::Time dt){
-        switch(type){
-            case BATTLEFIELD:
-                    battlefields->update(id,dt);
-                break;
-            case NEST:
-                    nests->update(id,dt);
-                break;
-        }
+    void Level::update(long int id,sf::Time dt){
+        levels->update(id,dt);
     }
-    void Level::render(long int id,long int type,sf::RenderWindow& win){
-        switch(type){
-                    case BATTLEFIELD:
-                            battlefields->render(id,win);
-                        break;
-                    case NEST:
-                            nests->render(id,win);
-                        break;
-                }
+    void Level::render(long int id,sf::RenderWindow& win){
+        levels->render(id,win);
     }
     Level::~Level(){
 

@@ -78,14 +78,8 @@ namespace ant{
                                                             new sf::Sprite((assets->getTexture(id))))));
                 return std::move(c);
             }
-            std::unique_ptr<baseComponent> createDirtBag(){
-
-            }
-            std::unique_ptr<baseComponent> createFoodBag(){
-
-            }
-            std::unique_ptr<baseComponent> createPassport(long int id,long int from,long int fromType, long int dest,long int destType){
-
+            std::unique_ptr<baseComponent> ComponentFactory::createPassage(sf::Vector2f dest){
+                std::unique_ptr<baseComponent> c(new Component<sf::Vector2f>(ComponentsMask::COMPONENT_PASSAGE,dest));
             }
             ComponentFactory::~ComponentFactory(){
 

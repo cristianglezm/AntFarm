@@ -27,8 +27,7 @@ namespace ant{
             std::shared_ptr<AssetManager> assets;
             sf::RenderWindow win;
             bool running;
-            int mode;
-            int idWorld;
+            int currentLevel;
             bool isPause;
     };
 }

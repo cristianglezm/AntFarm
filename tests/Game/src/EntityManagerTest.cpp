@@ -36,12 +36,12 @@ bool EntityManagerTest(){
         std::cout << "Removing Component..." << std::endl;
         t2->removeComponent(ComponentsMask::COMPONENT_DESTRUCTABLE);
         std::cout << "Found t2 " << t2->getName() << " Mask = " << t2->getMask() << std::endl;
-        std::unique_ptr<ant::baseComponent> c2( new ant::Component<int>(ComponentsMask::COMPONENT_EGGS,2));
+        std::unique_ptr<ant::baseComponent> c2( new ant::Component<int>(ComponentsMask::COMPONENT_PASSAGE,2));
         std::cout << "Adding Component..." << std::endl;
         t2->addComponent(std::move(c2));
         std::cout << "Found t2 " << t2->getName() << " Mask = " << t2->getMask() << std::endl;
         std::cout << "Getting Component EGGS" << std::endl;
-        std::cout << "EGGS ID = " << t2->getComponent(ComponentsMask::COMPONENT_EGGS)->getId() << std::endl;
+        std::cout << "EGGS ID = " << t2->getComponent(ComponentsMask::COMPONENT_PASSAGE)->getId() << std::endl;
     }
     for(int i=0;i<10;++i){
         std::unique_ptr<ant::Entity> e(new ant::Entity("Test-" + ant::Utils::toString(i)));
@@ -51,12 +51,12 @@ bool EntityManagerTest(){
         auto dice = std::bind(distribution, generator);
         switch(dice()){
             case 1:{
-                std::unique_ptr<ant::baseComponent> c1( new ant::Component<int>(ComponentsMask::COMPONENT_EGGS,2));
+                std::unique_ptr<ant::baseComponent> c1( new ant::Component<int>(ComponentsMask::COMPONENT_PASSAGE,2));
                 e->addComponent(std::move(c1));
                 }
                 break;
             case 2:{
-                std::unique_ptr<ant::baseComponent> c2( new ant::Component<int>(ComponentsMask::COMPONENT_HORNS,2));
+                std::unique_ptr<ant::baseComponent> c2( new ant::Component<int>(ComponentsMask::COMPONENT_ANIMATION,2));
                 e->addComponent(std::move(c2));
                 }
                 break;

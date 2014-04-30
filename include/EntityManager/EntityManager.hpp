@@ -83,6 +83,15 @@ namespace ant{
              * @return std::unique_ptr<Entity> entidad transferida o nullptr si no es encontrada.
              */
             std::unique_ptr<Entity> Transfer(const std::string& name);
+            /**
+             * @brief Transfiere la primera entidad que coincida con el puntero de entidad.
+             *
+             * Transfiere la posesion(ownership) de la entidad y la elimina del contenedor.
+             *
+             * @param e Entity * Puntero a la entidad
+             * @return std::unique_ptr<Entity> entidad transferida o nullptr si no es encontrada.
+             */
+            std::unique_ptr<Entity> Transfer(const Entity* e);
             ~EntityManager();
         private:
             list entities;
