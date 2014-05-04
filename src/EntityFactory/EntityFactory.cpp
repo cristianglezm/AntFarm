@@ -25,10 +25,10 @@ namespace ant{
         if((mask & Ant) == Ant){
             id = "Ant";
         }
-        if((mask & AntQueen) == AntQueen){
+        if((mask & Door) == Door){
             id = "AntQueen";
         }
-        if((mask & Nest) == Nest){
+        if((mask & level) == level){
             id = "NestBackground";
         }
         if((mask & ComponentsMask::COMPONENT_TRANSFORM) == ComponentsMask::COMPONENT_TRANSFORM){

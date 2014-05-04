@@ -15,14 +15,14 @@ namespace ant{
         public:
                 static const long int Ant = ComponentsMask::COMPONENT_VELOCITY
                                | ComponentsMask::COMPONENT_SPRITE
-                               | ComponentsMask::COMPONENT_TRANSFORM;
-                static const long int AntQueen = ComponentsMask::COMPONENT_VELOCITY
-                                    | ComponentsMask::COMPONENT_SPRITE
-                                    | ComponentsMask::COMPONENT_TRANSFORM;
-                static const long int Nest = ComponentsMask::COMPONENT_DESTRUCTABLE
+                               | ComponentsMask::COMPONENT_TRANSFORM
+                               | ComponentsMask::COMPONENT_BOUNDS;
+                static const long int Door = ComponentsMask::COMPONENT_PASSAGE
                                 | ComponentsMask::COMPONENT_TRANSFORM
-                                | ComponentsMask::COMPONENT_SPRITE;
-                static const long int Battlefield = ComponentsMask::COMPONENT_TRANSFORM
+                                | ComponentsMask::COMPONENT_BOUNDS
+                                | ComponentsMask::COMPONENT_DIRECTION;
+                static const long int level = ComponentsMask::COMPONENT_DESTRUCTABLE
+                                | ComponentsMask::COMPONENT_TRANSFORM
                                 | ComponentsMask::COMPONENT_SPRITE;
             /**
              * @brief Constructor por defecto.
