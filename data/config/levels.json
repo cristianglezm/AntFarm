@@ -1,0 +1,5 @@
+{
+    "levels":[
+            {"name":"level1","nEntities":20,"image":"data/levels/level1.png","overtime":5000,},
+        ]
+}

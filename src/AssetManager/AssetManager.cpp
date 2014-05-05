@@ -39,6 +39,10 @@ namespace ant{
     sf::Texture& AssetManager::getTexture(const std::string& id){
         return *(textures.at(id));
     }
+    bool AssetManager::hasTexture(const std::string& id){
+        auto found = textures.find(id);
+        return (found != textures.end());
+    }
     void AssetManager::removeTexture(const std::string& id){
         textures.erase(id);
     }
@@ -52,6 +56,10 @@ namespace ant{
     sf::Image& AssetManager::getImage(const std::string& id){
         return *(images.at(id));
     }
+    bool AssetManager::hasImage(const std::string& id){
+        auto found = images.find(id);
+        return (found != images.end());
+    }
     void AssetManager::removeImage(const std::string& id){
         images.erase(id);
     }
@@ -64,6 +72,10 @@ namespace ant{
     }
     sf::Font& AssetManager::getFont(const std::string& id){
         return *(fonts.at(id));
+    }
+    bool AssetManager::hasFont(const std::string& id){
+        auto found = fonts.find(id);
+        return (found != fonts.end());
     }
     void AssetManager::removeFont(const std::string& id){
         fonts.erase(id);

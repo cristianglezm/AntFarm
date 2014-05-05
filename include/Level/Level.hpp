@@ -3,6 +3,7 @@
 #include <memory>
 #include <SFML/System/Time.hpp>
 #include <Utils/String.hpp>
+#include <JsonBox.h>
 #include <WorldManager/WorldManager.hpp>
 #include <WorldFactory/WorldFactory.hpp>
 #include <EventQueue/EventQueue.hpp>

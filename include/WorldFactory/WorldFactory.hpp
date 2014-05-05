@@ -52,7 +52,7 @@ namespace ant{
              *
              * La imagen especificada tiene que tener algo asi:
              * @todo Descripcion etc.
-             *
+             * @param name std::string nombre del nivel.
              * @param lvl sf::Image imagen a cargar con la informacion del nivel.
              * @param nEntities int numero de entidades que tendra el nivel.
              * @param overTime sf::Time tiempo maximo para pasarse el nivel.
@@ -60,7 +60,7 @@ namespace ant{
              *        mundo(Tienen que ser iguales a la imagenes de fondo.)
              * @return std::unique_ptr<World> World creado
              */
-            std::unique_ptr<World> create(const sf::Image& lvl,int nEntities,sf::Time overTime,sf::FloatRect bounds);
+            std::unique_ptr<World> create(const std::string& name,const sf::Image& lvl,int nEntities,sf::Time overTime,sf::FloatRect bounds);
             /**
              * @brief Establece el EntityFactory que usara.
              * @param ef std::shared_ptr<EntityFactory>

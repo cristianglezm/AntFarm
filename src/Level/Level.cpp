@@ -19,15 +19,16 @@ namespace ant{
         int size = v.getArray().size();
         for(int i=0;i<size;++i){
             sf::Image img;
-            if(!img.loadFromFile(v["levels"][i]["image"].getString())){
+            if(!img.loadFromFile(v["levels"][size_t(i)]["image"].getString())){
                 throw std::runtime_error("Error loading image from level "
-                                         + v["levels"][i]["image"].getString()
+                                         + v["levels"][size_t(i)]["image"].getString()
                                          + " \nindex: " + Utils::toString<int>(i));
             }
-            int nEntities = v["levels"][i]["nEntities"].getInt();
+            int nEntities = v["levels"][size_t(i)]["nEntities"].getInt();
             sf::Time overTime;
-            overTime = sf::seconds(v["levels"][i]["overtime"].getInt());
-            worldFactory->create(img,nEntities,overTime,bounds);
+            overTime = sf::seconds(v["levels"][size_t(i)]["overtime"].getInt());
+            worldFactory->create(v["levels"][size_t(i)]["name"].getString(),
+                                 img,nEntities,overTime,bounds);
         }
         return false;
     }

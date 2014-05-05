@@ -9,6 +9,21 @@ namespace ant{
      */
     class ComponentSettings{
         public:
+            float minSpeed;
+            float maxSpeed;
+            sf::Vector2f scale;
+            sf::Vector2f position;
+            float rotation;
+            std::string spriteID;
+            std::vector<std::string> animation;
+            sf::Vector2f dest;
+            sf::Vector2f DestructiblePosition;
+            std::string imageID;
+            sf::FloatRect bounds;
+            /**
+             *
+             */
+             ComponentSettings();
             /**
              * @brief Carga la configuracion de la entidad.
              *
@@ -18,6 +33,9 @@ namespace ant{
              * @param filename std::string nombre del fichero(json) a cargar.
              */
             void loadSettings(const std::string& filename);
+            void setSpeed();
+            inline float getSpeed(){ return Speed; }
+             ~ComponentSettings();
         private:
             float Speed;
     };

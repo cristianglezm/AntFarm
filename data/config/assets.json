@@ -1,10 +1,7 @@
 {
 	"textures":[
 			{"id":"Ant","filepath":"data/entities/Ant.png"},
-			{"id":"AntQueen","filepath":"data/entities/AntQueen.png"},
-			{"id":"Egg","filepath":"data/entities/Egg.png"},
-			{"id":"Larvae1","filepath":"data/entities/Larvae1.png"},
-			{"id":"Larvae2","filepath":"data/entities/Larvae2.png"},
+			{"id":"InDoor","filepath":"data/entities/inDoor.png"},
 			{"id":"NestBackground","filepath":"data/maps/nest/MapNestBackground.png"},
 		   ],
 	"images":[

@@ -17,12 +17,14 @@ namespace ant{
         for(auto& e : em->getEntities()){
             if(e->hasComponent(RequiredComponents)){
                 auto& properties = e->getComponent(RequiredComponents)->getProperties<sf::Vector2f,float,float,float>();
-                std::get<0>(properties) -= Gravity;
+                std::get<0>(properties).y = std::get<0>(properties).y - Gravity * dt.asMicroseconds();
             }
         }
     }
     void gravitySystem::render(sf::RenderWindow& win){
         return;
     }
-    gravitySystem::~gravitySystem();
+    gravitySystem::~gravitySystem(){
+
+    }
 }

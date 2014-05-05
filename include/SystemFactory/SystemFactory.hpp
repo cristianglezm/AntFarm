@@ -6,7 +6,7 @@
 #include <EventQueue/EventQueue.hpp>
 #include <Systems/collisionSystem/collisionSystem.hpp>
 #include <Systems/renderSystem/renderSystem.hpp>
-#include <Systems/diggingSystem/diggingSystem.hpp>
+#include <Systems/constructorSystem/constructorSystem.hpp>
 #include <Systems/movementSystem/movementSystem.hpp>
 #include <Systems/inputSystem/inputSystem.hpp>
 namespace ant{

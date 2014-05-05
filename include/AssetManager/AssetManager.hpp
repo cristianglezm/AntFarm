@@ -54,14 +54,17 @@ namespace ant{
              */
             sf::Texture& getTexture(const std::string& id);
             /**
+             * @brief Comprueba si tiene la textura.
+             * @param id const std::string & id de la textura.
+             */
+             bool hasTexture(const std::string& id);
+            /**
              * @brief Elimina la textura.
-             *
              * @param id std::string id de la textura a eliminar.
              */
             void removeTexture(const std::string& id);
             /**
              * @brief Añade una imagen con el id especificado.
-             *
              * @param id std::string id de la imagen.
              * @param filename std::string imagen a cargar.
              */
@@ -75,27 +78,33 @@ namespace ant{
              */
             sf::Image& getImage(const std::string& id);
             /**
+             * @brief Comprueba si tiene la imagen.
+             * @param id std::string & id de la imagen.
+             */
+             bool hasImage(const std::string& id);
+            /**
              * @brief Elimina la imagen por el id especificado.
-             *
              * @param id std::string id de la imagen a eliminar.
              */
             void removeImage(const std::string& id);
             /**
              * @brief Añade un tipo de letra.
-             *
              * @param id std::string
              * @param filename std::string
              */
             void addFont(const std::string& id,const std::string& filename);
             /**
              * @brief Devuelve el tipo de letra.
-             *
              * @param id std::string
              */
             sf::Font& getFont(const std::string& id);
             /**
+             * @brief Comprueba si tiene la fuente especificada.
+             * @param id const std::string & id de la fuente
+             */
+             bool hasFont(const std::string& id);
+            /**
              * @brief Elimina un tipo de letra.
-             *
              * @param id std::string
              */
             void removeFont(const std::string& id);
