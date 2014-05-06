@@ -2,9 +2,10 @@
 
 namespace ant{
     ComponentSettings::ComponentSettings(){
+        entityName = "";
         minSpeed = 0;
         maxSpeed = 0;
-        scale = sf::Vector2f(0,0);
+        scale = sf::Vector2f(1,1);
         position = sf::Vector2f(0,0);
         rotation = 90;
         spriteID = "";
@@ -13,11 +14,41 @@ namespace ant{
         imageID = "";
         bounds = sf::FloatRect(0,0,0,0);
     }
-    ComponentSettings::loadSettings(const std::string& filename){
-
+    void ComponentSettings::loadSettings(const std::string& filename){
+        std::fstream file(filename);
+        JsonBox::Value v(file);
+        entityName = v["Entity"]["name"].getString();
+        if(!v["Entity"]["Components"].isNull()){
+            int size = v["Entity"]["Components"].getArray().size();
+            if(size>0){
+                for(int i=0;i<size;++i){
+                    std::string id = v["Entity"]["Components"][size_t(i)]["id"].getString();
+                    if(id == "velocity"){
+                        minSpeed = v["Entity"]["Components"][size_t(i)]["properties"]["minSpeed"].getDouble();
+                        maxSpeed = v["Entity"]["Components"][size_t(i)]["properties"]["maxSpeed"].getDouble();
+                        setSpeed(v["Entity"]["Components"][size_t(i)]["properties"]["Speed"].getDouble());
+                    }else if(id == "transform"){
+                        scale = sf::Vector2f(v["Entity"]["Components"][size_t(i)]["properties"]["scale"]["x"].getDouble(),
+                                             v["Entity"]["Components"][size_t(i)]["properties"]["scale"]["y"].getDouble()
+                                             );
+                        position = sf::Vector2f(v["Entity"]["Components"][size_t(i)]["properties"]["position"]["x"].getDouble(),
+                                                v["Entity"]["Components"][size_t(i)]["properties"]["position"]["y"].getDouble()
+                                                );
+                        rotation = v["Entity"]["Components"][size_t(i)]["properties"]["rotation"].getDouble();
+                    }else if(id == "sprite"){
+                        spriteID = v["Entity"]["Components"][size_t(i)]["properties"]["id"].getString();
+                    }
+                }
+            }
+        }
     }
-    void ComponentSettings::setSpeed(){
-
+    void ComponentSettings::setSpeed(float speed){
+        Speed = speed;
+        if(Speed > maxSpeed){
+            Speed = maxSpeed;
+        }else if(Speed < minSpeed){
+            Speed = minSpeed;
+        }
     }
     ComponentSettings::~ComponentSettings(){
 

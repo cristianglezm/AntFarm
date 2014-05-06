@@ -30,19 +30,37 @@ namespace ant{
         auto assets = getAssetManager();
         std::unique_ptr<SystemManager> sm(new SystemManager());
         if(!assets->hasImage(name)){
-            sf::Image img;
-            img.create(bounds.width,bounds.height,sf::Color::Transparent);
-            for(int x=0;x<bounds.width;++x){
-                for(int y=0;y<bounds.height;++y){
+            std::unique_ptr<sf::Image> img(new sf::Image());
+            img->create(bounds.width,bounds.height,sf::Color::Transparent);
+            int width = lvl.getSize().x;
+            int height = lvl.getSize().y;
+            for(int x=0;x<width;++x){
+                for(int y=0;y<height;++y){
                     sf::Color color = lvl.getPixel(x,y);
                         if(color == sf::Color::Black){
-                                img.setPixel(x,y,sf::Color::Cyan);
+                                for(int i=0;i<10;++i){
+                                        for(int j=0;j<10;++j){
+                                            img->setPixel(x*10+i,y*10+j,sf::Color::Cyan);
+                                            img->setPixel(x*10,y*10+j,sf::Color::Cyan);
+                                            img->setPixel(x*10+i,y*10,sf::Color::Cyan);
+                                        }
+                                }
+                                img->setPixel(x*10,y*10,sf::Color::Cyan);
                         }else if(color == sf::Color::Red){
-                                //em->addEntity(entityFactory->createEntity(EntityFactory::Door));
+                                ComponentSettings cs;
+                                /// @todo Completar
+                                cs.loadSettings("data/config/entities/Ant.json");
+                                cs.position = sf::Vector2f((x*10),(y*10));
+                                em->addEntity(entityFactory->createEntity(EntityFactory::Door));
                         }
                 }
             }
-
+            ComponentSettings cs;
+            cs.loadSettings("data/config/entities/Ant.json");
+            cs.imageID = name;
+            img->saveToFile("tmp.png");
+            assets->addImage(name,"tmp.png");
+            em->addEntity(entityFactory->createEntity(ComponentsMask::COMPONENT_DESTRUCTABLE,cs));
         }
         sm->addSystem(systemFactory->createMovementSystem());
         sm->addSystem(systemFactory->createCollisionSystem(bounds));

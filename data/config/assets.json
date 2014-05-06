@@ -1,11 +1,10 @@
 {
 	"textures":[
 			{"id":"Ant","filepath":"data/entities/Ant.png"},
-			{"id":"InDoor","filepath":"data/entities/inDoor.png"},
-			{"id":"NestBackground","filepath":"data/maps/nest/MapNestBackground.png"},
+			{"id":"InDoor","filepath":"data/entities/InDoor.png"},
+			{"id":"OutDoor","filepath":"data/entities/OutDoor.png"},
 		   ],
 	"images":[
-			{"id":"NestDestructable","filepath":"data/maps/nest/MapNestFrontground.png"},
 		  ],
 	"fonts":[
 			{"id":"OLDFAX","filepath":"data/fonts/OLDFAX.ttf"},

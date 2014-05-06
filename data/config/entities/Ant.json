@@ -10,9 +10,17 @@
                                         },
                         },
                         {
-                            "id":"",
+                            "id":"transform",
                             "properties":{
-
+                                            "position":{"x":0,"y":0,},
+                                            "scale":{"x":1,"y":1,},
+                                            "rotation":90,
+                            },
+                        }
+                        {
+                            "id":"sprite",
+                            "properties":{
+                                "id":"Ant",
                             }
                         },
                     ],

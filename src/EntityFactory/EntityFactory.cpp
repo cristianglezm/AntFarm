@@ -19,38 +19,54 @@ namespace ant{
     }
     std::unique_ptr<Entity> EntityFactory::createEntity(long int mask){
         std::unique_ptr<Entity> e(new Entity());
-        //ComponentSettings cs;
+        ComponentSettings cs;
         /// @todo Limpiar y encontrar mejor forma de cargar variables para los componentes por defecto.
-        std::string id = "Ant";
         if((mask & Ant) == Ant){
-            id = "Ant";
+            cs.loadSettings("data/config/entities/Ant.json");
         }
         if((mask & Door) == Door){
-            id = "AntQueen";
+                /// @todo change for door conf
+            cs.loadSettings("data/config/entities/Ant.json");
         }
         if((mask & level) == level){
-            id = "NestBackground";
+            /// @todo change for level conf
+            cs.loadSettings("data/config/entities/Ant.json");
         }
         if((mask & ComponentsMask::COMPONENT_TRANSFORM) == ComponentsMask::COMPONENT_TRANSFORM){
-            e->addComponent(componentFactory->createTransform(sf::Vector2f(0,0),sf::Vector2f(1,1),0));
+            e->addComponent(componentFactory->createTransform(cs.position,cs.scale,cs.rotation));
         }
         if((mask & ComponentsMask::COMPONENT_VELOCITY) == ComponentsMask::COMPONENT_VELOCITY){
-            e->addComponent(componentFactory->createVelocity(0.1,0.0,1));
+            e->addComponent(componentFactory->createVelocity(cs.getSpeed(),cs.minSpeed,cs.maxSpeed));
         }
         if((mask & ComponentsMask::COMPONENT_BOUNDS) == ComponentsMask::COMPONENT_BOUNDS){
-            e->addComponent(componentFactory->createBounds(sf::FloatRect(0,0,1,1)));
+            e->addComponent(componentFactory->createBounds(cs.bounds));
         }
         if((mask & ComponentsMask::COMPONENT_SPRITE) == ComponentsMask::COMPONENT_SPRITE){
-            e->addComponent(componentFactory->createSprite(id));
+            e->addComponent(componentFactory->createSprite(cs.spriteID));
         }
         if((mask & ComponentsMask::COMPONENT_DESTRUCTABLE) == ComponentsMask::COMPONENT_DESTRUCTABLE){
-                id= "NestDestructable";
-            e->addComponent(componentFactory->createDestructable(sf::Vector2f(0,0),id));
+            e->addComponent(componentFactory->createDestructable(cs.DestructiblePosition,cs.imageID));
         }
         return std::move(e);
     }
     std::unique_ptr<Entity> EntityFactory::createEntity(long int mask, ComponentSettings& cs){
         std::unique_ptr<Entity> e(new Entity());
+        /// @todo change
+        if((mask & ComponentsMask::COMPONENT_TRANSFORM) == ComponentsMask::COMPONENT_TRANSFORM){
+            e->addComponent(componentFactory->createTransform(cs.position,cs.scale,cs.rotation));
+        }
+        if((mask & ComponentsMask::COMPONENT_VELOCITY) == ComponentsMask::COMPONENT_VELOCITY){
+            e->addComponent(componentFactory->createVelocity(cs.getSpeed(),cs.minSpeed,cs.maxSpeed));
+        }
+        if((mask & ComponentsMask::COMPONENT_BOUNDS) == ComponentsMask::COMPONENT_BOUNDS){
+            e->addComponent(componentFactory->createBounds(cs.bounds));
+        }
+        if((mask & ComponentsMask::COMPONENT_SPRITE) == ComponentsMask::COMPONENT_SPRITE){
+            e->addComponent(componentFactory->createSprite(cs.spriteID));
+        }
+        if((mask & ComponentsMask::COMPONENT_DESTRUCTABLE) == ComponentsMask::COMPONENT_DESTRUCTABLE){
+            e->addComponent(componentFactory->createDestructable(cs.DestructiblePosition,cs.imageID));
+        }
         return std::move(e);
     }
     void EntityFactory::setComponentFactory(std::shared_ptr<ComponentFactory> cf){

@@ -10,13 +10,13 @@ namespace ant{
     }
     void Level::init(const sf::FloatRect& bounds){
         /// @todo crear mundos iniciales, etc.
-
+        loadLevel(bounds,"data/config/levels.json");
     }
     bool Level::loadLevel(const sf::FloatRect& bounds,const std::string& filename){
         /// @todo Implement
         std::fstream file(filename);
         JsonBox::Value v(file);
-        int size = v.getArray().size();
+        int size = v["levels"].getArray().size();
         for(int i=0;i<size;++i){
             sf::Image img;
             if(!img.loadFromFile(v["levels"][size_t(i)]["image"].getString())){
@@ -27,8 +27,8 @@ namespace ant{
             int nEntities = v["levels"][size_t(i)]["nEntities"].getInt();
             sf::Time overTime;
             overTime = sf::seconds(v["levels"][size_t(i)]["overtime"].getInt());
-            worldFactory->create(v["levels"][size_t(i)]["name"].getString(),
-                                 img,nEntities,overTime,bounds);
+            levels->addWorld(worldFactory->create(v["levels"][size_t(i)]["name"].getString(),
+                                 img,nEntities,overTime,bounds));
         }
         return false;
     }

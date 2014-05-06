@@ -1,6 +1,10 @@
 #ifndef COMPONENT_SETTINGS_H
 #define COMPONENT_SETTINGS_H
 #include <string>
+#include <fstream>
+#include <SFML/Graphics/Rect.hpp>
+#include <SFML/System/Vector2.hpp>
+#include <JsonBox.h>
 namespace ant{
     /**
      * @brief Clase para la configuracion de los componentes en EntityFactory.
@@ -9,6 +13,7 @@ namespace ant{
      */
     class ComponentSettings{
         public:
+            std::string entityName;
             float minSpeed;
             float maxSpeed;
             sf::Vector2f scale;
@@ -33,7 +38,11 @@ namespace ant{
              * @param filename std::string nombre del fichero(json) a cargar.
              */
             void loadSettings(const std::string& filename);
-            void setSpeed();
+            /**
+             * @brief Establece la Velocidad.
+             * @param speed float velocidad
+             */
+            void setSpeed(float speed);
             inline float getSpeed(){ return Speed; }
              ~ComponentSettings();
         private:
