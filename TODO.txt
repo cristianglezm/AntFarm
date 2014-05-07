@@ -16,35 +16,34 @@ Mejorar README:
 
 
 baseComponent		- Done
-Component		- Done
+Component		    - Done
 ComponentSettings 	-
-	Todos los componentes necesitan estar acabados para poner todo en comun
-	y poder hacerla.
+	ir Agregando componentes
 ComponentFactory	-
-Entity			- Done
+Entity			    - Done
 EntityFactory		-
 EntityManager		- Done
-baseEvent		- Done
-Event			- Done
-EventQueue		- Done
-GameEventDispatcher	- 
+baseEvent		    - Done
+Event			    - Done
+EventQueue		    - Done
+GameEventDispatcher	-
 	Agregar Subjects segun los sistemas y eventos.
-Subject			- Done
-Observer		- Done
-EventType 		-
+Subject			    - Done
+Observer		    - Done
+EventType 		    -
 	Agregar eventos segun los sistemas.
-ComponentsMask		- 
+ComponentsMask		-
 	agregar componentes segun se van creando.
-World			- Done
+World			    - Done
 WorldManager		- Done
 WorldFactory		-
-System			- Done
+System			    - Done
 renderSystem		- Done
 movementSystem		-
 	implementar Evento Collision por pixel.
 collisionSystem		-
 	Implementar colision por pixel.
-QuadTree		- Done
+QuadTree		    - Done
 gravitySystem		-
 diggingSystem		-
 		Map
@@ -65,14 +64,13 @@ inputSystem		-
 			Ordenes
 				ej: las ordenes son event<int(SEARCH_FOOD)>(TIPO(ORDER));
 				    las que esten seleccionadas se les activa el input de SEARCH FOOD
-transportSystem		-
-userTransportSystem	-
-Level			-
+Level			    -
 AssetManager		-
 	Implementar mas assets
-Game			-
-Config			-
+Game			    -
+Config			    -
 	agregar cosas cuando se necesiten
-SystemManager		-
+	Agregar constantes para nombres de entidades etc.
+SystemManager		- Done
 SystemFactory		-
 -----------------------------------------------------

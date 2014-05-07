@@ -19,8 +19,16 @@ namespace ant{
                                | ComponentsMask::COMPONENT_BOUNDS;
                 static const long int Door = ComponentsMask::COMPONENT_PASSAGE
                                 | ComponentsMask::COMPONENT_TRANSFORM
+                                | ComponentsMask::COMPONENT_SPRITE
+                                | ComponentsMask::COMPONENT_BOUNDS;
+                static const long int InDoor = ComponentsMask::COMPONENT_TRANSFORM
                                 | ComponentsMask::COMPONENT_BOUNDS
-                                | ComponentsMask::COMPONENT_DIRECTION;
+                                | ComponentsMask::COMPONENT_SPRITE
+                                | ComponentsMask::COMPONENT_IN;
+                static const long int OutDoor = ComponentsMask::COMPONENT_TRANSFORM
+                                | ComponentsMask::COMPONENT_BOUNDS
+                                | ComponentsMask::COMPONENT_SPRITE
+                                | ComponentsMask::COMPONENT_OUT;
                 static const long int level = ComponentsMask::COMPONENT_DESTRUCTABLE
                                 | ComponentsMask::COMPONENT_TRANSFORM
                                 | ComponentsMask::COMPONENT_SPRITE;

@@ -13,7 +13,6 @@ namespace ant{
         loadLevel(bounds,"data/config/levels.json");
     }
     bool Level::loadLevel(const sf::FloatRect& bounds,const std::string& filename){
-        /// @todo Implement
         std::fstream file(filename);
         JsonBox::Value v(file);
         int size = v["levels"].getArray().size();
@@ -30,7 +29,7 @@ namespace ant{
             levels->addWorld(worldFactory->create(v["levels"][size_t(i)]["name"].getString(),
                                  img,nEntities,overTime,bounds));
         }
-        return false;
+        return true;
     }
     void Level::setEventQueue(std::shared_ptr<EventQueue> eq){
         eventQueue = eq;

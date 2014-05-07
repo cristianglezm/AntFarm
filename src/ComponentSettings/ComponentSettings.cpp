@@ -37,6 +37,17 @@ namespace ant{
                         rotation = v["Entity"]["Components"][size_t(i)]["properties"]["rotation"].getDouble();
                     }else if(id == "sprite"){
                         spriteID = v["Entity"]["Components"][size_t(i)]["properties"]["id"].getString();
+                    }else if(id == "bounds"){
+                        bounds = sf::FloatRect(v["Entity"]["Components"][size_t(i)]["properties"]["left"].getDouble(),
+                                               v["Entity"]["Components"][size_t(i)]["properties"]["top"].getDouble(),
+                                               v["Entity"]["Components"][size_t(i)]["properties"]["width"].getDouble(),
+                                               v["Entity"]["Components"][size_t(i)]["properties"]["height"].getDouble()
+                                               );
+                    }else if(id == "destructable"){
+                        DestructiblePosition = sf::Vector2f(v["Entity"]["Components"][size_t(i)]["properties"]["position"]["x"].getDouble(),
+                                                            v["Entity"]["Components"][size_t(i)]["properties"]["position"]["y"].getDouble()
+                                                            );
+                        imageID = v["Entity"]["Components"][size_t(i)]["properties"]["imageID"].getString();
                     }
                 }
             }

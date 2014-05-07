@@ -131,10 +131,36 @@ namespace ant{
              * @brief Crea un componente tipo Passage
              *
              * Este componente permite ir de un sitio a otro.
-             *
+             * @code
+             *  Component<sf::Vector2f>
+             * @endcode
              * @return std::unique_ptr<baseComponent> componente creado.
              */
             std::unique_ptr<baseComponent> createPassage(sf::Vector2f dest);
+            /**
+             * @brief Crea un componente que indica la direccion.
+             *
+             * Este componente permite hacer que una entidad haga
+             * desparecer las entidades que colisiones contra ella.
+             *
+             * @code
+             *  Component<>
+             * @endcode
+             * @return std::unique_ptr<baseComponent> componente creado.
+             */
+             std::unique_ptr<baseComponent> createIn();
+             /**
+              * @brief Crea un componente que indica la direccion.
+              *
+              * Este componente permite hacer que una entidad haga
+              * aparecer otras entidades.
+              *
+              * @code
+              *  Component<>
+              * @endcode
+              * @return std::unique_ptr<baseComponent> componente creado.
+              */
+            std::unique_ptr<baseComponent> createOut();
             ~ComponentFactory();
         private:
             std::shared_ptr<AssetManager> assets;

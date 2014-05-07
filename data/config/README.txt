@@ -3,3 +3,4 @@ Para crear niveles configura el fichero levels y crea la imagen(80x60px) del niv
 * Blanco: nada
 * Rojo: Puerta de entrada
 * Verde: Puerta de salida
+* Negro: Tierra por donde caminaran las entidades

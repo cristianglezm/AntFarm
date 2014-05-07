@@ -1,21 +1,13 @@
 {
     "Entity":{
-        "name":"Ant",
+        "name":"OutDoor",
         "Components":[  {
-                            "id":"velocity",
-                            "properties":{
-                                            "Speed":0.5,
-                                            "minSpeed":0.1,
-                                            "maxSpeed":1,
-                                        },
-                        },
-                        {
                             "id":"transform",
                             "properties":{
                                             "position":{"x":0,"y":0,},
                                             "scale":{"x":1,"y":1,},
-                                            "rotation":90,
-                                        },
+                                            "rotation":0,
+                            },
                         },
                         {
                             "id":"bounds",
@@ -24,12 +16,17 @@
                                             "top":0,
                                             "width":10,
                                             "height":10,
-                                        },
+                            }
                         },
                         {
                             "id":"sprite",
                             "properties":{
-                                            "id":"Ant",
+                                "id":"OutDoor",
+                            }
+                        },
+                        {
+                            "id":"out",
+                            "properties":{
                                         },
                         },
                     ],

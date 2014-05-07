@@ -34,39 +34,59 @@ namespace ant{
             img->create(bounds.width,bounds.height,sf::Color::Transparent);
             int width = lvl.getSize().x;
             int height = lvl.getSize().y;
+            bool hasEnteredInDoor = false;
+            bool hasEnteredOutDoor = false;
+            sf::Vector2f inDoor;
+            sf::Vector2f outDoor;
+            sf::Color Brown(128,64,0);
+            sf::Color lightBrown(150,75,0);
             for(int x=0;x<width;++x){
                 for(int y=0;y<height;++y){
                     sf::Color color = lvl.getPixel(x,y);
                         if(color == sf::Color::Black){
                                 for(int i=0;i<10;++i){
                                         for(int j=0;j<10;++j){
-                                            img->setPixel(x*10+i,y*10+j,sf::Color::Cyan);
-                                            img->setPixel(x*10,y*10+j,sf::Color::Cyan);
-                                            img->setPixel(x*10+i,y*10,sf::Color::Cyan);
+                                            img->setPixel(x*10+i,y*10+j,Brown);
+                                            img->setPixel(x*10,y*10+j,Brown);
+                                            img->setPixel(x*10+i,y*10,lightBrown);
                                         }
                                 }
-                                img->setPixel(x*10,y*10,sf::Color::Cyan);
+                                img->setPixel(x*10,y*10,lightBrown);
                         }else if(color == sf::Color::Red){
-                                ComponentSettings cs;
-                                /// @todo Completar
-                                cs.loadSettings("data/config/entities/Ant.json");
-                                cs.position = sf::Vector2f((x*10),(y*10));
-                                em->addEntity(entityFactory->createEntity(EntityFactory::Door));
+                            hasEnteredInDoor = true;
+                            inDoor = sf::Vector2f(x*10,y*10);
+                        }else if(color == sf::Color::Green){
+                            hasEnteredOutDoor = true;
+                            outDoor = sf::Vector2f(x*10,y*10);
                         }
                 }
             }
             ComponentSettings cs;
-            cs.loadSettings("data/config/entities/Ant.json");
+            /// @todo Completar
+            cs.loadSettings("data/config/entities/Level.json");
             cs.imageID = name;
+            cs.spriteID = "OutDoor";
+            cs.entityName = name;
             img->saveToFile("tmp.png");
             assets->addImage(name,"tmp.png");
-            em->addEntity(entityFactory->createEntity(ComponentsMask::COMPONENT_DESTRUCTABLE,cs));
+            em->addEntity(entityFactory->createEntity(EntityFactory::level,cs));
+            if(hasEnteredInDoor){
+                ComponentSettings cs;
+                cs.loadSettings(Config::INDOOR_FILE);
+                cs.position = outDoor;
+                em->addEntity(entityFactory->createEntity(EntityFactory::InDoor,cs));
+            }
+            if(hasEnteredOutDoor){
+                ComponentSettings cs;
+                /// @todo Completar
+                cs.loadSettings(Config::OUTDOOR_FILE);
+                cs.position = outDoor;
+                em->addEntity(entityFactory->createEntity(EntityFactory::OutDoor,cs));
+            }
         }
         sm->addSystem(systemFactory->createMovementSystem());
         sm->addSystem(systemFactory->createCollisionSystem(bounds));
         sm->addSystem(systemFactory->createRenderSystem());
-        //em->addEntity(entityFactory->createEntity(EntityFactory::Nest));
-        //em->addEntity(entityFactory->createEntity(EntityFactory::AntQueen));
         w->setEventQueue(eventQueue);
         w->setEntityManager(em);
         w->setSystemManager(std::move(sm));

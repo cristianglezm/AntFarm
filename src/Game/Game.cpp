@@ -11,7 +11,6 @@ namespace ant{
         assets = level->getAssetManager();
     }
     void Game::run(){
-
         while(running){
             while(!eventQueue->isEmpty()){
                 gameEventDispatcher->DispatchEvent(eventQueue->pop());

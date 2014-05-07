@@ -16,6 +16,7 @@ class ComponentsMask{
         static const long int COMPONENT_DESTRUCTABLE = 1 << 4;
         static const long int COMPONENT_BOUNDS = 1 << 5;
         static const long int COMPONENT_PASSAGE = 1 << 6;
-        static const long int COMPONENT_DIRECTION = 1 << 7;
+        static const long int COMPONENT_OUT = 1 << 7;
+        static const long int COMPONENT_IN = 1 << 8;
 };
 #endif // COMPONENT_MASK_H

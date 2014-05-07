@@ -12,6 +12,9 @@ namespace ant{
         public:
             static const std::string VERSION;
             static const std::string ASSETS_GAME_JSON;
+            static const std::string ANT_FILE;
+            static const std::string INDOOR_FILE;
+            static const std::string OUTDOOR_FILE;
     };
 }
 #endif // CONFIG_H
