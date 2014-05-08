@@ -4,6 +4,8 @@
 			{"id":"InDoor","filepath":"data/entities/InDoor.png"},
 			{"id":"OutDoor","filepath":"data/entities/OutDoor.png"},
 			{"id":"background1","filepath":"data/backgrounds/background1.png"},
+{"id":"background2","filepath":"data/backgrounds/background2.png"},
+{"id":"background3","filepath":"data/backgrounds/background3.png"},
 		   ],
 	"images":[
 		  ],
