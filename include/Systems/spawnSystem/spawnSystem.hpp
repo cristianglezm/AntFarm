@@ -21,8 +21,9 @@ namespace ant{
              * @param nEntities int numero de entidades a crear.
              * @param ot sf::Time El tiempo en el que tiene que crear esas entidades.
              * @param ef EntityFactory * Para crear las entidades.
+             * @param spawnPoint sf::Vector2f sitio donde saldran las entidades.
              */
-            spawnSystem(int nEntities, EntityFactory* ef,sf::Time ot);
+            spawnSystem(int nEntities, EntityFactory* ef,sf::Time ot,sf::Vector2f spawnPoint);
             /**
              *
              */
@@ -45,6 +46,7 @@ namespace ant{
             sf::Time overTime;
             sf::Time calcOverTime;
             sf::Time elapsedTime;
+            sf::Vector2f spawnPoint;
     };
 }
 #endif // SPAWN_SYSTEM_H

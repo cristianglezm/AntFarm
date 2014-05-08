@@ -3,6 +3,7 @@
 			{"id":"Ant","filepath":"data/entities/Ant.png"},
 			{"id":"InDoor","filepath":"data/entities/InDoor.png"},
 			{"id":"OutDoor","filepath":"data/entities/OutDoor.png"},
+			{"id":"background1","filepath":"data/backgrounds/background1.png"},
 		   ],
 	"images":[
 		  ],

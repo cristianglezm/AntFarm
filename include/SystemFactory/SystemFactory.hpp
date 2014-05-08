@@ -76,7 +76,7 @@ namespace ant{
              * @see spawnSystem::spawnSystem
              * @return std::shared_ptr<spawnSystem>
              */
-            std::shared_ptr<spawnSystem> createSpawnSystem(int nEntities,EntityFactory* ef,sf::Time ot);
+            std::shared_ptr<spawnSystem> createSpawnSystem(int nEntities,EntityFactory* ef,sf::Time ot,sf::Vector2f spawnPoint);
 
             ~SystemFactory();
         private:

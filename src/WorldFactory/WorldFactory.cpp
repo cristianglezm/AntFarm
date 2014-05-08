@@ -75,6 +75,7 @@ namespace ant{
                 cs.loadSettings(Config::INDOOR_FILE);
                 cs.position = inDoor;
                 em->addEntity(entityFactory->createEntity(EntityFactory::InDoor,cs));
+                sm->addSystem(systemFactory->createSpawnSystem(nEntities,entityFactory.get(),overTime,(inDoor + sf::Vector2f(10,10))));
             }
             if(hasEnteredOutDoor){
                 ComponentSettings cs;
@@ -82,11 +83,11 @@ namespace ant{
                 cs.position = outDoor - sf::Vector2f(0,55);
                 cs.scale = sf::Vector2f(0.5,0.5);
                 em->addEntity(entityFactory->createEntity(EntityFactory::OutDoor,cs));
+                /// todo agregar sistema para que elimine las entidades que choquen contra esta puerta.
             }
         }
         sm->addSystem(systemFactory->createMovementSystem());
         sm->addSystem(systemFactory->createCollisionSystem(bounds));
-        sm->addSystem(systemFactory->createSpawnSystem(nEntities,entityFactory.get(),overTime));
         sm->addSystem(systemFactory->createRenderSystem());
 
         w->setEventQueue(eventQueue);
