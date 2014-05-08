@@ -64,7 +64,7 @@ namespace ant{
              * @param bounds sf::FloatRect rectangulo para zona que ocupa.
              * @return std::shared_ptr<collisionSystem>
              */
-            std::shared_ptr<collisionSystem> createCollisionSystem(sf::FloatRect bounds);
+            std::shared_ptr<collisionSystem> createCollisionSystem(sf::FloatRect bounds,sf::VertexArray * GameMap);
             /**
              * @brief Crea un sistema de movimiento.
              * @see movementSystem::movementSystem

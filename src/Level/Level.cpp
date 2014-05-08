@@ -1,10 +1,10 @@
 #include <Level/Level.hpp>
 namespace ant{
-    Level::Level(const std::string& assetsFilename,sf::FloatRect bounds,std::shared_ptr<GameEventDispatcher> ged){
-        levels.reset(new WorldManager());
-        eventQueue.reset(new EventQueue());
-        gameEventDispatcher = ged;
-        worldFactory.reset(new WorldFactory(ged,eventQueue));
+    Level::Level(const std::string& assetsFilename,sf::FloatRect bounds,std::shared_ptr<GameEventDispatcher> ged)
+    :levels(new WorldManager())
+    ,eventQueue(new EventQueue())
+    ,gameEventDispatcher(ged)
+    ,worldFactory(new WorldFactory(ged,eventQueue)){
         worldFactory->loadAssets(assetsFilename);
         init(bounds);
     }

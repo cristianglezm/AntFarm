@@ -12,9 +12,6 @@ namespace ant{
     }
     void Game::run(){
         while(running){
-            while(!eventQueue->isEmpty()){
-                gameEventDispatcher->DispatchEvent(eventQueue->pop());
-            }
             sf::Event event;
             while(win.pollEvent(event)){
                 switch(event.type){
@@ -28,6 +25,9 @@ namespace ant{
             }
             win.clear();
             level->update(currentLevel,sf::Time());
+            while(!eventQueue->isEmpty()){
+                gameEventDispatcher->DispatchEvent(eventQueue->pop());
+            }
             level->render(currentLevel,win);
             win.display();
         }

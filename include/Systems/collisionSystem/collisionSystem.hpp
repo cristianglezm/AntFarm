@@ -4,6 +4,7 @@
 #include <Utils/Quadtree.hpp>
 #include <SFML/System/Vector2.hpp>
 #include <SFML/Graphics/Rect.hpp>
+#include <SFML/Graphics/VertexArray.hpp>
 #include <Components/ComponentMask.hpp>
 #include <Event/EventType.hpp>
 #include <Utils/Math.hpp>
@@ -27,7 +28,7 @@ namespace ant{
              * @brief Constructor por defecto.
              * @param bounds sf::FloatRect rectangulo del QuadTree.
              */
-            collisionSystem(sf::FloatRect bounds);
+            collisionSystem(sf::FloatRect bounds,sf::VertexArray* GameMap);
             /**
              * @brief Renderiza el Quadtree si RENDER_QTREE esta definido.
              * si no no hace nada.
@@ -47,6 +48,8 @@ namespace ant{
             virtual ~collisionSystem();
         private:
             Utils::Quadtree qtree;
+            sf::FloatRect gameBounds;
+            sf::VertexArray* gameMap;
     };
 }
 #endif // COLLISION_SYSTEM_H

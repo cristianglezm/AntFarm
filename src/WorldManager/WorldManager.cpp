@@ -1,5 +1,5 @@
 #include <WorldManager/WorldManager.hpp>
-
+#include <iostream>
 namespace ant{
     WorldManager::WorldManager(){
 

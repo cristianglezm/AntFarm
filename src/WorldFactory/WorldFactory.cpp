@@ -6,12 +6,14 @@ namespace ant{
         eventQueue.reset(new EventQueue());
         entityFactory.reset(new EntityFactory());
         systemFactory.reset(new SystemFactory(gameEventDispatcher,eventQueue));
+        lvlID = 0;
     }
     WorldFactory::WorldFactory(std::shared_ptr<GameEventDispatcher> ged,std::shared_ptr<EventQueue> eq){
         entityFactory.reset(new EntityFactory());
         gameEventDispatcher = ged;
         eventQueue = eq;
         systemFactory.reset(new SystemFactory(gameEventDispatcher,eventQueue));
+        lvlID = 0;
     }
     bool WorldFactory::loadAssets(const std::string& json){
         return entityFactory->loadAssets(json);
@@ -38,8 +40,8 @@ namespace ant{
             bool hasEnteredOutDoor = false;
             sf::Vector2f inDoor;
             sf::Vector2f outDoor;
-            sf::Color Brown(128,64,0);
-            sf::Color lightBrown(150,75,0);
+            sf::Color Brown(128,64,0,255);
+            sf::Color lightBrown(150,75,0,255);
             for(int x=0;x<width;++x){
                 for(int y=0;y<height;++y){
                     sf::Color color = lvl.getPixel(x,y);
@@ -87,7 +89,10 @@ namespace ant{
             }
         }
         sm->addSystem(systemFactory->createMovementSystem());
-        sm->addSystem(systemFactory->createCollisionSystem(bounds));
+        auto& properties = em->getEntity(name)->getComponent(ComponentsMask::COMPONENT_DESTRUCTABLE)
+                                        ->getProperties<std::string,std::unique_ptr<sf::VertexArray>,sf::FloatRect>();
+        auto& destructable = std::get<1>(properties);
+        sm->addSystem(systemFactory->createCollisionSystem(bounds,destructable.get()));
         sm->addSystem(systemFactory->createRenderSystem());
 
         w->setEventQueue(eventQueue);

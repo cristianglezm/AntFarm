@@ -22,17 +22,21 @@ namespace ant{
         /// @todo implement
         //return std::shared_ptr<inputSystem>(new inputSystem());
     }
-    std::shared_ptr<collisionSystem> SystemFactory::createCollisionSystem(sf::FloatRect bounds){
-        return std::shared_ptr<collisionSystem>(new collisionSystem(bounds));
+    std::shared_ptr<collisionSystem> SystemFactory::createCollisionSystem(sf::FloatRect bounds,sf::VertexArray * GameMap){
+        std::shared_ptr<collisionSystem> cs(new collisionSystem(bounds,GameMap));
+        cs->setEventQueue(eventQueue);
+        return cs;
     }
     std::shared_ptr<movementSystem> SystemFactory::createMovementSystem(){
         std::shared_ptr<movementSystem> m(new movementSystem());
         gameEventDispatcher->onCollision.addObserver(m);
+        m->setEventQueue(eventQueue);
         return m;
     }
     std::shared_ptr<spawnSystem> SystemFactory::createSpawnSystem(int nEntities,EntityFactory* ef,sf::Time ot,sf::Vector2f spawnPoint){
         std::shared_ptr<spawnSystem> sp(new spawnSystem(nEntities,ef,ot,spawnPoint));
         gameEventDispatcher->spawnEvents.addObserver(sp);
+        sp->setEventQueue(eventQueue);
         return sp;
     }
     SystemFactory::~SystemFactory(){

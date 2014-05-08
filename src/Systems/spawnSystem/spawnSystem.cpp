@@ -23,8 +23,8 @@ namespace ant{
                 cs.position = spawnPoint + sf::Vector2f(5,5);
                 em->addEntity(entityFactory->createEntity(EntityFactory::Ant,cs));
             }
-            std::cout << "Elapsed Time: " << elapsedTime.asSeconds() << std::endl;
-            std::cout << "calculated Time: " << calcOverTime.asSeconds() << std::endl;
+            std::cout << "Elapsed Time " << elapsedTime.asSeconds() << std::endl;
+            std::cout << "calc" << calcOverTime.asSeconds() << std::endl;
             elapsedTime += clock.restart();
         }
     }
