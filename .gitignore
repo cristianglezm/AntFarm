@@ -6,6 +6,7 @@
 bin/
 tmp/
 *.tmp
+tmp.png
 *.bak
 *.swp
 *~.nib
