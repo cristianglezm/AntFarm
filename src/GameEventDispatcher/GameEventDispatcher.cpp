@@ -9,6 +9,11 @@ namespace ant{
                 onCollision.notifyObservers(e);
                 return true;
                 break;
+            case EventType::CHANGE_OVERTIME:
+            case EventType::CHANGE_NENTITIES:
+                spawnEvents.notifyObservers(e);
+                return true;
+                break;
         }
         return false;
     }

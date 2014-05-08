@@ -8,6 +8,7 @@
 class EventType{
     public:
         static const long int COLLISION_EVENT = 0;
-
+        static const long int CHANGE_OVERTIME = 1;
+        static const long int CHANGE_NENTITIES = 2;
 };
 #endif // EVENT_TYPE_H

@@ -5,9 +5,10 @@ namespace ant{
         entityName = "";
         minSpeed = 0;
         maxSpeed = 0;
+        Speed = 0;
         scale = sf::Vector2f(1,1);
         position = sf::Vector2f(0,0);
-        rotation = 90;
+        rotation = 0;
         spriteID = "";
         dest = sf::Vector2f(0,0);
         DestructiblePosition = sf::Vector2f(0,0);
@@ -31,6 +32,7 @@ namespace ant{
                         scale = sf::Vector2f(v["Entity"]["Components"][size_t(i)]["properties"]["scale"]["x"].getDouble(),
                                              v["Entity"]["Components"][size_t(i)]["properties"]["scale"]["y"].getDouble()
                                              );
+                        if(scale.x ==0 || scale.y == 0){scale = sf::Vector2f(1,1);}
                         position = sf::Vector2f(v["Entity"]["Components"][size_t(i)]["properties"]["position"]["x"].getDouble(),
                                                 v["Entity"]["Components"][size_t(i)]["properties"]["position"]["y"].getDouble()
                                                 );

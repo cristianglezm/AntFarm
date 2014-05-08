@@ -8,6 +8,7 @@
 #include <Systems/renderSystem/renderSystem.hpp>
 #include <Systems/constructorSystem/constructorSystem.hpp>
 #include <Systems/movementSystem/movementSystem.hpp>
+#include <Systems/spawnSystem/spawnSystem.hpp>
 #include <Systems/inputSystem/inputSystem.hpp>
 namespace ant{
     /**
@@ -66,9 +67,16 @@ namespace ant{
             std::shared_ptr<collisionSystem> createCollisionSystem(sf::FloatRect bounds);
             /**
              * @brief Crea un sistema de movimiento.
+             * @see movementSystem::movementSystem
              * @return std::shared_ptr<movementSystem>
              */
             std::shared_ptr<movementSystem> createMovementSystem();
+            /**
+             * @brief Crea un sistema de creacion de entidades.
+             * @see spawnSystem::spawnSystem
+             * @return std::shared_ptr<spawnSystem>
+             */
+            std::shared_ptr<spawnSystem> createSpawnSystem(int nEntities,EntityFactory* ef,sf::Time ot);
 
             ~SystemFactory();
         private:

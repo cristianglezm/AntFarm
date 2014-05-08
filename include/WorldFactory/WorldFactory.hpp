@@ -61,7 +61,7 @@ namespace ant{
              *        mundo(Tienen que ser iguales a la imagenes de fondo.)
              * @return std::unique_ptr<World> World creado
              */
-            std::unique_ptr<World> create(const std::string& name,const sf::Image& lvl,int nEntities,sf::Time overTime,sf::FloatRect bounds);
+            std::unique_ptr<World> create(const std::string& name,const std::string& background,const sf::Image& lvl,int nEntities,sf::Time overTime,sf::FloatRect bounds);
             /**
              * @brief Establece el EntityFactory que usara.
              * @param ef std::shared_ptr<EntityFactory>
@@ -98,6 +98,7 @@ namespace ant{
             std::shared_ptr<SystemFactory> systemFactory;
             std::shared_ptr<EventQueue> eventQueue;
             std::shared_ptr<GameEventDispatcher> gameEventDispatcher;
+            int lvlID;
     };
 }
 #endif // WORLD_FACTORY_H

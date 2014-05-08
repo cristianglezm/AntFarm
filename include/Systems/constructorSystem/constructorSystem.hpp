@@ -12,7 +12,7 @@ namespace ant{
      * @author Cristian Glez <Cristian.glez.m@gmail.com>
      * @version 0.1
      */
-    class constructionSystem : public System, Observer{
+    class constructionSystem : public System, public Observer{
         public:
             /**
              * @brief Constructor por defecto.

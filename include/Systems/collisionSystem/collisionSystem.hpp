@@ -7,6 +7,7 @@
 #include <Components/ComponentMask.hpp>
 #include <Event/EventType.hpp>
 #include <Utils/Math.hpp>
+
 namespace ant{
     /**
      * @class collisionSystem
@@ -31,7 +32,13 @@ namespace ant{
              * @brief Renderiza el Quadtree si RENDER_QTREE esta definido.
              * si no no hace nada.
              */
-            virtual void render(sf::RenderWindow& win);
+            virtual void render(sf::RenderWindow& win){
+                #ifdef RENDER_QTREE
+                    qtree.render(win);
+                #else
+                    return;
+                #endif
+            }
             /**
              * @brief Comprueba las colisiones de las entidades.
              * @param dt sf::Time delta time

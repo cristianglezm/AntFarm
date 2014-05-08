@@ -27,10 +27,14 @@ namespace ant{
     }
     std::shared_ptr<movementSystem> SystemFactory::createMovementSystem(){
         std::shared_ptr<movementSystem> m(new movementSystem());
-        this->gameEventDispatcher->OnCollision().addObserver(m);
+        gameEventDispatcher->onCollision.addObserver(m);
         return m;
-;    }
-
+    }
+    std::shared_ptr<spawnSystem> SystemFactory::createSpawnSystem(int nEntities,EntityFactory* ef,sf::Time ot){
+        std::shared_ptr<spawnSystem> sp(new spawnSystem(nEntities,ef,ot));
+        gameEventDispatcher->spawnEvents.addObserver(sp);
+        return sp;
+    }
     SystemFactory::~SystemFactory(){
 
     }

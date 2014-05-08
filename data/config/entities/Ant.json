@@ -6,24 +6,24 @@
                             "properties":{
                                             "Speed":0.5,
                                             "minSpeed":0.1,
-                                            "maxSpeed":1,
+                                            "maxSpeed":1.0,
                                         },
                         },
                         {
                             "id":"transform",
                             "properties":{
-                                            "position":{"x":0,"y":0,},
-                                            "scale":{"x":1,"y":1,},
-                                            "rotation":90,
+                                            "position":{"x":0.0,"y":0.0,},
+                                            "scale":{"x":1.0,"y":1.0,},
+                                            "rotation":0.0,
                                         },
                         },
                         {
                             "id":"bounds",
                             "properties":{
-                                            "left":0,
-                                            "top":0,
-                                            "width":10,
-                                            "height":10,
+                                            "left":0.0,
+                                            "top":0.0,
+                                            "width":10.0,
+                                            "height":10.0,
                                         },
                         },
                         {

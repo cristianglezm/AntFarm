@@ -27,6 +27,7 @@ namespace ant{
             sf::Time overTime;
             overTime = sf::seconds(v["levels"][size_t(i)]["overtime"].getInt());
             levels->addWorld(worldFactory->create(v["levels"][size_t(i)]["name"].getString(),
+                                v["levels"][size_t(i)]["background"].getString(),
                                  img,nEntities,overTime,bounds));
         }
         return true;

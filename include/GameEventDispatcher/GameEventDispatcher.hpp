@@ -20,15 +20,13 @@ namespace ant{
              */
             GameEventDispatcher();
             /**
-             * @brief devuelve el evento de colision.
-             * @return Subject &
+             * @brief lista de observadores del evento onCollision.
              */
-            inline Subject& OnCollision(){ return onCollision; }
+            Subject onCollision;
             /**
-             * @brief Devuelve el evento de transporte.
-             * @return Subject &
+             * @brief Eventos para el sistema de creacion de entidades.
              */
-            inline Subject& OnTransport(){ return onTransport; }
+             Subject spawnEvents;
             /**
              * @brief Procesa el evento y lo envia a los observadores que esten subscritos.
              * @param e std::shared_ptr<baseEvent>
@@ -36,9 +34,6 @@ namespace ant{
              */
             bool DispatchEvent(std::shared_ptr<baseEvent> e);
             ~GameEventDispatcher();
-        private:
-            Subject onCollision;
-            Subject onTransport;
     };
 }
 #endif // GAME_EVENT_DISPATCHER_H

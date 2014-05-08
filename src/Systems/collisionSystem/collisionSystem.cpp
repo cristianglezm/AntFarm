@@ -5,13 +5,6 @@ namespace ant{
         name = "collisionSystem";
         RequiredComponents = ComponentsMask::COMPONENT_TRANSFORM | ComponentsMask::COMPONENT_BOUNDS;
     }
-    void collisionSystem::render(sf::RenderWindow& win){
-        #ifdef RENDER_QTREE
-            qtree.render(win);
-        #else
-            return;
-        #endif
-    }
     void collisionSystem::update(sf::Time dt){
         qtree.clear();
         for(auto& entity: em->getEntities()){

@@ -31,11 +31,10 @@ namespace ant{
             level->render(currentLevel,win);
             win.display();
         }
+    }
+    Game::~Game(){
         // liberamos recursos.
         assets->clear();
         win.close();
-    }
-    Game::~Game(){
-
     }
 }
