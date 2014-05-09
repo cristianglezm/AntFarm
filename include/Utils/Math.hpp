@@ -41,6 +41,28 @@ namespace ant{
          */
         sf::FloatRect rotateRect(const sf::FloatRect& rect,const float& angle);
         /**
+         * @fn dot
+         * @brief Obtiene el dot product del vector
+         * @tparam tipo del Vector2
+         * @param v sf::Vector2<T>
+         * @return T
+         */
+        template<typename T>
+        int dot(const sf::Vector2<T>& v1,const sf::Vector2<T>& v2){
+            return v1.x * v2.x + v2.y * v1.y;
+        }
+        /**
+         * @fn getAngle
+         * @brief Obtiene el angulo del vector2
+         * @tparam tipo del Vector2
+         * @param v sf::Vector2<T>
+         * @return T
+         */
+        template<typename T>
+        T getAngle(const sf::Vector2<T>& v){
+            return atan2(-v.x,v.y);
+        }
+        /**
          * @fn normalize
          * @brief Normaliza un Vector
          * @param v sf::Vector2f

@@ -4,8 +4,8 @@
         "Components":[  {
                             "id":"velocity",
                             "properties":{
-                                            "Speed":0.5,
-                                            "minSpeed":0.1,
+                                            "Speed":1.0,
+                                            "minSpeed":0.5,
                                             "maxSpeed":1.0,
                                         },
                         },
@@ -13,8 +13,8 @@
                             "id":"transform",
                             "properties":{
                                             "position":{"x":0.0,"y":0.0,},
-                                            "scale":{"x":1.0,"y":1.0,},
-                                            "rotation":0.0,
+                                            "scale":{"x":0.5,"y":0.5,},
+                                            "rotation":-90.0,
                                         },
                         },
                         {
@@ -22,8 +22,8 @@
                             "properties":{
                                             "left":0.0,
                                             "top":0.0,
-                                            "width":30.0,
-                                            "height":30.0,
+                                            "width":15.0,
+                                            "height":15.0,
                                         },
                         },
                         {

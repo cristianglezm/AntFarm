@@ -4,6 +4,7 @@
 #include <Observer/Observer.hpp>
 #include <Event/EventType.hpp>
 #include <EntityFactory/EntityFactory.hpp>
+#include <States/States.hpp>
 #include <Config.hpp>
 namespace ant{
     /**
@@ -25,11 +26,12 @@ namespace ant{
              */
             spawnSystem(int nEntities, EntityFactory* ef,sf::Time ot,sf::Vector2f spawnPoint);
             /**
-             *
+             * @brief Cada x segundos crea un entidad en el sitio establecido.
+             * @param dt sf::Time delta time
              */
             void update(sf::Time dt);
             /**
-             *
+             * @brief no hace nada.
              */
             void render(sf::RenderWindow& win);
             /**
@@ -48,6 +50,7 @@ namespace ant{
             sf::Time elapsedTime;
             sf::Vector2f spawnPoint;
             sf::Clock clock;
+            long int states;
     };
 }
 #endif // SPAWN_SYSTEM_H

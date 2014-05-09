@@ -1,5 +1,5 @@
 #include <Systems/collisionSystem/collisionSystem.hpp>
-#include <iostream>
+
 namespace ant{
     collisionSystem::collisionSystem(sf::FloatRect bounds,sf::VertexArray* GameMap)
     :qtree(bounds)
@@ -47,8 +47,11 @@ namespace ant{
                            || (*gameMap)[((int)gameBounds.height) * ((int)(eBounds2.left+eBounds2.width)) + ((int)eBounds2.top)].color.a == 255
                            || (*gameMap)[((int)gameBounds.height) * ((int)eBounds2.left) + ((int)(eBounds2.top+eBounds2.height))].color.a == 255
                            || (*gameMap)[((int)gameBounds.height) * ((int)(eBounds2.left+eBounds2.width)) + ((int)(eBounds2.top+eBounds2.height))].color.a == 255){
-                                eventQueue->push(std::shared_ptr<baseEvent>(new Event<Entity*,Entity*>(
-                                                    EventType::COLLISION_EVENT,entity1.get(),entity2)));
+                                entity2->addState(States::GROUND);
+                                entity2->removeState(States::FALLING);
+                        }else{
+                            entity2->removeState(States::GROUND);
+                            entity2->addState(States::FALLING);
                         }
                     }
                 }

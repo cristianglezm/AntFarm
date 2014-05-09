@@ -32,12 +32,16 @@ namespace ant{
     void movementSystem::update(sf::Time dt){
         for(auto& entity: em->getEntities()){
             if(entity->hasComponent(RequiredComponents)){
-                auto& transf = entity->getComponent(ComponentsMask::COMPONENT_TRANSFORM)->getProperties<sf::Vector2f,sf::Vector2f,float>();
-                auto& velocity = entity->getComponent(ComponentsMask::COMPONENT_VELOCITY)->getProperties<sf::Vector2f,float,float,float>();
-                std::get<0>(velocity) = sf::Vector2f(std::get<1>(velocity) *  -std::sin(Utils::toRadians<float>(std::get<2>(transf))),
-                                                     std::get<1>(velocity) *  std::cos(Utils::toRadians<float>(std::get<2>(transf))));
-                                                     /// @todo agregar al calculo delta time
-                                                     /// Arreglar problema de sin,cos y direccion de movimiento.
+                auto& transf = entity->getComponent(ComponentsMask::COMPONENT_TRANSFORM)
+                                        ->getProperties<sf::Vector2f,sf::Vector2f,float>();
+                auto& velocity = entity->getComponent(ComponentsMask::COMPONENT_VELOCITY)
+                                        ->getProperties<sf::Vector2f,float,float,float>();
+                if(entity->is(States::GROUND)){
+                    std::get<0>(velocity) = sf::Vector2f(std::get<1>(velocity) *  -std::sin(Utils::toRadians<float>(std::get<2>(transf))),
+                                                         std::get<1>(velocity) *  std::cos(Utils::toRadians<float>(std::get<2>(transf))));
+                /// @todo agregar al calculo delta time
+                /// Arreglar problema de sin,cos y direccion de movimiento.
+                }
                 std::get<0>(transf) += std::get<0>(velocity);
             }
         }

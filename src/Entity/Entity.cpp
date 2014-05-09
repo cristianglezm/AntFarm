@@ -3,14 +3,17 @@ namespace ant{
         Entity::Entity(){
             name = "";
             mask = 0;
+            states = 0;
         }
         Entity::Entity(std::string name){
             this->name = name;
             this->mask = 0;
+            states = 0;
         }
         Entity::Entity(std::string name,map components){
             this->name = name;
             this->mask = 0;
+            states = 0;
             this->Components = std::move(components);
             for(auto& c: Components){
                 this->mask |= c.second->getId();
@@ -27,6 +30,14 @@ namespace ant{
                 this->Components.erase(id);
             }
         }
+        void Entity::addState(long int state){
+            states |= state;
+        }
+        void Entity::removeState(long int state){
+            if(is(state)){
+                states &= ~state;
+            }
+        }
         void Entity::setName(std::string name){
             this->name = name;
         }
@@ -37,7 +48,7 @@ namespace ant{
             }
         }
         bool Entity::operator==(const Entity& e) const{
-            return (e.Components == Components && e.mask == mask && e.name == name);
+            return (e.Components == Components && e.mask == mask && e.name == name && states == e.states);
         }
         bool Entity::operator==(const std::string& name) const{
             return (this->name == name);

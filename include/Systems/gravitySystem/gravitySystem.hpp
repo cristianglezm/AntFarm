@@ -2,6 +2,7 @@
 #define GRAVITY_SYSTEM_H
 #include <Systems/System.hpp>
 #include <Components/ComponentMask.hpp>
+#include <States/States.hpp>
 namespace ant{
     /**
      * @brief Sistema para aplicar la gravedad a las entidades.

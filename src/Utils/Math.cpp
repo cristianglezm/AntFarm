@@ -24,10 +24,12 @@ namespace ant{
             }
             return v1;
         }
+
         float getDirection(const sf::Vector2f& currentPosition,const sf::Vector2f& wantedPosition){
             sf::Vector2f result(wantedPosition.x - currentPosition.x,wantedPosition.y - currentPosition.y);
             result = normalize(result);
             return std::atan2(-result.x, result.y);
         }
+
     }
 }

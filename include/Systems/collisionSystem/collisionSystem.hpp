@@ -6,6 +6,7 @@
 #include <SFML/Graphics/Rect.hpp>
 #include <SFML/Graphics/VertexArray.hpp>
 #include <Components/ComponentMask.hpp>
+#include <States/States.hpp>
 #include <Event/EventType.hpp>
 #include <Utils/Math.hpp>
 

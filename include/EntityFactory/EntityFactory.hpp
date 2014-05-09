@@ -22,7 +22,6 @@ namespace ant{
                                 | ComponentsMask::COMPONENT_SPRITE
                                 | ComponentsMask::COMPONENT_BOUNDS;
                 static const long int InDoor = ComponentsMask::COMPONENT_TRANSFORM
-                                | ComponentsMask::COMPONENT_BOUNDS
                                 | ComponentsMask::COMPONENT_SPRITE
                                 | ComponentsMask::COMPONENT_IN;
                 static const long int OutDoor = ComponentsMask::COMPONENT_TRANSFORM

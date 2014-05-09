@@ -33,6 +33,11 @@ namespace ant{
         m->setEventQueue(eventQueue);
         return m;
     }
+    std::shared_ptr<gravitySystem> SystemFactory::createGravitySystem(float gravity){
+        std::shared_ptr<gravitySystem> g(new gravitySystem(gravity));
+        g->setEventQueue(eventQueue);
+        return g;
+    }
     std::shared_ptr<spawnSystem> SystemFactory::createSpawnSystem(int nEntities,EntityFactory* ef,sf::Time ot,sf::Vector2f spawnPoint){
         std::shared_ptr<spawnSystem> sp(new spawnSystem(nEntities,ef,ot,spawnPoint));
         gameEventDispatcher->spawnEvents.addObserver(sp);

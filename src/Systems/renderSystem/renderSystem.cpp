@@ -14,12 +14,12 @@ namespace ant{
                 auto& spr = std::get<1>(sprite);
                 sf::Vector2f& position = std::get<0>(transform);
                 sf::Vector2f& scale = std::get<1>(transform);
-                float& rotation = std::get<2>(transform);
+               // float& rotation = std::get<2>(transform);
                 // si esta dentro de la pantalla actual se muestra.
                 if(win.getViewport(win.getView()).contains(position.x,position.y)){
                     spr->setPosition(position);
                     spr->setScale(scale);
-                    spr->setRotation(rotation);
+                    //spr->setRotation(rotation);
                     win.draw(*spr);
                 }
             }

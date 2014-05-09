@@ -97,6 +97,30 @@ namespace ant{
              */
             inline bool hasComponent(long int id){ return ((mask & id) == id); }
             /**
+             * @brief Devuelve los estados que tiene la entidad.
+             * @param statesID long int id de los estados.
+             * @code
+             *  is(States::FALLING | States::OnFIRE);
+             * @endcode
+             * @return bool
+             */
+            inline bool is(long int statesID){ return ((states & statesID) == statesID ); }
+            /**
+             * @brief Añade un estado a la entidad.
+             * @param state long int estado a añadir.
+             */
+            void addState(long int state);
+            /**
+             * @brief Elimina un estado de la entidad.
+             * @param state long int estado a eliminar.
+             */
+            void removeState(long int state);
+            /**
+             * @brief devuelve los estados de la entidad.
+             * @return long int Estados de la entidad.
+             */
+             inline long int getStates(){ return states; }
+            /**
              * @brief Operator overload para comparar la entidad contra otra entidad.
              * @param e Entity entidad a la cual compararse.
              * @return bool
@@ -112,6 +136,7 @@ namespace ant{
         private:
             std::string name;
             long int mask;
+            long int states;
             map Components;
     };
 }

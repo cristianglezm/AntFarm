@@ -1,4 +1,5 @@
 #include <Systems/gravitySystem/gravitySystem.hpp>
+
 namespace ant{
     gravitySystem::gravitySystem(){
         Gravity = 0.8;
@@ -15,9 +16,10 @@ namespace ant{
     }
     void gravitySystem::update(sf::Time dt){
         for(auto& e : em->getEntities()){
-            if(e->hasComponent(RequiredComponents)){
-                auto& properties = e->getComponent(RequiredComponents)->getProperties<sf::Vector2f,float,float,float>();
-                std::get<0>(properties).y = std::get<0>(properties).y - Gravity * dt.asMicroseconds();
+            if(e->hasComponent(RequiredComponents) && e->is(States::FALLING)){
+                auto& properties = e->getComponent(RequiredComponents)
+                                    ->getProperties<sf::Vector2f,float,float,float>();
+                std::get<0>(properties).y = Gravity;
             }
         }
     }

@@ -8,6 +8,7 @@
 #include <Systems/renderSystem/renderSystem.hpp>
 #include <Systems/constructorSystem/constructorSystem.hpp>
 #include <Systems/movementSystem/movementSystem.hpp>
+#include <Systems/gravitySystem/gravitySystem.hpp>
 #include <Systems/spawnSystem/spawnSystem.hpp>
 #include <Systems/inputSystem/inputSystem.hpp>
 namespace ant{
@@ -71,6 +72,13 @@ namespace ant{
              * @return std::shared_ptr<movementSystem>
              */
             std::shared_ptr<movementSystem> createMovementSystem();
+            /**
+             * @brief Crea un sistema de gravedad
+             * @see gravitySystem::gravitySystem
+             * @param gravity float
+             * @return std::shared_ptr<gravitySystem>
+             */
+            std::shared_ptr<gravitySystem> createGravitySystem(float gravity);
             /**
              * @brief Crea un sistema de creacion de entidades.
              * @see spawnSystem::spawnSystem
