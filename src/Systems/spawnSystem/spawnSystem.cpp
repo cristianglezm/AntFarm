@@ -13,20 +13,15 @@ namespace ant{
         createdEntities = 0;
     }
     void spawnSystem::update(sf::Time dt){
-        sf::Clock clock;
-        for(auto& e:em->getEntities()){
-            if(elapsedTime > calcOverTime && createdEntities < nEntities){
-                elapsedTime = sf::seconds(0);
-                createdEntities +=1;
-                ComponentSettings cs;
-                cs.loadSettings(Config::ANT_FILE);
-                cs.position = spawnPoint + sf::Vector2f(5,5);
-                em->addEntity(entityFactory->createEntity(EntityFactory::Ant,cs));
-            }
-            std::cout << "Elapsed Time " << elapsedTime.asSeconds() << std::endl;
-            std::cout << "calc" << calcOverTime.asSeconds() << std::endl;
-            elapsedTime += clock.restart();
+        if(elapsedTime > calcOverTime && createdEntities < nEntities){
+            elapsedTime = sf::seconds(0);
+            createdEntities +=1;
+            ComponentSettings cs;
+            cs.loadSettings(Config::ANT_FILE);
+            cs.position = spawnPoint + sf::Vector2f(5,5);
+            em->addEntity(entityFactory->createEntity(EntityFactory::Ant,cs));
         }
+        elapsedTime += clock.restart();
     }
     void spawnSystem::render(sf::RenderWindow& win){
         return;

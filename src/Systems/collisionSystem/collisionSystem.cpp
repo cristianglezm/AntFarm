@@ -45,8 +45,8 @@ namespace ant{
                         }/// @todo Arreglar colision con 4 puntos y hacer funcion para comprobar.
                         if((*gameMap)[((int)gameBounds.height) * ((int)eBounds2.left) + ((int)eBounds2.top)].color.a == 255
                            || (*gameMap)[((int)gameBounds.height) * ((int)(eBounds2.left+eBounds2.width)) + ((int)eBounds2.top)].color.a == 255
-                           || (*gameMap)[((int)gameBounds.height) * ((int)eBounds2.left) + ((int)(eBounds2.top+eBounds2.width))].color.a == 255
-                           || (*gameMap)[((int)gameBounds.height) * ((int)(eBounds2.left+eBounds2.height)) + ((int)(eBounds2.top+eBounds2.width))].color.a == 255){
+                           || (*gameMap)[((int)gameBounds.height) * ((int)eBounds2.left) + ((int)(eBounds2.top+eBounds2.height))].color.a == 255
+                           || (*gameMap)[((int)gameBounds.height) * ((int)(eBounds2.left+eBounds2.width)) + ((int)(eBounds2.top+eBounds2.height))].color.a == 255){
                                 eventQueue->push(std::shared_ptr<baseEvent>(new Event<Entity*,Entity*>(
                                                     EventType::COLLISION_EVENT,entity1.get(),entity2)));
                         }

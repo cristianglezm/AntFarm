@@ -47,6 +47,7 @@ namespace ant{
             sf::Time calcOverTime;
             sf::Time elapsedTime;
             sf::Vector2f spawnPoint;
+            sf::Clock clock;
     };
 }
 #endif // SPAWN_SYSTEM_H

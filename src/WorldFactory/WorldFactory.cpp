@@ -85,7 +85,7 @@ namespace ant{
                 cs.position = outDoor - sf::Vector2f(0,55);
                 cs.scale = sf::Vector2f(0.5,0.5);
                 em->addEntity(entityFactory->createEntity(EntityFactory::OutDoor,cs));
-                /// todo agregar sistema para que elimine las entidades que choquen contra esta puerta.
+                /// @todo agregar sistema para que elimine las entidades que choquen contra esta puerta.
             }
         }
         sm->addSystem(systemFactory->createMovementSystem());
