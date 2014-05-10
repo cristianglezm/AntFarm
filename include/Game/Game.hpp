@@ -21,6 +21,12 @@ namespace ant{
             void run();
             ~Game();
         private:
+            /**
+             * @brief Obtiene los fps.
+             * @param time sf::Time
+             * @return float
+             */
+            float getFPS(const sf::Time& time);
             std::shared_ptr<EventQueue> eventQueue;
             std::shared_ptr<GameEventDispatcher> gameEventDispatcher;
             std::shared_ptr<Level> level;
@@ -29,6 +35,11 @@ namespace ant{
             bool running;
             int currentLevel;
             bool isPause;
+            // fps
+            sf::Clock clock;
+            sf::Time elapsedTime;
+            sf::Time lastFrame;
+            sf::Text fps;
     };
 }
 #endif // GAME_H

@@ -46,9 +46,9 @@ namespace ant{
                         /* Comprobamos si colisiona con los seis puntos
                          * 1 esquina superior izquierda -> envia evento de colision con suelo 0
                          * 2 esquina superior derecha -> envia evento de colision con suelo 1
-                         * 3 esquina mediana izquierda -> envia evento de colision con suelo para subir escalones 2
+                         * 3 esquina inferior mediana izquierda -> envia evento de colision con suelo para subir escalones 2
                          * 4 esquina inferior izquierda -> Cambia estado de FALLING a GROUND
-                         * 5 esquina mediana derecha -> envia evento de colision con suelo para subir escalones 2
+                         * 5 esquina inferior mediana derecha -> envia evento de colision con suelo para subir escalones 2
                          * 6 esquina inferior derecha -> Cambia estado de FALLING a GROUND
                          */
                         if((*gameMap)[((int)gameBounds.height) * ((int)eBounds2.left) + ((int)eBounds2.top)].color.a == 255){
@@ -60,15 +60,23 @@ namespace ant{
                         }else if((*gameMap)[((int)gameBounds.height) * ((int)(eBounds2.left)) + ((int)(eBounds2.top+eBounds2.height/2))].color.a == 255){
                             eventQueue->push(std::shared_ptr<baseEvent>(new Event<Entity*,int>(
                                                 EventType::TERRAIN_COLLISION,entity2,2)));
+                                // subir escaleras
                         }else if((*gameMap)[((int)gameBounds.height) * ((int)eBounds2.left) + ((int)(eBounds2.top+eBounds2.height))].color.a == 255){
                             entity2->addState(States::GROUND);
                             entity2->removeState(States::FALLING);
+                            // enviamos evento para detectar que esta en una esquina
+                            eventQueue->push(std::shared_ptr<baseEvent>(new Event<Entity*,int>(
+                                                EventType::TERRAIN_COLLISION,entity2,3)));
                         }else if((*gameMap)[((int)gameBounds.height) * ((int)(eBounds2.left+eBounds2.width)) + ((int)(eBounds2.top+(eBounds2.height/2)))].color.a == 255){
                                 eventQueue->push(std::shared_ptr<baseEvent>(new Event<Entity*,int>(
                                                 EventType::TERRAIN_COLLISION,entity2,2)));
+                                // subir escaleras
                         }else if((*gameMap)[((int)gameBounds.height) * ((int)(eBounds2.left+eBounds2.width)) + ((int)(eBounds2.top+eBounds2.height))].color.a == 255){
                                 entity2->addState(States::GROUND);
                                 entity2->removeState(States::FALLING);
+                                // enviamos evento para detectar que esta en una esquina
+                                eventQueue->push(std::shared_ptr<baseEvent>(new Event<Entity*,int>(
+                                                EventType::TERRAIN_COLLISION,entity2,4)));
                         }else{
                             entity2->removeState(States::GROUND);
                             entity2->addState(States::FALLING);

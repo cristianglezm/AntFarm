@@ -85,11 +85,11 @@ int main()
     sf::RectangleShape winBorders{};
     // Load a sprite to display
     sf::Texture texture;
-    if (!texture.loadFromFile("../../../data/maps/nest/MapNestFrontground.png")){
+    if (!texture.loadFromFile("../../../data/backgrounds/background3.png")){
         return EXIT_FAILURE;
     }
     sf::Texture texture1;
-    if(!texture1.loadFromFile("../../../data/maps/nest/MapNestBackground.png")){
+    if(!texture1.loadFromFile("../../../data/backgrounds/background1.png")){
         return EXIT_FAILURE;
     }
     sf::Sprite background(texture1);

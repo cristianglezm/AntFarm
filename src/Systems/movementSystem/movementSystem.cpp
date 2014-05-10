@@ -52,7 +52,18 @@ namespace ant{
                             }
                             break;
                         case 2:
-                            position.y -=15;
+                            // subir escaleras
+                            position.y -=12;
+                            break;
+                        case 3:
+                            if(rotation == 180){
+                                rotation = 90;
+                            }
+                            break;
+                        case 4:
+                            if(rotation == 180){
+                                rotation = -90;
+                            }
                             break;
                     }
                 }
@@ -74,7 +85,6 @@ namespace ant{
                     std::get<0>(velocity) = sf::Vector2f(std::get<1>(velocity) *  -std::sin(Utils::toRadians<float>(std::get<2>(transf))),
                                                          std::get<1>(velocity) *  std::cos(Utils::toRadians<float>(std::get<2>(transf))));
                 /// @todo agregar al calculo delta time
-                /// Arreglar problema de sin,cos y direccion de movimiento.
                 }
                 std::get<0>(transf) += std::get<0>(velocity);
             }

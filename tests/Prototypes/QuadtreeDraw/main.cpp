@@ -8,7 +8,7 @@
 #include <Components/ComponentMask.hpp>
 
 float getFPS(const sf::Time& time) {
-     return (1000000.0f / time.asMicroseconds());
+    return (1000000.0f / time.asMicroseconds());
 }
 
 int main(){
