@@ -20,7 +20,7 @@ namespace ant{
                 auto& pos = std::get<0>(cTransf);
                 bounds.left = pos.x;
                 bounds.top = pos.y;
-                auto& rotation = std::get<2>(cTransf);
+                //auto& rotation = std::get<2>(cTransf);
                 ///  @todo rotation of boundingbox
                 //bounds = Utils::rotateRect(bounds,rotation);
                 qtree.insert(entity.get());
@@ -42,11 +42,31 @@ namespace ant{
                         if(eBounds1.intersects(eBounds2)){
                             eventQueue->push(std::shared_ptr<baseEvent>(new Event<Entity*,Entity*>(
                                                 EventType::COLLISION_EVENT,entity1.get(),entity2)));
-                        }/// @todo Arreglar colision con 4 puntos y hacer funcion para comprobar.
-                        if((*gameMap)[((int)gameBounds.height) * ((int)eBounds2.left) + ((int)eBounds2.top)].color.a == 255
-                           || (*gameMap)[((int)gameBounds.height) * ((int)(eBounds2.left+eBounds2.width)) + ((int)eBounds2.top)].color.a == 255
-                           || (*gameMap)[((int)gameBounds.height) * ((int)eBounds2.left) + ((int)(eBounds2.top+eBounds2.height))].color.a == 255
-                           || (*gameMap)[((int)gameBounds.height) * ((int)(eBounds2.left+eBounds2.width)) + ((int)(eBounds2.top+eBounds2.height))].color.a == 255){
+                        }
+                        /* Comprobamos si colisiona con los seis puntos
+                         * 1 esquina superior izquierda -> envia evento de colision con suelo 0
+                         * 2 esquina superior derecha -> envia evento de colision con suelo 1
+                         * 3 esquina mediana izquierda -> envia evento de colision con suelo para subir escalones 2
+                         * 4 esquina inferior izquierda -> Cambia estado de FALLING a GROUND
+                         * 5 esquina mediana derecha -> envia evento de colision con suelo para subir escalones 2
+                         * 6 esquina inferior derecha -> Cambia estado de FALLING a GROUND
+                         */
+                        if((*gameMap)[((int)gameBounds.height) * ((int)eBounds2.left) + ((int)eBounds2.top)].color.a == 255){
+                            eventQueue->push(std::shared_ptr<baseEvent>(new Event<Entity*,int>(
+                                                EventType::TERRAIN_COLLISION,entity2,0)));
+                        }else if((*gameMap)[((int)gameBounds.height) * ((int)(eBounds2.left+eBounds2.width)) + ((int)eBounds2.top)].color.a == 255){
+                            eventQueue->push(std::shared_ptr<baseEvent>(new Event<Entity*,int>(
+                                                EventType::TERRAIN_COLLISION,entity2,1)));
+                        }else if((*gameMap)[((int)gameBounds.height) * ((int)(eBounds2.left)) + ((int)(eBounds2.top+eBounds2.height/2))].color.a == 255){
+                            eventQueue->push(std::shared_ptr<baseEvent>(new Event<Entity*,int>(
+                                                EventType::TERRAIN_COLLISION,entity2,2)));
+                        }else if((*gameMap)[((int)gameBounds.height) * ((int)eBounds2.left) + ((int)(eBounds2.top+eBounds2.height))].color.a == 255){
+                            entity2->addState(States::GROUND);
+                            entity2->removeState(States::FALLING);
+                        }else if((*gameMap)[((int)gameBounds.height) * ((int)(eBounds2.left+eBounds2.width)) + ((int)(eBounds2.top+(eBounds2.height/2)))].color.a == 255){
+                                eventQueue->push(std::shared_ptr<baseEvent>(new Event<Entity*,int>(
+                                                EventType::TERRAIN_COLLISION,entity2,2)));
+                        }else if((*gameMap)[((int)gameBounds.height) * ((int)(eBounds2.left+eBounds2.width)) + ((int)(eBounds2.top+eBounds2.height))].color.a == 255){
                                 entity2->addState(States::GROUND);
                                 entity2->removeState(States::FALLING);
                         }else{

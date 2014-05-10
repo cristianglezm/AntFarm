@@ -11,7 +11,8 @@ class States{
         static const long int NONE = 0;
         static const long int GROUND = 1 << 0;
         static const long int FALLING = 1 << 1;
-        static const long int ONFIRE = 1 << 2;
+        static const long int CLIMBING = 1 << 2;
+        static const long int ONFIRE = 1 << 3;
 };
 
 #endif // STATES_H

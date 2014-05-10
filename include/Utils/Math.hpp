@@ -41,17 +41,6 @@ namespace ant{
          */
         sf::FloatRect rotateRect(const sf::FloatRect& rect,const float& angle);
         /**
-         * @fn dot
-         * @brief Obtiene el dot product del vector
-         * @tparam tipo del Vector2
-         * @param v sf::Vector2<T>
-         * @return T
-         */
-        template<typename T>
-        int dot(const sf::Vector2<T>& v1,const sf::Vector2<T>& v2){
-            return v1.x * v2.x + v2.y * v1.y;
-        }
-        /**
          * @fn getAngle
          * @brief Obtiene el angulo del vector2
          * @tparam tipo del Vector2
@@ -69,6 +58,31 @@ namespace ant{
          * @return sf::Vector2f
          */
         sf::Vector2f normalize(const sf::Vector2f& v);
+        /**
+         * @fn dot
+         * @brief Obtiene el dot product del vector
+         *
+         * behind -1
+         * front 1
+         * right or left 0
+         *
+         * @tparam tipo del Vector2
+         * @param v sf::Vector2<T>
+         * @return T
+         */
+        template<typename T>
+        int dot(const sf::Vector2<T>& v1,const sf::Vector2<T>& v2){
+            sf::Vector2f uv1 = normalize(v1);
+            sf::Vector2f uv2 = normalize(v2);
+            double r = (uv1.x * uv2.x) + (uv2.y * uv1.y);
+            if(r<0){
+                return -1;
+            }else if(r>0){
+                return 1;
+            }else{
+                return 0;
+            }
+        }
         /**
          * @fn getDirection
          * @brief Calcula el angulo en radianes respecto a otra posicion.

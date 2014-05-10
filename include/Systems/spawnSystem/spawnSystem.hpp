@@ -23,8 +23,19 @@ namespace ant{
              * @param ot sf::Time El tiempo en el que tiene que crear esas entidades.
              * @param ef EntityFactory * Para crear las entidades.
              * @param spawnPoint sf::Vector2f sitio donde saldran las entidades.
+             * @param long int states initial states when entities are created.
              */
-            spawnSystem(int nEntities, EntityFactory* ef,sf::Time ot,sf::Vector2f spawnPoint);
+            spawnSystem(int nEntities, EntityFactory* ef,sf::Time ot,sf::Vector2f spawnPoint,long int state);
+            /**
+             * @brief
+             * @param
+             */
+            void setStates(long int state);
+            /**
+             * @brief
+             * @return
+             */
+            inline const long int getStates() const { return states; }
             /**
              * @brief Cada x segundos crea un entidad en el sitio establecido.
              * @param dt sf::Time delta time

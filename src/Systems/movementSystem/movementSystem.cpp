@@ -8,7 +8,7 @@ namespace ant{
     void movementSystem::onNotify(std::shared_ptr<baseEvent> e){
         switch(e->getType()){
             /// @todo Añadir evento Nominal. para aplicar fuerza del suelo.
-            case EventType::COLLISION_EVENT:
+            case EventType::COLLISION_EVENT:{
                     auto& attributes = e->getAttributes<Entity*,Entity*>();
                     // obtenemos los atributos del evento.
                     auto& entity1 = std::get<0>(attributes);
@@ -23,6 +23,40 @@ namespace ant{
                                                     ->getProperties<sf::Vector2f,float,float,float>();
                         std::get<1>(velocity2) = 0;
                     }
+            }
+                break;
+            case EventType::TERRAIN_COLLISION:{
+                auto& attributes = e->getAttributes<Entity*,int>();
+                auto& entity = std::get<0>(attributes);
+                auto& type = std::get<1>(attributes);
+                if(entity->hasComponent(ComponentsMask::COMPONENT_TRANSFORM)){
+                    auto& properties = entity->getComponent(ComponentsMask::COMPONENT_TRANSFORM)
+                                                 ->getProperties<sf::Vector2f,sf::Vector2f,float>();
+                    auto& rotation = std::get<2>(properties);
+                    auto& position = std::get<0>(properties);
+                    switch(type){
+                        case 0:
+                            if(entity->is(States::CLIMBING)){
+                                position.y -=0.5;
+                                rotation = 180;
+                            }else{
+                                rotation = -90;
+                            }
+                            break;
+                        case 1:
+                            if(entity->is(States::CLIMBING)){
+                                position.y -=0.5;
+                                rotation = 180;
+                            }else{
+                                rotation = 90;
+                            }
+                            break;
+                        case 2:
+                            position.y -=15;
+                            break;
+                    }
+                }
+            }
                 break;
         }
     }

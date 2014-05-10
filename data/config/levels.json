@@ -1,5 +1,5 @@
 {
     "levels":[
-            {"name":"level1","background":"background3","nEntities":10000,"image":"data/levels/level1.png","overtime":3600,},
+            {"name":"level1","background":"background3","nEntities":1000,"image":"data/levels/level1.png","overtime":3600,},
         ]
 }

@@ -26,7 +26,7 @@ namespace ant{
             /**
              * @brief Eventos para el sistema de creacion de entidades.
              */
-             Subject spawnEvents;
+            Subject spawnEvents;
             /**
              * @brief Procesa el evento y lo envia a los observadores que esten subscritos.
              * @param e std::shared_ptr<baseEvent>

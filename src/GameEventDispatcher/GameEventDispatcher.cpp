@@ -5,6 +5,7 @@ namespace ant{
     }
     bool GameEventDispatcher::DispatchEvent(std::shared_ptr<baseEvent> e){
         switch(e->getType()){
+            case EventType::TERRAIN_COLLISION:
             case EventType::COLLISION_EVENT:
                 onCollision.notifyObservers(e);
                 return true;

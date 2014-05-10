@@ -1,7 +1,7 @@
 #include <Systems/spawnSystem/spawnSystem.hpp>
 
 namespace ant{
-    spawnSystem::spawnSystem(int nEntities, EntityFactory* ef,sf::Time ot,sf::Vector2f spawnPoint){
+    spawnSystem::spawnSystem(int nEntities, EntityFactory* ef,sf::Time ot,sf::Vector2f spawnPoint,long int state){
         name = "spawnSystem";
         RequiredComponents = ComponentsMask::COMPONENT_IN | ComponentsMask::COMPONENT_TRANSFORM;
         this->nEntities = nEntities;
@@ -11,6 +11,10 @@ namespace ant{
         elapsedTime = sf::seconds(0);
         this->spawnPoint = spawnPoint;
         createdEntities = 0;
+        states = state;
+    }
+    void spawnSystem::setStates(long int state){
+        states = state;
     }
     void spawnSystem::update(sf::Time dt){
         if(elapsedTime > calcOverTime && createdEntities < nEntities){
@@ -20,7 +24,7 @@ namespace ant{
             cs.loadSettings(Config::ANT_FILE);
             cs.position = spawnPoint + sf::Vector2f(5,5);
             auto ant = entityFactory->createEntity(EntityFactory::Ant,cs);
-            ant->addState(States::FALLING);
+            ant->addState(states);
             em->addEntity(std::move(ant));
         }
         elapsedTime += clock.restart();

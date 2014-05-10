@@ -77,7 +77,7 @@ namespace ant{
                 cs.loadSettings(Config::INDOOR_FILE);
                 cs.position = inDoor;
                 em->addEntity(entityFactory->createEntity(EntityFactory::InDoor,cs));
-                sm->addSystem(systemFactory->createSpawnSystem(nEntities,entityFactory.get(),overTime,(inDoor + sf::Vector2f(10,10))));
+                sm->addSystem(systemFactory->createSpawnSystem(nEntities,entityFactory.get(),overTime,(inDoor + sf::Vector2f(10,10)),States::FALLING));
             }
             if(hasEnteredOutDoor){
                 ComponentSettings cs;
