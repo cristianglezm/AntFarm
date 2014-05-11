@@ -48,6 +48,10 @@ namespace ant{
             virtual void update(sf::Time dt);
             virtual ~collisionSystem();
         private:
+            /**
+             * @brief
+             */
+            void testTerrainCollision(Entity* entity,const sf::FloatRect& eBounds);
             Utils::Quadtree qtree;
             sf::FloatRect gameBounds;
             sf::VertexArray* gameMap;

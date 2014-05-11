@@ -11,6 +11,7 @@
 #include <Systems/gravitySystem/gravitySystem.hpp>
 #include <Systems/spawnSystem/spawnSystem.hpp>
 #include <Systems/inputSystem/inputSystem.hpp>
+#include <Systems/outSystem/outSystem.hpp>
 namespace ant{
     /**
      * @brief Clase para crear sistemas.
@@ -85,7 +86,18 @@ namespace ant{
              * @return std::shared_ptr<spawnSystem>
              */
             std::shared_ptr<spawnSystem> createSpawnSystem(int nEntities,EntityFactory* ef,sf::Time ot,sf::Vector2f spawnPoint,long int state);
+            /**
+             * @brief Crea un sistema de construccion.
+             * @see constructorSystem::constructorSystem
+             * @return std::shared_ptr<constructorSystem>
+             */
             std::shared_ptr<constructorSystem> createConstructorSystem(sf::VertexArray* GameMap,sf::FloatRect bounds);
+            /**
+             * @brief Crea un sistema para comprobar cuando salen del mapa o entran por alguna entidad que tenga Component_OUT
+             * @see outSystem::outSystem
+             * @return std::shared_ptr<outSystem>
+             */
+            std::shared_ptr<outSystem> createOutSystem(int totalEntities);
             ~SystemFactory();
         private:
             std::shared_ptr<GameEventDispatcher> gameEventDispatcher;

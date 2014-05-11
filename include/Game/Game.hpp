@@ -10,7 +10,7 @@ namespace ant{
      * @author Cristian Glez <Cristian.glez.m@gmail.com>
      * @version 0.1
      */
-    class Game{
+    class Game : public Observer{
         public:
             /**
              * @brief Constructor por defecto.
@@ -20,6 +20,10 @@ namespace ant{
              * @brief Inicia el juego.
              */
             void run();
+            /**
+             * @brief Recibe el Evento de Level_COMPLETE y cambia el nivel.
+             */
+            void onNotify(std::shared_ptr<baseEvent> e);
             ~Game();
         private:
             /**
@@ -35,12 +39,15 @@ namespace ant{
             sf::RenderWindow win;
             bool running;
             int currentLevel;
+            int totalLevels;
             bool isPause;
             // fps
             sf::Clock clock;
             sf::Time elapsedTime;
             sf::Time lastFrame;
             sf::Text fps;
+            int GameSpeed;
+            std::shared_ptr<Game> self;
     };
 }
 #endif // GAME_H

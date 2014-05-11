@@ -13,5 +13,7 @@ class EventType{
         static const long int CHANGE_NENTITIES = 3;
         static const long int CHANGE_COMMAND = 4;
         static const long int SELECT_ENTITY = 5;
+        static const long int OUT_MAP = 6;
+        static const long int LEVEL_COMPLETE = 7;
 };
 #endif // EVENT_TYPE_H

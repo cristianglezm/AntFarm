@@ -28,6 +28,14 @@ namespace ant{
                 }
             }
                 break;
+            case EventType::COLLISION_EVENT:{
+                auto& event = e->getAttributes<Entity*,Entity*>();
+                auto& entity1 = std::get<0>(event);
+                auto& entity2 = std::get<1>(event);
+                entity1->removeState(States::BUILDING);
+                entity2->removeState(States::BUILDING);
+            }
+                break;
         }
     }
     void constructorSystem::update(sf::Time dt){
@@ -39,8 +47,10 @@ namespace ant{
                         e->removeState(States::BUILDING);
                         count = 10;
                     }else{
-                        --count;
-                        (*build)(e.get(),map,boundsMap);
+                        if(!e->is(States::FALLING)){
+                            --count;
+                            (*build)(e.get(),map,boundsMap);
+                        }
                     }
                 }
             }

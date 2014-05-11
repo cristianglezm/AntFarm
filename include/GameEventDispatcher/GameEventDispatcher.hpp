@@ -36,6 +36,14 @@ namespace ant{
              */
             Subject ChangeCommand;
             /**
+             * @brief Envia una entidad que ha salido del mapa.
+             */
+            Subject outMap;
+            /**
+             * @brief El sistema de out envia este evento.
+             */
+            Subject LevelComplete;
+            /**
              * @brief Procesa el evento y lo envia a los observadores que esten subscritos.
              * @param e std::shared_ptr<baseEvent>
              * @return bool

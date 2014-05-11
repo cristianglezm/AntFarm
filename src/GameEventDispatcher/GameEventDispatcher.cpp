@@ -21,6 +21,11 @@ namespace ant{
             case EventType::SELECT_ENTITY:
                 ClickEvents.notifyObservers(e);
                 break;
+            case EventType::OUT_MAP:
+                outMap.notifyObservers(e);
+            case EventType::LEVEL_COMPLETE:
+                LevelComplete.notifyObservers(e);
+                break;
         }
         return false;
     }

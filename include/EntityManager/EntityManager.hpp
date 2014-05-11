@@ -75,6 +75,14 @@ namespace ant{
              */
             inline list& getEntities(){ return this->entities; }
             /**
+             * @brief Devuelve el principio de la lista.
+             */
+            inline iterator begin(){ return entities.begin(); }
+            /**
+             * @brief Devuelve el final de la lista.
+             */
+            inline iterator end(){ return entities.end(); }
+            /**
              * @brief Transfiere la primera entidad que coincida con el nombre.
              *
              * Transfiere la posesion(ownership) de la entidad y la elimina del contenedor.

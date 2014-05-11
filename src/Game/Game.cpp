@@ -12,9 +12,25 @@ namespace ant{
     ,currentLevel(0){
         eventQueue = level->getEventQueue();
         assets = level->getAssetManager();
+        totalLevels = level->size();
+        self.reset(this);
+        gameEventDispatcher->LevelComplete.addObserver(self);
         fps.setFont(assets->getFont("Outwrite"));
         fps.setCharacterSize(25);
         fps.setPosition(745,550);
+        GameSpeed = 0;
+    }
+    void Game::onNotify(std::shared_ptr<baseEvent> e){
+        switch(e->getType()){
+            case EventType::LEVEL_COMPLETE:{
+                if(currentLevel<(totalLevels-1)){
+                    ++currentLevel;
+                }else if(currentLevel == (totalLevels-1)){
+                    //currentLevel = 0;
+                }
+            }
+                break;
+        }
     }
     void Game::run(){
         while(running){
@@ -62,6 +78,15 @@ namespace ant{
                                     new Event<constructorSystem::command>(EventType::CHANGE_COMMAND,
                                                             Constructions::hole
                                                             ))
+                                         );
+                        }
+                        break;
+                    case sf::Event::KeyPressed:
+                        if(sf::Keyboard::isKeyPressed(sf::Keyboard::LShift)){
+                            ++GameSpeed;
+                        std::cout << GameSpeed << std::endl;
+                            eventQueue->push(std::shared_ptr<baseEvent>(
+                                    new Event<sf::Time>(EventType::CHANGE_OVERTIME,sf::seconds(GameSpeed*100)))
                                          );
                         }
                         break;

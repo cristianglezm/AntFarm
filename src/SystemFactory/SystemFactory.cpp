@@ -48,8 +48,16 @@ namespace ant{
         std::shared_ptr<constructorSystem> csys(new constructorSystem(GameMap,bounds));
         gameEventDispatcher->ClickEvents.addObserver(csys);
         gameEventDispatcher->ChangeCommand.addObserver(csys);
+        gameEventDispatcher->onCollision.addObserver(csys);
         csys->setEventQueue(eventQueue);
         return csys;
+    }
+    std::shared_ptr<outSystem> SystemFactory::createOutSystem(int totalEntities){
+        std::shared_ptr<outSystem> o(new outSystem(totalEntities));
+        gameEventDispatcher->outMap.addObserver(o);
+        gameEventDispatcher->onCollision.addObserver(o);
+        o->setEventQueue(eventQueue);
+        return o;
     }
     SystemFactory::~SystemFactory(){
 

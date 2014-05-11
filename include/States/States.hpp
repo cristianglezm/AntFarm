@@ -14,6 +14,8 @@ class States{
         static const long int CLIMBING = 1 << 2;
         static const long int BUILDING = 1 << 3;
         static const long int ONFIRE = 1 << 4;
+        static const long int SAVED = 1 << 5;
+        static const long int UNSAVED = 1 << 6;
 };
 
 #endif // STATES_H

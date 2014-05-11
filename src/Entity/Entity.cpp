@@ -47,6 +47,9 @@ namespace ant{
                 this->mask |= c.second->getId();
             }
         }
+        void Entity::clear(){
+            Components.clear();
+        }
         bool Entity::operator==(const Entity& e) const{
             return (e.Components == Components && e.mask == mask && e.name == name && states == e.states);
         }

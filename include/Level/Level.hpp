@@ -68,6 +68,10 @@ namespace ant{
              * @return std::shared_ptr<AssetManager>
              */
              inline std::shared_ptr<AssetManager> getAssetManager(){ return worldFactory->getAssetManager(); }
+             /**
+              * @brief Devuelve el numero total de niveles que tiene.
+              */
+             inline int size(){ return levels->size(); }
             /**
              * @brief Actualiza el mundo especificado.
              *

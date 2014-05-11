@@ -55,6 +55,12 @@ namespace ant{
         if((mask & ComponentsMask::COMPONENT_DESTRUCTABLE) == ComponentsMask::COMPONENT_DESTRUCTABLE){
             e->addComponent(componentFactory->createDestructable(cs.DestructiblePosition,cs.imageID));
         }
+        if((mask & ComponentsMask::COMPONENT_OUT) == ComponentsMask::COMPONENT_OUT){
+            e->addComponent(componentFactory->createOut());
+        }
+        if((mask & ComponentsMask::COMPONENT_IN) == ComponentsMask::COMPONENT_IN){
+            e->addComponent(componentFactory->createIn());
+        }
         if((mask & ComponentsMask::COMPONENT_COUNT) == ComponentsMask::COMPONENT_COUNT){
             e->addComponent(componentFactory->createCounter(cs.count));
         }

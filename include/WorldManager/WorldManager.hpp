@@ -62,6 +62,10 @@ namespace ant{
              */
             void update(long int id,sf::Time dt);
             /**
+             * @brief Devuelve el numero de mundos que tiene.
+             */
+            inline int size(){ return worlds.size(); }
+            /**
              * @brief Renderiza el mundo especificado por el id.
              *
              * Si se pone -1 Renderizara todos los mundos, en pantalla se vera el ultimo.

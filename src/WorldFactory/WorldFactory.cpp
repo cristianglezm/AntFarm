@@ -95,6 +95,7 @@ namespace ant{
         auto& destructable = std::get<1>(properties);
         sm->addSystem(systemFactory->createCollisionSystem(bounds,destructable.get()));
         sm->addSystem(systemFactory->createConstructorSystem(destructable.get(),bounds));
+        sm->addSystem(systemFactory->createOutSystem(nEntities));
         sm->addSystem(systemFactory->createRenderSystem());
         w->setEventQueue(eventQueue);
         w->setEntityManager(em);

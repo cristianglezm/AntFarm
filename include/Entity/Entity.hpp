@@ -120,6 +120,10 @@ namespace ant{
              * @return long int Estados de la entidad.
              */
              inline long int getStates(){ return states; }
+             /**
+              * @brief Limpia los componentes de la entidad
+              */
+             void clear();
             /**
              * @brief Operator overload para comparar la entidad contra otra entidad.
              * @param e Entity entidad a la cual compararse.
