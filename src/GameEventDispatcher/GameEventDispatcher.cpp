@@ -15,6 +15,12 @@ namespace ant{
                 spawnEvents.notifyObservers(e);
                 return true;
                 break;
+            case EventType::CHANGE_COMMAND:
+                ChangeCommand.notifyObservers(e);
+                break;
+            case EventType::SELECT_ENTITY:
+                ClickEvents.notifyObservers(e);
+                break;
         }
         return false;
     }

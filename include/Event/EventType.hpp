@@ -11,5 +11,7 @@ class EventType{
         static const long int TERRAIN_COLLISION = 1;
         static const long int CHANGE_OVERTIME = 2;
         static const long int CHANGE_NENTITIES = 3;
+        static const long int CHANGE_COMMAND = 4;
+        static const long int SELECT_ENTITY = 5;
 };
 #endif // EVENT_TYPE_H

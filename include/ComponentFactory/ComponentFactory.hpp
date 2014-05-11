@@ -141,6 +141,18 @@ namespace ant{
              * @brief Crea un componente que indica la direccion.
              *
              * Este componente permite hacer que una entidad haga
+             * aparecer otras entidades.
+             *
+             * @code
+             *  Component<>
+             * @endcode
+             * @return std::unique_ptr<baseComponent> componente creado.
+             */
+            std::unique_ptr<baseComponent> createIn();
+            /**
+             * @brief Crea un componente que indica la direccion.
+             *
+             * Este componente permite hacer que una entidad haga
              * desparecer las entidades que colisiones contra ella.
              *
              * @code
@@ -148,19 +160,15 @@ namespace ant{
              * @endcode
              * @return std::unique_ptr<baseComponent> componente creado.
              */
-             std::unique_ptr<baseComponent> createIn();
-             /**
-              * @brief Crea un componente que indica la direccion.
-              *
-              * Este componente permite hacer que una entidad haga
-              * aparecer otras entidades.
-              *
-              * @code
-              *  Component<>
-              * @endcode
-              * @return std::unique_ptr<baseComponent> componente creado.
-              */
             std::unique_ptr<baseComponent> createOut();
+            /**
+             * @brief Crea un componente que tiene un numero de veces.
+             * @code
+             *  Component<int>
+             * @endcode
+             * @return std::unique_ptr<baseComponent> componente creado.
+             */
+            std::unique_ptr<baseComponent> createCounter(int count);
             ~ComponentFactory();
         private:
             std::shared_ptr<AssetManager> assets;

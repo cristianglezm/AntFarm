@@ -44,6 +44,13 @@ namespace ant{
         sp->setEventQueue(eventQueue);
         return sp;
     }
+    std::shared_ptr<constructorSystem> SystemFactory::createConstructorSystem(sf::VertexArray* GameMap,sf::FloatRect bounds){
+        std::shared_ptr<constructorSystem> csys(new constructorSystem(GameMap,bounds));
+        gameEventDispatcher->ClickEvents.addObserver(csys);
+        gameEventDispatcher->ChangeCommand.addObserver(csys);
+        csys->setEventQueue(eventQueue);
+        return csys;
+    }
     SystemFactory::~SystemFactory(){
 
     }

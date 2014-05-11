@@ -85,7 +85,7 @@ namespace ant{
              * @return std::shared_ptr<spawnSystem>
              */
             std::shared_ptr<spawnSystem> createSpawnSystem(int nEntities,EntityFactory* ef,sf::Time ot,sf::Vector2f spawnPoint,long int state);
-
+            std::shared_ptr<constructorSystem> createConstructorSystem(sf::VertexArray* GameMap,sf::FloatRect bounds);
             ~SystemFactory();
         private:
             std::shared_ptr<GameEventDispatcher> gameEventDispatcher;

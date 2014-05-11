@@ -25,6 +25,7 @@ namespace ant{
             sf::Vector2f DestructiblePosition;
             std::string imageID;
             sf::FloatRect bounds;
+            int count;
             /**
              *
              */

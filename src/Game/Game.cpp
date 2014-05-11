@@ -34,8 +34,36 @@ namespace ant{
                     case sf::Event::Closed:
                         running = false;
                         break;
-                    case sf::Event::MouseButtonPressed:
-
+                    case sf::Event::MouseButtonReleased:
+                        if(event.mouseButton.button == sf::Mouse::Left){
+                            eventQueue->push(std::shared_ptr<baseEvent>(
+                                    new Event<sf::Vector2i>(EventType::SELECT_ENTITY,
+                                                            sf::Mouse::getPosition(win)))
+                                         );
+                        }
+                        break;
+                    case sf::Event::KeyReleased:
+                        if(event.key.code == sf::Keyboard::S){
+                            eventQueue->push(std::shared_ptr<baseEvent>(
+                                    new Event<constructorSystem::command>(EventType::CHANGE_COMMAND,
+                                                            Constructions::stairs
+                                                            ))
+                                         );
+                        }
+                        if(event.key.code == sf::Keyboard::B){
+                            eventQueue->push(std::shared_ptr<baseEvent>(
+                                    new Event<constructorSystem::command>(EventType::CHANGE_COMMAND,
+                                                            Constructions::bridge
+                                                            ))
+                                         );
+                        }
+                        if(event.key.code == sf::Keyboard::H){
+                            eventQueue->push(std::shared_ptr<baseEvent>(
+                                    new Event<constructorSystem::command>(EventType::CHANGE_COMMAND,
+                                                            Constructions::hole
+                                                            ))
+                                         );
+                        }
                         break;
                 }
             }

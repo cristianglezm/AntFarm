@@ -16,6 +16,7 @@ namespace ant{
                 static const long int Ant = ComponentsMask::COMPONENT_VELOCITY
                                | ComponentsMask::COMPONENT_SPRITE
                                | ComponentsMask::COMPONENT_TRANSFORM
+                               | ComponentsMask::COMPONENT_COUNT
                                | ComponentsMask::COMPONENT_BOUNDS;
                 static const long int Door = ComponentsMask::COMPONENT_PASSAGE
                                 | ComponentsMask::COMPONENT_TRANSFORM

@@ -18,5 +18,6 @@ class ComponentsMask{
         static const long int COMPONENT_PASSAGE = 1 << 6;
         static const long int COMPONENT_OUT = 1 << 7;
         static const long int COMPONENT_IN = 1 << 8;
+        static const long int COMPONENT_COUNT = 1 << 9;
 };
 #endif // COMPONENT_MASK_H

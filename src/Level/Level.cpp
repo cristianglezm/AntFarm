@@ -9,7 +9,6 @@ namespace ant{
         init(bounds);
     }
     void Level::init(const sf::FloatRect& bounds){
-        /// @todo crear mundos iniciales, etc.
         loadLevel(bounds,"data/config/levels.json");
     }
     bool Level::loadLevel(const sf::FloatRect& bounds,const std::string& filename){

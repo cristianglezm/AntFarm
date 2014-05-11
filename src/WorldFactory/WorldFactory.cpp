@@ -94,6 +94,7 @@ namespace ant{
                                         ->getProperties<std::string,std::unique_ptr<sf::VertexArray>,sf::FloatRect>();
         auto& destructable = std::get<1>(properties);
         sm->addSystem(systemFactory->createCollisionSystem(bounds,destructable.get()));
+        sm->addSystem(systemFactory->createConstructorSystem(destructable.get(),bounds));
         sm->addSystem(systemFactory->createRenderSystem());
         w->setEventQueue(eventQueue);
         w->setEntityManager(em);

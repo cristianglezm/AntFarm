@@ -50,6 +50,9 @@ namespace ant{
         bool Entity::operator==(const Entity& e) const{
             return (e.Components == Components && e.mask == mask && e.name == name && states == e.states);
         }
+        bool Entity::operator!=(const Entity& e) const{
+            return (e.Components!=Components || e.mask != mask || e.name != name || states != e.states);
+        }
         bool Entity::operator==(const std::string& name) const{
             return (this->name == name);
         }

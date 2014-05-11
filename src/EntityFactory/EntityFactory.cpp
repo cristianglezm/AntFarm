@@ -55,6 +55,9 @@ namespace ant{
         if((mask & ComponentsMask::COMPONENT_DESTRUCTABLE) == ComponentsMask::COMPONENT_DESTRUCTABLE){
             e->addComponent(componentFactory->createDestructable(cs.DestructiblePosition,cs.imageID));
         }
+        if((mask & ComponentsMask::COMPONENT_COUNT) == ComponentsMask::COMPONENT_COUNT){
+            e->addComponent(componentFactory->createCounter(cs.count));
+        }
         return std::move(e);
     }
     void EntityFactory::setComponentFactory(std::shared_ptr<ComponentFactory> cf){

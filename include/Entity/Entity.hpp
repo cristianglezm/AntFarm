@@ -127,6 +127,12 @@ namespace ant{
              */
             bool operator==(const Entity& e) const;
             /**
+             * @brief Operator overload para comparar la entidad contra otra entidad
+             * @param e Entity entidad a la cual se compara.
+             * @return bool
+             */
+            bool operator!=(const Entity& e) const;
+            /**
              * @brief Operator overload para comparar la entidad por nombre.
              * @param name std::string nombre con el cual comparar.
              * @return bool

@@ -28,6 +28,14 @@ namespace ant{
              */
             Subject spawnEvents;
             /**
+             * @brief Eventos de click dan evento con un punto.
+             */
+            Subject ClickEvents;
+            /**
+             * @brief Envia un Comando al sistema de construccion.
+             */
+            Subject ChangeCommand;
+            /**
              * @brief Procesa el evento y lo envia a los observadores que esten subscritos.
              * @param e std::shared_ptr<baseEvent>
              * @return bool

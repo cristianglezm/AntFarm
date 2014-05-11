@@ -14,6 +14,7 @@ namespace ant{
         DestructiblePosition = sf::Vector2f(0,0);
         imageID = "";
         bounds = sf::FloatRect(0,0,0,0);
+        count = 10;
     }
     void ComponentSettings::loadSettings(const std::string& filename){
         std::fstream file(filename);
@@ -50,6 +51,8 @@ namespace ant{
                                                             v["Entity"]["Components"][size_t(i)]["properties"]["position"]["y"].getDouble()
                                                             );
                         imageID = v["Entity"]["Components"][size_t(i)]["properties"]["imageID"].getString();
+                    }else if(id == "buildCounter"){
+                        count = v["Entity"]["Components"][size_t(i)]["properties"]["count"].getInt();
                     }
                 }
             }
