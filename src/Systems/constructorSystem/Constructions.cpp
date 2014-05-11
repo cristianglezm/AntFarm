@@ -2,7 +2,30 @@
 
 namespace ant{
     constructorSystem::command Constructions::tunnel = [](Entity* e,sf::VertexArray* map,sf::FloatRect bounds){
-
+        if(e->hasComponent(ComponentsMask::COMPONENT_BOUNDS) && e->hasComponent(ComponentsMask::COMPONENT_TRANSFORM)){
+            auto& cTrans = e->getComponent(ComponentsMask::COMPONENT_TRANSFORM)
+                                ->getProperties<sf::Vector2f,sf::Vector2f,float>();
+            auto& position = std::get<0>(cTrans);
+            auto& rotation = std::get<2>(cTrans);
+            auto& eBounds = std::get<0>(e->getComponent(ComponentsMask::COMPONENT_BOUNDS)
+                                            ->getProperties<sf::FloatRect>());
+            /// @todo arreglar.
+            if(rotation == -90){
+                sf::Vector2f currentPos = sf::Vector2f(position.x+eBounds.width,position.y + eBounds.height);
+                for(int x=currentPos.x-10;x<(currentPos.x+eBounds.width+10);++x){
+                    for(int y=currentPos.y;y<(currentPos.y+10);--y){
+                        (*map)[bounds.height * x + y].color.a = 0;
+                    }
+                }
+            }else if(rotation == 90){
+                sf::Vector2f currentPos = sf::Vector2f(position.x,position.y + eBounds.height);
+                for(int x=currentPos.x;x>(currentPos.x-10);--x){
+                    for(int y=currentPos.y;y>(currentPos.y-10);--y){
+                        (*map)[bounds.height * x + y].color.a = 0;
+                    }
+                }
+            }
+        }
     };
     constructorSystem::command Constructions::bridge = [](Entity* e,sf::VertexArray* map,sf::FloatRect bounds){
         if(e->hasComponent(ComponentsMask::COMPONENT_BOUNDS) && e->hasComponent(ComponentsMask::COMPONENT_TRANSFORM)){
