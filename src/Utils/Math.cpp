@@ -24,7 +24,12 @@ namespace ant{
             }
             return v1;
         }
-
+        bool RectContains(const sf::FloatRect& e,const sf::FloatRect& bounds){
+            return (bounds.contains(e.left,e.top) &&
+                    bounds.contains(e.left+e.width,e.top) &&
+                    bounds.contains(e.left,e.top+e.height) &&
+                    bounds.contains(e.left+e.width,e.top+e.height));
+        }
         float getDirection(const sf::Vector2f& currentPosition,const sf::Vector2f& wantedPosition){
             sf::Vector2f result(wantedPosition.x - currentPosition.x,wantedPosition.y - currentPosition.y);
             result = normalize(result);

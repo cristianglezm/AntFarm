@@ -1,6 +1,7 @@
 #ifndef ANT_CONFIG_H
 #define ANT_CONFIG_H
 #include <string>
+#include <SFML/Graphics/Rect.hpp>
 namespace ant{
     /**
      * @brief Clase de configuracion con constantes de ficheros.
@@ -15,6 +16,7 @@ namespace ant{
             static const std::string ANT_FILE;
             static const std::string INDOOR_FILE;
             static const std::string OUTDOOR_FILE;
+            static const sf::FloatRect screenSize;
     };
 }
 #endif // CONFIG_H

@@ -84,6 +84,13 @@ namespace ant{
             }
         }
         /**
+         * @brief Comprueba que un rectangulo esta completamente dentro de otro.
+         * @param e sf::FloatRect rectangulo que tiene que estar dentro del otro.
+         * @param bounds sf::FloatRect rectangulo en el cual tienen que estar dentro.
+         * @return bool
+         */
+        bool RectContains(const sf::FloatRect& e,const sf::FloatRect& bounds);
+        /**
          * @fn getDirection
          * @brief Calcula el angulo en radianes respecto a otra posicion.
          * @param currentPosition sf::Vector2f

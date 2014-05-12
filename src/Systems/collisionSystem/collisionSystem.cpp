@@ -43,13 +43,13 @@ namespace ant{
                             eventQueue->push(std::shared_ptr<baseEvent>(new Event<Entity*,Entity*>(
                                                 EventType::COLLISION_EVENT,entity1.get(),entity2)));
                         }
-                        if(!gameBounds.contains(eBounds1.left,eBounds1.top)){
+                        if(!Utils::RectContains(eBounds1,gameBounds)){
                             eventQueue->push(std::shared_ptr<baseEvent>(new Event<Entity*>(
                                                 EventType::OUT_MAP,entity1.get())));
                         }else{
                             testTerrainCollision(entity1.get(),eBounds1);
                         }
-                        if(!gameBounds.contains(eBounds2.left,eBounds2.top)){
+                        if(!Utils::RectContains(eBounds2,gameBounds)){
                             eventQueue->push(std::shared_ptr<baseEvent>(new Event<Entity*>(
                                                 EventType::OUT_MAP,entity2)));
                         }else{

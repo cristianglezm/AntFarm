@@ -1,6 +1,8 @@
 #ifndef CONSTRUCTIONS_H
 #define CONSTRUCTIONS_H
 #include <Systems/constructorSystem/constructorSystem.hpp>
+#include <Config.hpp>
+#include <Utils/Math.hpp>
 namespace ant{
     class Constructions{
         public:
