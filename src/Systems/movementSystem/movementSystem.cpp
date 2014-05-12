@@ -16,12 +16,12 @@ namespace ant{
                     if(entity1->hasComponent(ComponentsMask::COMPONENT_VELOCITY)){
                         auto& velocity1 = entity1->getComponent(ComponentsMask::COMPONENT_VELOCITY)
                                                     ->getProperties<sf::Vector2f,float,float,float>();
-                        std::get<1>(velocity1) = 0;
+                        //std::get<1>(velocity1) = 0;
                     }
                     if(entity2->hasComponent(ComponentsMask::COMPONENT_VELOCITY)){
                         auto& velocity2 = entity2->getComponent(ComponentsMask::COMPONENT_VELOCITY)
                                                     ->getProperties<sf::Vector2f,float,float,float>();
-                        std::get<1>(velocity2) = 0;
+                        //std::get<1>(velocity2) = 0;
                     }
             }
                 break;

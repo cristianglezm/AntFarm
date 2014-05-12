@@ -6,8 +6,8 @@ namespace ant{
     }
     Game::Game()
     :gameEventDispatcher(new GameEventDispatcher())
-    ,level(new Level(Config::ASSETS_GAME_JSON,sf::FloatRect(0,0,800,600),gameEventDispatcher))
-    ,win(sf::VideoMode(800,600),"AntFarm", sf::Style::Close)
+    ,level(new Level(Config::ASSETS_GAME_JSON,Config::screenSize,gameEventDispatcher))
+    ,win(sf::VideoMode(Config::screenSize.width,Config::screenSize.height),"AntFarm", sf::Style::Close)
     ,running(true)
     ,currentLevel(0){
         eventQueue = level->getEventQueue();
@@ -80,6 +80,13 @@ namespace ant{
                                                             ))
                                          );
                         }
+                        if(event.key.code == sf::Keyboard::W){
+                            eventQueue->push(std::shared_ptr<baseEvent>(
+                                    new Event<constructorSystem::command>(EventType::CHANGE_COMMAND,
+                                                            Constructions::wall
+                                                            ))
+                                         );
+                        }
                         if(event.key.code == sf::Keyboard::H){
                             eventQueue->push(std::shared_ptr<baseEvent>(
                                     new Event<constructorSystem::command>(EventType::CHANGE_COMMAND,
@@ -91,9 +98,14 @@ namespace ant{
                     case sf::Event::KeyPressed:
                         if(sf::Keyboard::isKeyPressed(sf::Keyboard::LShift)){
                             ++GameSpeed;
-                        std::cout << GameSpeed << std::endl;
                             eventQueue->push(std::shared_ptr<baseEvent>(
                                     new Event<sf::Time>(EventType::CHANGE_OVERTIME,sf::seconds(GameSpeed*100)))
+                                         );
+                        }
+                        if(sf::Keyboard::isKeyPressed(sf::Keyboard::LControl)){
+                            --GameSpeed;
+                            eventQueue->push(std::shared_ptr<baseEvent>(
+                                    new Event<sf::Time>(EventType::CHANGE_OVERTIME,sf::seconds(GameSpeed*1000)))
                                          );
                         }
                         break;

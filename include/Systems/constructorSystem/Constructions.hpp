@@ -9,6 +9,7 @@ namespace ant{
             // commands
             static constructorSystem::command tunnel;
             static constructorSystem::command bridge;
+            static constructorSystem::command wall;
             static constructorSystem::command stairs;
             static constructorSystem::command hole;
             // colors

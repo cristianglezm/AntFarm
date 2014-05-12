@@ -43,6 +43,10 @@ namespace ant{
                             eventQueue->push(std::shared_ptr<baseEvent>(new Event<Entity*,Entity*>(
                                                 EventType::COLLISION_EVENT,entity1.get(),entity2)));
                         }
+                        if(eBounds2.intersects(eBounds1)){
+                            eventQueue->push(std::shared_ptr<baseEvent>(new Event<Entity*,Entity*>(
+                                                EventType::COLLISION_EVENT,entity1.get(),entity2)));
+                        }
                         if(!Utils::RectContains(eBounds1,gameBounds)){
                             eventQueue->push(std::shared_ptr<baseEvent>(new Event<Entity*>(
                                                 EventType::OUT_MAP,entity1.get())));

@@ -47,7 +47,7 @@ namespace ant{
                         e->removeState(States::BUILDING);
                         count = 10;
                     }else{
-                        if(!e->is(States::FALLING)){
+                        if(!(e->is(States::FALLING))){
                             --count;
                             (*build)(e.get(),map,boundsMap);
                         }

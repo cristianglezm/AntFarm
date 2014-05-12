@@ -80,6 +80,7 @@ namespace ant{
             }
             std::unique_ptr<baseComponent> ComponentFactory::createPassage(sf::Vector2f dest){
                 std::unique_ptr<baseComponent> c(new Component<sf::Vector2f>(ComponentsMask::COMPONENT_PASSAGE,dest));
+                return std::move(c);
             }
             std::unique_ptr<baseComponent> ComponentFactory::createIn(){
                 std::unique_ptr<baseComponent> c(new Component<>(ComponentsMask::COMPONENT_IN));
