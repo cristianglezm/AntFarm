@@ -44,7 +44,7 @@ namespace ant{
                 if(rotation == -90){
                     int j;
                     for(int i=(position.x+eBounds.width);i<(position.x+eBounds.width+10);++i){
-                        for(j=(position.y+eBounds.height);j>((position.y+eBounds.height)-20);--j){
+                        for(j=(position.y+eBounds.height);j>((position.y+eBounds.height)-50);--j){
                             if(Config::screenSize.contains(i,j)){
                                 (*map)[bounds.height * i + j].color = Grey;
                             }
@@ -53,10 +53,12 @@ namespace ant{
                             (*map)[bounds.height * i + j].color = lightGrey;
                         }
                     }
+                    position.y -= 5;
+                    position.x -= 5;
                 }else if(rotation == 90){
                     int j;
                     for(int i=position.x;i>(position.x-10);--i){
-                        for(j=(position.y+eBounds.height);j>((position.y+eBounds.height)-20);--j){
+                        for(j=(position.y+eBounds.height);j>((position.y+eBounds.height)-50);--j){
                             if(Config::screenSize.contains(i,j)){
                                 (*map)[bounds.height * i + j].color = Grey;
                             }
@@ -65,6 +67,8 @@ namespace ant{
                             (*map)[bounds.height * i + j].color = lightGrey;
                         }
                     }
+                    position.y -= 5;
+                    position.x += 5;
                 }
             }
         }
