@@ -20,7 +20,7 @@ namespace ant{
             /**
              * @brief constructor por defecto.
              * @param nEntities int numero de entidades a crear.
-             * @param ot sf::Time El tiempo en el que tiene que crear esas entidades.
+             * @param ot sf::Time cantidad para la cual usara para crear las entidades.
              * @param ef EntityFactory * Para crear las entidades.
              * @param spawnPoint sf::Vector2f sitio donde saldran las entidades.
              * @param long int states initial states when entities are created.
@@ -57,7 +57,6 @@ namespace ant{
             int nEntities;
             int createdEntities;
             sf::Time overTime;
-            sf::Time calcOverTime;
             sf::Time elapsedTime;
             sf::Vector2f spawnPoint;
             sf::Clock clock;

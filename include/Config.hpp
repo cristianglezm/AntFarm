@@ -16,7 +16,10 @@ namespace ant{
             static const std::string ANT_FILE;
             static const std::string INDOOR_FILE;
             static const std::string OUTDOOR_FILE;
+            static const std::string GUI_FILE;
+            static const std::string LEVEL_FILE;
             static const sf::FloatRect screenSize;
+
     };
 }
 #endif // CONFIG_H

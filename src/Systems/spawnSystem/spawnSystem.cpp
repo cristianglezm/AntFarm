@@ -6,12 +6,11 @@ namespace ant{
         RequiredComponents = ComponentsMask::COMPONENT_IN | ComponentsMask::COMPONENT_TRANSFORM;
         this->nEntities = nEntities;
         entityFactory = ef;
-        if(ot.asSeconds()==0){
+        if(ot.asSeconds()<=0){
             overTime = sf::seconds(1);
         }else{
             overTime = ot;
         }
-        calcOverTime = sf::seconds(nEntities / ot.asSeconds());
         elapsedTime = sf::seconds(0);
         this->spawnPoint = spawnPoint;
         createdEntities = 0;
@@ -21,7 +20,7 @@ namespace ant{
         states = state;
     }
     void spawnSystem::update(sf::Time dt){
-        if(elapsedTime > calcOverTime && createdEntities < nEntities){
+        if(elapsedTime > overTime && createdEntities < nEntities){
             elapsedTime = sf::seconds(0);
             createdEntities +=1;
             ComponentSettings cs;
@@ -39,17 +38,17 @@ namespace ant{
     void spawnSystem::onNotify(std::shared_ptr<baseEvent> e){
         switch(e->getType()){
             case EventType::CHANGE_OVERTIME:{
-                auto& ot = e->getAttributes<sf::Time>();
-                if(std::get<0>(ot).asSeconds() == 0){
-                    calcOverTime = sf::seconds(nEntities / overTime.asSeconds());
+                auto& ot = std::get<0>(e->getAttributes<sf::Time>());
+                if(ot.asSeconds() <= 0){
+                    overTime = sf::seconds(1);
                 }else{
-                    calcOverTime = sf::seconds(nEntities / std::get<0>(ot).asSeconds());
+                    overTime = ot;
                 }
                 break;
             }
             case EventType::CHANGE_NENTITIES:{
-                auto& numberOfEntitites = e->getAttributes<int>();
-                calcOverTime = sf::seconds(std::get<0>(numberOfEntitites) / overTime.asSeconds());
+                auto& numberOfEntitites = std::get<0>(e->getAttributes<int>());
+                nEntities = numberOfEntitites;
                 break;
             }
         }

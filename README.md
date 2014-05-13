@@ -1,7 +1,8 @@
 AntFarm
 ===
 
-AntFarm is a game about ants..
+AntFarm is a game about ants that are trapped in some place and need to
+get to the other door to escape.
 
 
 Requires CMake and one of the following compilers:
@@ -9,6 +10,7 @@ Requires CMake and one of the following compilers:
 * GCC 4.8 or newer;
 * Clang 3.3 or newer (Xcode 5.0 or newer on OS X);
 * Visual Studio 2010 or newer;
+
 
 Installing
 ===
@@ -34,4 +36,4 @@ Use CMake to build the project.
 Documentation
 ===
 
-The documentation can be found on "doc".
+The documentation can be found on "doc" or be generated with doxyfile(its need to be configured)

@@ -6,6 +6,7 @@
 			{"id":"background1","filepath":"data/backgrounds/background1.png"},
 			{"id":"background2","filepath":"data/backgrounds/background2.png"},
 			{"id":"background3","filepath":"data/backgrounds/background3.png"},
+			{"id":"defaultButton","filepath":"data/gui/button.png"},
 		   ],
 	"images":[
 		  ],

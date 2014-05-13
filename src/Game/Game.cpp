@@ -18,7 +18,12 @@ namespace ant{
         fps.setFont(assets->getFont("Outwrite"));
         fps.setCharacterSize(25);
         fps.setPosition(745,550);
-        GameSpeed = 0;
+        version.setFont(assets->getFont("Outwrite"));
+        version.setCharacterSize(25);
+        version.setPosition(5,550);
+        version.setString(Config::VERSION);
+        GameSpeed = 1;
+        loadGUIConf(Config::GUI_FILE);
     }
     void Game::onNotify(std::shared_ptr<baseEvent> e){
         switch(e->getType()){
@@ -56,6 +61,15 @@ namespace ant{
                                     new Event<sf::Vector2i>(EventType::SELECT_ENTITY,
                                                             sf::Mouse::getPosition(win)))
                                          );
+                            for(int i=0;i<buttons.size();++i){
+                                if(buttons[i]->contains((sf::Vector2f)sf::Mouse::getPosition(win))){
+                                    eventQueue->push(std::shared_ptr<baseEvent>(
+                                    new Event<constructorSystem::command>(EventType::CHANGE_COMMAND,
+                                                            buttons[i]->getAction()
+                                                            ))
+                                         );
+                                }
+                            }
                         }
                         if(event.mouseButton.button == sf::Mouse::Right){
                             eventQueue->push(std::shared_ptr<baseEvent>(
@@ -112,20 +126,22 @@ namespace ant{
                                                             ))
                                          );
                         }
+                        if(event.key.code == sf::Keyboard::LShift){
+                            ++GameSpeed;
+                            std::cout << "aumento: " << GameSpeed << std::endl;
+                            eventQueue->push(std::shared_ptr<baseEvent>(
+                                    new Event<sf::Time>(EventType::CHANGE_OVERTIME,sf::seconds(GameSpeed)))
+                                         );
+                        }
+                        if(event.key.code == sf::Keyboard::LControl){
+                            --GameSpeed;
+                            std::cout << "descenso: " << GameSpeed << std::endl;
+                            eventQueue->push(std::shared_ptr<baseEvent>(
+                                    new Event<sf::Time>(EventType::CHANGE_OVERTIME,sf::seconds(GameSpeed)))
+                                         );
+                        }
                         break;
                     case sf::Event::KeyPressed:
-                        if(sf::Keyboard::isKeyPressed(sf::Keyboard::LShift)){
-                            ++GameSpeed;
-                            eventQueue->push(std::shared_ptr<baseEvent>(
-                                    new Event<sf::Time>(EventType::CHANGE_OVERTIME,sf::seconds(GameSpeed*100)))
-                                         );
-                        }
-                        if(sf::Keyboard::isKeyPressed(sf::Keyboard::LControl)){
-                            --GameSpeed;
-                            eventQueue->push(std::shared_ptr<baseEvent>(
-                                    new Event<sf::Time>(EventType::CHANGE_OVERTIME,sf::seconds(GameSpeed*1000)))
-                                         );
-                        }
                         break;
                 }
             }
@@ -136,8 +152,53 @@ namespace ant{
             }
             level->render(currentLevel,win);
             win.draw(fps);
+            win.draw(version);
+            for(int i=0;i<buttons.size();++i){
+                win.draw(*buttons[i]);
+            }
             win.display();
             lastFrame = elapsedTime;
+        }
+    }
+    void Game::loadGUIConf(const std::string& filename){
+        std::fstream file(filename);
+        JsonBox::Value v(file);
+        if(!v["GUI"]["buttons"].isNull()){
+            int size = v["GUI"]["buttons"].getArray().size();
+            for(int i=0;i<size;++i){
+                sf::Vector2f pos(v["GUI"]["buttons"][size_t(i)]["position"]["x"].getInt(),
+                                 v["GUI"]["buttons"][size_t(i)]["position"]["y"].getInt());
+                sf::Vector2f bSize(v["GUI"]["buttons"][size_t(i)]["size"]["width"].getInt(),
+                                   v["GUI"]["buttons"][size_t(i)]["size"]["height"].getInt());
+                sf::Text t;
+                t.setFont(assets->getFont("Outwrite"));
+                t.setString(v["GUI"]["buttons"][size_t(i)]["text"]["string"].getString());
+                t.setPosition(pos);
+                t.setCharacterSize(v["GUI"]["buttons"][size_t(i)]["text"]["size"].getInt());
+                sf::Sprite sprite;
+                sprite.setPosition(pos);
+                if(v["GUI"]["buttons"][size_t(i)]["imageID"].getString() != ""){
+                    sprite.setTexture(assets->getTexture(v["GUI"]["buttons"][size_t(i)]["imageID"].getString()));
+                }
+                std::string actionID = v["GUI"]["buttons"][size_t(i)]["action"].getString();
+                constructorSystem::command action;
+                if(actionID == "climb"){
+                    action = Constructions::climb;
+                }else if(actionID == "dig"){
+                    action = Constructions::hole;
+                }else if(actionID == "tunnel"){
+                    action = Constructions::tunnel;
+                }else if(actionID == "stairs"){
+                    action = Constructions::stairs;
+                }else if(actionID == "wall"){
+                    action = Constructions::wall;
+                }else if(actionID == "stop"){
+                    action = Constructions::stop;
+                }else if(actionID == "bridge"){
+                    action = Constructions::bridge;
+                }
+                buttons.push_back(Utils::makeUniquePtr<GUI::Button>(pos,bSize,sprite,t,action));
+            }
         }
     }
     Game::~Game(){

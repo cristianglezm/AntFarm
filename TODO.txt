@@ -20,8 +20,10 @@ Component		- Done
 ComponentSettings 	-
 	ir Agregando componentes
 ComponentFactory	-
+	ir Agregando componentes
 Entity			- Done
 EntityFactory		-
+	ir Agregando entidades
 EntityManager		- Done
 baseEvent		- Done
 Event			- Done
@@ -36,41 +38,21 @@ ComponentsMask		-
 	agregar componentes segun se van creando.
 World			- Done
 WorldManager		- Done
-WorldFactory		-
+WorldFactory		- 
+	Falta añadir algunos elementos.
 System			- Done
 renderSystem		- Done
-movementSystem		-
-	implementar Evento Collision por pixel.
-collisionSystem		-
-	Implementar colision por pixel.
+movementSystem		- Done
+outSystem		- Done
+collisionSystem		- Done
 QuadTree		- Done
-gravitySystem		-
-diggingSystem		-
-		Map
-		Width
-		Height
-		update
-			pasa las nuevas cordenadas si la hormiga esta llevando tierra-> actualiza esta.
-		render
-			si la hormiga tiene tierra -> dibuja el vertexarray
-IASystem		-
-	Respondera a las ordenes puestas por input system.
-inputSystem		-
-	Eventos
-			Selection
-				ej: Envia coordenadas x,y del primer click y las del release
-				    calcula el rectangulo, las entidades que tengan componente
-				    select y esten dentro se les activa.
-			Ordenes
-				ej: las ordenes son event<int(SEARCH_FOOD)>(TIPO(ORDER));
-				    las que esten seleccionadas se les activa el input de SEARCH FOOD
-Level			-
-AssetManager		-
-	Implementar mas assets
-Game			-
+gravitySystem		- Done
+Level			- Done
+AssetManager		- Done
+Game			- Done
 Config			-
 	agregar cosas cuando se necesiten
-	Agregar constantes para nombres de entidades etc.
+	Agregar constantes para ficheros de entidades etc.
 SystemManager		- Done
-SystemFactory		-
+SystemFactory		- Done
 -----------------------------------------------------

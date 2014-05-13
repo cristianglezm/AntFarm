@@ -65,7 +65,7 @@ namespace ant{
             }
             ComponentSettings cs;
             /// @todo Completar
-            cs.loadSettings("data/config/entities/Level.json");
+            cs.loadSettings(Config::LEVEL_FILE);
             cs.imageID = name;
             cs.spriteID = background;
             cs.entityName = name;
@@ -82,10 +82,10 @@ namespace ant{
             if(hasEnteredOutDoor){
                 ComponentSettings cs;
                 cs.loadSettings(Config::OUTDOOR_FILE);
-                cs.position = outDoor - sf::Vector2f(0,55);
-                cs.scale = sf::Vector2f(0.5,0.5);
+                cs.bounds.width = cs.bounds.width*cs.scale.x;
+                cs.bounds.height = cs.bounds.height*cs.scale.y;
+                cs.position = outDoor - sf::Vector2f(0,outDoor.y-cs.bounds.height);
                 em->addEntity(entityFactory->createEntity(EntityFactory::OutDoor,cs));
-                /// @todo agregar sistema para que elimine las entidades que choquen contra esta puerta.
             }
         }
         sm->addSystem(systemFactory->createMovementSystem());
