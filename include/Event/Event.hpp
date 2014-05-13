@@ -83,12 +83,12 @@ namespace ant{
 
     template<typename...T>
     void baseEvent::setAttributes(std::tuple<T...> attributes){
-        auto& casted = dynamic_cast<Event<T...>&>(*this);
+        auto& casted = static_cast<Event<T...>&>(*this);
         casted.setAttributes(attributes);
     }
     template<typename...T>
     const std::tuple<T...>& baseEvent::getAttributes() const {
-        auto& casted = dynamic_cast<const Event<T...>&>(*this);
+        auto& casted = static_cast<const Event<T...>&>(*this);
         return casted.getAttributes();
     }
 

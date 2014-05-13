@@ -107,13 +107,13 @@ namespace ant{
 
     template <typename...T>
     void baseComponent::setProperties(std::tuple<T...> properties){
-        auto& casted = dynamic_cast<Component<T...>&>(*this);
+        auto& casted = static_cast<Component<T...>&>(*this);
         casted.setProperties(properties);
     }
 
     template<typename...T>
     std::tuple<T...>& baseComponent::getProperties(){
-        auto& casted = dynamic_cast<Component<T...>&>(*this);
+        auto& casted = static_cast<Component<T...>&>(*this);
         return casted.getProperties();
     }
 }
