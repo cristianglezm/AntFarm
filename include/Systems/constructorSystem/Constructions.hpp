@@ -12,6 +12,8 @@ namespace ant{
             static constructorSystem::command wall;
             static constructorSystem::command stairs;
             static constructorSystem::command hole;
+            static constructorSystem::command climb;
+            static constructorSystem::command stop;
             // colors
             static sf::Color Grey;
             static sf::Color lightGrey;

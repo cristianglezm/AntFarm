@@ -13,7 +13,7 @@ namespace ant{
                 if(rotation == -90){
                     sf::Vector2f currentPos = sf::Vector2f(position.x+eBounds.width,position.y + eBounds.height);
                     for(int x=currentPos.x;x<(currentPos.x + 10);++x){
-                        for(int y=currentPos.y;y>(currentPos.y-eBounds.height-5);--y){
+                        for(int y=currentPos.y;y>(currentPos.y-eBounds.height);--y){
                             if(Config::screenSize.contains(x,y)){
                                 (*map)[bounds.height * x + y].color.a = 0;
                             }
@@ -22,13 +22,35 @@ namespace ant{
                 }else if(rotation == 90){
                     sf::Vector2f currentPos = sf::Vector2f(position.x,position.y + eBounds.height);
                     for(int x=currentPos.x;x>(currentPos.x-10);--x){
-                        for(int y=currentPos.y;y>(currentPos.y-eBounds.height-5);--y){
+                        for(int y=currentPos.y;y>(currentPos.y-eBounds.height);--y){
                             if(Config::screenSize.contains(x,y)){
                                 (*map)[bounds.height * x + y].color.a = 0;
                             }
                         }
                     }
                 }
+            }
+        }
+    };
+    constructorSystem::command Constructions::climb = [](Entity* e,sf::VertexArray* map,sf::FloatRect bounds){
+        if(e->hasComponent(ComponentsMask::COMPONENT_COUNT)){
+            auto& count = std::get<0>(e->getComponent(ComponentsMask::COMPONENT_COUNT)->getProperties<int>());
+            if(count == 9){
+                count = 20;
+            }
+            if(count <= 0){
+                e->removeState(States::CLIMBING);
+            }else{
+                e->addState(States::CLIMBING);
+            }
+        }
+    };
+    constructorSystem::command Constructions::stop = [](Entity* e,sf::VertexArray* map,sf::FloatRect bounds){
+        if(e->hasComponent(ComponentsMask::COMPONENT_COUNT)){
+            auto& count = std::get<0>(e->getComponent(ComponentsMask::COMPONENT_COUNT)->getProperties<int>());
+            if(count <= 0){
+                e->removeState(States::BUILDING);
+                e->removeState(States::CLIMBING);
             }
         }
     };

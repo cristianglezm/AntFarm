@@ -57,6 +57,17 @@ namespace ant{
                                                             sf::Mouse::getPosition(win)))
                                          );
                         }
+                        if(event.mouseButton.button == sf::Mouse::Right){
+                            eventQueue->push(std::shared_ptr<baseEvent>(
+                                    new Event<constructorSystem::command>(EventType::CHANGE_COMMAND,
+                                                            Constructions::stop
+                                                            ))
+                                         );
+                            eventQueue->push(std::shared_ptr<baseEvent>(
+                                    new Event<sf::Vector2i>(EventType::SELECT_ENTITY,
+                                                            sf::Mouse::getPosition(win)))
+                                         );
+                        }
                         break;
                     case sf::Event::KeyReleased:
                         if(event.key.code == sf::Keyboard::S){
@@ -91,6 +102,13 @@ namespace ant{
                             eventQueue->push(std::shared_ptr<baseEvent>(
                                     new Event<constructorSystem::command>(EventType::CHANGE_COMMAND,
                                                             Constructions::hole
+                                                            ))
+                                         );
+                        }
+                        if(event.key.code == sf::Keyboard::C){
+                            eventQueue->push(std::shared_ptr<baseEvent>(
+                                    new Event<constructorSystem::command>(EventType::CHANGE_COMMAND,
+                                                            Constructions::climb
                                                             ))
                                          );
                         }
