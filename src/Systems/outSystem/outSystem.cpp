@@ -38,17 +38,18 @@ namespace ant{
         EntityManager::iterator i = em->begin();
         while(i != em->end()){
             if((*i)->is(States::UNSAVED)){
-               i = em->removeEntity(i++);
+               i = em->removeEntity(i);
                --totalEntities;
-            }
-            if((*i)->is(States::SAVED)){
+            }else if((*i)->is(States::SAVED)){
                 ++savedEntities;
-                i = em->removeEntity(i++);
+                i = em->removeEntity(i);
             }
             ++i;
         }
-        if(savedEntities==totalEntities){
-            eventQueue->push(std::shared_ptr<baseEvent>(new Event<>(EventType::LEVEL_COMPLETE)));
+        if(totalEntities!=0){
+            if(savedEntities==totalEntities){
+                eventQueue->push(std::shared_ptr<baseEvent>(new Event<>(EventType::LEVEL_COMPLETE)));
+            }
         }
     }
     outSystem::~outSystem(){

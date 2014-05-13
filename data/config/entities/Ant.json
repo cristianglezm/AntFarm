@@ -32,6 +32,12 @@
                                             "id":"Ant",
                                         },
                         },
+                        {
+                            "id":"buildCounter",
+                            "properties":{
+                                            "count":5,
+                                        },
+                        },
                     ],
     }
 }

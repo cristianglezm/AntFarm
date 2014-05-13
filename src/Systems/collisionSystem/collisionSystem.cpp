@@ -66,11 +66,11 @@ namespace ant{
     }
     void collisionSystem::testTerrainCollision(Entity* entity,const sf::FloatRect& eBounds){
         /* Comprobamos si colisiona con los seis puntos
-         * 1 esquina superior izquierda -> envia evento de colision con suelo 0
-         * 2 esquina superior derecha -> envia evento de colision con suelo 1
-         * 3 esquina inferior mediana izquierda -> envia evento de colision con suelo para subir escalones 2
+         * 1 esquina superior izquierda -> envia evento de colision con pared 0
+         * 2 esquina superior derecha -> envia evento de colision con pared 1
+         * 3 esquina inferior mediana izquierda -> envia evento de colision con escalon para subirlo 2
          * 4 esquina inferior izquierda -> Cambia estado de FALLING a GROUND
-         * 5 esquina inferior mediana derecha -> envia evento de colision con suelo para subir escalones 2
+         * 5 esquina inferior mediana derecha -> envia evento de colision con escalon para subirlo 2
          * 6 esquina inferior derecha -> Cambia estado de FALLING a GROUND
          */
         if((*gameMap)[((int)gameBounds.height) * ((int)eBounds.left) + ((int)eBounds.top)].color.a == 255){
@@ -100,8 +100,8 @@ namespace ant{
                 eventQueue->push(std::shared_ptr<baseEvent>(new Event<Entity*,int>(
                                 EventType::TERRAIN_COLLISION,entity,4)));
         }else{
-            entity->removeState(States::GROUND);
-            entity->addState(States::FALLING);
+                entity->removeState(States::GROUND);
+                entity->addState(States::FALLING);
         }
     }
     collisionSystem::~collisionSystem(){

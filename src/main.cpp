@@ -4,7 +4,7 @@
  * @mainpage
  * @file main.cpp
  * @fn main
- * Empieza el juego.
+ * @brief entrada de la aplicacion.
  * @author Cristian Glez <Cristian.glez.m@gmail.com>
  * @author Xavi Diaz <xdiazcarrasco@iesesteveterradas.cat>
  * @version 0.1

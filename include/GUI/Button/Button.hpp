@@ -8,6 +8,11 @@
 #include <SFML/Graphics/Text.hpp>
 namespace ant{
     namespace GUI{
+        /**
+         * @brief Clase de un simple boton.
+         * @author Cristian Glez <cristian.glez.m@gmail.com>
+         * @version 0.1
+         */
         class Button : public sf::Drawable{
             public:
                 Button();

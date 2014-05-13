@@ -7,12 +7,12 @@ namespace ant{
         }
         Entity::Entity(std::string name){
             this->name = name;
-            this->mask = 0;
+            mask = 0;
             states = 0;
         }
         Entity::Entity(std::string name,map components){
             this->name = name;
-            this->mask = 0;
+            mask = 0;
             states = 0;
             this->Components = std::move(components);
             for(auto& c: Components){
@@ -48,6 +48,7 @@ namespace ant{
             }
         }
         void Entity::clear(){
+            mask = 0;
             Components.clear();
         }
         bool Entity::operator==(const Entity& e) const{
