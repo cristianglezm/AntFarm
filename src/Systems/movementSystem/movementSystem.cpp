@@ -37,7 +37,6 @@ namespace ant{
                     switch(type){
                         case 0:
                             if(entity->is(States::CLIMBING)){
-                                position.y -=0.5;
                                 rotation = 180;
                             }else{
                                 rotation = -90;
@@ -45,7 +44,6 @@ namespace ant{
                             break;
                         case 1:
                             if(entity->is(States::CLIMBING)){
-                                position.y -=0.5;
                                 rotation = 180;
                             }else{
                                 rotation = 90;

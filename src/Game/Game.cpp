@@ -97,6 +97,20 @@ namespace ant{
                                                             ))
                                          );
                         }
+                        if(event.key.code == sf::Keyboard::D){
+                            eventQueue->push(std::shared_ptr<baseEvent>(
+                                    new Event<constructorSystem::command>(EventType::CHANGE_COMMAND,
+                                                            Constructions::downhill
+                                                            ))
+                                         );
+                        }
+                        if(event.key.code == sf::Keyboard::U){
+                            eventQueue->push(std::shared_ptr<baseEvent>(
+                                    new Event<constructorSystem::command>(EventType::CHANGE_COMMAND,
+                                                            Constructions::uphill
+                                                            ))
+                                         );
+                        }
                         if(event.key.code == sf::Keyboard::B){
                             eventQueue->push(std::shared_ptr<baseEvent>(
                                     new Event<constructorSystem::command>(EventType::CHANGE_COMMAND,
@@ -202,6 +216,10 @@ namespace ant{
                     action = Constructions::stop;
                 }else if(actionID == "bridge"){
                     action = Constructions::bridge;
+                }else if(actionID == "downhill"){
+                    action = Constructions::downhill;
+                }else if(actionID == "uphill"){
+                    action = Constructions::uphill;
                 }
                 buttons.push_back(Utils::makeUniquePtr<GUI::Button>(pos,bSize,sprite,t,action));
             }

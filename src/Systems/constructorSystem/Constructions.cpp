@@ -13,7 +13,7 @@ namespace ant{
                 if(rotation == -90){
                     sf::Vector2f currentPos = sf::Vector2f(position.x+eBounds.width,position.y + eBounds.height);
                     for(int x=currentPos.x;x<(currentPos.x + 10);++x){
-                        for(int y=currentPos.y;y>(currentPos.y-eBounds.height-5);--y){
+                        for(int y=currentPos.y-1;y>(currentPos.y-eBounds.height-5);--y){
                             if(Config::screenSize.contains(x,y)){
                                 if((*map)[bounds.height * x + y].color.a == 255){
                                     (*map)[bounds.height * x + y].color.a = 0;
@@ -24,7 +24,77 @@ namespace ant{
                 }else if(rotation == 90){
                     sf::Vector2f currentPos = sf::Vector2f(position.x,position.y + eBounds.height);
                     for(int x=currentPos.x;x>(currentPos.x-10);--x){
-                        for(int y=currentPos.y;y>(currentPos.y-eBounds.height-5);--y){
+                        for(int y=currentPos.y-1;y>(currentPos.y-eBounds.height-5);--y){
+                            if(Config::screenSize.contains(x,y)){
+                                if((*map)[bounds.height * x + y].color.a == 255){
+                                    (*map)[bounds.height * x + y].color.a = 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    };
+    constructorSystem::command Constructions::uphill = [](Entity* e,sf::VertexArray* map,sf::FloatRect bounds){
+        if(e->hasComponent(ComponentsMask::COMPONENT_BOUNDS) && e->hasComponent(ComponentsMask::COMPONENT_TRANSFORM)){
+            auto& cTrans = e->getComponent(ComponentsMask::COMPONENT_TRANSFORM)
+                                ->getProperties<sf::Vector2f,sf::Vector2f,float>();
+            auto& position = std::get<0>(cTrans);
+            auto& rotation = std::get<2>(cTrans);
+            auto& eBounds = std::get<0>(e->getComponent(ComponentsMask::COMPONENT_BOUNDS)
+                                            ->getProperties<sf::FloatRect>());
+            if(Utils::RectContains(eBounds,Config::screenSize)){
+                if(rotation == -90){
+                    sf::Vector2f currentPos = sf::Vector2f(position.x+eBounds.width,position.y + eBounds.height);
+                    for(int x=currentPos.x;x<(currentPos.x + 10);++x){
+                        for(int y=currentPos.y-10;y>(currentPos.y-eBounds.height-20);--y){
+                            if(Config::screenSize.contains(x,y)){
+                                if((*map)[bounds.height * x + y].color.a == 255){
+                                    (*map)[bounds.height * x + y].color.a = 0;
+                                }
+                            }
+                        }
+                    }
+                }else if(rotation == 90){
+                    sf::Vector2f currentPos = sf::Vector2f(position.x,position.y + eBounds.height);
+                    for(int x=currentPos.x;x>(currentPos.x-10);--x){
+                        for(int y=currentPos.y-10;y>(currentPos.y-eBounds.height-20);--y){
+                            if(Config::screenSize.contains(x,y)){
+                                if((*map)[bounds.height * x + y].color.a == 255){
+                                    (*map)[bounds.height * x + y].color.a = 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    };
+    constructorSystem::command Constructions::downhill = [](Entity* e,sf::VertexArray* map,sf::FloatRect bounds){
+        if(e->hasComponent(ComponentsMask::COMPONENT_BOUNDS) && e->hasComponent(ComponentsMask::COMPONENT_TRANSFORM)){
+            auto& cTrans = e->getComponent(ComponentsMask::COMPONENT_TRANSFORM)
+                                ->getProperties<sf::Vector2f,sf::Vector2f,float>();
+            auto& position = std::get<0>(cTrans);
+            auto& rotation = std::get<2>(cTrans);
+            auto& eBounds = std::get<0>(e->getComponent(ComponentsMask::COMPONENT_BOUNDS)
+                                            ->getProperties<sf::FloatRect>());
+            if(Utils::RectContains(eBounds,Config::screenSize)){
+                if(rotation == -90){
+                    sf::Vector2f currentPos = sf::Vector2f(position.x+eBounds.width,position.y + eBounds.height);
+                    for(int x=currentPos.x;x<(currentPos.x + 10);++x){
+                        for(int y=currentPos.y+5;y>(currentPos.y-eBounds.height-5);--y){
+                            if(Config::screenSize.contains(x,y)){
+                                if((*map)[bounds.height * x + y].color.a == 255){
+                                    (*map)[bounds.height * x + y].color.a = 0;
+                                }
+                            }
+                        }
+                    }
+                }else if(rotation == 90){
+                    sf::Vector2f currentPos = sf::Vector2f(position.x,position.y + eBounds.height);
+                    for(int x=currentPos.x;x>(currentPos.x-10);--x){
+                        for(int y=currentPos.y+5;y>(currentPos.y-eBounds.height-5);--y){
                             if(Config::screenSize.contains(x,y)){
                                 if((*map)[bounds.height * x + y].color.a == 255){
                                     (*map)[bounds.height * x + y].color.a = 0;
