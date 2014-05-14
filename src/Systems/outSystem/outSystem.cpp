@@ -46,7 +46,7 @@ namespace ant{
             }
             ++i;
         }
-        if(totalEntities!=0){
+        if(totalEntities>0){
             if(savedEntities==totalEntities){
                 eventQueue->push(std::shared_ptr<baseEvent>(new Event<>(EventType::LEVEL_COMPLETE)));
             }

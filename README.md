@@ -1,8 +1,7 @@
 AntFarm
 ===
 
-AntFarm is a game about ants that are trapped in some place and need to
-get to the other door to escape.
+AntFarm is a game about ants that are trapped in some place and need to get to the other door to escape.
 
 
 Requires CMake and one of the following compilers:
@@ -36,4 +35,4 @@ Use CMake to build the project.
 Documentation
 ===
 
-The documentation can be found on "doc" or be generated with doxyfile(its need to be configured)
+The documentation can be found on "doc" or be generated with doxygen(it needs to be configured)

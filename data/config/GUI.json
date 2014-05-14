@@ -1,9 +1,7 @@
 {
 "GUI":{
         "buttons":[
-                    {"position":{"x":5,"y":450,},"text":{"string":"climb","size":15},"imageID":"defaultButton","size":{"width":100,"height":100,},"action":"climb"},
-                    {"position":{"x":105,"y":450,},"text":{"string":"bridge","size":15},"imageID":"defaultButton","size":{"width":100,"height":100,},"action":"bridge"},
-                    {"position":{"x":205,"y":450,},"text":{"string":"stairs","size":15},"imageID":"defaultButton","size":{"width":100,"height":100,},"action":"stairs"},
+                    
                 ],
        },
 }

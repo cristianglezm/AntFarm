@@ -49,14 +49,16 @@ namespace ant{
             bool running;
             int currentLevel;
             int totalLevels;
+            sf::Text version;
+            int GameSpeed;
             bool isPause;
             // fps
             sf::Clock clock;
             sf::Time elapsedTime;
+            sf::Time timePoint1;
+            sf::Time timePoint2;
             sf::Time lastFrame;
             sf::Text fps;
-            sf::Text version;
-            int GameSpeed;
             std::shared_ptr<Game> self;
     };
 }
