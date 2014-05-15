@@ -19,7 +19,7 @@ namespace ant{
             if(e->hasComponent(RequiredComponents) && e->is(States::FALLING)){
                 auto& properties = e->getComponent(RequiredComponents)
                                     ->getProperties<sf::Vector2f,float,float,float>();
-                std::get<0>(properties).y = Gravity;
+                std::get<0>(properties).y = Gravity ;
             }
         }
     }

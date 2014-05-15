@@ -89,7 +89,7 @@ namespace ant{
             }
         }
         sm->addSystem(systemFactory->createMovementSystem());
-        sm->addSystem(systemFactory->createGravitySystem(0.9));
+        sm->addSystem(systemFactory->createGravitySystem(1.9));
         auto& properties = em->getEntity(name)->getComponent(ComponentsMask::COMPONENT_DESTRUCTABLE)
                                         ->getProperties<std::string,std::unique_ptr<sf::VertexArray>,sf::FloatRect>();
         auto& destructable = std::get<1>(properties);
