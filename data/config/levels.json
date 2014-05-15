@@ -1,6 +1,7 @@
 {
     "levels":[
             {"name":"level1","background":"background3","nEntities":50,"image":"data/levels/level1.png","overtime":1,},
-		{"name":"level2","background":"background2","nEntities":100,"image":"data/levels/level2.png","overtime":2,},
+	    {"name":"level2","background":"background2","nEntities":100,"image":"data/levels/level2.png","overtime":2,},
+	    {"name":"level3","background":"background3","nEntities":100,"image":"data/levels/level3.png","overtime":1,},
         ]
 }
