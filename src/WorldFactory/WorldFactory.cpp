@@ -84,7 +84,7 @@ namespace ant{
                 cs.loadSettings(Config::OUTDOOR_FILE);
                 cs.bounds.width = cs.bounds.width*cs.scale.x;
                 cs.bounds.height = cs.bounds.height*cs.scale.y;
-                cs.position = outDoor - sf::Vector2f(0,outDoor.y-cs.bounds.height);
+                cs.position = outDoor - sf::Vector2f(cs.bounds.width,cs.bounds.height-10);
                 em->addEntity(entityFactory->createEntity(EntityFactory::OutDoor,cs));
             }
         }

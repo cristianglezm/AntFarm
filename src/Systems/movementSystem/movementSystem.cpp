@@ -37,7 +37,6 @@ namespace ant{
                     switch(type){
                         case 0:
                             if(entity->is(States::CLIMBING)){
-                                position.y -=0.5;
                                 rotation = 180;
                             }else{
                                 rotation = -90;
@@ -45,7 +44,6 @@ namespace ant{
                             break;
                         case 1:
                             if(entity->is(States::CLIMBING)){
-                                position.y -=0.5;
                                 rotation = 180;
                             }else{
                                 rotation = 90;
@@ -82,8 +80,8 @@ namespace ant{
                 auto& velocity = entity->getComponent(ComponentsMask::COMPONENT_VELOCITY)
                                         ->getProperties<sf::Vector2f,float,float,float>();
                 if(entity->is(States::GROUND)){
-                    std::get<0>(velocity) = sf::Vector2f(std::get<1>(velocity) *  -std::sin(Utils::toRadians<float>(std::get<2>(transf))),
-                                                         std::get<1>(velocity) *  std::cos(Utils::toRadians<float>(std::get<2>(transf))));
+                    std::get<0>(velocity) = sf::Vector2f(std::get<1>(velocity) *  -std::sin(Utils::toRadians<float>(std::get<2>(transf))) ,
+                                                         std::get<1>(velocity) *  std::cos(Utils::toRadians<float>(std::get<2>(transf))) );
                 /// @todo agregar al calculo delta time
                 }
                 std::get<0>(transf) += std::get<0>(velocity);

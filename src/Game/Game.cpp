@@ -12,8 +12,11 @@ namespace ant{
     ,currentLevel(0){
         eventQueue = level->getEventQueue();
         assets = level->getAssetManager();
+        //win.setFramerateLimit(60);
+        //win.setVerticalSyncEnabled(true);
         totalLevels = level->size();
         self.reset(this);
+        isPause = false;
         gameEventDispatcher->LevelComplete.addObserver(self);
         fps.setFont(assets->getFont("Outwrite"));
         fps.setCharacterSize(25);
@@ -39,7 +42,7 @@ namespace ant{
     }
     void Game::run(){
         while(running){
-            elapsedTime = clock.restart();
+            timePoint1 = clock.restart();
             int FPS = getFPS(elapsedTime);
             fps.setString(ant::Utils::toString(FPS));
             if(FPS < 5){
@@ -84,10 +87,27 @@ namespace ant{
                         }
                         break;
                     case sf::Event::KeyReleased:
+                        if(event.key.code == sf::Keyboard::Escape){
+                            running = false;
+                        }
                         if(event.key.code == sf::Keyboard::S){
                             eventQueue->push(std::shared_ptr<baseEvent>(
                                     new Event<constructorSystem::command>(EventType::CHANGE_COMMAND,
                                                             Constructions::stairs
+                                                            ))
+                                         );
+                        }
+                        if(event.key.code == sf::Keyboard::D){
+                            eventQueue->push(std::shared_ptr<baseEvent>(
+                                    new Event<constructorSystem::command>(EventType::CHANGE_COMMAND,
+                                                            Constructions::downhill
+                                                            ))
+                                         );
+                        }
+                        if(event.key.code == sf::Keyboard::U){
+                            eventQueue->push(std::shared_ptr<baseEvent>(
+                                    new Event<constructorSystem::command>(EventType::CHANGE_COMMAND,
+                                                            Constructions::uphill
                                                             ))
                                          );
                         }
@@ -128,14 +148,12 @@ namespace ant{
                         }
                         if(event.key.code == sf::Keyboard::LShift){
                             ++GameSpeed;
-                            std::cout << "aumento: " << GameSpeed << std::endl;
                             eventQueue->push(std::shared_ptr<baseEvent>(
                                     new Event<sf::Time>(EventType::CHANGE_OVERTIME,sf::seconds(GameSpeed)))
                                          );
                         }
                         if(event.key.code == sf::Keyboard::LControl){
                             --GameSpeed;
-                            std::cout << "descenso: " << GameSpeed << std::endl;
                             eventQueue->push(std::shared_ptr<baseEvent>(
                                     new Event<sf::Time>(EventType::CHANGE_OVERTIME,sf::seconds(GameSpeed)))
                                          );
@@ -146,7 +164,7 @@ namespace ant{
                 }
             }
             win.clear();
-            level->update(currentLevel,lastFrame - elapsedTime);
+            level->update(currentLevel,elapsedTime);
             while(!eventQueue->isEmpty()){
                 gameEventDispatcher->DispatchEvent(eventQueue->pop());
             }
@@ -157,6 +175,8 @@ namespace ant{
                 win.draw(*buttons[i]);
             }
             win.display();
+            timePoint2 = clock.restart();
+            elapsedTime = timePoint2 - timePoint1;
             lastFrame = elapsedTime;
         }
     }
@@ -196,6 +216,10 @@ namespace ant{
                     action = Constructions::stop;
                 }else if(actionID == "bridge"){
                     action = Constructions::bridge;
+                }else if(actionID == "downhill"){
+                    action = Constructions::downhill;
+                }else if(actionID == "uphill"){
+                    action = Constructions::uphill;
                 }
                 buttons.push_back(Utils::makeUniquePtr<GUI::Button>(pos,bSize,sprite,t,action));
             }

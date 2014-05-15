@@ -1,7 +1,7 @@
 #include <Config.hpp>
 
 namespace ant{
-    const std::string Config::VERSION = "0.1";
+    const std::string Config::VERSION = "v0.1a";
     const std::string Config::ASSETS_GAME_JSON = "data/config/assets.json";
     const std::string Config::ANT_FILE = "data/config/entities/Ant.json";
     const std::string Config::INDOOR_FILE = "data/config/entities/InDoor.json";
