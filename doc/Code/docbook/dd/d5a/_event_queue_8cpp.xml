@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="dd/d5a/_event_queue_8cpp">
+    <title>EventQueue.cpp File Reference</title>
+    <programlisting>#include &lt;EventQueue/EventQueue.hpp&gt;</programlisting>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="dc/d6c/namespaceant">ant</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file F:/Development/Cpp/AntFarm/src/EventQueue/EventQueue.cpp</para>
+    </simplesect>
+</section>

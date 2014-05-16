@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d2/d03/_asset_manager_8hpp">
+    <title>AssetManager.hpp File Reference</title>
+    <programlisting>#include &lt;stdexcept&gt;</programlisting>
+    <programlisting>#include &lt;map&gt;</programlisting>
+    <programlisting>#include &lt;memory&gt;</programlisting>
+    <programlisting>#include &lt;fstream&gt;</programlisting>
+    <programlisting>#include &lt;JsonBox.h&gt;</programlisting>
+    <programlisting>#include &lt;SFML/Graphics/Texture.hpp&gt;</programlisting>
+    <programlisting>#include &lt;SFML/Graphics/Font.hpp&gt;</programlisting>
+    <programlisting>#include &lt;SFML/Graphics/Image.hpp&gt;</programlisting>
+        <simplesect>
+            <title> Classes </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d1/dd6/classant_1_1_asset_manager">ant::AssetManager</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="dc/d6c/namespaceant">ant</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file F:/Development/Cpp/AntFarm/include/AssetManager/AssetManager.hpp</para>
+    </simplesect>
+</section>

@@ -19,21 +19,17 @@ namespace ant{
     }
     std::unique_ptr<Entity> EntityFactory::createEntity(long int mask){
         ComponentSettings cs;
-        /// @todo Limpiar y encontrar mejor forma de cargar variables para los componentes por defecto.
         if((mask & Ant) == Ant){
-            cs.loadSettings("data/config/entities/Ant.json");
+            cs.loadSettings(Config::ANT_FILE);
         }
         if((mask & InDoor) == InDoor){
-                /// @todo change for door conf
-            cs.loadSettings("data/config/entities/InDoor.json");
+            cs.loadSettings(Config::INDOOR_FILE);
         }
         if((mask & OutDoor) == OutDoor){
-                /// @todo change for door conf
-            cs.loadSettings("data/config/entities/OutDoor.json");
+            cs.loadSettings(Config::OUTDOOR_FILE);
         }
         if((mask & level) == level){
-            /// @todo change for level conf
-            cs.loadSettings("data/config/entities/Level.json");
+            cs.loadSettings(Config::LEVEL_FILE);
         }
         return createEntity(mask,cs);
     }

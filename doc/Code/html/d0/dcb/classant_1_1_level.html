@@ -72,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
     <ul class="tablist">
       <li><a href="../../annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="../../classes.html"><span>Class&#160;Index</span></a></li>
-      <li><a href="../../hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="../../inherits.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="../../functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -108,7 +108,6 @@ $(document).ready(function(){initNavTree('d0/dcb/classant_1_1_level.html','../..
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="../../dc/db2/classant_1_1_level-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">ant::Level Class Reference</div>  </div>
@@ -119,18 +118,23 @@ $(document).ready(function(){initNavTree('d0/dcb/classant_1_1_level.html','../..
  <a href="../../d0/dcb/classant_1_1_level.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d0/d67/_level_8hpp_source.html">Level.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for ant::Level:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../de/ddf/classant_1_1_level__coll__graph.png" border="0" usemap="#ant_1_1_level_coll__map" alt="Collaboration graph"/></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ae165db7473b5d3676943b35dd20c4e15"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classant_1_1_level.html#ae165db7473b5d3676943b35dd20c4e15">Level</a> (const std::string &amp;assetsFilename, sf::FloatRect bounds, std::shared_ptr&lt; <a class="el" href="../../dc/df5/classant_1_1_game_event_dispatcher.html">GameEventDispatcher</a> &gt; ged)</td></tr>
 <tr class="memdesc:ae165db7473b5d3676943b35dd20c4e15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor principal.  <a href="#ae165db7473b5d3676943b35dd20c4e15">More...</a><br/></td></tr>
 <tr class="separator:ae165db7473b5d3676943b35dd20c4e15"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaa9457969e9201f3e37a11b946e2bb9f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classant_1_1_level.html#aaa9457969e9201f3e37a11b946e2bb9f">init</a> (sf::FloatRect bounds)</td></tr>
-<tr class="memdesc:aaa9457969e9201f3e37a11b946e2bb9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicializa el nivel.  <a href="#aaa9457969e9201f3e37a11b946e2bb9f">More...</a><br/></td></tr>
-<tr class="separator:aaa9457969e9201f3e37a11b946e2bb9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a838a2e28c13d09d15003c2743c2a1d6b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classant_1_1_level.html#a838a2e28c13d09d15003c2743c2a1d6b">loadLevel</a> (const std::string &amp;filename)</td></tr>
-<tr class="memdesc:a838a2e28c13d09d15003c2743c2a1d6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Carga el nivel de un fichero json.  <a href="#a838a2e28c13d09d15003c2743c2a1d6b">More...</a><br/></td></tr>
-<tr class="separator:a838a2e28c13d09d15003c2743c2a1d6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8420f52c19063fc012a9b5da62ad823d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classant_1_1_level.html#a8420f52c19063fc012a9b5da62ad823d">init</a> (const sf::FloatRect &amp;bounds)</td></tr>
+<tr class="memdesc:a8420f52c19063fc012a9b5da62ad823d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicializa el nivel.  <a href="#a8420f52c19063fc012a9b5da62ad823d">More...</a><br/></td></tr>
+<tr class="separator:a8420f52c19063fc012a9b5da62ad823d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cb50b7956ecde37e8d9991c32082f1d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classant_1_1_level.html#a3cb50b7956ecde37e8d9991c32082f1d">loadLevel</a> (const sf::FloatRect &amp;bounds, const std::string &amp;filename)</td></tr>
+<tr class="memdesc:a3cb50b7956ecde37e8d9991c32082f1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Carga el nivel de un fichero json.  <a href="#a3cb50b7956ecde37e8d9991c32082f1d">More...</a><br/></td></tr>
+<tr class="separator:a3cb50b7956ecde37e8d9991c32082f1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab45950d5616ec4de03a8867ff85d00de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classant_1_1_level.html#ab45950d5616ec4de03a8867ff85d00de">setEventQueue</a> (std::shared_ptr&lt; <a class="el" href="../../db/dec/classant_1_1_event_queue.html">EventQueue</a> &gt; eq)</td></tr>
 <tr class="memdesc:ab45950d5616ec4de03a8867ff85d00de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setter para la cola de eventos.  <a href="#ab45950d5616ec4de03a8867ff85d00de">More...</a><br/></td></tr>
 <tr class="separator:ab45950d5616ec4de03a8867ff85d00de"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -149,27 +153,24 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4fa955b781d4001c7e676d8b4700f68e"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="../../d1/dd6/classant_1_1_asset_manager.html">AssetManager</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classant_1_1_level.html#a4fa955b781d4001c7e676d8b4700f68e">getAssetManager</a> ()</td></tr>
 <tr class="memdesc:a4fa955b781d4001c7e676d8b4700f68e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter para el <a class="el" href="../../d1/dd6/classant_1_1_asset_manager.html" title="Clase para tener todos los assets(imagenes,texturas,etc) del juego. ">AssetManager</a>.  <a href="#a4fa955b781d4001c7e676d8b4700f68e">More...</a><br/></td></tr>
 <tr class="separator:a4fa955b781d4001c7e676d8b4700f68e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0357eb8e33cfcc7ebafa7e2a7740fa9e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classant_1_1_level.html#a0357eb8e33cfcc7ebafa7e2a7740fa9e">update</a> (long int id, long int type, sf::Time dt)</td></tr>
-<tr class="memdesc:a0357eb8e33cfcc7ebafa7e2a7740fa9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actualiza el mundo especificado.  <a href="#a0357eb8e33cfcc7ebafa7e2a7740fa9e">More...</a><br/></td></tr>
-<tr class="separator:a0357eb8e33cfcc7ebafa7e2a7740fa9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81e276755a9861526c235ff468475ccf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classant_1_1_level.html#a81e276755a9861526c235ff468475ccf">render</a> (long int id, long int type, sf::RenderWindow &amp;win)</td></tr>
-<tr class="memdesc:a81e276755a9861526c235ff468475ccf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renderiza el mundo especificado.  <a href="#a81e276755a9861526c235ff468475ccf">More...</a><br/></td></tr>
-<tr class="separator:a81e276755a9861526c235ff468475ccf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86bc9422387cfb1502a13649c7fd0f97"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classant_1_1_level.html#a86bc9422387cfb1502a13649c7fd0f97">size</a> ()</td></tr>
+<tr class="memdesc:a86bc9422387cfb1502a13649c7fd0f97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve el numero total de niveles que tiene.  <a href="#a86bc9422387cfb1502a13649c7fd0f97">More...</a><br/></td></tr>
+<tr class="separator:a86bc9422387cfb1502a13649c7fd0f97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac61bcd5e71af7a1c2a715fc6bf207b80"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classant_1_1_level.html#ac61bcd5e71af7a1c2a715fc6bf207b80">update</a> (long int id, sf::Time dt)</td></tr>
+<tr class="memdesc:ac61bcd5e71af7a1c2a715fc6bf207b80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actualiza el mundo especificado.  <a href="#ac61bcd5e71af7a1c2a715fc6bf207b80">More...</a><br/></td></tr>
+<tr class="separator:ac61bcd5e71af7a1c2a715fc6bf207b80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0dee8ae016577c4696534e1f809b207"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classant_1_1_level.html#af0dee8ae016577c4696534e1f809b207">render</a> (long int id, sf::RenderWindow &amp;win)</td></tr>
+<tr class="memdesc:af0dee8ae016577c4696534e1f809b207"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renderiza el mundo especificado.  <a href="#af0dee8ae016577c4696534e1f809b207">More...</a><br/></td></tr>
+<tr class="separator:af0dee8ae016577c4696534e1f809b207"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a654224d7502000abca61df489acc5aec"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classant_1_1_level.html#a654224d7502000abca61df489acc5aec">~Level</a> ()</td></tr>
 <tr class="separator:a654224d7502000abca61df489acc5aec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
-Static Public Attributes</h2></td></tr>
-<tr class="memitem:aa0d3f6382b63d4fcb89c0ab0e96ded50"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classant_1_1_level.html#aa0d3f6382b63d4fcb89c0ab0e96ded50">BATTLEFIELD</a> = 0</td></tr>
-<tr class="memdesc:aa0d3f6382b63d4fcb89c0ab0e96ded50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tipos de mundo.  <a href="#aa0d3f6382b63d4fcb89c0ab0e96ded50">More...</a><br/></td></tr>
-<tr class="separator:aa0d3f6382b63d4fcb89c0ab0e96ded50"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13660bdd426e4d13128dd1390469087b"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dcb/classant_1_1_level.html#a13660bdd426e4d13128dd1390469087b">NEST</a> = 1</td></tr>
-<tr class="separator:a13660bdd426e4d13128dd1390469087b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Clase que tiene el nivel del juego. </p>
 <dl class="section author"><dt>Author</dt><dd>Cristian Glez <a href="#" onclick="location.href='mai'+'lto:'+'Cri'+'st'+'ian'+'.g'+'lez'+'.m'+'@gm'+'ai'+'l.c'+'om'; return false;">Crist<span style="display: none;">.nosp@m.</span>ian.<span style="display: none;">.nosp@m.</span>glez.<span style="display: none;">.nosp@m.</span>m@gm<span style="display: none;">.nosp@m.</span>ail.c<span style="display: none;">.nosp@m.</span>om</a> </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>0.1 </dd></dl>
+
+<p>Definition at line <a class="el" href="../../d0/d67/_level_8hpp_source.html#l00018">18</a> of file <a class="el" href="../../d0/d67/_level_8hpp_source.html">Level.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ae165db7473b5d3676943b35dd20c4e15"></a>
 <div class="memitem">
@@ -211,6 +212,17 @@ Static Public Attributes</h2></td></tr>
   </dd>
 </dl>
 
+<p>Definition at line <a class="el" href="../../dd/d62/_level_8cpp_source.html#l00003">3</a> of file <a class="el" href="../../dd/d62/_level_8cpp_source.html">Level.cpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d0/dcb/classant_1_1_level_ae165db7473b5d3676943b35dd20c4e15_cgraph.png" border="0" usemap="#d0/dcb/classant_1_1_level_ae165db7473b5d3676943b35dd20c4e15_cgraph" alt=""/></div>
+<map name="d0/dcb/classant_1_1_level_ae165db7473b5d3676943b35dd20c4e15_cgraph" id="d0/dcb/classant_1_1_level_ae165db7473b5d3676943b35dd20c4e15_cgraph">
+<area shape="rect" id="node2" href="../../d0/dcb/classant_1_1_level.html#a8420f52c19063fc012a9b5da62ad823d" title="Inicializa el nivel. " alt="" coords="168,5,271,32"/><area shape="rect" id="node3" href="../../d0/dcb/classant_1_1_level.html#a3cb50b7956ecde37e8d9991c32082f1d" title="Carga el nivel de un fichero json. " alt="" coords="319,5,457,32"/><area shape="rect" id="node4" href="../../d0/dcb/classant_1_1_level.html#a86bc9422387cfb1502a13649c7fd0f97" title="Devuelve el numero total de niveles que tiene. " alt="" coords="505,5,615,32"/></map>
+</div>
+</p>
+
 </div>
 </div>
 <a class="anchor" id="a654224d7502000abca61df489acc5aec"></a>
@@ -225,6 +237,8 @@ Static Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="../../dd/d62/_level_8cpp_source.html#l00051">51</a> of file <a class="el" href="../../dd/d62/_level_8cpp_source.html">Level.cpp</a>.</p>
 
 </div>
 </div>
@@ -253,6 +267,8 @@ Static Public Attributes</h2></td></tr>
 <p>Getter para el <a class="el" href="../../d1/dd6/classant_1_1_asset_manager.html" title="Clase para tener todos los assets(imagenes,texturas,etc) del juego. ">AssetManager</a>. </p>
 <dl class="section return"><dt>Returns</dt><dd>std::shared_ptr&lt;AssetManager&gt; </dd></dl>
 
+<p>Definition at line <a class="el" href="../../d0/d67/_level_8hpp_source.html#l00070">70</a> of file <a class="el" href="../../d0/d67/_level_8hpp_source.html">Level.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="ac3d1598648320575953934ff841c7693"></a>
@@ -278,6 +294,8 @@ Static Public Attributes</h2></td></tr>
 
 <p>Getter para la cola de eventos. </p>
 <dl class="section return"><dt>Returns</dt><dd>std::shared_ptr&lt;EventQueue&gt; Devuelve la cola de eventos. </dd></dl>
+
+<p>Definition at line <a class="el" href="../../d0/d67/_level_8hpp_source.html#l00050">50</a> of file <a class="el" href="../../d0/d67/_level_8hpp_source.html">Level.hpp</a>.</p>
 
 </div>
 </div>
@@ -305,16 +323,18 @@ Static Public Attributes</h2></td></tr>
 <p>Getter de la fabrica de mundos. </p>
 <dl class="section return"><dt>Returns</dt><dd>std::shared_ptr&lt;WorldFactory&gt; </dd></dl>
 
+<p>Definition at line <a class="el" href="../../d0/d67/_level_8hpp_source.html#l00060">60</a> of file <a class="el" href="../../d0/d67/_level_8hpp_source.html">Level.hpp</a>.</p>
+
 </div>
 </div>
-<a class="anchor" id="aaa9457969e9201f3e37a11b946e2bb9f"></a>
+<a class="anchor" id="a8420f52c19063fc012a9b5da62ad823d"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void ant::Level::init </td>
           <td>(</td>
-          <td class="paramtype">sf::FloatRect&#160;</td>
+          <td class="paramtype">const sf::FloatRect &amp;&#160;</td>
           <td class="paramname"><em>bounds</em></td><td>)</td>
           <td></td>
         </tr>
@@ -329,20 +349,49 @@ Static Public Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000009">Todo:</a></b></dt><dd>crear mundos iniciales, etc. </dd></dl>
+
+<p>Definition at line <a class="el" href="../../dd/d62/_level_8cpp_source.html#l00011">11</a> of file <a class="el" href="../../dd/d62/_level_8cpp_source.html">Level.cpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d0/dcb/classant_1_1_level_a8420f52c19063fc012a9b5da62ad823d_cgraph.png" border="0" usemap="#d0/dcb/classant_1_1_level_a8420f52c19063fc012a9b5da62ad823d_cgraph" alt=""/></div>
+<map name="d0/dcb/classant_1_1_level_a8420f52c19063fc012a9b5da62ad823d_cgraph" id="d0/dcb/classant_1_1_level_a8420f52c19063fc012a9b5da62ad823d_cgraph">
+<area shape="rect" id="node2" href="../../d0/dcb/classant_1_1_level.html#a3cb50b7956ecde37e8d9991c32082f1d" title="Carga el nivel de un fichero json. " alt="" coords="156,5,295,32"/><area shape="rect" id="node3" href="../../d0/dcb/classant_1_1_level.html#a86bc9422387cfb1502a13649c7fd0f97" title="Devuelve el numero total de niveles que tiene. " alt="" coords="343,5,452,32"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d0/dcb/classant_1_1_level_a8420f52c19063fc012a9b5da62ad823d_icgraph.png" border="0" usemap="#d0/dcb/classant_1_1_level_a8420f52c19063fc012a9b5da62ad823d_icgraph" alt=""/></div>
+<map name="d0/dcb/classant_1_1_level_a8420f52c19063fc012a9b5da62ad823d_icgraph" id="d0/dcb/classant_1_1_level_a8420f52c19063fc012a9b5da62ad823d_icgraph">
+<area shape="rect" id="node2" href="../../d0/dcb/classant_1_1_level.html#ae165db7473b5d3676943b35dd20c4e15" title="Constructor principal. " alt="" coords="156,5,271,32"/></map>
+</div>
+</p>
 
 </div>
 </div>
-<a class="anchor" id="a838a2e28c13d09d15003c2743c2a1d6b"></a>
+<a class="anchor" id="a3cb50b7956ecde37e8d9991c32082f1d"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">bool ant::Level::loadLevel </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td class="paramtype">const sf::FloatRect &amp;&#160;</td>
+          <td class="paramname"><em>bounds</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>filename</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -350,9 +399,29 @@ Static Public Attributes</h2></td></tr>
 <p>Carga el nivel de un fichero json. </p>
 <dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
 
+<p>Definition at line <a class="el" href="../../dd/d62/_level_8cpp_source.html#l00014">14</a> of file <a class="el" href="../../dd/d62/_level_8cpp_source.html">Level.cpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d0/dcb/classant_1_1_level_a3cb50b7956ecde37e8d9991c32082f1d_cgraph.png" border="0" usemap="#d0/dcb/classant_1_1_level_a3cb50b7956ecde37e8d9991c32082f1d_cgraph" alt=""/></div>
+<map name="d0/dcb/classant_1_1_level_a3cb50b7956ecde37e8d9991c32082f1d_cgraph" id="d0/dcb/classant_1_1_level_a3cb50b7956ecde37e8d9991c32082f1d_cgraph">
+<area shape="rect" id="node2" href="../../d0/dcb/classant_1_1_level.html#a86bc9422387cfb1502a13649c7fd0f97" title="Devuelve el numero total de niveles que tiene. " alt="" coords="192,5,301,32"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d0/dcb/classant_1_1_level_a3cb50b7956ecde37e8d9991c32082f1d_icgraph.png" border="0" usemap="#d0/dcb/classant_1_1_level_a3cb50b7956ecde37e8d9991c32082f1d_icgraph" alt=""/></div>
+<map name="d0/dcb/classant_1_1_level_a3cb50b7956ecde37e8d9991c32082f1d_icgraph" id="d0/dcb/classant_1_1_level_a3cb50b7956ecde37e8d9991c32082f1d_icgraph">
+<area shape="rect" id="node2" href="../../d0/dcb/classant_1_1_level.html#a8420f52c19063fc012a9b5da62ad823d" title="Inicializa el nivel. " alt="" coords="192,5,295,32"/><area shape="rect" id="node3" href="../../d0/dcb/classant_1_1_level.html#ae165db7473b5d3676943b35dd20c4e15" title="Constructor principal. " alt="" coords="343,5,457,32"/></map>
+</div>
+</p>
+
 </div>
 </div>
-<a class="anchor" id="a81e276755a9861526c235ff468475ccf"></a>
+<a class="anchor" id="af0dee8ae016577c4696534e1f809b207"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -361,12 +430,6 @@ Static Public Attributes</h2></td></tr>
           <td>(</td>
           <td class="paramtype">long int&#160;</td>
           <td class="paramname"><em>id</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">long int&#160;</td>
-          <td class="paramname"><em>type</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -383,15 +446,15 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Renderiza el mundo especificado. </p>
-<p>Renderiza el mundo especificado </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">id</td><td>long int Mundo a actualizar </td></tr>
-    <tr><td class="paramname">type</td><td>long int Tipo de mundo(Level::BATTLEFIELD o Level::NEST) </td></tr>
     <tr><td class="paramname">win</td><td>sf::RenderWindow &amp; ventana a la cual dibujar. </td></tr>
   </table>
   </dd>
 </dl>
+
+<p>Definition at line <a class="el" href="../../dd/d62/_level_8cpp_source.html#l00048">48</a> of file <a class="el" href="../../dd/d62/_level_8cpp_source.html">Level.cpp</a>.</p>
 
 </div>
 </div>
@@ -417,6 +480,8 @@ Static Public Attributes</h2></td></tr>
   </dd>
 </dl>
 
+<p>Definition at line <a class="el" href="../../dd/d62/_level_8cpp_source.html#l00042">42</a> of file <a class="el" href="../../dd/d62/_level_8cpp_source.html">Level.cpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="ab45950d5616ec4de03a8867ff85d00de"></a>
@@ -440,6 +505,8 @@ Static Public Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+<p>Definition at line <a class="el" href="../../dd/d62/_level_8cpp_source.html#l00034">34</a> of file <a class="el" href="../../dd/d62/_level_8cpp_source.html">Level.cpp</a>.</p>
 
 </div>
 </div>
@@ -465,9 +532,47 @@ Static Public Attributes</h2></td></tr>
   </dd>
 </dl>
 
+<p>Definition at line <a class="el" href="../../dd/d62/_level_8cpp_source.html#l00039">39</a> of file <a class="el" href="../../dd/d62/_level_8cpp_source.html">Level.cpp</a>.</p>
+
 </div>
 </div>
-<a class="anchor" id="a0357eb8e33cfcc7ebafa7e2a7740fa9e"></a>
+<a class="anchor" id="a86bc9422387cfb1502a13649c7fd0f97"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ant::Level::size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Devuelve el numero total de niveles que tiene. </p>
+
+<p>Definition at line <a class="el" href="../../d0/d67/_level_8hpp_source.html#l00074">74</a> of file <a class="el" href="../../d0/d67/_level_8hpp_source.html">Level.hpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d0/dcb/classant_1_1_level_a86bc9422387cfb1502a13649c7fd0f97_icgraph.png" border="0" usemap="#d0/dcb/classant_1_1_level_a86bc9422387cfb1502a13649c7fd0f97_icgraph" alt=""/></div>
+<map name="d0/dcb/classant_1_1_level_a86bc9422387cfb1502a13649c7fd0f97_icgraph" id="d0/dcb/classant_1_1_level_a86bc9422387cfb1502a13649c7fd0f97_icgraph">
+<area shape="rect" id="node2" href="../../d0/dcb/classant_1_1_level.html#a3cb50b7956ecde37e8d9991c32082f1d" title="Carga el nivel de un fichero json. " alt="" coords="163,5,301,32"/><area shape="rect" id="node3" href="../../d0/dcb/classant_1_1_level.html#a8420f52c19063fc012a9b5da62ad823d" title="Inicializa el nivel. " alt="" coords="349,5,452,32"/><area shape="rect" id="node4" href="../../d0/dcb/classant_1_1_level.html#ae165db7473b5d3676943b35dd20c4e15" title="Constructor principal. " alt="" coords="500,5,615,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ac61bcd5e71af7a1c2a715fc6bf207b80"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -476,12 +581,6 @@ Static Public Attributes</h2></td></tr>
           <td>(</td>
           <td class="paramtype">long int&#160;</td>
           <td class="paramname"><em>id</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">long int&#160;</td>
-          <td class="paramname"><em>type</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -502,60 +601,18 @@ Static Public Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">id</td><td>long int Mundo a actualizar </td></tr>
-    <tr><td class="paramname">type</td><td>long int Tipo de mundo(Level::BATTLEFIELD o Level::NEST) </td></tr>
     <tr><td class="paramname">dt</td><td>sf::Time delta time. </td></tr>
   </table>
   </dd>
 </dl>
 
-</div>
-</div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="aa0d3f6382b63d4fcb89c0ab0e96ded50"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int ant::Level::BATTLEFIELD = 0</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Tipos de mundo. </p>
-
-</div>
-</div>
-<a class="anchor" id="a13660bdd426e4d13128dd1390469087b"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int ant::Level::NEST = 1</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
+<p>Definition at line <a class="el" href="../../dd/d62/_level_8cpp_source.html#l00045">45</a> of file <a class="el" href="../../dd/d62/_level_8cpp_source.html">Level.cpp</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="../../d0/d67/_level_8hpp_source.html">Level.hpp</a></li>
-<li><a class="el" href="../../dd/d62/_level_8cpp.html">Level.cpp</a></li>
+<li><a class="el" href="../../dd/d62/_level_8cpp_source.html">Level.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -563,7 +620,7 @@ Static Public Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dc/d6c/namespaceant.html">ant</a></li><li class="navelem"><a class="el" href="../../d0/dcb/classant_1_1_level.html">Level</a></li>
-    <li class="footer">Generated on Sun Apr 20 2014 15:35:26 for AntFarm by
+    <li class="footer">Generated on Fri May 16 2014 18:56:10 for AntFarm by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

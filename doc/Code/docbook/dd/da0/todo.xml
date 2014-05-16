@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<chapter xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Todo List</title>
+
+<para><variablelist>
+<varlistentry><term><anchor id="dd/da0/todo_1_todo000001"/>Member <link linkend="d4/dd4/classant_1_1base_component_1a8033039184654f8e1337bc78d3299d57">ant::baseComponent::baseComponent</link>  (long int id)</term>
+<listitem>
+<para>posible cambio en el id de long int a bitset&lt;NBits&gt; </para>
+</listitem></varlistentry>
+<varlistentry><term><anchor id="dd/da0/todo_1_todo000004"/>Member <link linkend="d6/d6c/classant_1_1movement_system_1af7017a1d594b18a8a8d3bf925cd00881">ant::movementSystem::update</link>  (sf::Time dt)</term>
+<listitem>
+<para>agregar al calculo delta time  </para>
+</listitem></varlistentry>
+<varlistentry><term><anchor id="dd/da0/todo_1_todo000003"/>Class <link linkend="d6/d94/classant_1_1_utils_1_1_quadtree">ant::Utils::Quadtree</link>  </term>
+<listitem>
+<para>Posible cambio por Quadtree&lt;T&gt; tarda 1ms mas. </para>
+</listitem></varlistentry>
+</variablelist>
+</para>
+
+</chapter>

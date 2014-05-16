@@ -72,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
     <ul class="tablist">
       <li><a href="../../annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="../../classes.html"><span>Class&#160;Index</span></a></li>
-      <li><a href="../../hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="../../inherits.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="../../functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -113,7 +113,7 @@ $(document).ready(function(){initNavTree('dc/de8/classant_1_1collision_system.ht
 
 <p>This is the complete list of members for <a class="el" href="../../dc/de8/classant_1_1collision_system.html">ant::collisionSystem</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="../../dc/de8/classant_1_1collision_system.html#abe1687a67eb6be58b2ed905b29a4a586">collisionSystem</a>(sf::FloatRect bounds)</td><td class="entry"><a class="el" href="../../dc/de8/classant_1_1collision_system.html">ant::collisionSystem</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../dc/de8/classant_1_1collision_system.html#a60197fa14edf90555a49d53cad095c8c">collisionSystem</a>(sf::FloatRect bounds, sf::VertexArray *GameMap)</td><td class="entry"><a class="el" href="../../dc/de8/classant_1_1collision_system.html">ant::collisionSystem</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="../../de/d48/classant_1_1_system.html#a5661d872ff769be150bd4e9a9552f6b9">em</a></td><td class="entry"><a class="el" href="../../de/d48/classant_1_1_system.html">ant::System</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="../../de/d48/classant_1_1_system.html#a27e1814e13d161b5ef0e848e3da16d29">eventQueue</a></td><td class="entry"><a class="el" href="../../de/d48/classant_1_1_system.html">ant::System</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
   <tr><td class="entry"><a class="el" href="../../de/d48/classant_1_1_system.html#adaad2087de7fc71924cfb5b134014b0a">getEntityManager</a>()</td><td class="entry"><a class="el" href="../../de/d48/classant_1_1_system.html">ant::System</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
@@ -121,7 +121,7 @@ $(document).ready(function(){initNavTree('dc/de8/classant_1_1collision_system.ht
   <tr><td class="entry"><a class="el" href="../../de/d48/classant_1_1_system.html#a52a559b2c3ddbec5c846df1badd7f7f8">getName</a>() const </td><td class="entry"><a class="el" href="../../de/d48/classant_1_1_system.html">ant::System</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="../../de/d48/classant_1_1_system.html#a2d94338969f43d4fd2fd972deb099258">getRequiredComponts</a>()</td><td class="entry"><a class="el" href="../../de/d48/classant_1_1_system.html">ant::System</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr><td class="entry"><a class="el" href="../../de/d48/classant_1_1_system.html#a60b3c00a760a3b4947ab1f1fc534a5b2">name</a></td><td class="entry"><a class="el" href="../../de/d48/classant_1_1_system.html">ant::System</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../dc/de8/classant_1_1collision_system.html#ad42cc6cabd1798fa7a0d6ce1a6d106ca">render</a>(sf::RenderWindow &amp;win)</td><td class="entry"><a class="el" href="../../dc/de8/classant_1_1collision_system.html">ant::collisionSystem</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../dc/de8/classant_1_1collision_system.html#a9d53ad5d64a749e883edfc9049734bc5">render</a>(sf::RenderWindow &amp;win)</td><td class="entry"><a class="el" href="../../dc/de8/classant_1_1collision_system.html">ant::collisionSystem</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="../../de/d48/classant_1_1_system.html#a4ef41cfc496e41ac6730f90629524ec7">RequiredComponents</a></td><td class="entry"><a class="el" href="../../de/d48/classant_1_1_system.html">ant::System</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="../../de/d48/classant_1_1_system.html#a1f983382d142ea697f1811f7f6f6ab17">setEntityManager</a>(std::shared_ptr&lt; EntityManager &gt; em)</td><td class="entry"><a class="el" href="../../de/d48/classant_1_1_system.html">ant::System</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="../../de/d48/classant_1_1_system.html#a1effe9f0e5615e516a34be02d5895434">setEventQueue</a>(std::shared_ptr&lt; EventQueue &gt; eq)</td><td class="entry"><a class="el" href="../../de/d48/classant_1_1_system.html">ant::System</a></td><td class="entry"></td></tr>
@@ -138,7 +138,7 @@ $(document).ready(function(){initNavTree('dc/de8/classant_1_1collision_system.ht
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sun Apr 20 2014 15:35:26 for AntFarm by
+    <li class="footer">Generated on Fri May 16 2014 18:56:10 for AntFarm by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

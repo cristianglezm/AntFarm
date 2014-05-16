@@ -1,0 +1,429 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="dc/de8/classant_1_1collision_system">
+<title>ant::collisionSystem class Reference</title>
+<para>
+    <programlisting>#include <link linkend="d0/d71/collision_system_8hpp">&lt;collisionSystem.hpp&gt;</link></programlisting>
+</para>
+        <simplesect>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Utils::Quadtree qtree</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>sf::FloatRect gameBounds</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>sf::VertexArray * gameMap</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="dc/de8/classant_1_1collision_system_1a60197fa14edf90555a49d53cad095c8c">collisionSystem</link> (
+sf::FloatRect bounds, sf::VertexArray * GameMap)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual void <link linkend="dc/de8/classant_1_1collision_system_1a9d53ad5d64a749e883edfc9049734bc5">render</link> (
+sf::RenderWindow &amp; win)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual void <link linkend="dc/de8/classant_1_1collision_system_1abef6a9cb5378ddb9ddf6cfdd46b6dbfa">update</link> (
+sf::Time dt)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual <link linkend="dc/de8/classant_1_1collision_system_1acb5ba1573cd34e251caac81cb499094e">~collisionSystem</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="de/d48/classant_1_1_system_1a35662ff3739ff4290df1106bfdccfaca">setRequiredComponents</link> (
+long int req)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>long int <link linkend="de/d48/classant_1_1_system_1a2d94338969f43d4fd2fd972deb099258">getRequiredComponts</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="de/d48/classant_1_1_system_1a1effe9f0e5615e516a34be02d5895434">setEventQueue</link> (
+std::shared_ptr&lt; <link linkend="db/dec/classant_1_1_event_queue">EventQueue</link> &gt; eq)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::shared_ptr&lt; <link linkend="db/dec/classant_1_1_event_queue">EventQueue</link> &gt; <link linkend="de/d48/classant_1_1_system_1ac3e2bbbdb622276d194ad3a687d8e4f1">getEventQueue</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="de/d48/classant_1_1_system_1a231f9fc93b55ee67deb9597ae6be13ba">setName</link> (
+std::string name)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::string <link linkend="de/d48/classant_1_1_system_1a52a559b2c3ddbec5c846df1badd7f7f8">getName</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="de/d48/classant_1_1_system_1a1f983382d142ea697f1811f7f6f6ab17">setEntityManager</link> (
+std::shared_ptr&lt; <link linkend="dd/d12/classant_1_1_entity_manager">EntityManager</link> &gt; em)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::shared_ptr&lt; <link linkend="dd/d12/classant_1_1_entity_manager">EntityManager</link> &gt; <link linkend="de/d48/classant_1_1_system_1adaad2087de7fc71924cfb5b134014b0a">getEntityManager</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="dc/de8/classant_1_1collision_system_1a3d90ed206a38d715ba267853d79886d6">testTerrainCollision</link> (
+<link linkend="dc/d73/classant_1_1_entity">Entity</link> * entity, const sf::FloatRect &amp; eBounds)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title>Protected Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>long int RequiredComponents</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::shared_ptr&lt; EventQueue &gt; eventQueue</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::shared_ptr&lt; EntityManager &gt; em</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::string name</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Brief Description</title>
+
+<para>Sistema que comprueba las colisiones entre entidades. </para>
+    </simplesect>
+        <simplesect>
+            <title>Detailed Description</title>
+
+<para>Cuando detecta una colision añade un evento a la <link linkend="db/dec/classant_1_1_event_queue">EventQueue</link> con las dos entidades que colisionaron.<orderedlist>
+<listitem>
+<para>Event&lt;Entity*,Entity*&gt; -&gt; type: COLLISION_EVENT</para>
+</listitem><listitem>
+<para>Event&lt;Entity*,int&gt; -&gt; type: TERRAIN_COLLISION</para>
+</listitem><listitem>
+<para>Event&lt;Entity*&gt; -&gt; type: OUT_MAP <formalpara><title>Author: </title>
+
+<para>Cristian Glez <link xlink:href="mailto:Cristian.glez.m@gmail.com">Cristian.glez.m@gmail.com</link> </para>
+</formalpara>
+<formalpara><title>Version: </title>
+
+<para>0.1 </para>
+</formalpara>
+</para>
+</listitem></orderedlist>
+</para>
+                <para>Definition at line 25 of file collisionSystem.hpp</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>collisionSystem.hpp</para></listitem></itemizedlist></para>
+        </simplesect>
+            <section xml:id="dc/de8/classant_1_1collision_system_1a60197fa14edf90555a49d53cad095c8c">
+                <title>ant::collisionSystem::collisionSystem (sf::FloatRect bounds, sf::VertexArray *GameMap)</title> <emphasis>Constructor por defecto.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>bounds</entry>
+                                <entry>
+<para>sf::FloatRect rectangulo del QuadTree. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="dc/de8/classant_1_1collision_system_1a9d53ad5d64a749e883edfc9049734bc5">
+                <title>virtual void ant::collisionSystem::render (sf::RenderWindow &amp;win)</title> <emphasis>Renderiza el Quadtree si RENDER_QTREE esta definido.
+si no no hace nada.</emphasis>
+                
+            </section>
+            <section xml:id="dc/de8/classant_1_1collision_system_1abef6a9cb5378ddb9ddf6cfdd46b6dbfa">
+                <title>void ant::collisionSystem::update (sf::Time dt)</title> <emphasis>Comprueba las colisiones de las entidades.</emphasis>
+                
+<para>Envia eventos de colision y eventos especificos del suelo.<orderedlist>
+<listitem>
+<para>Event&lt;Entity*,Entity*&gt; -&gt; type: COLLISION_EVENT</para>
+</listitem><listitem>
+<para>Event&lt;Entity*,int&gt; -&gt; type: TERRAIN_COLLISION</para>
+</listitem><listitem>
+<para>Event&lt;Entity*&gt; -&gt; type: OUT_MAP 
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>dt</entry>
+                                <entry>
+<para>sf::Time delta time </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+</listitem></orderedlist>
+</para>
+
+            </section>
+            <section xml:id="dc/de8/classant_1_1collision_system_1acb5ba1573cd34e251caac81cb499094e">
+                <title>ant::collisionSystem::~collisionSystem ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="de/d48/classant_1_1_system_1a35662ff3739ff4290df1106bfdccfaca">
+                <title>void ant::System::setRequiredComponents (long int req)</title> <emphasis>Setter para los requisitos necesarios.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>req</entry>
+                                <entry>
+<para>long int </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="de/d48/classant_1_1_system_1a2d94338969f43d4fd2fd972deb099258">
+                <title>long int ant::System::getRequiredComponts ()</title> <emphasis>Getter de los requisitos para el sistema.</emphasis>
+                
+            </section>
+            <section xml:id="de/d48/classant_1_1_system_1a1effe9f0e5615e516a34be02d5895434">
+                <title>void ant::System::setEventQueue (std::shared_ptr&lt; EventQueue &gt; eq)</title> <emphasis>Setter para la EventQueue.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>eq</entry>
+                                <entry>
+<para>std::shared_ptr&lt;EventQueue&gt; </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="de/d48/classant_1_1_system_1ac3e2bbbdb622276d194ad3a687d8e4f1">
+                <title>std::shared_ptr&lt;EventQueue&gt; ant::System::getEventQueue ()</title> <emphasis>Getter para la EventQueue.</emphasis>
+                
+<para><formalpara><title>Returns: </title>
+
+<para>std::shared_ptr&lt;EventQueue&gt; </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="de/d48/classant_1_1_system_1a231f9fc93b55ee67deb9597ae6be13ba">
+                <title>void ant::System::setName (std::string name)</title> <emphasis>Setter Para el nombre del sistema.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>name</entry>
+                                <entry>
+<para>std::string </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="de/d48/classant_1_1_system_1a52a559b2c3ddbec5c846df1badd7f7f8">
+                <title>std::string ant::System::getName () const </title> <emphasis>Getter para el nombre del sistema.</emphasis>
+                
+<para><formalpara><title>Returns: </title>
+
+<para>std::string </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="de/d48/classant_1_1_system_1a1f983382d142ea697f1811f7f6f6ab17">
+                <title>void ant::System::setEntityManager (std::shared_ptr&lt; EntityManager &gt; em)</title> <emphasis>Setter para el EntityManager.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>em</entry>
+                                <entry>
+<para>std::shared_ptr&lt;EntityManager&gt; </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="de/d48/classant_1_1_system_1adaad2087de7fc71924cfb5b134014b0a">
+                <title>std::shared_ptr&lt;EntityManager&gt; ant::System::getEntityManager ()</title> <emphasis>Getter para el EntityManager.</emphasis>
+                
+<para><formalpara><title>Returns: </title>
+
+<para>std::shared_ptr&lt;EntityManager&gt; </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="dc/de8/classant_1_1collision_system_1a3d90ed206a38d715ba267853d79886d6">
+                <title>void ant::collisionSystem::testTerrainCollision (Entity *entity, const sf::FloatRect &amp;eBounds)</title> <emphasis>Comprueba si una entidad y sus bordes estan dentro del mapa.</emphasis>
+                
+<para>Envia un evento para decir por donde a colisionado la entidad con el suelo.</para>
+
+<para>1 esquina superior izquierda -&gt; envia evento de colision con pared 0 2 esquina superior derecha -&gt; envia evento de colision con pared 1 3 esquina inferior mediana izquierda -&gt; envia evento de colision con escalon para subirlo 2 4 esquina inferior izquierda -&gt; Cambia estado de FALLING a GROUND 5 esquina inferior mediana derecha -&gt; envia evento de colision con escalon para subirlo 2 6 esquina inferior derecha -&gt; Cambia estado de FALLING a GROUND</para>
+
+<para><orderedlist>
+<listitem>
+<para>Event&lt;Entity*,int&gt; -&gt; type: TERRAIN_COLLISION</para>
+</listitem></orderedlist>
+</para>
+
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>entity</entry>
+                                <entry>
+<para><link linkend="dc/d73/classant_1_1_entity">Entity</link> * puntero de la entidad </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>eBounds</entry>
+                                <entry>
+<para>sf::FloatRect bordes de la entidad </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+</section>

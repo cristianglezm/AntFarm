@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['observer',['Observer',['../d4/d50/classant_1_1_observer.html',1,'ant']]]
+  ['quadtree',['Quadtree',['../d6/d94/classant_1_1_utils_1_1_quadtree.html',1,'ant::Utils']]]
 ];

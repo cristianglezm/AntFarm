@@ -1,0 +1,345 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d6/d94/classant_1_1_utils_1_1_quadtree">
+<title>ant::Utils::Quadtree class Reference</title>
+<para>
+    <programlisting>#include <link linkend="da/d7a/_quadtree_8hpp">&lt;Quadtree.hpp&gt;</link></programlisting>
+</para>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef std::list&lt; <link linkend="dc/d73/classant_1_1_entity">Entity</link> * &gt;  <link linkend="d6/d94/classant_1_1_utils_1_1_quadtree_1a744668597e9815bc6cdeb44a48f527dd">list</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static const int MAX_CAPACITY</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static const int MAX_LEVEL</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int level</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::array&lt; std::unique_ptr&lt; Quadtree &gt;, 4 &gt; nodes</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>sf::FloatRect bounds</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>list entities</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d6/d94/classant_1_1_utils_1_1_quadtree_1a2dc005f81ddcd318dac8d1d53460e3ff">Quadtree</link> (
+sf::FloatRect bounds)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d6/d94/classant_1_1_utils_1_1_quadtree_1af1f8e490445ee493d7639dc6f621bdfc">insert</link> (
+<link linkend="dc/d73/classant_1_1_entity">Entity</link> * e)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d6/d94/classant_1_1_utils_1_1_quadtree_1aace6744ed7023825a1863f9953421a4b">clear</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d6/d94/classant_1_1_utils_1_1_quadtree_1a744668597e9815bc6cdeb44a48f527dd">list</link> <link linkend="d6/d94/classant_1_1_utils_1_1_quadtree_1acef35673069f1edbafd93579e0a64df7">retrieve</link> (
+<link linkend="d6/d94/classant_1_1_utils_1_1_quadtree_1a744668597e9815bc6cdeb44a48f527dd">list</link> &amp; entities, <link linkend="dc/d73/classant_1_1_entity">Entity</link> * e)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d6/d94/classant_1_1_utils_1_1_quadtree_1acb64f3de7ac64139734c78c074a5509c">render</link> (
+sf::RenderWindow &amp; win)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d6/d94/classant_1_1_utils_1_1_quadtree_1a8d8e7d44a86d3a453684e4ead13ac8cb">~Quadtree</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d6/d94/classant_1_1_utils_1_1_quadtree_1ae48089152524a9c3ec84184bcc8a45a7">Quadtree</link> (
+int level, sf::FloatRect bounds)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d6/d94/classant_1_1_utils_1_1_quadtree_1abbe98f5025b0127b91c97142237f13db">split</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="d6/d94/classant_1_1_utils_1_1_quadtree_1a9a6fd9ec9d64fbb7e272828159241445">getIndex</link> (
+<link linkend="dc/d73/classant_1_1_entity">Entity</link> * e)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Brief Description</title>
+
+<para>Clase para reducir el numero de test de collisiones. </para>
+    </simplesect>
+        <simplesect>
+            <title>Detailed Description</title>
+
+<para><formalpara><title>Author: </title>
+
+<para>Cristian Glez <link xlink:href="mailto:Cristian.glez.m@gmail.com">Cristian.glez.m@gmail.com</link> </para>
+</formalpara>
+<formalpara><title>Version: </title>
+
+<para>0.1 </para>
+</formalpara>
+<para><link linkend="dd/da0/todo_1_todo000003">Todo</link> 
+<para>Posible cambio por Quadtree&lt;T&gt; tarda 1ms mas. </para>
+</para></para>
+                <para>Definition at line 21 of file Quadtree.hpp</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>Quadtree.hpp</para></listitem></itemizedlist></para>
+        </simplesect>
+            <section xml:id="d6/d94/classant_1_1_utils_1_1_quadtree_1a744668597e9815bc6cdeb44a48f527dd">
+                <title>typedef std::list&lt;Entity*&gt; ant::Utils::Quadtree::list</title> <emphasis>Contenedor que usa el Quadtree.</emphasis>
+                
+            </section>
+            <section xml:id="d6/d94/classant_1_1_utils_1_1_quadtree_1a2dc005f81ddcd318dac8d1d53460e3ff">
+                <title>ant::Utils::Quadtree::Quadtree (sf::FloatRect bounds)</title> <emphasis>Constructor principal, necesita que se especifique el rectangulo que
+       Ocupara.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>bounds</entry>
+                                <entry>
+<para>sf::FloatRect Rectangulo marcando la zona de este quadtree. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="d6/d94/classant_1_1_utils_1_1_quadtree_1af1f8e490445ee493d7639dc6f621bdfc">
+                <title>void ant::Utils::Quadtree::insert (Entity *e)</title> <emphasis>Agrega un puntero a una entidad, la posiciona en el nodo correcto,
+       si no cabe en ningun nodo inferior se mantiene en el padre.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>e</entry>
+                                <entry>
+<para><link linkend="dc/d73/classant_1_1_entity">Entity</link> * </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="d6/d94/classant_1_1_utils_1_1_quadtree_1aace6744ed7023825a1863f9953421a4b">
+                <title>void ant::Utils::Quadtree::clear ()</title> <emphasis>Limpia el quadtree y sus nodos.</emphasis>
+                
+            </section>
+            <section xml:id="d6/d94/classant_1_1_utils_1_1_quadtree_1acef35673069f1edbafd93579e0a64df7">
+                <title>Quadtree::list ant::Utils::Quadtree::retrieve (list &amp;entities, Entity *e)</title> <emphasis>Agrega las entidades del mismo sector que
+       la entidad especificada a la lista(la misma entidad especificada es agregada tambien)</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>entities</entry>
+                                <entry>
+<para><link linkend="d6/d94/classant_1_1_utils_1_1_quadtree_1a744668597e9815bc6cdeb44a48f527dd">Quadtree::list</link>&amp; lista a la que agregan las entidades del mismo sector de la especificada. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>e</entry>
+                                <entry>
+<para><link linkend="dc/d73/classant_1_1_entity">Entity</link> * Entidad a comprobar. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Returns: </title>
+
+<para><link linkend="d6/d94/classant_1_1_utils_1_1_quadtree_1a744668597e9815bc6cdeb44a48f527dd">Quadtree::list</link> lista de entidades </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="d6/d94/classant_1_1_utils_1_1_quadtree_1acb64f3de7ac64139734c78c074a5509c">
+                <title>void ant::Utils::Quadtree::render (sf::RenderWindow &amp;win)</title> <emphasis>Metodo para ver las divisiones en la pantalla.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>win</entry>
+                                <entry>
+<para>sf::RenderWindow&amp; ventana a la cual dibujar. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="d6/d94/classant_1_1_utils_1_1_quadtree_1a8d8e7d44a86d3a453684e4ead13ac8cb">
+                <title>ant::Utils::Quadtree::~Quadtree ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d6/d94/classant_1_1_utils_1_1_quadtree_1ae48089152524a9c3ec84184bcc8a45a7">
+                <title>ant::Utils::Quadtree::Quadtree (int level, sf::FloatRect bounds)</title> <emphasis>Constructor privado para la division de los nodos.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>level</entry>
+                                <entry>
+<para>int numero del nivel. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>bounds</entry>
+                                <entry>
+<para>sf::FloatRect rectangulo de la division. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="d6/d94/classant_1_1_utils_1_1_quadtree_1abbe98f5025b0127b91c97142237f13db">
+                <title>void ant::Utils::Quadtree::split ()</title> <emphasis>Metodo para dividir el quadtree.</emphasis>
+                
+<para>Inicializa los nodos del quadtree y se empiezan a usar. </para>
+
+            </section>
+            <section xml:id="d6/d94/classant_1_1_utils_1_1_quadtree_1a9a6fd9ec9d64fbb7e272828159241445">
+                <title>int ant::Utils::Quadtree::getIndex (Entity *e)</title> <emphasis>Obtiene el indice(nodo donde esta) de la entidad especificada.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>e</entry>
+                                <entry>
+<para>Entity* Entidad para sacar su indice. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Returns: </title>
+
+<para>int devuelve el indice(0-3) -1 si esta en el mismo. </para>
+</formalpara>
+</para>
+
+            </section>
+</section>

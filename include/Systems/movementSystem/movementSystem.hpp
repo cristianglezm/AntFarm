@@ -12,12 +12,12 @@ namespace ant{
      *
      * Las entidades se moveran si tienen el componente Velocity y Transform.
      * Se moveran segun la rotacion que tengan y la velocidad actual.
-     * Cuando recibe Eventos tipo COLLISION_EVENT parara a las entidades si se estan moviendo.
+     * Maneja a las entidades segun los eventos que reciba del sistema de colision.
+     * # Eventos que maneja:
+     *  -# TERRAIN_COLLISION: cambiara la rotacion de las entidades
+     *  -# COLLISION_EVENT: ~
      * @author Cristian Glez <Cristian.glez.m@gmail.com>
      * @version 0.1
-     * @todo
-     *      Evento OUT_OF_MAP_EVENT parar tambien a la entidad.
-     *      Evento PIXEL_COLLISION_EVENT parar a la entidad.
      */
     class movementSystem : public System, public Observer{
         public:
@@ -36,9 +36,7 @@ namespace ant{
             virtual void update(sf::Time dt);
             /**
              * @brief Cuando recibe Eventos COLLISION_EVENT parara a las entidades si se mueven.
-             * @todo
-             *     -# Evento OUT_OF_MAP_EVENT parar tambien a la entidad.
-             *     -# Evento PIXEL_COLLISION_EVENT parar a la entidad.
+             * @param e std::shared_ptr<baseEvent> evento.
              */
             void onNotify(std::shared_ptr<baseEvent> e);
             ~movementSystem();

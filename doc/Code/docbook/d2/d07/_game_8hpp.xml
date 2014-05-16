@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d2/d07/_game_8hpp">
+    <title>Game.hpp File Reference</title>
+    <programlisting>#include &lt;Level/Level.hpp&gt;</programlisting>
+    <programlisting>#include &lt;Config.hpp&gt;</programlisting>
+    <programlisting>#include &lt;EventQueue/EventQueue.hpp&gt;</programlisting>
+    <programlisting>#include &lt;Systems/constructorSystem/Constructions.hpp&gt;</programlisting>
+    <programlisting>#include &lt;Utils/Utility.hpp&gt;</programlisting>
+    <programlisting>#include &lt;GUI/Button/Button.hpp&gt;</programlisting>
+        <simplesect>
+            <title> Classes </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d1/db7/classant_1_1_game">ant::Game</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="dc/d6c/namespaceant">ant</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file F:/Development/Cpp/AntFarm/include/Game/Game.hpp</para>
+    </simplesect>
+</section>

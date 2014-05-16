@@ -6,6 +6,7 @@ var searchData=
   ['addfont',['addFont',['../d1/dd6/classant_1_1_asset_manager.html#a9a0d0fb10509492ef206e985d2a75636',1,'ant::AssetManager']]],
   ['addimage',['addImage',['../d1/dd6/classant_1_1_asset_manager.html#ac318001e95d732e606cd13836869f9ae',1,'ant::AssetManager']]],
   ['addobserver',['addObserver',['../d5/d29/classant_1_1_subject.html#a827a268f281179d94cc92c1709a8283f',1,'ant::Subject']]],
+  ['addstate',['addState',['../dc/d73/classant_1_1_entity.html#ac47ecff29b8d86d822f0ce83ace4ed8c',1,'ant::Entity']]],
   ['addsystem',['addSystem',['../de/dce/classant_1_1_system_manager.html#a5a1222988ac6893cfeb16101509ee2bd',1,'ant::SystemManager']]],
   ['addtexture',['addTexture',['../d1/dd6/classant_1_1_asset_manager.html#a5e98981fab8e9703cfd75c0d923dbb84',1,'ant::AssetManager']]],
   ['addworld',['addWorld',['../dc/dbd/classant_1_1_world_manager.html#ae99e4466fbef273a555dd093bf46fbb5',1,'ant::WorldManager']]],

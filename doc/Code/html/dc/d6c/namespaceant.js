@@ -1,5 +1,6 @@
 var namespaceant =
 [
+    [ "GUI", "d3/dce/namespaceant_1_1_g_u_i.html", "d3/dce/namespaceant_1_1_g_u_i" ],
     [ "Utils", "db/dbc/namespaceant_1_1_utils.html", "db/dbc/namespaceant_1_1_utils" ],
     [ "AssetManager", "d1/dd6/classant_1_1_asset_manager.html", "d1/dd6/classant_1_1_asset_manager" ],
     [ "ComponentFactory", "d4/df6/classant_1_1_component_factory.html", "d4/df6/classant_1_1_component_factory" ],
@@ -21,10 +22,14 @@ var namespaceant =
     [ "SystemFactory", "d6/dcc/classant_1_1_system_factory.html", "d6/dcc/classant_1_1_system_factory" ],
     [ "SystemManager", "de/dce/classant_1_1_system_manager.html", "de/dce/classant_1_1_system_manager" ],
     [ "collisionSystem", "dc/de8/classant_1_1collision_system.html", "dc/de8/classant_1_1collision_system" ],
-    [ "diggingSystem", "d9/d8f/classant_1_1digging_system.html", "d9/d8f/classant_1_1digging_system" ],
+    [ "Constructions", "dd/d76/classant_1_1_constructions.html", null ],
+    [ "constructorSystem", "d8/d12/classant_1_1constructor_system.html", "d8/d12/classant_1_1constructor_system" ],
+    [ "gravitySystem", "db/de0/classant_1_1gravity_system.html", "db/de0/classant_1_1gravity_system" ],
     [ "inputSystem", "dd/d19/classant_1_1input_system.html", "dd/d19/classant_1_1input_system" ],
     [ "movementSystem", "d6/d6c/classant_1_1movement_system.html", "d6/d6c/classant_1_1movement_system" ],
+    [ "outSystem", "dd/d76/classant_1_1out_system.html", "dd/d76/classant_1_1out_system" ],
     [ "renderSystem", "d1/def/classant_1_1render_system.html", "d1/def/classant_1_1render_system" ],
+    [ "spawnSystem", "db/ddf/classant_1_1spawn_system.html", "db/ddf/classant_1_1spawn_system" ],
     [ "System", "de/d48/classant_1_1_system.html", "de/d48/classant_1_1_system" ],
     [ "World", "de/dc7/classant_1_1_world.html", "de/dc7/classant_1_1_world" ],
     [ "WorldFactory", "d0/df7/classant_1_1_world_factory.html", "d0/df7/classant_1_1_world_factory" ],

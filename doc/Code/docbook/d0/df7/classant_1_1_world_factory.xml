@@ -1,0 +1,455 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d0/df7/classant_1_1_world_factory">
+<title>ant::WorldFactory class Reference</title>
+<para>
+    <programlisting>#include <link linkend="d1/df3/_world_factory_8hpp">&lt;WorldFactory.hpp&gt;</link></programlisting>
+</para>
+        <simplesect>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::shared_ptr&lt; EntityFactory &gt; entityFactory</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::shared_ptr&lt; SystemFactory &gt; systemFactory</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::shared_ptr&lt; EventQueue &gt; eventQueue</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::shared_ptr&lt; GameEventDispatcher &gt; gameEventDispatcher</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int lvlID</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d0/df7/classant_1_1_world_factory_1a14b0c1669fe73a6773fcdc16478260d1">WorldFactory</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d0/df7/classant_1_1_world_factory_1ae3d047fa97001b82fc87ae13bd9d91e8">WorldFactory</link> (
+std::shared_ptr&lt; <link linkend="dc/df5/classant_1_1_game_event_dispatcher">GameEventDispatcher</link> &gt; ged, std::shared_ptr&lt; <link linkend="db/dec/classant_1_1_event_queue">EventQueue</link> &gt; eq)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="d0/df7/classant_1_1_world_factory_1a45e1b16aef0eeac9b09cb2b3a342f302">loadAssets</link> (
+const std::string &amp; json)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="d0/df7/classant_1_1_world_factory_1aa5883b005670e04006465ec2d2f58dfa">unloadAssets</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d0/df7/classant_1_1_world_factory_1a10517a2948309249fd48d9a977531d90">setAssetManager</link> (
+std::shared_ptr&lt; <link linkend="d1/dd6/classant_1_1_asset_manager">AssetManager</link> &gt; assets)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::shared_ptr&lt; <link linkend="d1/dd6/classant_1_1_asset_manager">AssetManager</link> &gt; <link linkend="d0/df7/classant_1_1_world_factory_1a42d36e353537dad2ab9069d8ce8bb99d">getAssetManager</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::unique_ptr&lt; <link linkend="de/dc7/classant_1_1_world">World</link> &gt; <link linkend="d0/df7/classant_1_1_world_factory_1aa5be33ba3755dcd849d55f5ac8f64d8e">create</link> (
+const std::string &amp; name, const std::string &amp; background, const sf::Image &amp; lvl, int nEntities, sf::Time overTime, sf::FloatRect bounds)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d0/df7/classant_1_1_world_factory_1ab72d9d99bf005a10402c296ed8ec0d05">setEntityFactory</link> (
+std::shared_ptr&lt; <link linkend="db/d10/classant_1_1_entity_factory">EntityFactory</link> &gt; ef)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::shared_ptr&lt; <link linkend="db/d10/classant_1_1_entity_factory">EntityFactory</link> &gt; <link linkend="d0/df7/classant_1_1_world_factory_1a5221d294fc01541a3859eb7ed8ed57e1">getEntityFactory</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d0/df7/classant_1_1_world_factory_1a18ece24ada51e6f8d27649fb7635f514">setEventQueue</link> (
+std::shared_ptr&lt; <link linkend="db/dec/classant_1_1_event_queue">EventQueue</link> &gt; eq)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::shared_ptr&lt; <link linkend="db/dec/classant_1_1_event_queue">EventQueue</link> &gt; <link linkend="d0/df7/classant_1_1_world_factory_1a5438acbbbb7b5046c35e061714629daf">getEventQueue</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d0/df7/classant_1_1_world_factory_1a22b4c9a11d6d23d57390d14d590224ca">setGameEventDispatcher</link> (
+std::shared_ptr&lt; <link linkend="dc/df5/classant_1_1_game_event_dispatcher">GameEventDispatcher</link> &gt; ged)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::shared_ptr&lt; <link linkend="dc/df5/classant_1_1_game_event_dispatcher">GameEventDispatcher</link> &gt; <link linkend="d0/df7/classant_1_1_world_factory_1ad33ce245eed1ba8e76ead4247d9b2724">getGameEventDispatcher</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d0/df7/classant_1_1_world_factory_1a1f2b1c3f3da8c188a3c5e98144dd5527">~WorldFactory</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Brief Description</title>
+
+<para>Clase para crear mundos. </para>
+    </simplesect>
+        <simplesect>
+            <title>Detailed Description</title>
+
+<para>Utilizara el <link linkend="dc/df5/classant_1_1_game_event_dispatcher">GameEventDispatcher</link>, <link linkend="db/dec/classant_1_1_event_queue">EventQueue</link> que tenga para los mundos generados.</para>
+
+<para><formalpara><title>Author: </title>
+
+<para>Cristian Glez <link xlink:href="mailto:Cristian.glez.m@gmail.com">Cristian.glez.m@gmail.com</link> </para>
+</formalpara>
+<formalpara><title>Version: </title>
+
+<para>0.1 </para>
+</formalpara>
+</para>
+                <para>Definition at line 18 of file WorldFactory.hpp</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>WorldFactory.hpp</para></listitem></itemizedlist></para>
+        </simplesect>
+            <section xml:id="d0/df7/classant_1_1_world_factory_1a14b0c1669fe73a6773fcdc16478260d1">
+                <title>ant::WorldFactory::WorldFactory ()</title> <emphasis>Constructor por defecto.</emphasis>
+                
+            </section>
+            <section xml:id="d0/df7/classant_1_1_world_factory_1ae3d047fa97001b82fc87ae13bd9d91e8">
+                <title>ant::WorldFactory::WorldFactory (std::shared_ptr&lt; GameEventDispatcher &gt; ged, std::shared_ptr&lt; EventQueue &gt; eq)</title> <emphasis>Constructor con GameEventDispatcher y EventQueue.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>ged</entry>
+                                <entry>
+<para>std::shared_ptr&lt;GameEventDispatcher&gt; </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>eq</entry>
+                                <entry>
+<para>std::shared_ptr&lt;EventQueue&gt; </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="d0/df7/classant_1_1_world_factory_1a45e1b16aef0eeac9b09cb2b3a342f302">
+                <title>bool ant::WorldFactory::loadAssets (const std::string &amp;json)</title> <emphasis>Carga los assets necesarios para crear los mundos.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>json</entry>
+                                <entry>
+<para>const std::string &amp; fichero json con los datos de configuracion. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Returns: </title>
+
+<para>bool </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="d0/df7/classant_1_1_world_factory_1aa5883b005670e04006465ec2d2f58dfa">
+                <title>bool ant::WorldFactory::unloadAssets ()</title> <emphasis>Descarga los assets que tenga.</emphasis>
+                
+<para><formalpara><title>Returns: </title>
+
+<para>bool </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="d0/df7/classant_1_1_world_factory_1a10517a2948309249fd48d9a977531d90">
+                <title>void ant::WorldFactory::setAssetManager (std::shared_ptr&lt; AssetManager &gt; assets)</title> <emphasis>Establece el AssetManager que usara.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>assets</entry>
+                                <entry>
+<para>std::shared_ptr&lt;AssetManager&gt; </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="d0/df7/classant_1_1_world_factory_1a42d36e353537dad2ab9069d8ce8bb99d">
+                <title>std::shared_ptr&lt;AssetManager&gt; ant::WorldFactory::getAssetManager ()</title> <emphasis>Obtiene el AssetManager que usa.</emphasis>
+                
+<para><formalpara><title>Returns: </title>
+
+<para>std::shared_ptr&lt;AssetManager&gt; </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="d0/df7/classant_1_1_world_factory_1aa5be33ba3755dcd849d55f5ac8f64d8e">
+                <title>std::unique_ptr&lt; World &gt; ant::WorldFactory::create (const std::string &amp;name, const std::string &amp;background, const sf::Image &amp;lvl, int nEntities, sf::Time overTime, sf::FloatRect bounds)</title> <emphasis>Crea un nivel segun la imagen especificada.</emphasis>
+                
+<para>La imagen especificada tiene que tener: <formalpara><title>Colores</title></formalpara>
+</para>
+
+<para><orderedlist>
+<listitem>
+<para>Color blanco es ignorado.</para>
+</listitem><listitem>
+<para>Color negro es suelo.</para>
+</listitem><listitem>
+<para>Color rojo es la puerta de entrada al nivel.</para>
+</listitem><listitem>
+<para>Color verde es la puerta de salida del nivel.</para>
+</listitem></orderedlist>
+</para>
+
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>name</entry>
+                                <entry>
+<para>std::string nombre del nivel. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>lvl</entry>
+                                <entry>
+<para>sf::Image imagen a cargar con la informacion del nivel. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>nEntities</entry>
+                                <entry>
+<para>int numero de entidades que tendra el nivel. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>overTime</entry>
+                                <entry>
+<para>sf::Time tiempo maximo para pasarse el nivel. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>bounds</entry>
+                                <entry>
+<para>sf::FloatRect rectangulo con los limites del mundo(Tienen que ser iguales a la imagenes de fondo.) </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Returns: </title>
+
+<para>std::unique_ptr&lt;World&gt; <link linkend="de/dc7/classant_1_1_world">World</link> creado </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="d0/df7/classant_1_1_world_factory_1ab72d9d99bf005a10402c296ed8ec0d05">
+                <title>void ant::WorldFactory::setEntityFactory (std::shared_ptr&lt; EntityFactory &gt; ef)</title> <emphasis>Establece el EntityFactory que usara.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>ef</entry>
+                                <entry>
+<para>std::shared_ptr&lt;EntityFactory&gt; </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="d0/df7/classant_1_1_world_factory_1a5221d294fc01541a3859eb7ed8ed57e1">
+                <title>std::shared_ptr&lt;EntityFactory&gt; ant::WorldFactory::getEntityFactory ()</title> <emphasis>Obtiene el EntityFactory que usa.</emphasis>
+                
+<para><formalpara><title>Returns: </title>
+
+<para>std::shared_ptr&lt;EntityFactory&gt; </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="d0/df7/classant_1_1_world_factory_1a18ece24ada51e6f8d27649fb7635f514">
+                <title>void ant::WorldFactory::setEventQueue (std::shared_ptr&lt; EventQueue &gt; eq)</title> <emphasis>Establece la EventQueue que usaran los sistemas.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>eq</entry>
+                                <entry>
+<para>std::shared_ptr&lt;EventQueue&gt; </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="d0/df7/classant_1_1_world_factory_1a5438acbbbb7b5046c35e061714629daf">
+                <title>std::shared_ptr&lt;EventQueue&gt; ant::WorldFactory::getEventQueue ()</title> <emphasis>Obtiene la EventQueue que usa.</emphasis>
+                
+<para><formalpara><title>Returns: </title>
+
+<para>std::shared_ptr&lt;EventQueue&gt; </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="d0/df7/classant_1_1_world_factory_1a22b4c9a11d6d23d57390d14d590224ca">
+                <title>void ant::WorldFactory::setGameEventDispatcher (std::shared_ptr&lt; GameEventDispatcher &gt; ged)</title> <emphasis>Establece el GameEventDispatcher que usara.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>ged</entry>
+                                <entry>
+<para>std::shared_ptr&lt;GameEventDispatcher&gt; </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="d0/df7/classant_1_1_world_factory_1ad33ce245eed1ba8e76ead4247d9b2724">
+                <title>std::shared_ptr&lt;GameEventDispatcher&gt; ant::WorldFactory::getGameEventDispatcher ()</title> <emphasis>Obtiene el GameEventDispatcher que usa.</emphasis>
+                
+<para><formalpara><title>Returns: </title>
+
+<para>std::shared_ptr&lt;GameEventDispatcher&gt; </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="d0/df7/classant_1_1_world_factory_1a1f2b1c3f3da8c188a3c5e98144dd5527">
+                <title>ant::WorldFactory::~WorldFactory ()</title> <emphasis></emphasis>
+                
+            </section>
+</section>

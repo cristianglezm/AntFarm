@@ -1,0 +1,355 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="de/dce/classant_1_1_system_manager">
+<title>ant::SystemManager class Reference</title>
+<para>
+    <programlisting>#include <link linkend="d0/d80/_system_manager_8hpp">&lt;SystemManager.hpp&gt;</link></programlisting>
+</para>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef std::map&lt; std::string, std::shared_ptr&lt; <link linkend="de/d48/classant_1_1_system">System</link> &gt; &gt;  <link linkend="de/dce/classant_1_1_system_manager_1a4dfd264b3b229d3f4b64a9203c68090c">map</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>map systems</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="de/dce/classant_1_1_system_manager_1aa18f972d58796c53db6d48e4d94532f4">SystemManager</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="de/dce/classant_1_1_system_manager_1a5a1222988ac6893cfeb16101509ee2bd">addSystem</link> (
+std::shared_ptr&lt; <link linkend="de/d48/classant_1_1_system">System</link> &gt; s)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::shared_ptr&lt; <link linkend="de/d48/classant_1_1_system">System</link> &gt; <link linkend="de/dce/classant_1_1_system_manager_1a8360e89d83872c334e95cc0315e879ed">getSystem</link> (
+std::string name)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="de/dce/classant_1_1_system_manager_1a368e3a047fe8ab59bd6b680804e906ed">setSystems</link> (
+<link linkend="de/dce/classant_1_1_system_manager_1a4dfd264b3b229d3f4b64a9203c68090c">map</link> systems)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="de/dce/classant_1_1_system_manager_1a4dfd264b3b229d3f4b64a9203c68090c">SystemManager::map</link> &amp; <link linkend="de/dce/classant_1_1_system_manager_1a911b9d95d0301372dd6c2ed58d692bf7">getSystems</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="de/dce/classant_1_1_system_manager_1a8f9691606440561bb4b921a38ea9a9a0">removeSystem</link> (
+std::string name)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="de/dce/classant_1_1_system_manager_1aa875685c2cbcf4f4a72509d00f0904a8">setEntityManager</link> (
+std::shared_ptr&lt; <link linkend="dd/d12/classant_1_1_entity_manager">EntityManager</link> &gt; entityManager)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="de/dce/classant_1_1_system_manager_1a857eb475d85f432d81d75756c4259931">setEventQueue</link> (
+std::shared_ptr&lt; <link linkend="db/dec/classant_1_1_event_queue">EventQueue</link> &gt; eventQueue)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="de/dce/classant_1_1_system_manager_1a301250d5639f08e39960134eeed2c1c1">update</link> (
+sf::Time dt)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="de/dce/classant_1_1_system_manager_1af7a916ef5a14b3b2fb147f4249165201">render</link> (
+sf::RenderWindow &amp; win)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="de/dce/classant_1_1_system_manager_1a3a9c7cb0a2f4a57f60b36e57660e1f16">~SystemManager</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Brief Description</title>
+
+<para>Clase contenedor para los systemas. </para>
+    </simplesect>
+        <simplesect>
+            <title>Detailed Description</title>
+
+<para><formalpara><title>Author: </title>
+
+<para>Cristian Glez <link xlink:href="mailto:Cristian.glez.m@gmail.com">Cristian.glez.m@gmail.com</link> </para>
+</formalpara>
+<formalpara><title>Version: </title>
+
+<para>0.1 </para>
+</formalpara>
+</para>
+                <para>Definition at line 15 of file SystemManager.hpp</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>SystemManager.hpp</para></listitem></itemizedlist></para>
+        </simplesect>
+            <section xml:id="de/dce/classant_1_1_system_manager_1a4dfd264b3b229d3f4b64a9203c68090c">
+                <title>typedef std::map&lt;std::string,std::shared_ptr&lt;System&gt; &gt; ant::SystemManager::map</title> <emphasis>Contenedor usado por la clase.</emphasis>
+                
+            </section>
+            <section xml:id="de/dce/classant_1_1_system_manager_1aa18f972d58796c53db6d48e4d94532f4">
+                <title>ant::SystemManager::SystemManager ()</title> <emphasis>Constructor por defecto.</emphasis>
+                
+            </section>
+            <section xml:id="de/dce/classant_1_1_system_manager_1a5a1222988ac6893cfeb16101509ee2bd">
+                <title>bool ant::SystemManager::addSystem (std::shared_ptr&lt; System &gt; s)</title> <emphasis>Añade un sistema al manager.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>s</entry>
+                                <entry>
+<para>std::shared_ptr&lt;System&gt; </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Returns: </title>
+
+<para>bool </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="de/dce/classant_1_1_system_manager_1a8360e89d83872c334e95cc0315e879ed">
+                <title>std::shared_ptr&lt; System &gt; ant::SystemManager::getSystem (std::string name)</title> <emphasis>Devuelve el sistema con el nombre especificado.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>name</entry>
+                                <entry>
+<para>std::string nombre del sistema. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Returns: </title>
+
+<para>std::shared_ptr&lt;System&gt; </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="de/dce/classant_1_1_system_manager_1a368e3a047fe8ab59bd6b680804e906ed">
+                <title>void ant::SystemManager::setSystems (map systems)</title> <emphasis>Setter para poner el contenedor con todos los sistemas.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>systems</entry>
+                                <entry>
+<para>map </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="de/dce/classant_1_1_system_manager_1a911b9d95d0301372dd6c2ed58d692bf7">
+                <title>SystemManager::map&amp; ant::SystemManager::getSystems ()</title> <emphasis>Getter para obtener el contenedor de los sistemas.</emphasis>
+                
+<para><formalpara><title>Returns: </title>
+
+<para><link linkend="de/dce/classant_1_1_system_manager_1a4dfd264b3b229d3f4b64a9203c68090c">SystemManager::map</link> </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="de/dce/classant_1_1_system_manager_1a8f9691606440561bb4b921a38ea9a9a0">
+                <title>void ant::SystemManager::removeSystem (std::string name)</title> <emphasis>Elimina el sistema del manager.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>name</entry>
+                                <entry>
+<para>std::string nombre del sistema. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="de/dce/classant_1_1_system_manager_1aa875685c2cbcf4f4a72509d00f0904a8">
+                <title>void ant::SystemManager::setEntityManager (std::shared_ptr&lt; EntityManager &gt; entityManager)</title> <emphasis>Establece el mismo EntityManager a todos los sistemas que esten agregados.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>entityManager</entry>
+                                <entry>
+<para>std::shared_ptr&lt;EntityManager&gt; </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="de/dce/classant_1_1_system_manager_1a857eb475d85f432d81d75756c4259931">
+                <title>void ant::SystemManager::setEventQueue (std::shared_ptr&lt; EventQueue &gt; eventQueue)</title> <emphasis>Establece la misma EventQueue a todos los sistemas que esten agregados.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>eventQueue</entry>
+                                <entry>
+<para>std::shared_ptr&lt;EventQueue&gt; </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="de/dce/classant_1_1_system_manager_1a301250d5639f08e39960134eeed2c1c1">
+                <title>void ant::SystemManager::update (sf::Time dt)</title> <emphasis>Hace que todos los sistemas apliquen sus actualizaciones a sus EntityManager.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>dt</entry>
+                                <entry>
+<para>sf::Time delta time </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="de/dce/classant_1_1_system_manager_1af7a916ef5a14b3b2fb147f4249165201">
+                <title>void ant::SystemManager::render (sf::RenderWindow &amp;win)</title> <emphasis>Hace que todos los sistemas renderizen a las Entidades que tengan que ser renderizadas.</emphasis>
+                
+<para>Este metodo necesita ir entre sf::RenderWindow::clear() y sf::RenderWindow::display()</para>
+
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>win</entry>
+                                <entry>
+<para>sf::RenderWindow &amp; </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="de/dce/classant_1_1_system_manager_1a3a9c7cb0a2f4a57f60b36e57660e1f16">
+                <title>ant::SystemManager::~SystemManager ()</title> <emphasis></emphasis>
+                
+            </section>
+</section>

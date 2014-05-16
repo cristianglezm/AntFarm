@@ -1,0 +1,5 @@
+<map id="ant::Entity::hasComponent" name="ant::Entity::hasComponent">
+<area shape="rect" id="node2" href="$dc/d73/classant_1_1_entity.html#a4b083a6d2567009fdff3a1fba2f4f2ee" title="Elimina el componente de la entidad. " alt="" coords="231,5,428,32"/>
+<area shape="rect" id="node3" href="$dc/d73/classant_1_1_entity.html#a78b3cd3f28801cbd21faf67e7dd028e4" title="Obtiene una referencia al componente. " alt="" coords="242,56,417,83"/>
+<area shape="rect" id="node4" href="$d6/d6c/classant_1_1movement_system.html#ab950deb32094a7c4e2ee2663c72b7ed7" title="Cuando recibe Eventos COLLISION_EVENT parara a las entidades si se mueven. " alt="" coords="476,49,628,90"/>
+</map>

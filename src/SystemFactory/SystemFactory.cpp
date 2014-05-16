@@ -18,10 +18,6 @@ namespace ant{
         s->setEventQueue(eventQueue);
         return s;
     }
-    std::shared_ptr<inputSystem> SystemFactory::createInputSystem(){
-        /// @todo implement
-        //return std::shared_ptr<inputSystem>(new inputSystem());
-    }
     std::shared_ptr<collisionSystem> SystemFactory::createCollisionSystem(sf::FloatRect bounds,sf::VertexArray * GameMap){
         std::shared_ptr<collisionSystem> cs(new collisionSystem(bounds,GameMap));
         cs->setEventQueue(eventQueue);

@@ -1,0 +1,656 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="dc/d73/classant_1_1_entity">
+<title>ant::Entity class Reference</title>
+<para>
+    <programlisting>#include <link linkend="d2/db6/_entity_8hpp">&lt;Entity.hpp&gt;</link></programlisting>
+</para>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef std::map&lt; long int, std::unique_ptr&lt; <link linkend="d4/dd4/classant_1_1base_component">baseComponent</link> &gt; &gt;  <link linkend="dc/d73/classant_1_1_entity_1aa823933535346583f2a1edc2b989b037">map</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::string name</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>long int mask</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>long int states</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>map Components</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="dc/d73/classant_1_1_entity_1a7fe02d14320908c7b5eb080a113f1442">Entity</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="dc/d73/classant_1_1_entity_1af3da175fdcde326a758aaa1dc438cc51">Entity</link> (
+std::string name)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="dc/d73/classant_1_1_entity_1a57a565f2520d69915f565ba093a7f27a">Entity</link> (
+std::string name, <link linkend="dc/d73/classant_1_1_entity_1aa823933535346583f2a1edc2b989b037">map</link> Components)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="dc/d73/classant_1_1_entity_1a4fe4572015760b0e486df6c1b94d3f96">addComponent</link> (
+std::unique_ptr&lt; <link linkend="d4/dd4/classant_1_1base_component">baseComponent</link> &gt; component)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d4/dd4/classant_1_1base_component">baseComponent</link> * <link linkend="dc/d73/classant_1_1_entity_1a78b3cd3f28801cbd21faf67e7dd028e4">getComponent</link> (
+long int id)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="dc/d73/classant_1_1_entity_1a4b083a6d2567009fdff3a1fba2f4f2ee">removeComponent</link> (
+long int id)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::string <link linkend="dc/d73/classant_1_1_entity_1ab22630399795df9625218fc158dd02b6">getName</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="dc/d73/classant_1_1_entity_1af0d4541cfec26963b714d500f8fe5f48">setName</link> (
+std::string name)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="dc/d73/classant_1_1_entity_1a68d0751b571edf04c39319c81fd16861">setComponents</link> (
+<link linkend="dc/d73/classant_1_1_entity_1aa823933535346583f2a1edc2b989b037">map</link> Components)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="dc/d73/classant_1_1_entity_1aa823933535346583f2a1edc2b989b037">map</link> &amp; <link linkend="dc/d73/classant_1_1_entity_1a81bcfa152047d1c653eb7af21daf3c10">getComponents</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>long int <link linkend="dc/d73/classant_1_1_entity_1a508baf12c760f45032e24fae27af6f09">getMask</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="dc/d73/classant_1_1_entity_1adfd34f851602409da9db04f6488d58eb">hasComponent</link> (
+long int id)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="dc/d73/classant_1_1_entity_1a60b2c39a46a2fb44cb63105e2b3a23b1">is</link> (
+long int statesID)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="dc/d73/classant_1_1_entity_1ac47ecff29b8d86d822f0ce83ace4ed8c">addState</link> (
+long int state)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="dc/d73/classant_1_1_entity_1a362f4c8352e409e30284429d535fcc62">removeState</link> (
+long int state)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>long int <link linkend="dc/d73/classant_1_1_entity_1ac960e72954677f4f8b7946376bbca059">getStates</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="dc/d73/classant_1_1_entity_1ae878cec956ac960d0d60e357bb970a40">clear</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="dc/d73/classant_1_1_entity_1a379c70555ca47177ec607a992ef97f3f">operator==</link> (
+const <link linkend="dc/d73/classant_1_1_entity">Entity</link> &amp; e)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="dc/d73/classant_1_1_entity_1a2eb6d101219432563bd36f9535700557">operator!=</link> (
+const <link linkend="dc/d73/classant_1_1_entity">Entity</link> &amp; e)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="dc/d73/classant_1_1_entity_1ac4965e92e1827c22718b8f13b67f7c66">operator==</link> (
+const std::string &amp; name)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="dc/d73/classant_1_1_entity_1a125b5f8608b1ff872a842060003ffe32">~Entity</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Brief Description</title>
+
+<para>Clase para tener los componentes, solo puede tener un componente de cada tipo. </para>
+    </simplesect>
+        <simplesect>
+            <title>Detailed Description</title>
+
+<para><formalpara><title>Author: </title>
+
+<para>Cristian Glez <link xlink:href="mailto:Cristian.glez.m@gmail.com">Cristian.glez.m@gmail.com</link> </para>
+</formalpara>
+<formalpara><title>Version: </title>
+
+<para>0.1 </para>
+</formalpara>
+</para>
+                <para>Definition at line 16 of file Entity.hpp</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>Entity.hpp</para></listitem></itemizedlist></para>
+        </simplesect>
+            <section xml:id="dc/d73/classant_1_1_entity_1aa823933535346583f2a1edc2b989b037">
+                <title>typedef std::map&lt;long int,std::unique_ptr&lt;baseComponent&gt; &gt; ant::Entity::map</title> <emphasis></emphasis>
+                
+<para>Contenedor que utiliza la entidad para los componentes. </para>
+
+            </section>
+            <section xml:id="dc/d73/classant_1_1_entity_1a7fe02d14320908c7b5eb080a113f1442">
+                <title>ant::Entity::Entity ()</title> <emphasis>Constructor por defecto.</emphasis>
+                
+            </section>
+            <section xml:id="dc/d73/classant_1_1_entity_1af3da175fdcde326a758aaa1dc438cc51">
+                <title>ant::Entity::Entity (std::string name)</title> <emphasis>Constructor con nombre.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>name</entry>
+                                <entry>
+<para>std::string nombre que tendra la entidad. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="dc/d73/classant_1_1_entity_1a57a565f2520d69915f565ba093a7f27a">
+                <title>ant::Entity::Entity (std::string name, map Components)</title> <emphasis>Constructor con nombre y componentes.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>name</entry>
+                                <entry>
+<para>std::string nombre que tendra la entidad. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>Components</entry>
+                                <entry>
+<para><link linkend="dc/d73/classant_1_1_entity_1aa823933535346583f2a1edc2b989b037">Entity::map</link> mapa de los componentes. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="dc/d73/classant_1_1_entity_1a4fe4572015760b0e486df6c1b94d3f96">
+                <title>void ant::Entity::addComponent (std::unique_ptr&lt; baseComponent &gt; component)</title> <emphasis>Añade un componente a la entidad.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>component</entry>
+                                <entry>
+<para>std::unique_ptr&lt;baseComponent&gt; componente para añadir. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="dc/d73/classant_1_1_entity_1a78b3cd3f28801cbd21faf67e7dd028e4">
+                <title>baseComponent* ant::Entity::getComponent (long int id)</title> <emphasis>Obtiene una referencia al componente.</emphasis>
+                
+<para>Si el componente no se encuentra devuelve un nullptr.</para>
+
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>id</entry>
+                                <entry>
+<para>long int id del componente. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Returns: </title>
+
+<para><link linkend="d4/dd4/classant_1_1base_component">baseComponent</link> * puntero al componente. </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="dc/d73/classant_1_1_entity_1a4b083a6d2567009fdff3a1fba2f4f2ee">
+                <title>void ant::Entity::removeComponent (long int id)</title> <emphasis>Elimina el componente de la entidad.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>id</entry>
+                                <entry>
+<para>long int </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="dc/d73/classant_1_1_entity_1ab22630399795df9625218fc158dd02b6">
+                <title>std::string ant::Entity::getName () const </title> <emphasis>Getter del nombre de la entidad.</emphasis>
+                
+<para><formalpara><title>Returns: </title>
+
+<para>std::string nombre de la entidad. </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="dc/d73/classant_1_1_entity_1af0d4541cfec26963b714d500f8fe5f48">
+                <title>void ant::Entity::setName (std::string name)</title> <emphasis>Setter del nombre de la entidad.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>name</entry>
+                                <entry>
+<para>std::string nombre nuevo de la entidad. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="dc/d73/classant_1_1_entity_1a68d0751b571edf04c39319c81fd16861">
+                <title>void ant::Entity::setComponents (map Components)</title> <emphasis>Setter de los componentes de la entidad.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>Components</entry>
+                                <entry>
+<para><link linkend="dc/d73/classant_1_1_entity_1aa823933535346583f2a1edc2b989b037">Entity::map</link> </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="dc/d73/classant_1_1_entity_1a81bcfa152047d1c653eb7af21daf3c10">
+                <title>map&amp; ant::Entity::getComponents ()</title> <emphasis>Getter de los componentes.</emphasis>
+                
+<para><formalpara><title>Returns: </title>
+
+<para><link linkend="dc/d73/classant_1_1_entity_1aa823933535346583f2a1edc2b989b037">Entity::map</link> referencia a los componentes. </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="dc/d73/classant_1_1_entity_1a508baf12c760f45032e24fae27af6f09">
+                <title>long int ant::Entity::getMask () const </title> <emphasis>Getter de la mascara de la entidad.</emphasis>
+                
+<para>Con este metodo comprobaras si una entidad tiene los componentes que necesitas antes de utilizar el getComponent(Component::ID); <programlisting><emphasis>if</emphasis>((e.getMask()&#32;&amp;&#32;Component:ID)&#32;==&#32;Component::ID)&#32;
+</programlisting></para>
+
+<para><formalpara><title>Returns: </title>
+
+<para>long int </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="dc/d73/classant_1_1_entity_1adfd34f851602409da9db04f6488d58eb">
+                <title>bool ant::Entity::hasComponent (long int id)</title> <emphasis>Devuelve si esta entidad tiene el componente.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>id</entry>
+                                <entry>
+<para>long int Id del componente. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Returns: </title>
+
+<para>bool </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="dc/d73/classant_1_1_entity_1a60b2c39a46a2fb44cb63105e2b3a23b1">
+                <title>bool ant::Entity::is (long int statesID)</title> <emphasis>Devuelve los estados que tiene la entidad.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>statesID</entry>
+                                <entry>
+<para>long int id de los estados. <programlisting><link linkend="dc/d73/classant_1_1_entity_1a60b2c39a46a2fb44cb63105e2b3a23b1">is</link>(<link linkend="d7/daa/class_states_1ae464e17ebc3214e3c17186d614e37c54">States::FALLING</link>&#32;|&#32;States::OnFIRE);
+</programlisting> </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Returns: </title>
+
+<para>bool </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="dc/d73/classant_1_1_entity_1ac47ecff29b8d86d822f0ce83ace4ed8c">
+                <title>void ant::Entity::addState (long int state)</title> <emphasis>Añade un estado a la entidad.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>state</entry>
+                                <entry>
+<para>long int estado a añadir. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="dc/d73/classant_1_1_entity_1a362f4c8352e409e30284429d535fcc62">
+                <title>void ant::Entity::removeState (long int state)</title> <emphasis>Elimina un estado de la entidad.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>state</entry>
+                                <entry>
+<para>long int estado a eliminar. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="dc/d73/classant_1_1_entity_1ac960e72954677f4f8b7946376bbca059">
+                <title>long int ant::Entity::getStates ()</title> <emphasis>devuelve los estados de la entidad.</emphasis>
+                
+<para><formalpara><title>Returns: </title>
+
+<para>long int Estados de la entidad. </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="dc/d73/classant_1_1_entity_1ae878cec956ac960d0d60e357bb970a40">
+                <title>void ant::Entity::clear ()</title> <emphasis>Limpia los componentes de la entidad.</emphasis>
+                
+            </section>
+            <section xml:id="dc/d73/classant_1_1_entity_1a379c70555ca47177ec607a992ef97f3f">
+                <title>bool ant::Entity::operator== (const Entity &amp;e) const </title> <emphasis>Operator overload para comparar la entidad contra otra entidad.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>e</entry>
+                                <entry>
+<para><link linkend="dc/d73/classant_1_1_entity">Entity</link> entidad a la cual compararse. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Returns: </title>
+
+<para>bool </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="dc/d73/classant_1_1_entity_1a2eb6d101219432563bd36f9535700557">
+                <title>bool ant::Entity::operator!= (const Entity &amp;e) const </title> <emphasis>Operator overload para comparar la entidad contra otra entidad.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>e</entry>
+                                <entry>
+<para><link linkend="dc/d73/classant_1_1_entity">Entity</link> entidad a la cual se compara. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Returns: </title>
+
+<para>bool </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="dc/d73/classant_1_1_entity_1ac4965e92e1827c22718b8f13b67f7c66">
+                <title>bool ant::Entity::operator== (const std::string &amp;name) const </title> <emphasis>Operator overload para comparar la entidad por nombre.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>name</entry>
+                                <entry>
+<para>std::string nombre con el cual comparar. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Returns: </title>
+
+<para>bool </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="dc/d73/classant_1_1_entity_1a125b5f8608b1ff872a842060003ffe32">
+                <title>ant::Entity::~Entity ()</title> <emphasis></emphasis>
+                
+            </section>
+</section>

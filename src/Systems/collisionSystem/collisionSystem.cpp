@@ -20,9 +20,6 @@ namespace ant{
                 auto& pos = std::get<0>(cTransf);
                 bounds.left = pos.x;
                 bounds.top = pos.y;
-                //auto& rotation = std::get<2>(cTransf);
-                ///  @todo rotation of boundingbox
-                //bounds = Utils::rotateRect(bounds,rotation);
                 qtree.insert(entity.get());
             }
         }
@@ -31,13 +28,19 @@ namespace ant{
             entities.clear();
             if((entity1->hasComponent(RequiredComponents))){
                 qtree.retrieve(entities,entity1.get());
-                for(auto entity2:entities){
-                    auto& properties1 = entity1->getComponent(ComponentsMask::COMPONENT_BOUNDS)
+                auto& properties1 = entity1->getComponent(ComponentsMask::COMPONENT_BOUNDS)
                                             ->getProperties<sf::FloatRect>();
-                    auto& eBounds1 = std::get<0>(properties1);
+                auto& eBounds1 = std::get<0>(properties1);
+                if(!Utils::RectContains(eBounds1,gameBounds)){
+                    eventQueue->push(std::shared_ptr<baseEvent>(new Event<Entity*>(
+                                                EventType::OUT_MAP,entity1.get())));
+                }else{
+                    testTerrainCollision(entity1.get(),eBounds1);
+                }
+                for(auto entity2:entities){
                     if(entity1.get() != entity2){
                         auto& properties2 = entity2->getComponent(ComponentsMask::COMPONENT_BOUNDS)
-                                            ->getProperties<sf::FloatRect>();
+                                                    ->getProperties<sf::FloatRect>();
                         auto& eBounds2 = std::get<0>(properties2);
                         if(eBounds1.intersects(eBounds2)){
                             eventQueue->push(std::shared_ptr<baseEvent>(new Event<Entity*,Entity*>(
@@ -46,12 +49,6 @@ namespace ant{
                         if(eBounds2.intersects(eBounds1)){
                             eventQueue->push(std::shared_ptr<baseEvent>(new Event<Entity*,Entity*>(
                                                 EventType::COLLISION_EVENT,entity1.get(),entity2)));
-                        }
-                        if(!Utils::RectContains(eBounds1,gameBounds)){
-                            eventQueue->push(std::shared_ptr<baseEvent>(new Event<Entity*>(
-                                                EventType::OUT_MAP,entity1.get())));
-                        }else{
-                            testTerrainCollision(entity1.get(),eBounds1);
                         }
                         if(!Utils::RectContains(eBounds2,gameBounds)){
                             eventQueue->push(std::shared_ptr<baseEvent>(new Event<Entity*>(
@@ -65,7 +62,8 @@ namespace ant{
         }
     }
     void collisionSystem::testTerrainCollision(Entity* entity,const sf::FloatRect& eBounds){
-        /* Comprobamos si colisiona con los seis puntos
+        /*
+         * Comprobamos si colisiona con los seis puntos
          * 1 esquina superior izquierda -> envia evento de colision con pared 0
          * 2 esquina superior derecha -> envia evento de colision con pared 1
          * 3 esquina inferior mediana izquierda -> envia evento de colision con escalon para subirlo 2

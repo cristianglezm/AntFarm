@@ -1,0 +1,393 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="dd/d12/classant_1_1_entity_manager">
+<title>ant::EntityManager class Reference</title>
+<para>
+    <programlisting>#include <link linkend="da/d7b/_entity_manager_8hpp">&lt;EntityManager.hpp&gt;</link></programlisting>
+</para>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef std::list&lt; std::unique_ptr&lt; <link linkend="dc/d73/classant_1_1_entity">Entity</link> &gt; &gt;::<link linkend="dd/d12/classant_1_1_entity_manager_1a60b5d97167e38d66d7d245a59735c1b5">iterator</link>  <link linkend="dd/d12/classant_1_1_entity_manager_1a60b5d97167e38d66d7d245a59735c1b5">iterator</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef std::list&lt; std::unique_ptr&lt; <link linkend="dc/d73/classant_1_1_entity">Entity</link> &gt; &gt;  <link linkend="dd/d12/classant_1_1_entity_manager_1a473e6ef8480bf2998f7c4d03e5ed20fc">list</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>list entities</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="dd/d12/classant_1_1_entity_manager_1a9d98e7cba15c2663b79df62f65b39a8f">EntityManager</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="dd/d12/classant_1_1_entity_manager_1af8cba501bcdac99f43f12047c8f857c4">addEntity</link> (
+std::unique_ptr&lt; <link linkend="dc/d73/classant_1_1_entity">Entity</link> &gt; e)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="dd/d12/classant_1_1_entity_manager_1ac3645cbade4566b1e035923d12688811">removeEntity</link> (
+std::unique_ptr&lt; <link linkend="dc/d73/classant_1_1_entity">Entity</link> &gt; &amp; e)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="dd/d12/classant_1_1_entity_manager_1a60b5d97167e38d66d7d245a59735c1b5">iterator</link> <link linkend="dd/d12/classant_1_1_entity_manager_1a62fcaeadb65e7580eb396d5a25e47071">removeEntity</link> (
+const std::string &amp; name)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="dd/d12/classant_1_1_entity_manager_1a60b5d97167e38d66d7d245a59735c1b5">iterator</link> <link linkend="dd/d12/classant_1_1_entity_manager_1a9fe7570482ce955d895430e1c3f1b107">removeEntity</link> (
+<link linkend="dd/d12/classant_1_1_entity_manager_1a60b5d97167e38d66d7d245a59735c1b5">iterator</link> it)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="dc/d73/classant_1_1_entity">Entity</link> * <link linkend="dd/d12/classant_1_1_entity_manager_1aa28e915d3d3460f04feae33c85bd3df3">getEntity</link> (
+const std::string &amp; name)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="dd/d12/classant_1_1_entity_manager_1a2f7ad52093982066f82a97c525501320">addEntities</link> (
+<link linkend="dd/d12/classant_1_1_entity_manager_1a473e6ef8480bf2998f7c4d03e5ed20fc">list</link> e)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="dd/d12/classant_1_1_entity_manager_1a473e6ef8480bf2998f7c4d03e5ed20fc">list</link> &amp; <link linkend="dd/d12/classant_1_1_entity_manager_1a1dbb77029a458daf2bce15e9405c9b84">getEntities</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="dd/d12/classant_1_1_entity_manager_1a60b5d97167e38d66d7d245a59735c1b5">iterator</link> <link linkend="dd/d12/classant_1_1_entity_manager_1a426b3fdbb72efce9a0e8989a448b22bb">begin</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="dd/d12/classant_1_1_entity_manager_1a60b5d97167e38d66d7d245a59735c1b5">iterator</link> <link linkend="dd/d12/classant_1_1_entity_manager_1abeac423dde88812cb4c51235d1790b34">end</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::unique_ptr&lt; <link linkend="dc/d73/classant_1_1_entity">Entity</link> &gt; <link linkend="dd/d12/classant_1_1_entity_manager_1ae84ee9cc6de695914727dae5af4909ae">Transfer</link> (
+const std::string &amp; name)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::unique_ptr&lt; <link linkend="dc/d73/classant_1_1_entity">Entity</link> &gt; <link linkend="dd/d12/classant_1_1_entity_manager_1a9f45bd8317a4c8b0f0f00a44ccdd9049">Transfer</link> (
+const <link linkend="dc/d73/classant_1_1_entity">Entity</link> * e)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="dd/d12/classant_1_1_entity_manager_1af0dac6b2bdf3d16aa956ad82f23dc917">~EntityManager</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Brief Description</title>
+
+<para>Clase Para manejar las entidades. </para>
+    </simplesect>
+        <simplesect>
+            <title>Detailed Description</title>
+
+<para><formalpara><title>Author: </title>
+
+<para>Cristian Glez <link xlink:href="mailto:Cristian.glez.m@gmail.com">Cristian.glez.m@gmail.com</link> </para>
+</formalpara>
+<formalpara><title>Version: </title>
+
+<para>0.1 </para>
+</formalpara>
+</para>
+                <para>Definition at line 13 of file EntityManager.hpp</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>EntityManager.hpp</para></listitem></itemizedlist></para>
+        </simplesect>
+            <section xml:id="dd/d12/classant_1_1_entity_manager_1a60b5d97167e38d66d7d245a59735c1b5">
+                <title>typedef std::list&lt;std::unique_ptr&lt;Entity&gt; &gt;::iterator ant::EntityManager::iterator</title> <emphasis>Iterador del EntityManager.</emphasis>
+                
+            </section>
+            <section xml:id="dd/d12/classant_1_1_entity_manager_1a473e6ef8480bf2998f7c4d03e5ed20fc">
+                <title>typedef std::list&lt;std::unique_ptr&lt;Entity&gt; &gt; ant::EntityManager::list</title> <emphasis>Contenedor utilizado por el EntityManager.</emphasis>
+                
+            </section>
+            <section xml:id="dd/d12/classant_1_1_entity_manager_1a9d98e7cba15c2663b79df62f65b39a8f">
+                <title>ant::EntityManager::EntityManager ()</title> <emphasis>Constructor por defecto.</emphasis>
+                
+            </section>
+            <section xml:id="dd/d12/classant_1_1_entity_manager_1af8cba501bcdac99f43f12047c8f857c4">
+                <title>void ant::EntityManager::addEntity (std::unique_ptr&lt; Entity &gt; e)</title> <emphasis>Añade una entidad al manager.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>e</entry>
+                                <entry>
+<para>std::unique_ptr&lt;Entity&gt; </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="dd/d12/classant_1_1_entity_manager_1ac3645cbade4566b1e035923d12688811">
+                <title>void ant::EntityManager::removeEntity (std::unique_ptr&lt; Entity &gt; &amp;e)</title> <emphasis>Elimina una entidad del manager.</emphasis>
+                
+<para>Elimina la primera entidad que sea igual a la proporcionada. 
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>e</entry>
+                                <entry>
+<para>std::unique_ptr&lt;Entity&gt; </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="dd/d12/classant_1_1_entity_manager_1a62fcaeadb65e7580eb396d5a25e47071">
+                <title>EntityManager::iterator ant::EntityManager::removeEntity (const std::string &amp;name)</title> <emphasis>Elimina la primera entidad que coincida el nombre.</emphasis>
+                
+<para>Devuelve un iterador por si estas iterando y necesitas borrar alguna entidad.</para>
+
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>name</entry>
+                                <entry>
+<para>std::string nombre de la entidad. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Returns: </title>
+
+<para>iterator la posicion siguiente de la entidad eliminada. </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="dd/d12/classant_1_1_entity_manager_1a9fe7570482ce955d895430e1c3f1b107">
+                <title>EntityManager::iterator ant::EntityManager::removeEntity (iterator it)</title> <emphasis>Elimina la primera entidad que coincida.</emphasis>
+                
+<para>Devuelve un iterador por si estas iterando y necesitas borrar alguna entidad.</para>
+
+<para><formalpara><title>Returns: </title>
+
+<para>iterator la posicion siguiente de la entidad eliminada. </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="dd/d12/classant_1_1_entity_manager_1aa28e915d3d3460f04feae33c85bd3df3">
+                <title>Entity * ant::EntityManager::getEntity (const std::string &amp;name)</title> <emphasis>Obtiene la primera entidad que tenga el nombre proporcionado.</emphasis>
+                
+<para>Si no encuentra la entidad devuelve un puntero nulo(nullptr).</para>
+
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>name</entry>
+                                <entry>
+<para>std::string nombre de la entidad. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Returns: </title>
+
+<para><link linkend="dc/d73/classant_1_1_entity">Entity</link> * naked pointer hacia la entidad o nullptr si no la encuentra. </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="dd/d12/classant_1_1_entity_manager_1a2f7ad52093982066f82a97c525501320">
+                <title>void ant::EntityManager::addEntities (list e)</title> <emphasis>Añade todas las entidades a la vez.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>e</entry>
+                                <entry>
+<para>list lista de entidades. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="dd/d12/classant_1_1_entity_manager_1a1dbb77029a458daf2bce15e9405c9b84">
+                <title>list&amp; ant::EntityManager::getEntities ()</title> <emphasis>devuelve la lista de las entidades.</emphasis>
+                
+<para><formalpara><title>Returns: </title>
+
+<para>list &amp; </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="dd/d12/classant_1_1_entity_manager_1a426b3fdbb72efce9a0e8989a448b22bb">
+                <title>iterator ant::EntityManager::begin ()</title> <emphasis>Devuelve el principio de la lista.</emphasis>
+                
+            </section>
+            <section xml:id="dd/d12/classant_1_1_entity_manager_1abeac423dde88812cb4c51235d1790b34">
+                <title>iterator ant::EntityManager::end ()</title> <emphasis>Devuelve el final de la lista.</emphasis>
+                
+            </section>
+            <section xml:id="dd/d12/classant_1_1_entity_manager_1ae84ee9cc6de695914727dae5af4909ae">
+                <title>std::unique_ptr&lt; Entity &gt; ant::EntityManager::Transfer (const std::string &amp;name)</title> <emphasis>Transfiere la primera entidad que coincida con el nombre.</emphasis>
+                
+<para>Transfiere la posesion(ownership) de la entidad y la elimina del contenedor.</para>
+
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>name</entry>
+                                <entry>
+<para>std::string nombre de la entidad a transferir. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Returns: </title>
+
+<para>std::unique_ptr&lt;Entity&gt; entidad transferida o nullptr si no es encontrada. </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="dd/d12/classant_1_1_entity_manager_1a9f45bd8317a4c8b0f0f00a44ccdd9049">
+                <title>std::unique_ptr&lt; Entity &gt; ant::EntityManager::Transfer (const Entity *e)</title> <emphasis>Transfiere la primera entidad que coincida con el puntero de entidad.</emphasis>
+                
+<para>Transfiere la posesion(ownership) de la entidad y la elimina del contenedor.</para>
+
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>e</entry>
+                                <entry>
+<para><link linkend="dc/d73/classant_1_1_entity">Entity</link> * Puntero a la entidad </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Returns: </title>
+
+<para>std::unique_ptr&lt;Entity&gt; entidad transferida o nullptr si no es encontrada. </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="dd/d12/classant_1_1_entity_manager_1af0dac6b2bdf3d16aa956ad82f23dc917">
+                <title>ant::EntityManager::~EntityManager ()</title> <emphasis></emphasis>
+                
+            </section>
+</section>

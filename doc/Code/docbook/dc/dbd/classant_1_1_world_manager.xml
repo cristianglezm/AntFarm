@@ -1,0 +1,327 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="dc/dbd/classant_1_1_world_manager">
+<title>ant::WorldManager class Reference</title>
+<para>
+    <programlisting>#include <link linkend="d7/d34/_world_manager_8hpp">&lt;WorldManager.hpp&gt;</link></programlisting>
+</para>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef std::map&lt; long int, std::unique_ptr&lt; <link linkend="de/dc7/classant_1_1_world">World</link> &gt; &gt;  <link linkend="dc/dbd/classant_1_1_world_manager_1a721c8e435f32fa2f9a3ac9b82bf042b2">map</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef map::iterator  <link linkend="dc/dbd/classant_1_1_world_manager_1a5271942cc141b1b903fd3648afcddea9">iterator</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>map worlds</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="dc/dbd/classant_1_1_world_manager_1a845389f52e654ff947b83c993c72ff08">WorldManager</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="dc/dbd/classant_1_1_world_manager_1ae99e4466fbef273a555dd093bf46fbb5">addWorld</link> (
+std::unique_ptr&lt; <link linkend="de/dc7/classant_1_1_world">World</link> &gt; w)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="de/dc7/classant_1_1_world">World</link> * <link linkend="dc/dbd/classant_1_1_world_manager_1a94e6d6054814eda8a3ec4f476ea8cf02">getWorld</link> (
+long int id)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="dc/dbd/classant_1_1_world_manager_1a13377656880523bc48ca4e963017a7e3">removeWorld</link> (
+long int id)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="dc/dbd/classant_1_1_world_manager_1a721c8e435f32fa2f9a3ac9b82bf042b2">map</link> &amp; <link linkend="dc/dbd/classant_1_1_world_manager_1ab3b9b8a1497007738f66539768491f7c">getWorlds</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="dc/dbd/classant_1_1_world_manager_1aebeb93325dd1dfd83a8b4a13eb481620">setWorlds</link> (
+<link linkend="dc/dbd/classant_1_1_world_manager_1a721c8e435f32fa2f9a3ac9b82bf042b2">map</link> worlds)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="dc/dbd/classant_1_1_world_manager_1ab9c6b7726219771e992a0c6714cd84b3">update</link> (
+long int id, sf::Time dt)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="dc/dbd/classant_1_1_world_manager_1af45a459de72c22deeb55f1dc8739e58a">size</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="dc/dbd/classant_1_1_world_manager_1a5050c12e78f005607394041e384ca297">render</link> (
+long int id, sf::RenderWindow &amp; win)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="dc/dbd/classant_1_1_world_manager_1a6901058e71f2f0b1855c495ce060be76">~WorldManager</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Brief Description</title>
+
+<para>Clase Contenedor para los mundos. </para>
+    </simplesect>
+        <simplesect>
+            <title>Detailed Description</title>
+
+<para><formalpara><title>Author: </title>
+
+<para>Cristian Glez <link xlink:href="mailto:Cristian.glez.m@gmail.com">Cristian.glez.m@gmail.com</link> </para>
+</formalpara>
+<formalpara><title>Version: </title>
+
+<para>0.1 </para>
+</formalpara>
+</para>
+                <para>Definition at line 14 of file WorldManager.hpp</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>WorldManager.hpp</para></listitem></itemizedlist></para>
+        </simplesect>
+            <section xml:id="dc/dbd/classant_1_1_world_manager_1a721c8e435f32fa2f9a3ac9b82bf042b2">
+                <title>typedef std::map&lt;long int,std::unique_ptr&lt;World&gt; &gt; ant::WorldManager::map</title> <emphasis>Contenedor usado por WorldManager.</emphasis>
+                
+            </section>
+            <section xml:id="dc/dbd/classant_1_1_world_manager_1a5271942cc141b1b903fd3648afcddea9">
+                <title>typedef map::iterator ant::WorldManager::iterator</title> <emphasis>Iterador del Contenedor.</emphasis>
+                
+            </section>
+            <section xml:id="dc/dbd/classant_1_1_world_manager_1a845389f52e654ff947b83c993c72ff08">
+                <title>ant::WorldManager::WorldManager ()</title> <emphasis>Constructor por defecto.</emphasis>
+                
+            </section>
+            <section xml:id="dc/dbd/classant_1_1_world_manager_1ae99e4466fbef273a555dd093bf46fbb5">
+                <title>void ant::WorldManager::addWorld (std::unique_ptr&lt; World &gt; w)</title> <emphasis>Añade un World al contenedor.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>w</entry>
+                                <entry>
+<para>std::unique_ptr&lt;World&gt; </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="dc/dbd/classant_1_1_world_manager_1a94e6d6054814eda8a3ec4f476ea8cf02">
+                <title>World * ant::WorldManager::getWorld (long int id)</title> <emphasis>Obtiene un &quot;naked Pointer&quot; del mundo especificado.
+       Si no se encuentra devuelve un nullptr.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>id</entry>
+                                <entry>
+<para>long int id del mundo </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Returns: </title>
+
+<para><link linkend="de/dc7/classant_1_1_world">World</link> * </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="dc/dbd/classant_1_1_world_manager_1a13377656880523bc48ca4e963017a7e3">
+                <title>void ant::WorldManager::removeWorld (long int id)</title> <emphasis>Elimina el mundo especificado.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>id</entry>
+                                <entry>
+<para>long int </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="dc/dbd/classant_1_1_world_manager_1ab3b9b8a1497007738f66539768491f7c">
+                <title>map&amp; ant::WorldManager::getWorlds ()</title> <emphasis>Devuelve el contendor usado.</emphasis>
+                
+<para><formalpara><title>Returns: </title>
+
+<para>map </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="dc/dbd/classant_1_1_world_manager_1aebeb93325dd1dfd83a8b4a13eb481620">
+                <title>void ant::WorldManager::setWorlds (map worlds)</title> <emphasis>Establece el contenedor.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>worlds</entry>
+                                <entry>
+<para>map </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="dc/dbd/classant_1_1_world_manager_1ab9c6b7726219771e992a0c6714cd84b3">
+                <title>void ant::WorldManager::update (long int id, sf::Time dt)</title> <emphasis>Actualiza el mundo especificado por id.</emphasis>
+                
+<para>Si se pone -1 actualiza a todos los mundos que contenga.</para>
+
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>id</entry>
+                                <entry>
+<para>long int id del mundo (-1 para actualizar todos) </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>dt</entry>
+                                <entry>
+<para>sf::Time delta time </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="dc/dbd/classant_1_1_world_manager_1af45a459de72c22deeb55f1dc8739e58a">
+                <title>int ant::WorldManager::size ()</title> <emphasis>Devuelve el numero de mundos que tiene.</emphasis>
+                
+            </section>
+            <section xml:id="dc/dbd/classant_1_1_world_manager_1a5050c12e78f005607394041e384ca297">
+                <title>void ant::WorldManager::render (long int id, sf::RenderWindow &amp;win)</title> <emphasis>Renderiza el mundo especificado por el id.</emphasis>
+                
+<para>Si se pone -1 Renderizara todos los mundos, en pantalla se vera el ultimo.</para>
+
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>id</entry>
+                                <entry>
+<para>long int id del mundo (-1 para renderizar a todos) </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>win</entry>
+                                <entry>
+<para>sf::RenderWindow &amp; ventana a la cual dibujar. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="dc/dbd/classant_1_1_world_manager_1a6901058e71f2f0b1855c495ce060be76">
+                <title>ant::WorldManager::~WorldManager ()</title> <emphasis></emphasis>
+                
+            </section>
+</section>

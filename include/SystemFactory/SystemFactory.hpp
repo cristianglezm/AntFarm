@@ -57,11 +57,6 @@ namespace ant{
              */
             std::shared_ptr<renderSystem> createRenderSystem();
             /**
-             * @brief Crea un sistema de input
-             * @return std::shared_ptr<inputSystem>
-             */
-            std::shared_ptr<inputSystem> createInputSystem();
-            /**
              * @brief Crea un sistema de colision.
              * @param bounds sf::FloatRect rectangulo para zona que ocupa.
              * @return std::shared_ptr<collisionSystem>

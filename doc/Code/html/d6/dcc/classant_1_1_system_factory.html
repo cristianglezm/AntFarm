@@ -72,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
     <ul class="tablist">
       <li><a href="../../annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="../../classes.html"><span>Class&#160;Index</span></a></li>
-      <li><a href="../../hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="../../inherits.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="../../functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -118,6 +118,13 @@ $(document).ready(function(){initNavTree('d6/dcc/classant_1_1_system_factory.htm
  <a href="../../d6/dcc/classant_1_1_system_factory.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d4/da0/_system_factory_8hpp_source.html">SystemFactory.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for ant::SystemFactory:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d9/d81/classant_1_1_system_factory__coll__graph.png" border="0" usemap="#ant_1_1_system_factory_coll__map" alt="Collaboration graph"/></div>
+<map name="ant_1_1_system_factory_coll__map" id="ant_1_1_system_factory_coll__map">
+</map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -143,15 +150,25 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3d6ae5e15504796eab9f0ebd13cae354"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="../../d1/def/classant_1_1render_system.html">renderSystem</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dcc/classant_1_1_system_factory.html#a3d6ae5e15504796eab9f0ebd13cae354">createRenderSystem</a> ()</td></tr>
 <tr class="memdesc:a3d6ae5e15504796eab9f0ebd13cae354"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crea un sistema de renderizado.  <a href="#a3d6ae5e15504796eab9f0ebd13cae354">More...</a><br/></td></tr>
 <tr class="separator:a3d6ae5e15504796eab9f0ebd13cae354"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f7cf216cfe4e50c41fb1e3cdc368ed7"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="../../dd/d19/classant_1_1input_system.html">inputSystem</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dcc/classant_1_1_system_factory.html#a2f7cf216cfe4e50c41fb1e3cdc368ed7">createInputSystem</a> ()</td></tr>
-<tr class="memdesc:a2f7cf216cfe4e50c41fb1e3cdc368ed7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crea un sistema de input.  <a href="#a2f7cf216cfe4e50c41fb1e3cdc368ed7">More...</a><br/></td></tr>
-<tr class="separator:a2f7cf216cfe4e50c41fb1e3cdc368ed7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a814ef55fba62d7dc290c12fbd108dfd3"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="../../dc/de8/classant_1_1collision_system.html">collisionSystem</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dcc/classant_1_1_system_factory.html#a814ef55fba62d7dc290c12fbd108dfd3">createCollisionSystem</a> (sf::FloatRect bounds)</td></tr>
-<tr class="memdesc:a814ef55fba62d7dc290c12fbd108dfd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crea un sistema de colision.  <a href="#a814ef55fba62d7dc290c12fbd108dfd3">More...</a><br/></td></tr>
-<tr class="separator:a814ef55fba62d7dc290c12fbd108dfd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa962a3076d677e7ea258897cdefabd1e"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="../../dc/de8/classant_1_1collision_system.html">collisionSystem</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dcc/classant_1_1_system_factory.html#aa962a3076d677e7ea258897cdefabd1e">createCollisionSystem</a> (sf::FloatRect bounds, sf::VertexArray *GameMap)</td></tr>
+<tr class="memdesc:aa962a3076d677e7ea258897cdefabd1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crea un sistema de colision.  <a href="#aa962a3076d677e7ea258897cdefabd1e">More...</a><br/></td></tr>
+<tr class="separator:aa962a3076d677e7ea258897cdefabd1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69b79fce62ccf901996515e4528bc71d"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="../../d6/d6c/classant_1_1movement_system.html">movementSystem</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dcc/classant_1_1_system_factory.html#a69b79fce62ccf901996515e4528bc71d">createMovementSystem</a> ()</td></tr>
 <tr class="memdesc:a69b79fce62ccf901996515e4528bc71d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crea un sistema de movimiento.  <a href="#a69b79fce62ccf901996515e4528bc71d">More...</a><br/></td></tr>
 <tr class="separator:a69b79fce62ccf901996515e4528bc71d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1012e7048bee97688a0db2f76723322"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="../../db/de0/classant_1_1gravity_system.html">gravitySystem</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dcc/classant_1_1_system_factory.html#ae1012e7048bee97688a0db2f76723322">createGravitySystem</a> (float gravity)</td></tr>
+<tr class="memdesc:ae1012e7048bee97688a0db2f76723322"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crea un sistema de gravedad.  <a href="#ae1012e7048bee97688a0db2f76723322">More...</a><br/></td></tr>
+<tr class="separator:ae1012e7048bee97688a0db2f76723322"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf3fcbe08c0bb66a4a587cc4141b01a1"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="../../db/ddf/classant_1_1spawn_system.html">spawnSystem</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dcc/classant_1_1_system_factory.html#acf3fcbe08c0bb66a4a587cc4141b01a1">createSpawnSystem</a> (int nEntities, <a class="el" href="../../db/d10/classant_1_1_entity_factory.html">EntityFactory</a> *ef, sf::Time ot, sf::Vector2f spawnPoint, long int state)</td></tr>
+<tr class="memdesc:acf3fcbe08c0bb66a4a587cc4141b01a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crea un sistema de creacion de entidades.  <a href="#acf3fcbe08c0bb66a4a587cc4141b01a1">More...</a><br/></td></tr>
+<tr class="separator:acf3fcbe08c0bb66a4a587cc4141b01a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adefb28b61b249e8e50814782c03a9de7"><td class="memItemLeft" align="right" valign="top">std::shared_ptr<br class="typebreak"/>
+&lt; <a class="el" href="../../d8/d12/classant_1_1constructor_system.html">constructorSystem</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dcc/classant_1_1_system_factory.html#adefb28b61b249e8e50814782c03a9de7">createConstructorSystem</a> (sf::VertexArray *GameMap, sf::FloatRect bounds)</td></tr>
+<tr class="memdesc:adefb28b61b249e8e50814782c03a9de7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crea un sistema de construccion.  <a href="#adefb28b61b249e8e50814782c03a9de7">More...</a><br/></td></tr>
+<tr class="separator:adefb28b61b249e8e50814782c03a9de7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4334abc153fc1a4dcfcf1452f9371e56"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="../../dd/d76/classant_1_1out_system.html">outSystem</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dcc/classant_1_1_system_factory.html#a4334abc153fc1a4dcfcf1452f9371e56">createOutSystem</a> (int totalEntities)</td></tr>
+<tr class="memdesc:a4334abc153fc1a4dcfcf1452f9371e56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crea un sistema para comprobar cuando salen del mapa o entran por alguna entidad que tenga Component_OUT.  <a href="#a4334abc153fc1a4dcfcf1452f9371e56">More...</a><br/></td></tr>
+<tr class="separator:a4334abc153fc1a4dcfcf1452f9371e56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a702fd13a4c1a4013f37cb6ec43461a19"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dcc/classant_1_1_system_factory.html#a702fd13a4c1a4013f37cb6ec43461a19">~SystemFactory</a> ()</td></tr>
 <tr class="separator:a702fd13a4c1a4013f37cb6ec43461a19"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -159,6 +176,8 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><p>Clase para crear sistemas. </p>
 <dl class="section author"><dt>Author</dt><dd>Cristian Glez <a href="#" onclick="location.href='mai'+'lto:'+'Cri'+'st'+'ian'+'.g'+'lez'+'.m'+'@gm'+'ai'+'l.c'+'om'; return false;">Crist<span style="display: none;">.nosp@m.</span>ian.<span style="display: none;">.nosp@m.</span>glez.<span style="display: none;">.nosp@m.</span>m@gm<span style="display: none;">.nosp@m.</span>ail.c<span style="display: none;">.nosp@m.</span>om</a> </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>0.1 </dd></dl>
+
+<p>Definition at line <a class="el" href="../../d4/da0/_system_factory_8hpp_source.html#l00021">21</a> of file <a class="el" href="../../d4/da0/_system_factory_8hpp_source.html">SystemFactory.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a8a60ed77666e3e07495e45040fd0de96"></a>
 <div class="memitem">
@@ -174,6 +193,8 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Constructor por defecto. </p>
+
+<p>Definition at line <a class="el" href="../../de/de1/_system_factory_8cpp_source.html#l00004">4</a> of file <a class="el" href="../../de/de1/_system_factory_8cpp_source.html">SystemFactory.cpp</a>.</p>
 
 </div>
 </div>
@@ -210,6 +231,8 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
+<p>Definition at line <a class="el" href="../../de/de1/_system_factory_8cpp_source.html#l00007">7</a> of file <a class="el" href="../../de/de1/_system_factory_8cpp_source.html">SystemFactory.cpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a702fd13a4c1a4013f37cb6ec43461a19"></a>
@@ -225,10 +248,12 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="../../de/de1/_system_factory_8cpp_source.html#l00058">58</a> of file <a class="el" href="../../de/de1/_system_factory_8cpp_source.html">SystemFactory.cpp</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a814ef55fba62d7dc290c12fbd108dfd3"></a>
+<a class="anchor" id="aa962a3076d677e7ea258897cdefabd1e"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -236,8 +261,18 @@ Public Member Functions</h2></td></tr>
           <td class="memname">std::shared_ptr&lt; <a class="el" href="../../dc/de8/classant_1_1collision_system.html">collisionSystem</a> &gt; ant::SystemFactory::createCollisionSystem </td>
           <td>(</td>
           <td class="paramtype">sf::FloatRect&#160;</td>
-          <td class="paramname"><em>bounds</em></td><td>)</td>
+          <td class="paramname"><em>bounds</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">sf::VertexArray *&#160;</td>
+          <td class="paramname"><em>GameMap</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -251,24 +286,67 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>std::shared_ptr&lt;collisionSystem&gt; </dd></dl>
 
+<p>Definition at line <a class="el" href="../../de/de1/_system_factory_8cpp_source.html#l00021">21</a> of file <a class="el" href="../../de/de1/_system_factory_8cpp_source.html">SystemFactory.cpp</a>.</p>
+
 </div>
 </div>
-<a class="anchor" id="a2f7cf216cfe4e50c41fb1e3cdc368ed7"></a>
+<a class="anchor" id="adefb28b61b249e8e50814782c03a9de7"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::shared_ptr&lt; <a class="el" href="../../dd/d19/classant_1_1input_system.html">inputSystem</a> &gt; ant::SystemFactory::createInputSystem </td>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="../../d8/d12/classant_1_1constructor_system.html">constructorSystem</a> &gt; ant::SystemFactory::createConstructorSystem </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">sf::VertexArray *&#160;</td>
+          <td class="paramname"><em>GameMap</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">sf::FloatRect&#160;</td>
+          <td class="paramname"><em>bounds</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Crea un sistema de construccion. </p>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="../../d8/d12/classant_1_1constructor_system.html#ae6380dff3712e14585eef0f38d95c646" title="Constructor por defecto. ">constructorSystem::constructorSystem</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>std::shared_ptr&lt;constructorSystem&gt; </dd></dl>
+
+<p>Definition at line <a class="el" href="../../de/de1/_system_factory_8cpp_source.html#l00043">43</a> of file <a class="el" href="../../de/de1/_system_factory_8cpp_source.html">SystemFactory.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae1012e7048bee97688a0db2f76723322"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="../../db/de0/classant_1_1gravity_system.html">gravitySystem</a> &gt; ant::SystemFactory::createGravitySystem </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>gravity</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Crea un sistema de input. </p>
-<dl class="section return"><dt>Returns</dt><dd>std::shared_ptr&lt;inputSystem&gt; </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000010">Todo:</a></b></dt><dd>implement </dd></dl>
+<p>Crea un sistema de gravedad. </p>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="../../db/de0/classant_1_1gravity_system.html#ab77e4a4cd9ff0158ca30d921327893c5" title="Constructor por defecto. ">gravitySystem::gravitySystem</a> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gravity</td><td>float </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>std::shared_ptr&lt;gravitySystem&gt; </dd></dl>
+
+<p>Definition at line <a class="el" href="../../de/de1/_system_factory_8cpp_source.html#l00032">32</a> of file <a class="el" href="../../de/de1/_system_factory_8cpp_source.html">SystemFactory.cpp</a>.</p>
 
 </div>
 </div>
@@ -286,7 +364,32 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Crea un sistema de movimiento. </p>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="../../d6/d6c/classant_1_1movement_system.html#a39790555e3f9d2722f48e9e272dbe5ec" title="Constructor por defecto. ">movementSystem::movementSystem</a> </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>std::shared_ptr&lt;movementSystem&gt; </dd></dl>
+
+<p>Definition at line <a class="el" href="../../de/de1/_system_factory_8cpp_source.html#l00026">26</a> of file <a class="el" href="../../de/de1/_system_factory_8cpp_source.html">SystemFactory.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4334abc153fc1a4dcfcf1452f9371e56"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="../../dd/d76/classant_1_1out_system.html">outSystem</a> &gt; ant::SystemFactory::createOutSystem </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>totalEntities</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Crea un sistema para comprobar cuando salen del mapa o entran por alguna entidad que tenga Component_OUT. </p>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="../../dd/d76/classant_1_1out_system.html#a00ea0c5eaf0b42527c915be9e56fcf85" title="Constructor por defecto. ">outSystem::outSystem</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>std::shared_ptr&lt;outSystem&gt; </dd></dl>
+
+<p>Definition at line <a class="el" href="../../de/de1/_system_factory_8cpp_source.html#l00051">51</a> of file <a class="el" href="../../de/de1/_system_factory_8cpp_source.html">SystemFactory.cpp</a>.</p>
 
 </div>
 </div>
@@ -305,6 +408,58 @@ Public Member Functions</h2></td></tr>
 
 <p>Crea un sistema de renderizado. </p>
 <dl class="section return"><dt>Returns</dt><dd>std::shared_ptr&lt;renderSystem&gt; </dd></dl>
+
+<p>Definition at line <a class="el" href="../../de/de1/_system_factory_8cpp_source.html#l00016">16</a> of file <a class="el" href="../../de/de1/_system_factory_8cpp_source.html">SystemFactory.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="acf3fcbe08c0bb66a4a587cc4141b01a1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="../../db/ddf/classant_1_1spawn_system.html">spawnSystem</a> &gt; ant::SystemFactory::createSpawnSystem </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nEntities</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../db/d10/classant_1_1_entity_factory.html">EntityFactory</a> *&#160;</td>
+          <td class="paramname"><em>ef</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">sf::Time&#160;</td>
+          <td class="paramname"><em>ot</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">sf::Vector2f&#160;</td>
+          <td class="paramname"><em>spawnPoint</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long int&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Crea un sistema de creacion de entidades. </p>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="../../db/ddf/classant_1_1spawn_system.html#aa5b27276b3bd50f135602081fd126a8a" title="constructor por defecto. ">spawnSystem::spawnSystem</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>std::shared_ptr&lt;spawnSystem&gt; </dd></dl>
+
+<p>Definition at line <a class="el" href="../../de/de1/_system_factory_8cpp_source.html#l00037">37</a> of file <a class="el" href="../../de/de1/_system_factory_8cpp_source.html">SystemFactory.cpp</a>.</p>
 
 </div>
 </div>
@@ -332,6 +487,8 @@ Public Member Functions</h2></td></tr>
 <p>Getter para la cola de eventos. </p>
 <dl class="section return"><dt>Returns</dt><dd>std::shared_ptr&lt;EventQueue&gt; </dd></dl>
 
+<p>Definition at line <a class="el" href="../../d4/da0/_system_factory_8hpp_source.html#l00042">42</a> of file <a class="el" href="../../d4/da0/_system_factory_8hpp_source.html">SystemFactory.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a33d785d8400849461d1e734c472308b4"></a>
@@ -358,6 +515,8 @@ Public Member Functions</h2></td></tr>
 <p>Getter para el suscritor de eventos. </p>
 <dl class="section return"><dt>Returns</dt><dd>std::shared_ptr&lt;GameEventDispatcher&gt; </dd></dl>
 
+<p>Definition at line <a class="el" href="../../d4/da0/_system_factory_8hpp_source.html#l00052">52</a> of file <a class="el" href="../../d4/da0/_system_factory_8hpp_source.html">SystemFactory.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a759cba610a22c58876d4edb528690ece"></a>
@@ -381,6 +540,8 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+<p>Definition at line <a class="el" href="../../de/de1/_system_factory_8cpp_source.html#l00010">10</a> of file <a class="el" href="../../de/de1/_system_factory_8cpp_source.html">SystemFactory.cpp</a>.</p>
 
 </div>
 </div>
@@ -406,11 +567,13 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
+<p>Definition at line <a class="el" href="../../de/de1/_system_factory_8cpp_source.html#l00013">13</a> of file <a class="el" href="../../de/de1/_system_factory_8cpp_source.html">SystemFactory.cpp</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="../../d4/da0/_system_factory_8hpp_source.html">SystemFactory.hpp</a></li>
-<li><a class="el" href="../../de/de1/_system_factory_8cpp.html">SystemFactory.cpp</a></li>
+<li><a class="el" href="../../de/de1/_system_factory_8cpp_source.html">SystemFactory.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -418,7 +581,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dc/d6c/namespaceant.html">ant</a></li><li class="navelem"><a class="el" href="../../d6/dcc/classant_1_1_system_factory.html">SystemFactory</a></li>
-    <li class="footer">Generated on Sun Apr 20 2014 15:35:26 for AntFarm by
+    <li class="footer">Generated on Fri May 16 2014 18:56:10 for AntFarm by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

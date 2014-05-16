@@ -1,0 +1,13 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$d4/d50/classant_1_1_observer.html" title="Interfaz para los observadores. " alt="" coords="5,107,104,133"/>
+<area shape="rect" id="node2" href="$d8/d12/classant_1_1constructor_system.html" title="Sistema encargado de que las hormigas construyan etc. " alt="" coords="152,107,311,133"/>
+<area shape="rect" id="node3" href="$d1/db7/classant_1_1_game.html" title="Clase Principal del juego. " alt="" coords="190,5,273,32"/>
+<area shape="rect" id="node4" href="$d6/d6c/classant_1_1movement_system.html" title="Sistema encargado de hacer que las entidades se muevan. " alt="" coords="155,157,307,184"/>
+<area shape="rect" id="node5" href="$dd/d76/classant_1_1out_system.html" title="Sistema encargado de quitar a las entidades que chocan con las entidades con componente OUT..." alt="" coords="176,208,287,235"/>
+<area shape="rect" id="node6" href="$db/ddf/classant_1_1spawn_system.html" title="Sistema encargado de crear las entidades sobre el tiempo establecido. " alt="" coords="166,56,297,83"/>
+<area shape="rect" id="node7" href="$de/d48/classant_1_1_system.html" title="Clase base para los sistemas. " alt="" coords="8,233,101,260"/>
+<area shape="rect" id="node8" href="$dc/de8/classant_1_1collision_system.html" title="Sistema que comprueba las colisiones entre entidades. " alt="" coords="161,411,301,437"/>
+<area shape="rect" id="node9" href="$db/de0/classant_1_1gravity_system.html" title="Sistema para aplicar la gravedad a las entidades. " alt="" coords="166,259,297,285"/>
+<area shape="rect" id="node10" href="$dd/d19/classant_1_1input_system.html" title="Sistema encargado de efectuar los inputs. " alt="" coords="171,309,292,336"/>
+<area shape="rect" id="node11" href="$d1/def/classant_1_1render_system.html" title="Sistema encargado de mostrar las entidades que tengan los componentes necesarios. ..." alt="" coords="167,360,296,387"/>
+</map>

@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d2/d8a/_game_event_dispatcher_8hpp">
+    <title>GameEventDispatcher.hpp File Reference</title>
+    <programlisting>#include &lt;Event/Event.hpp&gt;</programlisting>
+    <programlisting>#include &lt;Event/EventType.hpp&gt;</programlisting>
+    <programlisting>#include &lt;Subject/Subject.hpp&gt;</programlisting>
+        <simplesect>
+            <title> Classes </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="dc/df5/classant_1_1_game_event_dispatcher">ant::GameEventDispatcher</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="dc/d6c/namespaceant">ant</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file F:/Development/Cpp/AntFarm/include/GameEventDispatcher/GameEventDispatcher.hpp</para>
+    </simplesect>
+</section>

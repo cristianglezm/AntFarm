@@ -1,0 +1,362 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="db/d10/classant_1_1_entity_factory">
+<title>ant::EntityFactory class Reference</title>
+<para>
+    <programlisting>#include <link linkend="df/dfa/_entity_factory_8hpp">&lt;EntityFactory.hpp&gt;</link></programlisting>
+</para>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static const long int Ant</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static const long int Door</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static const long int InDoor</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static const long int OutDoor</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static const long int level</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::shared_ptr&lt; ComponentFactory &gt; componentFactory</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="db/d10/classant_1_1_entity_factory_1a771bc1c1e76874d157b3a58a8fbed3e2">EntityFactory</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="db/d10/classant_1_1_entity_factory_1af5fe7f4ccf5f3aaea08e5cac7580de64">EntityFactory</link> (
+const std::string &amp; json)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="db/d10/classant_1_1_entity_factory_1a61c45ac377e5a9783cffaca1eeba6973">loadAssets</link> (
+const std::string &amp; json)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="db/d10/classant_1_1_entity_factory_1adf142d95b439257857ccc1f98d7baf5e">unloadAssets</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="db/d10/classant_1_1_entity_factory_1a3ac763b7d893ee9cd6b64fe00597a928">setAssetManager</link> (
+std::shared_ptr&lt; <link linkend="d1/dd6/classant_1_1_asset_manager">AssetManager</link> &gt; assets)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::shared_ptr&lt; <link linkend="d1/dd6/classant_1_1_asset_manager">AssetManager</link> &gt; <link linkend="db/d10/classant_1_1_entity_factory_1ad13969f9c868d06aad4e68d6ff3e61d4">getAssetManager</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::unique_ptr&lt; <link linkend="dc/d73/classant_1_1_entity">Entity</link> &gt; <link linkend="db/d10/classant_1_1_entity_factory_1af02c81d4a737ee3d8ddf6f68ad43deb6">createEntity</link> (
+long int mask)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::unique_ptr&lt; <link linkend="dc/d73/classant_1_1_entity">Entity</link> &gt; <link linkend="db/d10/classant_1_1_entity_factory_1afef96c25d362db4fba4648e1520b98d5">createEntity</link> (
+long int mask, <link linkend="de/df0/classant_1_1_component_settings">ComponentSettings</link> &amp; cs)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="db/d10/classant_1_1_entity_factory_1abf4a24df1840b8ed4a738873f68d8168">setComponentFactory</link> (
+std::shared_ptr&lt; <link linkend="d4/df6/classant_1_1_component_factory">ComponentFactory</link> &gt; cf)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::shared_ptr&lt; <link linkend="d4/df6/classant_1_1_component_factory">ComponentFactory</link> &gt; <link linkend="db/d10/classant_1_1_entity_factory_1a3562d6b2a68372465ec4518070b956d3">getComponentFactory</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="db/d10/classant_1_1_entity_factory_1a66fee3669089d284296bbfed30e4ff00">~EntityFactory</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Brief Description</title>
+
+<para>Clase para crear las entidades del juego. </para>
+    </simplesect>
+        <simplesect>
+            <title>Detailed Description</title>
+
+<para><formalpara><title>Author: </title>
+
+<para>Cristian Glez <link xlink:href="mailto:Cristian.glez.m@gmail.com">Cristian.glez.m@gmail.com</link> </para>
+</formalpara>
+<formalpara><title>Version: </title>
+
+<para>0.1 </para>
+</formalpara>
+</para>
+                <para>Definition at line 14 of file EntityFactory.hpp</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>EntityFactory.hpp</para></listitem></itemizedlist></para>
+        </simplesect>
+            <section xml:id="db/d10/classant_1_1_entity_factory_1a771bc1c1e76874d157b3a58a8fbed3e2">
+                <title>ant::EntityFactory::EntityFactory ()</title> <emphasis>Constructor por defecto.</emphasis>
+                
+            </section>
+            <section xml:id="db/d10/classant_1_1_entity_factory_1af5fe7f4ccf5f3aaea08e5cac7580de64">
+                <title>ant::EntityFactory::EntityFactory (const std::string &amp;json)</title> <emphasis>Constructor que carga los assets del json especificado.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>json</entry>
+                                <entry>
+<para>std::string fichero json a cargar. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="db/d10/classant_1_1_entity_factory_1a61c45ac377e5a9783cffaca1eeba6973">
+                <title>bool ant::EntityFactory::loadAssets (const std::string &amp;json)</title> <emphasis>Carga los assets especificados en el fichero json.</emphasis>
+                
+<para>Formato del fichero json <link linkend="d1/dd6/classant_1_1_asset_manager_1ab67aa137cc51b1052553b35e2e8b0bcd">AssetManager::loadAssets()</link></para>
+
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>json</entry>
+                                <entry>
+<para>std::string fichero json a cargar. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Returns: </title>
+
+<para>bool </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="db/d10/classant_1_1_entity_factory_1adf142d95b439257857ccc1f98d7baf5e">
+                <title>bool ant::EntityFactory::unloadAssets ()</title> <emphasis>Descarga los assets cargados.</emphasis>
+                
+<para><formalpara><title>Returns: </title>
+
+<para>bool </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="db/d10/classant_1_1_entity_factory_1a3ac763b7d893ee9cd6b64fe00597a928">
+                <title>void ant::EntityFactory::setAssetManager (std::shared_ptr&lt; AssetManager &gt; assets)</title> <emphasis>Setter del assetManager.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>assets</entry>
+                                <entry>
+<para>std::shared_ptr&lt;AssetManager&gt; assets que utilizara para cargar componentes que los utilicen. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="db/d10/classant_1_1_entity_factory_1ad13969f9c868d06aad4e68d6ff3e61d4">
+                <title>std::shared_ptr&lt;AssetManager&gt; ant::EntityFactory::getAssetManager ()</title> <emphasis>Getter del AssetManager.</emphasis>
+                
+<para><formalpara><title>Returns: </title>
+
+<para>std::shared_ptr&lt;AssetManager&gt; </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="db/d10/classant_1_1_entity_factory_1af02c81d4a737ee3d8ddf6f68ad43deb6">
+                <title>std::unique_ptr&lt; Entity &gt; ant::EntityFactory::createEntity (long int mask)</title> <emphasis>Crea la entidad especificada.</emphasis>
+                
+<para>Se puede especificar otros componentes pero tendran los datos por defecto</para>
+
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>mask</entry>
+                                <entry>
+<para>long int Mascara de la entidad o componentes. <programlisting><link linkend="db/d10/classant_1_1_entity_factory_1af02c81d4a737ee3d8ddf6f68ad43deb6">EntityFactory::createEntity</link>(&#32;EntityFactory::ANT&#32;|&#32;Component::Wings&#32;|&#32;Component::Horns);&#32;
+</programlisting> Creas una entidad Hormiga con los componentes adicionales especificados los cuales tendran valores por defecto. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Returns: </title>
+
+<para>std::unique_ptr&lt;Entity&gt; entidad creada. </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="db/d10/classant_1_1_entity_factory_1afef96c25d362db4fba4648e1520b98d5">
+                <title>std::unique_ptr&lt; Entity &gt; ant::EntityFactory::createEntity (long int mask, ComponentSettings &amp;cs)</title> <emphasis>Crea la entidad especificada con los datos especificados.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>mask</entry>
+                                <entry>
+<para>long int mascara de la entidad o componentes. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>cs</entry>
+                                <entry>
+<para><link linkend="de/df0/classant_1_1_component_settings">ComponentSettings</link> </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="db/d10/classant_1_1_entity_factory_1abf4a24df1840b8ed4a738873f68d8168">
+                <title>void ant::EntityFactory::setComponentFactory (std::shared_ptr&lt; ComponentFactory &gt; cf)</title> <emphasis>Setter de la fabrica de componentes a utilizar.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>cf</entry>
+                                <entry>
+<para>std::shared_ptr&lt;ComponentFactory&gt; </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="db/d10/classant_1_1_entity_factory_1a3562d6b2a68372465ec4518070b956d3">
+                <title>std::shared_ptr&lt;ComponentFactory&gt; ant::EntityFactory::getComponentFactory ()</title> <emphasis>Getter de la fabrica de componentes utilizada.</emphasis>
+                
+<para><formalpara><title>Returns: </title>
+
+<para>std::shared_ptr&lt;ComponentFactory&gt; </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="db/d10/classant_1_1_entity_factory_1a66fee3669089d284296bbfed30e4ff00">
+                <title>ant::EntityFactory::~EntityFactory ()</title> <emphasis></emphasis>
+                
+            </section>
+</section>

@@ -1,0 +1,399 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d0/dcb/classant_1_1_level">
+<title>ant::Level class Reference</title>
+<para>
+    <programlisting>#include <link linkend="d0/d67/_level_8hpp">&lt;Level.hpp&gt;</link></programlisting>
+</para>
+        <simplesect>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::shared_ptr&lt; WorldManager &gt; levels</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::shared_ptr&lt; EventQueue &gt; eventQueue</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::shared_ptr&lt; GameEventDispatcher &gt; gameEventDispatcher</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::shared_ptr&lt; WorldFactory &gt; worldFactory</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d0/dcb/classant_1_1_level_1ae165db7473b5d3676943b35dd20c4e15">Level</link> (
+const std::string &amp; assetsFilename, sf::FloatRect bounds, std::shared_ptr&lt; <link linkend="dc/df5/classant_1_1_game_event_dispatcher">GameEventDispatcher</link> &gt; ged)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d0/dcb/classant_1_1_level_1a8420f52c19063fc012a9b5da62ad823d">init</link> (
+const sf::FloatRect &amp; bounds)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="d0/dcb/classant_1_1_level_1a3cb50b7956ecde37e8d9991c32082f1d">loadLevel</link> (
+const sf::FloatRect &amp; bounds, const std::string &amp; filename)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d0/dcb/classant_1_1_level_1ab45950d5616ec4de03a8867ff85d00de">setEventQueue</link> (
+std::shared_ptr&lt; <link linkend="db/dec/classant_1_1_event_queue">EventQueue</link> &gt; eq)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::shared_ptr&lt; <link linkend="db/dec/classant_1_1_event_queue">EventQueue</link> &gt; <link linkend="d0/dcb/classant_1_1_level_1ac3d1598648320575953934ff841c7693">getEventQueue</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d0/dcb/classant_1_1_level_1a9f523fc20e242498d0868909fa1489e0">setWorldFactory</link> (
+std::shared_ptr&lt; <link linkend="d0/df7/classant_1_1_world_factory">WorldFactory</link> &gt; wf)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::shared_ptr&lt; <link linkend="d0/df7/classant_1_1_world_factory">WorldFactory</link> &gt; <link linkend="d0/dcb/classant_1_1_level_1abc2d7103d65fde35e3ee28848d9be1f0">getWorldFactory</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d0/dcb/classant_1_1_level_1ac6df0cc09eb9784403c7ec377fbee468">setAssetManager</link> (
+std::shared_ptr&lt; <link linkend="d1/dd6/classant_1_1_asset_manager">AssetManager</link> &gt; assets)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::shared_ptr&lt; <link linkend="d1/dd6/classant_1_1_asset_manager">AssetManager</link> &gt; <link linkend="d0/dcb/classant_1_1_level_1a4fa955b781d4001c7e676d8b4700f68e">getAssetManager</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="d0/dcb/classant_1_1_level_1a86bc9422387cfb1502a13649c7fd0f97">size</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d0/dcb/classant_1_1_level_1ac61bcd5e71af7a1c2a715fc6bf207b80">update</link> (
+long int id, sf::Time dt)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d0/dcb/classant_1_1_level_1af0dee8ae016577c4696534e1f809b207">render</link> (
+long int id, sf::RenderWindow &amp; win)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d0/dcb/classant_1_1_level_1a654224d7502000abca61df489acc5aec">~Level</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Brief Description</title>
+
+<para>Clase que tiene el nivel del juego. </para>
+    </simplesect>
+        <simplesect>
+            <title>Detailed Description</title>
+
+<para><formalpara><title>Author: </title>
+
+<para>Cristian Glez <link xlink:href="mailto:Cristian.glez.m@gmail.com">Cristian.glez.m@gmail.com</link> </para>
+</formalpara>
+<formalpara><title>Version: </title>
+
+<para>0.1 </para>
+</formalpara>
+</para>
+                <para>Definition at line 18 of file Level.hpp</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>Level.hpp</para></listitem></itemizedlist></para>
+        </simplesect>
+            <section xml:id="d0/dcb/classant_1_1_level_1ae165db7473b5d3676943b35dd20c4e15">
+                <title>ant::Level::Level (const std::string &amp;assetsFilename, sf::FloatRect bounds, std::shared_ptr&lt; GameEventDispatcher &gt; ged)</title> <emphasis>Constructor principal.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>assetsFilename</entry>
+                                <entry>
+<para>std::string fichero json a cargar. formato: <link linkend="d1/dd6/classant_1_1_asset_manager_1ab67aa137cc51b1052553b35e2e8b0bcd">AssetManager::loadAssets()</link> </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>bounds</entry>
+                                <entry>
+<para>sf::FloatRect rectangulo con los limites del nivel. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>ged</entry>
+                                <entry>
+<para>std::shared_ptr&lt;GameEventDispatcher&gt; para que se suscriban a los eventos. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="d0/dcb/classant_1_1_level_1a8420f52c19063fc012a9b5da62ad823d">
+                <title>void ant::Level::init (const sf::FloatRect &amp;bounds)</title> <emphasis>Inicializa el nivel.</emphasis>
+                
+<para>Añade los mundos iniciales al nivel. 
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>bounds</entry>
+                                <entry>
+<para>sf::FloatRect rectangulo con los limites del nivel. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="d0/dcb/classant_1_1_level_1a3cb50b7956ecde37e8d9991c32082f1d">
+                <title>bool ant::Level::loadLevel (const sf::FloatRect &amp;bounds, const std::string &amp;filename)</title> <emphasis>Carga el nivel de un fichero json.</emphasis>
+                
+<para><formalpara><title>Returns: </title>
+
+<para>bool </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="d0/dcb/classant_1_1_level_1ab45950d5616ec4de03a8867ff85d00de">
+                <title>void ant::Level::setEventQueue (std::shared_ptr&lt; EventQueue &gt; eq)</title> <emphasis>Setter para la cola de eventos.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>eq</entry>
+                                <entry>
+<para>std::shared_ptr&lt;EventQueue&gt; Cola para que los sistemas añadan los eventos que sucenden en el juego. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="d0/dcb/classant_1_1_level_1ac3d1598648320575953934ff841c7693">
+                <title>std::shared_ptr&lt;EventQueue&gt; ant::Level::getEventQueue ()</title> <emphasis>Getter para la cola de eventos.</emphasis>
+                
+<para><formalpara><title>Returns: </title>
+
+<para>std::shared_ptr&lt;EventQueue&gt; Devuelve la cola de eventos. </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="d0/dcb/classant_1_1_level_1a9f523fc20e242498d0868909fa1489e0">
+                <title>void ant::Level::setWorldFactory (std::shared_ptr&lt; WorldFactory &gt; wf)</title> <emphasis>Setter para la fabrica de mundos.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>wf</entry>
+                                <entry>
+<para>std::shared_ptr&lt;WorldFactory&gt; </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="d0/dcb/classant_1_1_level_1abc2d7103d65fde35e3ee28848d9be1f0">
+                <title>std::shared_ptr&lt;WorldFactory&gt; ant::Level::getWorldFactory ()</title> <emphasis>Getter de la fabrica de mundos.</emphasis>
+                
+<para><formalpara><title>Returns: </title>
+
+<para>std::shared_ptr&lt;WorldFactory&gt; </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="d0/dcb/classant_1_1_level_1ac6df0cc09eb9784403c7ec377fbee468">
+                <title>void ant::Level::setAssetManager (std::shared_ptr&lt; AssetManager &gt; assets)</title> <emphasis>Setter para el AssetManager.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>assets</entry>
+                                <entry>
+<para>std::shared_ptr&lt;AssetManager&gt; </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="d0/dcb/classant_1_1_level_1a4fa955b781d4001c7e676d8b4700f68e">
+                <title>std::shared_ptr&lt;AssetManager&gt; ant::Level::getAssetManager ()</title> <emphasis>Getter para el AssetManager.</emphasis>
+                
+<para><formalpara><title>Returns: </title>
+
+<para>std::shared_ptr&lt;AssetManager&gt; </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="d0/dcb/classant_1_1_level_1a86bc9422387cfb1502a13649c7fd0f97">
+                <title>int ant::Level::size ()</title> <emphasis>Devuelve el numero total de niveles que tiene.</emphasis>
+                
+            </section>
+            <section xml:id="d0/dcb/classant_1_1_level_1ac61bcd5e71af7a1c2a715fc6bf207b80">
+                <title>void ant::Level::update (long int id, sf::Time dt)</title> <emphasis>Actualiza el mundo especificado.</emphasis>
+                
+<para>Actualiza el mundo especificado, si se pone un -1 se actualizaran todos. 
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>id</entry>
+                                <entry>
+<para>long int Mundo a actualizar </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>dt</entry>
+                                <entry>
+<para>sf::Time delta time. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="d0/dcb/classant_1_1_level_1af0dee8ae016577c4696534e1f809b207">
+                <title>void ant::Level::render (long int id, sf::RenderWindow &amp;win)</title> <emphasis>Renderiza el mundo especificado.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>id</entry>
+                                <entry>
+<para>long int Mundo a actualizar </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>win</entry>
+                                <entry>
+<para>sf::RenderWindow &amp; ventana a la cual dibujar. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="d0/dcb/classant_1_1_level_1a654224d7502000abca61df489acc5aec">
+                <title>ant::Level::~Level ()</title> <emphasis></emphasis>
+                
+            </section>
+</section>

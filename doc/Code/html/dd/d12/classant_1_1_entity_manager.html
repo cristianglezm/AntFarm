@@ -72,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
     <ul class="tablist">
       <li><a href="../../annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="../../classes.html"><span>Class&#160;Index</span></a></li>
-      <li><a href="../../hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="../../inherits.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="../../functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -119,6 +119,11 @@ $(document).ready(function(){initNavTree('dd/d12/classant_1_1_entity_manager.htm
  <a href="../../dd/d12/classant_1_1_entity_manager.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../da/d7b/_entity_manager_8hpp_source.html">EntityManager.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for ant::EntityManager:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d3/d98/classant_1_1_entity_manager__coll__graph.png" border="0" usemap="#ant_1_1_entity_manager_coll__map" alt="Collaboration graph"/></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
@@ -158,9 +163,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1dbb77029a458daf2bce15e9405c9b84"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/d12/classant_1_1_entity_manager.html#a473e6ef8480bf2998f7c4d03e5ed20fc">list</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d12/classant_1_1_entity_manager.html#a1dbb77029a458daf2bce15e9405c9b84">getEntities</a> ()</td></tr>
 <tr class="memdesc:a1dbb77029a458daf2bce15e9405c9b84"><td class="mdescLeft">&#160;</td><td class="mdescRight">devuelve la lista de las entidades.  <a href="#a1dbb77029a458daf2bce15e9405c9b84">More...</a><br/></td></tr>
 <tr class="separator:a1dbb77029a458daf2bce15e9405c9b84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a426b3fdbb72efce9a0e8989a448b22bb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/d12/classant_1_1_entity_manager.html#a60b5d97167e38d66d7d245a59735c1b5">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d12/classant_1_1_entity_manager.html#a426b3fdbb72efce9a0e8989a448b22bb">begin</a> ()</td></tr>
+<tr class="memdesc:a426b3fdbb72efce9a0e8989a448b22bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve el principio de la lista.  <a href="#a426b3fdbb72efce9a0e8989a448b22bb">More...</a><br/></td></tr>
+<tr class="separator:a426b3fdbb72efce9a0e8989a448b22bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abeac423dde88812cb4c51235d1790b34"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/d12/classant_1_1_entity_manager.html#a60b5d97167e38d66d7d245a59735c1b5">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d12/classant_1_1_entity_manager.html#abeac423dde88812cb4c51235d1790b34">end</a> ()</td></tr>
+<tr class="memdesc:abeac423dde88812cb4c51235d1790b34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve el final de la lista.  <a href="#abeac423dde88812cb4c51235d1790b34">More...</a><br/></td></tr>
+<tr class="separator:abeac423dde88812cb4c51235d1790b34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae84ee9cc6de695914727dae5af4909ae"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="../../dc/d73/classant_1_1_entity.html">Entity</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d12/classant_1_1_entity_manager.html#ae84ee9cc6de695914727dae5af4909ae">Transfer</a> (const std::string &amp;name)</td></tr>
 <tr class="memdesc:ae84ee9cc6de695914727dae5af4909ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transfiere la primera entidad que coincida con el nombre.  <a href="#ae84ee9cc6de695914727dae5af4909ae">More...</a><br/></td></tr>
 <tr class="separator:ae84ee9cc6de695914727dae5af4909ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f45bd8317a4c8b0f0f00a44ccdd9049"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="../../dc/d73/classant_1_1_entity.html">Entity</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d12/classant_1_1_entity_manager.html#a9f45bd8317a4c8b0f0f00a44ccdd9049">Transfer</a> (const <a class="el" href="../../dc/d73/classant_1_1_entity.html">Entity</a> *e)</td></tr>
+<tr class="memdesc:a9f45bd8317a4c8b0f0f00a44ccdd9049"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transfiere la primera entidad que coincida con el puntero de entidad.  <a href="#a9f45bd8317a4c8b0f0f00a44ccdd9049">More...</a><br/></td></tr>
+<tr class="separator:a9f45bd8317a4c8b0f0f00a44ccdd9049"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af0dac6b2bdf3d16aa956ad82f23dc917"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d12/classant_1_1_entity_manager.html#af0dac6b2bdf3d16aa956ad82f23dc917">~EntityManager</a> ()</td></tr>
 <tr class="separator:af0dac6b2bdf3d16aa956ad82f23dc917"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -168,6 +182,8 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><p>Clase Para manejar las entidades. </p>
 <dl class="section author"><dt>Author</dt><dd>Cristian Glez <a href="#" onclick="location.href='mai'+'lto:'+'Cri'+'st'+'ian'+'.g'+'lez'+'.m'+'@gm'+'ai'+'l.c'+'om'; return false;">Crist<span style="display: none;">.nosp@m.</span>ian.<span style="display: none;">.nosp@m.</span>glez.<span style="display: none;">.nosp@m.</span>m@gm<span style="display: none;">.nosp@m.</span>ail.c<span style="display: none;">.nosp@m.</span>om</a> </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>0.1 </dd></dl>
+
+<p>Definition at line <a class="el" href="../../da/d7b/_entity_manager_8hpp_source.html#l00013">13</a> of file <a class="el" href="../../da/d7b/_entity_manager_8hpp_source.html">EntityManager.hpp</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a class="anchor" id="a60b5d97167e38d66d7d245a59735c1b5"></a>
 <div class="memitem">
@@ -180,6 +196,8 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Iterador del <a class="el" href="../../dd/d12/classant_1_1_entity_manager.html" title="Clase Para manejar las entidades. ">EntityManager</a>. </p>
+
+<p>Definition at line <a class="el" href="../../da/d7b/_entity_manager_8hpp_source.html#l00018">18</a> of file <a class="el" href="../../da/d7b/_entity_manager_8hpp_source.html">EntityManager.hpp</a>.</p>
 
 </div>
 </div>
@@ -194,6 +212,8 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Contenedor utilizado por el <a class="el" href="../../dd/d12/classant_1_1_entity_manager.html" title="Clase Para manejar las entidades. ">EntityManager</a>. </p>
+
+<p>Definition at line <a class="el" href="../../da/d7b/_entity_manager_8hpp_source.html#l00022">22</a> of file <a class="el" href="../../da/d7b/_entity_manager_8hpp_source.html">EntityManager.hpp</a>.</p>
 
 </div>
 </div>
@@ -213,6 +233,8 @@ Public Member Functions</h2></td></tr>
 
 <p>Constructor por defecto. </p>
 
+<p>Definition at line <a class="el" href="../../de/db2/_entity_manager_8cpp_source.html#l00004">4</a> of file <a class="el" href="../../de/db2/_entity_manager_8cpp_source.html">EntityManager.cpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="af0dac6b2bdf3d16aa956ad82f23dc917"></a>
@@ -227,6 +249,8 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="../../de/db2/_entity_manager_8cpp_source.html#l00065">65</a> of file <a class="el" href="../../de/db2/_entity_manager_8cpp_source.html">EntityManager.cpp</a>.</p>
 
 </div>
 </div>
@@ -253,6 +277,8 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
+<p>Definition at line <a class="el" href="../../de/db2/_entity_manager_8cpp_source.html#l00036">36</a> of file <a class="el" href="../../de/db2/_entity_manager_8cpp_source.html">EntityManager.cpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="af8cba501bcdac99f43f12047c8f857c4"></a>
@@ -276,6 +302,62 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+<p>Definition at line <a class="el" href="../../de/db2/_entity_manager_8cpp_source.html#l00007">7</a> of file <a class="el" href="../../de/db2/_entity_manager_8cpp_source.html">EntityManager.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a426b3fdbb72efce9a0e8989a448b22bb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dd/d12/classant_1_1_entity_manager.html#a60b5d97167e38d66d7d245a59735c1b5">iterator</a> ant::EntityManager::begin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Devuelve el principio de la lista. </p>
+
+<p>Definition at line <a class="el" href="../../da/d7b/_entity_manager_8hpp_source.html#l00080">80</a> of file <a class="el" href="../../da/d7b/_entity_manager_8hpp_source.html">EntityManager.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="abeac423dde88812cb4c51235d1790b34"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dd/d12/classant_1_1_entity_manager.html#a60b5d97167e38d66d7d245a59735c1b5">iterator</a> ant::EntityManager::end </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Devuelve el final de la lista. </p>
+
+<p>Definition at line <a class="el" href="../../da/d7b/_entity_manager_8hpp_source.html#l00084">84</a> of file <a class="el" href="../../da/d7b/_entity_manager_8hpp_source.html">EntityManager.hpp</a>.</p>
 
 </div>
 </div>
@@ -303,6 +385,8 @@ Public Member Functions</h2></td></tr>
 <p>devuelve la lista de las entidades. </p>
 <dl class="section return"><dt>Returns</dt><dd>list &amp; </dd></dl>
 
+<p>Definition at line <a class="el" href="../../da/d7b/_entity_manager_8hpp_source.html#l00076">76</a> of file <a class="el" href="../../da/d7b/_entity_manager_8hpp_source.html">EntityManager.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="aa28e915d3d3460f04feae33c85bd3df3"></a>
@@ -329,6 +413,8 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../dc/d73/classant_1_1_entity.html" title="Clase para tener los componentes, solo puede tener un componente de cada tipo. ">Entity</a> * naked pointer hacia la entidad o nullptr si no la encuentra. </dd></dl>
 
+<p>Definition at line <a class="el" href="../../de/db2/_entity_manager_8cpp_source.html#l00028">28</a> of file <a class="el" href="../../de/db2/_entity_manager_8cpp_source.html">EntityManager.cpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="ac3645cbade4566b1e035923d12688811"></a>
@@ -353,6 +439,8 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+<p>Definition at line <a class="el" href="../../de/db2/_entity_manager_8cpp_source.html#l00010">10</a> of file <a class="el" href="../../de/db2/_entity_manager_8cpp_source.html">EntityManager.cpp</a>.</p>
 
 </div>
 </div>
@@ -380,6 +468,8 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>iterator la posicion siguiente de la entidad eliminada. </dd></dl>
 
+<p>Definition at line <a class="el" href="../../de/db2/_entity_manager_8cpp_source.html#l00013">13</a> of file <a class="el" href="../../de/db2/_entity_manager_8cpp_source.html">EntityManager.cpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a9fe7570482ce955d895430e1c3f1b107"></a>
@@ -399,6 +489,8 @@ Public Member Functions</h2></td></tr>
 <p>Elimina la primera entidad que coincida. </p>
 <p>Devuelve un iterador por si estas iterando y necesitas borrar alguna entidad.</p>
 <dl class="section return"><dt>Returns</dt><dd>iterator la posicion siguiente de la entidad eliminada. </dd></dl>
+
+<p>Definition at line <a class="el" href="../../de/db2/_entity_manager_8cpp_source.html#l00025">25</a> of file <a class="el" href="../../de/db2/_entity_manager_8cpp_source.html">EntityManager.cpp</a>.</p>
 
 </div>
 </div>
@@ -426,11 +518,41 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>std::unique_ptr&lt;Entity&gt; entidad transferida o nullptr si no es encontrada. </dd></dl>
 
+<p>Definition at line <a class="el" href="../../de/db2/_entity_manager_8cpp_source.html#l00039">39</a> of file <a class="el" href="../../de/db2/_entity_manager_8cpp_source.html">EntityManager.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9f45bd8317a4c8b0f0f00a44ccdd9049"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt; <a class="el" href="../../dc/d73/classant_1_1_entity.html">Entity</a> &gt; ant::EntityManager::Transfer </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../dc/d73/classant_1_1_entity.html">Entity</a> *&#160;</td>
+          <td class="paramname"><em>e</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Transfiere la primera entidad que coincida con el puntero de entidad. </p>
+<p>Transfiere la posesion(ownership) de la entidad y la elimina del contenedor.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td><a class="el" href="../../dc/d73/classant_1_1_entity.html" title="Clase para tener los componentes, solo puede tener un componente de cada tipo. ">Entity</a> * Puntero a la entidad </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>std::unique_ptr&lt;Entity&gt; entidad transferida o nullptr si no es encontrada. </dd></dl>
+
+<p>Definition at line <a class="el" href="../../de/db2/_entity_manager_8cpp_source.html#l00052">52</a> of file <a class="el" href="../../de/db2/_entity_manager_8cpp_source.html">EntityManager.cpp</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="../../da/d7b/_entity_manager_8hpp_source.html">EntityManager.hpp</a></li>
-<li><a class="el" href="../../de/db2/_entity_manager_8cpp.html">EntityManager.cpp</a></li>
+<li><a class="el" href="../../de/db2/_entity_manager_8cpp_source.html">EntityManager.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -438,7 +560,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dc/d6c/namespaceant.html">ant</a></li><li class="navelem"><a class="el" href="../../dd/d12/classant_1_1_entity_manager.html">EntityManager</a></li>
-    <li class="footer">Generated on Sun Apr 20 2014 15:35:26 for AntFarm by
+    <li class="footer">Generated on Fri May 16 2014 18:56:09 for AntFarm by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

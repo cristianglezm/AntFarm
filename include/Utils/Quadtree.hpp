@@ -16,7 +16,7 @@ namespace ant{
          * @brief Clase para reducir el numero de test de collisiones.
          * @author Cristian Glez <Cristian.glez.m@gmail.com>
          * @version 0.1
-         * @todo posible feature hacer template para poder usar puntos y rectangulos ademas de entidades.
+         * @todo Posible cambio por Quadtree<T> tarda 1ms mas.
          */
         class Quadtree{
             public:

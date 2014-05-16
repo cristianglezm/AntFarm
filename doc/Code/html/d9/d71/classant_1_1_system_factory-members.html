@@ -72,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
     <ul class="tablist">
       <li><a href="../../annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="../../classes.html"><span>Class&#160;Index</span></a></li>
-      <li><a href="../../hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="../../inherits.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="../../functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -113,23 +113,26 @@ $(document).ready(function(){initNavTree('d6/dcc/classant_1_1_system_factory.htm
 
 <p>This is the complete list of members for <a class="el" href="../../d6/dcc/classant_1_1_system_factory.html">ant::SystemFactory</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="../../d6/dcc/classant_1_1_system_factory.html#a814ef55fba62d7dc290c12fbd108dfd3">createCollisionSystem</a>(sf::FloatRect bounds)</td><td class="entry"><a class="el" href="../../d6/dcc/classant_1_1_system_factory.html">ant::SystemFactory</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="../../d6/dcc/classant_1_1_system_factory.html#a2f7cf216cfe4e50c41fb1e3cdc368ed7">createInputSystem</a>()</td><td class="entry"><a class="el" href="../../d6/dcc/classant_1_1_system_factory.html">ant::SystemFactory</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../d6/dcc/classant_1_1_system_factory.html#a69b79fce62ccf901996515e4528bc71d">createMovementSystem</a>()</td><td class="entry"><a class="el" href="../../d6/dcc/classant_1_1_system_factory.html">ant::SystemFactory</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../d6/dcc/classant_1_1_system_factory.html#aa962a3076d677e7ea258897cdefabd1e">createCollisionSystem</a>(sf::FloatRect bounds, sf::VertexArray *GameMap)</td><td class="entry"><a class="el" href="../../d6/dcc/classant_1_1_system_factory.html">ant::SystemFactory</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="../../d6/dcc/classant_1_1_system_factory.html#adefb28b61b249e8e50814782c03a9de7">createConstructorSystem</a>(sf::VertexArray *GameMap, sf::FloatRect bounds)</td><td class="entry"><a class="el" href="../../d6/dcc/classant_1_1_system_factory.html">ant::SystemFactory</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../d6/dcc/classant_1_1_system_factory.html#ae1012e7048bee97688a0db2f76723322">createGravitySystem</a>(float gravity)</td><td class="entry"><a class="el" href="../../d6/dcc/classant_1_1_system_factory.html">ant::SystemFactory</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="../../d6/dcc/classant_1_1_system_factory.html#a69b79fce62ccf901996515e4528bc71d">createMovementSystem</a>()</td><td class="entry"><a class="el" href="../../d6/dcc/classant_1_1_system_factory.html">ant::SystemFactory</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../d6/dcc/classant_1_1_system_factory.html#a4334abc153fc1a4dcfcf1452f9371e56">createOutSystem</a>(int totalEntities)</td><td class="entry"><a class="el" href="../../d6/dcc/classant_1_1_system_factory.html">ant::SystemFactory</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="../../d6/dcc/classant_1_1_system_factory.html#a3d6ae5e15504796eab9f0ebd13cae354">createRenderSystem</a>()</td><td class="entry"><a class="el" href="../../d6/dcc/classant_1_1_system_factory.html">ant::SystemFactory</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../d6/dcc/classant_1_1_system_factory.html#ac7db589ce8fca629d7d871fa9ad4d663">getEventQueue</a>()</td><td class="entry"><a class="el" href="../../d6/dcc/classant_1_1_system_factory.html">ant::SystemFactory</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="../../d6/dcc/classant_1_1_system_factory.html#a33d785d8400849461d1e734c472308b4">getGameEventDispatcher</a>()</td><td class="entry"><a class="el" href="../../d6/dcc/classant_1_1_system_factory.html">ant::SystemFactory</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../d6/dcc/classant_1_1_system_factory.html#a759cba610a22c58876d4edb528690ece">setEventQueue</a>(std::shared_ptr&lt; EventQueue &gt; eq)</td><td class="entry"><a class="el" href="../../d6/dcc/classant_1_1_system_factory.html">ant::SystemFactory</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="../../d6/dcc/classant_1_1_system_factory.html#ab4c382d78bd0214fb91e4e07ed3ee24d">setGameEventDispatcher</a>(std::shared_ptr&lt; GameEventDispatcher &gt; ged)</td><td class="entry"><a class="el" href="../../d6/dcc/classant_1_1_system_factory.html">ant::SystemFactory</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../d6/dcc/classant_1_1_system_factory.html#a8a60ed77666e3e07495e45040fd0de96">SystemFactory</a>()</td><td class="entry"><a class="el" href="../../d6/dcc/classant_1_1_system_factory.html">ant::SystemFactory</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="../../d6/dcc/classant_1_1_system_factory.html#a88f538f2817a297762047c95d4c8169a">SystemFactory</a>(std::shared_ptr&lt; GameEventDispatcher &gt; ged, std::shared_ptr&lt; EventQueue &gt; eq)</td><td class="entry"><a class="el" href="../../d6/dcc/classant_1_1_system_factory.html">ant::SystemFactory</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../d6/dcc/classant_1_1_system_factory.html#a702fd13a4c1a4013f37cb6ec43461a19">~SystemFactory</a>()</td><td class="entry"><a class="el" href="../../d6/dcc/classant_1_1_system_factory.html">ant::SystemFactory</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../d6/dcc/classant_1_1_system_factory.html#acf3fcbe08c0bb66a4a587cc4141b01a1">createSpawnSystem</a>(int nEntities, EntityFactory *ef, sf::Time ot, sf::Vector2f spawnPoint, long int state)</td><td class="entry"><a class="el" href="../../d6/dcc/classant_1_1_system_factory.html">ant::SystemFactory</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="../../d6/dcc/classant_1_1_system_factory.html#ac7db589ce8fca629d7d871fa9ad4d663">getEventQueue</a>()</td><td class="entry"><a class="el" href="../../d6/dcc/classant_1_1_system_factory.html">ant::SystemFactory</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../d6/dcc/classant_1_1_system_factory.html#a33d785d8400849461d1e734c472308b4">getGameEventDispatcher</a>()</td><td class="entry"><a class="el" href="../../d6/dcc/classant_1_1_system_factory.html">ant::SystemFactory</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="../../d6/dcc/classant_1_1_system_factory.html#a759cba610a22c58876d4edb528690ece">setEventQueue</a>(std::shared_ptr&lt; EventQueue &gt; eq)</td><td class="entry"><a class="el" href="../../d6/dcc/classant_1_1_system_factory.html">ant::SystemFactory</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../d6/dcc/classant_1_1_system_factory.html#ab4c382d78bd0214fb91e4e07ed3ee24d">setGameEventDispatcher</a>(std::shared_ptr&lt; GameEventDispatcher &gt; ged)</td><td class="entry"><a class="el" href="../../d6/dcc/classant_1_1_system_factory.html">ant::SystemFactory</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="../../d6/dcc/classant_1_1_system_factory.html#a8a60ed77666e3e07495e45040fd0de96">SystemFactory</a>()</td><td class="entry"><a class="el" href="../../d6/dcc/classant_1_1_system_factory.html">ant::SystemFactory</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../d6/dcc/classant_1_1_system_factory.html#a88f538f2817a297762047c95d4c8169a">SystemFactory</a>(std::shared_ptr&lt; GameEventDispatcher &gt; ged, std::shared_ptr&lt; EventQueue &gt; eq)</td><td class="entry"><a class="el" href="../../d6/dcc/classant_1_1_system_factory.html">ant::SystemFactory</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="../../d6/dcc/classant_1_1_system_factory.html#a702fd13a4c1a4013f37cb6ec43461a19">~SystemFactory</a>()</td><td class="entry"><a class="el" href="../../d6/dcc/classant_1_1_system_factory.html">ant::SystemFactory</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sun Apr 20 2014 15:35:26 for AntFarm by
+    <li class="footer">Generated on Fri May 16 2014 18:56:10 for AntFarm by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="dc/df5/classant_1_1_game_event_dispatcher">
+<title>ant::GameEventDispatcher class Reference</title>
+<para>
+    <programlisting>#include <link linkend="d2/d8a/_game_event_dispatcher_8hpp">&lt;GameEventDispatcher.hpp&gt;</link></programlisting>
+</para>
+        <simplesect>
+            <title>Public Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Subject onCollision<para><emphasis>lista de observadores del evento onCollision.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Subject spawnEvents<para><emphasis>Eventos para el sistema de creacion de entidades.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Subject ClickEvents<para><emphasis>Eventos de click dan evento con un punto.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Subject ChangeCommand<para><emphasis>Envia un Comando al sistema de construccion.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Subject outMap<para><emphasis>Envia una entidad que ha salido del mapa.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Subject LevelComplete<para><emphasis>El sistema de out envia este evento.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="dc/df5/classant_1_1_game_event_dispatcher_1a5240dcf9c2048e9ac70ddf7a3d938c2f">GameEventDispatcher</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="dc/df5/classant_1_1_game_event_dispatcher_1a63b9ec91ca5a593b7217a5e74e984459">DispatchEvent</link> (
+std::shared_ptr&lt; <link linkend="d3/dce/classant_1_1base_event">baseEvent</link> &gt; e)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="dc/df5/classant_1_1_game_event_dispatcher_1a7ebe7e59248718a0bd7e2d3c5daa5828">~GameEventDispatcher</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Brief Description</title>
+
+<para>Clase encargada de processar eventos. </para>
+    </simplesect>
+        <simplesect>
+            <title>Detailed Description</title>
+
+<para>Esta clase contiene a los eventos a los cuales se pueden suscribir los observadores.</para>
+
+<para><formalpara><title>Author: </title>
+
+<para>Cristian Gonzalez Moreno <link xlink:href="mailto:Cristian.glez.m@gmail.com">Cristian.glez.m@gmail.com</link> </para>
+</formalpara>
+<formalpara><title>Version: </title>
+
+<para>0.1 </para>
+</formalpara>
+</para>
+                <para>Definition at line 16 of file GameEventDispatcher.hpp</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>GameEventDispatcher.hpp</para></listitem></itemizedlist></para>
+        </simplesect>
+            <section xml:id="dc/df5/classant_1_1_game_event_dispatcher_1a5240dcf9c2048e9ac70ddf7a3d938c2f">
+                <title>ant::GameEventDispatcher::GameEventDispatcher ()</title> <emphasis>Constructor por defecto.</emphasis>
+                
+            </section>
+            <section xml:id="dc/df5/classant_1_1_game_event_dispatcher_1a63b9ec91ca5a593b7217a5e74e984459">
+                <title>bool ant::GameEventDispatcher::DispatchEvent (std::shared_ptr&lt; baseEvent &gt; e)</title> <emphasis>Procesa el evento y lo envia a los observadores que esten subscritos.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>e</entry>
+                                <entry>
+<para>std::shared_ptr&lt;baseEvent&gt; </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Returns: </title>
+
+<para>bool </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="dc/df5/classant_1_1_game_event_dispatcher_1a7ebe7e59248718a0bd7e2d3c5daa5828">
+                <title>ant::GameEventDispatcher::~GameEventDispatcher ()</title> <emphasis></emphasis>
+                
+            </section>
+</section>

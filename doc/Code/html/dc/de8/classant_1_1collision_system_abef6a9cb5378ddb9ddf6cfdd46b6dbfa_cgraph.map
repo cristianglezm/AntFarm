@@ -1,0 +1,6 @@
+<map id="ant::collisionSystem::update" name="ant::collisionSystem::update">
+<area shape="rect" id="node2" href="$d6/d94/classant_1_1_utils_1_1_quadtree.html#aace6744ed7023825a1863f9953421a4b" title="Limpia el quadtree y sus nodos. " alt="" coords="206,5,341,47"/>
+<area shape="rect" id="node3" href="$d6/d94/classant_1_1_utils_1_1_quadtree.html#af1f8e490445ee493d7639dc6f621bdfc" title="Agrega un puntero a una entidad, la posiciona en el nodo correcto, si no cabe en ningun nodo inferior..." alt="" coords="206,71,341,112"/>
+<area shape="rect" id="node4" href="$d6/d94/classant_1_1_utils_1_1_quadtree.html#acef35673069f1edbafd93579e0a64df7" title="Agrega las entidades del mismo sector que la entidad especificada a la lista(la misma entidad especif..." alt="" coords="206,136,341,177"/>
+<area shape="rect" id="node5" href="$db/dbc/namespaceant_1_1_utils.html#a95b128173f4556c262ec4e9d3df2cbfa" title="Comprueba que un rectangulo esta completamente dentro de otro. " alt="" coords="193,202,353,229"/>
+</map>

@@ -51,8 +51,13 @@ namespace ant{
             /**
              * @brief Crea un nivel segun la imagen especificada.
              *
-             * La imagen especificada tiene que tener algo asi:
-             * @todo Descripcion etc.
+             * La imagen especificada tiene que tener:
+             *  # Colores
+             *  -# Color blanco es ignorado.
+             *  -# Color negro es suelo.
+             *  -# Color rojo es la puerta de entrada al nivel.
+             *  -# Color verde es la puerta de salida del nivel.
+             *
              * @param name std::string nombre del nivel.
              * @param lvl sf::Image imagen a cargar con la informacion del nivel.
              * @param nEntities int numero de entidades que tendra el nivel.

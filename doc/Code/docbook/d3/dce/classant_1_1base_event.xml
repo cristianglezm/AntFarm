@@ -1,0 +1,207 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d3/dce/classant_1_1base_event">
+<title>ant::baseEvent class Reference</title>
+<para>
+    <programlisting>#include <link linkend="d6/dc3/_event_8hpp">&lt;Event.hpp&gt;</link></programlisting>
+</para>
+        <simplesect>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int type</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d3/dce/classant_1_1base_event_1a54f4631555a56b376405a4bb8bdd839b">baseEvent</link> (
+int type)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual <link linkend="d3/dce/classant_1_1base_event_1a53ce67f13ed29f0b2b28bbb13dad7ecf">~baseEvent</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d3/dce/classant_1_1base_event_1a6d6f1170cb6f01301d137d732c0f2704">setType</link> (
+int type)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="d3/dce/classant_1_1base_event_1ad6672f6ff1522b7b66ff7ae43613ed71">getType</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const std::tuple&lt; T...&gt; &amp; <link linkend="d3/dce/classant_1_1base_event_1a3385b5a287d0f6af5d39a79af1c21862">getAttributes</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d3/dce/classant_1_1base_event_1a7724e30d398447f53442c6d915c521d5">setAttributes</link> (
+std::tuple&lt; T...&gt; attributes)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Brief Description</title>
+
+<para>Clase Base de eventos. </para>
+    </simplesect>
+        <simplesect>
+            <title>Detailed Description</title>
+
+<para><formalpara><title>Author: </title>
+
+<para>Cristian Gonzalez Moreno <link xlink:href="mailto:Cristian.glez.m@gmail.com">Cristian.glez.m@gmail.com</link> </para>
+</formalpara>
+<formalpara><title>Version: </title>
+
+<para>0.1 </para>
+</formalpara>
+</para>
+                <para>Definition at line 10 of file Event.hpp</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>Event.hpp</para></listitem></itemizedlist></para>
+        </simplesect>
+            <section xml:id="d3/dce/classant_1_1base_event_1a54f4631555a56b376405a4bb8bdd839b">
+                <title>ant::baseEvent::baseEvent (int type)</title> <emphasis>Constructor protegido del evento base.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>type</entry>
+                                <entry>
+<para>int Tipo de evento. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="d3/dce/classant_1_1base_event_1a53ce67f13ed29f0b2b28bbb13dad7ecf">
+                <title>virtual ant::baseEvent::~baseEvent ()=default</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d3/dce/classant_1_1base_event_1a6d6f1170cb6f01301d137d732c0f2704">
+                <title>void ant::baseEvent::setType (int type)</title> <emphasis>Setter para poner el tipo al evento.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>type</entry>
+                                <entry>
+<para>int tipo de evento. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="d3/dce/classant_1_1base_event_1ad6672f6ff1522b7b66ff7ae43613ed71">
+                <title>int ant::baseEvent::getType () const </title> <emphasis>Getter del tipo de evento.</emphasis>
+                
+<para><formalpara><title>Returns: </title>
+
+<para>int tipo del evento. </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="d3/dce/classant_1_1base_event_1a3385b5a287d0f6af5d39a79af1c21862">
+                <title>const std::tuple&lt; T...&gt; &amp; ant::baseEvent::getAttributes () const </title> <emphasis>Getter de los atributos del evento.</emphasis>
+                
+<para><programlisting>baseEvent::getAttributes&lt;float,int&gt;();&#32;
+</programlisting> templateparam                            <row>
+                                <entry>...T</entry>
+                                <entry>
+<para>tipo de datos que tiene el evento en el orden adecuado. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Returns: </title>
+
+<para>std::tuple&lt;T...&gt; &amp; los attributos del evento(solo lectura) </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="d3/dce/classant_1_1base_event_1a7724e30d398447f53442c6d915c521d5">
+                <title>void ant::baseEvent::setAttributes (std::tuple&lt; T...&gt; attributes)</title> <emphasis>Setter de los atributos del evento.</emphasis>
+                
+<para><programlisting>baseEvent::setAttributes&lt;float,int&gt;(5.3,5);&#32;
+</programlisting> templateparam                            <row>
+                                <entry>...T</entry>
+                                <entry>
+<para>tipo de datos que tiene el evento en el orden adecuado. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>attributes</entry>
+                                <entry>
+<para>...T los parametros de los atributos. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+</section>

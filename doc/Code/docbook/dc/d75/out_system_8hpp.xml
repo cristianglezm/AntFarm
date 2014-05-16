@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="dc/d75/out_system_8hpp">
+    <title>outSystem.hpp File Reference</title>
+    <programlisting>#include &lt;Systems/System.hpp&gt;</programlisting>
+    <programlisting>#include &lt;EntityFactory/EntityFactory.hpp&gt;</programlisting>
+    <programlisting>#include &lt;Observer/Observer.hpp&gt;</programlisting>
+    <programlisting>#include &lt;Event/EventType.hpp&gt;</programlisting>
+    <programlisting>#include &lt;States/States.hpp&gt;</programlisting>
+    <programlisting>#include &lt;Components/ComponentMask.hpp&gt;</programlisting>
+        <simplesect>
+            <title> Classes </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="dd/d76/classant_1_1out_system">ant::outSystem</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="dc/d6c/namespaceant">ant</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file F:/Development/Cpp/AntFarm/include/Systems/outSystem/outSystem.hpp</para>
+    </simplesect>
+</section>

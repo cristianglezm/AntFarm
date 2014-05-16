@@ -72,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
     <ul class="tablist">
       <li><a href="../../annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="../../classes.html"><span>Class&#160;Index</span></a></li>
-      <li><a href="../../hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="../../inherits.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="../../functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -122,21 +122,26 @@ $(document).ready(function(){initNavTree('dc/de8/classant_1_1collision_system.ht
 <div class="dynheader">
 Inheritance diagram for ant::collisionSystem:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="../../dc/de8/classant_1_1collision_system.png" usemap="#ant::collisionSystem_map" alt=""/>
-  <map id="ant::collisionSystem_map" name="ant::collisionSystem_map">
-<area href="../../de/d48/classant_1_1_system.html" title="Clase base para los sistemas. " alt="ant::System" shape="rect" coords="0,0,121,24"/>
-</map>
- </div></div>
+<div class="center"><img src="../../de/d4c/classant_1_1collision_system__inherit__graph.png" border="0" usemap="#ant_1_1collision_system_inherit__map" alt="Inheritance graph"/></div>
+<map name="ant_1_1collision_system_inherit__map" id="ant_1_1collision_system_inherit__map">
+<area shape="rect" id="node2" href="../../de/d48/classant_1_1_system.html" title="Clase base para los sistemas. " alt="" coords="5,5,189,317"/></map>
+</div>
+<div class="dynheader">
+Collaboration diagram for ant::collisionSystem:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d9/d48/classant_1_1collision_system__coll__graph.png" border="0" usemap="#ant_1_1collision_system_coll__map" alt="Collaboration graph"/></div>
+<map name="ant_1_1collision_system_coll__map" id="ant_1_1collision_system_coll__map">
+<area shape="rect" id="node2" href="../../de/d48/classant_1_1_system.html" title="Clase base para los sistemas. " alt="" coords="5,5,189,317"/></map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:abe1687a67eb6be58b2ed905b29a4a586"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/de8/classant_1_1collision_system.html#abe1687a67eb6be58b2ed905b29a4a586">collisionSystem</a> (sf::FloatRect bounds)</td></tr>
-<tr class="memdesc:abe1687a67eb6be58b2ed905b29a4a586"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor por defecto.  <a href="#abe1687a67eb6be58b2ed905b29a4a586">More...</a><br/></td></tr>
-<tr class="separator:abe1687a67eb6be58b2ed905b29a4a586"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad42cc6cabd1798fa7a0d6ce1a6d106ca"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/de8/classant_1_1collision_system.html#ad42cc6cabd1798fa7a0d6ce1a6d106ca">render</a> (sf::RenderWindow &amp;win)</td></tr>
-<tr class="memdesc:ad42cc6cabd1798fa7a0d6ce1a6d106ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">No hace nada.  <a href="#ad42cc6cabd1798fa7a0d6ce1a6d106ca">More...</a><br/></td></tr>
-<tr class="separator:ad42cc6cabd1798fa7a0d6ce1a6d106ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60197fa14edf90555a49d53cad095c8c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/de8/classant_1_1collision_system.html#a60197fa14edf90555a49d53cad095c8c">collisionSystem</a> (sf::FloatRect bounds, sf::VertexArray *GameMap)</td></tr>
+<tr class="memdesc:a60197fa14edf90555a49d53cad095c8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor por defecto.  <a href="#a60197fa14edf90555a49d53cad095c8c">More...</a><br/></td></tr>
+<tr class="separator:a60197fa14edf90555a49d53cad095c8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d53ad5d64a749e883edfc9049734bc5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/de8/classant_1_1collision_system.html#a9d53ad5d64a749e883edfc9049734bc5">render</a> (sf::RenderWindow &amp;win)</td></tr>
+<tr class="memdesc:a9d53ad5d64a749e883edfc9049734bc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renderiza el Quadtree si RENDER_QTREE esta definido. si no no hace nada.  <a href="#a9d53ad5d64a749e883edfc9049734bc5">More...</a><br/></td></tr>
+<tr class="separator:a9d53ad5d64a749e883edfc9049734bc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abef6a9cb5378ddb9ddf6cfdd46b6dbfa"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/de8/classant_1_1collision_system.html#abef6a9cb5378ddb9ddf6cfdd46b6dbfa">update</a> (sf::Time dt)</td></tr>
 <tr class="memdesc:abef6a9cb5378ddb9ddf6cfdd46b6dbfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Comprueba las colisiones de las entidades.  <a href="#abef6a9cb5378ddb9ddf6cfdd46b6dbfa">More...</a><br/></td></tr>
 <tr class="separator:abef6a9cb5378ddb9ddf6cfdd46b6dbfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -180,16 +185,18 @@ Protected Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Sistema que comprueba las colisiones entre entidades. </p>
-<p>Cuando detecta una colision añade un evento a la <a class="el" href="../../db/dec/classant_1_1_event_queue.html" title="Clase donde se almacenan los eventos para ser procesados despues. ">EventQueue</a> con las dos entidades que colisionaron. Event&lt;Entity*,Entity*&gt; -&gt; type: COLLISION_EVENT </p>
-<dl class="section author"><dt>Author</dt><dd>Cristian Glez <a href="#" onclick="location.href='mai'+'lto:'+'Cri'+'st'+'ian'+'.g'+'lez'+'.m'+'@gm'+'ai'+'l.c'+'om'; return false;">Crist<span style="display: none;">.nosp@m.</span>ian.<span style="display: none;">.nosp@m.</span>glez.<span style="display: none;">.nosp@m.</span>m@gm<span style="display: none;">.nosp@m.</span>ail.c<span style="display: none;">.nosp@m.</span>om</a> </dd></dl>
+<p>Cuando detecta una colision añade un evento a la <a class="el" href="../../db/dec/classant_1_1_event_queue.html" title="Clase donde se almacenan los eventos para ser procesados despues. ">EventQueue</a> con las dos entidades que colisionaron.</p>
+<ol type="1">
+<li>Event&lt;Entity*,Entity*&gt; -&gt; type: COLLISION_EVENT</li>
+<li>Event&lt;Entity*,int&gt; -&gt; type: TERRAIN_COLLISION</li>
+<li>Event&lt;Entity*&gt; -&gt; type: OUT_MAP <dl class="section author"><dt>Author</dt><dd>Cristian Glez <a href="#" onclick="location.href='mai'+'lto:'+'Cri'+'st'+'ian'+'.g'+'lez'+'.m'+'@gm'+'ai'+'l.c'+'om'; return false;">Crist<span style="display: none;">.nosp@m.</span>ian.<span style="display: none;">.nosp@m.</span>glez.<span style="display: none;">.nosp@m.</span>m@gm<span style="display: none;">.nosp@m.</span>ail.c<span style="display: none;">.nosp@m.</span>om</a> </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>0.1 </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000002">Todo:</a></b></dt><dd><ol type="1">
-<li>Event&lt;Entity*&gt; -&gt; type: OUT_OF_MAP_EVENT</li>
-<li>Event&lt;Entity*&gt; -&gt; type: PIXEL_COLLISION_EVENT </li>
+</li>
 </ol>
-</dd></dl>
+
+<p>Definition at line <a class="el" href="../../d0/d71/collision_system_8hpp_source.html#l00025">25</a> of file <a class="el" href="../../d0/d71/collision_system_8hpp_source.html">collisionSystem.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="abe1687a67eb6be58b2ed905b29a4a586"></a>
+<a class="anchor" id="a60197fa14edf90555a49d53cad095c8c"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -197,8 +204,18 @@ Protected Attributes</h2></td></tr>
           <td class="memname">ant::collisionSystem::collisionSystem </td>
           <td>(</td>
           <td class="paramtype">sf::FloatRect&#160;</td>
-          <td class="paramname"><em>bounds</em></td><td>)</td>
+          <td class="paramname"><em>bounds</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">sf::VertexArray *&#160;</td>
+          <td class="paramname"><em>GameMap</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -210,6 +227,8 @@ Protected Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+<p>Definition at line <a class="el" href="../../d7/dd0/collision_system_8cpp_source.html#l00004">4</a> of file <a class="el" href="../../d7/dd0/collision_system_8cpp_source.html">collisionSystem.cpp</a>.</p>
 
 </div>
 </div>
@@ -233,6 +252,8 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="../../d7/dd0/collision_system_8cpp_source.html#l00105">105</a> of file <a class="el" href="../../d7/dd0/collision_system_8cpp_source.html">collisionSystem.cpp</a>.</p>
 
 </div>
 </div>
@@ -261,6 +282,8 @@ Protected Attributes</h2></td></tr>
 <p>Getter para el <a class="el" href="../../dd/d12/classant_1_1_entity_manager.html" title="Clase Para manejar las entidades. ">EntityManager</a>. </p>
 <dl class="section return"><dt>Returns</dt><dd>std::shared_ptr&lt;EntityManager&gt; </dd></dl>
 
+<p>Definition at line <a class="el" href="../../d6/def/_system_8hpp_source.html#l00071">71</a> of file <a class="el" href="../../d6/def/_system_8hpp_source.html">System.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="ac3e2bbbdb622276d194ad3a687d8e4f1"></a>
@@ -286,6 +309,8 @@ Protected Attributes</h2></td></tr>
 
 <p>Getter para la <a class="el" href="../../db/dec/classant_1_1_event_queue.html" title="Clase donde se almacenan los eventos para ser procesados despues. ">EventQueue</a>. </p>
 <dl class="section return"><dt>Returns</dt><dd>std::shared_ptr&lt;EventQueue&gt; </dd></dl>
+
+<p>Definition at line <a class="el" href="../../d6/def/_system_8hpp_source.html#l00051">51</a> of file <a class="el" href="../../d6/def/_system_8hpp_source.html">System.hpp</a>.</p>
 
 </div>
 </div>
@@ -313,6 +338,8 @@ Protected Attributes</h2></td></tr>
 <p>Getter para el nombre del sistema. </p>
 <dl class="section return"><dt>Returns</dt><dd>std::string </dd></dl>
 
+<p>Definition at line <a class="el" href="../../d6/def/_system_8hpp_source.html#l00061">61</a> of file <a class="el" href="../../d6/def/_system_8hpp_source.html">System.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a2d94338969f43d4fd2fd972deb099258"></a>
@@ -338,9 +365,11 @@ Protected Attributes</h2></td></tr>
 
 <p>Getter de los requisitos para el sistema. </p>
 
+<p>Definition at line <a class="el" href="../../d6/def/_system_8hpp_source.html#l00041">41</a> of file <a class="el" href="../../d6/def/_system_8hpp_source.html">System.hpp</a>.</p>
+
 </div>
 </div>
-<a class="anchor" id="ad42cc6cabd1798fa7a0d6ce1a6d106ca"></a>
+<a class="anchor" id="a9d53ad5d64a749e883edfc9049734bc5"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -348,7 +377,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void ant::collisionSystem::render </td>
+          <td class="memname">virtual void ant::collisionSystem::render </td>
           <td>(</td>
           <td class="paramtype">sf::RenderWindow &amp;&#160;</td>
           <td class="paramname"><em>win</em></td><td>)</td>
@@ -357,14 +386,25 @@ Protected Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>No hace nada. </p>
+<p>Renderiza el Quadtree si RENDER_QTREE esta definido. si no no hace nada. </p>
 
 <p>Implements <a class="el" href="../../de/d48/classant_1_1_system.html#a30a815d199fea90e9d2f7167eb2bf86e">ant::System</a>.</p>
+
+<p>Definition at line <a class="el" href="../../d0/d71/collision_system_8hpp_source.html#l00036">36</a> of file <a class="el" href="../../d0/d71/collision_system_8hpp_source.html">collisionSystem.hpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dc/de8/classant_1_1collision_system_a9d53ad5d64a749e883edfc9049734bc5_cgraph.png" border="0" usemap="#dc/de8/classant_1_1collision_system_a9d53ad5d64a749e883edfc9049734bc5_cgraph" alt=""/></div>
+<map name="dc/de8/classant_1_1collision_system_a9d53ad5d64a749e883edfc9049734bc5_cgraph" id="dc/de8/classant_1_1collision_system_a9d53ad5d64a749e883edfc9049734bc5_cgraph">
+<area shape="rect" id="node2" href="../../d6/d94/classant_1_1_utils_1_1_quadtree.html#acb64f3de7ac64139734c78c074a5509c" title="Metodo para ver las divisiones en la pantalla. " alt="" coords="193,5,328,47"/></map>
+</div>
+</p>
 
 </div>
 </div>
@@ -398,6 +438,8 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
+<p>Definition at line <a class="el" href="../../d8/de5/_system_8cpp_source.html#l00025">25</a> of file <a class="el" href="../../d8/de5/_system_8cpp_source.html">System.cpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a1effe9f0e5615e516a34be02d5895434"></a>
@@ -429,6 +471,8 @@ Protected Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+<p>Definition at line <a class="el" href="../../d8/de5/_system_8cpp_source.html#l00019">19</a> of file <a class="el" href="../../d8/de5/_system_8cpp_source.html">System.cpp</a>.</p>
 
 </div>
 </div>
@@ -462,6 +506,8 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
+<p>Definition at line <a class="el" href="../../d8/de5/_system_8cpp_source.html#l00022">22</a> of file <a class="el" href="../../d8/de5/_system_8cpp_source.html">System.cpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a35662ff3739ff4290df1106bfdccfaca"></a>
@@ -494,6 +540,8 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
+<p>Definition at line <a class="el" href="../../d8/de5/_system_8cpp_source.html#l00016">16</a> of file <a class="el" href="../../d8/de5/_system_8cpp_source.html">System.cpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="abef6a9cb5378ddb9ddf6cfdd46b6dbfa"></a>
@@ -519,15 +567,31 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Comprueba las colisiones de las entidades. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Envia eventos de colision y eventos especificos del suelo.</p>
+<ol type="1">
+<li>Event&lt;Entity*,Entity*&gt; -&gt; type: COLLISION_EVENT</li>
+<li>Event&lt;Entity*,int&gt; -&gt; type: TERRAIN_COLLISION</li>
+<li>Event&lt;Entity*&gt; -&gt; type: OUT_MAP <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">dt</td><td>sf::Time delta time </td></tr>
   </table>
   </dd>
 </dl>
-<p>FIXME rotation of boundingbox </p>
+</li>
+</ol>
 
 <p>Implements <a class="el" href="../../de/d48/classant_1_1_system.html#a4d97de105123df07d4d90ac2914f9e6c">ant::System</a>.</p>
+
+<p>Definition at line <a class="el" href="../../d7/dd0/collision_system_8cpp_source.html#l00011">11</a> of file <a class="el" href="../../d7/dd0/collision_system_8cpp_source.html">collisionSystem.cpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dc/de8/classant_1_1collision_system_abef6a9cb5378ddb9ddf6cfdd46b6dbfa_cgraph.png" border="0" usemap="#dc/de8/classant_1_1collision_system_abef6a9cb5378ddb9ddf6cfdd46b6dbfa_cgraph" alt=""/></div>
+<map name="dc/de8/classant_1_1collision_system_abef6a9cb5378ddb9ddf6cfdd46b6dbfa_cgraph" id="dc/de8/classant_1_1collision_system_abef6a9cb5378ddb9ddf6cfdd46b6dbfa_cgraph">
+<area shape="rect" id="node2" href="../../d6/d94/classant_1_1_utils_1_1_quadtree.html#aace6744ed7023825a1863f9953421a4b" title="Limpia el quadtree y sus nodos. " alt="" coords="206,5,341,47"/><area shape="rect" id="node3" href="../../d6/d94/classant_1_1_utils_1_1_quadtree.html#af1f8e490445ee493d7639dc6f621bdfc" title="Agrega un puntero a una entidad, la posiciona en el nodo correcto, si no cabe en ningun nodo inferior..." alt="" coords="206,71,341,112"/><area shape="rect" id="node4" href="../../d6/d94/classant_1_1_utils_1_1_quadtree.html#acef35673069f1edbafd93579e0a64df7" title="Agrega las entidades del mismo sector que la entidad especificada a la lista(la misma entidad especif..." alt="" coords="206,136,341,177"/><area shape="rect" id="node5" href="../../db/dbc/namespaceant_1_1_utils.html#a95b128173f4556c262ec4e9d3df2cbfa" title="Comprueba que un rectangulo esta completamente dentro de otro. " alt="" coords="193,202,353,229"/></map>
+</div>
+</p>
 
 </div>
 </div>
@@ -550,6 +614,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="../../d6/def/_system_8hpp_source.html#l00086">86</a> of file <a class="el" href="../../d6/def/_system_8hpp_source.html">System.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a27e1814e13d161b5ef0e848e3da16d29"></a>
@@ -569,6 +635,8 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="../../d6/def/_system_8hpp_source.html#l00085">85</a> of file <a class="el" href="../../d6/def/_system_8hpp_source.html">System.hpp</a>.</p>
 
 </div>
 </div>
@@ -590,6 +658,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="../../d6/def/_system_8hpp_source.html#l00087">87</a> of file <a class="el" href="../../d6/def/_system_8hpp_source.html">System.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a4ef41cfc496e41ac6730f90629524ec7"></a>
@@ -610,11 +680,13 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="../../d6/def/_system_8hpp_source.html#l00084">84</a> of file <a class="el" href="../../d6/def/_system_8hpp_source.html">System.hpp</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="../../d0/d71/collision_system_8hpp_source.html">collisionSystem.hpp</a></li>
-<li><a class="el" href="../../d7/dd0/collision_system_8cpp.html">collisionSystem.cpp</a></li>
+<li><a class="el" href="../../d7/dd0/collision_system_8cpp_source.html">collisionSystem.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -622,7 +694,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dc/d6c/namespaceant.html">ant</a></li><li class="navelem"><a class="el" href="../../dc/de8/classant_1_1collision_system.html">collisionSystem</a></li>
-    <li class="footer">Generated on Sun Apr 20 2014 15:35:26 for AntFarm by
+    <li class="footer">Generated on Fri May 16 2014 18:56:10 for AntFarm by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

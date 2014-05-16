@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d4/da0/_system_factory_8hpp">
+    <title>SystemFactory.hpp File Reference</title>
+    <programlisting>#include &lt;memory&gt;</programlisting>
+    <programlisting>#include &lt;EntityManager/EntityManager.hpp&gt;</programlisting>
+    <programlisting>#include &lt;GameEventDispatcher/GameEventDispatcher.hpp&gt;</programlisting>
+    <programlisting>#include &lt;EventQueue/EventQueue.hpp&gt;</programlisting>
+    <programlisting>#include &lt;Systems/collisionSystem/collisionSystem.hpp&gt;</programlisting>
+    <programlisting>#include &lt;Systems/renderSystem/renderSystem.hpp&gt;</programlisting>
+    <programlisting>#include &lt;Systems/constructorSystem/constructorSystem.hpp&gt;</programlisting>
+    <programlisting>#include &lt;Systems/movementSystem/movementSystem.hpp&gt;</programlisting>
+    <programlisting>#include &lt;Systems/gravitySystem/gravitySystem.hpp&gt;</programlisting>
+    <programlisting>#include &lt;Systems/spawnSystem/spawnSystem.hpp&gt;</programlisting>
+    <programlisting>#include &lt;Systems/inputSystem/inputSystem.hpp&gt;</programlisting>
+    <programlisting>#include &lt;Systems/outSystem/outSystem.hpp&gt;</programlisting>
+        <simplesect>
+            <title> Classes </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d6/dcc/classant_1_1_system_factory">ant::SystemFactory</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="dc/d6c/namespaceant">ant</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file F:/Development/Cpp/AntFarm/include/SystemFactory/SystemFactory.hpp</para>
+    </simplesect>
+</section>

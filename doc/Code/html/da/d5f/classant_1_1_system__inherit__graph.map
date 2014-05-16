@@ -1,0 +1,10 @@
+<map id="ant::System" name="ant::System">
+<area shape="rect" id="node2" href="$dc/de8/classant_1_1collision_system.html" title="Sistema que comprueba las colisiones entre entidades. " alt="" coords="5,387,148,509"/>
+<area shape="rect" id="node3" href="$d8/d12/classant_1_1constructor_system.html" title="Sistema encargado de que las hormigas construyan etc. " alt="" coords="173,380,333,516"/>
+<area shape="rect" id="node4" href="$db/de0/classant_1_1gravity_system.html" title="Sistema para aplicar la gravedad a las entidades. " alt="" coords="357,365,489,531"/>
+<area shape="rect" id="node5" href="$dd/d19/classant_1_1input_system.html" title="Sistema encargado de efectuar los inputs. " alt="" coords="514,387,637,509"/>
+<area shape="rect" id="node6" href="$d6/d6c/classant_1_1movement_system.html" title="Sistema encargado de hacer que las entidades se muevan. " alt="" coords="661,380,815,516"/>
+<area shape="rect" id="node7" href="$dd/d76/classant_1_1out_system.html" title="Sistema encargado de quitar a las entidades que chocan con las entidades con componente OUT..." alt="" coords="840,373,953,523"/>
+<area shape="rect" id="node8" href="$d1/def/classant_1_1render_system.html" title="Sistema encargado de mostrar las entidades que tengan los componentes necesarios. ..." alt="" coords="978,387,1109,509"/>
+<area shape="rect" id="node9" href="$db/ddf/classant_1_1spawn_system.html" title="Sistema encargado de crear las entidades sobre el tiempo establecido. " alt="" coords="1133,365,1265,531"/>
+</map>

@@ -1,0 +1,576 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d4/df6/classant_1_1_component_factory">
+<title>ant::ComponentFactory class Reference</title>
+<para>
+    <programlisting>#include <link linkend="de/dd4/_component_factory_8hpp">&lt;ComponentFactory.hpp&gt;</link></programlisting>
+</para>
+        <simplesect>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::shared_ptr&lt; AssetManager &gt; assets</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d4/df6/classant_1_1_component_factory_1addc8722804069b1968c8fdc9a2308219">ComponentFactory</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d4/df6/classant_1_1_component_factory_1acfbc5b67afb1f3325d9a9eab61d7b56d">ComponentFactory</link> (
+std::shared_ptr&lt; <link linkend="d1/dd6/classant_1_1_asset_manager">AssetManager</link> &gt; assets)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="d4/df6/classant_1_1_component_factory_1a4ebe19f09d51965ff61c0df7251e9e99">loadAssets</link> (
+const std::string &amp; json)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="d4/df6/classant_1_1_component_factory_1a57a64f3a57be7ddc893c999206f2410c">unloadAssets</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d4/df6/classant_1_1_component_factory_1a65344c3c8f3d7b48c65205b1fd013724">setAssetManager</link> (
+std::shared_ptr&lt; <link linkend="d1/dd6/classant_1_1_asset_manager">AssetManager</link> &gt; assets)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::shared_ptr&lt; <link linkend="d1/dd6/classant_1_1_asset_manager">AssetManager</link> &gt; <link linkend="d4/df6/classant_1_1_component_factory_1a3fa7c2478df473516ed2ce6814d6bcb4">getAssetManager</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::unique_ptr&lt; <link linkend="d4/dd4/classant_1_1base_component">baseComponent</link> &gt; <link linkend="d4/df6/classant_1_1_component_factory_1a0438691a164fa293f5551179f2051620">createTransform</link> (
+sf::Vector2f position, sf::Vector2f scale, float rotation)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::unique_ptr&lt; <link linkend="d4/dd4/classant_1_1base_component">baseComponent</link> &gt; <link linkend="d4/df6/classant_1_1_component_factory_1a1c2757122638b6dd751bfad7451ce4a6">createVelocity</link> (
+float speed, float minSpeed, float maxSpeed)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::unique_ptr&lt; <link linkend="d4/dd4/classant_1_1base_component">baseComponent</link> &gt; <link linkend="d4/df6/classant_1_1_component_factory_1a745012207b846a3a31ab42337f957579">createBounds</link> (
+sf::FloatRect bounds)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::unique_ptr&lt; <link linkend="d4/dd4/classant_1_1base_component">baseComponent</link> &gt; <link linkend="d4/df6/classant_1_1_component_factory_1af55da53ce3a1ba4782d1f27c987675ed">createDestructable</link> (
+sf::Vector2f position, const std::string &amp; imageID)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::unique_ptr&lt; <link linkend="d4/dd4/classant_1_1base_component">baseComponent</link> &gt; <link linkend="d4/df6/classant_1_1_component_factory_1a9396c4db274bba3299fc3a231fed768b">createAnimation</link> (
+std::vector&lt; std::string &gt; ids)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::unique_ptr&lt; <link linkend="d4/dd4/classant_1_1base_component">baseComponent</link> &gt; <link linkend="d4/df6/classant_1_1_component_factory_1ac76f4b8d6b9356e49ded116f77171027">createSprite</link> (
+std::string id)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::unique_ptr&lt; <link linkend="d4/dd4/classant_1_1base_component">baseComponent</link> &gt; <link linkend="d4/df6/classant_1_1_component_factory_1af0058eda5c3578e2bd25772a5fe76c7e">createPassage</link> (
+sf::Vector2f dest)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::unique_ptr&lt; <link linkend="d4/dd4/classant_1_1base_component">baseComponent</link> &gt; <link linkend="d4/df6/classant_1_1_component_factory_1ac366ce2c2eafa4ceb651f505b5c311d2">createIn</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::unique_ptr&lt; <link linkend="d4/dd4/classant_1_1base_component">baseComponent</link> &gt; <link linkend="d4/df6/classant_1_1_component_factory_1ab29393c2d735a345463778a26ff5f27a">createOut</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::unique_ptr&lt; <link linkend="d4/dd4/classant_1_1base_component">baseComponent</link> &gt; <link linkend="d4/df6/classant_1_1_component_factory_1acc62766cadafd7a835bcd453a1aabf0b">createCounter</link> (
+int count)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d4/df6/classant_1_1_component_factory_1acd6746a981623117ef590e8065a51061">~ComponentFactory</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::unique_ptr&lt; sf::VertexArray &gt; <link linkend="d4/df6/classant_1_1_component_factory_1a646fbdf216ba6ddfc45c6e28f99af331">mapImage</link> (
+const sf::Vector2f &amp; position, sf::Image &amp; img, sf::FloatRect * bounds)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Brief Description</title>
+
+<para>Clase para crear los componentes de las entidades. </para>
+    </simplesect>
+        <simplesect>
+            <title>Detailed Description</title>
+
+<para><formalpara><title>Author: </title>
+
+<para>Cristian Glez <link xlink:href="mailto:Cristian.glez.m@gmail.com">Cristian.glez.m@gmail.com</link> </para>
+</formalpara>
+<formalpara><title>Version: </title>
+
+<para>0.1 </para>
+</formalpara>
+</para>
+                <para>Definition at line 15 of file ComponentFactory.hpp</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>ComponentFactory.hpp</para></listitem></itemizedlist></para>
+        </simplesect>
+            <section xml:id="d4/df6/classant_1_1_component_factory_1addc8722804069b1968c8fdc9a2308219">
+                <title>ant::ComponentFactory::ComponentFactory ()</title> <emphasis>Constructor sin argumentos.</emphasis>
+                
+            </section>
+            <section xml:id="d4/df6/classant_1_1_component_factory_1acfbc5b67afb1f3325d9a9eab61d7b56d">
+                <title>ant::ComponentFactory::ComponentFactory (std::shared_ptr&lt; AssetManager &gt; assets)</title> <emphasis>Constructor que le pasa los assets.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>assets</entry>
+                                <entry>
+<para>std::shared_ptr&lt;AssetManager&gt; </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="d4/df6/classant_1_1_component_factory_1a4ebe19f09d51965ff61c0df7251e9e99">
+                <title>bool ant::ComponentFactory::loadAssets (const std::string &amp;json)</title> <emphasis>Llama a la funcion de AssetsManager::loadAssets()
+       para cargar los assets desde un fichero,
+       tiene que tener el formato especificado en la funcion.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>json</entry>
+                                <entry>
+<para>std::string fichero json a cargar. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Returns: </title>
+
+<para>bool </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="d4/df6/classant_1_1_component_factory_1a57a64f3a57be7ddc893c999206f2410c">
+                <title>bool ant::ComponentFactory::unloadAssets ()</title> <emphasis>Descarga los assets cargados.</emphasis>
+                
+<para><formalpara><title>Returns: </title>
+
+<para>bool </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="d4/df6/classant_1_1_component_factory_1a65344c3c8f3d7b48c65205b1fd013724">
+                <title>void ant::ComponentFactory::setAssetManager (std::shared_ptr&lt; AssetManager &gt; assets)</title> <emphasis>Pone el AssetManager especificado para usar,
+       en la creacion de los componentes que
+       requieran de assets.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>assets</entry>
+                                <entry>
+<para>std::shared_ptr&lt;AssetManager&gt; Assets </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="d4/df6/classant_1_1_component_factory_1a3fa7c2478df473516ed2ce6814d6bcb4">
+                <title>std::shared_ptr&lt;AssetManager&gt; ant::ComponentFactory::getAssetManager ()</title> <emphasis>Devuelve el asset manager que utiliza.</emphasis>
+                
+<para><formalpara><title>Returns: </title>
+
+<para>std::shared_ptr&lt;AssetManager&gt; <link linkend="d1/dd6/classant_1_1_asset_manager">AssetManager</link> que utiliza. </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="d4/df6/classant_1_1_component_factory_1a0438691a164fa293f5551179f2051620">
+                <title>std::unique_ptr&lt; baseComponent &gt; ant::ComponentFactory::createTransform (sf::Vector2f position, sf::Vector2f scale, float rotation)</title> <emphasis>Crea un componente tipo Transform.</emphasis>
+                
+<para>Este componente basico es el cual permite a la entidad tener posicion. necesario para poder renderizar, moverse, etc. <programlisting>Component&lt;sf::Vector2f,sf::Vector2f,float&gt;
+</programlisting> 
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>position</entry>
+                                <entry>
+<para>sf::Vector2f posicion de la entidad. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>scale</entry>
+                                <entry>
+<para>sf::Vector2f escala de la entidad. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>rotation</entry>
+                                <entry>
+<para>float rotacion de la entidad. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Returns: </title>
+
+<para>std::unique_ptr&lt;baseComponent&gt; componente creado. </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="d4/df6/classant_1_1_component_factory_1a1c2757122638b6dd751bfad7451ce4a6">
+                <title>std::unique_ptr&lt; baseComponent &gt; ant::ComponentFactory::createVelocity (float speed, float minSpeed, float maxSpeed)</title> <emphasis>Crea un componente Tipo Velocity.</emphasis>
+                
+<para>Este componente basico es el cual permite a la entidad moverse. necesario para poder moverse. <programlisting>Component&lt;sf::Vector2f,float,float,float&gt;
+</programlisting> 
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>speed</entry>
+                                <entry>
+<para>float Velocidad actual. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>minSpeed</entry>
+                                <entry>
+<para>float Velocidad minima a la cual puede ir. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>maxSpeed</entry>
+                                <entry>
+<para>float Velocidad Maxima a la cual puede ir. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Returns: </title>
+
+<para>std::unique_ptr&lt;baseComponent&gt; componente creado. </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="d4/df6/classant_1_1_component_factory_1a745012207b846a3a31ab42337f957579">
+                <title>std::unique_ptr&lt; baseComponent &gt; ant::ComponentFactory::createBounds (sf::FloatRect bounds)</title> <emphasis>Crea un componente Tipo Bounds.</emphasis>
+                
+<para>Este componente basico es el cual permite a la entidad tener colisiones. <programlisting>Component&lt;sf::FloatReact&gt;
+</programlisting> 
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>bounds</entry>
+                                <entry>
+<para>sf::FloatRect rectangulo de colision. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Returns: </title>
+
+<para>std::unique_ptr&lt;baseComponent&gt; componente Creado. </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="d4/df6/classant_1_1_component_factory_1af55da53ce3a1ba4782d1f27c987675ed">
+                <title>std::unique_ptr&lt; baseComponent &gt; ant::ComponentFactory::createDestructable (sf::Vector2f position, const std::string &amp;imageID)</title> <emphasis>Crea un componente tipo Destructable.</emphasis>
+                
+<para>Este componente basico es el cual permite a la entidad ser destruida. Son pixeles individuales las operaciones de mover no se pueden aplicar sin tener un coste elevado, tarda mas segun lo grande que sea la imagen. <programlisting>Component&lt;std::string,sf::VertexArray&gt;
+</programlisting> 
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>position</entry>
+                                <entry>
+<para>sf::Vector2f posicion en la que dibuja el primer pixel. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>imageID</entry>
+                                <entry>
+<para>std::string&amp; id de la imagen a mapear. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Returns: </title>
+
+<para>std::unique_ptr&lt;baseComponent&gt; componente creado. </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="d4/df6/classant_1_1_component_factory_1a9396c4db274bba3299fc3a231fed768b">
+                <title>std::unique_ptr&lt; baseComponent &gt; ant::ComponentFactory::createAnimation (std::vector&lt; std::string &gt; ids)</title> <emphasis>Crea un componente tipo Animation.</emphasis>
+                
+<para>Este componente basico es el cual permite hacer animaciones. necesita un sistema especifico por cada animacion. <programlisting>Component&lt;std::vector&lt;std::string&gt;&gt;&gt;
+</programlisting> 
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>ids</entry>
+                                <entry>
+<para>std::vector&lt;std::string&gt; id de las texturas para la animacion. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Returns: </title>
+
+<para>std::unique_ptr&lt;baseComponent&gt; componente creado. </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="d4/df6/classant_1_1_component_factory_1ac76f4b8d6b9356e49ded116f77171027">
+                <title>std::unique_ptr&lt; baseComponent &gt; ant::ComponentFactory::createSprite (std::string id)</title> <emphasis>Crea un componente tipo Sprite.</emphasis>
+                
+<para>Este componente basico es el cual permite a una entidad ser renderizada en 2d. <programlisting>Component&lt;std::string,sf::Sprite&gt;
+</programlisting> 
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>id</entry>
+                                <entry>
+<para>std::string id de la textura. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Returns: </title>
+
+<para>std::unique_ptr&lt;baseComponent&gt; componente creado. </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="d4/df6/classant_1_1_component_factory_1af0058eda5c3578e2bd25772a5fe76c7e">
+                <title>std::unique_ptr&lt; baseComponent &gt; ant::ComponentFactory::createPassage (sf::Vector2f dest)</title> <emphasis>Crea un componente tipo Passage.</emphasis>
+                
+<para>Este componente permite ir de un sitio a otro. <programlisting>Component&lt;sf::Vector2f&gt;
+</programlisting> <formalpara><title>Returns: </title>
+
+<para>std::unique_ptr&lt;baseComponent&gt; componente creado. </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="d4/df6/classant_1_1_component_factory_1ac366ce2c2eafa4ceb651f505b5c311d2">
+                <title>std::unique_ptr&lt; baseComponent &gt; ant::ComponentFactory::createIn ()</title> <emphasis>Crea un componente que indica la direccion.</emphasis>
+                
+<para>Este componente permite hacer que una entidad haga aparecer otras entidades.</para>
+
+<para><programlisting>Component&lt;&gt;
+</programlisting> <formalpara><title>Returns: </title>
+
+<para>std::unique_ptr&lt;baseComponent&gt; componente creado. </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="d4/df6/classant_1_1_component_factory_1ab29393c2d735a345463778a26ff5f27a">
+                <title>std::unique_ptr&lt; baseComponent &gt; ant::ComponentFactory::createOut ()</title> <emphasis>Crea un componente que indica la direccion.</emphasis>
+                
+<para>Este componente permite hacer que una entidad haga desparecer las entidades que colisiones contra ella.</para>
+
+<para><programlisting>Component&lt;&gt;
+</programlisting> <formalpara><title>Returns: </title>
+
+<para>std::unique_ptr&lt;baseComponent&gt; componente creado. </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="d4/df6/classant_1_1_component_factory_1acc62766cadafd7a835bcd453a1aabf0b">
+                <title>std::unique_ptr&lt; baseComponent &gt; ant::ComponentFactory::createCounter (int count)</title> <emphasis>Crea un componente que tiene un numero de veces.</emphasis>
+                
+<para><programlisting>Component&lt;int&gt;
+</programlisting> <formalpara><title>Returns: </title>
+
+<para>std::unique_ptr&lt;baseComponent&gt; componente creado. </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="d4/df6/classant_1_1_component_factory_1acd6746a981623117ef590e8065a51061">
+                <title>ant::ComponentFactory::~ComponentFactory ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d4/df6/classant_1_1_component_factory_1a646fbdf216ba6ddfc45c6e28f99af331">
+                <title>std::unique_ptr&lt; sf::VertexArray &gt; ant::ComponentFactory::mapImage (const sf::Vector2f &amp;position, sf::Image &amp;img, sf::FloatRect *bounds)</title> <emphasis>Sirve para mapear una imagen a un sf::VertexArray.</emphasis>
+                
+<para>Se utiliza para mapear una imagen a un sf::VertexArray, si la posicion es diferente a 0 la array se recorrera otra vez para poner las posiciones de los pixels segun la posicion puesta.</para>
+
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>position</entry>
+                                <entry>
+<para>sf::Vector2f Donde empezara a poner la posicion de cada pixel. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>img</entry>
+                                <entry>
+<para>sf::Image&amp; referencia de la imagen a mapear. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>bounds</entry>
+                                <entry>
+<para>* sf::FloatRect la posicion y tamaño del destuctible </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+</section>

@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d4/d50/classant_1_1_observer">
+<title>ant::Observer class Reference</title>
+<para>
+    <programlisting>#include <link linkend="da/dc7/_observer_8hpp">&lt;Observer.hpp&gt;</link></programlisting>
+</para>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d4/d50/classant_1_1_observer_1ae4bf1823b64695b67dd10d3f904b17e6">Observer</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual void <link linkend="d4/d50/classant_1_1_observer_1a4f03efedb538d91297ebd7341bc4698c">onNotify</link> (
+std::shared_ptr&lt; <link linkend="d3/dce/classant_1_1base_event">baseEvent</link> &gt; e)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual <link linkend="d4/d50/classant_1_1_observer_1abef4b9fc977925a695df63520c5cc134">~Observer</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Brief Description</title>
+
+<para>Interfaz para los observadores. </para>
+    </simplesect>
+        <simplesect>
+            <title>Detailed Description</title>
+
+<para><formalpara><title>Author: </title>
+
+<para>Cristian Glez <link xlink:href="mailto:Cristian.glez.m@gmail.com">Cristian.glez.m@gmail.com</link> </para>
+</formalpara>
+<formalpara><title>Version: </title>
+
+<para>0.1 </para>
+</formalpara>
+</para>
+                <para>Definition at line 11 of file Observer.hpp</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>Observer.hpp</para></listitem></itemizedlist></para>
+        </simplesect>
+            <section xml:id="d4/d50/classant_1_1_observer_1ae4bf1823b64695b67dd10d3f904b17e6">
+                <title>ant::Observer::Observer ()</title> <emphasis>Constructor principal.</emphasis>
+                
+            </section>
+            <section xml:id="d4/d50/classant_1_1_observer_1a4f03efedb538d91297ebd7341bc4698c">
+                <title>virtual void ant::Observer::onNotify (std::shared_ptr&lt; baseEvent &gt; e)=0</title> <emphasis>Metodo para notificar al observador del evento.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>e</entry>
+                                <entry>
+<para>std::shared_ptr&lt;baseEvent&gt; evento. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="d4/d50/classant_1_1_observer_1abef4b9fc977925a695df63520c5cc134">
+                <title>virtual ant::Observer::~Observer ()</title> <emphasis></emphasis>
+                
+            </section>
+</section>

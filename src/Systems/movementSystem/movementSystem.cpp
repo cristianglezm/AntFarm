@@ -7,7 +7,6 @@ namespace ant{
     }
     void movementSystem::onNotify(std::shared_ptr<baseEvent> e){
         switch(e->getType()){
-            /// @todo Añadir evento Nominal. para aplicar fuerza del suelo.
             case EventType::COLLISION_EVENT:{
                     auto& attributes = e->getAttributes<Entity*,Entity*>();
                     // obtenemos los atributos del evento.
@@ -51,7 +50,7 @@ namespace ant{
                             break;
                         case 2:
                             // subir escaleras
-                            position.y -=12;
+                            position.y -=5;
                             break;
                         case 3:
                             if(rotation == 180){

@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d8/dba/render_system_8hpp">
+    <title>renderSystem.hpp File Reference</title>
+    <programlisting>#include &lt;SFML/Graphics/RenderWindow.hpp&gt;</programlisting>
+    <programlisting>#include &lt;SFML/Graphics/Sprite.hpp&gt;</programlisting>
+    <programlisting>#include &lt;SFML/System/Vector2.hpp&gt;</programlisting>
+    <programlisting>#include &lt;SFML/Graphics/VertexArray.hpp&gt;</programlisting>
+    <programlisting>#include &lt;Systems/System.hpp&gt;</programlisting>
+    <programlisting>#include &lt;Components/ComponentMask.hpp&gt;</programlisting>
+        <simplesect>
+            <title> Classes </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d1/def/classant_1_1render_system">ant::renderSystem</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="dc/d6c/namespaceant">ant</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file F:/Development/Cpp/AntFarm/include/Systems/renderSystem/renderSystem.hpp</para>
+    </simplesect>
+</section>

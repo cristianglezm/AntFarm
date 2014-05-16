@@ -1,0 +1,538 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d1/dd6/classant_1_1_asset_manager">
+<title>ant::AssetManager class Reference</title>
+<para>
+    <programlisting>#include <link linkend="d2/d03/_asset_manager_8hpp">&lt;AssetManager.hpp&gt;</link></programlisting>
+</para>
+        <simplesect>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::map&lt; std::string, std::unique_ptr&lt; sf::Texture &gt; &gt; textures</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::map&lt; std::string, std::unique_ptr&lt; sf::Image &gt; &gt; images</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::map&lt; std::string, std::unique_ptr&lt; sf::Font &gt; &gt; fonts</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d1/dd6/classant_1_1_asset_manager_1af830d626232696a9e2a7a652eccf3b0c">AssetManager</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="d1/dd6/classant_1_1_asset_manager_1ab67aa137cc51b1052553b35e2e8b0bcd">loadAssets</link> (
+const std::string &amp; filename)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d1/dd6/classant_1_1_asset_manager_1a5e98981fab8e9703cfd75c0d923dbb84">addTexture</link> (
+const std::string &amp; id, const std::string &amp; filename)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>sf::Texture &amp; <link linkend="d1/dd6/classant_1_1_asset_manager_1af7c1b25b5e17578a713f31f1a5741aaf">getTexture</link> (
+const std::string &amp; id)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="d1/dd6/classant_1_1_asset_manager_1acf71f3875207d4c7889cb483ff2ff51c">hasTexture</link> (
+const std::string &amp; id)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d1/dd6/classant_1_1_asset_manager_1a5080300347c76dc214cd9caf0099bb6d">removeTexture</link> (
+const std::string &amp; id)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d1/dd6/classant_1_1_asset_manager_1ac318001e95d732e606cd13836869f9ae">addImage</link> (
+const std::string &amp; id, const std::string &amp; filename)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>sf::Image &amp; <link linkend="d1/dd6/classant_1_1_asset_manager_1a4aa15ba7980601b27311fec219f716d2">getImage</link> (
+const std::string &amp; id)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="d1/dd6/classant_1_1_asset_manager_1a8d378530c1851a57c13f752eb65ce3ef">hasImage</link> (
+const std::string &amp; id)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d1/dd6/classant_1_1_asset_manager_1a6f259566fc52eae59feb4ca13049b847">removeImage</link> (
+const std::string &amp; id)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d1/dd6/classant_1_1_asset_manager_1a9a0d0fb10509492ef206e985d2a75636">addFont</link> (
+const std::string &amp; id, const std::string &amp; filename)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>sf::Font &amp; <link linkend="d1/dd6/classant_1_1_asset_manager_1ab965eb047ba3eaae7f5c47ac70322078">getFont</link> (
+const std::string &amp; id)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="d1/dd6/classant_1_1_asset_manager_1a20ddcc5d8b6b1e5afe7d95743aa2faed">hasFont</link> (
+const std::string &amp; id)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d1/dd6/classant_1_1_asset_manager_1a7087f904f7989932dd1ce4dfafb2da23">removeFont</link> (
+const std::string &amp; id)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="d1/dd6/classant_1_1_asset_manager_1a6a36b05367c9a654e50eb20a58fde86b">clear</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d1/dd6/classant_1_1_asset_manager_1a5289bfb08ea879238fa642632a533447">~AssetManager</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Brief Description</title>
+
+<para>Clase para tener todos los assets(imagenes,texturas,etc) del juego. </para>
+    </simplesect>
+        <simplesect>
+            <title>Detailed Description</title>
+
+<para><formalpara><title>Author: </title>
+
+<para>Cristian Glez <link xlink:href="mailto:Cristian.glez.m@gmail.com">Cristian.glez.m@gmail.com</link> </para>
+</formalpara>
+<formalpara><title>Version: </title>
+
+<para>0.1 </para>
+</formalpara>
+</para>
+                <para>Definition at line 20 of file AssetManager.hpp</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>AssetManager.hpp</para></listitem></itemizedlist></para>
+        </simplesect>
+            <section xml:id="d1/dd6/classant_1_1_asset_manager_1af830d626232696a9e2a7a652eccf3b0c">
+                <title>ant::AssetManager::AssetManager ()</title> <emphasis>Constructor principal sin argumentos.</emphasis>
+                
+            </section>
+            <section xml:id="d1/dd6/classant_1_1_asset_manager_1ab67aa137cc51b1052553b35e2e8b0bcd">
+                <title>bool ant::AssetManager::loadAssets (const std::string &amp;filename)</title> <emphasis>Carga un fichero json con el siguiente formato:</emphasis>
+                
+<para><programlisting>{
+&#32;&#32;&#32;&#32;&#32;<emphasis>&quot;textures&quot;</emphasis>:[&#32;{<emphasis>&quot;id&quot;</emphasis>:<emphasis>&quot;TEXTURE_ID&quot;</emphasis>,<emphasis>&quot;filepath&quot;</emphasis>:<emphasis>&quot;data/entities/Example.png&quot;</emphasis>},
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;],
+&#32;&#32;&#32;&#32;&#32;<emphasis>&quot;images&quot;</emphasis>:[&#32;{<emphasis>&quot;id&quot;</emphasis>:<emphasis>&quot;IMAGE_ID&quot;</emphasis>,<emphasis>&quot;filepath&quot;</emphasis>:<emphasis>&quot;data/entities/Example.png&quot;</emphasis>},
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;],
+}
+</programlisting> 
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>filename</entry>
+                                <entry>
+<para>std::string fichero a cargar. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Returns: </title>
+
+<para>true si ha cargado los datos correctamente, false si hay algun problema. </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="d1/dd6/classant_1_1_asset_manager_1a5e98981fab8e9703cfd75c0d923dbb84">
+                <title>void ant::AssetManager::addTexture (const std::string &amp;id, const std::string &amp;filename)</title> <emphasis>Añade una textura con el id proporcionado.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>id</entry>
+                                <entry>
+<para>std::string Id de la textura cargada. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>filename</entry>
+                                <entry>
+<para>std::string Textura a cargar. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="d1/dd6/classant_1_1_asset_manager_1af7c1b25b5e17578a713f31f1a5741aaf">
+                <title>sf::Texture &amp; ant::AssetManager::getTexture (const std::string &amp;id)</title> <emphasis>Devuelve una referencia a la textura, si no existe,
+       tira excepcion de fuera de rango.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>id</entry>
+                                <entry>
+<para>std::string id de la textura. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Returns: </title>
+
+<para>sf::Texture&amp; referencia de la textura. </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="d1/dd6/classant_1_1_asset_manager_1acf71f3875207d4c7889cb483ff2ff51c">
+                <title>bool ant::AssetManager::hasTexture (const std::string &amp;id)</title> <emphasis>Comprueba si tiene la textura.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>id</entry>
+                                <entry>
+<para>const std::string &amp; id de la textura. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="d1/dd6/classant_1_1_asset_manager_1a5080300347c76dc214cd9caf0099bb6d">
+                <title>void ant::AssetManager::removeTexture (const std::string &amp;id)</title> <emphasis>Elimina la textura.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>id</entry>
+                                <entry>
+<para>std::string id de la textura a eliminar. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="d1/dd6/classant_1_1_asset_manager_1ac318001e95d732e606cd13836869f9ae">
+                <title>void ant::AssetManager::addImage (const std::string &amp;id, const std::string &amp;filename)</title> <emphasis>Añade una imagen con el id especificado.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>id</entry>
+                                <entry>
+<para>std::string id de la imagen. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>filename</entry>
+                                <entry>
+<para>std::string imagen a cargar. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="d1/dd6/classant_1_1_asset_manager_1a4aa15ba7980601b27311fec219f716d2">
+                <title>sf::Image &amp; ant::AssetManager::getImage (const std::string &amp;id)</title> <emphasis>Devuelve una referencia a la imagen, si no existe
+       tira excepcion.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>id</entry>
+                                <entry>
+<para>std::string id de la imagen. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Returns: </title>
+
+<para>sf::Image&amp; referencia a imagen. </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="d1/dd6/classant_1_1_asset_manager_1a8d378530c1851a57c13f752eb65ce3ef">
+                <title>bool ant::AssetManager::hasImage (const std::string &amp;id)</title> <emphasis>Comprueba si tiene la imagen.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>id</entry>
+                                <entry>
+<para>std::string &amp; id de la imagen. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="d1/dd6/classant_1_1_asset_manager_1a6f259566fc52eae59feb4ca13049b847">
+                <title>void ant::AssetManager::removeImage (const std::string &amp;id)</title> <emphasis>Elimina la imagen por el id especificado.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>id</entry>
+                                <entry>
+<para>std::string id de la imagen a eliminar. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="d1/dd6/classant_1_1_asset_manager_1a9a0d0fb10509492ef206e985d2a75636">
+                <title>void ant::AssetManager::addFont (const std::string &amp;id, const std::string &amp;filename)</title> <emphasis>Añade un tipo de letra.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>id</entry>
+                                <entry>
+<para>std::string </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>filename</entry>
+                                <entry>
+<para>std::string </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="d1/dd6/classant_1_1_asset_manager_1ab965eb047ba3eaae7f5c47ac70322078">
+                <title>sf::Font &amp; ant::AssetManager::getFont (const std::string &amp;id)</title> <emphasis>Devuelve el tipo de letra.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>id</entry>
+                                <entry>
+<para>std::string </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="d1/dd6/classant_1_1_asset_manager_1a20ddcc5d8b6b1e5afe7d95743aa2faed">
+                <title>bool ant::AssetManager::hasFont (const std::string &amp;id)</title> <emphasis>Comprueba si tiene la fuente especificada.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>id</entry>
+                                <entry>
+<para>const std::string &amp; id de la fuente </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="d1/dd6/classant_1_1_asset_manager_1a7087f904f7989932dd1ce4dfafb2da23">
+                <title>void ant::AssetManager::removeFont (const std::string &amp;id)</title> <emphasis>Elimina un tipo de letra.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>id</entry>
+                                <entry>
+<para>std::string </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="d1/dd6/classant_1_1_asset_manager_1a6a36b05367c9a654e50eb20a58fde86b">
+                <title>bool ant::AssetManager::clear ()</title> <emphasis>Descarga todos los recursos cargados.</emphasis>
+                
+<para><formalpara><title>Returns: </title>
+
+<para>true si los descargo correctamente, false si no. </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="d1/dd6/classant_1_1_asset_manager_1a5289bfb08ea879238fa642632a533447">
+                <title>ant::AssetManager::~AssetManager ()</title> <emphasis></emphasis>
+                
+            </section>
+</section>

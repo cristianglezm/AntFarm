@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="db/dbc/namespaceant_1_1_utils">
+<title>ant::Utils</title>
+        <simplesect>
+            <title> Classes </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d6/d94/classant_1_1_utils_1_1_quadtree">ant::Utils::Quadtree</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title>Variables</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>constexpr double <link linkend="db/dbc/namespaceant_1_1_utils_1ae9b5ccdeb3ee02a6f4f26c1e2a6f02be">PI</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>T <link linkend="db/dbc/namespaceant_1_1_utils_1a5238d91325cffcd5d052d055767bfc36">toRadians</link> (
+T degrees)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>T <link linkend="db/dbc/namespaceant_1_1_utils_1a2292728caa47103c8150e5f50d7e5bd0">toDegrees</link> (
+T radians)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>sf::FloatRect <link linkend="db/dbc/namespaceant_1_1_utils_1af4038d2832c96f2ce257570054bf1cae">rotateRect</link> (
+const sf::FloatRect &amp; rect, const float &amp; angle)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>T <link linkend="db/dbc/namespaceant_1_1_utils_1a9d231f01f719cafba70be1e924e4689d">getAngle</link> (
+const sf::Vector2&lt; T &gt; &amp; v)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>sf::Vector2f <link linkend="db/dbc/namespaceant_1_1_utils_1a412fa3ff3e1fd4c0ac6caca589e38a15">normalize</link> (
+const sf::Vector2f &amp; v)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="db/dbc/namespaceant_1_1_utils_1af61797490f8c8a4d152b5669095886e1">dot</link> (
+const sf::Vector2&lt; T &gt; &amp; v1, const sf::Vector2&lt; T &gt; &amp; v2)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="db/dbc/namespaceant_1_1_utils_1a95b128173f4556c262ec4e9d3df2cbfa">RectContains</link> (
+const sf::FloatRect &amp; e, const sf::FloatRect &amp; bounds)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float <link linkend="db/dbc/namespaceant_1_1_utils_1af65f1f5f416379049a8406f62775b798">getDirection</link> (
+const sf::Vector2f &amp; currentPosition, const sf::Vector2f &amp; wantedPosition)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::string <link linkend="db/dbc/namespaceant_1_1_utils_1a1b61d8737e7d43b9c1c2a99360542f50">toString</link> (
+T s)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::unique_ptr&lt; T &gt; <link linkend="db/dbc/namespaceant_1_1_utils_1aa7e961d002a27860ac8d502d9f214865">makeUniquePtr</link> (
+Args &amp;&amp;... args)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::shared_ptr&lt; T &gt; <link linkend="db/dbc/namespaceant_1_1_utils_1af110086ca94443bd1aa42f01008db7cb">makeSharedPtr</link> (
+Args &amp;&amp;... args)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+</section>

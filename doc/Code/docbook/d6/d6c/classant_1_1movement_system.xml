@@ -1,0 +1,359 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d6/d6c/classant_1_1movement_system">
+<title>ant::movementSystem class Reference</title>
+<para>
+    <programlisting>#include <link linkend="dd/db6/movement_system_8hpp">&lt;movementSystem.hpp&gt;</link></programlisting>
+</para>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d6/d6c/classant_1_1movement_system_1a39790555e3f9d2722f48e9e272dbe5ec">movementSystem</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual void <link linkend="d6/d6c/classant_1_1movement_system_1a23af25667217b499e894d87e1097a52b">render</link> (
+sf::RenderWindow &amp; win)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual void <link linkend="d6/d6c/classant_1_1movement_system_1af7017a1d594b18a8a8d3bf925cd00881">update</link> (
+sf::Time dt)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d6/d6c/classant_1_1movement_system_1ab950deb32094a7c4e2ee2663c72b7ed7">onNotify</link> (
+std::shared_ptr&lt; <link linkend="d3/dce/classant_1_1base_event">baseEvent</link> &gt; e)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d6/d6c/classant_1_1movement_system_1a97b7c0733a6430c5bb26246803e02c8a">~movementSystem</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="de/d48/classant_1_1_system_1a35662ff3739ff4290df1106bfdccfaca">setRequiredComponents</link> (
+long int req)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>long int <link linkend="de/d48/classant_1_1_system_1a2d94338969f43d4fd2fd972deb099258">getRequiredComponts</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="de/d48/classant_1_1_system_1a1effe9f0e5615e516a34be02d5895434">setEventQueue</link> (
+std::shared_ptr&lt; <link linkend="db/dec/classant_1_1_event_queue">EventQueue</link> &gt; eq)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::shared_ptr&lt; <link linkend="db/dec/classant_1_1_event_queue">EventQueue</link> &gt; <link linkend="de/d48/classant_1_1_system_1ac3e2bbbdb622276d194ad3a687d8e4f1">getEventQueue</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="de/d48/classant_1_1_system_1a231f9fc93b55ee67deb9597ae6be13ba">setName</link> (
+std::string name)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::string <link linkend="de/d48/classant_1_1_system_1a52a559b2c3ddbec5c846df1badd7f7f8">getName</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="de/d48/classant_1_1_system_1a1f983382d142ea697f1811f7f6f6ab17">setEntityManager</link> (
+std::shared_ptr&lt; <link linkend="dd/d12/classant_1_1_entity_manager">EntityManager</link> &gt; em)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::shared_ptr&lt; <link linkend="dd/d12/classant_1_1_entity_manager">EntityManager</link> &gt; <link linkend="de/d48/classant_1_1_system_1adaad2087de7fc71924cfb5b134014b0a">getEntityManager</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title>Protected Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>long int RequiredComponents</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::shared_ptr&lt; EventQueue &gt; eventQueue</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::shared_ptr&lt; EntityManager &gt; em</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::string name</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Brief Description</title>
+
+<para>Sistema encargado de hacer que las entidades se muevan. </para>
+    </simplesect>
+        <simplesect>
+            <title>Detailed Description</title>
+
+<para>Las entidades se moveran si tienen el componente Velocity y Transform. Se moveran segun la rotacion que tengan y la velocidad actual. Maneja a las entidades segun los eventos que reciba del sistema de colision. <formalpara><title>Eventos que maneja:</title></formalpara>
+</para>
+
+<para><orderedlist>
+<listitem>
+<para>TERRAIN_COLLISION: cambiara la rotacion de las entidades</para>
+</listitem><listitem>
+<para>COLLISION_EVENT: ~ <formalpara><title>Author: </title>
+
+<para>Cristian Glez <link xlink:href="mailto:Cristian.glez.m@gmail.com">Cristian.glez.m@gmail.com</link> </para>
+</formalpara>
+<formalpara><title>Version: </title>
+
+<para>0.1 </para>
+</formalpara>
+</para>
+</listitem></orderedlist>
+</para>
+                <para>Definition at line 22 of file movementSystem.hpp</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>movementSystem.hpp</para></listitem></itemizedlist></para>
+        </simplesect>
+            <section xml:id="d6/d6c/classant_1_1movement_system_1a39790555e3f9d2722f48e9e272dbe5ec">
+                <title>ant::movementSystem::movementSystem ()</title> <emphasis>Constructor por defecto.</emphasis>
+                
+            </section>
+            <section xml:id="d6/d6c/classant_1_1movement_system_1a23af25667217b499e894d87e1097a52b">
+                <title>void ant::movementSystem::render (sf::RenderWindow &amp;win)</title> <emphasis>No hace nada.</emphasis>
+                
+            </section>
+            <section xml:id="d6/d6c/classant_1_1movement_system_1af7017a1d594b18a8a8d3bf925cd00881">
+                <title>void ant::movementSystem::update (sf::Time dt)</title> <emphasis>Aplica la velocidad a todas las entidades con los componentes necesarios.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>dt</entry>
+                                <entry>
+<para>sf::Time delta time necesario para que se muevan siempre igual sin tener en cuenta los fps. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="d6/d6c/classant_1_1movement_system_1ab950deb32094a7c4e2ee2663c72b7ed7">
+                <title>void ant::movementSystem::onNotify (std::shared_ptr&lt; baseEvent &gt; e)</title> <emphasis>Cuando recibe Eventos COLLISION_EVENT parara a las entidades si se mueven.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>e</entry>
+                                <entry>
+<para>std::shared_ptr&lt;baseEvent&gt; evento. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="d6/d6c/classant_1_1movement_system_1a97b7c0733a6430c5bb26246803e02c8a">
+                <title>ant::movementSystem::~movementSystem ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="de/d48/classant_1_1_system_1a35662ff3739ff4290df1106bfdccfaca">
+                <title>void ant::System::setRequiredComponents (long int req)</title> <emphasis>Setter para los requisitos necesarios.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>req</entry>
+                                <entry>
+<para>long int </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="de/d48/classant_1_1_system_1a2d94338969f43d4fd2fd972deb099258">
+                <title>long int ant::System::getRequiredComponts ()</title> <emphasis>Getter de los requisitos para el sistema.</emphasis>
+                
+            </section>
+            <section xml:id="de/d48/classant_1_1_system_1a1effe9f0e5615e516a34be02d5895434">
+                <title>void ant::System::setEventQueue (std::shared_ptr&lt; EventQueue &gt; eq)</title> <emphasis>Setter para la EventQueue.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>eq</entry>
+                                <entry>
+<para>std::shared_ptr&lt;EventQueue&gt; </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="de/d48/classant_1_1_system_1ac3e2bbbdb622276d194ad3a687d8e4f1">
+                <title>std::shared_ptr&lt;EventQueue&gt; ant::System::getEventQueue ()</title> <emphasis>Getter para la EventQueue.</emphasis>
+                
+<para><formalpara><title>Returns: </title>
+
+<para>std::shared_ptr&lt;EventQueue&gt; </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="de/d48/classant_1_1_system_1a231f9fc93b55ee67deb9597ae6be13ba">
+                <title>void ant::System::setName (std::string name)</title> <emphasis>Setter Para el nombre del sistema.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>name</entry>
+                                <entry>
+<para>std::string </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="de/d48/classant_1_1_system_1a52a559b2c3ddbec5c846df1badd7f7f8">
+                <title>std::string ant::System::getName () const </title> <emphasis>Getter para el nombre del sistema.</emphasis>
+                
+<para><formalpara><title>Returns: </title>
+
+<para>std::string </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="de/d48/classant_1_1_system_1a1f983382d142ea697f1811f7f6f6ab17">
+                <title>void ant::System::setEntityManager (std::shared_ptr&lt; EntityManager &gt; em)</title> <emphasis>Setter para el EntityManager.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>em</entry>
+                                <entry>
+<para>std::shared_ptr&lt;EntityManager&gt; </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="de/d48/classant_1_1_system_1adaad2087de7fc71924cfb5b134014b0a">
+                <title>std::shared_ptr&lt;EntityManager&gt; ant::System::getEntityManager ()</title> <emphasis>Getter para el EntityManager.</emphasis>
+                
+<para><formalpara><title>Returns: </title>
+
+<para>std::shared_ptr&lt;EntityManager&gt; </para>
+</formalpara>
+</para>
+
+            </section>
+</section>

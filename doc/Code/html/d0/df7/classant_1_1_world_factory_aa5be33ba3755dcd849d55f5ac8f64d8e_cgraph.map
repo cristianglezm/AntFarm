@@ -1,0 +1,5 @@
+<map id="ant::WorldFactory::create" name="ant::WorldFactory::create">
+<area shape="rect" id="node2" href="$d0/df7/classant_1_1_world_factory.html#a42d36e353537dad2ab9069d8ce8bb99d" title="Obtiene el AssetManager que usa. " alt="" coords="202,5,337,47"/>
+<area shape="rect" id="node3" href="$de/df0/classant_1_1_component_settings.html#accaca2bae161ce60c84d78817a3864bc" title="Carga la configuracion de la entidad. " alt="" coords="188,71,351,112"/>
+<area shape="rect" id="node4" href="$de/df0/classant_1_1_component_settings.html#a63c2383733a1a7b51029f055791c5569" title="Establece la Velocidad. " alt="" coords="399,71,561,112"/>
+</map>

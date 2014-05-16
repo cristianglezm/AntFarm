@@ -1,0 +1,17 @@
+<map id="constructorSystem.hpp" name="constructorSystem.hpp">
+<area shape="rect" id="node2" href="$d6/def/_system_8hpp.html" title="Systems/System.hpp" alt="" coords="476,80,624,107"/>
+<area shape="rect" id="node19" href="$da/dc7/_observer_8hpp.html" title="Observer/Observer.hpp" alt="" coords="464,251,617,278"/>
+<area shape="rect" id="node20" href="$d7/d5b/_component_mask_8hpp.html" title="Components/ComponentMask.hpp" alt="" coords="871,251,1093,278"/>
+<area shape="rect" id="node21" href="$df/dfa/_entity_factory_8hpp.html" title="EntityFactory/EntityFactory.hpp" alt="" coords="1028,80,1235,107"/>
+<area shape="rect" id="node36" href="$de/d5f/_event_type_8hpp.html" title="Event/EventType.hpp" alt="" coords="1495,80,1637,107"/>
+<area shape="rect" id="node37" href="$d7/db8/_states_8hpp.html" title="States/States.hpp" alt="" coords="1661,80,1788,107"/>
+<area shape="rect" id="node6" href="$d7/d11/_event_queue_8hpp.html" title="EventQueue/EventQueue.hpp" alt="" coords="31,251,221,278"/>
+<area shape="rect" id="node10" href="$da/d7b/_entity_manager_8hpp.html" title="EntityManager/EntityManager.hpp" alt="" coords="193,162,411,189"/>
+<area shape="rect" id="node8" href="$d6/dc3/_event_8hpp.html" title="Event/Event.hpp" alt="" coords="389,333,503,360"/>
+<area shape="rect" id="node13" href="$d2/db6/_entity_8hpp.html" title="Entity/Entity.hpp" alt="" coords="728,251,847,278"/>
+<area shape="rect" id="node16" href="$da/d5c/_component_8hpp.html" title="Components/Component.hpp" alt="" coords="725,333,916,360"/>
+<area shape="rect" id="node22" href="$de/dd4/_component_factory_8hpp.html" title="ComponentFactory/Component\lFactory.hpp" alt="" coords="1121,155,1323,196"/>
+<area shape="rect" id="node31" href="$df/db3/_component_settings_8hpp.html" title="ComponentSettings/Component\lSettings.hpp" alt="" coords="1869,244,2076,285"/>
+<area shape="rect" id="node34" href="$d8/dd2/_config_8hpp.html" title="Config.hpp" alt="" coords="1755,251,1838,278"/>
+<area shape="rect" id="node25" href="$d2/d03/_asset_manager_8hpp.html" title="AssetManager/AssetManager.hpp" alt="" coords="1406,251,1625,278"/>
+</map>

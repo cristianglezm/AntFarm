@@ -1,0 +1,235 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="de/df0/classant_1_1_component_settings">
+<title>ant::ComponentSettings class Reference</title>
+<para>
+    <programlisting>#include <link linkend="df/db3/_component_settings_8hpp">&lt;ComponentSettings.hpp&gt;</link></programlisting>
+</para>
+        <simplesect>
+            <title>Public Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::string entityName</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float minSpeed</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float maxSpeed</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>sf::Vector2f scale</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>sf::Vector2f position</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float rotation</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::string spriteID</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::vector&lt; std::string &gt; animation</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>sf::Vector2f dest</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>sf::Vector2f DestructiblePosition</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::string imageID</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>sf::FloatRect bounds</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int count</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float Speed</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="de/df0/classant_1_1_component_settings_1a656fd2e5c9c2385ccc54aa73387c7c3a">ComponentSettings</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="de/df0/classant_1_1_component_settings_1accaca2bae161ce60c84d78817a3864bc">loadSettings</link> (
+const std::string &amp; filename)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="de/df0/classant_1_1_component_settings_1a63c2383733a1a7b51029f055791c5569">setSpeed</link> (
+float speed)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float <link linkend="de/df0/classant_1_1_component_settings_1a97dbdc0fd21ce4904c8caaac774d9b93">getSpeed</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="de/df0/classant_1_1_component_settings_1aaf467fb092f589167d639172608931f9">~ComponentSettings</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Brief Description</title>
+
+<para>Clase para la configuracion de los componentes en <link linkend="db/d10/classant_1_1_entity_factory">EntityFactory</link>. </para>
+    </simplesect>
+        <simplesect>
+            <title>Detailed Description</title>
+
+<para><formalpara><title>Author: </title>
+
+<para>Cristian Glez <link xlink:href="mailto:Cristian.glez.m@gmail.com">Cristian.glez.m@gmail.com</link> </para>
+</formalpara>
+<formalpara><title>Version: </title>
+
+<para>0.1 </para>
+</formalpara>
+</para>
+                <para>Definition at line 14 of file ComponentSettings.hpp</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>ComponentSettings.hpp</para></listitem></itemizedlist></para>
+        </simplesect>
+            <section xml:id="de/df0/classant_1_1_component_settings_1a656fd2e5c9c2385ccc54aa73387c7c3a">
+                <title>ant::ComponentSettings::ComponentSettings ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="de/df0/classant_1_1_component_settings_1accaca2bae161ce60c84d78817a3864bc">
+                <title>void ant::ComponentSettings::loadSettings (const std::string &amp;filename)</title> <emphasis>Carga la configuracion de la entidad.</emphasis>
+                
+<para>Carga un fichero json con las propiedades de los componentes las propiedades que no encuentre las pondra por defecto.</para>
+
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>filename</entry>
+                                <entry>
+<para>std::string nombre del fichero(json) a cargar. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="de/df0/classant_1_1_component_settings_1a63c2383733a1a7b51029f055791c5569">
+                <title>void ant::ComponentSettings::setSpeed (float speed)</title> <emphasis>Establece la Velocidad.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>speed</entry>
+                                <entry>
+<para>float velocidad </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="de/df0/classant_1_1_component_settings_1a97dbdc0fd21ce4904c8caaac774d9b93">
+                <title>float ant::ComponentSettings::getSpeed ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="de/df0/classant_1_1_component_settings_1aaf467fb092f589167d639172608931f9">
+                <title>ant::ComponentSettings::~ComponentSettings ()</title> <emphasis></emphasis>
+                
+            </section>
+</section>

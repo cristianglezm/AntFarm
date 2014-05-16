@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="da/d7a/_quadtree_8hpp">
+    <title>Quadtree.hpp File Reference</title>
+    <programlisting>#include &lt;array&gt;</programlisting>
+    <programlisting>#include &lt;memory&gt;</programlisting>
+    <programlisting>#include &lt;list&gt;</programlisting>
+    <programlisting>#include &lt;Entity/Entity.hpp&gt;</programlisting>
+    <programlisting>#include &lt;SFML/Graphics/Rect.hpp&gt;</programlisting>
+    <programlisting>#include &lt;SFML/Graphics/RenderWindow.hpp&gt;</programlisting>
+    <programlisting>#include &lt;SFML/Graphics/RectangleShape.hpp&gt;</programlisting>
+    <programlisting>#include &lt;SFML/Graphics/Color.hpp&gt;</programlisting>
+        <simplesect>
+            <title> Classes </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d6/d94/classant_1_1_utils_1_1_quadtree">ant::Utils::Quadtree</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="dc/d6c/namespaceant">ant</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="db/dbc/namespaceant_1_1_utils">ant::Utils</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file F:/Development/Cpp/AntFarm/include/Utils/Quadtree.hpp</para>
+    </simplesect>
+</section>

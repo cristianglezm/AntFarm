@@ -130,8 +130,17 @@ Functions</h2></td></tr>
 <tr class="separator:a2292728caa47103c8150e5f50d7e5bd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af4038d2832c96f2ce257570054bf1cae"><td class="memItemLeft" align="right" valign="top">sf::FloatRect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dbc/namespaceant_1_1_utils.html#af4038d2832c96f2ce257570054bf1cae">rotateRect</a> (const sf::FloatRect &amp;rect, const float &amp;angle)</td></tr>
 <tr class="separator:af4038d2832c96f2ce257570054bf1cae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d231f01f719cafba70be1e924e4689d"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a9d231f01f719cafba70be1e924e4689d"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../db/dbc/namespaceant_1_1_utils.html#a9d231f01f719cafba70be1e924e4689d">getAngle</a> (const sf::Vector2&lt; T &gt; &amp;v)</td></tr>
+<tr class="separator:a9d231f01f719cafba70be1e924e4689d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a412fa3ff3e1fd4c0ac6caca589e38a15"><td class="memItemLeft" align="right" valign="top">sf::Vector2f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dbc/namespaceant_1_1_utils.html#a412fa3ff3e1fd4c0ac6caca589e38a15">normalize</a> (const sf::Vector2f &amp;v)</td></tr>
 <tr class="separator:a412fa3ff3e1fd4c0ac6caca589e38a15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af61797490f8c8a4d152b5669095886e1"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:af61797490f8c8a4d152b5669095886e1"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../db/dbc/namespaceant_1_1_utils.html#af61797490f8c8a4d152b5669095886e1">dot</a> (const sf::Vector2&lt; T &gt; &amp;v1, const sf::Vector2&lt; T &gt; &amp;v2)</td></tr>
+<tr class="separator:af61797490f8c8a4d152b5669095886e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95b128173f4556c262ec4e9d3df2cbfa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dbc/namespaceant_1_1_utils.html#a95b128173f4556c262ec4e9d3df2cbfa">RectContains</a> (const sf::FloatRect &amp;e, const sf::FloatRect &amp;bounds)</td></tr>
+<tr class="memdesc:a95b128173f4556c262ec4e9d3df2cbfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Comprueba que un rectangulo esta completamente dentro de otro.  <a href="#a95b128173f4556c262ec4e9d3df2cbfa">More...</a><br/></td></tr>
+<tr class="separator:a95b128173f4556c262ec4e9d3df2cbfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af65f1f5f416379049a8406f62775b798"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dbc/namespaceant_1_1_utils.html#af65f1f5f416379049a8406f62775b798">getDirection</a> (const sf::Vector2f &amp;currentPosition, const sf::Vector2f &amp;wantedPosition)</td></tr>
 <tr class="separator:af65f1f5f416379049a8406f62775b798"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b61d8737e7d43b9c1c2a99360542f50"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
@@ -154,6 +163,65 @@ Variables</h2></td></tr>
 <tr class="separator:ae9b5ccdeb3ee02a6f4f26c1e2a6f02be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="af61797490f8c8a4d152b5669095886e1"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">int ant::Utils::dot </td>
+          <td>(</td>
+          <td class="paramtype">const sf::Vector2&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>v1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const sf::Vector2&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>v2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="../../dc/dba/_math_8hpp_source.html#l00074">74</a> of file <a class="el" href="../../dc/dba/_math_8hpp_source.html">Math.hpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../db/dbc/namespaceant_1_1_utils_af61797490f8c8a4d152b5669095886e1_cgraph.png" border="0" usemap="#db/dbc/namespaceant_1_1_utils_af61797490f8c8a4d152b5669095886e1_cgraph" alt=""/></div>
+<map name="db/dbc/namespaceant_1_1_utils_af61797490f8c8a4d152b5669095886e1_cgraph" id="db/dbc/namespaceant_1_1_utils_af61797490f8c8a4d152b5669095886e1_cgraph">
+<area shape="rect" id="node2" href="../../db/dbc/namespaceant_1_1_utils.html#a412fa3ff3e1fd4c0ac6caca589e38a15" title="ant::Utils::normalize" alt="" coords="153,5,292,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a9d231f01f719cafba70be1e924e4689d"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">T ant::Utils::getAngle </td>
+          <td>(</td>
+          <td class="paramtype">const sf::Vector2&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="../../dc/dba/_math_8hpp_source.html#l00051">51</a> of file <a class="el" href="../../dc/dba/_math_8hpp_source.html">Math.hpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="af65f1f5f416379049a8406f62775b798"></a>
 <div class="memitem">
 <div class="memproto">
@@ -177,6 +245,17 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="../../d1/df6/_math_8cpp_source.html#l00033">33</a> of file <a class="el" href="../../d1/df6/_math_8cpp_source.html">Math.cpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../db/dbc/namespaceant_1_1_utils_af65f1f5f416379049a8406f62775b798_cgraph.png" border="0" usemap="#db/dbc/namespaceant_1_1_utils_af65f1f5f416379049a8406f62775b798_cgraph" alt=""/></div>
+<map name="db/dbc/namespaceant_1_1_utils_af65f1f5f416379049a8406f62775b798_cgraph" id="db/dbc/namespaceant_1_1_utils_af65f1f5f416379049a8406f62775b798_cgraph">
+<area shape="rect" id="node2" href="../../db/dbc/namespaceant_1_1_utils.html#a412fa3ff3e1fd4c0ac6caca589e38a15" title="ant::Utils::normalize" alt="" coords="204,5,343,32"/></map>
+</div>
+</p>
 
 </div>
 </div>
@@ -206,6 +285,8 @@ template&lt;typename T , typename... Args&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>std::shared_ptr&lt;T&lt;Args&gt;&gt; </dd></dl>
 
+<p>Definition at line <a class="el" href="../../d4/d2c/_utility_8hpp_source.html#l00023">23</a> of file <a class="el" href="../../d4/d2c/_utility_8hpp_source.html">Utility.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="aa7e961d002a27860ac8d502d9f214865"></a>
@@ -234,6 +315,8 @@ template&lt;typename T , typename... Args&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>std::unique_ptr&lt;T&lt;Args&gt;&gt; </dd></dl>
 
+<p>Definition at line <a class="el" href="../../d4/d2c/_utility_8hpp_source.html#l00013">13</a> of file <a class="el" href="../../d4/d2c/_utility_8hpp_source.html">Utility.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a412fa3ff3e1fd4c0ac6caca589e38a15"></a>
@@ -249,6 +332,64 @@ template&lt;typename T , typename... Args&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="../../d1/df6/_math_8cpp_source.html#l00018">18</a> of file <a class="el" href="../../d1/df6/_math_8cpp_source.html">Math.cpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../db/dbc/namespaceant_1_1_utils_a412fa3ff3e1fd4c0ac6caca589e38a15_icgraph.png" border="0" usemap="#db/dbc/namespaceant_1_1_utils_a412fa3ff3e1fd4c0ac6caca589e38a15_icgraph" alt=""/></div>
+<map name="db/dbc/namespaceant_1_1_utils_a412fa3ff3e1fd4c0ac6caca589e38a15_icgraph" id="db/dbc/namespaceant_1_1_utils_a412fa3ff3e1fd4c0ac6caca589e38a15_icgraph">
+<area shape="rect" id="node2" href="../../db/dbc/namespaceant_1_1_utils.html#af65f1f5f416379049a8406f62775b798" title="ant::Utils::getDirection" alt="" coords="192,5,343,32"/><area shape="rect" id="node3" href="../../db/dbc/namespaceant_1_1_utils.html#af61797490f8c8a4d152b5669095886e1" title="ant::Utils::dot" alt="" coords="217,56,317,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a95b128173f4556c262ec4e9d3df2cbfa"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ant::Utils::RectContains </td>
+          <td>(</td>
+          <td class="paramtype">const sf::FloatRect &amp;&#160;</td>
+          <td class="paramname"><em>e</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const sf::FloatRect &amp;&#160;</td>
+          <td class="paramname"><em>bounds</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Comprueba que un rectangulo esta completamente dentro de otro. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>sf::FloatRect rectangulo que tiene que estar dentro del otro. </td></tr>
+    <tr><td class="paramname">bounds</td><td>sf::FloatRect rectangulo en el cual tienen que estar dentro. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
+
+<p>Definition at line <a class="el" href="../../d1/df6/_math_8cpp_source.html#l00027">27</a> of file <a class="el" href="../../d1/df6/_math_8cpp_source.html">Math.cpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../db/dbc/namespaceant_1_1_utils_a95b128173f4556c262ec4e9d3df2cbfa_icgraph.png" border="0" usemap="#db/dbc/namespaceant_1_1_utils_a95b128173f4556c262ec4e9d3df2cbfa_icgraph" alt=""/></div>
+<map name="db/dbc/namespaceant_1_1_utils_a95b128173f4556c262ec4e9d3df2cbfa_icgraph" id="db/dbc/namespaceant_1_1_utils_a95b128173f4556c262ec4e9d3df2cbfa_icgraph">
+<area shape="rect" id="node2" href="../../dc/de8/classant_1_1collision_system.html#abef6a9cb5378ddb9ddf6cfdd46b6dbfa" title="Comprueba las colisiones de las entidades. " alt="" coords="213,5,353,47"/></map>
+</div>
+</p>
 
 </div>
 </div>
@@ -276,6 +417,17 @@ template&lt;typename T , typename... Args&gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="../../d1/df6/_math_8cpp_source.html#l00005">5</a> of file <a class="el" href="../../d1/df6/_math_8cpp_source.html">Math.cpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../db/dbc/namespaceant_1_1_utils_af4038d2832c96f2ce257570054bf1cae_cgraph.png" border="0" usemap="#db/dbc/namespaceant_1_1_utils_af4038d2832c96f2ce257570054bf1cae_cgraph" alt=""/></div>
+<map name="db/dbc/namespaceant_1_1_utils_af4038d2832c96f2ce257570054bf1cae_cgraph" id="db/dbc/namespaceant_1_1_utils_af4038d2832c96f2ce257570054bf1cae_cgraph">
+<area shape="rect" id="node2" href="../../db/dbc/namespaceant_1_1_utils.html#a5238d91325cffcd5d052d055767bfc36" title="Convertira el valor introducido a radianes. " alt="" coords="196,5,336,32"/></map>
+</div>
+</p>
+
 </div>
 </div>
 <a class="anchor" id="a2292728caa47103c8150e5f50d7e5bd0"></a>
@@ -301,6 +453,8 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="../../dc/dba/_math_8hpp_source.html#l00030">30</a> of file <a class="el" href="../../dc/dba/_math_8hpp_source.html">Math.hpp</a>.</p>
 
 </div>
 </div>
@@ -343,6 +497,17 @@ template&lt;typename T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>T </dd></dl>
 
+<p>Definition at line <a class="el" href="../../dc/dba/_math_8hpp_source.html#l00019">19</a> of file <a class="el" href="../../dc/dba/_math_8hpp_source.html">Math.hpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../db/dbc/namespaceant_1_1_utils_a5238d91325cffcd5d052d055767bfc36_icgraph.png" border="0" usemap="#db/dbc/namespaceant_1_1_utils_a5238d91325cffcd5d052d055767bfc36_icgraph" alt=""/></div>
+<map name="db/dbc/namespaceant_1_1_utils_a5238d91325cffcd5d052d055767bfc36_icgraph" id="db/dbc/namespaceant_1_1_utils_a5238d91325cffcd5d052d055767bfc36_icgraph">
+<area shape="rect" id="node2" href="../../db/dbc/namespaceant_1_1_utils.html#af4038d2832c96f2ce257570054bf1cae" title="ant::Utils::rotateRect" alt="" coords="193,5,336,32"/></map>
+</div>
+</p>
+
 </div>
 </div>
 <a class="anchor" id="a1b61d8737e7d43b9c1c2a99360542f50"></a>
@@ -384,6 +549,17 @@ template&lt;typename T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>std::string </dd></dl>
 
+<p>Definition at line <a class="el" href="../../d9/dc5/_string_8hpp_source.html#l00014">14</a> of file <a class="el" href="../../d9/dc5/_string_8hpp_source.html">String.hpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../db/dbc/namespaceant_1_1_utils_a1b61d8737e7d43b9c1c2a99360542f50_icgraph.png" border="0" usemap="#db/dbc/namespaceant_1_1_utils_a1b61d8737e7d43b9c1c2a99360542f50_icgraph" alt=""/></div>
+<map name="db/dbc/namespaceant_1_1_utils_a1b61d8737e7d43b9c1c2a99360542f50_icgraph" id="db/dbc/namespaceant_1_1_utils_a1b61d8737e7d43b9c1c2a99360542f50_icgraph">
+<area shape="rect" id="node2" href="../../d1/db7/classant_1_1_game.html#ab6f06381d4aa4b0b087804b5d19566e6" title="Inicia el juego. " alt="" coords="180,5,289,32"/><area shape="rect" id="node3" href="../../df/d0a/main_8cpp.html#a51af30a60f9f02777c6396b8247e356f" title="entrada de la aplicacion. " alt="" coords="337,5,388,32"/></map>
+</div>
+</p>
+
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
@@ -399,6 +575,8 @@ template&lt;typename T &gt; </div>
 
 <p>Definicion de PI. </p>
 
+<p>Definition at line <a class="el" href="../../dc/dba/_math_8hpp_source.html#l00011">11</a> of file <a class="el" href="../../dc/dba/_math_8hpp_source.html">Math.hpp</a>.</p>
+
 </div>
 </div>
 </div><!-- contents -->
@@ -407,7 +585,7 @@ template&lt;typename T &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dc/d6c/namespaceant.html">ant</a></li><li class="navelem"><a class="el" href="../../db/dbc/namespaceant_1_1_utils.html">Utils</a></li>
-    <li class="footer">Generated on Sun Apr 20 2014 15:35:27 for AntFarm by
+    <li class="footer">Generated on Fri May 16 2014 18:56:11 for AntFarm by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

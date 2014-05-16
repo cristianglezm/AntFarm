@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="de/dd4/_component_factory_8hpp">
+    <title>ComponentFactory.hpp File Reference</title>
+    <programlisting>#include &lt;SFML/Graphics.hpp&gt;</programlisting>
+    <programlisting>#include &lt;array&gt;</programlisting>
+    <programlisting>#include &lt;AssetManager/AssetManager.hpp&gt;</programlisting>
+    <programlisting>#include &lt;Components/Component.hpp&gt;</programlisting>
+    <programlisting>#include &lt;Components/ComponentMask.hpp&gt;</programlisting>
+        <simplesect>
+            <title> Classes </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d4/df6/classant_1_1_component_factory">ant::ComponentFactory</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="dc/d6c/namespaceant">ant</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file F:/Development/Cpp/AntFarm/include/ComponentFactory/ComponentFactory.hpp</para>
+    </simplesect>
+</section>

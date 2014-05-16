@@ -1,0 +1,411 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="db/de0/classant_1_1gravity_system">
+<title>ant::gravitySystem class Reference</title>
+<para>
+    <programlisting>#include <link linkend="d1/d86/gravity_system_8hpp">&lt;gravitySystem.hpp&gt;</link></programlisting>
+</para>
+        <simplesect>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float Gravity</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="db/de0/classant_1_1gravity_system_1ab77e4a4cd9ff0158ca30d921327893c5">gravitySystem</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="db/de0/classant_1_1gravity_system_1a7f9c667686013182a60c0b842eed803b">gravitySystem</link> (
+float g)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="db/de0/classant_1_1gravity_system_1a26471906bfe591b6c21f32081274ce2a">setGravity</link> (
+float g)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float <link linkend="db/de0/classant_1_1gravity_system_1a08c5c1e931bf21e1816fb675cc42d5c4">getGravity</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual void <link linkend="db/de0/classant_1_1gravity_system_1a60c3a55f5249bb6058b7673c64164457">update</link> (
+sf::Time dt)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual void <link linkend="db/de0/classant_1_1gravity_system_1a6671c949e17d7352ef7fb2a68dfad925">render</link> (
+sf::RenderWindow &amp; win)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="db/de0/classant_1_1gravity_system_1aa4dc4cf8639e2f5b7034054e12e481af">~gravitySystem</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="de/d48/classant_1_1_system_1a35662ff3739ff4290df1106bfdccfaca">setRequiredComponents</link> (
+long int req)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>long int <link linkend="de/d48/classant_1_1_system_1a2d94338969f43d4fd2fd972deb099258">getRequiredComponts</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="de/d48/classant_1_1_system_1a1effe9f0e5615e516a34be02d5895434">setEventQueue</link> (
+std::shared_ptr&lt; <link linkend="db/dec/classant_1_1_event_queue">EventQueue</link> &gt; eq)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::shared_ptr&lt; <link linkend="db/dec/classant_1_1_event_queue">EventQueue</link> &gt; <link linkend="de/d48/classant_1_1_system_1ac3e2bbbdb622276d194ad3a687d8e4f1">getEventQueue</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="de/d48/classant_1_1_system_1a231f9fc93b55ee67deb9597ae6be13ba">setName</link> (
+std::string name)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::string <link linkend="de/d48/classant_1_1_system_1a52a559b2c3ddbec5c846df1badd7f7f8">getName</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="de/d48/classant_1_1_system_1a1f983382d142ea697f1811f7f6f6ab17">setEntityManager</link> (
+std::shared_ptr&lt; <link linkend="dd/d12/classant_1_1_entity_manager">EntityManager</link> &gt; em)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::shared_ptr&lt; <link linkend="dd/d12/classant_1_1_entity_manager">EntityManager</link> &gt; <link linkend="de/d48/classant_1_1_system_1adaad2087de7fc71924cfb5b134014b0a">getEntityManager</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title>Protected Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>long int RequiredComponents</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::shared_ptr&lt; EventQueue &gt; eventQueue</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::shared_ptr&lt; EntityManager &gt; em</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::string name</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Brief Description</title>
+
+<para>Sistema para aplicar la gravedad a las entidades. </para>
+    </simplesect>
+        <simplesect>
+            <title>Detailed Description</title>
+
+<para>Aplica por defecto 0.8</para>
+
+<para><formalpara><title>Author: </title>
+
+<para>Cristian Glez <link xlink:href="mailto:Cristian.glez.m@gmail.com">Cristian.glez.m@gmail.com</link> </para>
+</formalpara>
+<formalpara><title>Version: </title>
+
+<para>0.1 </para>
+</formalpara>
+</para>
+                <para>Definition at line 15 of file gravitySystem.hpp</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>gravitySystem.hpp</para></listitem></itemizedlist></para>
+        </simplesect>
+            <section xml:id="db/de0/classant_1_1gravity_system_1ab77e4a4cd9ff0158ca30d921327893c5">
+                <title>ant::gravitySystem::gravitySystem ()</title> <emphasis>Constructor por defecto.</emphasis>
+                
+            </section>
+            <section xml:id="db/de0/classant_1_1gravity_system_1a7f9c667686013182a60c0b842eed803b">
+                <title>ant::gravitySystem::gravitySystem (float g)</title> <emphasis>Overload de constructor para configurar la gravedad directamente.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>g</entry>
+                                <entry>
+<para>float gravedad a aplicar. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="db/de0/classant_1_1gravity_system_1a26471906bfe591b6c21f32081274ce2a">
+                <title>void ant::gravitySystem::setGravity (float g)</title> <emphasis>Establece la gravedad que aplicara el sistema.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>g</entry>
+                                <entry>
+<para>float gravedad a aplicar. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="db/de0/classant_1_1gravity_system_1a08c5c1e931bf21e1816fb675cc42d5c4">
+                <title>float ant::gravitySystem::getGravity ()</title> <emphasis>Obtiene la gravedad que aplica a las entidades.</emphasis>
+                
+<para><formalpara><title>Returns: </title>
+
+<para>float Gravedad que aplica. </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="db/de0/classant_1_1gravity_system_1a60c3a55f5249bb6058b7673c64164457">
+                <title>void ant::gravitySystem::update (sf::Time dt)</title> <emphasis>Metodo abstracto para actualizar entidades.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>dt</entry>
+                                <entry>
+<para>sf::Time delta time para los calculos. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="db/de0/classant_1_1gravity_system_1a6671c949e17d7352ef7fb2a68dfad925">
+                <title>void ant::gravitySystem::render (sf::RenderWindow &amp;win)</title> <emphasis>No hace nada.</emphasis>
+                
+            </section>
+            <section xml:id="db/de0/classant_1_1gravity_system_1aa4dc4cf8639e2f5b7034054e12e481af">
+                <title>ant::gravitySystem::~gravitySystem ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="de/d48/classant_1_1_system_1a35662ff3739ff4290df1106bfdccfaca">
+                <title>void ant::System::setRequiredComponents (long int req)</title> <emphasis>Setter para los requisitos necesarios.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>req</entry>
+                                <entry>
+<para>long int </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="de/d48/classant_1_1_system_1a2d94338969f43d4fd2fd972deb099258">
+                <title>long int ant::System::getRequiredComponts ()</title> <emphasis>Getter de los requisitos para el sistema.</emphasis>
+                
+            </section>
+            <section xml:id="de/d48/classant_1_1_system_1a1effe9f0e5615e516a34be02d5895434">
+                <title>void ant::System::setEventQueue (std::shared_ptr&lt; EventQueue &gt; eq)</title> <emphasis>Setter para la EventQueue.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>eq</entry>
+                                <entry>
+<para>std::shared_ptr&lt;EventQueue&gt; </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="de/d48/classant_1_1_system_1ac3e2bbbdb622276d194ad3a687d8e4f1">
+                <title>std::shared_ptr&lt;EventQueue&gt; ant::System::getEventQueue ()</title> <emphasis>Getter para la EventQueue.</emphasis>
+                
+<para><formalpara><title>Returns: </title>
+
+<para>std::shared_ptr&lt;EventQueue&gt; </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="de/d48/classant_1_1_system_1a231f9fc93b55ee67deb9597ae6be13ba">
+                <title>void ant::System::setName (std::string name)</title> <emphasis>Setter Para el nombre del sistema.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>name</entry>
+                                <entry>
+<para>std::string </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="de/d48/classant_1_1_system_1a52a559b2c3ddbec5c846df1badd7f7f8">
+                <title>std::string ant::System::getName () const </title> <emphasis>Getter para el nombre del sistema.</emphasis>
+                
+<para><formalpara><title>Returns: </title>
+
+<para>std::string </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="de/d48/classant_1_1_system_1a1f983382d142ea697f1811f7f6f6ab17">
+                <title>void ant::System::setEntityManager (std::shared_ptr&lt; EntityManager &gt; em)</title> <emphasis>Setter para el EntityManager.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>em</entry>
+                                <entry>
+<para>std::shared_ptr&lt;EntityManager&gt; </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="de/d48/classant_1_1_system_1adaad2087de7fc71924cfb5b134014b0a">
+                <title>std::shared_ptr&lt;EntityManager&gt; ant::System::getEntityManager ()</title> <emphasis>Getter para el EntityManager.</emphasis>
+                
+<para><formalpara><title>Returns: </title>
+
+<para>std::shared_ptr&lt;EntityManager&gt; </para>
+</formalpara>
+</para>
+
+            </section>
+</section>

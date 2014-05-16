@@ -26,8 +26,6 @@ namespace ant{
     }
     std::unique_ptr<World> WorldFactory::create(const std::string& name,const std::string& background,const sf::Image& lvl,int nEntities,sf::Time overTime,sf::FloatRect bounds){
         std::unique_ptr<World> w(new World(lvlID));
-        /// @todo refactorizar, leer imagen y crear level.
-        /// comprueba si esta el nivel en assets si no esta crea imagen, limpia alpha procesa imagen lvl i crea el nivel
         auto em = w->getEntityManager();
         auto assets = getAssetManager();
         std::unique_ptr<SystemManager> sm(new SystemManager());
@@ -64,7 +62,6 @@ namespace ant{
                 }
             }
             ComponentSettings cs;
-            /// @todo Completar
             cs.loadSettings(Config::LEVEL_FILE);
             cs.imageID = name;
             cs.spriteID = background;

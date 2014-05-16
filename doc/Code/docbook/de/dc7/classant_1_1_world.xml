@@ -1,0 +1,480 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="de/dc7/classant_1_1_world">
+<title>ant::World class Reference</title>
+<para>
+    <programlisting>#include <link linkend="dd/dc5/_world_8hpp">&lt;World.hpp&gt;</link></programlisting>
+</para>
+        <simplesect>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::unique_ptr&lt; SystemManager &gt; systemManager</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::shared_ptr&lt; EntityManager &gt; entityManager</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::shared_ptr&lt; EventQueue &gt; eventQueue</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::shared_ptr&lt; GameEventDispatcher &gt; gameEventDispatcher</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>long int id</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="de/dc7/classant_1_1_world_1a81b4833385c832a34a21894969aa3916">World</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="de/dc7/classant_1_1_world_1a30d503579716ae3c1fc03782afadbdfb">World</link> (
+long int id)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="de/dc7/classant_1_1_world_1ac79dd343b4a71603eb9b87f22865956b">World</link> (
+long int id, std::shared_ptr&lt; <link linkend="dd/d12/classant_1_1_entity_manager">EntityManager</link> &gt; entityManager, std::unique_ptr&lt; <link linkend="de/dce/classant_1_1_system_manager">SystemManager</link> &gt; systemManager, std::shared_ptr&lt; <link linkend="db/dec/classant_1_1_event_queue">EventQueue</link> &gt; eventQueue)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="de/dc7/classant_1_1_world_1a95c3c786b65a35a3eefcef3478f8607e">setEntityManager</link> (
+std::shared_ptr&lt; <link linkend="dd/d12/classant_1_1_entity_manager">EntityManager</link> &gt; entityManager)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::shared_ptr&lt; <link linkend="dd/d12/classant_1_1_entity_manager">EntityManager</link> &gt; <link linkend="de/dc7/classant_1_1_world_1af9af0d31f2b1ed8519f90b50cea1ff6b">getEntityManager</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="de/dc7/classant_1_1_world_1a659a2c032a712ed68863c1680c9b4512">setSystemManager</link> (
+std::unique_ptr&lt; <link linkend="de/dce/classant_1_1_system_manager">SystemManager</link> &gt; systemManager)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="de/dce/classant_1_1_system_manager">SystemManager</link> * <link linkend="de/dc7/classant_1_1_world_1a4986fb2c93944029318ced86fac6698d">getSystemManager</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="de/dc7/classant_1_1_world_1a830700b10f9f4eb08039fbfb325d7876">setEventQueue</link> (
+std::shared_ptr&lt; <link linkend="db/dec/classant_1_1_event_queue">EventQueue</link> &gt; eventQueue)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::shared_ptr&lt; <link linkend="db/dec/classant_1_1_event_queue">EventQueue</link> &gt; <link linkend="de/dc7/classant_1_1_world_1a9ed45a179bf0f7de1a6ae72ea55b39e0">getEventQueue</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="de/dc7/classant_1_1_world_1ab4ec098618644c0027dc07b7ad85ae1f">setGameEventDispatcher</link> (
+std::shared_ptr&lt; <link linkend="dc/df5/classant_1_1_game_event_dispatcher">GameEventDispatcher</link> &gt; ged)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::shared_ptr&lt; <link linkend="dc/df5/classant_1_1_game_event_dispatcher">GameEventDispatcher</link> &gt; <link linkend="de/dc7/classant_1_1_world_1aa61bcbc5deada677fa177ea8ec57932b">getGameEventDispatcher</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="de/dc7/classant_1_1_world_1a17f2ce512457fec44600d614a18d2815">setId</link> (
+long int id)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const long int <link linkend="de/dc7/classant_1_1_world_1a4623521708a75ec7f3d9c2f85f148a07">getId</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="de/dc7/classant_1_1_world_1a5150296483f2b6f5dc7294faa9978344">update</link> (
+sf::Time dt)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="de/dc7/classant_1_1_world_1aefef1819102fd2194bcea6ae73e45e35">render</link> (
+sf::RenderWindow &amp; win)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="de/dc7/classant_1_1_world_1a2db3d5ce695f1dbcc0871b38e577b031">~World</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Brief Description</title>
+
+<para>Clase para crear escenarios. </para>
+    </simplesect>
+        <simplesect>
+            <title>Detailed Description</title>
+
+<para><formalpara><title>Author: </title>
+
+<para>Cristian Glez <link xlink:href="mailto:Cristian.glez.m@gmail.com">Cristian.glez.m@gmail.com</link> </para>
+</formalpara>
+<formalpara><title>Version: </title>
+
+<para>0.1 </para>
+</formalpara>
+</para>
+                <para>Definition at line 15 of file World.hpp</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>World.hpp</para></listitem></itemizedlist></para>
+        </simplesect>
+            <section xml:id="de/dc7/classant_1_1_world_1a81b4833385c832a34a21894969aa3916">
+                <title>ant::World::World ()</title> <emphasis>Constructor por defecto.</emphasis>
+                
+            </section>
+            <section xml:id="de/dc7/classant_1_1_world_1a30d503579716ae3c1fc03782afadbdfb">
+                <title>ant::World::World (long int id)</title> <emphasis>Constructor con el id del World.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>id</entry>
+                                <entry>
+<para>long int id para este <link linkend="de/dc7/classant_1_1_world">World</link>. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="de/dc7/classant_1_1_world_1ac79dd343b4a71603eb9b87f22865956b">
+                <title>ant::World::World (long int id, std::shared_ptr&lt; EntityManager &gt; entityManager, std::unique_ptr&lt; SystemManager &gt; systemManager, std::shared_ptr&lt; EventQueue &gt; eventQueue)</title> <emphasis>Constructor con el id del World, EntityManager,SystemManager y EventQueue.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>id</entry>
+                                <entry>
+<para>long int id del mundo </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>entityManager</entry>
+                                <entry>
+<para>std::shared_ptr&lt;EntityManager&gt; </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>systemManager</entry>
+                                <entry>
+<para>std::shared_ptr&lt;SystemManager&gt; </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>eventQueue</entry>
+                                <entry>
+<para>std::shared_ptr&lt;EventQueue&gt; </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="de/dc7/classant_1_1_world_1a95c3c786b65a35a3eefcef3478f8607e">
+                <title>void ant::World::setEntityManager (std::shared_ptr&lt; EntityManager &gt; entityManager)</title> <emphasis>Setter para el EntityManager.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>entityManager</entry>
+                                <entry>
+<para>std::shared_ptr&lt;EntityManager&gt; </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="de/dc7/classant_1_1_world_1af9af0d31f2b1ed8519f90b50cea1ff6b">
+                <title>std::shared_ptr&lt;EntityManager&gt; ant::World::getEntityManager ()</title> <emphasis>Getter para el EntityManager.</emphasis>
+                
+<para><formalpara><title>Returns: </title>
+
+<para>std::shared_ptr&lt;EntityManager&gt; </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="de/dc7/classant_1_1_world_1a659a2c032a712ed68863c1680c9b4512">
+                <title>void ant::World::setSystemManager (std::unique_ptr&lt; SystemManager &gt; systemManager)</title> <emphasis>Setter para el SystemManager.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>systemManager</entry>
+                                <entry>
+<para>std::unique_ptr&lt;SystemManager&gt; </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="de/dc7/classant_1_1_world_1a4986fb2c93944029318ced86fac6698d">
+                <title>SystemManager* ant::World::getSystemManager ()</title> <emphasis>Getter para el SystemManager.</emphasis>
+                
+<para><formalpara><title>Returns: </title>
+
+<para><link linkend="de/dce/classant_1_1_system_manager">SystemManager</link> * </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="de/dc7/classant_1_1_world_1a830700b10f9f4eb08039fbfb325d7876">
+                <title>void ant::World::setEventQueue (std::shared_ptr&lt; EventQueue &gt; eventQueue)</title> <emphasis>Setter para la EventQueue.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>eventQueue</entry>
+                                <entry>
+<para>std::shared_ptr&lt;EventQueue&gt; </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="de/dc7/classant_1_1_world_1a9ed45a179bf0f7de1a6ae72ea55b39e0">
+                <title>std::shared_ptr&lt;EventQueue&gt; ant::World::getEventQueue ()</title> <emphasis>Getter para el EventQueue.</emphasis>
+                
+<para><formalpara><title>Returns: </title>
+
+<para>std::shared_ptr&lt;EventQueue&gt; </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="de/dc7/classant_1_1_world_1ab4ec098618644c0027dc07b7ad85ae1f">
+                <title>void ant::World::setGameEventDispatcher (std::shared_ptr&lt; GameEventDispatcher &gt; ged)</title> <emphasis>Setter para el GameEventDispatcher.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>ged</entry>
+                                <entry>
+<para>std::shared_ptr&lt;GameEventDispatcher&gt; </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="de/dc7/classant_1_1_world_1aa61bcbc5deada677fa177ea8ec57932b">
+                <title>std::shared_ptr&lt;GameEventDispatcher&gt; ant::World::getGameEventDispatcher ()</title> <emphasis>Getter para el GameEventDispatcher.</emphasis>
+                
+<para><formalpara><title>Returns: </title>
+
+<para>std::shared_ptr&lt;GameEventDispatcher&gt; </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="de/dc7/classant_1_1_world_1a17f2ce512457fec44600d614a18d2815">
+                <title>void ant::World::setId (long int id)</title> <emphasis>Setter para el id del mundo.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>id</entry>
+                                <entry>
+<para>long int </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="de/dc7/classant_1_1_world_1a4623521708a75ec7f3d9c2f85f148a07">
+                <title>const long int ant::World::getId () const </title> <emphasis>Getter del id del mundo.</emphasis>
+                
+<para><formalpara><title>Returns: </title>
+
+<para>const long int </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="de/dc7/classant_1_1_world_1a5150296483f2b6f5dc7294faa9978344">
+                <title>void ant::World::update (sf::Time dt)</title> <emphasis>Actualiza todas las entidades del EntityManager con los sistemas que tenga en su SystemManager.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>dt</entry>
+                                <entry>
+<para>sf::Time delta time </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="de/dc7/classant_1_1_world_1aefef1819102fd2194bcea6ae73e45e35">
+                <title>void ant::World::render (sf::RenderWindow &amp;win)</title> <emphasis>Renderiza todas las entidades del EntityManager que tengan los componentes necesarios.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>win</entry>
+                                <entry>
+<para>sf::RenderWindow &amp; </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="de/dc7/classant_1_1_world_1a2db3d5ce695f1dbcc0871b38e577b031">
+                <title>ant::World::~World ()</title> <emphasis></emphasis>
+                
+            </section>
+</section>

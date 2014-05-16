@@ -72,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
     <ul class="tablist">
       <li><a href="../../annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="../../classes.html"><span>Class&#160;Index</span></a></li>
-      <li><a href="../../hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="../../inherits.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="../../functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -121,13 +121,15 @@ $(document).ready(function(){initNavTree('d4/d50/classant_1_1_observer.html','..
 <div class="dynheader">
 Inheritance diagram for ant::Observer:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="../../d4/d50/classant_1_1_observer.png" usemap="#ant::Observer_map" alt=""/>
-  <map id="ant::Observer_map" name="ant::Observer_map">
-<area href="../../d9/d8f/classant_1_1digging_system.html" title="Sistema encargado de que las hormigas cojan la tierra etc. " alt="ant::diggingSystem" shape="rect" coords="0,56,131,80"/>
-<area href="../../d6/d6c/classant_1_1movement_system.html" title="Sistema encargado de hacer que las entidades se muevan. " alt="ant::movementSystem" shape="rect" coords="141,56,272,80"/>
-</map>
- </div></div>
+<div class="center"><img src="../../d5/de0/classant_1_1_observer__inherit__graph.png" border="0" usemap="#ant_1_1_observer_inherit__map" alt="Inheritance graph"/></div>
+<map name="ant_1_1_observer_inherit__map" id="ant_1_1_observer_inherit__map">
+<area shape="rect" id="node2" href="../../d8/d12/classant_1_1constructor_system.html" title="Sistema encargado de que las hormigas construyan etc. " alt="" coords="5,175,165,311"/><area shape="rect" id="node3" href="../../d1/db7/classant_1_1_game.html" title="Clase Principal del juego. " alt="" coords="189,175,304,311"/><area shape="rect" id="node4" href="../../d6/d6c/classant_1_1movement_system.html" title="Sistema encargado de hacer que las entidades se muevan. " alt="" coords="328,175,483,311"/><area shape="rect" id="node5" href="../../dd/d76/classant_1_1out_system.html" title="Sistema encargado de quitar a las entidades que chocan con las entidades con componente OUT..." alt="" coords="507,167,621,318"/><area shape="rect" id="node6" href="../../db/ddf/classant_1_1spawn_system.html" title="Sistema encargado de crear las entidades sobre el tiempo establecido. " alt="" coords="645,160,777,325"/></map>
+</div>
+<div class="dynheader">
+Collaboration diagram for ant::Observer:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/d38/classant_1_1_observer__coll__graph.png" border="0" usemap="#ant_1_1_observer_coll__map" alt="Collaboration graph"/></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -144,6 +146,8 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><p>Interfaz para los observadores. </p>
 <dl class="section author"><dt>Author</dt><dd>Cristian Glez <a href="#" onclick="location.href='mai'+'lto:'+'Cri'+'st'+'ian'+'.g'+'lez'+'.m'+'@gm'+'ai'+'l.c'+'om'; return false;">Crist<span style="display: none;">.nosp@m.</span>ian.<span style="display: none;">.nosp@m.</span>glez.<span style="display: none;">.nosp@m.</span>m@gm<span style="display: none;">.nosp@m.</span>ail.c<span style="display: none;">.nosp@m.</span>om</a> </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>0.1 </dd></dl>
+
+<p>Definition at line <a class="el" href="../../da/dc7/_observer_8hpp_source.html#l00011">11</a> of file <a class="el" href="../../da/dc7/_observer_8hpp_source.html">Observer.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ae4bf1823b64695b67dd10d3f904b17e6"></a>
 <div class="memitem">
@@ -168,6 +172,8 @@ Public Member Functions</h2></td></tr>
 
 <p>Constructor principal. </p>
 
+<p>Definition at line <a class="el" href="../../da/dc7/_observer_8hpp_source.html#l00016">16</a> of file <a class="el" href="../../da/dc7/_observer_8hpp_source.html">Observer.hpp</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="abef4b9fc977925a695df63520c5cc134"></a>
@@ -190,6 +196,8 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="../../da/dc7/_observer_8hpp_source.html#l00022">22</a> of file <a class="el" href="../../da/dc7/_observer_8hpp_source.html">Observer.hpp</a>.</p>
 
 </div>
 </div>
@@ -224,7 +232,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="../../d6/d6c/classant_1_1movement_system.html#ab950deb32094a7c4e2ee2663c72b7ed7">ant::movementSystem</a>, and <a class="el" href="../../d9/d8f/classant_1_1digging_system.html#a7d7d26547db306b1187e0ede4d022836">ant::diggingSystem</a>.</p>
+<p>Implemented in <a class="el" href="../../db/ddf/classant_1_1spawn_system.html#a3950f006745c8beba1c579e2ea88b8d1">ant::spawnSystem</a>, <a class="el" href="../../d8/d12/classant_1_1constructor_system.html#aefb0ab92dfd17a7a374660f77434fe3a">ant::constructorSystem</a>, <a class="el" href="../../dd/d76/classant_1_1out_system.html#aecb7dfd3738e303f975d28ca03165c4d">ant::outSystem</a>, <a class="el" href="../../d6/d6c/classant_1_1movement_system.html#ab950deb32094a7c4e2ee2663c72b7ed7">ant::movementSystem</a>, and <a class="el" href="../../d1/db7/classant_1_1_game.html#a527a4d8e8ce35293facd8f896c8c084c">ant::Game</a>.</p>
 
 </div>
 </div>
@@ -237,7 +245,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dc/d6c/namespaceant.html">ant</a></li><li class="navelem"><a class="el" href="../../d4/d50/classant_1_1_observer.html">Observer</a></li>
-    <li class="footer">Generated on Sun Apr 20 2014 15:35:26 for AntFarm by
+    <li class="footer">Generated on Fri May 16 2014 18:56:10 for AntFarm by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

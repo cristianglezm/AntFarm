@@ -1,0 +1,4 @@
+<map id="ant::Component::getProperties" name="ant::Component::getProperties">
+<area shape="rect" id="node2" href="$d4/dd4/classant_1_1base_component.html#a88bc0531ed99c8978e95257131653efe" title="Getter de las propiedades del componente,. " alt="" coords="252,5,395,47"/>
+<area shape="rect" id="node3" href="$d6/d6c/classant_1_1movement_system.html#ab950deb32094a7c4e2ee2663c72b7ed7" title="Cuando recibe Eventos COLLISION_EVENT parara a las entidades si se mueven. " alt="" coords="443,5,595,47"/>
+</map>

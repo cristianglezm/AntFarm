@@ -10,5 +10,6 @@ var classant_1_1_world_manager =
     [ "removeWorld", "dc/dbd/classant_1_1_world_manager.html#a13377656880523bc48ca4e963017a7e3", null ],
     [ "render", "dc/dbd/classant_1_1_world_manager.html#a5050c12e78f005607394041e384ca297", null ],
     [ "setWorlds", "dc/dbd/classant_1_1_world_manager.html#aebeb93325dd1dfd83a8b4a13eb481620", null ],
+    [ "size", "dc/dbd/classant_1_1_world_manager.html#af45a459de72c22deeb55f1dc8739e58a", null ],
     [ "update", "dc/dbd/classant_1_1_world_manager.html#ab9c6b7726219771e992a0c6714cd84b3", null ]
 ];

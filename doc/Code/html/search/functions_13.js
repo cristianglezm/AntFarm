@@ -1,28 +1,6 @@
 var searchData=
 [
-  ['_7eassetmanager',['~AssetManager',['../d1/dd6/classant_1_1_asset_manager.html#a5289bfb08ea879238fa642632a533447',1,'ant::AssetManager']]],
-  ['_7ebasecomponent',['~baseComponent',['../d4/dd4/classant_1_1base_component.html#a661d33dcb2f1c52ef7a8b080be14eb79',1,'ant::baseComponent']]],
-  ['_7ebaseevent',['~baseEvent',['../d3/dce/classant_1_1base_event.html#a53ce67f13ed29f0b2b28bbb13dad7ecf',1,'ant::baseEvent']]],
-  ['_7ecollisionsystem',['~collisionSystem',['../dc/de8/classant_1_1collision_system.html#acb5ba1573cd34e251caac81cb499094e',1,'ant::collisionSystem']]],
-  ['_7ecomponentfactory',['~ComponentFactory',['../d4/df6/classant_1_1_component_factory.html#acd6746a981623117ef590e8065a51061',1,'ant::ComponentFactory']]],
-  ['_7ediggingsystem',['~diggingSystem',['../d9/d8f/classant_1_1digging_system.html#af2503a495ebfa3f5fe0b6b986d20e4f2',1,'ant::diggingSystem']]],
-  ['_7eentity',['~Entity',['../dc/d73/classant_1_1_entity.html#a125b5f8608b1ff872a842060003ffe32',1,'ant::Entity']]],
-  ['_7eentityfactory',['~EntityFactory',['../db/d10/classant_1_1_entity_factory.html#a66fee3669089d284296bbfed30e4ff00',1,'ant::EntityFactory']]],
-  ['_7eentitymanager',['~EntityManager',['../dd/d12/classant_1_1_entity_manager.html#af0dac6b2bdf3d16aa956ad82f23dc917',1,'ant::EntityManager']]],
-  ['_7eeventqueue',['~EventQueue',['../db/dec/classant_1_1_event_queue.html#a3aff7ae733fc695b0629e623741c377e',1,'ant::EventQueue']]],
-  ['_7egame',['~Game',['../d1/db7/classant_1_1_game.html#a2b0952856df13e8cd3c7eda57d9811d8',1,'ant::Game']]],
-  ['_7egameeventdispatcher',['~GameEventDispatcher',['../dc/df5/classant_1_1_game_event_dispatcher.html#a7ebe7e59248718a0bd7e2d3c5daa5828',1,'ant::GameEventDispatcher']]],
-  ['_7einputsystem',['~inputSystem',['../dd/d19/classant_1_1input_system.html#a36e1f952b6d969d5caee1d7b27556e3b',1,'ant::inputSystem']]],
-  ['_7elevel',['~Level',['../d0/dcb/classant_1_1_level.html#a654224d7502000abca61df489acc5aec',1,'ant::Level']]],
-  ['_7emovementsystem',['~movementSystem',['../d6/d6c/classant_1_1movement_system.html#a97b7c0733a6430c5bb26246803e02c8a',1,'ant::movementSystem']]],
-  ['_7eobserver',['~Observer',['../d4/d50/classant_1_1_observer.html#abef4b9fc977925a695df63520c5cc134',1,'ant::Observer']]],
-  ['_7equadtree',['~Quadtree',['../d6/d94/classant_1_1_utils_1_1_quadtree.html#a8d8e7d44a86d3a453684e4ead13ac8cb',1,'ant::Utils::Quadtree']]],
-  ['_7erendersystem',['~renderSystem',['../d1/def/classant_1_1render_system.html#a44a7a39c0946d5d9d2d8e7287860d071',1,'ant::renderSystem']]],
-  ['_7esubject',['~Subject',['../d5/d29/classant_1_1_subject.html#a6aefd4023994173e82fcef3c0ce9682f',1,'ant::Subject']]],
-  ['_7esystem',['~System',['../de/d48/classant_1_1_system.html#aa8ab4b23645603d6f50934d3ebe8b37d',1,'ant::System']]],
-  ['_7esystemfactory',['~SystemFactory',['../d6/dcc/classant_1_1_system_factory.html#a702fd13a4c1a4013f37cb6ec43461a19',1,'ant::SystemFactory']]],
-  ['_7esystemmanager',['~SystemManager',['../de/dce/classant_1_1_system_manager.html#a3a9c7cb0a2f4a57f60b36e57660e1f16',1,'ant::SystemManager']]],
-  ['_7eworld',['~World',['../de/dc7/classant_1_1_world.html#a2db3d5ce695f1dbcc0871b38e577b031',1,'ant::World']]],
-  ['_7eworldfactory',['~WorldFactory',['../d0/df7/classant_1_1_world_factory.html#a1f2b1c3f3da8c188a3c5e98144dd5527',1,'ant::WorldFactory']]],
-  ['_7eworldmanager',['~WorldManager',['../dc/dbd/classant_1_1_world_manager.html#a6901058e71f2f0b1855c495ce060be76',1,'ant::WorldManager']]]
+  ['world',['World',['../de/dc7/classant_1_1_world.html#a81b4833385c832a34a21894969aa3916',1,'ant::World::World()'],['../de/dc7/classant_1_1_world.html#a30d503579716ae3c1fc03782afadbdfb',1,'ant::World::World(long int id)'],['../de/dc7/classant_1_1_world.html#ac79dd343b4a71603eb9b87f22865956b',1,'ant::World::World(long int id, std::shared_ptr&lt; EntityManager &gt; entityManager, std::unique_ptr&lt; SystemManager &gt; systemManager, std::shared_ptr&lt; EventQueue &gt; eventQueue)']]],
+  ['worldfactory',['WorldFactory',['../d0/df7/classant_1_1_world_factory.html#a14b0c1669fe73a6773fcdc16478260d1',1,'ant::WorldFactory::WorldFactory()'],['../d0/df7/classant_1_1_world_factory.html#ae3d047fa97001b82fc87ae13bd9d91e8',1,'ant::WorldFactory::WorldFactory(std::shared_ptr&lt; GameEventDispatcher &gt; ged, std::shared_ptr&lt; EventQueue &gt; eq)']]],
+  ['worldmanager',['WorldManager',['../dc/dbd/classant_1_1_world_manager.html#a845389f52e654ff947b83c993c72ff08',1,'ant::WorldManager']]]
 ];

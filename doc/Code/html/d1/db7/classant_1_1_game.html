@@ -72,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
     <ul class="tablist">
       <li><a href="../../annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="../../classes.html"><span>Class&#160;Index</span></a></li>
-      <li><a href="../../hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="../../inherits.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="../../functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -118,6 +118,20 @@ $(document).ready(function(){initNavTree('d1/db7/classant_1_1_game.html','../../
  <a href="../../d1/db7/classant_1_1_game.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d2/d07/_game_8hpp_source.html">Game.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for ant::Game:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d3/dbc/classant_1_1_game__inherit__graph.png" border="0" usemap="#ant_1_1_game_inherit__map" alt="Inheritance graph"/></div>
+<map name="ant_1_1_game_inherit__map" id="ant_1_1_game_inherit__map">
+<area shape="rect" id="node2" href="../../d4/d50/classant_1_1_observer.html" title="Interfaz para los observadores. " alt="" coords="12,5,113,112"/></map>
+</div>
+<div class="dynheader">
+Collaboration diagram for ant::Game:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/de4/classant_1_1_game__coll__graph.png" border="0" usemap="#ant_1_1_game_coll__map" alt="Collaboration graph"/></div>
+<map name="ant_1_1_game_coll__map" id="ant_1_1_game_coll__map">
+<area shape="rect" id="node2" href="../../d4/d50/classant_1_1_observer.html" title="Interfaz para los observadores. " alt="" coords="12,5,113,112"/></map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -127,6 +141,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab6f06381d4aa4b0b087804b5d19566e6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db7/classant_1_1_game.html#ab6f06381d4aa4b0b087804b5d19566e6">run</a> ()</td></tr>
 <tr class="memdesc:ab6f06381d4aa4b0b087804b5d19566e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicia el juego.  <a href="#ab6f06381d4aa4b0b087804b5d19566e6">More...</a><br/></td></tr>
 <tr class="separator:ab6f06381d4aa4b0b087804b5d19566e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a527a4d8e8ce35293facd8f896c8c084c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db7/classant_1_1_game.html#a527a4d8e8ce35293facd8f896c8c084c">onNotify</a> (std::shared_ptr&lt; <a class="el" href="../../d3/dce/classant_1_1base_event.html">baseEvent</a> &gt; e)</td></tr>
+<tr class="memdesc:a527a4d8e8ce35293facd8f896c8c084c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recibe el Evento de Level_COMPLETE y cambia el nivel.  <a href="#a527a4d8e8ce35293facd8f896c8c084c">More...</a><br/></td></tr>
+<tr class="separator:a527a4d8e8ce35293facd8f896c8c084c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1120f92a3807222948bbf68811a763a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db7/classant_1_1_game.html#ab1120f92a3807222948bbf68811a763a">loadGUIConf</a> (const std::string &amp;filename)</td></tr>
+<tr class="memdesc:ab1120f92a3807222948bbf68811a763a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Carga la interfaz grafica.  <a href="#ab1120f92a3807222948bbf68811a763a">More...</a><br/></td></tr>
+<tr class="separator:ab1120f92a3807222948bbf68811a763a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b0952856df13e8cd3c7eda57d9811d8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db7/classant_1_1_game.html#a2b0952856df13e8cd3c7eda57d9811d8">~Game</a> ()</td></tr>
 <tr class="separator:a2b0952856df13e8cd3c7eda57d9811d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -134,6 +154,8 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><p>Clase Principal del juego. </p>
 <dl class="section author"><dt>Author</dt><dd>Cristian Glez <a href="#" onclick="location.href='mai'+'lto:'+'Cri'+'st'+'ian'+'.g'+'lez'+'.m'+'@gm'+'ai'+'l.c'+'om'; return false;">Crist<span style="display: none;">.nosp@m.</span>ian.<span style="display: none;">.nosp@m.</span>glez.<span style="display: none;">.nosp@m.</span>m@gm<span style="display: none;">.nosp@m.</span>ail.c<span style="display: none;">.nosp@m.</span>om</a> </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>0.1 </dd></dl>
+
+<p>Definition at line <a class="el" href="../../d2/d07/_game_8hpp_source.html#l00016">16</a> of file <a class="el" href="../../d2/d07/_game_8hpp_source.html">Game.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a58cdec961670b3d46c37bb67cef11034"></a>
 <div class="memitem">
@@ -150,6 +172,17 @@ Public Member Functions</h2></td></tr>
 
 <p>Constructor por defecto. </p>
 
+<p>Definition at line <a class="el" href="../../d7/db5/_game_8cpp_source.html#l00007">7</a> of file <a class="el" href="../../d7/db5/_game_8cpp_source.html">Game.cpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d1/db7/classant_1_1_game_a58cdec961670b3d46c37bb67cef11034_cgraph.png" border="0" usemap="#d1/db7/classant_1_1_game_a58cdec961670b3d46c37bb67cef11034_cgraph" alt=""/></div>
+<map name="d1/db7/classant_1_1_game_a58cdec961670b3d46c37bb67cef11034_cgraph" id="d1/db7/classant_1_1_game_a58cdec961670b3d46c37bb67cef11034_cgraph">
+<area shape="rect" id="node2" href="../../d1/db7/classant_1_1_game.html#ab1120f92a3807222948bbf68811a763a" title="Carga la interfaz grafica. " alt="" coords="180,5,343,32"/></map>
+</div>
+</p>
+
 </div>
 </div>
 <a class="anchor" id="a2b0952856df13e8cd3c7eda57d9811d8"></a>
@@ -165,9 +198,76 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="../../d7/db5/_game_8cpp_source.html#l00228">228</a> of file <a class="el" href="../../d7/db5/_game_8cpp_source.html">Game.cpp</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="ab1120f92a3807222948bbf68811a763a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ant::Game::loadGUIConf </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Carga la interfaz grafica. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>std::string </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="../../d7/db5/_game_8cpp_source.html#l00183">183</a> of file <a class="el" href="../../d7/db5/_game_8cpp_source.html">Game.cpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d1/db7/classant_1_1_game_ab1120f92a3807222948bbf68811a763a_icgraph.png" border="0" usemap="#d1/db7/classant_1_1_game_ab1120f92a3807222948bbf68811a763a_icgraph" alt=""/></div>
+<map name="d1/db7/classant_1_1_game_ab1120f92a3807222948bbf68811a763a_icgraph" id="d1/db7/classant_1_1_game_ab1120f92a3807222948bbf68811a763a_icgraph">
+<area shape="rect" id="node2" href="../../d1/db7/classant_1_1_game.html#a58cdec961670b3d46c37bb67cef11034" title="Constructor por defecto. " alt="" coords="216,5,343,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a527a4d8e8ce35293facd8f896c8c084c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ant::Game::onNotify </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="../../d3/dce/classant_1_1base_event.html">baseEvent</a> &gt;&#160;</td>
+          <td class="paramname"><em>e</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Recibe el Evento de Level_COMPLETE y cambia el nivel. </p>
+
+<p>Implements <a class="el" href="../../d4/d50/classant_1_1_observer.html#a4f03efedb538d91297ebd7341bc4698c">ant::Observer</a>.</p>
+
+<p>Definition at line <a class="el" href="../../d7/db5/_game_8cpp_source.html#l00031">31</a> of file <a class="el" href="../../d7/db5/_game_8cpp_source.html">Game.cpp</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="ab6f06381d4aa4b0b087804b5d19566e6"></a>
 <div class="memitem">
 <div class="memproto">
@@ -182,13 +282,32 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Inicia el juego. </p>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000008">Todo:</a></b></dt><dd>cambiar por variables que interactuen con el sistema de userTransport para renderizar y actualizar diferentes sistemas segun el estado etc. </dd></dl>
+
+<p>Definition at line <a class="el" href="../../d7/db5/_game_8cpp_source.html#l00043">43</a> of file <a class="el" href="../../d7/db5/_game_8cpp_source.html">Game.cpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d1/db7/classant_1_1_game_ab6f06381d4aa4b0b087804b5d19566e6_cgraph.png" border="0" usemap="#d1/db7/classant_1_1_game_ab6f06381d4aa4b0b087804b5d19566e6_cgraph" alt=""/></div>
+<map name="d1/db7/classant_1_1_game_ab6f06381d4aa4b0b087804b5d19566e6_cgraph" id="d1/db7/classant_1_1_game_ab6f06381d4aa4b0b087804b5d19566e6_cgraph">
+<area shape="rect" id="node2" href="../../db/dbc/namespaceant_1_1_utils.html#a1b61d8737e7d43b9c1c2a99360542f50" title="Convierte el Tipo a string. " alt="" coords="163,5,289,32"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d1/db7/classant_1_1_game_ab6f06381d4aa4b0b087804b5d19566e6_icgraph.png" border="0" usemap="#d1/db7/classant_1_1_game_ab6f06381d4aa4b0b087804b5d19566e6_icgraph" alt=""/></div>
+<map name="d1/db7/classant_1_1_game_ab6f06381d4aa4b0b087804b5d19566e6_icgraph" id="d1/db7/classant_1_1_game_ab6f06381d4aa4b0b087804b5d19566e6_icgraph">
+<area shape="rect" id="node2" href="../../df/d0a/main_8cpp.html#a51af30a60f9f02777c6396b8247e356f" title="entrada de la aplicacion. " alt="" coords="163,5,213,32"/></map>
+</div>
+</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="../../d2/d07/_game_8hpp_source.html">Game.hpp</a></li>
-<li><a class="el" href="../../d7/db5/_game_8cpp.html">Game.cpp</a></li>
+<li><a class="el" href="../../d7/db5/_game_8cpp_source.html">Game.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -196,7 +315,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dc/d6c/namespaceant.html">ant</a></li><li class="navelem"><a class="el" href="../../d1/db7/classant_1_1_game.html">Game</a></li>
-    <li class="footer">Generated on Sun Apr 20 2014 15:35:26 for AntFarm by
+    <li class="footer">Generated on Fri May 16 2014 18:56:10 for AntFarm by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>
