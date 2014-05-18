@@ -12,7 +12,7 @@ namespace ant{
             if(Utils::RectContains(eBounds,Config::screenSize)){
                 if(rotation == -90){
                     sf::Vector2f currentPos = sf::Vector2f(position.x+eBounds.width,position.y + eBounds.height);
-                    for(int x=currentPos.x;x<(currentPos.x + 10);++x){
+                    for(int x=currentPos.x;x<(currentPos.x + 20);++x){
                         for(int y=currentPos.y-1;y>(currentPos.y-eBounds.height-5);--y){
                             if(Config::screenSize.contains(x,y)){
                                 if((*map)[bounds.height * x + y].color.a == 255){
@@ -23,7 +23,7 @@ namespace ant{
                     }
                 }else if(rotation == 90){
                     sf::Vector2f currentPos = sf::Vector2f(position.x,position.y + eBounds.height);
-                    for(int x=currentPos.x;x>(currentPos.x-10);--x){
+                    for(int x=currentPos.x;x>(currentPos.x - 20);--x){
                         for(int y=currentPos.y-1;y>(currentPos.y-eBounds.height-5);--y){
                             if(Config::screenSize.contains(x,y)){
                                 if((*map)[bounds.height * x + y].color.a == 255){
@@ -304,7 +304,7 @@ namespace ant{
                                                    position.y + eBounds.height);
             if(Utils::RectContains(eBounds,Config::screenSize)){
                 for(int x=currentPos.x-10;x<(currentPos.x+eBounds.width+10);++x){
-                    for(int y=currentPos.y;y<(currentPos.y+10);++y){
+                    for(int y=currentPos.y-1;y<(currentPos.y+10);++y){
                         if(Config::screenSize.contains(x,y)){
                             if((*map)[bounds.height * x + y].color.a == 255){
                                 (*map)[bounds.height * x + y].color.a = 0;

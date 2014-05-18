@@ -161,6 +161,8 @@ namespace ant{
                         break;
                     case sf::Event::KeyPressed:
                         break;
+                    default:
+                        break;
                 }
             }
             win.clear();
@@ -227,6 +229,7 @@ namespace ant{
     }
     Game::~Game(){
         // liberamos recursos.
+        self.reset(this);
         assets->clear();
         win.close();
     }
