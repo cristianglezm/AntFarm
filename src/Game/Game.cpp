@@ -118,6 +118,9 @@ namespace ant{
                                                             ))
                                          );
                         }
+                        if(event.key.code == sf::Keyboard::P){
+                            isPause = !isPause;
+                        }
                         if(event.key.code == sf::Keyboard::T){
                             eventQueue->push(std::shared_ptr<baseEvent>(
                                     new Event<constructorSystem::command>(EventType::CHANGE_COMMAND,
@@ -166,13 +169,24 @@ namespace ant{
                 }
             }
             win.clear();
-            level->update(currentLevel,elapsedTime);
-            while(!eventQueue->isEmpty()){
-                gameEventDispatcher->DispatchEvent(eventQueue->pop());
+            if(!isPause){
+                level->update(currentLevel,elapsedTime);
+                while(!eventQueue->isEmpty()){
+                    gameEventDispatcher->DispatchEvent(eventQueue->pop());
+                }
             }
             level->render(currentLevel,win);
             win.draw(fps);
             win.draw(version);
+            if(isPause){
+                sf::Text pause;
+                pause.setFont(assets->getFont("Outwrite"));
+                pause.setCharacterSize(50);
+                pause.setPosition(Config::screenSize.width/3,Config::screenSize.height/3);
+                pause.setColor(sf::Color::Green);
+                pause.setString("PAUSE");
+                win.draw(pause);
+            }
             for(int i=0;i<buttons.size();++i){
                 win.draw(*buttons[i]);
             }
