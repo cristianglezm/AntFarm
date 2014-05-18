@@ -20,10 +20,10 @@ namespace ant{
         gameEventDispatcher->LevelComplete.addObserver(self);
         fps.setFont(assets->getFont("Outwrite"));
         fps.setCharacterSize(25);
-        fps.setPosition(745,550);
+        fps.setPosition(Config::screenSize.width-55,Config::screenSize.height-50);
         version.setFont(assets->getFont("Outwrite"));
         version.setCharacterSize(25);
-        version.setPosition(5,550);
+        version.setPosition(Config::screenSize.width-Config::screenSize.width+5,Config::screenSize.height-50);
         version.setString(Config::VERSION);
         GameSpeed = 1;
         loadGUIConf(Config::GUI_FILE);
