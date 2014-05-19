@@ -52,6 +52,7 @@ namespace ant{
             sf::Text version;
             int GameSpeed;
             bool isPause;
+            bool gameCompleted;
             // fps
             sf::Clock clock;
             sf::Time elapsedTime;

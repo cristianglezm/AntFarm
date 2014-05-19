@@ -1,12 +1,10 @@
 FEATURES
 ===
 
-Posibles mejoras de codigo.
---------------------------
+Posibles añadidos al juego
+###
 
-ComponentsMask -> ComponentsInfo
-		enum de componentes
-			enum class SPRITE_COMPONENT : long int{
-					id = 1 << 4;
-					sprite = 0;
-				}
+* Trampas
+* Enemigos
+* Paredes indestructibles
+* puntuaciones

@@ -17,6 +17,7 @@ namespace ant{
         totalLevels = level->size();
         self.reset(this);
         isPause = false;
+        gameCompleted=false;
         gameEventDispatcher->LevelComplete.addObserver(self);
         fps.setFont(assets->getFont("Outwrite"));
         fps.setCharacterSize(25);
@@ -34,7 +35,7 @@ namespace ant{
                 if(currentLevel<(totalLevels-1)){
                     ++currentLevel;
                 }else if(currentLevel == (totalLevels-1)){
-                    //currentLevel = 0;
+                    gameCompleted=true;
                 }
             }
                 break;
@@ -186,6 +187,15 @@ namespace ant{
                 pause.setColor(sf::Color::Green);
                 pause.setString("PAUSE");
                 win.draw(pause);
+            }
+            if(gameCompleted){
+                sf::Text gCompleted;
+                gCompleted.setFont(assets->getFont("Outwrite"));
+                gCompleted.setCharacterSize(50);
+                gCompleted.setPosition(Config::screenSize.width/3,Config::screenSize.height/3);
+                gCompleted.setColor(sf::Color::Green);
+                gCompleted.setString("game completed");
+                win.draw(gCompleted);
             }
             for(int i=0;i<buttons.size();++i){
                 win.draw(*buttons[i]);
