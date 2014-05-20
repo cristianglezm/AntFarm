@@ -18,7 +18,9 @@ namespace ant{
         self.reset(this);
         isPause = false;
         gameCompleted=false;
+        gameFailed = false;
         gameEventDispatcher->LevelComplete.addObserver(self);
+        gameEventDispatcher->LevelFailed.addObserver(self);
         fps.setFont(assets->getFont("Outwrite"));
         fps.setCharacterSize(25);
         fps.setPosition(Config::screenSize.width-55,Config::screenSize.height-50);
@@ -37,6 +39,10 @@ namespace ant{
                 }else if(currentLevel == (totalLevels-1)){
                     gameCompleted=true;
                 }
+            }
+                break;
+            case EventType::LEVEL_FAILED:{
+                gameFailed = true;
             }
                 break;
         }
@@ -194,8 +200,17 @@ namespace ant{
                 gCompleted.setCharacterSize(50);
                 gCompleted.setPosition(Config::screenSize.width/3,Config::screenSize.height/3);
                 gCompleted.setColor(sf::Color::Green);
-                gCompleted.setString("game completed");
+                gCompleted.setString("Game Completed");
                 win.draw(gCompleted);
+            }
+            if(gameFailed){
+                sf::Text gFailed;
+                gFailed.setFont(assets->getFont("Outwrite"));
+                gFailed.setCharacterSize(50);
+                gFailed.setPosition(Config::screenSize.width/3,Config::screenSize.height/3);
+                gFailed.setColor(sf::Color::Green);
+                gFailed.setString("Game Failed");
+                win.draw(gFailed);
             }
             for(int i=0;i<buttons.size();++i){
                 win.draw(*buttons[i]);

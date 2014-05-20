@@ -53,6 +53,7 @@ namespace ant{
             int GameSpeed;
             bool isPause;
             bool gameCompleted;
+            bool gameFailed;
             // fps
             sf::Clock clock;
             sf::Time elapsedTime;

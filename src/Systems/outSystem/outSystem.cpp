@@ -50,6 +50,8 @@ namespace ant{
             if(savedEntities==totalEntities){
                 eventQueue->push(std::shared_ptr<baseEvent>(new Event<>(EventType::LEVEL_COMPLETE)));
             }
+        }else{
+            eventQueue->push(std::shared_ptr<baseEvent>(new Event<>(EventType::LEVEL_FAILED)));
         }
     }
     outSystem::~outSystem(){

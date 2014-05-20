@@ -9,23 +9,25 @@ namespace ant{
             case EventType::COLLISION_EVENT:
                 onCollision.notifyObservers(e);
                 return true;
-                break;
             case EventType::CHANGE_OVERTIME:
             case EventType::CHANGE_NENTITIES:
                 spawnEvents.notifyObservers(e);
                 return true;
-                break;
             case EventType::CHANGE_COMMAND:
                 ChangeCommand.notifyObservers(e);
-                break;
+                return true;
             case EventType::SELECT_ENTITY:
                 ClickEvents.notifyObservers(e);
-                break;
+                return true;
             case EventType::OUT_MAP:
                 outMap.notifyObservers(e);
+                return true;
             case EventType::LEVEL_COMPLETE:
                 LevelComplete.notifyObservers(e);
-                break;
+                return true;
+            case EventType::LEVEL_FAILED:
+                LevelFailed.notifyObservers(e);
+                return true;
         }
         return false;
     }
