@@ -12,6 +12,7 @@ namespace ant{
     ,currentLevel(0){
         eventQueue = level->getEventQueue();
         assets = level->getAssetManager();
+        loadConfig(Config::CONFIG_FILE);
         //win.setFramerateLimit(60);
         //win.setVerticalSyncEnabled(true);
         totalLevels = level->size();
@@ -21,10 +22,10 @@ namespace ant{
         gameFailed = false;
         gameEventDispatcher->LevelComplete.addObserver(self);
         gameEventDispatcher->LevelFailed.addObserver(self);
-        fps.setFont(assets->getFont("Outwrite"));
+        fps.setFont(assets->getFont(font));
         fps.setCharacterSize(25);
         fps.setPosition(Config::screenSize.width-55,Config::screenSize.height-50);
-        version.setFont(assets->getFont("Outwrite"));
+        version.setFont(assets->getFont(font));
         version.setCharacterSize(25);
         version.setPosition(Config::screenSize.width-Config::screenSize.width+5,Config::screenSize.height-50);
         version.setString(Config::VERSION);
@@ -62,6 +63,9 @@ namespace ant{
             sf::Event event;
             while(win.pollEvent(event)){
                 switch(event.type){
+                    case sf::Event::LostFocus:
+                        isPause = true;
+                    break;
                     case sf::Event::Closed:
                         running = false;
                         break;
@@ -187,7 +191,7 @@ namespace ant{
             win.draw(version);
             if(isPause){
                 sf::Text pause;
-                pause.setFont(assets->getFont("Outwrite"));
+                pause.setFont(assets->getFont(font));
                 pause.setCharacterSize(50);
                 pause.setPosition(Config::screenSize.width/3,Config::screenSize.height/3);
                 pause.setColor(sf::Color::Green);
@@ -196,16 +200,16 @@ namespace ant{
             }
             if(gameCompleted){
                 sf::Text gCompleted;
-                gCompleted.setFont(assets->getFont("Outwrite"));
+                gCompleted.setFont(assets->getFont(font));
                 gCompleted.setCharacterSize(50);
                 gCompleted.setPosition(Config::screenSize.width/3,Config::screenSize.height/3);
                 gCompleted.setColor(sf::Color::Green);
-                gCompleted.setString("Game Completed");
+                gCompleted.setString("Game completed");
                 win.draw(gCompleted);
             }
             if(gameFailed){
                 sf::Text gFailed;
-                gFailed.setFont(assets->getFont("Outwrite"));
+                gFailed.setFont(assets->getFont(font));
                 gFailed.setCharacterSize(50);
                 gFailed.setPosition(Config::screenSize.width/3,Config::screenSize.height/3);
                 gFailed.setColor(sf::Color::Green);
@@ -221,6 +225,13 @@ namespace ant{
             lastFrame = elapsedTime;
         }
     }
+    void Game::loadConfig(const std::string& filename){
+        std::fstream file(filename);
+        JsonBox::Value v(file);
+        if(v["Config"]["font"].getString() != ""){
+            font = v["Config"]["font"].getString();
+        }
+    }
     void Game::loadGUIConf(const std::string& filename){
         std::fstream file(filename);
         JsonBox::Value v(file);
@@ -232,7 +243,9 @@ namespace ant{
                 sf::Vector2f bSize(v["GUI"]["buttons"][size_t(i)]["size"]["width"].getInt(),
                                    v["GUI"]["buttons"][size_t(i)]["size"]["height"].getInt());
                 sf::Text t;
-                t.setFont(assets->getFont("Outwrite"));
+                if(v["GUI"]["buttons"][size_t(i)]["text"]["font"].getString() != ""){
+                    t.setFont(assets->getFont(v["GUI"]["buttons"][size_t(i)]["text"]["font"].getString()));
+                }
                 t.setString(v["GUI"]["buttons"][size_t(i)]["text"]["string"].getString());
                 t.setPosition(pos);
                 t.setCharacterSize(v["GUI"]["buttons"][size_t(i)]["text"]["size"].getInt());

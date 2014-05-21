@@ -74,6 +74,10 @@ namespace ant{
              * @param win sf::RenderWindow & ventana a la cual dibujar.
              */
             void render(long int id,sf::RenderWindow& win);
+            /**
+             * @brief Limpia los mundos que contiene.
+             */
+            void clear();
             ~WorldManager();
         private:
             map worlds;

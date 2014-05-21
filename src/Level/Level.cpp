@@ -1,4 +1,5 @@
 #include <Level/Level.hpp>
+
 namespace ant{
     Level::Level(const std::string& assetsFilename,sf::FloatRect bounds,std::shared_ptr<GameEventDispatcher> ged)
     :levels(new WorldManager())
@@ -9,7 +10,8 @@ namespace ant{
         init(bounds);
     }
     void Level::init(const sf::FloatRect& bounds){
-        loadLevel(bounds,"data/config/levels.json");
+        levels->clear();
+        loadLevel(bounds,Config::LEVELS_FILE);
     }
     bool Level::loadLevel(const sf::FloatRect& bounds,const std::string& filename){
         std::fstream file(filename);

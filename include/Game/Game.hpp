@@ -32,6 +32,11 @@ namespace ant{
              * @param filename std::string
              */
              void loadGUIConf(const std::string& filename);
+             /**
+              * @brief Carga la configuracion del tipo de fuente.
+              * @param filename std::string
+              */
+             void loadConfig(const std::string& filename);
             ~Game();
         private:
             /**
@@ -40,6 +45,7 @@ namespace ant{
              * @return float
              */
             float getFPS(const sf::Time& time);
+        private:
             std::shared_ptr<EventQueue> eventQueue;
             std::shared_ptr<GameEventDispatcher> gameEventDispatcher;
             std::shared_ptr<Level> level;
@@ -54,6 +60,7 @@ namespace ant{
             bool isPause;
             bool gameCompleted;
             bool gameFailed;
+            std::string font;
             // fps
             sf::Clock clock;
             sf::Time elapsedTime;

@@ -100,7 +100,7 @@ namespace ant{
              * @brief Devuelve los estados que tiene la entidad.
              * @param statesID long int id de los estados.
              * @code
-             *  is(States::FALLING | States::OnFIRE);
+             *  e->is(States::FALLING | States::OnFIRE);
              * @endcode
              * @return bool
              */

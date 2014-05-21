@@ -1,5 +1,5 @@
 #include <WorldManager/WorldManager.hpp>
-#include <iostream>
+
 namespace ant{
     WorldManager::WorldManager(){
 
@@ -33,6 +33,9 @@ namespace ant{
         }else{
             worlds.at(id)->render(win);
         }
+    }
+    void WorldManager::clear(){
+        worlds.clear();
     }
     WorldManager::~WorldManager(){
 

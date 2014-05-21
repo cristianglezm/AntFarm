@@ -8,6 +8,7 @@
 #include <WorldFactory/WorldFactory.hpp>
 #include <EventQueue/EventQueue.hpp>
 #include <EntityFactory/EntityFactory.hpp>
+#include <Config.hpp>
 
 namespace ant{
     /**
