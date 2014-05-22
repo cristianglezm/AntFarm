@@ -259,7 +259,7 @@ std::shared_ptr&lt; <link linkend="dd/d12/classant_1_1_entity_manager">EntityMan
                             <row>
                                 <entry>ot</entry>
                                 <entry>
-<para>sf::Time cantidad para la cual usara para crear las entidades. </para>
+<para>sf::Time Tiempo para crear las entidades cada X tiempo. </para>
 </entry>
                             </row>
                             <row>
@@ -275,9 +275,9 @@ std::shared_ptr&lt; <link linkend="dd/d12/classant_1_1_entity_manager">EntityMan
 </entry>
                             </row>
                             <row>
-                                <entry>long</entry>
+                                <entry>state</entry>
                                 <entry>
-<para>int states initial states when entities are created. </para>
+<para>long int Estados iniciales para cuando las entidades son creadas. </para>
 </entry>
                             </row>
                         </tbody>
@@ -288,7 +288,7 @@ std::shared_ptr&lt; <link linkend="dd/d12/classant_1_1_entity_manager">EntityMan
 
             </section>
             <section xml:id="db/ddf/classant_1_1spawn_system_1a39010e5a88525ea18c0524b296ad18bf">
-                <title>void ant::spawnSystem::setStates (long int state)</title> <emphasis></emphasis>
+                <title>void ant::spawnSystem::setStates (long int state)</title> <emphasis>Establece el estado por defecto que pondra a las entidades.</emphasis>
                 
 <para>
                 <formalpara>
@@ -298,8 +298,11 @@ std::shared_ptr&lt; <link linkend="dd/d12/classant_1_1_entity_manager">EntityMan
                         <tgroup cols="2" align="left" colsep="1" rowsep="1">
                         <tbody>
                             <row>
-                                <entry></entry>
-                                <entry></entry>
+                                <entry>state</entry>
+                                <entry>
+<para>long int estados de las entidades <programlisting><link linkend="db/ddf/classant_1_1spawn_system_1a39010e5a88525ea18c0524b296ad18bf">setStates</link>(<link linkend="d7/daa/class_states_1ae464e17ebc3214e3c17186d614e37c54">States::FALLING</link>&#32;|&#32;STATES::ONFIRE);
+</programlisting> </para>
+</entry>
                             </row>
                         </tbody>
                         </tgroup>
@@ -309,11 +312,11 @@ std::shared_ptr&lt; <link linkend="dd/d12/classant_1_1_entity_manager">EntityMan
 
             </section>
             <section xml:id="db/ddf/classant_1_1spawn_system_1a958514aaac9187f9f95a8de9909d8238">
-                <title>const long int ant::spawnSystem::getStates () const </title> <emphasis></emphasis>
+                <title>const long int ant::spawnSystem::getStates () const </title> <emphasis>Obtiene los estados que pone por defecto al crear las entidades.</emphasis>
                 
 <para><formalpara><title>Returns: </title>
 
-<para></para>
+<para>long int </para>
 </formalpara>
 </para>
 
@@ -349,6 +352,25 @@ std::shared_ptr&lt; <link linkend="dd/d12/classant_1_1_entity_manager">EntityMan
                 <title>void ant::spawnSystem::onNotify (std::shared_ptr&lt; baseEvent &gt; e)</title> <emphasis>Recibe eventos para cambiar el tiempo
 o el numero de entidades que tiene que crear.</emphasis>
                 
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>e</entry>
+                                <entry>
+<para>std::shared_ptr&lt;baseEvent&gt; </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
             </section>
             <section xml:id="db/ddf/classant_1_1spawn_system_1aa6aaf615d55fd08d59a0a5ad9faeb024">
                 <title>ant::spawnSystem::~spawnSystem ()</title> <emphasis></emphasis>

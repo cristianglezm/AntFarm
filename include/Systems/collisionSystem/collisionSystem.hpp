@@ -27,6 +27,7 @@ namespace ant{
             /**
              * @brief Constructor por defecto.
              * @param bounds sf::FloatRect rectangulo del QuadTree.
+             * @param GameMap sf::VertexArray * Terreno del juego.
              */
             collisionSystem(sf::FloatRect bounds,sf::VertexArray* GameMap);
             /**

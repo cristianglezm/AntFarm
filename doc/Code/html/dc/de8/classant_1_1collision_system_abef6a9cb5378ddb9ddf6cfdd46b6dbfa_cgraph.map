@@ -1,6 +1,17 @@
 <map id="ant::collisionSystem::update" name="ant::collisionSystem::update">
 <area shape="rect" id="node2" href="$d6/d94/classant_1_1_utils_1_1_quadtree.html#aace6744ed7023825a1863f9953421a4b" title="Limpia el quadtree y sus nodos. " alt="" coords="206,5,341,47"/>
-<area shape="rect" id="node3" href="$d6/d94/classant_1_1_utils_1_1_quadtree.html#af1f8e490445ee493d7639dc6f621bdfc" title="Agrega un puntero a una entidad, la posiciona en el nodo correcto, si no cabe en ningun nodo inferior..." alt="" coords="206,71,341,112"/>
-<area shape="rect" id="node4" href="$d6/d94/classant_1_1_utils_1_1_quadtree.html#acef35673069f1edbafd93579e0a64df7" title="Agrega las entidades del mismo sector que la entidad especificada a la lista(la misma entidad especif..." alt="" coords="206,136,341,177"/>
-<area shape="rect" id="node5" href="$db/dbc/namespaceant_1_1_utils.html#a95b128173f4556c262ec4e9d3df2cbfa" title="Comprueba que un rectangulo esta completamente dentro de otro. " alt="" coords="193,202,353,229"/>
+<area shape="rect" id="node3" href="$d6/d94/classant_1_1_utils_1_1_quadtree.html#af1f8e490445ee493d7639dc6f621bdfc" title="Agrega un puntero a una entidad, la posiciona en el nodo correcto, si no cabe en ningun nodo inferior..." alt="" coords="206,136,341,177"/>
+<area shape="rect" id="node11" href="$d6/d94/classant_1_1_utils_1_1_quadtree.html#acef35673069f1edbafd93579e0a64df7" title="Agrega las entidades del mismo sector que la entidad especificada a la lista(la misma entidad especif..." alt="" coords="206,71,341,112"/>
+<area shape="rect" id="node12" href="$db/dbc/namespaceant_1_1_utils.html#a95b128173f4556c262ec4e9d3df2cbfa" title="Comprueba que un rectangulo esta completamente dentro de otro. " alt="" coords="193,202,353,229"/>
+<area shape="rect" id="node13" href="$dc/de8/classant_1_1collision_system.html#a3d90ed206a38d715ba267853d79886d6" title="Comprueba si una entidad y sus bordes estan dentro del mapa. " alt="" coords="203,253,343,295"/>
+<area shape="rect" id="node4" href="$d6/d94/classant_1_1_utils_1_1_quadtree.html#a9a6fd9ec9d64fbb7e272828159241445" title="Obtiene el indice(nodo donde esta) de la entidad especificada. " alt="" coords="415,71,550,112"/>
+<area shape="rect" id="node9" href="$d6/d94/classant_1_1_utils_1_1_quadtree.html#abbe98f5025b0127b91c97142237f13db" title="Metodo para dividir el quadtree. " alt="" coords="415,136,550,177"/>
+<area shape="rect" id="node5" href="$dc/d73/classant_1_1_entity.html#a78b3cd3f28801cbd21faf67e7dd028e4" title="Obtiene una referencia al componente. " alt="" coords="612,19,787,46"/>
+<area shape="rect" id="node7" href="$d4/dd4/classant_1_1base_component.html#a88bc0531ed99c8978e95257131653efe" title="Getter de las propiedades del componente,. " alt="" coords="628,71,771,112"/>
+<area shape="rect" id="node6" href="$dc/d73/classant_1_1_entity.html#adfd34f851602409da9db04f6488d58eb" title="Devuelve si esta entidad tiene el componente. " alt="" coords="845,19,1023,46"/>
+<area shape="rect" id="node8" href="$d3/d70/classant_1_1_component.html#acbf5db9e0be87eba019e193240ea9982" title="Getter de las propiedades del componente,. " alt="" coords="835,78,1033,105"/>
+<area shape="rect" id="node10" href="$d6/d94/classant_1_1_utils_1_1_quadtree.html#a2dc005f81ddcd318dac8d1d53460e3ff" title="Constructor principal, necesita que se especifique el rectangulo que Ocupara. " alt="" coords="632,136,767,177"/>
+<area shape="rect" id="node14" href="$dc/d73/classant_1_1_entity.html#ac47ecff29b8d86d822f0ce83ace4ed8c" title="Añade un estado a la entidad. " alt="" coords="411,235,554,262"/>
+<area shape="rect" id="node15" href="$dc/d73/classant_1_1_entity.html#a362f4c8352e409e30284429d535fcc62" title="Elimina un estado de la entidad. " alt="" coords="401,286,564,313"/>
+<area shape="rect" id="node16" href="$dc/d73/classant_1_1_entity.html#a60b2c39a46a2fb44cb63105e2b3a23b1" title="Devuelve los estados que tiene la entidad. " alt="" coords="649,286,749,313"/>
 </map>

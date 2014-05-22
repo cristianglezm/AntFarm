@@ -1,0 +1,5 @@
+<map id="ant::Utils::Quadtree::getIndex" name="ant::Utils::Quadtree::getIndex">
+<area shape="rect" id="node2" href="$d6/d94/classant_1_1_utils_1_1_quadtree.html#af1f8e490445ee493d7639dc6f621bdfc" title="Agrega un puntero a una entidad, la posiciona en el nodo correcto, si no cabe en ningun nodo inferior..." alt="" coords="188,5,323,47"/>
+<area shape="rect" id="node4" href="$d6/d94/classant_1_1_utils_1_1_quadtree.html#acef35673069f1edbafd93579e0a64df7" title="Agrega las entidades del mismo sector que la entidad especificada a la lista(la misma entidad especif..." alt="" coords="188,71,323,112"/>
+<area shape="rect" id="node3" href="$dc/de8/classant_1_1collision_system.html#abef6a9cb5378ddb9ddf6cfdd46b6dbfa" title="Comprueba las colisiones de las entidades. " alt="" coords="371,39,511,80"/>
+</map>

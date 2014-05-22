@@ -1,0 +1,5 @@
+<map id="ant::collisionSystem::testTerrainCollision" name="ant::collisionSystem::testTerrainCollision">
+<area shape="rect" id="node2" href="$dc/d73/classant_1_1_entity.html#ac47ecff29b8d86d822f0ce83ace4ed8c" title="Añade un estado a la entidad. " alt="" coords="203,5,346,32"/>
+<area shape="rect" id="node3" href="$dc/d73/classant_1_1_entity.html#a362f4c8352e409e30284429d535fcc62" title="Elimina un estado de la entidad. " alt="" coords="193,56,356,83"/>
+<area shape="rect" id="node4" href="$dc/d73/classant_1_1_entity.html#a60b2c39a46a2fb44cb63105e2b3a23b1" title="Devuelve los estados que tiene la entidad. " alt="" coords="404,56,504,83"/>
+</map>

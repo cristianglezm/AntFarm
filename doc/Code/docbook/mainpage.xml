@@ -2,4 +2,16 @@
 <chapter xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink">
     <title></title>
 
+<para>Juego sobre hormigas atrapadas que deben escapar. <formalpara><title>Author: </title>
+
+<para>Cristian Glez <link xlink:href="mailto:Cristian.glez.m@gmail.com">Cristian.glez.m@gmail.com</link> </para>
+<simplesect/>
+<para>Xavi Diaz <link xlink:href="mailto:xdiazcarrasco@iesesteveterradas.cat">xdiazcarrasco@iesesteveterradas.cat</link> </para>
+</formalpara>
+<formalpara><title>Version: </title>
+
+<para>0.1 </para>
+</formalpara>
+</para>
+
 </chapter>

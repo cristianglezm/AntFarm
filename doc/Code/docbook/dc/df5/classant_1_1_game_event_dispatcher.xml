@@ -48,6 +48,13 @@
                     </listitem>
                 </itemizedlist>
             </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Subject LevelFailed<para><emphasis>El sistema de out envia este evento.</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
         </simplesect>
         <simplesect>
             <title></title>

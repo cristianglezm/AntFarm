@@ -9,6 +9,7 @@
     <programlisting>#include &lt;WorldFactory/WorldFactory.hpp&gt;</programlisting>
     <programlisting>#include &lt;EventQueue/EventQueue.hpp&gt;</programlisting>
     <programlisting>#include &lt;EntityFactory/EntityFactory.hpp&gt;</programlisting>
+    <programlisting>#include &lt;Config.hpp&gt;</programlisting>
         <simplesect>
             <title> Classes </title>
             <para>

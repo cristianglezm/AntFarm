@@ -207,7 +207,7 @@ std::shared_ptr&lt; <link linkend="dd/d12/classant_1_1_entity_manager">EntityMan
             <section xml:id="d8/d12/classant_1_1constructor_system_1a0977052dc8865f8e79ae03b4f3e18d8a">
                 <title>typedef void(* ant::constructorSystem::command)(Entity *, sf::VertexArray *, sf::FloatRect)</title> <emphasis>Comandos que recibe por eventos.</emphasis>
                 
-<para><programlisting>event&lt;command&gt;(<link linkend="dd/ded/class_event_type_1a629e3d685d63919782264bfdce5a0840">EventType::CHANGE_COMMAND</link>,[](Entity*&#32;e,sf::VertexArray*&#32;map,&#32;sf::FloatRect&#32;mapBounds){
+<para><programlisting>Event&lt;command&gt;(<link linkend="dd/ded/class_event_type_1a629e3d685d63919782264bfdce5a0840">EventType::CHANGE_COMMAND</link>,[](Entity*&#32;e,sf::VertexArray*&#32;<link linkend="d8/d12/classant_1_1constructor_system_1a4d5ae03552b88bbfdcda91608b19e036">map</link>,&#32;sf::FloatRect&#32;mapBounds){
 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis>//&#32;do&#32;something</emphasis>
 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;});
 </programlisting> </para>

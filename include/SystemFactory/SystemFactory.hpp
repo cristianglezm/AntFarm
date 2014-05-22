@@ -58,6 +58,7 @@ namespace ant{
             std::shared_ptr<renderSystem> createRenderSystem();
             /**
              * @brief Crea un sistema de colision.
+             * @param GameMap sf::VertexArray * Terreno del juego.
              * @param bounds sf::FloatRect rectangulo para zona que ocupa.
              * @return std::shared_ptr<collisionSystem>
              */

@@ -20,20 +20,23 @@ namespace ant{
             /**
              * @brief constructor por defecto.
              * @param nEntities int numero de entidades a crear.
-             * @param ot sf::Time cantidad para la cual usara para crear las entidades.
+             * @param ot sf::Time Tiempo para crear las entidades cada X tiempo.
              * @param ef EntityFactory * Para crear las entidades.
              * @param spawnPoint sf::Vector2f sitio donde saldran las entidades.
-             * @param long int states initial states when entities are created.
+             * @param state long int Estados iniciales para cuando las entidades son creadas.
              */
             spawnSystem(int nEntities, EntityFactory* ef,sf::Time ot,sf::Vector2f spawnPoint,long int state);
             /**
-             * @brief
-             * @param
+             * @brief Establece el estado por defecto que pondra a las entidades.
+             * @param state long int estados de las entidades
+             * @code
+             *  setStates(States::FALLING | STATES::ONFIRE);
+             * @endcode
              */
             void setStates(long int state);
             /**
-             * @brief
-             * @return
+             * @brief Obtiene los estados que pone por defecto al crear las entidades.
+             * @return long int
              */
             inline const long int getStates() const { return states; }
             /**
@@ -48,7 +51,7 @@ namespace ant{
             /**
              * @brief Recibe eventos para cambiar el tiempo
              * o el numero de entidades que tiene que crear.
-             *
+             * @param e std::shared_ptr<baseEvent>
              */
             void onNotify(std::shared_ptr<baseEvent> e);
             ~spawnSystem();

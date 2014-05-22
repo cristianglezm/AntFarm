@@ -159,7 +159,7 @@ long int id, sf::RenderWindow &amp; win)</para>
 <para>0.1 </para>
 </formalpara>
 </para>
-                <para>Definition at line 18 of file Level.hpp</para>
+                <para>Definition at line 19 of file Level.hpp</para>
                 <para>The Documentation for this struct was generated from the following file: </para>
                 <para><itemizedlist><listitem><para>Level.hpp</para></listitem></itemizedlist></para>
         </simplesect>

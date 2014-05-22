@@ -93,6 +93,27 @@
             <para>
                 <itemizedlist>
                     <listitem>
+                        <para>bool gameCompleted</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool gameFailed</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::string font</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
                         <para>sf::Clock clock</para>
                     </listitem>
                 </itemizedlist>
@@ -177,6 +198,14 @@ const std::string &amp; filename)</para>
             <para>
                 <itemizedlist>
                     <listitem>
+                        <para>void <link linkend="d1/db7/classant_1_1_game_1a2d835fb5158ae8f339d7ded779b22193">loadConfig</link> (
+const std::string &amp; filename)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
                         <para> <link linkend="d1/db7/classant_1_1_game_1a2b0952856df13e8cd3c7eda57d9811d8">~Game</link> (
 )</para>
                     </listitem>
@@ -229,6 +258,29 @@ const sf::Time &amp; time)</para>
             </section>
             <section xml:id="d1/db7/classant_1_1_game_1ab1120f92a3807222948bbf68811a763a">
                 <title>void ant::Game::loadGUIConf (const std::string &amp;filename)</title> <emphasis>Carga la interfaz grafica.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>filename</entry>
+                                <entry>
+<para>std::string </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="d1/db7/classant_1_1_game_1a2d835fb5158ae8f339d7ded779b22193">
+                <title>void ant::Game::loadConfig (const std::string &amp;filename)</title> <emphasis>Carga la configuracion del tipo de fuente.</emphasis>
                 
 <para>
                 <formalpara>

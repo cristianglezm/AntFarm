@@ -58,6 +58,20 @@
             <para>
                 <itemizedlist>
                     <listitem>
+                        <para>static const std::string LEVELS_FILE</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static const std::string CONFIG_FILE</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
                         <para>static const sf::FloatRect screenSize</para>
                     </listitem>
                 </itemizedlist>

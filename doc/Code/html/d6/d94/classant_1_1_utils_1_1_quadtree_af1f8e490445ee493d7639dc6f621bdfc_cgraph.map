@@ -1,0 +1,9 @@
+<map id="ant::Utils::Quadtree::insert" name="ant::Utils::Quadtree::insert">
+<area shape="rect" id="node2" href="$d6/d94/classant_1_1_utils_1_1_quadtree.html#a9a6fd9ec9d64fbb7e272828159241445" title="Obtiene el indice(nodo donde esta) de la entidad especificada. " alt="" coords="188,57,323,98"/>
+<area shape="rect" id="node7" href="$d6/d94/classant_1_1_utils_1_1_quadtree.html#abbe98f5025b0127b91c97142237f13db" title="Metodo para dividir el quadtree. " alt="" coords="188,122,323,163"/>
+<area shape="rect" id="node3" href="$dc/d73/classant_1_1_entity.html#a78b3cd3f28801cbd21faf67e7dd028e4" title="Obtiene una referencia al componente. " alt="" coords="371,5,545,32"/>
+<area shape="rect" id="node5" href="$d4/dd4/classant_1_1base_component.html#a88bc0531ed99c8978e95257131653efe" title="Getter de las propiedades del componente,. " alt="" coords="387,57,529,98"/>
+<area shape="rect" id="node4" href="$dc/d73/classant_1_1_entity.html#adfd34f851602409da9db04f6488d58eb" title="Devuelve si esta entidad tiene el componente. " alt="" coords="604,5,781,32"/>
+<area shape="rect" id="node6" href="$d3/d70/classant_1_1_component.html#acbf5db9e0be87eba019e193240ea9982" title="Getter de las propiedades del componente,. " alt="" coords="593,64,792,91"/>
+<area shape="rect" id="node8" href="$d6/d94/classant_1_1_utils_1_1_quadtree.html#a2dc005f81ddcd318dac8d1d53460e3ff" title="Constructor principal, necesita que se especifique el rectangulo que Ocupara. " alt="" coords="391,122,525,163"/>
+</map>

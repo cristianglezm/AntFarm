@@ -1,7 +1,7 @@
 <map id="ant::Observer" name="ant::Observer">
-<area shape="rect" id="node2" href="$d8/d12/classant_1_1constructor_system.html" title="Sistema encargado de que las hormigas construyan etc. " alt="" coords="5,175,165,311"/>
-<area shape="rect" id="node3" href="$d1/db7/classant_1_1_game.html" title="Clase Principal del juego. " alt="" coords="189,175,304,311"/>
-<area shape="rect" id="node4" href="$d6/d6c/classant_1_1movement_system.html" title="Sistema encargado de hacer que las entidades se muevan. " alt="" coords="328,175,483,311"/>
-<area shape="rect" id="node5" href="$dd/d76/classant_1_1out_system.html" title="Sistema encargado de quitar a las entidades que chocan con las entidades con componente OUT..." alt="" coords="507,167,621,318"/>
-<area shape="rect" id="node6" href="$db/ddf/classant_1_1spawn_system.html" title="Sistema encargado de crear las entidades sobre el tiempo establecido. " alt="" coords="645,160,777,325"/>
+<area shape="rect" id="node2" href="$d8/d12/classant_1_1constructor_system.html" title="Sistema encargado de que las hormigas construyan etc. " alt="" coords="5,307,165,487"/>
+<area shape="rect" id="node3" href="$d1/db7/classant_1_1_game.html" title="Clase Principal del juego. " alt="" coords="190,160,346,633"/>
+<area shape="rect" id="node4" href="$d6/d6c/classant_1_1movement_system.html" title="Sistema encargado de hacer que las entidades se muevan. " alt="" coords="371,329,525,465"/>
+<area shape="rect" id="node5" href="$dd/d76/classant_1_1out_system.html" title="Sistema encargado de quitar a las entidades que chocan con las entidades con componente OUT..." alt="" coords="550,314,663,479"/>
+<area shape="rect" id="node6" href="$db/ddf/classant_1_1spawn_system.html" title="Sistema encargado de crear las entidades sobre el tiempo establecido. " alt="" coords="687,263,819,531"/>
 </map>

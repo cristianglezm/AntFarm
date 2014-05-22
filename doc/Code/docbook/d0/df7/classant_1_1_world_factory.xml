@@ -315,6 +315,12 @@ std::shared_ptr&lt; <link linkend="dc/df5/classant_1_1_game_event_dispatcher">Ga
 </entry>
                             </row>
                             <row>
+                                <entry>background</entry>
+                                <entry>
+<para>std::string nombre de la textura del fondo. </para>
+</entry>
+                            </row>
+                            <row>
                                 <entry>lvl</entry>
                                 <entry>
 <para>sf::Image imagen a cargar con la informacion del nivel. </para>

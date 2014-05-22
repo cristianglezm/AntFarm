@@ -1,3 +1,4 @@
 <map id="ant::collisionSystem" name="ant::collisionSystem">
 <area shape="rect" id="node2" href="$de/d48/classant_1_1_system.html" title="Clase base para los sistemas. " alt="" coords="5,5,189,317"/>
+<area shape="rect" id="node3" href="$d6/d94/classant_1_1_utils_1_1_quadtree.html" title="Clase para reducir el numero de test de collisiones. " alt="" coords="214,27,349,295"/>
 </map>

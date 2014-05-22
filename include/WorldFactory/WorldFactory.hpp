@@ -59,6 +59,7 @@ namespace ant{
              *  -# Color verde es la puerta de salida del nivel.
              *
              * @param name std::string nombre del nivel.
+             * @param background std::string nombre de la textura del fondo.
              * @param lvl sf::Image imagen a cargar con la informacion del nivel.
              * @param nEntities int numero de entidades que tendra el nivel.
              * @param overTime sf::Time tiempo maximo para pasarse el nivel.

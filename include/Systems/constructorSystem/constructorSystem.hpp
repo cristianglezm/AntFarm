@@ -19,7 +19,7 @@ namespace ant{
             /**
              * @brief Comandos que recibe por eventos.
              * @code
-             *  event<command>(EventType::CHANGE_COMMAND,[](Entity* e,sf::VertexArray* map, sf::FloatRect mapBounds){
+             *  Event<command>(EventType::CHANGE_COMMAND,[](Entity* e,sf::VertexArray* map, sf::FloatRect mapBounds){
                                // do something
                                });
              * @endcode

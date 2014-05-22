@@ -108,6 +108,14 @@ long int id, sf::RenderWindow &amp; win)</para>
             <para>
                 <itemizedlist>
                     <listitem>
+                        <para>void <link linkend="dc/dbd/classant_1_1_world_manager_1a58b029f457d22afa789eaec4683539eb">clear</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
                         <para> <link linkend="dc/dbd/classant_1_1_world_manager_1a6901058e71f2f0b1855c495ce060be76">~WorldManager</link> (
 )</para>
                     </listitem>
@@ -319,6 +327,10 @@ long int id, sf::RenderWindow &amp; win)</para>
                 </formalpara>
                 </para>
 
+            </section>
+            <section xml:id="dc/dbd/classant_1_1_world_manager_1a58b029f457d22afa789eaec4683539eb">
+                <title>void ant::WorldManager::clear ()</title> <emphasis>Limpia los mundos que contiene.</emphasis>
+                
             </section>
             <section xml:id="dc/dbd/classant_1_1_world_manager_1a6901058e71f2f0b1855c495ce060be76">
                 <title>ant::WorldManager::~WorldManager ()</title> <emphasis></emphasis>

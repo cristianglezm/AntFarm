@@ -493,7 +493,7 @@ const std::string &amp; name)</para>
                             <row>
                                 <entry>statesID</entry>
                                 <entry>
-<para>long int id de los estados. <programlisting><link linkend="dc/d73/classant_1_1_entity_1a60b2c39a46a2fb44cb63105e2b3a23b1">is</link>(<link linkend="d7/daa/class_states_1ae464e17ebc3214e3c17186d614e37c54">States::FALLING</link>&#32;|&#32;States::OnFIRE);
+<para>long int id de los estados. <programlisting>e-&gt;is(<link linkend="d7/daa/class_states_1ae464e17ebc3214e3c17186d614e37c54">States::FALLING</link>&#32;|&#32;States::OnFIRE);
 </programlisting> </para>
 </entry>
                             </row>

@@ -1,5 +1,9 @@
 <map id="ant::Entity::hasComponent" name="ant::Entity::hasComponent">
 <area shape="rect" id="node2" href="$dc/d73/classant_1_1_entity.html#a4b083a6d2567009fdff3a1fba2f4f2ee" title="Elimina el componente de la entidad. " alt="" coords="231,5,428,32"/>
 <area shape="rect" id="node3" href="$dc/d73/classant_1_1_entity.html#a78b3cd3f28801cbd21faf67e7dd028e4" title="Obtiene una referencia al componente. " alt="" coords="242,56,417,83"/>
-<area shape="rect" id="node4" href="$d6/d6c/classant_1_1movement_system.html#ab950deb32094a7c4e2ee2663c72b7ed7" title="Cuando recibe Eventos COLLISION_EVENT parara a las entidades si se mueven. " alt="" coords="476,49,628,90"/>
+<area shape="rect" id="node4" href="$d6/d6c/classant_1_1movement_system.html#ab950deb32094a7c4e2ee2663c72b7ed7" title="Cuando recibe Eventos COLLISION_EVENT parara a las entidades si se mueven. " alt="" coords="476,15,628,57"/>
+<area shape="rect" id="node5" href="$d6/d94/classant_1_1_utils_1_1_quadtree.html#a9a6fd9ec9d64fbb7e272828159241445" title="Obtiene el indice(nodo donde esta) de la entidad especificada. " alt="" coords="485,81,619,122"/>
+<area shape="rect" id="node6" href="$d6/d94/classant_1_1_utils_1_1_quadtree.html#af1f8e490445ee493d7639dc6f621bdfc" title="Agrega un puntero a una entidad, la posiciona en el nodo correcto, si no cabe en ningun nodo inferior..." alt="" coords="676,47,811,89"/>
+<area shape="rect" id="node8" href="$d6/d94/classant_1_1_utils_1_1_quadtree.html#acef35673069f1edbafd93579e0a64df7" title="Agrega las entidades del mismo sector que la entidad especificada a la lista(la misma entidad especif..." alt="" coords="676,113,811,154"/>
+<area shape="rect" id="node7" href="$dc/de8/classant_1_1collision_system.html#abef6a9cb5378ddb9ddf6cfdd46b6dbfa" title="Comprueba las colisiones de las entidades. " alt="" coords="859,81,999,122"/>
 </map>

@@ -277,6 +277,12 @@ int totalEntities)</para>
                         <tgroup cols="2" align="left" colsep="1" rowsep="1">
                         <tbody>
                             <row>
+                                <entry>GameMap</entry>
+                                <entry>
+<para>sf::VertexArray * Terreno del juego. </para>
+</entry>
+                            </row>
+                            <row>
                                 <entry>bounds</entry>
                                 <entry>
 <para>sf::FloatRect rectangulo para zona que ocupa. </para>
