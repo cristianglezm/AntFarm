@@ -85,7 +85,7 @@ namespace ant{
         }
         void Quadtree::clear(){
             entities.clear();
-            for(int i = 0; i < nodes.size();++i) {
+            for(unsigned int i = 0; i < nodes.size();++i) {
                 if(nodes[i] != nullptr){
                     nodes[i]->clear();
                     nodes[i] = nullptr;
@@ -103,7 +103,7 @@ namespace ant{
                return entities;
         }
         void Quadtree::render(sf::RenderWindow& win){
-            for(int i=0;i<nodes.size();++i){
+            for(unsigned int i=0;i<nodes.size();++i){
                 if(nodes[0] != nullptr){
                     nodes[i]->render(win);
                 }

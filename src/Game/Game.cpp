@@ -75,7 +75,7 @@ namespace ant{
                                     new Event<sf::Vector2i>(EventType::SELECT_ENTITY,
                                                             sf::Mouse::getPosition(win)))
                                          );
-                            for(int i=0;i<buttons.size();++i){
+                            for(unsigned int i=0;i<buttons.size();++i){
                                 if(buttons[i]->contains((sf::Vector2f)sf::Mouse::getPosition(win))){
                                     eventQueue->push(std::shared_ptr<baseEvent>(
                                     new Event<constructorSystem::command>(EventType::CHANGE_COMMAND,
@@ -216,7 +216,7 @@ namespace ant{
                 gFailed.setString("Game Failed");
                 win.draw(gFailed);
             }
-            for(int i=0;i<buttons.size();++i){
+            for(unsigned int i=0;i<buttons.size();++i){
                 win.draw(*buttons[i]);
             }
             win.display();
@@ -255,7 +255,7 @@ namespace ant{
                     sprite.setTexture(assets->getTexture(v["GUI"]["buttons"][size_t(i)]["imageID"].getString()));
                 }
                 std::string actionID = v["GUI"]["buttons"][size_t(i)]["action"].getString();
-                constructorSystem::command action;
+                constructorSystem::command action = [](Entity* e,sf::VertexArray* va,sf::FloatRect s){};
                 if(actionID == "climb"){
                     action = Constructions::climb;
                 }else if(actionID == "dig"){

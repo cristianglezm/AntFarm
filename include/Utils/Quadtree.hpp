@@ -59,9 +59,9 @@ namespace ant{
                 void render(sf::RenderWindow& win);
                 ~Quadtree();
             private:
-                const static int MAX_CAPACITY = 10;
-                const static int MAX_LEVEL = 1000;
-                int level;
+                const static unsigned int MAX_CAPACITY = 10;
+                const static unsigned int MAX_LEVEL = 1000;
+                unsigned int level;
                 std::array<std::unique_ptr<Quadtree>,4> nodes;
                 sf::FloatRect bounds;
                 list entities;
