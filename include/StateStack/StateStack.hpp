@@ -1,17 +1,16 @@
-#ifndef ANT_APPSTATE_STACK_HPP
-#define ANT_APPSTATE_STACK_HPP
+#ifndef ANT_STATE_STACK_HPP
+#define ANT_STATE_STACK_HPP
 #include <vector>
 #include <utility>
 #include <functional>
 #include <map>
-#include <AppStates/AppState.hpp>
 #include <AppStates/AppStates.hpp>
-
+#include <AppStates/AppState.hpp>
 #include <SFML/System/Time.hpp>
 #include <SFML/Window/Event.hpp>
 
 namespace ant{
-    class AppStateStack{
+    class StateStack{
         public:
             enum Action{
                 Push,
@@ -19,7 +18,7 @@ namespace ant{
                 Clear,
             };
         public:
-            explicit AppStateStack(Context context);
+            explicit StateStack(AppState::Context context);
             template <typename T>
             void registerState(AppStates::ID stateID);
             void update(sf::Time dt);
@@ -29,7 +28,7 @@ namespace ant{
             void popState();
             void clearStates();
             bool isEmpty() const;
-            ~AppStateStack();
+            ~StateStack();
         private:
             AppState::uPtr createState(AppStates::ID stateID);
             void applyPendingChanges();
@@ -42,14 +41,15 @@ namespace ant{
         private:
             std::vector<AppState::uPtr>	mStack;
             std::vector<PendingChange> mPendingList;
-            Context mContext;
+            AppState::Context mContext;
             std::map<AppStates::ID, std::function<AppState::uPtr()>> mFactories;
         };
         template <typename T>
-        void AppStateStack::registerState(AppStates::ID stateID){
+        void StateStack::registerState(AppStates::ID stateID){
             mFactories[stateID] = [this] (){
                 return AppState::uPtr(new T(*this, mContext));
             };
         }
 }
-#endif // ANT_APPSTATE_STACK_HPP
+
+#endif // ANT_STATE_STACK_HPP

@@ -4,14 +4,14 @@ namespace ant{
     Application::Application()
     : mWindow(sf::VideoMode(Config::screenSize.width,Config::screenSize.height), "AntFarm", sf::Style::Close)
     , mAssets(new AssetManager())
-    , mAppStateStack(Context(mWindow,(*mAssets.get()))){
+    , mStateStack(AppState::Context(mWindow,(*mAssets.get()))){
         mAssets->loadAssets(Config::ASSETS_GAME_JSON);
-        mStatisticsText.setFont(mAssets->getFont("Outwrite"));
-        mStatisticsText.setPosition(5.f, 5.f);
-        mStatisticsText.setCharacterSize(10u);
+        //mStatisticsText.setFont(mAssets->getFont("Outwrite"));
+        //mStatisticsText.setPosition(5.f, 5.f);
+        //mStatisticsText.setCharacterSize(10u);
 
-        registerStates();
-        mAppStateStack.pushState(AppStates::Title);
+        //registerStates();
+        //mStateStack.pushState(AppStates::Title);
     }
     void Application::run(){
         sf::Clock clock;
@@ -23,7 +23,7 @@ namespace ant{
                 timeSinceLastUpdate -= TimePerFrame;
                 processInput();
                 update(TimePerFrame);
-                if(mAppStateStack.isEmpty()){
+                if(mStateStack.isEmpty()){
                     mWindow.close();
                 }
             }
@@ -33,18 +33,18 @@ namespace ant{
     void Application::processInput(){
         sf::Event event;
         while (mWindow.pollEvent(event)){
-            mAppStateStack.handleEvent(event);
+            mStateStack.handleEvent(event);
             if (event.type == sf::Event::Closed){
                 mWindow.close();
             }
         }
     }
     void Application::update(sf::Time dt){
-        mAppStateStack.update(dt);
+        mStateStack.update(dt);
     }
     void Application::render(){
         mWindow.clear();
-        mAppStateStack.render();
+        mStateStack.render();
         mWindow.setView(mWindow.getDefaultView());
         mWindow.display();
     }

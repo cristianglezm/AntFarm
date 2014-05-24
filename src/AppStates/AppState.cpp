@@ -1,10 +1,10 @@
 #include <AppStates/AppState.hpp>
 
 namespace ant{
-    Context::Context(sf::RenderWindow& window, AssetManager& assets)
+    AppState::Context::Context(sf::RenderWindow& window, AssetManager& assets)
     : window(&window)
     , assets(&assets){}
-    AppState::AppState(AppStateStack& Stack, AppState::Context context)
+    AppState::AppState(StateStack& Stack, AppState::Context context)
     : mStack(&Stack)
     , mContext(context){
 
@@ -18,7 +18,7 @@ namespace ant{
     void AppState::requestStateClear(){
         mStack->clearStates();
     }
-    Context	AppState::getContext() const{
+    AppState::Context AppState::getContext() const{
         return mContext;
     }
     AppState::~AppState(){

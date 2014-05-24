@@ -1,8 +1,7 @@
-#include <Game/Game.hpp>
-
+#include <Application/Application.hpp>
 
 int main(){
-    ant::Game g;
-    g.run();
+    ant::Application app;
+    app.run();
     return EXIT_SUCCESS;
 }

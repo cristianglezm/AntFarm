@@ -4,8 +4,8 @@
 #include <Config.hpp>
 #include <Utils/String.hpp>
 #include <AssetManager/AssetManager.hpp>
-#include <AppStateStack/AppStateStack.hpp>
-
+#include <StateStack/StateStack.hpp>
+#include <AppStates/AppState.hpp>
 #include <SFML/System/Time.hpp>
 #include <SFML/Graphics/RenderWindow.hpp>
 #include <SFML/Graphics/Text.hpp>
@@ -26,7 +26,7 @@ namespace ant{
             static const sf::Time TimePerFrame;
             sf::RenderWindow mWindow;
             std::shared_ptr<AssetManager> mAssets;
-            AppStateStack mAppStateStack;
+            StateStack mStateStack;
             sf::Text mStatisticsText;
             sf::Time mStatisticsUpdateTime;
             std::size_t	mStatisticsNumFrames;
