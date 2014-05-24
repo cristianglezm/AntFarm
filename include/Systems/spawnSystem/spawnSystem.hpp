@@ -4,7 +4,7 @@
 #include <Observer/Observer.hpp>
 #include <Event/EventType.hpp>
 #include <EntityFactory/EntityFactory.hpp>
-#include <States/States.hpp>
+#include <Entity/States.hpp>
 #include <Config.hpp>
 namespace ant{
     /**

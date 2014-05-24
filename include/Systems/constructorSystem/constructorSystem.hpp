@@ -6,7 +6,7 @@
 #include <EntityFactory/EntityFactory.hpp>
 #include <SFML/Graphics/VertexArray.hpp>
 #include <Event/EventType.hpp>
-#include <States/States.hpp>
+#include <Entity/States.hpp>
 
 namespace ant{
     /**

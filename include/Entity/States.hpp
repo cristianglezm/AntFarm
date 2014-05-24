@@ -1,5 +1,5 @@
-#ifndef STATES_H
-#define STATES_H
+#ifndef STATES_HPP
+#define STATES_HPP
 
 /**
  * @brief Estados de las entidades
@@ -18,4 +18,4 @@ class States{
         static const long int UNSAVED = 1 << 6;
 };
 
-#endif // STATES_H
+#endif // STATES_HPP

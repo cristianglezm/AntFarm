@@ -21,7 +21,6 @@ namespace ant{
         public:
             /**
              * @brief Constructor principal sin argumentos.
-             *
              */
             AssetManager();
             /**
