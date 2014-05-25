@@ -76,13 +76,6 @@
                     </listitem>
                 </itemizedlist>
             </para>
-            <para>
-                <itemizedlist>
-                    <listitem>
-                        <para>std::shared_ptr&lt; GameState &gt; self</para>
-                    </listitem>
-                </itemizedlist>
-            </para>
         </simplesect>
         <simplesect>
             <title></title>

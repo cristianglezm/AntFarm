@@ -4,10 +4,10 @@ namespace ant{
     Subject::Subject(){
 
     }
-    void Subject::addObserver(std::shared_ptr<Observer> o){
+    void Subject::addObserver(Observer* o){
         Observers.push_back(o);
     }
-    void Subject::removeObserver(std::shared_ptr<Observer> o){
+    void Subject::removeObserver(Observer* o){
         Observers.remove(o);
     }
     void Subject::notifyObservers(std::shared_ptr<baseEvent> e){

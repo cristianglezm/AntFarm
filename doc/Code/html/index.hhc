@@ -166,7 +166,6 @@
         <LI><OBJECT type="text/sitemap"><param name="Name" value="gameEventDispatcher"><param name="Local" value="d4/da6/classant_1_1_game_state.html#ad109775544bc8d03e47a5c9a41493d04"><param name="ImageNumber" value="11"></OBJECT>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="GameSpeed"><param name="Local" value="d4/da6/classant_1_1_game_state.html#af9c5ac223f5bebb7df9a5b4dfff4232c"><param name="ImageNumber" value="11"></OBJECT>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="level"><param name="Local" value="d4/da6/classant_1_1_game_state.html#a1c31323c9a09ae49d33b9aa3a15a6348"><param name="ImageNumber" value="11"></OBJECT>
-        <LI><OBJECT type="text/sitemap"><param name="Name" value="self"><param name="Local" value="d4/da6/classant_1_1_game_state.html#ac1db6fc65156848184815f01ccdea619"><param name="ImageNumber" value="11"></OBJECT>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="totalLevels"><param name="Local" value="d4/da6/classant_1_1_game_state.html#a376062c96e23aca3750fd4196c585a36"><param name="ImageNumber" value="11"></OBJECT>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="win"><param name="Local" value="d4/da6/classant_1_1_game_state.html#acf079d8d9e634b6a2c30356933f7b9b3"><param name="ImageNumber" value="11"></OBJECT>
         </UL>
@@ -507,10 +506,10 @@
         <UL>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="Subject"><param name="Local" value="d5/d29/classant_1_1_subject.html#abead80bfd62dbf3e728c92c77662867c"><param name="ImageNumber" value="11"></OBJECT>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="~Subject"><param name="Local" value="d5/d29/classant_1_1_subject.html#a6aefd4023994173e82fcef3c0ce9682f"><param name="ImageNumber" value="11"></OBJECT>
-        <LI><OBJECT type="text/sitemap"><param name="Name" value="addObserver"><param name="Local" value="d5/d29/classant_1_1_subject.html#a827a268f281179d94cc92c1709a8283f"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="addObserver"><param name="Local" value="d5/d29/classant_1_1_subject.html#a2e6e33458f5bfe1159371cf3ea19cd49"><param name="ImageNumber" value="11"></OBJECT>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="notifyObservers"><param name="Local" value="d5/d29/classant_1_1_subject.html#aefef04b082bfba8c7117b4facf7af4e8"><param name="ImageNumber" value="11"></OBJECT>
-        <LI><OBJECT type="text/sitemap"><param name="Name" value="removeObserver"><param name="Local" value="d5/d29/classant_1_1_subject.html#a8e74f416db7aadd170cb4cdfda2ec5e9"><param name="ImageNumber" value="11"></OBJECT>
-        <LI><OBJECT type="text/sitemap"><param name="Name" value="Observers"><param name="Local" value="d5/d29/classant_1_1_subject.html#ae0772c62b8a04fca13c48f7ab1a2bb80"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="removeObserver"><param name="Local" value="d5/d29/classant_1_1_subject.html#a71ab55e4aa4f23c1e60ff15bfab0d856"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="Observers"><param name="Local" value="d5/d29/classant_1_1_subject.html#ac529487e73b1af66dabfdb4d9e30c0cc"><param name="ImageNumber" value="11"></OBJECT>
         </UL>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="SystemFactory"><param name="Local" value="d6/dcc/classant_1_1_system_factory.html"><param name="ImageNumber" value="1"></OBJECT>
         <UL>
@@ -1485,7 +1484,6 @@
         <LI><OBJECT type="text/sitemap"><param name="Name" value="gameEventDispatcher"><param name="Local" value="d4/da6/classant_1_1_game_state.html#ad109775544bc8d03e47a5c9a41493d04"><param name="ImageNumber" value="11"></OBJECT>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="GameSpeed"><param name="Local" value="d4/da6/classant_1_1_game_state.html#af9c5ac223f5bebb7df9a5b4dfff4232c"><param name="ImageNumber" value="11"></OBJECT>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="level"><param name="Local" value="d4/da6/classant_1_1_game_state.html#a1c31323c9a09ae49d33b9aa3a15a6348"><param name="ImageNumber" value="11"></OBJECT>
-        <LI><OBJECT type="text/sitemap"><param name="Name" value="self"><param name="Local" value="d4/da6/classant_1_1_game_state.html#ac1db6fc65156848184815f01ccdea619"><param name="ImageNumber" value="11"></OBJECT>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="totalLevels"><param name="Local" value="d4/da6/classant_1_1_game_state.html#a376062c96e23aca3750fd4196c585a36"><param name="ImageNumber" value="11"></OBJECT>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="win"><param name="Local" value="d4/da6/classant_1_1_game_state.html#acf079d8d9e634b6a2c30356933f7b9b3"><param name="ImageNumber" value="11"></OBJECT>
         </UL>
@@ -1824,10 +1822,10 @@
         <UL>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="Subject"><param name="Local" value="d5/d29/classant_1_1_subject.html#abead80bfd62dbf3e728c92c77662867c"><param name="ImageNumber" value="11"></OBJECT>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="~Subject"><param name="Local" value="d5/d29/classant_1_1_subject.html#a6aefd4023994173e82fcef3c0ce9682f"><param name="ImageNumber" value="11"></OBJECT>
-        <LI><OBJECT type="text/sitemap"><param name="Name" value="addObserver"><param name="Local" value="d5/d29/classant_1_1_subject.html#a827a268f281179d94cc92c1709a8283f"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="addObserver"><param name="Local" value="d5/d29/classant_1_1_subject.html#a2e6e33458f5bfe1159371cf3ea19cd49"><param name="ImageNumber" value="11"></OBJECT>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="notifyObservers"><param name="Local" value="d5/d29/classant_1_1_subject.html#aefef04b082bfba8c7117b4facf7af4e8"><param name="ImageNumber" value="11"></OBJECT>
-        <LI><OBJECT type="text/sitemap"><param name="Name" value="removeObserver"><param name="Local" value="d5/d29/classant_1_1_subject.html#a8e74f416db7aadd170cb4cdfda2ec5e9"><param name="ImageNumber" value="11"></OBJECT>
-        <LI><OBJECT type="text/sitemap"><param name="Name" value="Observers"><param name="Local" value="d5/d29/classant_1_1_subject.html#ae0772c62b8a04fca13c48f7ab1a2bb80"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="removeObserver"><param name="Local" value="d5/d29/classant_1_1_subject.html#a71ab55e4aa4f23c1e60ff15bfab0d856"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="Observers"><param name="Local" value="d5/d29/classant_1_1_subject.html#ac529487e73b1af66dabfdb4d9e30c0cc"><param name="ImageNumber" value="11"></OBJECT>
         </UL>
       </UL>
     <LI><OBJECT type="text/sitemap"><param name="Name" value="System.cpp"><param name="Local" value="d8/de5/_system_8cpp.html"><param name="ImageNumber" value="11"></OBJECT>

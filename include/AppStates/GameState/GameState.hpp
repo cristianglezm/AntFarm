@@ -65,7 +65,6 @@ namespace ant{
             int totalLevels;
             float GameSpeed;
             std::string font;
-            std::shared_ptr<GameState> self;
     };
 }
 #endif // ANT_GAME_STATE_HPP

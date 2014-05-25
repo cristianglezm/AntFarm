@@ -11,9 +11,8 @@ namespace ant{
     , currentLevel(0){
         loadConfig(Config::CONFIG_FILE);
         totalLevels = level->size();
-        self.reset(this);
-        gameEventDispatcher->LevelComplete.addObserver(self);
-        gameEventDispatcher->LevelFailed.addObserver(self);
+        gameEventDispatcher->LevelComplete.addObserver(this);
+        gameEventDispatcher->LevelFailed.addObserver(this);
         GameSpeed = 1;
         loadGUIConf(Config::GUI_FILE);
     }

@@ -26,7 +26,7 @@ namespace ant{
     }
     bool GameOverState::handleEvent(const sf::Event& event){
         if(event.type == sf::Event::KeyPressed){
-            requestStackPop();
+            requestStateClear();
             requestStackPush(AppStates::Menu);
         }
         return false;

@@ -46,7 +46,7 @@ namespace ant{
     }
     void StateStack::applyPendingChanges(){
         for(auto& change: mPendingList){
-            switch (change.action){
+            switch(change.action){
                 case Push:
                     mStack.push_back(createState(change.stateID));
                     break;

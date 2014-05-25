@@ -14,7 +14,7 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d12/classant_1_1_entity_manager.html#af8cba501bcdac99f43f12047c8f857c4"><param name="Name" value="addEntity"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="d1/dd6/classant_1_1_asset_manager.html#a9a0d0fb10509492ef206e985d2a75636"><param name="Name" value="addFont"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="d1/dd6/classant_1_1_asset_manager.html#ac318001e95d732e606cd13836869f9ae"><param name="Name" value="addImage"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d29/classant_1_1_subject.html#a827a268f281179d94cc92c1709a8283f"><param name="Name" value="addObserver"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d29/classant_1_1_subject.html#a2e6e33458f5bfe1159371cf3ea19cd49"><param name="Name" value="addObserver"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="dc/d73/classant_1_1_entity.html#ac47ecff29b8d86d822f0ce83ace4ed8c"><param name="Name" value="addState"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="de/dce/classant_1_1_system_manager.html#a5a1222988ac6893cfeb16101509ee2bd"><param name="Name" value="addSystem"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="d1/dd6/classant_1_1_asset_manager.html#a5e98981fab8e9703cfd75c0d923dbb84"><param name="Name" value="addTexture"></OBJECT>
@@ -376,7 +376,6 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/da6/classant_1_1_game_state.html#a65a59f018d590e807fd61adfa307651e"><param name="Name" value="requestStackPop"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/da6/classant_1_1_game_state.html#a2830ba9f7de8efbf03bab5249d5d3f0a"><param name="Name" value="requestStackPush"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/da6/classant_1_1_game_state.html#a16e430d3eb803f4ff7995214bd66665e"><param name="Name" value="requestStateClear"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/da6/classant_1_1_game_state.html#ac1db6fc65156848184815f01ccdea619"><param name="Name" value="self"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/da6/classant_1_1_game_state.html#a772c49d9b95d2447149218ce7914d40c"><param name="Name" value="sPtr"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/da6/classant_1_1_game_state.html#a376062c96e23aca3750fd4196c585a36"><param name="Name" value="totalLevels"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/da6/classant_1_1_game_state.html#acac7f6261d21061de5a92d9887ff3cfe"><param name="Name" value="update"></OBJECT>
@@ -617,10 +616,10 @@
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d29/classant_1_1_subject.html"><param name="Name" value="ant::Subject"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d29/classant_1_1_subject.html#a827a268f281179d94cc92c1709a8283f"><param name="Name" value="addObserver"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d29/classant_1_1_subject.html#a2e6e33458f5bfe1159371cf3ea19cd49"><param name="Name" value="addObserver"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d29/classant_1_1_subject.html#aefef04b082bfba8c7117b4facf7af4e8"><param name="Name" value="notifyObservers"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d29/classant_1_1_subject.html#ae0772c62b8a04fca13c48f7ab1a2bb80"><param name="Name" value="Observers"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d29/classant_1_1_subject.html#a8e74f416db7aadd170cb4cdfda2ec5e9"><param name="Name" value="removeObserver"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d29/classant_1_1_subject.html#ac529487e73b1af66dabfdb4d9e30c0cc"><param name="Name" value="Observers"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d29/classant_1_1_subject.html#a71ab55e4aa4f23c1e60ff15bfab0d856"><param name="Name" value="removeObserver"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d29/classant_1_1_subject.html#abead80bfd62dbf3e728c92c77662867c"><param name="Name" value="Subject"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d29/classant_1_1_subject.html#a6aefd4023994173e82fcef3c0ce9682f"><param name="Name" value="~Subject"></OBJECT>
   </UL>
@@ -1344,7 +1343,7 @@
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d29/classant_1_1_subject.html#aefef04b082bfba8c7117b4facf7af4e8"><param name="Name" value="notifyObservers"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/d50/classant_1_1_observer.html#ae4bf1823b64695b67dd10d3f904b17e6"><param name="Name" value="Observer"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d29/classant_1_1_subject.html#ae0772c62b8a04fca13c48f7ab1a2bb80"><param name="Name" value="Observers"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d29/classant_1_1_subject.html#ac529487e73b1af66dabfdb4d9e30c0cc"><param name="Name" value="Observers"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="dc/df5/classant_1_1_game_event_dispatcher.html#a610093857ac94ea9c91d8896928424c4"><param name="Name" value="onCollision"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="d7/daa/class_states.html#acd4789eee44fccfaf6ddf2b3d412fb9a"><param name="Name" value="ONFIRE"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="d8/d12/classant_1_1constructor_system.html#aefb0ab92dfd17a7a374660f77434fe3a"><param name="Name" value="onNotify"></OBJECT>
@@ -1401,7 +1400,7 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/d12/classant_1_1_entity_manager.html#ac3645cbade4566b1e035923d12688811"><param name="Name" value="removeEntity"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="d1/dd6/classant_1_1_asset_manager.html#a7087f904f7989932dd1ce4dfafb2da23"><param name="Name" value="removeFont"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="d1/dd6/classant_1_1_asset_manager.html#a6f259566fc52eae59feb4ca13049b847"><param name="Name" value="removeImage"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d29/classant_1_1_subject.html#a8e74f416db7aadd170cb4cdfda2ec5e9"><param name="Name" value="removeObserver"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="d5/d29/classant_1_1_subject.html#a71ab55e4aa4f23c1e60ff15bfab0d856"><param name="Name" value="removeObserver"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="dc/d73/classant_1_1_entity.html#a362f4c8352e409e30284429d535fcc62"><param name="Name" value="removeState"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="de/dce/classant_1_1_system_manager.html#a8f9691606440561bb4b921a38ea9a9a0"><param name="Name" value="removeSystem"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="d1/dd6/classant_1_1_asset_manager.html#a5080300347c76dc214cd9caf0099bb6d"><param name="Name" value="removeTexture"></OBJECT>
@@ -1483,7 +1482,6 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="de/df0/classant_1_1_component_settings.html#af5401836ccc8522236ce460c3b0b7dc4"><param name="Name" value="scale"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="de/d2d/classant_1_1_config.html#a84b340cf79c14165c4960a4ea0ff56e0"><param name="Name" value="screenSize"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="dd/ded/class_event_type.html#ade218fb495bba6510f0c186034c55f4f"><param name="Name" value="SELECT_ENTITY"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/da6/classant_1_1_game_state.html#ac1db6fc65156848184815f01ccdea619"><param name="Name" value="self"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="dc/dd7/classant_1_1_g_u_i_1_1_button.html#a47939d83d9cdfd61f4fb9bf0636997e4"><param name="Name" value="setAction"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="d4/df6/classant_1_1_component_factory.html#a65344c3c8f3d7b48c65205b1fd013724"><param name="Name" value="setAssetManager"></OBJECT>
   <UL>

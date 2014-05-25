@@ -75,12 +75,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:abead80bfd62dbf3e728c92c77662867c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d29/classant_1_1_subject.html#abead80bfd62dbf3e728c92c77662867c">Subject</a> ()</td></tr>
 <tr class="memdesc:abead80bfd62dbf3e728c92c77662867c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor por defecto.  <a href="#abead80bfd62dbf3e728c92c77662867c">More...</a><br/></td></tr>
 <tr class="separator:abead80bfd62dbf3e728c92c77662867c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a827a268f281179d94cc92c1709a8283f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d29/classant_1_1_subject.html#a827a268f281179d94cc92c1709a8283f">addObserver</a> (std::shared_ptr&lt; <a class="el" href="../../d4/d50/classant_1_1_observer.html">Observer</a> &gt; o)</td></tr>
-<tr class="memdesc:a827a268f281179d94cc92c1709a8283f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Añade un observador.  <a href="#a827a268f281179d94cc92c1709a8283f">More...</a><br/></td></tr>
-<tr class="separator:a827a268f281179d94cc92c1709a8283f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e74f416db7aadd170cb4cdfda2ec5e9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d29/classant_1_1_subject.html#a8e74f416db7aadd170cb4cdfda2ec5e9">removeObserver</a> (std::shared_ptr&lt; <a class="el" href="../../d4/d50/classant_1_1_observer.html">Observer</a> &gt; o)</td></tr>
-<tr class="memdesc:a8e74f416db7aadd170cb4cdfda2ec5e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Elimina el primer observador que coincida.  <a href="#a8e74f416db7aadd170cb4cdfda2ec5e9">More...</a><br/></td></tr>
-<tr class="separator:a8e74f416db7aadd170cb4cdfda2ec5e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e6e33458f5bfe1159371cf3ea19cd49"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d29/classant_1_1_subject.html#a2e6e33458f5bfe1159371cf3ea19cd49">addObserver</a> (<a class="el" href="../../d4/d50/classant_1_1_observer.html">Observer</a> *o)</td></tr>
+<tr class="memdesc:a2e6e33458f5bfe1159371cf3ea19cd49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Añade un observador.  <a href="#a2e6e33458f5bfe1159371cf3ea19cd49">More...</a><br/></td></tr>
+<tr class="separator:a2e6e33458f5bfe1159371cf3ea19cd49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71ab55e4aa4f23c1e60ff15bfab0d856"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d29/classant_1_1_subject.html#a71ab55e4aa4f23c1e60ff15bfab0d856">removeObserver</a> (<a class="el" href="../../d4/d50/classant_1_1_observer.html">Observer</a> *o)</td></tr>
+<tr class="memdesc:a71ab55e4aa4f23c1e60ff15bfab0d856"><td class="mdescLeft">&#160;</td><td class="mdescRight">Elimina el primer observador que coincida.  <a href="#a71ab55e4aa4f23c1e60ff15bfab0d856">More...</a><br/></td></tr>
+<tr class="separator:a71ab55e4aa4f23c1e60ff15bfab0d856"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aefef04b082bfba8c7117b4facf7af4e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d29/classant_1_1_subject.html#aefef04b082bfba8c7117b4facf7af4e8">notifyObservers</a> (std::shared_ptr&lt; <a class="el" href="../../d3/dce/classant_1_1base_event.html">baseEvent</a> &gt; e)</td></tr>
 <tr class="memdesc:aefef04b082bfba8c7117b4facf7af4e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notifica a los Observadores que esten en suscritos a este tema.  <a href="#aefef04b082bfba8c7117b4facf7af4e8">More...</a><br/></td></tr>
 <tr class="separator:aefef04b082bfba8c7117b4facf7af4e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -89,9 +89,8 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:ae0772c62b8a04fca13c48f7ab1a2bb80"><td class="memItemLeft" align="right" valign="top">std::list&lt; std::shared_ptr<br class="typebreak"/>
-&lt; <a class="el" href="../../d4/d50/classant_1_1_observer.html">Observer</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d29/classant_1_1_subject.html#ae0772c62b8a04fca13c48f7ab1a2bb80">Observers</a></td></tr>
-<tr class="separator:ae0772c62b8a04fca13c48f7ab1a2bb80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac529487e73b1af66dabfdb4d9e30c0cc"><td class="memItemLeft" align="right" valign="top">std::list&lt; <a class="el" href="../../d4/d50/classant_1_1_observer.html">Observer</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d29/classant_1_1_subject.html#ac529487e73b1af66dabfdb4d9e30c0cc">Observers</a></td></tr>
+<tr class="separator:ac529487e73b1af66dabfdb4d9e30c0cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Tema al cual se suscriben los observadores <a class="el" href="../../d4/d50/classant_1_1_observer.html" title="Interfaz para los observadores. ">Observer</a>. </p>
@@ -137,14 +136,14 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a827a268f281179d94cc92c1709a8283f"></a>
+<a class="anchor" id="a2e6e33458f5bfe1159371cf3ea19cd49"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void ant::Subject::addObserver </td>
           <td>(</td>
-          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="../../d4/d50/classant_1_1_observer.html">Observer</a> &gt;&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d4/d50/classant_1_1_observer.html">Observer</a> *&#160;</td>
           <td class="paramname"><em>o</em></td><td>)</td>
           <td></td>
         </tr>
@@ -154,7 +153,7 @@ Private Attributes</h2></td></tr>
 <p>Añade un observador. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">o</td><td>std::shared_ptr&lt;Observer&gt; </td></tr>
+    <tr><td class="paramname">o</td><td>Observer* </td></tr>
   </table>
   </dd>
 </dl>
@@ -198,14 +197,14 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a class="anchor" id="a8e74f416db7aadd170cb4cdfda2ec5e9"></a>
+<a class="anchor" id="a71ab55e4aa4f23c1e60ff15bfab0d856"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void ant::Subject::removeObserver </td>
           <td>(</td>
-          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="../../d4/d50/classant_1_1_observer.html">Observer</a> &gt;&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d4/d50/classant_1_1_observer.html">Observer</a> *&#160;</td>
           <td class="paramname"><em>o</em></td><td>)</td>
           <td></td>
         </tr>
@@ -215,7 +214,7 @@ Here is the caller graph for this function:</div>
 <p>Elimina el primer observador que coincida. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">o</td><td>std::shared_ptr&lt;Observer&gt; observador a eliminar. </td></tr>
+    <tr><td class="paramname">o</td><td>Observer* observador a eliminar. </td></tr>
   </table>
   </dd>
 </dl>
@@ -225,7 +224,7 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="ae0772c62b8a04fca13c48f7ab1a2bb80"></a>
+<a class="anchor" id="ac529487e73b1af66dabfdb4d9e30c0cc"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -233,7 +232,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::list&lt;std::shared_ptr&lt;<a class="el" href="../../d4/d50/classant_1_1_observer.html">Observer</a>&gt; &gt; ant::Subject::Observers</td>
+          <td class="memname">std::list&lt;<a class="el" href="../../d4/d50/classant_1_1_observer.html">Observer</a>*&gt; ant::Subject::Observers</td>
         </tr>
       </table>
   </td>
@@ -254,7 +253,7 @@ Here is the caller graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun May 25 2014 18:17:16 for AntFarm by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun May 25 2014 22:21:04 for AntFarm by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

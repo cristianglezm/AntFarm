@@ -80,7 +80,7 @@
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    }</div>
 <div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="../../d6/dcc/classant_1_1_system_factory.html#a69b79fce62ccf901996515e4528bc71d">   26</a></span>&#160;    std::shared_ptr&lt;movementSystem&gt; <a class="code" href="../../d6/dcc/classant_1_1_system_factory.html#a69b79fce62ccf901996515e4528bc71d">SystemFactory::createMovementSystem</a>(){</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        std::shared_ptr&lt;movementSystem&gt; m(<span class="keyword">new</span> <a class="code" href="../../d6/d6c/classant_1_1movement_system.html">movementSystem</a>());</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <a class="code" href="../../d6/dcc/classant_1_1_system_factory.html#ac2e43c03f569c09b2ab6a3539e0fc42a">gameEventDispatcher</a>-&gt;onCollision.addObserver(m);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <a class="code" href="../../d6/dcc/classant_1_1_system_factory.html#ac2e43c03f569c09b2ab6a3539e0fc42a">gameEventDispatcher</a>-&gt;onCollision.addObserver(m.get());</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        m-&gt;setEventQueue(<a class="code" href="../../d6/dcc/classant_1_1_system_factory.html#ae72909e917f13c79cf1a44731d473c02">eventQueue</a>);</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordflow">return</span> m;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    }</div>
@@ -91,22 +91,22 @@
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    }</div>
 <div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="../../d6/dcc/classant_1_1_system_factory.html#acf3fcbe08c0bb66a4a587cc4141b01a1">   37</a></span>&#160;    std::shared_ptr&lt;spawnSystem&gt; <a class="code" href="../../d6/dcc/classant_1_1_system_factory.html#acf3fcbe08c0bb66a4a587cc4141b01a1">SystemFactory::createSpawnSystem</a>(<span class="keywordtype">int</span> nEntities,<a class="code" href="../../db/d10/classant_1_1_entity_factory.html">EntityFactory</a>* ef,sf::Time ot,sf::Vector2f spawnPoint,<span class="keywordtype">long</span> <span class="keywordtype">int</span> state){</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        std::shared_ptr&lt;spawnSystem&gt; sp(<span class="keyword">new</span> <a class="code" href="../../db/ddf/classant_1_1spawn_system.html">spawnSystem</a>(nEntities,ef,ot,spawnPoint,state));</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <a class="code" href="../../d6/dcc/classant_1_1_system_factory.html#ac2e43c03f569c09b2ab6a3539e0fc42a">gameEventDispatcher</a>-&gt;spawnEvents.addObserver(sp);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <a class="code" href="../../d6/dcc/classant_1_1_system_factory.html#ac2e43c03f569c09b2ab6a3539e0fc42a">gameEventDispatcher</a>-&gt;spawnEvents.addObserver(sp.get());</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        sp-&gt;setEventQueue(<a class="code" href="../../d6/dcc/classant_1_1_system_factory.html#ae72909e917f13c79cf1a44731d473c02">eventQueue</a>);</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordflow">return</span> sp;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    }</div>
 <div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="../../d6/dcc/classant_1_1_system_factory.html#adefb28b61b249e8e50814782c03a9de7">   43</a></span>&#160;    std::shared_ptr&lt;constructorSystem&gt; <a class="code" href="../../d6/dcc/classant_1_1_system_factory.html#adefb28b61b249e8e50814782c03a9de7">SystemFactory::createConstructorSystem</a>(sf::VertexArray* GameMap,sf::FloatRect bounds){</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        std::shared_ptr&lt;constructorSystem&gt; csys(<span class="keyword">new</span> <a class="code" href="../../d8/d12/classant_1_1constructor_system.html">constructorSystem</a>(GameMap,bounds));</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <a class="code" href="../../d6/dcc/classant_1_1_system_factory.html#ac2e43c03f569c09b2ab6a3539e0fc42a">gameEventDispatcher</a>-&gt;ClickEvents.addObserver(csys);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <a class="code" href="../../d6/dcc/classant_1_1_system_factory.html#ac2e43c03f569c09b2ab6a3539e0fc42a">gameEventDispatcher</a>-&gt;ChangeCommand.addObserver(csys);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <a class="code" href="../../d6/dcc/classant_1_1_system_factory.html#ac2e43c03f569c09b2ab6a3539e0fc42a">gameEventDispatcher</a>-&gt;onCollision.addObserver(csys);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <a class="code" href="../../d6/dcc/classant_1_1_system_factory.html#ac2e43c03f569c09b2ab6a3539e0fc42a">gameEventDispatcher</a>-&gt;ClickEvents.addObserver(csys.get());</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <a class="code" href="../../d6/dcc/classant_1_1_system_factory.html#ac2e43c03f569c09b2ab6a3539e0fc42a">gameEventDispatcher</a>-&gt;ChangeCommand.addObserver(csys.get());</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <a class="code" href="../../d6/dcc/classant_1_1_system_factory.html#ac2e43c03f569c09b2ab6a3539e0fc42a">gameEventDispatcher</a>-&gt;onCollision.addObserver(csys.get());</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        csys-&gt;setEventQueue(<a class="code" href="../../d6/dcc/classant_1_1_system_factory.html#ae72909e917f13c79cf1a44731d473c02">eventQueue</a>);</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordflow">return</span> csys;</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    }</div>
 <div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="../../d6/dcc/classant_1_1_system_factory.html#a4334abc153fc1a4dcfcf1452f9371e56">   51</a></span>&#160;    std::shared_ptr&lt;outSystem&gt; <a class="code" href="../../d6/dcc/classant_1_1_system_factory.html#a4334abc153fc1a4dcfcf1452f9371e56">SystemFactory::createOutSystem</a>(<span class="keywordtype">int</span> totalEntities){</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        std::shared_ptr&lt;outSystem&gt; o(<span class="keyword">new</span> <a class="code" href="../../dd/d76/classant_1_1out_system.html">outSystem</a>(totalEntities));</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <a class="code" href="../../d6/dcc/classant_1_1_system_factory.html#ac2e43c03f569c09b2ab6a3539e0fc42a">gameEventDispatcher</a>-&gt;outMap.addObserver(o);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <a class="code" href="../../d6/dcc/classant_1_1_system_factory.html#ac2e43c03f569c09b2ab6a3539e0fc42a">gameEventDispatcher</a>-&gt;onCollision.addObserver(o);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <a class="code" href="../../d6/dcc/classant_1_1_system_factory.html#ac2e43c03f569c09b2ab6a3539e0fc42a">gameEventDispatcher</a>-&gt;outMap.addObserver(o.get());</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <a class="code" href="../../d6/dcc/classant_1_1_system_factory.html#ac2e43c03f569c09b2ab6a3539e0fc42a">gameEventDispatcher</a>-&gt;onCollision.addObserver(o.get());</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        o-&gt;setEventQueue(<a class="code" href="../../d6/dcc/classant_1_1_system_factory.html#ae72909e917f13c79cf1a44731d473c02">eventQueue</a>);</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">return</span> o;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
@@ -141,7 +141,7 @@
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun May 25 2014 18:17:15 for AntFarm by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun May 25 2014 22:21:01 for AntFarm by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

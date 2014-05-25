@@ -17,14 +17,14 @@ namespace ant{
             Subject();
             /**
              * @brief Añade un observador.
-             * @param o std::shared_ptr<Observer>
+             * @param o Observer*
              */
-            void addObserver(std::shared_ptr<Observer> o);
+            void addObserver(Observer* o);
             /**
              * @brief Elimina el primer observador que coincida.
-             * @param o std::shared_ptr<Observer> observador a eliminar.
+             * @param o Observer* observador a eliminar.
              */
-            void removeObserver(std::shared_ptr<Observer> o);
+            void removeObserver(Observer* o);
             /**
              * @brief Notifica a los Observadores que esten en suscritos a este tema.
              * @param e std::shared_ptr<baseEvent> evento que se envia.
@@ -32,7 +32,7 @@ namespace ant{
             void notifyObservers(std::shared_ptr<baseEvent> e);
             ~Subject();
         private:
-            std::list<std::shared_ptr<Observer> > Observers;
+            std::list<Observer*> Observers;
     };
 }
 #endif // SUBJECT_H

@@ -25,7 +25,7 @@ namespace ant{
     }
     std::shared_ptr<movementSystem> SystemFactory::createMovementSystem(){
         std::shared_ptr<movementSystem> m(new movementSystem());
-        gameEventDispatcher->onCollision.addObserver(m);
+        gameEventDispatcher->onCollision.addObserver(m.get());
         m->setEventQueue(eventQueue);
         return m;
     }
@@ -36,22 +36,22 @@ namespace ant{
     }
     std::shared_ptr<spawnSystem> SystemFactory::createSpawnSystem(int nEntities,EntityFactory* ef,sf::Time ot,sf::Vector2f spawnPoint,long int state){
         std::shared_ptr<spawnSystem> sp(new spawnSystem(nEntities,ef,ot,spawnPoint,state));
-        gameEventDispatcher->spawnEvents.addObserver(sp);
+        gameEventDispatcher->spawnEvents.addObserver(sp.get());
         sp->setEventQueue(eventQueue);
         return sp;
     }
     std::shared_ptr<constructorSystem> SystemFactory::createConstructorSystem(sf::VertexArray* GameMap,sf::FloatRect bounds){
         std::shared_ptr<constructorSystem> csys(new constructorSystem(GameMap,bounds));
-        gameEventDispatcher->ClickEvents.addObserver(csys);
-        gameEventDispatcher->ChangeCommand.addObserver(csys);
-        gameEventDispatcher->onCollision.addObserver(csys);
+        gameEventDispatcher->ClickEvents.addObserver(csys.get());
+        gameEventDispatcher->ChangeCommand.addObserver(csys.get());
+        gameEventDispatcher->onCollision.addObserver(csys.get());
         csys->setEventQueue(eventQueue);
         return csys;
     }
     std::shared_ptr<outSystem> SystemFactory::createOutSystem(int totalEntities){
         std::shared_ptr<outSystem> o(new outSystem(totalEntities));
-        gameEventDispatcher->outMap.addObserver(o);
-        gameEventDispatcher->onCollision.addObserver(o);
+        gameEventDispatcher->outMap.addObserver(o.get());
+        gameEventDispatcher->onCollision.addObserver(o.get());
         o->setEventQueue(eventQueue);
         return o;
     }

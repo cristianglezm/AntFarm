@@ -1,9 +1,7 @@
 #include <SystemManager/SystemManager.hpp>
 
 namespace ant{
-    SystemManager::SystemManager(){
-
-    }
+    SystemManager::SystemManager(){}
     bool SystemManager::addSystem(std::shared_ptr<System> s){
         auto result = systems.insert(std::make_pair(s->getName(),s));
         return result.second;

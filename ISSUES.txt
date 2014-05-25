@@ -2,5 +2,5 @@ ISSUES
 ===
 
 * Las hormigas se quedan atascadas y a veces caen colisionando.
-* Da error de puntero al salir del estado de juego.
+* Si se borra un System del SystemManager y este esta suscrito a algun evento, el programa peta.
 * NO responden a los clicks de raton cuando estan muy juntas

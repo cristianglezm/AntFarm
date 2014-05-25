@@ -29,61 +29,59 @@ namespace ant{
         auto em = w->getEntityManager();
         auto assets = getAssetManager();
         std::unique_ptr<SystemManager> sm(new SystemManager());
-        if(!assets->hasImage(name)){
-            std::unique_ptr<sf::Image> img(new sf::Image());
-            img->create(bounds.width,bounds.height,sf::Color::Transparent);
-            int width = lvl.getSize().x;
-            int height = lvl.getSize().y;
-            bool hasEnteredInDoor = false;
-            bool hasEnteredOutDoor = false;
-            sf::Vector2f inDoor;
-            sf::Vector2f outDoor;
-            sf::Color Brown(128,64,0,255);
-            sf::Color lightBrown(150,75,0,255);
-            for(int x=0;x<width;++x){
-                for(int y=0;y<height;++y){
-                    sf::Color color = lvl.getPixel(x,y);
-                        if(color == sf::Color::Black){
-                                for(int i=0;i<10;++i){
-                                        for(int j=0;j<10;++j){
-                                            img->setPixel(x*10+i,y*10+j,Brown);
-                                            img->setPixel(x*10,y*10+j,Brown);
-                                            img->setPixel(x*10+i,y*10,lightBrown);
-                                        }
-                                }
-                                img->setPixel(x*10,y*10,lightBrown);
-                        }else if(color == sf::Color::Red){
-                            hasEnteredInDoor = true;
-                            inDoor = sf::Vector2f(x*10,y*10);
-                        }else if(color == sf::Color::Green){
-                            hasEnteredOutDoor = true;
-                            outDoor = sf::Vector2f(x*10,y*10);
-                        }
-                }
+        std::unique_ptr<sf::Image> img(new sf::Image());
+        img->create(bounds.width,bounds.height,sf::Color::Transparent);
+        int width = lvl.getSize().x;
+        int height = lvl.getSize().y;
+        bool hasEnteredInDoor = false;
+        bool hasEnteredOutDoor = false;
+        sf::Vector2f inDoor;
+        sf::Vector2f outDoor;
+        sf::Color Brown(128,64,0,255);
+        sf::Color lightBrown(150,75,0,255);
+        for(int x=0;x<width;++x){
+            for(int y=0;y<height;++y){
+                sf::Color color = lvl.getPixel(x,y);
+                    if(color == sf::Color::Black){
+                            for(int i=0;i<10;++i){
+                                    for(int j=0;j<10;++j){
+                                        img->setPixel(x*10+i,y*10+j,Brown);
+                                        img->setPixel(x*10,y*10+j,Brown);
+                                        img->setPixel(x*10+i,y*10,lightBrown);
+                                    }
+                            }
+                            img->setPixel(x*10,y*10,lightBrown);
+                    }else if(color == sf::Color::Red){
+                        hasEnteredInDoor = true;
+                        inDoor = sf::Vector2f(x*10,y*10);
+                    }else if(color == sf::Color::Green){
+                        hasEnteredOutDoor = true;
+                        outDoor = sf::Vector2f(x*10,y*10);
+                    }
             }
+        }
+        ComponentSettings cs;
+        cs.loadSettings(Config::LEVEL_FILE);
+        cs.imageID = name;
+        cs.spriteID = background;
+        cs.entityName = name;
+        img->saveToFile("tmp.png");
+        assets->addImage(name,"tmp.png");
+        em->addEntity(entityFactory->createEntity(EntityFactory::level,cs));
+        if(hasEnteredInDoor){
             ComponentSettings cs;
-            cs.loadSettings(Config::LEVEL_FILE);
-            cs.imageID = name;
-            cs.spriteID = background;
-            cs.entityName = name;
-            img->saveToFile("tmp.png");
-            assets->addImage(name,"tmp.png");
-            em->addEntity(entityFactory->createEntity(EntityFactory::level,cs));
-            if(hasEnteredInDoor){
-                ComponentSettings cs;
-                cs.loadSettings(Config::INDOOR_FILE);
-                cs.position = inDoor;
-                em->addEntity(entityFactory->createEntity(EntityFactory::InDoor,cs));
-                sm->addSystem(systemFactory->createSpawnSystem(nEntities,entityFactory.get(),overTime,(inDoor + sf::Vector2f(10,10)),States::FALLING));
-            }
-            if(hasEnteredOutDoor){
-                ComponentSettings cs;
-                cs.loadSettings(Config::OUTDOOR_FILE);
-                cs.bounds.width = cs.bounds.width*cs.scale.x;
-                cs.bounds.height = cs.bounds.height*cs.scale.y;
-                cs.position = outDoor - sf::Vector2f(cs.bounds.width,cs.bounds.height-10);
-                em->addEntity(entityFactory->createEntity(EntityFactory::OutDoor,cs));
-            }
+            cs.loadSettings(Config::INDOOR_FILE);
+            cs.position = inDoor;
+            em->addEntity(entityFactory->createEntity(EntityFactory::InDoor,cs));
+            sm->addSystem(systemFactory->createSpawnSystem(nEntities,entityFactory.get(),overTime,(inDoor + sf::Vector2f(10,10)),States::FALLING));
+        }
+        if(hasEnteredOutDoor){
+            ComponentSettings cs;
+            cs.loadSettings(Config::OUTDOOR_FILE);
+            cs.bounds.width = cs.bounds.width*cs.scale.x;
+            cs.bounds.height = cs.bounds.height*cs.scale.y;
+            cs.position = outDoor - sf::Vector2f(cs.bounds.width,cs.bounds.height-10);
+            em->addEntity(entityFactory->createEntity(EntityFactory::OutDoor,cs));
         }
         sm->addSystem(systemFactory->createMovementSystem());
         sm->addSystem(systemFactory->createGravitySystem(1.9));

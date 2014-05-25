@@ -1,3 +1,4 @@
 <map id="ant::StateStack::clearStates" name="ant::StateStack::clearStates">
 <area shape="rect" id="node2" href="$d8/df7/classant_1_1_app_state.html#a16e430d3eb803f4ff7995214bd66665e" title="Pide al stack que se limpie. " alt="" coords="240,5,424,47"/>
+<area shape="rect" id="node3" href="$d0/da0/classant_1_1_game_over_state.html#ac16226e76dac5963ab1a53f506cc17e1" title="Maneja la input. " alt="" coords="472,5,612,47"/>
 </map>
