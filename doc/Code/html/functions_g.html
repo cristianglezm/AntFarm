@@ -20,7 +20,7 @@
    <div id="projectname">AntFarm
    &#160;<span id="projectnumber">v0.1a</span>
    </div>
-   <div id="projectbrief">Game about Ants that are trapped in some place and need to escape.</div>
+   <div id="projectbrief">Game Inspired by Lemmings</div>
   </td>
  </tr>
  </tbody>
@@ -51,6 +51,8 @@
       <li><a href="functions_func.html"><span>Functions</span></a></li>
       <li><a href="functions_vars.html"><span>Variables</span></a></li>
       <li><a href="functions_type.html"><span>Typedefs</span></a></li>
+      <li><a href="functions_enum.html"><span>Enumerations</span></a></li>
+      <li><a href="functions_eval.html"><span>Enumerator</span></a></li>
     </ul>
   </div>
   <div id="navrow4" class="tabs3">
@@ -84,35 +86,30 @@
 <div class="textblock">Here is a list of all class members with links to the classes they belong to:</div>
 
 <h3><a class="anchor" id="index_g"></a>- g -</h3><ul>
-<li>Game()
-: <a class="el" href="d1/db7/classant_1_1_game.html#a58cdec961670b3d46c37bb67cef11034">ant::Game</a>
-</li>
 <li>gameBounds
 : <a class="el" href="dc/de8/classant_1_1collision_system.html#a8103e85df3ce0b3ed9c58becea61fafb">ant::collisionSystem</a>
-</li>
-<li>gameCompleted
-: <a class="el" href="d1/db7/classant_1_1_game.html#af0dcf95dbb8fe7562046ca1cbdf1ec0f">ant::Game</a>
-</li>
-<li>gameEventDispatcher
-: <a class="el" href="d1/db7/classant_1_1_game.html#a75e456a8a3d4412d160c704cd096b551">ant::Game</a>
 </li>
 <li>GameEventDispatcher()
 : <a class="el" href="dc/df5/classant_1_1_game_event_dispatcher.html#a5240dcf9c2048e9ac70ddf7a3d938c2f">ant::GameEventDispatcher</a>
 </li>
 <li>gameEventDispatcher
-: <a class="el" href="d0/dcb/classant_1_1_level.html#a5e215a7e3f9b9530f494f1ff3931e8ff">ant::Level</a>
+: <a class="el" href="d4/da6/classant_1_1_game_state.html#ad109775544bc8d03e47a5c9a41493d04">ant::GameState</a>
+, <a class="el" href="d0/dcb/classant_1_1_level.html#a5e215a7e3f9b9530f494f1ff3931e8ff">ant::Level</a>
 , <a class="el" href="d6/dcc/classant_1_1_system_factory.html#ac2e43c03f569c09b2ab6a3539e0fc42a">ant::SystemFactory</a>
 , <a class="el" href="de/dc7/classant_1_1_world.html#a42d369d875c024b8e1342bcae2464032">ant::World</a>
 , <a class="el" href="d0/df7/classant_1_1_world_factory.html#ad340f4243d30794bd46fd87c3ccd7075">ant::WorldFactory</a>
 </li>
-<li>gameFailed
-: <a class="el" href="d1/db7/classant_1_1_game.html#ab51bbfb5cc68db3db66196ec92669af4">ant::Game</a>
-</li>
 <li>gameMap
 : <a class="el" href="dc/de8/classant_1_1collision_system.html#aaadfabecc42a47e7fc8219178bd712ca">ant::collisionSystem</a>
 </li>
+<li>GameOverState()
+: <a class="el" href="d0/da0/classant_1_1_game_over_state.html#ac60affe803582090cff225bb17c926ec">ant::GameOverState</a>
+</li>
 <li>GameSpeed
-: <a class="el" href="d1/db7/classant_1_1_game.html#ab1f75acca5e0fdf7eb2f5595ab4fb9ab">ant::Game</a>
+: <a class="el" href="d4/da6/classant_1_1_game_state.html#af9c5ac223f5bebb7df9a5b4dfff4232c">ant::GameState</a>
+</li>
+<li>GameState()
+: <a class="el" href="d4/da6/classant_1_1_game_state.html#a024b020260791f23d168425fc67291af">ant::GameState</a>
 </li>
 <li>getAction()
 : <a class="el" href="dc/dd7/classant_1_1_g_u_i_1_1_button.html#a3641c630ff0b157f0cd1731f506a5ba5">ant::GUI::Button</a>
@@ -136,6 +133,9 @@
 <li>getComponents()
 : <a class="el" href="dc/d73/classant_1_1_entity.html#a81bcfa152047d1c653eb7af21daf3c10">ant::Entity</a>
 </li>
+<li>getContext()
+: <a class="el" href="d8/df7/classant_1_1_app_state.html#aa7abef18b5d2d32dbb9b35d4f630cb31">ant::AppState</a>
+</li>
 <li>getEntities()
 : <a class="el" href="dd/d12/classant_1_1_entity_manager.html#a1dbb77029a458daf2bce15e9405c9b84">ant::EntityManager</a>
 </li>
@@ -158,9 +158,6 @@
 </li>
 <li>getFont()
 : <a class="el" href="d1/dd6/classant_1_1_asset_manager.html#ab965eb047ba3eaae7f5c47ac70322078">ant::AssetManager</a>
-</li>
-<li>getFPS()
-: <a class="el" href="d1/db7/classant_1_1_game.html#ae3e2f30e220baa3594bd0b0f175e8651">ant::Game</a>
 </li>
 <li>getGameEventDispatcher()
 : <a class="el" href="d6/dcc/classant_1_1_system_factory.html#a33d785d8400849461d1e734c472308b4">ant::SystemFactory</a>
@@ -256,7 +253,7 @@
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu May 22 2014 22:20:25 for AntFarm by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun May 25 2014 18:17:17 for AntFarm by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

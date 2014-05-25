@@ -443,7 +443,7 @@ const std::string &amp; name)</para>
             <section xml:id="dc/d73/classant_1_1_entity_1a508baf12c760f45032e24fae27af6f09">
                 <title>long int ant::Entity::getMask () const </title> <emphasis>Getter de la mascara de la entidad.</emphasis>
                 
-<para>Con este metodo comprobaras si una entidad tiene los componentes que necesitas antes de utilizar el getComponent(Component::ID); <programlisting><emphasis>if</emphasis>((e.getMask()&#32;&amp;&#32;Component:ID)&#32;==&#32;Component::ID)&#32;
+<para>Con este metodo comprobaras si una entidad tiene los componentes que necesitas antes de utilizar el getComponent(Component::ID); <programlisting><emphasis>if</emphasis>((e.getMask()&#32;&amp;&#32;Component:<link linkend="da/dd5/namespaceant_1_1_app_states_1a8e30476d77a5da5e0c1c3b9c7042e62a">ID</link>)&#32;==&#32;<link linkend="da/dd5/namespaceant_1_1_app_states_1a8e30476d77a5da5e0c1c3b9c7042e62a">Component::ID</link>)&#32;
 </programlisting></para>
 
 <para><formalpara><title>Returns: </title>

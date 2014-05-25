@@ -111,5 +111,21 @@ Args &amp;&amp;... args)</para>
                     </listitem>
                 </itemizedlist>
             </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="db/dbc/namespaceant_1_1_utils_1a7620f9eb67146a08b1ea9f7647daedf2">centerOrigin</link> (
+sf::Text &amp; text)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="db/dbc/namespaceant_1_1_utils_1af450e216756fc8aa0fa32dfc148a492f">centerOrigin</link> (
+sf::Sprite &amp; sprite)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
         </simplesect>
 </section>

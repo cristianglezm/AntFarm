@@ -1,0 +1,264 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d4/d89/classant_1_1_pause_state">
+<title>ant::PauseState class Reference</title>
+<para>
+    <programlisting>#include <link linkend="d1/d2a/_pause_state_8hpp">&lt;PauseState.hpp&gt;</link></programlisting>
+</para>
+        <simplesect>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>sf::Text mText</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::string font</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool mShowText</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>sf::Time mTextEffectTime</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d4/d89/classant_1_1_pause_state_1a5d5b0e4d75f18ab6b0697821aee68d83">PauseState</link> (
+<link linkend="d1/da5/classant_1_1_state_stack">StateStack</link> &amp; stack, <link linkend="d8/d0b/structant_1_1_app_state_1_1_context">Context</link> context)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual void <link linkend="d4/d89/classant_1_1_pause_state_1a8c99d68f9ac3147a0fb3f8bee008e73f">render</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual bool <link linkend="d4/d89/classant_1_1_pause_state_1acc86d012ec67efad3d5339cfce2a983f">update</link> (
+sf::Time dt)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual bool <link linkend="d4/d89/classant_1_1_pause_state_1af22b38989f774e2ed557b91531048d42">handleEvent</link> (
+const sf::Event &amp; event)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d4/d89/classant_1_1_pause_state_1af9bb1258e9c7960cceeb90ee8b1fbc21">loadConfig</link> (
+const std::string &amp; filename)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef std::unique_ptr&lt; <link linkend="d8/df7/classant_1_1_app_state">AppState</link> &gt;  <link linkend="d8/df7/classant_1_1_app_state_1a94963d69f76e53c5e3b6cfa58f99fff9">uPtr</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef std::shared_ptr&lt; <link linkend="d8/df7/classant_1_1_app_state">AppState</link> &gt;  <link linkend="d8/df7/classant_1_1_app_state_1a772c49d9b95d2447149218ce7914d40c">sPtr</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d8/df7/classant_1_1_app_state_1a2830ba9f7de8efbf03bab5249d5d3f0a">requestStackPush</link> (
+<link linkend="da/dd5/namespaceant_1_1_app_states_1a8e30476d77a5da5e0c1c3b9c7042e62a">AppStates::ID</link> stateID)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d8/df7/classant_1_1_app_state_1a65a59f018d590e807fd61adfa307651e">requestStackPop</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d8/df7/classant_1_1_app_state_1a16e430d3eb803f4ff7995214bd66665e">requestStateClear</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d8/d0b/structant_1_1_app_state_1_1_context">Context</link> <link linkend="d8/df7/classant_1_1_app_state_1aa7abef18b5d2d32dbb9b35d4f630cb31">getContext</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Brief Description</title>
+
+<para>Estado de pausa. </para>
+    </simplesect>
+        <simplesect>
+            <title>Detailed Description</title>
+
+<para><formalpara><title>Author: </title>
+
+<para>Cristian Glez <link xlink:href="mailto:Cristian.glez.m@gmail.com">Cristian.glez.m@gmail.com</link> </para>
+</formalpara>
+<formalpara><title>Version: </title>
+
+<para>0.1 </para>
+</formalpara>
+</para>
+                <para>Definition at line 13 of file PauseState.hpp</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>PauseState.hpp</para></listitem></itemizedlist></para>
+        </simplesect>
+            <section xml:id="d4/d89/classant_1_1_pause_state_1a5d5b0e4d75f18ab6b0697821aee68d83">
+                <title>ant::PauseState::PauseState (StateStack &amp;stack, Context context)</title> <emphasis>Constructor por defecto.</emphasis>
+                
+            </section>
+            <section xml:id="d4/d89/classant_1_1_pause_state_1a8c99d68f9ac3147a0fb3f8bee008e73f">
+                <title>void ant::PauseState::render ()</title> <emphasis>Renderiza el estado.</emphasis>
+                
+            </section>
+            <section xml:id="d4/d89/classant_1_1_pause_state_1acc86d012ec67efad3d5339cfce2a983f">
+                <title>bool ant::PauseState::update (sf::Time dt)</title> <emphasis>Actualiza.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>dt</entry>
+                                <entry>
+<para>sf::Time delta time </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="d4/d89/classant_1_1_pause_state_1af22b38989f774e2ed557b91531048d42">
+                <title>bool ant::PauseState::handleEvent (const sf::Event &amp;event)</title> <emphasis>Maneja el input del teclado/raton.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>event</entry>
+                                <entry>
+<para>sf::Event evento. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="d4/d89/classant_1_1_pause_state_1af9bb1258e9c7960cceeb90ee8b1fbc21">
+                <title>void ant::PauseState::loadConfig (const std::string &amp;filename)</title> <emphasis>Carga la configuracion de este estado.</emphasis>
+                
+            </section>
+            <section xml:id="d8/df7/classant_1_1_app_state_1a94963d69f76e53c5e3b6cfa58f99fff9">
+                <title>typedef std::unique_ptr&lt;AppState&gt; ant::AppState::uPtr</title> <emphasis>Puntero unico de AppState.</emphasis>
+                
+            </section>
+            <section xml:id="d8/df7/classant_1_1_app_state_1a772c49d9b95d2447149218ce7914d40c">
+                <title>typedef std::shared_ptr&lt;AppState&gt; ant::AppState::sPtr</title> <emphasis>Puntero Compartido de AppState.</emphasis>
+                
+            </section>
+            <section xml:id="d8/df7/classant_1_1_app_state_1a2830ba9f7de8efbf03bab5249d5d3f0a">
+                <title>void ant::AppState::requestStackPush (AppStates::ID stateID)</title> <emphasis>Pide al stack que añada un estado nuevo.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>stateID</entry>
+                                <entry>
+<para><link linkend="da/dd5/namespaceant_1_1_app_states_1a8e30476d77a5da5e0c1c3b9c7042e62a">AppStates::ID</link> id del estado. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="d8/df7/classant_1_1_app_state_1a65a59f018d590e807fd61adfa307651e">
+                <title>void ant::AppState::requestStackPop ()</title> <emphasis>Pide al stack que quite el ultimo estado añadido.</emphasis>
+                
+            </section>
+            <section xml:id="d8/df7/classant_1_1_app_state_1a16e430d3eb803f4ff7995214bd66665e">
+                <title>void ant::AppState::requestStateClear ()</title> <emphasis>Pide al stack que se limpie.</emphasis>
+                
+            </section>
+            <section xml:id="d8/df7/classant_1_1_app_state_1aa7abef18b5d2d32dbb9b35d4f630cb31">
+                <title>AppState::Context ant::AppState::getContext () const </title> <emphasis>Devuelve el contexto.</emphasis>
+                
+<para><formalpara><title>Returns: </title>
+
+<para><link linkend="d8/d0b/structant_1_1_app_state_1_1_context">AppState::Context</link> </para>
+</formalpara>
+</para>
+
+            </section>
+</section>

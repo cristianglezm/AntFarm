@@ -1,0 +1,5 @@
+<map id="ant::Application::processInput" name="ant::Application::processInput">
+<area shape="rect" id="node2" href="$d1/da5/classant_1_1_state_stack.html#ac20f05b7af54c72199a3fef098c9dc2f" title="maneja la input de los estados(teclado/ raton). " alt="" coords="220,13,411,39"/>
+<area shape="rect" id="node3" href="$d1/da5/classant_1_1_state_stack.html#a22b55b41158c41bd7c6ef54ae317a6b7" title="Aplica los cambios pendientes al Stack. " alt="" coords="459,5,657,47"/>
+<area shape="rect" id="node4" href="$d1/da5/classant_1_1_state_stack.html#a616cd23d2b8c0ade57d016ae929001cd" title="Crea el estado especificado. " alt="" coords="705,13,893,39"/>
+</map>

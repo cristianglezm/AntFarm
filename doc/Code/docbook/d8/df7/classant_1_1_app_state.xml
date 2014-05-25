@@ -1,0 +1,257 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d8/df7/classant_1_1_app_state">
+<title>ant::AppState class Reference</title>
+<para>
+    <programlisting>#include <link linkend="df/d68/_app_state_8hpp">&lt;AppState.hpp&gt;</link></programlisting>
+</para>
+        <simplesect>
+            <title> Classes </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d8/d0b/structant_1_1_app_state_1_1_context">ant::AppState::Context</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef std::unique_ptr&lt; <link linkend="d8/df7/classant_1_1_app_state">AppState</link> &gt;  <link linkend="d8/df7/classant_1_1_app_state_1a94963d69f76e53c5e3b6cfa58f99fff9">uPtr</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef std::shared_ptr&lt; <link linkend="d8/df7/classant_1_1_app_state">AppState</link> &gt;  <link linkend="d8/df7/classant_1_1_app_state_1a772c49d9b95d2447149218ce7914d40c">sPtr</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>StateStack * mStack</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Context mContext</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d8/df7/classant_1_1_app_state_1a5b156f1658a582ccb59dc55d27c391ca">AppState</link> (
+<link linkend="d1/da5/classant_1_1_state_stack">StateStack</link> &amp; stack, <link linkend="d8/d0b/structant_1_1_app_state_1_1_context">AppState::Context</link> context)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual void <link linkend="d8/df7/classant_1_1_app_state_1a8e4e13cdf558c5d57339548d8b5acaf9">render</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual bool <link linkend="d8/df7/classant_1_1_app_state_1a536738e3c366a35ff6406dccb34ce215">update</link> (
+sf::Time dt)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual bool <link linkend="d8/df7/classant_1_1_app_state_1ae70866194e3c8cf2fd42041804d0905a">handleEvent</link> (
+const sf::Event &amp; event)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual <link linkend="d8/df7/classant_1_1_app_state_1a27d536760f90a2d44f556bda2191ed40">~AppState</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d8/df7/classant_1_1_app_state_1a2830ba9f7de8efbf03bab5249d5d3f0a">requestStackPush</link> (
+<link linkend="da/dd5/namespaceant_1_1_app_states_1a8e30476d77a5da5e0c1c3b9c7042e62a">AppStates::ID</link> stateID)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d8/df7/classant_1_1_app_state_1a65a59f018d590e807fd61adfa307651e">requestStackPop</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d8/df7/classant_1_1_app_state_1a16e430d3eb803f4ff7995214bd66665e">requestStateClear</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d8/d0b/structant_1_1_app_state_1_1_context">Context</link> <link linkend="d8/df7/classant_1_1_app_state_1aa7abef18b5d2d32dbb9b35d4f630cb31">getContext</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Brief Description</title>
+
+<para>Clase abstracta de estado de aplicacion. </para>
+    </simplesect>
+        <simplesect>
+            <title>Detailed Description</title>
+
+<para><formalpara><title>Author: </title>
+
+<para>Cristian Glez <link xlink:href="mailto:Cristian.glez.m@gmail.com">Cristian.glez.m@gmail.com</link> </para>
+</formalpara>
+<formalpara><title>Version: </title>
+
+<para>0.1 </para>
+</formalpara>
+</para>
+                <para>Definition at line 17 of file AppState.hpp</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>AppState.hpp</para></listitem></itemizedlist></para>
+        </simplesect>
+            <section xml:id="d8/df7/classant_1_1_app_state_1a94963d69f76e53c5e3b6cfa58f99fff9">
+                <title>typedef std::unique_ptr&lt;AppState&gt; ant::AppState::uPtr</title> <emphasis>Puntero unico de AppState.</emphasis>
+                
+            </section>
+            <section xml:id="d8/df7/classant_1_1_app_state_1a772c49d9b95d2447149218ce7914d40c">
+                <title>typedef std::shared_ptr&lt;AppState&gt; ant::AppState::sPtr</title> <emphasis>Puntero Compartido de AppState.</emphasis>
+                
+            </section>
+            <section xml:id="d8/df7/classant_1_1_app_state_1a5b156f1658a582ccb59dc55d27c391ca">
+                <title>ant::AppState::AppState (StateStack &amp;stack, AppState::Context context)</title> <emphasis>Constructor principal.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>stack</entry>
+                                <entry>
+<para><link linkend="d1/da5/classant_1_1_state_stack">StateStack</link> referencia a un stack, </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>context</entry>
+                                <entry>
+<para><link linkend="d8/d0b/structant_1_1_app_state_1_1_context">AppState::Context</link> contexto de ejecucion </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="d8/df7/classant_1_1_app_state_1a8e4e13cdf558c5d57339548d8b5acaf9">
+                <title>virtual void ant::AppState::render ()=0</title> <emphasis>Metodo abstracto para que los estados
+dibujen a la pantalla.</emphasis>
+                
+            </section>
+            <section xml:id="d8/df7/classant_1_1_app_state_1a536738e3c366a35ff6406dccb34ce215">
+                <title>virtual bool ant::AppState::update (sf::Time dt)=0</title> <emphasis>Metodo abstracto para que los estados actualizen su estado.</emphasis>
+                
+<para><formalpara><title>Returns: </title>
+
+<para>bool retorna true para que los demas tambien actualicen. </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="d8/df7/classant_1_1_app_state_1ae70866194e3c8cf2fd42041804d0905a">
+                <title>virtual bool ant::AppState::handleEvent (const sf::Event &amp;event)=0</title> <emphasis>Metodo abstracto para que los estados manejen el input.</emphasis>
+                
+<para><formalpara><title>Returns: </title>
+
+<para>bool retorna true para que los demas tambien manejen eventos. </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="d8/df7/classant_1_1_app_state_1a27d536760f90a2d44f556bda2191ed40">
+                <title>ant::AppState::~AppState ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d8/df7/classant_1_1_app_state_1a2830ba9f7de8efbf03bab5249d5d3f0a">
+                <title>void ant::AppState::requestStackPush (AppStates::ID stateID)</title> <emphasis>Pide al stack que añada un estado nuevo.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>stateID</entry>
+                                <entry>
+<para><link linkend="da/dd5/namespaceant_1_1_app_states_1a8e30476d77a5da5e0c1c3b9c7042e62a">AppStates::ID</link> id del estado. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="d8/df7/classant_1_1_app_state_1a65a59f018d590e807fd61adfa307651e">
+                <title>void ant::AppState::requestStackPop ()</title> <emphasis>Pide al stack que quite el ultimo estado añadido.</emphasis>
+                
+            </section>
+            <section xml:id="d8/df7/classant_1_1_app_state_1a16e430d3eb803f4ff7995214bd66665e">
+                <title>void ant::AppState::requestStateClear ()</title> <emphasis>Pide al stack que se limpie.</emphasis>
+                
+            </section>
+            <section xml:id="d8/df7/classant_1_1_app_state_1aa7abef18b5d2d32dbb9b35d4f630cb31">
+                <title>AppState::Context ant::AppState::getContext () const </title> <emphasis>Devuelve el contexto.</emphasis>
+                
+<para><formalpara><title>Returns: </title>
+
+<para><link linkend="d8/d0b/structant_1_1_app_state_1_1_context">AppState::Context</link> </para>
+</formalpara>
+</para>
+
+            </section>
+</section>

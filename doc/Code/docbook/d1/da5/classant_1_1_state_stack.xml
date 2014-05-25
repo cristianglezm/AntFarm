@@ -1,0 +1,442 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d1/da5/classant_1_1_state_stack">
+<title>ant::StateStack class Reference</title>
+<para>
+    <programlisting>#include <link linkend="dd/d10/_state_stack_8hpp">&lt;StateStack.hpp&gt;</link></programlisting>
+</para>
+        <simplesect>
+            <title> Classes </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d1/d4f/structant_1_1_state_stack_1_1_pending_change">ant::StateStack::PendingChange</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>enum <link linkend="d1/da5/classant_1_1_state_stack_1a5958413df50ebb647a5bcc5a2d3ee1ce">Action</link>{<link linkend="d1/da5/classant_1_1_state_stack_1a5958413df50ebb647a5bcc5a2d3ee1cea1a317e70949db7ef880de05c5c988219">Push</link>, <link linkend="d1/da5/classant_1_1_state_stack_1a5958413df50ebb647a5bcc5a2d3ee1cea2ef3811cc672c7241af5d1de0c4aa88b">Pop</link>, <link linkend="d1/da5/classant_1_1_state_stack_1a5958413df50ebb647a5bcc5a2d3ee1cea08eaa646dcbd9a31b14944b6f9924eaa">Clear</link>}</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::vector&lt; AppState::uPtr &gt; mStack</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::vector&lt; PendingChange &gt; mPendingList</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>AppState::Context mContext</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::map&lt; AppStates::ID, std::function&lt; AppState::uPtr()&gt; &gt; mFactories</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d1/da5/classant_1_1_state_stack_1abc08958d4e5fd16d1c6da4ccaf531bd8">StateStack</link> (
+<link linkend="d8/d0b/structant_1_1_app_state_1_1_context">AppState::Context</link> context)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d1/da5/classant_1_1_state_stack_1a7ffe3d00b54d682346f3fab38e7cfc2c">registerState</link> (
+<link linkend="da/dd5/namespaceant_1_1_app_states_1a8e30476d77a5da5e0c1c3b9c7042e62a">AppStates::ID</link> stateID)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d1/da5/classant_1_1_state_stack_1a13faaea274a239bde3344c37cacba0f9">registerState</link> (
+<link linkend="da/dd5/namespaceant_1_1_app_states_1a8e30476d77a5da5e0c1c3b9c7042e62a">AppStates::ID</link> stateID, std::string msg)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d1/da5/classant_1_1_state_stack_1a8c86e2280d7093c745d700269b25d064">update</link> (
+sf::Time dt)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d1/da5/classant_1_1_state_stack_1af8eac07820fb43a4624b7b2a55a279de">render</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d1/da5/classant_1_1_state_stack_1ac20f05b7af54c72199a3fef098c9dc2f">handleEvent</link> (
+const sf::Event &amp; event)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d1/da5/classant_1_1_state_stack_1a6f9c84764f4646cf937f245af1c1c1fb">pushState</link> (
+<link linkend="da/dd5/namespaceant_1_1_app_states_1a8e30476d77a5da5e0c1c3b9c7042e62a">AppStates::ID</link> stateID)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d1/da5/classant_1_1_state_stack_1a428daca2badf554f4737a763e576e111">popState</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d1/da5/classant_1_1_state_stack_1aa7d1be300f9f5d840572138552888596">clearStates</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="d1/da5/classant_1_1_state_stack_1ad697b369f96e1468c8eaa48adc1781b6">isEmpty</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d1/da5/classant_1_1_state_stack_1a2844caa16fb3a5dfbc80a15090f0629c">~StateStack</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d8/df7/classant_1_1_app_state_1a94963d69f76e53c5e3b6cfa58f99fff9">AppState::uPtr</link> <link linkend="d1/da5/classant_1_1_state_stack_1a616cd23d2b8c0ade57d016ae929001cd">createState</link> (
+<link linkend="da/dd5/namespaceant_1_1_app_states_1a8e30476d77a5da5e0c1c3b9c7042e62a">AppStates::ID</link> stateID)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d1/da5/classant_1_1_state_stack_1a22b55b41158c41bd7c6ef54ae317a6b7">applyPendingChanges</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Brief Description</title>
+
+<para>Clase para almacenar los estados del juego. </para>
+    </simplesect>
+        <simplesect>
+            <title>Detailed Description</title>
+
+<para><formalpara><title>Author: </title>
+
+<para>Cristian Glez <link xlink:href="mailto:Cristian.glez.m@gmail.com">Cristian.glez.m@gmail.com</link> </para>
+</formalpara>
+<formalpara><title>Version: </title>
+
+<para>0.1 </para>
+</formalpara>
+</para>
+                <para>Definition at line 18 of file StateStack.hpp</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>StateStack.hpp</para></listitem></itemizedlist></para>
+        </simplesect>
+            <section xml:id="d1/da5/classant_1_1_state_stack_1a5958413df50ebb647a5bcc5a2d3ee1ce">
+               <title>enum Action </title>
+               
+               <formalpara>
+                    <title>Enumerator:</title>
+                    <variablelist>
+                        <varlistentry xml:id="d1/da5/classant_1_1_state_stack_1a5958413df50ebb647a5bcc5a2d3ee1cea1a317e70949db7ef880de05c5c988219">
+                            <term>Push</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="d1/da5/classant_1_1_state_stack_1a5958413df50ebb647a5bcc5a2d3ee1cea2ef3811cc672c7241af5d1de0c4aa88b">
+                            <term>Pop</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="d1/da5/classant_1_1_state_stack_1a5958413df50ebb647a5bcc5a2d3ee1cea08eaa646dcbd9a31b14944b6f9924eaa">
+                            <term>Clear</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                     </variablelist>
+                </formalpara>
+                <para>Definition at line 23 of file StateStack.hpp
+                    <programlisting>
+{
+Push, 
+Pop, 
+Clear, 
+}Action;
+                    </programlisting>
+                </para>
+            </section>
+            <section xml:id="d1/da5/classant_1_1_state_stack_1abc08958d4e5fd16d1c6da4ccaf531bd8">
+                <title>ant::StateStack::StateStack (AppState::Context context)</title> <emphasis>Constructor principal.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>context</entry>
+                                <entry>
+<para><link linkend="d8/d0b/structant_1_1_app_state_1_1_context">AppState::Context</link> contexto de ejecucion. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="d1/da5/classant_1_1_state_stack_1a7ffe3d00b54d682346f3fab38e7cfc2c">
+                <title>void ant::StateStack::registerState (AppStates::ID stateID)</title> <emphasis>Registra un estado en la fabrica, el estado tiene que tener 3 argumentos.</emphasis>
+                
+<para>templateparam                            <row>
+                                <entry>T</entry>
+                                <entry>
+<para>clase del estado a crear. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>stateID</entry>
+                                <entry>
+<para>AppState::ID estado a crear. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="d1/da5/classant_1_1_state_stack_1a13faaea274a239bde3344c37cacba0f9">
+                <title>void ant::StateStack::registerState (AppStates::ID stateID, std::string msg)</title> <emphasis>Registra un estado en la fabrica, el estado tiene que tener 3 argumentos.</emphasis>
+                
+<para>templateparam                            <row>
+                                <entry>T</entry>
+                                <entry>
+<para>clase del estado a crear. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>stateID</entry>
+                                <entry>
+<para>AppState::ID estado a crear, </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>msg</entry>
+                                <entry>
+<para>std::string mensaje que mostrara el estado. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="d1/da5/classant_1_1_state_stack_1a8c86e2280d7093c745d700269b25d064">
+                <title>void ant::StateStack::update (sf::Time dt)</title> <emphasis>Actualiza los estados que tiene.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>dt</entry>
+                                <entry>
+<para>sf::Time delta time </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="d1/da5/classant_1_1_state_stack_1af8eac07820fb43a4624b7b2a55a279de">
+                <title>void ant::StateStack::render ()</title> <emphasis>Renderiza los estados.</emphasis>
+                
+            </section>
+            <section xml:id="d1/da5/classant_1_1_state_stack_1ac20f05b7af54c72199a3fef098c9dc2f">
+                <title>void ant::StateStack::handleEvent (const sf::Event &amp;event)</title> <emphasis>maneja la input de los estados(teclado/ raton).</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>event</entry>
+                                <entry>
+<para>sf::Event </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="d1/da5/classant_1_1_state_stack_1a6f9c84764f4646cf937f245af1c1c1fb">
+                <title>void ant::StateStack::pushState (AppStates::ID stateID)</title> <emphasis>Añade un estado al Stack.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>stateID</entry>
+                                <entry>
+<para><link linkend="da/dd5/namespaceant_1_1_app_states_1a8e30476d77a5da5e0c1c3b9c7042e62a">AppStates::ID</link> </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="d1/da5/classant_1_1_state_stack_1a428daca2badf554f4737a763e576e111">
+                <title>void ant::StateStack::popState ()</title> <emphasis>Elimina el ultimo estado añadido.</emphasis>
+                
+            </section>
+            <section xml:id="d1/da5/classant_1_1_state_stack_1aa7d1be300f9f5d840572138552888596">
+                <title>void ant::StateStack::clearStates ()</title> <emphasis>Elimina todos los estados.</emphasis>
+                
+            </section>
+            <section xml:id="d1/da5/classant_1_1_state_stack_1ad697b369f96e1468c8eaa48adc1781b6">
+                <title>bool ant::StateStack::isEmpty () const </title> <emphasis>Devuelve si el Stack esta vacio.</emphasis>
+                
+<para><formalpara><title>Returns: </title>
+
+<para>bool </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="d1/da5/classant_1_1_state_stack_1a2844caa16fb3a5dfbc80a15090f0629c">
+                <title>ant::StateStack::~StateStack ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d1/da5/classant_1_1_state_stack_1a616cd23d2b8c0ade57d016ae929001cd">
+                <title>AppState::uPtr ant::StateStack::createState (AppStates::ID stateID)</title> <emphasis>Crea el estado especificado.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>stateID</entry>
+                                <entry>
+<para><link linkend="da/dd5/namespaceant_1_1_app_states_1a8e30476d77a5da5e0c1c3b9c7042e62a">AppStates::ID</link> </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="d1/da5/classant_1_1_state_stack_1a22b55b41158c41bd7c6ef54ae317a6b7">
+                <title>void ant::StateStack::applyPendingChanges ()</title> <emphasis>Aplica los cambios pendientes al Stack.</emphasis>
+                
+            </section>
+</section>

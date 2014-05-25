@@ -1,0 +1,7 @@
+<map id="ant::MenuState::handleEvent" name="ant::MenuState::handleEvent">
+<area shape="rect" id="node2" href="$d8/df7/classant_1_1_app_state.html#a65a59f018d590e807fd61adfa307651e" title="Pide al stack que quite el ultimo estado añadido. " alt="" coords="248,5,459,32"/>
+<area shape="rect" id="node4" href="$d8/df7/classant_1_1_app_state.html#a2830ba9f7de8efbf03bab5249d5d3f0a" title="Pide al stack que añada un estado nuevo. " alt="" coords="245,56,462,83"/>
+<area shape="rect" id="node6" href="$db/d69/classant_1_1_menu_state.html#a90dcaaba6dff818e305b80139c02dcb0" title="ant::MenuState::updateOptionText" alt="" coords="243,107,464,133"/>
+<area shape="rect" id="node3" href="$d1/da5/classant_1_1_state_stack.html#a428daca2badf554f4737a763e576e111" title="Elimina el ultimo estado añadido. " alt="" coords="515,5,689,32"/>
+<area shape="rect" id="node5" href="$d1/da5/classant_1_1_state_stack.html#a6f9c84764f4646cf937f245af1c1c1fb" title="Añade un estado al Stack. " alt="" coords="512,56,692,83"/>
+</map>

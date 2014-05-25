@@ -1,0 +1,9 @@
+<map id="ant::StateStack::pushState" name="ant::StateStack::pushState">
+<area shape="rect" id="node2" href="$d7/d57/classant_1_1_application.html#afaff8830dce721acf4d6924a2a0e08f2" title="Constructor Principal. " alt="" coords="250,71,434,98"/>
+<area shape="rect" id="node3" href="$d8/df7/classant_1_1_app_state.html#a2830ba9f7de8efbf03bab5249d5d3f0a" title="Pide al stack que añada un estado nuevo. " alt="" coords="233,122,451,149"/>
+<area shape="rect" id="node4" href="$d0/da0/classant_1_1_game_over_state.html#ac16226e76dac5963ab1a53f506cc17e1" title="Maneja la input. " alt="" coords="525,5,665,47"/>
+<area shape="rect" id="node5" href="$d4/da6/classant_1_1_game_state.html#a379cc1dbbea0e0f559a174676da966fe" title="Maneja el input del juego. " alt="" coords="499,71,691,98"/>
+<area shape="rect" id="node6" href="$d4/da6/classant_1_1_game_state.html#a90274b8fa005424e2d42fd526331f763" title="Recibe los eventos.LEVEL_COMPLETE cambia de nivel.LEVEL_FAILED vuelve al menu. " alt="" coords="510,122,679,149"/>
+<area shape="rect" id="node7" href="$db/d69/classant_1_1_menu_state.html#a2ae44edc8d47505675521567e65cbd8d" title="Maneja la input. " alt="" coords="500,173,689,199"/>
+<area shape="rect" id="node8" href="$d0/d6d/classant_1_1_title_state.html#a89b514fd2b2ae3a55ea49d4ae825d391" title="Maneja el input de teclado/raton. " alt="" coords="504,223,685,250"/>
+</map>

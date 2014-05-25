@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="da/dd5/namespaceant_1_1_app_states">
+<title>ant::AppStates</title>
+        <simplesect>
+            <title>Enumerations</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>enum <link linkend="da/dd5/namespaceant_1_1_app_states_1a8e30476d77a5da5e0c1c3b9c7042e62a">ID</link>{<link linkend="da/dd5/namespaceant_1_1_app_states_1a8e30476d77a5da5e0c1c3b9c7042e62aa117060da2885bd6f439fad622d3aa637">None</link>, <link linkend="da/dd5/namespaceant_1_1_app_states_1a8e30476d77a5da5e0c1c3b9c7042e62aacb875ab79bfd3c15c613fb0e3f887ea1">Title</link>, <link linkend="da/dd5/namespaceant_1_1_app_states_1a8e30476d77a5da5e0c1c3b9c7042e62aa16080a22b3bdef30ff6ae0591a018ce7">Menu</link>, <link linkend="da/dd5/namespaceant_1_1_app_states_1a8e30476d77a5da5e0c1c3b9c7042e62aa8409a570c8b6a9a3249df8202f847460">Game</link>, <link linkend="da/dd5/namespaceant_1_1_app_states_1a8e30476d77a5da5e0c1c3b9c7042e62aa619a7496eeea858776c64ac61baf7e07">Pause</link>, <link linkend="da/dd5/namespaceant_1_1_app_states_1a8e30476d77a5da5e0c1c3b9c7042e62aa833ce1d372d37447b5796014c751c782">GameFailed</link>, <link linkend="da/dd5/namespaceant_1_1_app_states_1a8e30476d77a5da5e0c1c3b9c7042e62aa3cd27be31490f3508411483ac5703918">GameSucceed</link>}</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Brief Description</title>
+
+<para>Tiene los ID de los estados de la aplicacion. </para>
+    </simplesect>
+</section>

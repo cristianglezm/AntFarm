@@ -20,7 +20,7 @@
    <div id="projectname">AntFarm
    &#160;<span id="projectnumber">v0.1a</span>
    </div>
-   <div id="projectbrief">Game about Ants that are trapped in some place and need to escape.</div>
+   <div id="projectbrief">Game Inspired by Lemmings</div>
   </td>
  </tr>
  </tbody>
@@ -51,6 +51,8 @@
       <li><a href="functions_func.html"><span>Functions</span></a></li>
       <li class="current"><a href="functions_vars.html"><span>Variables</span></a></li>
       <li><a href="functions_type.html"><span>Typedefs</span></a></li>
+      <li><a href="functions_enum.html"><span>Enumerations</span></a></li>
+      <li><a href="functions_eval.html"><span>Enumerator</span></a></li>
     </ul>
   </div>
   <div id="navrow4" class="tabs3">
@@ -85,6 +87,7 @@
 <h3><a class="anchor" id="index_a"></a>- a -</h3><ul>
 <li>action
 : <a class="el" href="dc/dd7/classant_1_1_g_u_i_1_1_button.html#adc6b1ff378eeb0583164c6fbacce483d">ant::GUI::Button</a>
+, <a class="el" href="d1/d4f/structant_1_1_state_stack_1_1_pending_change.html#a8bd65a2bdc7313e697c2a3c1dd062901">ant::StateStack::PendingChange</a>
 </li>
 <li>animation
 : <a class="el" href="de/df0/classant_1_1_component_settings.html#a31983ef81c97cd5ed7e7fc858dca0790">ant::ComponentSettings</a>
@@ -96,8 +99,9 @@
 : <a class="el" href="de/d2d/classant_1_1_config.html#ab3a359a775f870b58cc8535aa44a6526">ant::Config</a>
 </li>
 <li>assets
-: <a class="el" href="d4/df6/classant_1_1_component_factory.html#a624849c9a8fcd1df41b49f04d25fbce6">ant::ComponentFactory</a>
-, <a class="el" href="d1/db7/classant_1_1_game.html#aa35593a4496be0284a7a3905e33fbd24">ant::Game</a>
+: <a class="el" href="d8/d0b/structant_1_1_app_state_1_1_context.html#af678ddb7f0a97211689fc31ba94c881f">ant::AppState::Context</a>
+, <a class="el" href="d4/df6/classant_1_1_component_factory.html#a624849c9a8fcd1df41b49f04d25fbce6">ant::ComponentFactory</a>
+, <a class="el" href="d4/da6/classant_1_1_game_state.html#a4537d52e3ebce5b280a862b0e3cad1b9">ant::GameState</a>
 </li>
 <li>ASSETS_GAME_JSON
 : <a class="el" href="de/d2d/classant_1_1_config.html#a76f6edfa4ffe448ff6d874d438d59feb">ant::Config</a>
@@ -109,6 +113,9 @@
 
 
 <h3><a class="anchor" id="index_b"></a>- b -</h3><ul>
+<li>background
+: <a class="el" href="d0/d6d/classant_1_1_title_state.html#a743915de7141907d5fbed2fa8e8dc458">ant::TitleState</a>
+</li>
 <li>bounds
 : <a class="el" href="de/df0/classant_1_1_component_settings.html#a73dafad1f52d54aed792e01c74c4d7d5">ant::ComponentSettings</a>
 , <a class="el" href="d6/d94/classant_1_1_utils_1_1_quadtree.html#a1b9aecf327adee874486c11a56ce5334">ant::Utils::Quadtree</a>
@@ -129,7 +136,7 @@
 : <a class="el" href="d7/daa/class_states.html#a1a05b30c6f6c881b703c40f217890ac2">States</a>
 </li>
 <li>buttons
-: <a class="el" href="d1/db7/classant_1_1_game.html#abcc9ba334a047e2e37c74cb88bc27c03">ant::Game</a>
+: <a class="el" href="d4/da6/classant_1_1_game_state.html#a0e1f1d688b1179bff689e10d925343ac">ant::GameState</a>
 </li>
 </ul>
 
@@ -157,8 +164,7 @@
 : <a class="el" href="d7/daa/class_states.html#a1a5a36f0f204d9dda0ebd0a09b6fd7fe">States</a>
 </li>
 <li>clock
-: <a class="el" href="d1/db7/classant_1_1_game.html#a6bbbfe94bf4d606c2cc06ebeb1484c99">ant::Game</a>
-, <a class="el" href="db/ddf/classant_1_1spawn_system.html#a0ab34f70ff78bd5082faf4555a40a729">ant::spawnSystem</a>
+: <a class="el" href="db/ddf/classant_1_1spawn_system.html#a0ab34f70ff78bd5082faf4555a40a729">ant::spawnSystem</a>
 </li>
 <li>COLLISION_EVENT
 : <a class="el" href="dd/ded/class_event_type.html#a096fc66c6f900edf9f3a266c4c981bfa">EventType</a>
@@ -212,7 +218,7 @@
 : <a class="el" href="db/ddf/classant_1_1spawn_system.html#af01da0544d6bcd40342b87eff15f0e28">ant::spawnSystem</a>
 </li>
 <li>currentLevel
-: <a class="el" href="d1/db7/classant_1_1_game.html#aaa9ec1bb849bad52ac78f7a58ff62221">ant::Game</a>
+: <a class="el" href="d4/da6/classant_1_1_game_state.html#a1ae14bf9a671d4372abe4b9093ce5f45">ant::GameState</a>
 </li>
 </ul>
 
@@ -235,8 +241,7 @@
 
 <h3><a class="anchor" id="index_e"></a>- e -</h3><ul>
 <li>elapsedTime
-: <a class="el" href="d1/db7/classant_1_1_game.html#ae6e87276f982cc61f2399442b7168552">ant::Game</a>
-, <a class="el" href="db/ddf/classant_1_1spawn_system.html#ad9cfddea638866f36562f0c02bf7b789">ant::spawnSystem</a>
+: <a class="el" href="db/ddf/classant_1_1spawn_system.html#ad9cfddea638866f36562f0c02bf7b789">ant::spawnSystem</a>
 </li>
 <li>em
 : <a class="el" href="de/d48/classant_1_1_system.html#a5661d872ff769be150bd4e9a9552f6b9">ant::System</a>
@@ -257,7 +262,7 @@
 </li>
 <li>eventQueue
 : <a class="el" href="db/dec/classant_1_1_event_queue.html#abdcad7582c7d533d8b5a55706c9547ad">ant::EventQueue</a>
-, <a class="el" href="d1/db7/classant_1_1_game.html#af3e3bf4a2476fcf68cf689bc48dad975">ant::Game</a>
+, <a class="el" href="d4/da6/classant_1_1_game_state.html#a931f64dcd713af5c143745c11e4568d1">ant::GameState</a>
 , <a class="el" href="d0/dcb/classant_1_1_level.html#a72fadd2edc818389e85af96ea5144efd">ant::Level</a>
 , <a class="el" href="de/d48/classant_1_1_system.html#a27e1814e13d161b5ef0e848e3da16d29">ant::System</a>
 , <a class="el" href="d6/dcc/classant_1_1_system_factory.html#ae72909e917f13c79cf1a44731d473c02">ant::SystemFactory</a>
@@ -272,13 +277,15 @@
 : <a class="el" href="d7/daa/class_states.html#ae464e17ebc3214e3c17186d614e37c54">States</a>
 </li>
 <li>font
-: <a class="el" href="d1/db7/classant_1_1_game.html#a4c059b4562cef8a32d17d4d971f2bf4e">ant::Game</a>
+: <a class="el" href="d7/d57/classant_1_1_application.html#a0d20386c229838fe386929ddd5fbd678">ant::Application</a>
+, <a class="el" href="d0/da0/classant_1_1_game_over_state.html#a7de58d843035270c6cfdf0331f3570eb">ant::GameOverState</a>
+, <a class="el" href="d4/da6/classant_1_1_game_state.html#a0f648fe38b57ba74842572b8e9c05fdd">ant::GameState</a>
+, <a class="el" href="db/d69/classant_1_1_menu_state.html#a147af5e3f35de8de4d29b7cccce29ef4">ant::MenuState</a>
+, <a class="el" href="d4/d89/classant_1_1_pause_state.html#af20e85c9fe7792e3664eb3d96500debc">ant::PauseState</a>
+, <a class="el" href="d0/d6d/classant_1_1_title_state.html#ad5e5f68c1e7369ee727ceee9a6d4489f">ant::TitleState</a>
 </li>
 <li>fonts
 : <a class="el" href="d1/dd6/classant_1_1_asset_manager.html#ac80febb1ef99d2bc488890f478011a1c">ant::AssetManager</a>
-</li>
-<li>fps
-: <a class="el" href="d1/db7/classant_1_1_game.html#a8b0f904a282ceb7440280b6ca3b06e48">ant::Game</a>
 </li>
 </ul>
 
@@ -287,24 +294,18 @@
 <li>gameBounds
 : <a class="el" href="dc/de8/classant_1_1collision_system.html#a8103e85df3ce0b3ed9c58becea61fafb">ant::collisionSystem</a>
 </li>
-<li>gameCompleted
-: <a class="el" href="d1/db7/classant_1_1_game.html#af0dcf95dbb8fe7562046ca1cbdf1ec0f">ant::Game</a>
-</li>
 <li>gameEventDispatcher
-: <a class="el" href="d1/db7/classant_1_1_game.html#a75e456a8a3d4412d160c704cd096b551">ant::Game</a>
+: <a class="el" href="d4/da6/classant_1_1_game_state.html#ad109775544bc8d03e47a5c9a41493d04">ant::GameState</a>
 , <a class="el" href="d0/dcb/classant_1_1_level.html#a5e215a7e3f9b9530f494f1ff3931e8ff">ant::Level</a>
 , <a class="el" href="d6/dcc/classant_1_1_system_factory.html#ac2e43c03f569c09b2ab6a3539e0fc42a">ant::SystemFactory</a>
 , <a class="el" href="de/dc7/classant_1_1_world.html#a42d369d875c024b8e1342bcae2464032">ant::World</a>
 , <a class="el" href="d0/df7/classant_1_1_world_factory.html#ad340f4243d30794bd46fd87c3ccd7075">ant::WorldFactory</a>
 </li>
-<li>gameFailed
-: <a class="el" href="d1/db7/classant_1_1_game.html#ab51bbfb5cc68db3db66196ec92669af4">ant::Game</a>
-</li>
 <li>gameMap
 : <a class="el" href="dc/de8/classant_1_1collision_system.html#aaadfabecc42a47e7fc8219178bd712ca">ant::collisionSystem</a>
 </li>
 <li>GameSpeed
-: <a class="el" href="d1/db7/classant_1_1_game.html#ab1f75acca5e0fdf7eb2f5595ab4fb9ab">ant::Game</a>
+: <a class="el" href="d4/da6/classant_1_1_game_state.html#af9c5ac223f5bebb7df9a5b4dfff4232c">ant::GameState</a>
 </li>
 <li>Gravity
 : <a class="el" href="db/de0/classant_1_1gravity_system.html#afea117eea84efab64b7014697cfa8194">ant::gravitySystem</a>
@@ -348,20 +349,14 @@
 <li>INDOOR_FILE
 : <a class="el" href="de/d2d/classant_1_1_config.html#a8c82f237ce1b827e21ffc8640ee7240d">ant::Config</a>
 </li>
-<li>isPause
-: <a class="el" href="d1/db7/classant_1_1_game.html#af5bdd8a7b7f64ddafa6bc36fb6a0b030">ant::Game</a>
-</li>
 </ul>
 
 
 <h3><a class="anchor" id="index_l"></a>- l -</h3><ul>
-<li>lastFrame
-: <a class="el" href="d1/db7/classant_1_1_game.html#a5f13e33ed2c5664f8d1e01fe2ca50356">ant::Game</a>
-</li>
 <li>level
 : <a class="el" href="db/d10/classant_1_1_entity_factory.html#a94033dca09c55b92cc187e64c375c352">ant::EntityFactory</a>
-, <a class="el" href="d1/db7/classant_1_1_game.html#ae9c359404e33b4c781cad70b6bbf86a8">ant::Game</a>
-, <a class="el" href="d6/d94/classant_1_1_utils_1_1_quadtree.html#a7ced93ac1e59cef813ffca8f36133bad">ant::Utils::Quadtree</a>
+, <a class="el" href="d4/da6/classant_1_1_game_state.html#a1c31323c9a09ae49d33b9aa3a15a6348">ant::GameState</a>
+, <a class="el" href="d6/d94/classant_1_1_utils_1_1_quadtree.html#afae97d3832d54987e09661dd7c14cfc6">ant::Utils::Quadtree</a>
 </li>
 <li>LEVEL_COMPLETE
 : <a class="el" href="dd/ded/class_event_type.html#ac2a930a6be10c5029dc2cda396501ed6">EventType</a>
@@ -403,17 +398,75 @@
 <li>mask
 : <a class="el" href="dc/d73/classant_1_1_entity.html#aeb012401caea5c69acd3836612fec18f">ant::Entity</a>
 </li>
+<li>mAssets
+: <a class="el" href="d7/d57/classant_1_1_application.html#a8a884f6f63b2ed9928543ce493e3bc2c">ant::Application</a>
+</li>
 <li>MAX_CAPACITY
-: <a class="el" href="d6/d94/classant_1_1_utils_1_1_quadtree.html#a2dfb6f89748fb4e29b77d129a5bd8a1b">ant::Utils::Quadtree</a>
+: <a class="el" href="d6/d94/classant_1_1_utils_1_1_quadtree.html#af040bf0509e7bf6cecd9b7d5c7cf5c0b">ant::Utils::Quadtree</a>
 </li>
 <li>MAX_LEVEL
-: <a class="el" href="d6/d94/classant_1_1_utils_1_1_quadtree.html#acae27b6f6ebff7e51a6bc86406cc4002">ant::Utils::Quadtree</a>
+: <a class="el" href="d6/d94/classant_1_1_utils_1_1_quadtree.html#a5c8873d75fa20002086f506ecfcf8354">ant::Utils::Quadtree</a>
 </li>
 <li>maxSpeed
 : <a class="el" href="de/df0/classant_1_1_component_settings.html#aa986b37a02f101f7c0ee17a4e8baf869">ant::ComponentSettings</a>
 </li>
+<li>mBackground
+: <a class="el" href="db/d69/classant_1_1_menu_state.html#a085741f02480379adac7adfaac632054">ant::MenuState</a>
+, <a class="el" href="d0/d6d/classant_1_1_title_state.html#a48a62f8dd95978d1e1fa258ba9317e15">ant::TitleState</a>
+</li>
+<li>mContext
+: <a class="el" href="d8/df7/classant_1_1_app_state.html#a58143812d641b1ff74bc541e5c1235da">ant::AppState</a>
+, <a class="el" href="d1/da5/classant_1_1_state_stack.html#a3c005609bf1f4b7e3b1844ace66a3a3a">ant::StateStack</a>
+</li>
+<li>mFactories
+: <a class="el" href="d1/da5/classant_1_1_state_stack.html#a331a2423e1b5e54519524da124de6fdb">ant::StateStack</a>
+</li>
 <li>minSpeed
 : <a class="el" href="de/df0/classant_1_1_component_settings.html#a60bbb1cde99a1524cac65b3ea6ced5d4">ant::ComponentSettings</a>
+</li>
+<li>mOptionIndex
+: <a class="el" href="db/d69/classant_1_1_menu_state.html#a90e960ede5bdd0f88703064a58ad836d">ant::MenuState</a>
+</li>
+<li>mOptions
+: <a class="el" href="db/d69/classant_1_1_menu_state.html#ada18a646d200d52d3365629931e1ba93">ant::MenuState</a>
+</li>
+<li>mPendingList
+: <a class="el" href="d1/da5/classant_1_1_state_stack.html#a757254b1538fa12fc0452be1b7edb798">ant::StateStack</a>
+</li>
+<li>mShowText
+: <a class="el" href="d4/d89/classant_1_1_pause_state.html#a210ba9bf56634850b82a9187f6f4969c">ant::PauseState</a>
+, <a class="el" href="d0/d6d/classant_1_1_title_state.html#a597ebaf7b06f146760f3e380dba94013">ant::TitleState</a>
+</li>
+<li>mStack
+: <a class="el" href="d8/df7/classant_1_1_app_state.html#a0b37fb086ce57d26bd59473f3859b1df">ant::AppState</a>
+, <a class="el" href="d1/da5/classant_1_1_state_stack.html#a0933a422d35db2f59c682070c7eab470">ant::StateStack</a>
+</li>
+<li>mStateStack
+: <a class="el" href="d7/d57/classant_1_1_application.html#affce09adbc792733866c8a45d7d9bda8">ant::Application</a>
+</li>
+<li>mStatisticsNumFrames
+: <a class="el" href="d7/d57/classant_1_1_application.html#aaba4dc5709cab5ea4e77b27e5f5fb9e4">ant::Application</a>
+</li>
+<li>mStatisticsText
+: <a class="el" href="d7/d57/classant_1_1_application.html#ac6efeaf0017a5847c404d569134bdb17">ant::Application</a>
+</li>
+<li>mStatisticsUpdateTime
+: <a class="el" href="d7/d57/classant_1_1_application.html#a85a5669b50f423d557deab7c0315a0f7">ant::Application</a>
+</li>
+<li>mText
+: <a class="el" href="d0/da0/classant_1_1_game_over_state.html#a384e58705e1ec2889d7190601d56d4ce">ant::GameOverState</a>
+, <a class="el" href="d4/d89/classant_1_1_pause_state.html#aa91263eca22d8ee20c7dc1d47e81c3de">ant::PauseState</a>
+, <a class="el" href="d0/d6d/classant_1_1_title_state.html#a0527596bf892971656bbd2f4f6d65e5f">ant::TitleState</a>
+</li>
+<li>mTextEffectTime
+: <a class="el" href="d4/d89/classant_1_1_pause_state.html#a5ed33b12d057da1fd71dbe5f4c146a9a">ant::PauseState</a>
+, <a class="el" href="d0/d6d/classant_1_1_title_state.html#a4d7ed62ea25f3471bd7edbf47f26a33b">ant::TitleState</a>
+</li>
+<li>mTitle
+: <a class="el" href="d0/d6d/classant_1_1_title_state.html#af51e3b04f108d4cb15cf7bc652b97259">ant::TitleState</a>
+</li>
+<li>mWindow
+: <a class="el" href="d7/d57/classant_1_1_application.html#a6050fab136705ac705b727da336bb586">ant::Application</a>
 </li>
 </ul>
 
@@ -491,9 +544,6 @@
 <li>rotation
 : <a class="el" href="de/df0/classant_1_1_component_settings.html#af6510ce7e9046dae09b36ae090ff29e2">ant::ComponentSettings</a>
 </li>
-<li>running
-: <a class="el" href="d1/db7/classant_1_1_game.html#aa8458aa0ab64d1290b1d960df27a7134">ant::Game</a>
-</li>
 </ul>
 
 
@@ -514,7 +564,7 @@
 : <a class="el" href="dd/ded/class_event_type.html#ade218fb495bba6510f0c186034c55f4f">EventType</a>
 </li>
 <li>self
-: <a class="el" href="d1/db7/classant_1_1_game.html#a374c62a6f14fffddb2e56ef7230d55f2">ant::Game</a>
+: <a class="el" href="d4/da6/classant_1_1_game_state.html#ac1db6fc65156848184815f01ccdea619">ant::GameState</a>
 </li>
 <li>size
 : <a class="el" href="dc/dd7/classant_1_1_g_u_i_1_1_button.html#a6c6e3fddc805d48d43990ba533aeb01d">ant::GUI::Button</a>
@@ -534,12 +584,18 @@
 <li>stairs
 : <a class="el" href="dd/d76/classant_1_1_constructions.html#a19d388ea2eb5a1a55456e1714c657ebb">ant::Constructions</a>
 </li>
+<li>stateID
+: <a class="el" href="d1/d4f/structant_1_1_state_stack_1_1_pending_change.html#ac09fea53d60ca1232aaa3e0f670aae2f">ant::StateStack::PendingChange</a>
+</li>
 <li>states
 : <a class="el" href="dc/d73/classant_1_1_entity.html#aa05dacb81ac4188057dc18f053dcc491">ant::Entity</a>
 , <a class="el" href="db/ddf/classant_1_1spawn_system.html#a76dbde294f95b3aadd2b1df30699ebf1">ant::spawnSystem</a>
 </li>
 <li>stop
 : <a class="el" href="dd/d76/classant_1_1_constructions.html#a3bc1283137ad6344af1f966256bdfe89">ant::Constructions</a>
+</li>
+<li>strBackground
+: <a class="el" href="db/d69/classant_1_1_menu_state.html#a7e84fc50a5e966e536f79fea9d97bcb0">ant::MenuState</a>
 </li>
 <li>systemFactory
 : <a class="el" href="d0/df7/classant_1_1_world_factory.html#adf39cbc46437aee8c7bfbf724b186d8f">ant::WorldFactory</a>
@@ -563,17 +619,14 @@
 <li>textures
 : <a class="el" href="d1/dd6/classant_1_1_asset_manager.html#aa324902e058de7584be39b56ff4d2e63">ant::AssetManager</a>
 </li>
-<li>timePoint1
-: <a class="el" href="d1/db7/classant_1_1_game.html#aeef287ea9ef1211bce46e7f82111220d">ant::Game</a>
-</li>
-<li>timePoint2
-: <a class="el" href="d1/db7/classant_1_1_game.html#ae2f3290564c161e78c3cd61586e4087c">ant::Game</a>
+<li>TimePerFrame
+: <a class="el" href="d7/d57/classant_1_1_application.html#a4b9bf663914a5195a2b4a699c81efd22">ant::Application</a>
 </li>
 <li>totalEntities
 : <a class="el" href="dd/d76/classant_1_1out_system.html#ac4f71f8c4634833fa70672b9738c2d87">ant::outSystem</a>
 </li>
 <li>totalLevels
-: <a class="el" href="d1/db7/classant_1_1_game.html#ac268c69384a7a0fd65bb3e7c23cf07a0">ant::Game</a>
+: <a class="el" href="d4/da6/classant_1_1_game_state.html#a376062c96e23aca3750fd4196c585a36">ant::GameState</a>
 </li>
 <li>tunnel
 : <a class="el" href="dd/d76/classant_1_1_constructions.html#a840caf607a2a82b46ec083ce00fc55bc">ant::Constructions</a>
@@ -595,11 +648,11 @@
 
 
 <h3><a class="anchor" id="index_v"></a>- v -</h3><ul>
+<li>version
+: <a class="el" href="d7/d57/classant_1_1_application.html#a1d16f830e0f443b71d7c654681857e0d">ant::Application</a>
+</li>
 <li>VERSION
 : <a class="el" href="de/d2d/classant_1_1_config.html#a9f3ed4719932faa38daf63c821959c0f">ant::Config</a>
-</li>
-<li>version
-: <a class="el" href="d1/db7/classant_1_1_game.html#ab9a03cfc31b775598ea2246e57df7241">ant::Game</a>
 </li>
 </ul>
 
@@ -609,7 +662,10 @@
 : <a class="el" href="dd/d76/classant_1_1_constructions.html#a5ce348044e05b13b73f170fe2ced494d">ant::Constructions</a>
 </li>
 <li>win
-: <a class="el" href="d1/db7/classant_1_1_game.html#a36feaae8a614f83f146614ef27211e62">ant::Game</a>
+: <a class="el" href="d4/da6/classant_1_1_game_state.html#acf079d8d9e634b6a2c30356933f7b9b3">ant::GameState</a>
+</li>
+<li>window
+: <a class="el" href="d8/d0b/structant_1_1_app_state_1_1_context.html#ae91cf7291fa22557f71702ce1e5f2eb2">ant::AppState::Context</a>
 </li>
 <li>worldFactory
 : <a class="el" href="d0/dcb/classant_1_1_level.html#aeec9d584c3c2c3813d1f7e3cf246f837">ant::Level</a>
@@ -621,7 +677,7 @@
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu May 22 2014 22:20:26 for AntFarm by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun May 25 2014 18:17:17 for AntFarm by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

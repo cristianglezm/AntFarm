@@ -1,0 +1,395 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d4/da6/classant_1_1_game_state">
+<title>ant::GameState class Reference</title>
+<para>
+    <programlisting>#include <link linkend="d2/d86/_game_state_8hpp">&lt;GameState.hpp&gt;</link></programlisting>
+</para>
+        <simplesect>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>sf::RenderWindow &amp; win</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::shared_ptr&lt; AssetManager &gt; assets</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::shared_ptr&lt; GameEventDispatcher &gt; gameEventDispatcher</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::shared_ptr&lt; Level &gt; level</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::shared_ptr&lt; EventQueue &gt; eventQueue</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::vector&lt; std::unique_ptr&lt; GUI::Button &gt; &gt; buttons</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int currentLevel</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int totalLevels</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float GameSpeed</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::string font</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::shared_ptr&lt; GameState &gt; self</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="d4/da6/classant_1_1_game_state_1a024b020260791f23d168425fc67291af">GameState</link> (
+<link linkend="d1/da5/classant_1_1_state_stack">StateStack</link> &amp; stack, <link linkend="d8/d0b/structant_1_1_app_state_1_1_context">Context</link> context)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual void <link linkend="d4/da6/classant_1_1_game_state_1a284e9f6e2b1050f22aa071e02da5477a">render</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual bool <link linkend="d4/da6/classant_1_1_game_state_1acac7f6261d21061de5a92d9887ff3cfe">update</link> (
+sf::Time dt)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual bool <link linkend="d4/da6/classant_1_1_game_state_1a379cc1dbbea0e0f559a174676da966fe">handleEvent</link> (
+const sf::Event &amp; event)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d4/da6/classant_1_1_game_state_1a90274b8fa005424e2d42fd526331f763">onNotify</link> (
+std::shared_ptr&lt; <link linkend="d3/dce/classant_1_1base_event">baseEvent</link> &gt; e)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual <link linkend="d4/da6/classant_1_1_game_state_1af26e1aa75b033b28eacde5a588e2066a">~GameState</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d4/da6/classant_1_1_game_state_1afbabc6b4f41915d8c0f9b8d1b1a55727">loadConfig</link> (
+const std::string &amp; filename)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d4/da6/classant_1_1_game_state_1a66275726c99c052f89892db66310b30f">loadGUIConf</link> (
+const std::string &amp; filename)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef std::unique_ptr&lt; <link linkend="d8/df7/classant_1_1_app_state">AppState</link> &gt;  <link linkend="d8/df7/classant_1_1_app_state_1a94963d69f76e53c5e3b6cfa58f99fff9">uPtr</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef std::shared_ptr&lt; <link linkend="d8/df7/classant_1_1_app_state">AppState</link> &gt;  <link linkend="d8/df7/classant_1_1_app_state_1a772c49d9b95d2447149218ce7914d40c">sPtr</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d8/df7/classant_1_1_app_state_1a2830ba9f7de8efbf03bab5249d5d3f0a">requestStackPush</link> (
+<link linkend="da/dd5/namespaceant_1_1_app_states_1a8e30476d77a5da5e0c1c3b9c7042e62a">AppStates::ID</link> stateID)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d8/df7/classant_1_1_app_state_1a65a59f018d590e807fd61adfa307651e">requestStackPop</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="d8/df7/classant_1_1_app_state_1a16e430d3eb803f4ff7995214bd66665e">requestStateClear</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="d8/d0b/structant_1_1_app_state_1_1_context">Context</link> <link linkend="d8/df7/classant_1_1_app_state_1aa7abef18b5d2d32dbb9b35d4f630cb31">getContext</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Brief Description</title>
+
+<para>Estado de juego, Inicia el juego. </para>
+    </simplesect>
+        <simplesect>
+            <title>Detailed Description</title>
+
+<para><formalpara><title>Author: </title>
+
+<para>Cristian Glez <link xlink:href="mailto:Cristian.glez.m@gmail.com">Cristian.glez.m@gmail.com</link> </para>
+</formalpara>
+<formalpara><title>Version: </title>
+
+<para>0.1 </para>
+</formalpara>
+</para>
+                <para>Definition at line 18 of file GameState.hpp</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>GameState.hpp</para></listitem></itemizedlist></para>
+        </simplesect>
+            <section xml:id="d4/da6/classant_1_1_game_state_1a024b020260791f23d168425fc67291af">
+                <title>ant::GameState::GameState (StateStack &amp;stack, Context context)</title> <emphasis>Constructor principal.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>stack</entry>
+                                <entry>
+<para><link linkend="d1/da5/classant_1_1_state_stack">StateStack</link> stack para pedir otros estados etc. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>context</entry>
+                                <entry>
+<para>Context contexto de la applicacion. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="d4/da6/classant_1_1_game_state_1a284e9f6e2b1050f22aa071e02da5477a">
+                <title>void ant::GameState::render ()</title> <emphasis>Renderiza el juego.</emphasis>
+                
+            </section>
+            <section xml:id="d4/da6/classant_1_1_game_state_1acac7f6261d21061de5a92d9887ff3cfe">
+                <title>bool ant::GameState::update (sf::Time dt)</title> <emphasis>Actualiza el juego.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>dt</entry>
+                                <entry>
+<para>sf::Time delta time </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="d4/da6/classant_1_1_game_state_1a379cc1dbbea0e0f559a174676da966fe">
+                <title>bool ant::GameState::handleEvent (const sf::Event &amp;event)</title> <emphasis>Maneja el input del juego.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>event</entry>
+                                <entry>
+<para>sf::Event &amp; eventos de teclado/Raton etc </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="d4/da6/classant_1_1_game_state_1a90274b8fa005424e2d42fd526331f763">
+                <title>void ant::GameState::onNotify (std::shared_ptr&lt; baseEvent &gt; e)</title> <emphasis>Recibe los eventos.
+-# LEVEL_COMPLETE cambia de nivel.
+-# LEVEL_FAILED vuelve al menu.</emphasis>
+                
+            </section>
+            <section xml:id="d4/da6/classant_1_1_game_state_1af26e1aa75b033b28eacde5a588e2066a">
+                <title>ant::GameState::~GameState ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="d4/da6/classant_1_1_game_state_1afbabc6b4f41915d8c0f9b8d1b1a55727">
+                <title>void ant::GameState::loadConfig (const std::string &amp;filename)</title> <emphasis>Carga la configuracion de este estado.</emphasis>
+                
+            </section>
+            <section xml:id="d4/da6/classant_1_1_game_state_1a66275726c99c052f89892db66310b30f">
+                <title>void ant::GameState::loadGUIConf (const std::string &amp;filename)</title> <emphasis>Carga la interfaz grafica.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>filename</entry>
+                                <entry>
+<para>std::string </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="d8/df7/classant_1_1_app_state_1a94963d69f76e53c5e3b6cfa58f99fff9">
+                <title>typedef std::unique_ptr&lt;AppState&gt; ant::AppState::uPtr</title> <emphasis>Puntero unico de AppState.</emphasis>
+                
+            </section>
+            <section xml:id="d8/df7/classant_1_1_app_state_1a772c49d9b95d2447149218ce7914d40c">
+                <title>typedef std::shared_ptr&lt;AppState&gt; ant::AppState::sPtr</title> <emphasis>Puntero Compartido de AppState.</emphasis>
+                
+            </section>
+            <section xml:id="d8/df7/classant_1_1_app_state_1a2830ba9f7de8efbf03bab5249d5d3f0a">
+                <title>void ant::AppState::requestStackPush (AppStates::ID stateID)</title> <emphasis>Pide al stack que añada un estado nuevo.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>stateID</entry>
+                                <entry>
+<para><link linkend="da/dd5/namespaceant_1_1_app_states_1a8e30476d77a5da5e0c1c3b9c7042e62a">AppStates::ID</link> id del estado. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="d8/df7/classant_1_1_app_state_1a65a59f018d590e807fd61adfa307651e">
+                <title>void ant::AppState::requestStackPop ()</title> <emphasis>Pide al stack que quite el ultimo estado añadido.</emphasis>
+                
+            </section>
+            <section xml:id="d8/df7/classant_1_1_app_state_1a16e430d3eb803f4ff7995214bd66665e">
+                <title>void ant::AppState::requestStateClear ()</title> <emphasis>Pide al stack que se limpie.</emphasis>
+                
+            </section>
+            <section xml:id="d8/df7/classant_1_1_app_state_1aa7abef18b5d2d32dbb9b35d4f630cb31">
+                <title>AppState::Context ant::AppState::getContext () const </title> <emphasis>Devuelve el contexto.</emphasis>
+                
+<para><formalpara><title>Returns: </title>
+
+<para><link linkend="d8/d0b/structant_1_1_app_state_1_1_context">AppState::Context</link> </para>
+</formalpara>
+</para>
+
+            </section>
+</section>

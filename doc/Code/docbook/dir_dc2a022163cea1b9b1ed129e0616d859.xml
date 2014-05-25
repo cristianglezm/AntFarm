@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="dir_dc2a022163cea1b9b1ed129e0616d859">
+    <title>PauseState Directory Reference</title>
+        <simplesect>
+            <title> Files </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>file <link linkend="d1/d2a/_pause_state_8hpp">PauseState.hpp</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Directory location is F:/Development/Cpp/AntFarm/include/AppStates/PauseState/</para>
+    </simplesect>
+</section>

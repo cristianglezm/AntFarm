@@ -2,8 +2,8 @@
 <area shape="rect" id="node2" href="$d6/def/_system_8hpp.html" title="Systems/System.hpp" alt="" coords="233,80,381,107"/>
 <area shape="rect" id="node19" href="$da/d7a/_quadtree_8hpp.html" title="Utils/Quadtree.hpp" alt="" coords="1087,80,1217,107"/>
 <area shape="rect" id="node26" href="$d7/d5b/_component_mask_8hpp.html" title="Components/ComponentMask.hpp" alt="" coords="1923,80,2146,107"/>
-<area shape="rect" id="node27" href="$d7/db8/_states_8hpp.html" title="States/States.hpp" alt="" coords="2170,80,2297,107"/>
-<area shape="rect" id="node28" href="$de/d5f/_event_type_8hpp.html" title="Event/EventType.hpp" alt="" coords="2321,80,2463,107"/>
+<area shape="rect" id="node27" href="$d7/db8/_states_8hpp.html" title="Entity/States.hpp" alt="" coords="2171,80,2293,107"/>
+<area shape="rect" id="node28" href="$de/d5f/_event_type_8hpp.html" title="Event/EventType.hpp" alt="" coords="2318,80,2461,107"/>
 <area shape="rect" id="node29" href="$dc/dba/_math_8hpp.html" title="Utils/Math.hpp" alt="" coords="1557,80,1664,107"/>
 <area shape="rect" id="node6" href="$d7/d11/_event_queue_8hpp.html" title="EventQueue/EventQueue.hpp" alt="" coords="27,229,218,256"/>
 <area shape="rect" id="node10" href="$da/d7b/_entity_manager_8hpp.html" title="EntityManager/EntityManager.hpp" alt="" coords="344,155,563,181"/>

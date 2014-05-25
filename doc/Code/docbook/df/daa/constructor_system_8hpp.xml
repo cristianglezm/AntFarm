@@ -7,7 +7,7 @@
     <programlisting>#include &lt;EntityFactory/EntityFactory.hpp&gt;</programlisting>
     <programlisting>#include &lt;SFML/Graphics/VertexArray.hpp&gt;</programlisting>
     <programlisting>#include &lt;Event/EventType.hpp&gt;</programlisting>
-    <programlisting>#include &lt;States/States.hpp&gt;</programlisting>
+    <programlisting>#include &lt;Entity/States.hpp&gt;</programlisting>
         <simplesect>
             <title> Classes </title>
             <para>

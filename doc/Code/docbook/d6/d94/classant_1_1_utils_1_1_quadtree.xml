@@ -19,14 +19,14 @@
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>static const int MAX_CAPACITY</para>
+                        <para>static const unsigned int MAX_CAPACITY</para>
                     </listitem>
                 </itemizedlist>
             </para>
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>static const int MAX_LEVEL</para>
+                        <para>static const unsigned int MAX_LEVEL</para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -36,7 +36,7 @@
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>int level</para>
+                        <para>unsigned int level</para>
                     </listitem>
                 </itemizedlist>
             </para>

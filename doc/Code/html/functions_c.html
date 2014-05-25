@@ -20,7 +20,7 @@
    <div id="projectname">AntFarm
    &#160;<span id="projectnumber">v0.1a</span>
    </div>
-   <div id="projectbrief">Game about Ants that are trapped in some place and need to escape.</div>
+   <div id="projectbrief">Game Inspired by Lemmings</div>
   </td>
  </tr>
  </tbody>
@@ -51,6 +51,8 @@
       <li><a href="functions_func.html"><span>Functions</span></a></li>
       <li><a href="functions_vars.html"><span>Variables</span></a></li>
       <li><a href="functions_type.html"><span>Typedefs</span></a></li>
+      <li><a href="functions_enum.html"><span>Enumerations</span></a></li>
+      <li><a href="functions_eval.html"><span>Enumerator</span></a></li>
     </ul>
   </div>
   <div id="navrow4" class="tabs3">
@@ -100,8 +102,16 @@
 : <a class="el" href="d1/dd6/classant_1_1_asset_manager.html#a6a36b05367c9a654e50eb20a58fde86b">ant::AssetManager</a>
 , <a class="el" href="dc/d73/classant_1_1_entity.html#ae878cec956ac960d0d60e357bb970a40">ant::Entity</a>
 , <a class="el" href="db/dec/classant_1_1_event_queue.html#a2e14f5de369a44a3a780a389f8043e84">ant::EventQueue</a>
-, <a class="el" href="d6/d94/classant_1_1_utils_1_1_quadtree.html#aace6744ed7023825a1863f9953421a4b">ant::Utils::Quadtree</a>
+</li>
+<li>Clear
+: <a class="el" href="d1/da5/classant_1_1_state_stack.html#a5958413df50ebb647a5bcc5a2d3ee1cea08eaa646dcbd9a31b14944b6f9924eaa">ant::StateStack</a>
+</li>
+<li>clear()
+: <a class="el" href="d6/d94/classant_1_1_utils_1_1_quadtree.html#aace6744ed7023825a1863f9953421a4b">ant::Utils::Quadtree</a>
 , <a class="el" href="dc/dbd/classant_1_1_world_manager.html#a58b029f457d22afa789eaec4683539eb">ant::WorldManager</a>
+</li>
+<li>clearStates()
+: <a class="el" href="d1/da5/classant_1_1_state_stack.html#aa7d1be300f9f5d840572138552888596">ant::StateStack</a>
 </li>
 <li>ClickEvents
 : <a class="el" href="dc/df5/classant_1_1_game_event_dispatcher.html#ac3aff44451719b319fbdd9cbba0e9e96">ant::GameEventDispatcher</a>
@@ -113,8 +123,7 @@
 : <a class="el" href="d7/daa/class_states.html#a1a5a36f0f204d9dda0ebd0a09b6fd7fe">States</a>
 </li>
 <li>clock
-: <a class="el" href="d1/db7/classant_1_1_game.html#a6bbbfe94bf4d606c2cc06ebeb1484c99">ant::Game</a>
-, <a class="el" href="db/ddf/classant_1_1spawn_system.html#a0ab34f70ff78bd5082faf4555a40a729">ant::spawnSystem</a>
+: <a class="el" href="db/ddf/classant_1_1spawn_system.html#a0ab34f70ff78bd5082faf4555a40a729">ant::spawnSystem</a>
 </li>
 <li>COLLISION_EVENT
 : <a class="el" href="dd/ded/class_event_type.html#a096fc66c6f900edf9f3a266c4c981bfa">EventType</a>
@@ -182,6 +191,9 @@
 <li>contains()
 : <a class="el" href="dc/dd7/classant_1_1_g_u_i_1_1_button.html#a2944325921fa8faddb26a7f78f3c6ae7">ant::GUI::Button</a>
 </li>
+<li>Context()
+: <a class="el" href="d8/d0b/structant_1_1_app_state_1_1_context.html#ae475b9ad746d6b59e0b3e4e1170922e6">ant::AppState::Context</a>
+</li>
 <li>count
 : <a class="el" href="de/df0/classant_1_1_component_settings.html#a38cc2b2e94b54f023df27b3553af19ed">ant::ComponentSettings</a>
 </li>
@@ -239,6 +251,9 @@
 <li>createSprite()
 : <a class="el" href="d4/df6/classant_1_1_component_factory.html#ac76f4b8d6b9356e49ded116f77171027">ant::ComponentFactory</a>
 </li>
+<li>createState()
+: <a class="el" href="d1/da5/classant_1_1_state_stack.html#a616cd23d2b8c0ade57d016ae929001cd">ant::StateStack</a>
+</li>
 <li>createTransform()
 : <a class="el" href="d4/df6/classant_1_1_component_factory.html#a0438691a164fa293f5551179f2051620">ant::ComponentFactory</a>
 </li>
@@ -246,13 +261,13 @@
 : <a class="el" href="d4/df6/classant_1_1_component_factory.html#a1c2757122638b6dd751bfad7451ce4a6">ant::ComponentFactory</a>
 </li>
 <li>currentLevel
-: <a class="el" href="d1/db7/classant_1_1_game.html#aaa9ec1bb849bad52ac78f7a58ff62221">ant::Game</a>
+: <a class="el" href="d4/da6/classant_1_1_game_state.html#a1ae14bf9a671d4372abe4b9093ce5f45">ant::GameState</a>
 </li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu May 22 2014 22:20:25 for AntFarm by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun May 25 2014 18:17:17 for AntFarm by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

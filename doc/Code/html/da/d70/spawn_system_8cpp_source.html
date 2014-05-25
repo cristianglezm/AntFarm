@@ -20,7 +20,7 @@
    <div id="projectname">AntFarm
    &#160;<span id="projectnumber">v0.1a</span>
    </div>
-   <div id="projectbrief">Game about Ants that are trapped in some place and need to escape.</div>
+   <div id="projectbrief">Game Inspired by Lemmings</div>
   </td>
  </tr>
  </tbody>
@@ -61,7 +61,7 @@
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;        <a class="code" href="../../de/d48/classant_1_1_system.html#a4ef41cfc496e41ac6730f90629524ec7">RequiredComponents</a> = <a class="code" href="../../d1/d0a/class_components_mask.html#a6a8d73981d65f39acb16bbeeced5a95b">ComponentsMask::COMPONENT_IN</a> | <a class="code" href="../../d1/d0a/class_components_mask.html#a3a66579e45c351c13abe63e61f2eaa0a">ComponentsMask::COMPONENT_TRANSFORM</a>;</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;        this-&gt;nEntities = <a class="code" href="../../db/ddf/classant_1_1spawn_system.html#ac15adf011d5664cfcecad025ece96c09">nEntities</a>;</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        <a class="code" href="../../db/ddf/classant_1_1spawn_system.html#aa6597a6902da56181752851938ce8356">entityFactory</a> = ef;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        <span class="keywordflow">if</span>(ot.asSeconds()&lt;=0){</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        <span class="keywordflow">if</span>(ot.asSeconds()&lt;=0.0){</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;            <a class="code" href="../../db/ddf/classant_1_1spawn_system.html#a5d716493bd70cb52490152d7075a490e">overTime</a> = sf::seconds(1);</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        }<span class="keywordflow">else</span>{</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;            <a class="code" href="../../db/ddf/classant_1_1spawn_system.html#a5d716493bd70cb52490152d7075a490e">overTime</a> = ot;</div>
@@ -94,7 +94,7 @@
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordflow">switch</span>(e-&gt;getType()){</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            <span class="keywordflow">case</span> <a class="code" href="../../dd/ded/class_event_type.html#a7c6c84e45483e730bc2259589a517dec">EventType::CHANGE_OVERTIME</a>:{</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                <span class="keyword">auto</span>&amp; ot = std::get&lt;0&gt;(e-&gt;getAttributes&lt;sf::Time&gt;());</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                <span class="keywordflow">if</span>(ot.asSeconds() &lt;= 0){</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                <span class="keywordflow">if</span>(ot.asSeconds() &lt;= 0.0){</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                    <a class="code" href="../../db/ddf/classant_1_1spawn_system.html#a5d716493bd70cb52490152d7075a490e">overTime</a> = sf::seconds(1);</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                }<span class="keywordflow">else</span>{</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                    <a class="code" href="../../db/ddf/classant_1_1spawn_system.html#a5d716493bd70cb52490152d7075a490e">overTime</a> = ot;</div>
@@ -144,7 +144,7 @@
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu May 22 2014 22:20:24 for AntFarm by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun May 25 2014 18:17:15 for AntFarm by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

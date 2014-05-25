@@ -15,6 +15,7 @@ namespace ant{
             /**
              * @brief Constructor principal.
              * @param stack StateStack stack para cambiar estados internamente.
+             * @param context Context contexto de la aplicacion.
              * @param msg std::string mensaje que mostrara.
              */
             GameOverState(StateStack& stack, Context context,std::string msg);
@@ -35,6 +36,7 @@ namespace ant{
         private:
             /**
              * @brief Carga la configuracion de este estado.
+             * @param filename std::string fichero a cargar.
              */
             void loadConfig(const std::string& filename);
         private:

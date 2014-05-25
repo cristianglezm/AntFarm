@@ -3,8 +3,8 @@
 <area shape="rect" id="node19" href="$da/dc7/_observer_8hpp.html" title="Observer/Observer.hpp" alt="" coords="1005,229,1158,256"/>
 <area shape="rect" id="node20" href="$de/d5f/_event_type_8hpp.html" title="Event/EventType.hpp" alt="" coords="1026,80,1169,107"/>
 <area shape="rect" id="node21" href="$d7/d5b/_component_mask_8hpp.html" title="Components/ComponentMask.hpp" alt="" coords="1193,80,1415,107"/>
-<area shape="rect" id="node22" href="$d7/db8/_states_8hpp.html" title="States/States.hpp" alt="" coords="1439,80,1566,107"/>
-<area shape="rect" id="node23" href="$dc/dba/_math_8hpp.html" title="Utils/Math.hpp" alt="" coords="1591,80,1697,107"/>
+<area shape="rect" id="node22" href="$d7/db8/_states_8hpp.html" title="Entity/States.hpp" alt="" coords="1440,80,1563,107"/>
+<area shape="rect" id="node23" href="$dc/dba/_math_8hpp.html" title="Utils/Math.hpp" alt="" coords="1587,80,1693,107"/>
 <area shape="rect" id="node6" href="$d7/d11/_event_queue_8hpp.html" title="EventQueue/EventQueue.hpp" alt="" coords="790,229,981,256"/>
 <area shape="rect" id="node10" href="$da/d7b/_entity_manager_8hpp.html" title="EntityManager/EntityManager.hpp" alt="" coords="192,155,411,181"/>
 <area shape="rect" id="node8" href="$d6/dc3/_event_8hpp.html" title="Event/Event.hpp" alt="" coords="923,304,1037,331"/>

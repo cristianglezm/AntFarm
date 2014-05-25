@@ -10,6 +10,13 @@
                     </listitem>
                 </itemizedlist>
             </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>file <link linkend="d7/db8/_states_8hpp">States.hpp</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
         </simplesect>
     <simplesect>
         <title>Detailed Description</title>

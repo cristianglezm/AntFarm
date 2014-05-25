@@ -1,12 +1,14 @@
 <map id="collisionSystem" name="collisionSystem">
-<area shape="rect" id="node1" href="dir_f635104b1bec84ec7dc5ae436057b171.html" title="collisionSystem" alt="" coords="133,52,248,100"/>
-<area shape="rect" id="node2" href="dir_0d575e1746bda0856b7a7759048873e2.html" title="Event" alt="" coords="5,148,77,196"/>
-<area shape="rect" id="edge1-headlabel" href="dir_000011_000027.html" title="1" alt="" coords="93,138,101,153"/>
-<area shape="rect" id="node3" href="dir_2d1d991c66e7a032b2ab80c11328e79c.html" title="Utils" alt="" coords="101,148,173,196"/>
-<area shape="rect" id="edge2-headlabel" href="dir_000011_000041.html" title="2" alt="" coords="163,129,171,144"/>
-<area shape="rect" id="node4" href="dir_b5387289685bf4d85d4ad61551733121.html" title="Components" alt="" coords="198,148,293,196"/>
-<area shape="rect" id="edge3-headlabel" href="dir_000011_000013.html" title="1" alt="" coords="226,121,234,135"/>
-<area shape="rect" id="node5" href="dir_ba8a1d5a6323abb109cc1cd03548b282.html" title="States" alt="" coords="317,148,389,196"/>
-<area shape="rect" id="edge4-headlabel" href="dir_000011_000051.html" title="1" alt="" coords="302,126,310,141"/>
-<area shape="rect" id="clust1" href="dir_07bc9437a6de7871ef0c3315490d5afc.html" title="Systems" alt="" coords="123,16,259,111"/>
+<area shape="rect" id="node1" href="dir_f635104b1bec84ec7dc5ae436057b171.html" title="collisionSystem" alt="" coords="52,52,167,100"/>
+<area shape="rect" id="node2" href="dir_55565bc6cea8f58e73511b81474a69a8.html" title="Entity" alt="" coords="121,244,193,292"/>
+<area shape="rect" id="edge1-headlabel" href="dir_000015_000025.html" title="1" alt="" coords="102,240,110,255"/>
+<area shape="rect" id="node3" href="dir_0d575e1746bda0856b7a7759048873e2.html" title="Event" alt="" coords="25,148,97,196"/>
+<area shape="rect" id="edge2-headlabel" href="dir_000015_000031.html" title="1" alt="" coords="85,128,93,143"/>
+<area shape="rect" id="node4" href="dir_2d1d991c66e7a032b2ab80c11328e79c.html" title="Utils" alt="" coords="121,148,193,196"/>
+<area shape="rect" id="edge3-headlabel" href="dir_000015_000045.html" title="2" alt="" coords="141,121,149,135"/>
+<area shape="rect" id="node5" href="dir_b5387289685bf4d85d4ad61551733121.html" title="Components" alt="" coords="146,340,241,388"/>
+<area shape="rect" id="edge4-headlabel" href="dir_000015_000017.html" title="1" alt="" coords="211,318,219,332"/>
+<area shape="rect" id="edge5-headlabel" href="dir_000025_000017.html" title="1" alt="" coords="182,313,190,327"/>
+<area shape="rect" id="edge6-headlabel" href="dir_000045_000025.html" title="1" alt="" coords="162,218,170,233"/>
+<area shape="rect" id="clust1" href="dir_07bc9437a6de7871ef0c3315490d5afc.html" title="Systems" alt="" coords="41,16,177,111"/>
 </map>

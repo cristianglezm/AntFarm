@@ -20,7 +20,7 @@
    <div id="projectname">AntFarm
    &#160;<span id="projectnumber">v0.1a</span>
    </div>
-   <div id="projectbrief">Game about Ants that are trapped in some place and need to escape.</div>
+   <div id="projectbrief">Game Inspired by Lemmings</div>
   </td>
  </tr>
  </tbody>
@@ -51,6 +51,8 @@
       <li class="current"><a href="functions_func.html"><span>Functions</span></a></li>
       <li><a href="functions_vars.html"><span>Variables</span></a></li>
       <li><a href="functions_type.html"><span>Typedefs</span></a></li>
+      <li><a href="functions_enum.html"><span>Enumerations</span></a></li>
+      <li><a href="functions_eval.html"><span>Enumerator</span></a></li>
     </ul>
   </div>
   <div id="navrow4" class="tabs3">
@@ -83,6 +85,12 @@
 &#160;
 
 <h3><a class="anchor" id="index_r"></a>- r -</h3><ul>
+<li>registerState()
+: <a class="el" href="d1/da5/classant_1_1_state_stack.html#a7ffe3d00b54d682346f3fab38e7cfc2c">ant::StateStack</a>
+</li>
+<li>registerStates()
+: <a class="el" href="d7/d57/classant_1_1_application.html#a4a9143ee697efe0980056c6ed4a60e9d">ant::Application</a>
+</li>
 <li>removeComponent()
 : <a class="el" href="dc/d73/classant_1_1_entity.html#a4b083a6d2567009fdff3a1fba2f4f2ee">ant::Entity</a>
 </li>
@@ -111,17 +119,24 @@
 : <a class="el" href="dc/dbd/classant_1_1_world_manager.html#a13377656880523bc48ca4e963017a7e3">ant::WorldManager</a>
 </li>
 <li>render()
-: <a class="el" href="dc/de8/classant_1_1collision_system.html#a9d53ad5d64a749e883edfc9049734bc5">ant::collisionSystem</a>
+: <a class="el" href="d7/d57/classant_1_1_application.html#a3725d8c9b586e63892511da2d619492d">ant::Application</a>
+, <a class="el" href="d8/df7/classant_1_1_app_state.html#a8e4e13cdf558c5d57339548d8b5acaf9">ant::AppState</a>
+, <a class="el" href="dc/de8/classant_1_1collision_system.html#a9d53ad5d64a749e883edfc9049734bc5">ant::collisionSystem</a>
 , <a class="el" href="d8/d12/classant_1_1constructor_system.html#af35138a9176a49eb891a7ac0fedea3ba">ant::constructorSystem</a>
+, <a class="el" href="d0/da0/classant_1_1_game_over_state.html#a4a177555430eafd258488734001dc23c">ant::GameOverState</a>
+, <a class="el" href="d4/da6/classant_1_1_game_state.html#a284e9f6e2b1050f22aa071e02da5477a">ant::GameState</a>
 , <a class="el" href="db/de0/classant_1_1gravity_system.html#a6671c949e17d7352ef7fb2a68dfad925">ant::gravitySystem</a>
-, <a class="el" href="dd/d19/classant_1_1input_system.html#af99fd06a4acdbd31b0c6b63437ed497d">ant::inputSystem</a>
 , <a class="el" href="d0/dcb/classant_1_1_level.html#af0dee8ae016577c4696534e1f809b207">ant::Level</a>
+, <a class="el" href="db/d69/classant_1_1_menu_state.html#ac389550fd23795f21baca87ba6c35daf">ant::MenuState</a>
 , <a class="el" href="d6/d6c/classant_1_1movement_system.html#a23af25667217b499e894d87e1097a52b">ant::movementSystem</a>
 , <a class="el" href="dd/d76/classant_1_1out_system.html#a927f6a7835daf68ca49b401045e3ec1d">ant::outSystem</a>
+, <a class="el" href="d4/d89/classant_1_1_pause_state.html#a8c99d68f9ac3147a0fb3f8bee008e73f">ant::PauseState</a>
 , <a class="el" href="d1/def/classant_1_1render_system.html#ad5284fb701e3d9ea1c3645e553083ba6">ant::renderSystem</a>
 , <a class="el" href="db/ddf/classant_1_1spawn_system.html#a1eae29ce581e7625c70e9327c3b9ce1b">ant::spawnSystem</a>
+, <a class="el" href="d1/da5/classant_1_1_state_stack.html#af8eac07820fb43a4624b7b2a55a279de">ant::StateStack</a>
 , <a class="el" href="de/d48/classant_1_1_system.html#a30a815d199fea90e9d2f7167eb2bf86e">ant::System</a>
 , <a class="el" href="de/dce/classant_1_1_system_manager.html#af7a916ef5a14b3b2fb147f4249165201">ant::SystemManager</a>
+, <a class="el" href="d0/d6d/classant_1_1_title_state.html#a678a38ada931b8b9cc7cd8e24be68064">ant::TitleState</a>
 , <a class="el" href="d6/d94/classant_1_1_utils_1_1_quadtree.html#acb64f3de7ac64139734c78c074a5509c">ant::Utils::Quadtree</a>
 , <a class="el" href="de/dc7/classant_1_1_world.html#aefef1819102fd2194bcea6ae73e45e35">ant::World</a>
 , <a class="el" href="dc/dbd/classant_1_1_world_manager.html#a5050c12e78f005607394041e384ca297">ant::WorldManager</a>
@@ -129,17 +144,26 @@
 <li>renderSystem()
 : <a class="el" href="d1/def/classant_1_1render_system.html#a519835cb3318b0eaad3b5143b3d23121">ant::renderSystem</a>
 </li>
+<li>requestStackPop()
+: <a class="el" href="d8/df7/classant_1_1_app_state.html#a65a59f018d590e807fd61adfa307651e">ant::AppState</a>
+</li>
+<li>requestStackPush()
+: <a class="el" href="d8/df7/classant_1_1_app_state.html#a2830ba9f7de8efbf03bab5249d5d3f0a">ant::AppState</a>
+</li>
+<li>requestStateClear()
+: <a class="el" href="d8/df7/classant_1_1_app_state.html#a16e430d3eb803f4ff7995214bd66665e">ant::AppState</a>
+</li>
 <li>retrieve()
 : <a class="el" href="d6/d94/classant_1_1_utils_1_1_quadtree.html#acef35673069f1edbafd93579e0a64df7">ant::Utils::Quadtree</a>
 </li>
 <li>run()
-: <a class="el" href="d1/db7/classant_1_1_game.html#ab6f06381d4aa4b0b087804b5d19566e6">ant::Game</a>
+: <a class="el" href="d7/d57/classant_1_1_application.html#a98b4cb1093562a39e0c95309cec18c48">ant::Application</a>
 </li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu May 22 2014 22:20:25 for AntFarm by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun May 25 2014 18:17:17 for AntFarm by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

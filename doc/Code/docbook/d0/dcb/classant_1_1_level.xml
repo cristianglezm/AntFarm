@@ -48,6 +48,14 @@ const std::string &amp; assetsFilename, sf::FloatRect bounds, std::shared_ptr&lt
             <para>
                 <itemizedlist>
                     <listitem>
+                        <para> <link linkend="d0/dcb/classant_1_1_level_1afcddad84ce0bf60b3581ff4201be0809">Level</link> (
+std::shared_ptr&lt; <link linkend="d1/dd6/classant_1_1_asset_manager">AssetManager</link> &gt; am, sf::FloatRect bounds, std::shared_ptr&lt; <link linkend="dc/df5/classant_1_1_game_event_dispatcher">GameEventDispatcher</link> &gt; ged)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
                         <para>void <link linkend="d0/dcb/classant_1_1_level_1a8420f52c19063fc012a9b5da62ad823d">init</link> (
 const sf::FloatRect &amp; bounds)</para>
                     </listitem>
@@ -177,6 +185,41 @@ long int id, sf::RenderWindow &amp; win)</para>
                                 <entry>assetsFilename</entry>
                                 <entry>
 <para>std::string fichero json a cargar. formato: <link linkend="d1/dd6/classant_1_1_asset_manager_1ab67aa137cc51b1052553b35e2e8b0bcd">AssetManager::loadAssets()</link> </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>bounds</entry>
+                                <entry>
+<para>sf::FloatRect rectangulo con los limites del nivel. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>ged</entry>
+                                <entry>
+<para>std::shared_ptr&lt;GameEventDispatcher&gt; para que se suscriban a los eventos. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="d0/dcb/classant_1_1_level_1afcddad84ce0bf60b3581ff4201be0809">
+                <title>ant::Level::Level (std::shared_ptr&lt; AssetManager &gt; am, sf::FloatRect bounds, std::shared_ptr&lt; GameEventDispatcher &gt; ged)</title> <emphasis>Constructor secundario.</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters</title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>am</entry>
+                                <entry>
+<para>std::shared_ptr&lt;AssetManager&gt; </para>
 </entry>
                             </row>
                             <row>

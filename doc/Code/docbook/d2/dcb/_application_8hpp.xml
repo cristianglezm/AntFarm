@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="d2/dcb/_application_8hpp">
+    <title>Application.hpp File Reference</title>
+    <programlisting>#include &lt;Config.hpp&gt;</programlisting>
+    <programlisting>#include &lt;Utils/String.hpp&gt;</programlisting>
+    <programlisting>#include &lt;AssetManager/AssetManager.hpp&gt;</programlisting>
+    <programlisting>#include &lt;StateStack/StateStack.hpp&gt;</programlisting>
+    <programlisting>#include &lt;AppStates/AppState.hpp&gt;</programlisting>
+    <programlisting>#include &lt;SFML/System/Time.hpp&gt;</programlisting>
+    <programlisting>#include &lt;SFML/Graphics/RenderWindow.hpp&gt;</programlisting>
+    <programlisting>#include &lt;SFML/Graphics/Text.hpp&gt;</programlisting>
+        <simplesect>
+            <title> Classes </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d7/d57/classant_1_1_application">ant::Application</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="dc/d6c/namespaceant">ant</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file F:/Development/Cpp/AntFarm/include/Application/Application.hpp</para>
+    </simplesect>
+</section>

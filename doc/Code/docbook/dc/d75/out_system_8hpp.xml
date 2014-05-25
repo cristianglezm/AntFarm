@@ -5,7 +5,7 @@
     <programlisting>#include &lt;EntityFactory/EntityFactory.hpp&gt;</programlisting>
     <programlisting>#include &lt;Observer/Observer.hpp&gt;</programlisting>
     <programlisting>#include &lt;Event/EventType.hpp&gt;</programlisting>
-    <programlisting>#include &lt;States/States.hpp&gt;</programlisting>
+    <programlisting>#include &lt;Entity/States.hpp&gt;</programlisting>
     <programlisting>#include &lt;Components/ComponentMask.hpp&gt;</programlisting>
         <simplesect>
             <title> Classes </title>

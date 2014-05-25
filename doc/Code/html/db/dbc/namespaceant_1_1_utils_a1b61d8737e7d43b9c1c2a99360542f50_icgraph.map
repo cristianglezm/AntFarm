@@ -1,4 +1,5 @@
 <map id="ant::Utils::toString" name="ant::Utils::toString">
-<area shape="rect" id="node2" href="$d1/db7/classant_1_1_game.html#ab6f06381d4aa4b0b087804b5d19566e6" title="Inicia el juego. " alt="" coords="180,5,289,32"/>
-<area shape="rect" id="node3" href="$df/d0a/main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="337,5,388,32"/>
+<area shape="rect" id="node2" href="$d7/d57/classant_1_1_application.html#a46fc32ba7689d272e8fe7d8f917ddaff" title="Actualiza las estadisticas del juego. " alt="" coords="180,5,339,47"/>
+<area shape="rect" id="node3" href="$d7/d57/classant_1_1_application.html#a98b4cb1093562a39e0c95309cec18c48" title="Comienza la aplicacion. " alt="" coords="387,13,525,39"/>
+<area shape="rect" id="node4" href="$df/d0a/main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="573,13,624,39"/>
 </map>

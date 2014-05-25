@@ -6,6 +6,20 @@
             <para>
                 <itemizedlist>
                     <listitem>
+                        <para>dir <link linkend="dir_27dda1490a73f8d07c326d4795e7c81f">Application</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>dir <link linkend="dir_9e05078da7641d87a34bfe17f782f720">AppStates</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
                         <para>dir <link linkend="dir_01401063156d35dd4c2e8c907edea4a9">AssetManager</link></para>
                     </listitem>
                 </itemizedlist>
@@ -69,13 +83,6 @@
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>dir <link linkend="dir_42f88387b2411e5d672af5da212cf282">Game</link></para>
-                    </listitem>
-                </itemizedlist>
-            </para>
-            <para>
-                <itemizedlist>
-                    <listitem>
                         <para>dir <link linkend="dir_507030cd1ffa98923541640752d245ea">GameEventDispatcher</link></para>
                     </listitem>
                 </itemizedlist>
@@ -104,7 +111,7 @@
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>dir <link linkend="dir_ba8a1d5a6323abb109cc1cd03548b282">States</link></para>
+                        <para>dir <link linkend="dir_0b6c3cdc7c3d38f58655bbb43a92ad05">StateStack</link></para>
                     </listitem>
                 </itemizedlist>
             </para>

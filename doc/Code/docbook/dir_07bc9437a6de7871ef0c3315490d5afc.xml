@@ -27,13 +27,6 @@
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>dir <link linkend="dir_a7927ebcf9bf28de3272afe2f1bd611f">inputSystem</link></para>
-                    </listitem>
-                </itemizedlist>
-            </para>
-            <para>
-                <itemizedlist>
-                    <listitem>
                         <para>dir <link linkend="dir_79590d0490ba91b87b76c99164c3cbcc">movementSystem</link></para>
                     </listitem>
                 </itemizedlist>

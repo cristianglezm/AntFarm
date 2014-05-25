@@ -11,7 +11,6 @@
     <programlisting>#include &lt;Systems/movementSystem/movementSystem.hpp&gt;</programlisting>
     <programlisting>#include &lt;Systems/gravitySystem/gravitySystem.hpp&gt;</programlisting>
     <programlisting>#include &lt;Systems/spawnSystem/spawnSystem.hpp&gt;</programlisting>
-    <programlisting>#include &lt;Systems/inputSystem/inputSystem.hpp&gt;</programlisting>
     <programlisting>#include &lt;Systems/outSystem/outSystem.hpp&gt;</programlisting>
         <simplesect>
             <title> Classes </title>
