@@ -1,17 +1,18 @@
 #include <Application/Application.hpp>
-
+#include <AppStates/TitleState/TitleState.hpp>
+#include <AppStates/MenuState/MenuState.hpp>
 namespace ant{
     Application::Application()
     : mWindow(sf::VideoMode(Config::screenSize.width,Config::screenSize.height), "AntFarm", sf::Style::Close)
     , mAssets(new AssetManager())
     , mStateStack(AppState::Context(mWindow,(*mAssets.get()))){
         mAssets->loadAssets(Config::ASSETS_GAME_JSON);
-        //mStatisticsText.setFont(mAssets->getFont("Outwrite"));
-        //mStatisticsText.setPosition(5.f, 5.f);
-        //mStatisticsText.setCharacterSize(10u);
+        mStatisticsText.setFont(mAssets->getFont("Outwrite"));
+        mStatisticsText.setPosition(5.f, 5.f);
+        mStatisticsText.setCharacterSize(10u);
 
-        //registerStates();
-        //mStateStack.pushState(AppStates::Title);
+        registerStates();
+        mStateStack.pushState(AppStates::Title);
     }
     void Application::run(){
         sf::Clock clock;
@@ -58,10 +59,10 @@ namespace ant{
         }
     }
     void Application::registerStates(){
-        //mAppStateStack.registerState<TitleState>(AppStates::Title);
-        //mAppStateStack.registerState<MenuState>(AppStates::Menu);
-        //mAppStateStack.registerState<GameState>(AppStates::Game);
-        //mAppStateStack.registerState<PauseState>(AppStates::Pause);
+        mStateStack.registerState<TitleState>(AppStates::Title);
+        mStateStack.registerState<MenuState>(AppStates::Menu);
+        //mStateStack.registerState<GameState>(AppStates::Game);
+        //mStateStack.registerState<PauseState>(AppStates::Pause);
     }
     Application::~Application(){
 

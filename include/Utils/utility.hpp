@@ -1,6 +1,8 @@
 #ifndef ANT_UTILITY_H
 #define ANT_UTILITY_H
 #include <memory>
+#include <SFML/Graphics/Sprite.hpp>
+#include <SFML/Graphics/Text.hpp>
 namespace ant{
     namespace Utils{
         /**
@@ -23,6 +25,16 @@ namespace ant{
         std::shared_ptr<T> makeSharedPtr(Args&&... args) {
             return std::shared_ptr<T>(new T(args...));
         }
+        /**
+         * @brief Centra el texto
+         * @param text sf::Text & referencia al texto.
+         */
+        void centerOrigin(sf::Text& text);
+        /**
+         * @brief Centra el sprite
+         * @param sprite sf::Sprite & referencia al sprite.
+         */
+        void centerOrigin(sf::Sprite& sprite);
     }
 }
 #endif // ANT_UTILITY_H
