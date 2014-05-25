@@ -1,32 +1,35 @@
-#ifndef ANT_TITLESTATE_HPP
-#define ANT_TITLESTATE_HPP
+#ifndef ANT_GAMEOVER_STATE_HPP
+#define ANT_GAMEOVER_STATE_HPP
 #include <AppStates/AppState.hpp>
-#include <string>
-#include <Config.hpp>
-#include <SFML/Graphics/Sprite.hpp>
+#include <AppStates/AppStates.hpp>
 #include <SFML/Graphics/Text.hpp>
+#include <Config.hpp>
 namespace ant{
     /**
-     * @brief Muestra el titulo de la aplicacion
+     * @brief Muestra el mensaje de final de juego.
      * @author Cristian Glez <Cristian.glez.m@gmail.com>
      * @version 0.1a
      */
-    class TitleState : public AppState{
+    class GameOverState : public AppState{
         public:
             /**
-             * @brief Constructor por defecto.
+             * @brief Constructor principal.
+             * @param stack StateStack stack para cambiar estados internamente.
+             * @param msg std::string mensaje que mostrara.
              */
-            TitleState(StateStack& stack, Context context);
+            GameOverState(StateStack& stack, Context context,std::string msg);
             /**
-             * @brief Renderiza el estado en pantalla.
+             * @brief Renderiza el estado.
              */
             virtual void render();
             /**
-             * @brief Actualiza
+             * @brief Actualiza el estado.
+             * @param dt sf::Time
              */
             virtual bool update(sf::Time dt);
             /**
-             * @brief Maneja el input de teclado/raton.
+             * @brief Maneja la input.
+             * @param event sf::Event
              */
             virtual bool handleEvent(const sf::Event& event);
         private:
@@ -35,14 +38,9 @@ namespace ant{
              */
             void loadConfig(const std::string& filename);
         private:
-            sf::Sprite mBackground;
-            sf::Text mTitle;
             sf::Text mText;
             std::string font;
-            std::string background;
-            bool mShowText;
-            sf::Time mTextEffectTime;
     };
 }
 
-#endif // ANT_TITLESTATE_HPP
+#endif // ANT_GAMEOVER_STATE_HPP

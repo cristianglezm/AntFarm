@@ -1,23 +1,30 @@
 #include <Application/Application.hpp>
 #include <AppStates/TitleState/TitleState.hpp>
 #include <AppStates/MenuState/MenuState.hpp>
+#include <AppStates/GameState/GameState.hpp>
+#include <AppStates/PauseState/PauseState.hpp>
+#include <AppStates/GameOverState/GameOverState.hpp>
 namespace ant{
     Application::Application()
-    : mWindow(sf::VideoMode(Config::screenSize.width,Config::screenSize.height), "AntFarm", sf::Style::Close)
+    : mWindow(new sf::RenderWindow(sf::VideoMode(Config::screenSize.width,Config::screenSize.height), "AntFarm", sf::Style::Close))
     , mAssets(new AssetManager())
-    , mStateStack(AppState::Context(mWindow,(*mAssets.get()))){
+    , mStateStack(AppState::Context(mWindow,mAssets)){
         mAssets->loadAssets(Config::ASSETS_GAME_JSON);
-        mStatisticsText.setFont(mAssets->getFont("Outwrite"));
-        mStatisticsText.setPosition(5.f, 5.f);
-        mStatisticsText.setCharacterSize(10u);
-
+        loadConfig(Config::CONFIG_FILE);
+        mStatisticsText.setFont(mAssets->getFont(font));
+        mStatisticsText.setPosition(Config::screenSize.width-55,Config::screenSize.height-45);
+        mStatisticsText.setCharacterSize(25u);
+        version.setFont(mAssets->getFont(font));
+        version.setCharacterSize(25u);
+        version.setPosition(Config::screenSize.width-Config::screenSize.width+5,Config::screenSize.height-50);
+        version.setString(Config::VERSION);
         registerStates();
         mStateStack.pushState(AppStates::Title);
     }
     void Application::run(){
         sf::Clock clock;
         sf::Time timeSinceLastUpdate = sf::Time::Zero;
-        while(mWindow.isOpen()){
+        while(mWindow->isOpen()){
             sf::Time dt = clock.restart();
             timeSinceLastUpdate += dt;
             while(timeSinceLastUpdate > TimePerFrame){
@@ -25,18 +32,26 @@ namespace ant{
                 processInput();
                 update(TimePerFrame);
                 if(mStateStack.isEmpty()){
-                    mWindow.close();
+                    mWindow->close();
                 }
             }
+        updateStatistics(dt);
         render();
+        }
+    }
+    void Application::loadConfig(const std::string& filename){
+        std::fstream file(filename);
+        JsonBox::Value v(file);
+        if(v["Config"]["font"].getString() != ""){
+            font = v["Config"]["font"].getString();
         }
     }
     void Application::processInput(){
         sf::Event event;
-        while (mWindow.pollEvent(event)){
+        while (mWindow->pollEvent(event)){
             mStateStack.handleEvent(event);
             if (event.type == sf::Event::Closed){
-                mWindow.close();
+                mWindow->close();
             }
         }
     }
@@ -44,16 +59,25 @@ namespace ant{
         mStateStack.update(dt);
     }
     void Application::render(){
-        mWindow.clear();
+        mWindow->clear();
         mStateStack.render();
-        mWindow.setView(mWindow.getDefaultView());
-        mWindow.display();
+        mWindow->setView(mWindow->getDefaultView());
+        mWindow->draw(mStatisticsText);
+        mWindow->draw(version);
+        mWindow->display();
     }
     void Application::updateStatistics(sf::Time dt){
         mStatisticsUpdateTime += dt;
         mStatisticsNumFrames += 1;
         if (mStatisticsUpdateTime >= sf::seconds(1.0f)){
-            mStatisticsText.setString("FPS: " + Utils::toString(mStatisticsNumFrames));
+            if(mStatisticsNumFrames < 10){
+                mStatisticsText.setColor(sf::Color::Red);
+            }else if(mStatisticsNumFrames > 59){
+                mStatisticsText.setColor(sf::Color::Green);
+            }else if(mStatisticsNumFrames < 30){
+                mStatisticsText.setColor(sf::Color::Yellow);
+            }
+            mStatisticsText.setString(Utils::toString(mStatisticsNumFrames));
             mStatisticsUpdateTime -= sf::seconds(1.0f);
             mStatisticsNumFrames = 0;
         }
@@ -61,8 +85,10 @@ namespace ant{
     void Application::registerStates(){
         mStateStack.registerState<TitleState>(AppStates::Title);
         mStateStack.registerState<MenuState>(AppStates::Menu);
-        //mStateStack.registerState<GameState>(AppStates::Game);
-        //mStateStack.registerState<PauseState>(AppStates::Pause);
+        mStateStack.registerState<GameState>(AppStates::Game);
+        mStateStack.registerState<PauseState>(AppStates::Pause);
+        mStateStack.registerState<GameOverState>(AppStates::GameFailed,"Game Failed!");
+        mStateStack.registerState<GameOverState>(AppStates::GameSucceed,"Game Succeed!");
     }
     Application::~Application(){
 

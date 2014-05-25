@@ -1,9 +1,9 @@
 #include <AppStates/AppState.hpp>
 
 namespace ant{
-    AppState::Context::Context(sf::RenderWindow& window, AssetManager& assets)
-    : window(&window)
-    , assets(&assets){}
+    AppState::Context::Context(std::shared_ptr<sf::RenderWindow> window, std::shared_ptr<AssetManager> assets)
+    : window(window)
+    , assets(assets){}
     AppState::AppState(StateStack& Stack, AppState::Context context)
     : mStack(&Stack)
     , mContext(context){

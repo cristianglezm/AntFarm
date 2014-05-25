@@ -4,18 +4,25 @@ namespace ant{
     TitleState::TitleState(StateStack& stack, Context context)
     : AppState(stack,context)
     , mText()
+    , mTitle()
     , mShowText(true)
     , mTextEffectTime(sf::Time::Zero){
         loadConfig(Config::CONFIG_FILE);
-        mBackgroundSprite.setTexture(context.assets->getTexture(background));
+        mBackground.setTexture(context.assets->getTexture(background));
         mText.setFont(context.assets->getFont(font));
         mText.setString("Press any key to start");
         Utils::centerOrigin(mText);
         mText.setPosition(context.window->getView().getSize() / 2.f);
+        mTitle.setFont(context.assets->getFont(font));
+        mTitle.setString("AntFarm");
+        mTitle.setCharacterSize(50);
+        Utils::centerOrigin(mTitle);
+        mTitle.setPosition(mText.getPosition() - sf::Vector2f(0.f, 100.f));
     }
     void TitleState::render(){
         sf::RenderWindow& window = *getContext().window;
-        window.draw(mBackgroundSprite);
+        window.draw(mBackground);
+        window.draw(mTitle);
         if (mShowText){
             window.draw(mText);
         }
