@@ -69,4 +69,4 @@ namespace ant{
     ComponentSettings::~ComponentSettings(){
 
     }
-};
+}

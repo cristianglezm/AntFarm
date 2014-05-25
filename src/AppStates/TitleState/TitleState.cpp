@@ -3,8 +3,8 @@
 namespace ant{
     TitleState::TitleState(StateStack& stack, Context context)
     : AppState(stack,context)
-    , mText()
     , mTitle()
+    , mText()
     , mShowText(true)
     , mTextEffectTime(sf::Time::Zero){
         loadConfig(Config::CONFIG_FILE);

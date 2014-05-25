@@ -186,7 +186,7 @@ namespace ant{
                     sprite.setTexture(assets->getTexture(v["GUI"]["buttons"][size_t(i)]["imageID"].getString()));
                 }
                 std::string actionID = v["GUI"]["buttons"][size_t(i)]["action"].getString();
-                constructorSystem::command action;
+                constructorSystem::command action = [](Entity* e,sf::VertexArray* va,sf::FloatRect bounds){};
                 if(actionID == "climb"){
                     action = Constructions::climb;
                 }else if(actionID == "dig"){
