@@ -9,6 +9,14 @@ namespace ant{
         worldFactory->loadAssets(assetsFilename);
         init(bounds);
     }
+    Level::Level(std::shared_ptr<AssetManager> am,sf::FloatRect bounds,std::shared_ptr<GameEventDispatcher> ged)
+    :levels(new WorldManager())
+    ,eventQueue(new EventQueue())
+    ,gameEventDispatcher(ged)
+    ,worldFactory(new WorldFactory(ged,eventQueue)){
+        worldFactory->setAssetManager(am);
+        init(bounds);
+    }
     void Level::init(const sf::FloatRect& bounds){
         levels->clear();
         loadLevel(bounds,Config::LEVELS_FILE);

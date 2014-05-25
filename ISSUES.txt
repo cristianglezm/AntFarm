@@ -1,6 +1,6 @@
 ISSUES
 ===
 
-* Las hormigas saltan mucho o se quedan atascadas.
-* Da error de puntero al salir de la aplicacion o a veces durante la aplicacion.
-* NO responden a los clicks de raton
+* Las hormigas se quedan atascadas y a veces caen colisionando.
+* Da error de puntero al salir del estado de juego.
+* NO responden a los clicks de raton cuando estan muy juntas

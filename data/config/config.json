@@ -1,5 +1,11 @@
 {
     "Config":{
         "font":"OLDFAX",
+	  "TitleScreen":{
+			"background":"background1",
+	   },
+	  "MenuScreen":{
+			"background":"background3",
+	   },
     }
 }

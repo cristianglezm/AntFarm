@@ -28,6 +28,13 @@ namespace ant{
              */
             Level(const std::string& assetsFilename,sf::FloatRect bounds,std::shared_ptr<GameEventDispatcher> ged);
             /**
+             * @brief Constructor secundario
+             * @param am std::shared_ptr<AssetManager>
+             * @param bounds sf::FloatRect rectangulo con los limites del nivel.
+             * @param ged std::shared_ptr<GameEventDispatcher> para que se suscriban a los eventos.
+             */
+            Level(std::shared_ptr<AssetManager> am,sf::FloatRect bounds,std::shared_ptr<GameEventDispatcher> ged);
+            /**
              * @brief Inicializa el nivel.
              *
              * Añade los mundos iniciales al nivel.
