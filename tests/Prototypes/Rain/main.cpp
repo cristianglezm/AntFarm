@@ -76,11 +76,11 @@ int main()
 
     // Load a sprite to display
     sf::Texture texture;
-    if (!texture.loadFromFile("../../../data/maps/nest/MapNestFrontground.png")){
+    if (!texture.loadFromFile("../../../data/backgrounds/backgrounds1.png")){
         return EXIT_FAILURE;
     }
     sf::Texture texture1;
-    if(!texture1.loadFromFile("../../../data/maps/nest/MapNestBackground.png")){
+    if(!texture1.loadFromFile("../../../data/backgrounds/backgrounds2.png")){
         return EXIT_FAILURE;
     }
     sf::Sprite background(texture1);

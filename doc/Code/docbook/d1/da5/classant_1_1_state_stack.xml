@@ -246,7 +246,7 @@ Clear,
 
             </section>
             <section xml:id="d1/da5/classant_1_1_state_stack_1a7ffe3d00b54d682346f3fab38e7cfc2c">
-                <title>void ant::StateStack::registerState (AppStates::ID stateID)</title> <emphasis>Registra un estado en la fabrica, el estado tiene que tener 3 argumentos.</emphasis>
+                <title>void ant::StateStack::registerState (AppStates::ID stateID)</title> <emphasis>Registra un estado en la fabrica, el estado tiene que tener 2 argumentos.</emphasis>
                 
 <para>templateparam                            <row>
                                 <entry>T</entry>

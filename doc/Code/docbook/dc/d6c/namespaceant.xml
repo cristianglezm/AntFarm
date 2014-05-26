@@ -20,49 +20,7 @@
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>struct <link linkend="d0/da0/classant_1_1_game_over_state">ant::GameOverState</link></para>
-                    </listitem>
-                </itemizedlist>
-            </para>
-            <para>
-                <itemizedlist>
-                    <listitem>
-                        <para>struct <link linkend="d4/da6/classant_1_1_game_state">ant::GameState</link></para>
-                    </listitem>
-                </itemizedlist>
-            </para>
-            <para>
-                <itemizedlist>
-                    <listitem>
-                        <para>struct <link linkend="db/d69/classant_1_1_menu_state">ant::MenuState</link></para>
-                    </listitem>
-                </itemizedlist>
-            </para>
-            <para>
-                <itemizedlist>
-                    <listitem>
-                        <para>struct <link linkend="d4/d89/classant_1_1_pause_state">ant::PauseState</link></para>
-                    </listitem>
-                </itemizedlist>
-            </para>
-            <para>
-                <itemizedlist>
-                    <listitem>
-                        <para>struct <link linkend="d0/d6d/classant_1_1_title_state">ant::TitleState</link></para>
-                    </listitem>
-                </itemizedlist>
-            </para>
-            <para>
-                <itemizedlist>
-                    <listitem>
                         <para>struct <link linkend="d1/dd6/classant_1_1_asset_manager">ant::AssetManager</link></para>
-                    </listitem>
-                </itemizedlist>
-            </para>
-            <para>
-                <itemizedlist>
-                    <listitem>
-                        <para>struct <link linkend="d4/df6/classant_1_1_component_factory">ant::ComponentFactory</link></para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -76,7 +34,28 @@
             <para>
                 <itemizedlist>
                     <listitem>
+                        <para>struct <link linkend="d3/dce/classant_1_1base_event">ant::baseEvent</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="dc/de8/classant_1_1collision_system">ant::collisionSystem</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
                         <para>struct <link linkend="d3/d70/classant_1_1_component">ant::Component</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d4/df6/classant_1_1_component_factory">ant::ComponentFactory</link></para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -91,6 +70,20 @@
                 <itemizedlist>
                     <listitem>
                         <para>struct <link linkend="de/d2d/classant_1_1_config">ant::Config</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="dd/d76/classant_1_1_constructions">ant::Constructions</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d8/d12/classant_1_1constructor_system">ant::constructorSystem</link></para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -118,13 +111,6 @@
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>struct <link linkend="d3/dce/classant_1_1base_event">ant::baseEvent</link></para>
-                    </listitem>
-                </itemizedlist>
-            </para>
-            <para>
-                <itemizedlist>
-                    <listitem>
                         <para>struct <link linkend="d3/d03/classant_1_1_event">ant::Event</link></para>
                     </listitem>
                 </itemizedlist>
@@ -146,63 +132,14 @@
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>struct <link linkend="d0/dcb/classant_1_1_level">ant::Level</link></para>
+                        <para>struct <link linkend="d0/da0/classant_1_1_game_over_state">ant::GameOverState</link></para>
                     </listitem>
                 </itemizedlist>
             </para>
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>struct <link linkend="d4/d50/classant_1_1_observer">ant::Observer</link></para>
-                    </listitem>
-                </itemizedlist>
-            </para>
-            <para>
-                <itemizedlist>
-                    <listitem>
-                        <para>struct <link linkend="d1/da5/classant_1_1_state_stack">ant::StateStack</link></para>
-                    </listitem>
-                </itemizedlist>
-            </para>
-            <para>
-                <itemizedlist>
-                    <listitem>
-                        <para>struct <link linkend="d5/d29/classant_1_1_subject">ant::Subject</link></para>
-                    </listitem>
-                </itemizedlist>
-            </para>
-            <para>
-                <itemizedlist>
-                    <listitem>
-                        <para>struct <link linkend="d6/dcc/classant_1_1_system_factory">ant::SystemFactory</link></para>
-                    </listitem>
-                </itemizedlist>
-            </para>
-            <para>
-                <itemizedlist>
-                    <listitem>
-                        <para>struct <link linkend="de/dce/classant_1_1_system_manager">ant::SystemManager</link></para>
-                    </listitem>
-                </itemizedlist>
-            </para>
-            <para>
-                <itemizedlist>
-                    <listitem>
-                        <para>struct <link linkend="dc/de8/classant_1_1collision_system">ant::collisionSystem</link></para>
-                    </listitem>
-                </itemizedlist>
-            </para>
-            <para>
-                <itemizedlist>
-                    <listitem>
-                        <para>struct <link linkend="dd/d76/classant_1_1_constructions">ant::Constructions</link></para>
-                    </listitem>
-                </itemizedlist>
-            </para>
-            <para>
-                <itemizedlist>
-                    <listitem>
-                        <para>struct <link linkend="d8/d12/classant_1_1constructor_system">ant::constructorSystem</link></para>
+                        <para>struct <link linkend="d4/da6/classant_1_1_game_state">ant::GameState</link></para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -216,6 +153,20 @@
             <para>
                 <itemizedlist>
                     <listitem>
+                        <para>struct <link linkend="d0/dcb/classant_1_1_level">ant::Level</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="db/d69/classant_1_1_menu_state">ant::MenuState</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
                         <para>struct <link linkend="d6/d6c/classant_1_1movement_system">ant::movementSystem</link></para>
                     </listitem>
                 </itemizedlist>
@@ -223,7 +174,21 @@
             <para>
                 <itemizedlist>
                     <listitem>
+                        <para>struct <link linkend="d4/d50/classant_1_1_observer">ant::Observer</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
                         <para>struct <link linkend="dd/d76/classant_1_1out_system">ant::outSystem</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d4/d89/classant_1_1_pause_state">ant::PauseState</link></para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -244,7 +209,42 @@
             <para>
                 <itemizedlist>
                     <listitem>
+                        <para>struct <link linkend="d1/da5/classant_1_1_state_stack">ant::StateStack</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d5/d29/classant_1_1_subject">ant::Subject</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
                         <para>struct <link linkend="de/d48/classant_1_1_system">ant::System</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d6/dcc/classant_1_1_system_factory">ant::SystemFactory</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="de/dce/classant_1_1_system_manager">ant::SystemManager</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="d0/d6d/classant_1_1_title_state">ant::TitleState</link></para>
                     </listitem>
                 </itemizedlist>
             </para>

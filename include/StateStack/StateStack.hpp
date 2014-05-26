@@ -32,7 +32,7 @@ namespace ant{
              */
             explicit StateStack(AppState::Context context);
             /**
-             * @brief Registra un estado en la fabrica, el estado tiene que tener 3 argumentos
+             * @brief Registra un estado en la fabrica, el estado tiene que tener 2 argumentos
              * @tparam T clase del estado a crear.
              * @param stateID AppState::ID estado a crear.
              */

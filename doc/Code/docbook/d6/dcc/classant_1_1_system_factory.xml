@@ -302,7 +302,7 @@ int totalEntities)</para>
             <section xml:id="d6/dcc/classant_1_1_system_factory_1a69b79fce62ccf901996515e4528bc71d">
                 <title>std::shared_ptr&lt; movementSystem &gt; ant::SystemFactory::createMovementSystem ()</title> <emphasis>Crea un sistema de movimiento.</emphasis>
                 
-<para><formalpara><title>See Also: </title>
+<para><formalpara><title>See also: </title>
 
 <para><link linkend="d6/d6c/classant_1_1movement_system_1a39790555e3f9d2722f48e9e272dbe5ec">movementSystem::movementSystem</link> </para>
 </formalpara>
@@ -316,7 +316,7 @@ int totalEntities)</para>
             <section xml:id="d6/dcc/classant_1_1_system_factory_1ae1012e7048bee97688a0db2f76723322">
                 <title>std::shared_ptr&lt; gravitySystem &gt; ant::SystemFactory::createGravitySystem (float gravity)</title> <emphasis>Crea un sistema de gravedad.</emphasis>
                 
-<para><formalpara><title>See Also: </title>
+<para><formalpara><title>See also: </title>
 
 <para><link linkend="db/de0/classant_1_1gravity_system_1ab77e4a4cd9ff0158ca30d921327893c5">gravitySystem::gravitySystem</link> </para>
 </formalpara>
@@ -347,7 +347,7 @@ int totalEntities)</para>
             <section xml:id="d6/dcc/classant_1_1_system_factory_1acf3fcbe08c0bb66a4a587cc4141b01a1">
                 <title>std::shared_ptr&lt; spawnSystem &gt; ant::SystemFactory::createSpawnSystem (int nEntities, EntityFactory *ef, sf::Time ot, sf::Vector2f spawnPoint, long int state)</title> <emphasis>Crea un sistema de creacion de entidades.</emphasis>
                 
-<para><formalpara><title>See Also: </title>
+<para><formalpara><title>See also: </title>
 
 <para><link linkend="db/ddf/classant_1_1spawn_system_1aa5b27276b3bd50f135602081fd126a8a">spawnSystem::spawnSystem</link> </para>
 </formalpara>
@@ -361,7 +361,7 @@ int totalEntities)</para>
             <section xml:id="d6/dcc/classant_1_1_system_factory_1adefb28b61b249e8e50814782c03a9de7">
                 <title>std::shared_ptr&lt; constructorSystem &gt; ant::SystemFactory::createConstructorSystem (sf::VertexArray *GameMap, sf::FloatRect bounds)</title> <emphasis>Crea un sistema de construccion.</emphasis>
                 
-<para><formalpara><title>See Also: </title>
+<para><formalpara><title>See also: </title>
 
 <para><link linkend="d8/d12/classant_1_1constructor_system_1ae6380dff3712e14585eef0f38d95c646">constructorSystem::constructorSystem</link> </para>
 </formalpara>
@@ -375,7 +375,7 @@ int totalEntities)</para>
             <section xml:id="d6/dcc/classant_1_1_system_factory_1a4334abc153fc1a4dcfcf1452f9371e56">
                 <title>std::shared_ptr&lt; outSystem &gt; ant::SystemFactory::createOutSystem (int totalEntities)</title> <emphasis>Crea un sistema para comprobar cuando salen del mapa o entran por alguna entidad que tenga Component_OUT.</emphasis>
                 
-<para><formalpara><title>See Also: </title>
+<para><formalpara><title>See also: </title>
 
 <para><link linkend="dd/d76/classant_1_1out_system_1a00ea0c5eaf0b42527c915be9e56fcf85">outSystem::outSystem</link> </para>
 </formalpara>

@@ -1,6 +1,15 @@
 /**
  * @mainpage
  * @brief Juego sobre hormigas atrapadas que deben escapar.
+ *
+ * Para pasar al siguiente nivel las hormigas tienen que llegar  a la puerta de salida.
+ * Las hormigas se moverán solas, al colisionar con una pared estas rebotaran 
+ * y caminaran en la misma dirección pero en sentido contrario. 
+ * Con los controles y acciones de las hormigas tendremos que conseguir
+ * que estas lleguen a la puerta de salida intentando perder el menor número
+ * de unidades posibles, como mínimo tendremos que salvar a una hormiga
+ * para poder pasar al siguiente nivel.
+ *
  * @author Cristian Glez <Cristian.glez.m@gmail.com>
  * @author Xavi Diaz <xdiazcarrasco@iesesteveterradas.cat>
  * @version 0.1
