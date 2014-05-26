@@ -1,0 +1,475 @@
+\hypertarget{classant_1_1_title_state}{\section{ant\+:\+:Title\+State Class Reference}
+\label{classant_1_1_title_state}\index{ant\+::\+Title\+State@{ant\+::\+Title\+State}}
+}
+
+
+Muestra el titulo de la aplicacion.  
+
+
+
+
+{\ttfamily \#include $<$Title\+State.\+hpp$>$}
+
+
+
+Inheritance diagram for ant\+:\+:Title\+State\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=191pt]{d6/d38/classant_1_1_title_state__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ant\+:\+:Title\+State\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{d4/dad/classant_1_1_title_state__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::unique\+\_\+ptr$<$ \hyperlink{classant_1_1_app_state}{App\+State} $>$ \hyperlink{classant_1_1_app_state_a94963d69f76e53c5e3b6cfa58f99fff9}{u\+Ptr}
+\begin{DoxyCompactList}\small\item\em Puntero unico de \hyperlink{classant_1_1_app_state}{App\+State}. \end{DoxyCompactList}\item 
+typedef std\+::shared\+\_\+ptr$<$ \hyperlink{classant_1_1_app_state}{App\+State} $>$ \hyperlink{classant_1_1_app_state_a772c49d9b95d2447149218ce7914d40c}{s\+Ptr}
+\begin{DoxyCompactList}\small\item\em Puntero Compartido de \hyperlink{classant_1_1_app_state}{App\+State}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classant_1_1_title_state_a4d13a38e7d8de7918fb4e9ffe760f4b8}{Title\+State} (\hyperlink{classant_1_1_state_stack}{State\+Stack} \&stack, \hyperlink{structant_1_1_app_state_1_1_context}{Context} context)
+\begin{DoxyCompactList}\small\item\em Constructor por defecto. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classant_1_1_title_state_a678a38ada931b8b9cc7cd8e24be68064}{render} ()
+\begin{DoxyCompactList}\small\item\em Renderiza el estado en pantalla. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classant_1_1_title_state_a81e0a81e1a1ce2107bd6d41d49181aa8}{update} (sf\+::\+Time dt)
+\begin{DoxyCompactList}\small\item\em Actualiza. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classant_1_1_title_state_a89b514fd2b2ae3a55ea49d4ae825d391}{handle\+Event} (const sf\+::\+Event \&event)
+\begin{DoxyCompactList}\small\item\em Maneja el input de teclado/raton. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classant_1_1_app_state_a2830ba9f7de8efbf03bab5249d5d3f0a}{request\+Stack\+Push} (\hyperlink{namespaceant_1_1_app_states_a8e30476d77a5da5e0c1c3b9c7042e62a}{App\+States\+::\+I\+D} state\+I\+D)
+\begin{DoxyCompactList}\small\item\em Pide al stack que añada un estado nuevo. \end{DoxyCompactList}\item 
+void \hyperlink{classant_1_1_app_state_a65a59f018d590e807fd61adfa307651e}{request\+Stack\+Pop} ()
+\begin{DoxyCompactList}\small\item\em Pide al stack que quite el ultimo estado añadido. \end{DoxyCompactList}\item 
+void \hyperlink{classant_1_1_app_state_a16e430d3eb803f4ff7995214bd66665e}{request\+State\+Clear} ()
+\begin{DoxyCompactList}\small\item\em Pide al stack que se limpie. \end{DoxyCompactList}\item 
+\hyperlink{structant_1_1_app_state_1_1_context}{Context} \hyperlink{classant_1_1_app_state_aa7abef18b5d2d32dbb9b35d4f630cb31}{get\+Context} () const 
+\begin{DoxyCompactList}\small\item\em Devuelve el contexto. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classant_1_1_title_state_a3e92dcb0a7aa7014b884f8a027e2afd5}{load\+Config} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Carga la configuracion de este estado. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Sprite \hyperlink{classant_1_1_title_state_a48a62f8dd95978d1e1fa258ba9317e15}{m\+Background}
+\item 
+sf\+::\+Text \hyperlink{classant_1_1_title_state_af51e3b04f108d4cb15cf7bc652b97259}{m\+Title}
+\item 
+sf\+::\+Text \hyperlink{classant_1_1_title_state_a0527596bf892971656bbd2f4f6d65e5f}{m\+Text}
+\item 
+std\+::string \hyperlink{classant_1_1_title_state_ad5e5f68c1e7369ee727ceee9a6d4489f}{font}
+\item 
+std\+::string \hyperlink{classant_1_1_title_state_a743915de7141907d5fbed2fa8e8dc458}{background}
+\item 
+bool \hyperlink{classant_1_1_title_state_a597ebaf7b06f146760f3e380dba94013}{m\+Show\+Text}
+\item 
+sf\+::\+Time \hyperlink{classant_1_1_title_state_a4d7ed62ea25f3471bd7edbf47f26a33b}{m\+Text\+Effect\+Time}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Muestra el titulo de la aplicacion. 
+
+\begin{DoxyAuthor}{Author}
+Cristian Glez \href{mailto:Cristian.glez.m@gmail.com}{\tt Cristian.\+glez.\+m@gmail.\+com} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1a 
+\end{DoxyVersion}
+
+
+Definition at line 14 of file Title\+State.\+hpp.
+
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classant_1_1_app_state_a772c49d9b95d2447149218ce7914d40c}{\index{ant\+::\+Title\+State@{ant\+::\+Title\+State}!s\+Ptr@{s\+Ptr}}
+\index{s\+Ptr@{s\+Ptr}!ant\+::\+Title\+State@{ant\+::\+Title\+State}}
+\subsubsection[{s\+Ptr}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::shared\+\_\+ptr$<${\bf App\+State}$>$ {\bf ant\+::\+App\+State\+::s\+Ptr}\hspace{0.3cm}{\ttfamily [inherited]}}}\label{classant_1_1_app_state_a772c49d9b95d2447149218ce7914d40c}
+
+
+Puntero Compartido de \hyperlink{classant_1_1_app_state}{App\+State}. 
+
+
+
+Definition at line 26 of file App\+State.\+hpp.
+
+\hypertarget{classant_1_1_app_state_a94963d69f76e53c5e3b6cfa58f99fff9}{\index{ant\+::\+Title\+State@{ant\+::\+Title\+State}!u\+Ptr@{u\+Ptr}}
+\index{u\+Ptr@{u\+Ptr}!ant\+::\+Title\+State@{ant\+::\+Title\+State}}
+\subsubsection[{u\+Ptr}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::unique\+\_\+ptr$<${\bf App\+State}$>$ {\bf ant\+::\+App\+State\+::u\+Ptr}\hspace{0.3cm}{\ttfamily [inherited]}}}\label{classant_1_1_app_state_a94963d69f76e53c5e3b6cfa58f99fff9}
+
+
+Puntero unico de \hyperlink{classant_1_1_app_state}{App\+State}. 
+
+
+
+Definition at line 22 of file App\+State.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classant_1_1_title_state_a4d13a38e7d8de7918fb4e9ffe760f4b8}{\index{ant\+::\+Title\+State@{ant\+::\+Title\+State}!Title\+State@{Title\+State}}
+\index{Title\+State@{Title\+State}!ant\+::\+Title\+State@{ant\+::\+Title\+State}}
+\subsubsection[{Title\+State}]{\setlength{\rightskip}{0pt plus 5cm}ant\+::\+Title\+State\+::\+Title\+State (
+\begin{DoxyParamCaption}
+\item[{{\bf State\+Stack} \&}]{stack, }
+\item[{{\bf Context}}]{context}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_title_state_a4d13a38e7d8de7918fb4e9ffe760f4b8}
+
+
+Constructor por defecto. 
+
+
+
+Definition at line 4 of file Title\+State.\+cpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/d6d/classant_1_1_title_state_a4d13a38e7d8de7918fb4e9ffe760f4b8_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classant_1_1_app_state_aa7abef18b5d2d32dbb9b35d4f630cb31}{\index{ant\+::\+Title\+State@{ant\+::\+Title\+State}!get\+Context@{get\+Context}}
+\index{get\+Context@{get\+Context}!ant\+::\+Title\+State@{ant\+::\+Title\+State}}
+\subsubsection[{get\+Context}]{\setlength{\rightskip}{0pt plus 5cm}{\bf App\+State\+::\+Context} ant\+::\+App\+State\+::get\+Context (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{classant_1_1_app_state_aa7abef18b5d2d32dbb9b35d4f630cb31}
+
+
+Devuelve el contexto. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{structant_1_1_app_state_1_1_context}{App\+State\+::\+Context} 
+\end{DoxyReturn}
+
+
+Definition at line 21 of file App\+State.\+cpp.
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/df7/classant_1_1_app_state_aa7abef18b5d2d32dbb9b35d4f630cb31_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classant_1_1_title_state_a89b514fd2b2ae3a55ea49d4ae825d391}{\index{ant\+::\+Title\+State@{ant\+::\+Title\+State}!handle\+Event@{handle\+Event}}
+\index{handle\+Event@{handle\+Event}!ant\+::\+Title\+State@{ant\+::\+Title\+State}}
+\subsubsection[{handle\+Event}]{\setlength{\rightskip}{0pt plus 5cm}bool ant\+::\+Title\+State\+::handle\+Event (
+\begin{DoxyParamCaption}
+\item[{const sf\+::\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classant_1_1_title_state_a89b514fd2b2ae3a55ea49d4ae825d391}
+
+
+Maneja el input de teclado/raton. 
+
+
+
+Implements \hyperlink{classant_1_1_app_state_ae70866194e3c8cf2fd42041804d0905a}{ant\+::\+App\+State}.
+
+
+
+Definition at line 48 of file Title\+State.\+cpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/d6d/classant_1_1_title_state_a89b514fd2b2ae3a55ea49d4ae825d391_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classant_1_1_title_state_a3e92dcb0a7aa7014b884f8a027e2afd5}{\index{ant\+::\+Title\+State@{ant\+::\+Title\+State}!load\+Config@{load\+Config}}
+\index{load\+Config@{load\+Config}!ant\+::\+Title\+State@{ant\+::\+Title\+State}}
+\subsubsection[{load\+Config}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+Title\+State\+::load\+Config (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{filename}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1_title_state_a3e92dcb0a7aa7014b884f8a027e2afd5}
+
+
+Carga la configuracion de este estado. 
+
+
+
+Definition at line 30 of file Title\+State.\+cpp.
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/d6d/classant_1_1_title_state_a3e92dcb0a7aa7014b884f8a027e2afd5_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classant_1_1_title_state_a678a38ada931b8b9cc7cd8e24be68064}{\index{ant\+::\+Title\+State@{ant\+::\+Title\+State}!render@{render}}
+\index{render@{render}!ant\+::\+Title\+State@{ant\+::\+Title\+State}}
+\subsubsection[{render}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+Title\+State\+::render (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classant_1_1_title_state_a678a38ada931b8b9cc7cd8e24be68064}
+
+
+Renderiza el estado en pantalla. 
+
+
+
+Implements \hyperlink{classant_1_1_app_state_a8e4e13cdf558c5d57339548d8b5acaf9}{ant\+::\+App\+State}.
+
+
+
+Definition at line 22 of file Title\+State.\+cpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/d6d/classant_1_1_title_state_a678a38ada931b8b9cc7cd8e24be68064_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classant_1_1_app_state_a65a59f018d590e807fd61adfa307651e}{\index{ant\+::\+Title\+State@{ant\+::\+Title\+State}!request\+Stack\+Pop@{request\+Stack\+Pop}}
+\index{request\+Stack\+Pop@{request\+Stack\+Pop}!ant\+::\+Title\+State@{ant\+::\+Title\+State}}
+\subsubsection[{request\+Stack\+Pop}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+App\+State\+::request\+Stack\+Pop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{classant_1_1_app_state_a65a59f018d590e807fd61adfa307651e}
+
+
+Pide al stack que quite el ultimo estado añadido. 
+
+
+
+Definition at line 15 of file App\+State.\+cpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/df7/classant_1_1_app_state_a65a59f018d590e807fd61adfa307651e_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/df7/classant_1_1_app_state_a65a59f018d590e807fd61adfa307651e_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classant_1_1_app_state_a2830ba9f7de8efbf03bab5249d5d3f0a}{\index{ant\+::\+Title\+State@{ant\+::\+Title\+State}!request\+Stack\+Push@{request\+Stack\+Push}}
+\index{request\+Stack\+Push@{request\+Stack\+Push}!ant\+::\+Title\+State@{ant\+::\+Title\+State}}
+\subsubsection[{request\+Stack\+Push}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+App\+State\+::request\+Stack\+Push (
+\begin{DoxyParamCaption}
+\item[{{\bf App\+States\+::\+I\+D}}]{state\+I\+D}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{classant_1_1_app_state_a2830ba9f7de8efbf03bab5249d5d3f0a}
+
+
+Pide al stack que añada un estado nuevo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state\+I\+D} & \hyperlink{namespaceant_1_1_app_states_a8e30476d77a5da5e0c1c3b9c7042e62a}{App\+States\+::\+I\+D} id del estado. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 12 of file App\+State.\+cpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/df7/classant_1_1_app_state_a2830ba9f7de8efbf03bab5249d5d3f0a_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/df7/classant_1_1_app_state_a2830ba9f7de8efbf03bab5249d5d3f0a_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classant_1_1_app_state_a16e430d3eb803f4ff7995214bd66665e}{\index{ant\+::\+Title\+State@{ant\+::\+Title\+State}!request\+State\+Clear@{request\+State\+Clear}}
+\index{request\+State\+Clear@{request\+State\+Clear}!ant\+::\+Title\+State@{ant\+::\+Title\+State}}
+\subsubsection[{request\+State\+Clear}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+App\+State\+::request\+State\+Clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{classant_1_1_app_state_a16e430d3eb803f4ff7995214bd66665e}
+
+
+Pide al stack que se limpie. 
+
+
+
+Definition at line 18 of file App\+State.\+cpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/df7/classant_1_1_app_state_a16e430d3eb803f4ff7995214bd66665e_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/df7/classant_1_1_app_state_a16e430d3eb803f4ff7995214bd66665e_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classant_1_1_title_state_a81e0a81e1a1ce2107bd6d41d49181aa8}{\index{ant\+::\+Title\+State@{ant\+::\+Title\+State}!update@{update}}
+\index{update@{update}!ant\+::\+Title\+State@{ant\+::\+Title\+State}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}bool ant\+::\+Title\+State\+::update (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Time}]{dt}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classant_1_1_title_state_a81e0a81e1a1ce2107bd6d41d49181aa8}
+
+
+Actualiza. 
+
+
+
+Implements \hyperlink{classant_1_1_app_state_a536738e3c366a35ff6406dccb34ce215}{ant\+::\+App\+State}.
+
+
+
+Definition at line 40 of file Title\+State.\+cpp.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classant_1_1_title_state_a743915de7141907d5fbed2fa8e8dc458}{\index{ant\+::\+Title\+State@{ant\+::\+Title\+State}!background@{background}}
+\index{background@{background}!ant\+::\+Title\+State@{ant\+::\+Title\+State}}
+\subsubsection[{background}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string ant\+::\+Title\+State\+::background\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1_title_state_a743915de7141907d5fbed2fa8e8dc458}
+
+
+Definition at line 42 of file Title\+State.\+hpp.
+
+\hypertarget{classant_1_1_title_state_ad5e5f68c1e7369ee727ceee9a6d4489f}{\index{ant\+::\+Title\+State@{ant\+::\+Title\+State}!font@{font}}
+\index{font@{font}!ant\+::\+Title\+State@{ant\+::\+Title\+State}}
+\subsubsection[{font}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string ant\+::\+Title\+State\+::font\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1_title_state_ad5e5f68c1e7369ee727ceee9a6d4489f}
+
+
+Definition at line 41 of file Title\+State.\+hpp.
+
+\hypertarget{classant_1_1_title_state_a48a62f8dd95978d1e1fa258ba9317e15}{\index{ant\+::\+Title\+State@{ant\+::\+Title\+State}!m\+Background@{m\+Background}}
+\index{m\+Background@{m\+Background}!ant\+::\+Title\+State@{ant\+::\+Title\+State}}
+\subsubsection[{m\+Background}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Sprite ant\+::\+Title\+State\+::m\+Background\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1_title_state_a48a62f8dd95978d1e1fa258ba9317e15}
+
+
+Definition at line 38 of file Title\+State.\+hpp.
+
+\hypertarget{classant_1_1_title_state_a597ebaf7b06f146760f3e380dba94013}{\index{ant\+::\+Title\+State@{ant\+::\+Title\+State}!m\+Show\+Text@{m\+Show\+Text}}
+\index{m\+Show\+Text@{m\+Show\+Text}!ant\+::\+Title\+State@{ant\+::\+Title\+State}}
+\subsubsection[{m\+Show\+Text}]{\setlength{\rightskip}{0pt plus 5cm}bool ant\+::\+Title\+State\+::m\+Show\+Text\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1_title_state_a597ebaf7b06f146760f3e380dba94013}
+
+
+Definition at line 43 of file Title\+State.\+hpp.
+
+\hypertarget{classant_1_1_title_state_a0527596bf892971656bbd2f4f6d65e5f}{\index{ant\+::\+Title\+State@{ant\+::\+Title\+State}!m\+Text@{m\+Text}}
+\index{m\+Text@{m\+Text}!ant\+::\+Title\+State@{ant\+::\+Title\+State}}
+\subsubsection[{m\+Text}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Text ant\+::\+Title\+State\+::m\+Text\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1_title_state_a0527596bf892971656bbd2f4f6d65e5f}
+
+
+Definition at line 40 of file Title\+State.\+hpp.
+
+\hypertarget{classant_1_1_title_state_a4d7ed62ea25f3471bd7edbf47f26a33b}{\index{ant\+::\+Title\+State@{ant\+::\+Title\+State}!m\+Text\+Effect\+Time@{m\+Text\+Effect\+Time}}
+\index{m\+Text\+Effect\+Time@{m\+Text\+Effect\+Time}!ant\+::\+Title\+State@{ant\+::\+Title\+State}}
+\subsubsection[{m\+Text\+Effect\+Time}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Time ant\+::\+Title\+State\+::m\+Text\+Effect\+Time\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1_title_state_a4d7ed62ea25f3471bd7edbf47f26a33b}
+
+
+Definition at line 44 of file Title\+State.\+hpp.
+
+\hypertarget{classant_1_1_title_state_af51e3b04f108d4cb15cf7bc652b97259}{\index{ant\+::\+Title\+State@{ant\+::\+Title\+State}!m\+Title@{m\+Title}}
+\index{m\+Title@{m\+Title}!ant\+::\+Title\+State@{ant\+::\+Title\+State}}
+\subsubsection[{m\+Title}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Text ant\+::\+Title\+State\+::m\+Title\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1_title_state_af51e3b04f108d4cb15cf7bc652b97259}
+
+
+Definition at line 39 of file Title\+State.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_title_state_8hpp}{Title\+State.\+hpp}\item 
+\hyperlink{_title_state_8cpp}{Title\+State.\+cpp}\end{DoxyCompactItemize}

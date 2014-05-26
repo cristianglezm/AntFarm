@@ -1,0 +1,391 @@
+\hypertarget{classant_1_1_system_factory}{\section{ant\+:\+:System\+Factory Class Reference}
+\label{classant_1_1_system_factory}\index{ant\+::\+System\+Factory@{ant\+::\+System\+Factory}}
+}
+
+
+Clase para crear sistemas.  
+
+
+
+
+{\ttfamily \#include $<$System\+Factory.\+hpp$>$}
+
+
+
+Collaboration diagram for ant\+:\+:System\+Factory\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{d9/d81/classant_1_1_system_factory__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classant_1_1_system_factory_a8a60ed77666e3e07495e45040fd0de96}{System\+Factory} ()
+\begin{DoxyCompactList}\small\item\em Constructor por defecto. \end{DoxyCompactList}\item 
+\hyperlink{classant_1_1_system_factory_a88f538f2817a297762047c95d4c8169a}{System\+Factory} (std\+::shared\+\_\+ptr$<$ \hyperlink{classant_1_1_game_event_dispatcher}{Game\+Event\+Dispatcher} $>$ ged, std\+::shared\+\_\+ptr$<$ \hyperlink{classant_1_1_event_queue}{Event\+Queue} $>$ eq)
+\begin{DoxyCompactList}\small\item\em Constructor para compartir la misma cola y suscritor de eventos. \end{DoxyCompactList}\item 
+void \hyperlink{classant_1_1_system_factory_a759cba610a22c58876d4edb528690ece}{set\+Event\+Queue} (std\+::shared\+\_\+ptr$<$ \hyperlink{classant_1_1_event_queue}{Event\+Queue} $>$ eq)
+\begin{DoxyCompactList}\small\item\em Setter para la cola de eventos. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classant_1_1_event_queue}{Event\+Queue} $>$ \hyperlink{classant_1_1_system_factory_ac7db589ce8fca629d7d871fa9ad4d663}{get\+Event\+Queue} ()
+\begin{DoxyCompactList}\small\item\em Getter para la cola de eventos. \end{DoxyCompactList}\item 
+void \hyperlink{classant_1_1_system_factory_ab4c382d78bd0214fb91e4e07ed3ee24d}{set\+Game\+Event\+Dispatcher} (std\+::shared\+\_\+ptr$<$ \hyperlink{classant_1_1_game_event_dispatcher}{Game\+Event\+Dispatcher} $>$ ged)
+\begin{DoxyCompactList}\small\item\em Setter para el suscritor de eventos. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr\\*
+$<$ \hyperlink{classant_1_1_game_event_dispatcher}{Game\+Event\+Dispatcher} $>$ \hyperlink{classant_1_1_system_factory_a33d785d8400849461d1e734c472308b4}{get\+Game\+Event\+Dispatcher} ()
+\begin{DoxyCompactList}\small\item\em Getter para el suscritor de eventos. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classant_1_1render_system}{render\+System} $>$ \hyperlink{classant_1_1_system_factory_a3d6ae5e15504796eab9f0ebd13cae354}{create\+Render\+System} ()
+\begin{DoxyCompactList}\small\item\em Crea un sistema de renderizado. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classant_1_1collision_system}{collision\+System} $>$ \hyperlink{classant_1_1_system_factory_aa962a3076d677e7ea258897cdefabd1e}{create\+Collision\+System} (sf\+::\+Float\+Rect bounds, sf\+::\+Vertex\+Array $\ast$Game\+Map)
+\begin{DoxyCompactList}\small\item\em Crea un sistema de colision. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classant_1_1movement_system}{movement\+System} $>$ \hyperlink{classant_1_1_system_factory_a69b79fce62ccf901996515e4528bc71d}{create\+Movement\+System} ()
+\begin{DoxyCompactList}\small\item\em Crea un sistema de movimiento. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classant_1_1gravity_system}{gravity\+System} $>$ \hyperlink{classant_1_1_system_factory_ae1012e7048bee97688a0db2f76723322}{create\+Gravity\+System} (float gravity)
+\begin{DoxyCompactList}\small\item\em Crea un sistema de gravedad. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classant_1_1spawn_system}{spawn\+System} $>$ \hyperlink{classant_1_1_system_factory_acf3fcbe08c0bb66a4a587cc4141b01a1}{create\+Spawn\+System} (int n\+Entities, \hyperlink{classant_1_1_entity_factory}{Entity\+Factory} $\ast$ef, sf\+::\+Time ot, sf\+::\+Vector2f spawn\+Point, long int state)
+\begin{DoxyCompactList}\small\item\em Crea un sistema de creacion de entidades. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr\\*
+$<$ \hyperlink{classant_1_1constructor_system}{constructor\+System} $>$ \hyperlink{classant_1_1_system_factory_adefb28b61b249e8e50814782c03a9de7}{create\+Constructor\+System} (sf\+::\+Vertex\+Array $\ast$Game\+Map, sf\+::\+Float\+Rect bounds)
+\begin{DoxyCompactList}\small\item\em Crea un sistema de construccion. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classant_1_1out_system}{out\+System} $>$ \hyperlink{classant_1_1_system_factory_a4334abc153fc1a4dcfcf1452f9371e56}{create\+Out\+System} (int total\+Entities)
+\begin{DoxyCompactList}\small\item\em Crea un sistema para comprobar cuando salen del mapa o entran por alguna entidad que tenga Component\+\_\+\+O\+U\+T. \end{DoxyCompactList}\item 
+\hyperlink{classant_1_1_system_factory_a702fd13a4c1a4013f37cb6ec43461a19}{$\sim$\+System\+Factory} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr\\*
+$<$ \hyperlink{classant_1_1_game_event_dispatcher}{Game\+Event\+Dispatcher} $>$ \hyperlink{classant_1_1_system_factory_ac2e43c03f569c09b2ab6a3539e0fc42a}{game\+Event\+Dispatcher}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classant_1_1_event_queue}{Event\+Queue} $>$ \hyperlink{classant_1_1_system_factory_ae72909e917f13c79cf1a44731d473c02}{event\+Queue}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Clase para crear sistemas. 
+
+\begin{DoxyAuthor}{Author}
+Cristian Glez \href{mailto:Cristian.glez.m@gmail.com}{\tt Cristian.\+glez.\+m@gmail.\+com} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+
+
+Definition at line 20 of file System\+Factory.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classant_1_1_system_factory_a8a60ed77666e3e07495e45040fd0de96}{\index{ant\+::\+System\+Factory@{ant\+::\+System\+Factory}!System\+Factory@{System\+Factory}}
+\index{System\+Factory@{System\+Factory}!ant\+::\+System\+Factory@{ant\+::\+System\+Factory}}
+\subsubsection[{System\+Factory}]{\setlength{\rightskip}{0pt plus 5cm}ant\+::\+System\+Factory\+::\+System\+Factory (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_system_factory_a8a60ed77666e3e07495e45040fd0de96}
+
+
+Constructor por defecto. 
+
+
+
+Definition at line 4 of file System\+Factory.\+cpp.
+
+\hypertarget{classant_1_1_system_factory_a88f538f2817a297762047c95d4c8169a}{\index{ant\+::\+System\+Factory@{ant\+::\+System\+Factory}!System\+Factory@{System\+Factory}}
+\index{System\+Factory@{System\+Factory}!ant\+::\+System\+Factory@{ant\+::\+System\+Factory}}
+\subsubsection[{System\+Factory}]{\setlength{\rightskip}{0pt plus 5cm}ant\+::\+System\+Factory\+::\+System\+Factory (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Game\+Event\+Dispatcher} $>$}]{ged, }
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Event\+Queue} $>$}]{eq}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_system_factory_a88f538f2817a297762047c95d4c8169a}
+
+
+Constructor para compartir la misma cola y suscritor de eventos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ged} & std\+::shared\+\_\+ptr$<$\+Game\+Event\+Dispatcher$>$ \\
+\hline
+{\em eq} & std\+::shared\+\_\+ptr$<$\+Event\+Queue$>$ \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 7 of file System\+Factory.\+cpp.
+
+\hypertarget{classant_1_1_system_factory_a702fd13a4c1a4013f37cb6ec43461a19}{\index{ant\+::\+System\+Factory@{ant\+::\+System\+Factory}!````~System\+Factory@{$\sim$\+System\+Factory}}
+\index{````~System\+Factory@{$\sim$\+System\+Factory}!ant\+::\+System\+Factory@{ant\+::\+System\+Factory}}
+\subsubsection[{$\sim$\+System\+Factory}]{\setlength{\rightskip}{0pt plus 5cm}ant\+::\+System\+Factory\+::$\sim$\+System\+Factory (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_system_factory_a702fd13a4c1a4013f37cb6ec43461a19}
+
+
+Definition at line 58 of file System\+Factory.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classant_1_1_system_factory_aa962a3076d677e7ea258897cdefabd1e}{\index{ant\+::\+System\+Factory@{ant\+::\+System\+Factory}!create\+Collision\+System@{create\+Collision\+System}}
+\index{create\+Collision\+System@{create\+Collision\+System}!ant\+::\+System\+Factory@{ant\+::\+System\+Factory}}
+\subsubsection[{create\+Collision\+System}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<$ {\bf collision\+System} $>$ ant\+::\+System\+Factory\+::create\+Collision\+System (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Float\+Rect}]{bounds, }
+\item[{sf\+::\+Vertex\+Array $\ast$}]{Game\+Map}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_system_factory_aa962a3076d677e7ea258897cdefabd1e}
+
+
+Crea un sistema de colision. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Game\+Map} & sf\+::\+Vertex\+Array $\ast$ Terreno del juego. \\
+\hline
+{\em bounds} & sf\+::\+Float\+Rect rectangulo para zona que ocupa. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::shared\+\_\+ptr$<$collision\+System$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 21 of file System\+Factory.\+cpp.
+
+\hypertarget{classant_1_1_system_factory_adefb28b61b249e8e50814782c03a9de7}{\index{ant\+::\+System\+Factory@{ant\+::\+System\+Factory}!create\+Constructor\+System@{create\+Constructor\+System}}
+\index{create\+Constructor\+System@{create\+Constructor\+System}!ant\+::\+System\+Factory@{ant\+::\+System\+Factory}}
+\subsubsection[{create\+Constructor\+System}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<$ {\bf constructor\+System} $>$ ant\+::\+System\+Factory\+::create\+Constructor\+System (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Vertex\+Array $\ast$}]{Game\+Map, }
+\item[{sf\+::\+Float\+Rect}]{bounds}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_system_factory_adefb28b61b249e8e50814782c03a9de7}
+
+
+Crea un sistema de construccion. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classant_1_1constructor_system_ae6380dff3712e14585eef0f38d95c646}{constructor\+System\+::constructor\+System} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+std\+::shared\+\_\+ptr$<$constructor\+System$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 43 of file System\+Factory.\+cpp.
+
+\hypertarget{classant_1_1_system_factory_ae1012e7048bee97688a0db2f76723322}{\index{ant\+::\+System\+Factory@{ant\+::\+System\+Factory}!create\+Gravity\+System@{create\+Gravity\+System}}
+\index{create\+Gravity\+System@{create\+Gravity\+System}!ant\+::\+System\+Factory@{ant\+::\+System\+Factory}}
+\subsubsection[{create\+Gravity\+System}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<$ {\bf gravity\+System} $>$ ant\+::\+System\+Factory\+::create\+Gravity\+System (
+\begin{DoxyParamCaption}
+\item[{float}]{gravity}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_system_factory_ae1012e7048bee97688a0db2f76723322}
+
+
+Crea un sistema de gravedad. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classant_1_1gravity_system_ab77e4a4cd9ff0158ca30d921327893c5}{gravity\+System\+::gravity\+System} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em gravity} & float \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::shared\+\_\+ptr$<$gravity\+System$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 32 of file System\+Factory.\+cpp.
+
+\hypertarget{classant_1_1_system_factory_a69b79fce62ccf901996515e4528bc71d}{\index{ant\+::\+System\+Factory@{ant\+::\+System\+Factory}!create\+Movement\+System@{create\+Movement\+System}}
+\index{create\+Movement\+System@{create\+Movement\+System}!ant\+::\+System\+Factory@{ant\+::\+System\+Factory}}
+\subsubsection[{create\+Movement\+System}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<$ {\bf movement\+System} $>$ ant\+::\+System\+Factory\+::create\+Movement\+System (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_system_factory_a69b79fce62ccf901996515e4528bc71d}
+
+
+Crea un sistema de movimiento. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classant_1_1movement_system_a39790555e3f9d2722f48e9e272dbe5ec}{movement\+System\+::movement\+System} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+std\+::shared\+\_\+ptr$<$movement\+System$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 26 of file System\+Factory.\+cpp.
+
+\hypertarget{classant_1_1_system_factory_a4334abc153fc1a4dcfcf1452f9371e56}{\index{ant\+::\+System\+Factory@{ant\+::\+System\+Factory}!create\+Out\+System@{create\+Out\+System}}
+\index{create\+Out\+System@{create\+Out\+System}!ant\+::\+System\+Factory@{ant\+::\+System\+Factory}}
+\subsubsection[{create\+Out\+System}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<$ {\bf out\+System} $>$ ant\+::\+System\+Factory\+::create\+Out\+System (
+\begin{DoxyParamCaption}
+\item[{int}]{total\+Entities}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_system_factory_a4334abc153fc1a4dcfcf1452f9371e56}
+
+
+Crea un sistema para comprobar cuando salen del mapa o entran por alguna entidad que tenga Component\+\_\+\+O\+U\+T. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classant_1_1out_system_a00ea0c5eaf0b42527c915be9e56fcf85}{out\+System\+::out\+System} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+std\+::shared\+\_\+ptr$<$out\+System$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 51 of file System\+Factory.\+cpp.
+
+\hypertarget{classant_1_1_system_factory_a3d6ae5e15504796eab9f0ebd13cae354}{\index{ant\+::\+System\+Factory@{ant\+::\+System\+Factory}!create\+Render\+System@{create\+Render\+System}}
+\index{create\+Render\+System@{create\+Render\+System}!ant\+::\+System\+Factory@{ant\+::\+System\+Factory}}
+\subsubsection[{create\+Render\+System}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<$ {\bf render\+System} $>$ ant\+::\+System\+Factory\+::create\+Render\+System (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_system_factory_a3d6ae5e15504796eab9f0ebd13cae354}
+
+
+Crea un sistema de renderizado. 
+
+\begin{DoxyReturn}{Returns}
+std\+::shared\+\_\+ptr$<$render\+System$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 16 of file System\+Factory.\+cpp.
+
+\hypertarget{classant_1_1_system_factory_acf3fcbe08c0bb66a4a587cc4141b01a1}{\index{ant\+::\+System\+Factory@{ant\+::\+System\+Factory}!create\+Spawn\+System@{create\+Spawn\+System}}
+\index{create\+Spawn\+System@{create\+Spawn\+System}!ant\+::\+System\+Factory@{ant\+::\+System\+Factory}}
+\subsubsection[{create\+Spawn\+System}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<$ {\bf spawn\+System} $>$ ant\+::\+System\+Factory\+::create\+Spawn\+System (
+\begin{DoxyParamCaption}
+\item[{int}]{n\+Entities, }
+\item[{{\bf Entity\+Factory} $\ast$}]{ef, }
+\item[{sf\+::\+Time}]{ot, }
+\item[{sf\+::\+Vector2f}]{spawn\+Point, }
+\item[{long int}]{state}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_system_factory_acf3fcbe08c0bb66a4a587cc4141b01a1}
+
+
+Crea un sistema de creacion de entidades. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classant_1_1spawn_system_aa5b27276b3bd50f135602081fd126a8a}{spawn\+System\+::spawn\+System} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+std\+::shared\+\_\+ptr$<$spawn\+System$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 37 of file System\+Factory.\+cpp.
+
+\hypertarget{classant_1_1_system_factory_ac7db589ce8fca629d7d871fa9ad4d663}{\index{ant\+::\+System\+Factory@{ant\+::\+System\+Factory}!get\+Event\+Queue@{get\+Event\+Queue}}
+\index{get\+Event\+Queue@{get\+Event\+Queue}!ant\+::\+System\+Factory@{ant\+::\+System\+Factory}}
+\subsubsection[{get\+Event\+Queue}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Event\+Queue}$>$ ant\+::\+System\+Factory\+::get\+Event\+Queue (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classant_1_1_system_factory_ac7db589ce8fca629d7d871fa9ad4d663}
+
+
+Getter para la cola de eventos. 
+
+\begin{DoxyReturn}{Returns}
+std\+::shared\+\_\+ptr$<$\+Event\+Queue$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 41 of file System\+Factory.\+hpp.
+
+\hypertarget{classant_1_1_system_factory_a33d785d8400849461d1e734c472308b4}{\index{ant\+::\+System\+Factory@{ant\+::\+System\+Factory}!get\+Game\+Event\+Dispatcher@{get\+Game\+Event\+Dispatcher}}
+\index{get\+Game\+Event\+Dispatcher@{get\+Game\+Event\+Dispatcher}!ant\+::\+System\+Factory@{ant\+::\+System\+Factory}}
+\subsubsection[{get\+Game\+Event\+Dispatcher}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Game\+Event\+Dispatcher}$>$ ant\+::\+System\+Factory\+::get\+Game\+Event\+Dispatcher (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classant_1_1_system_factory_a33d785d8400849461d1e734c472308b4}
+
+
+Getter para el suscritor de eventos. 
+
+\begin{DoxyReturn}{Returns}
+std\+::shared\+\_\+ptr$<$\+Game\+Event\+Dispatcher$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 51 of file System\+Factory.\+hpp.
+
+\hypertarget{classant_1_1_system_factory_a759cba610a22c58876d4edb528690ece}{\index{ant\+::\+System\+Factory@{ant\+::\+System\+Factory}!set\+Event\+Queue@{set\+Event\+Queue}}
+\index{set\+Event\+Queue@{set\+Event\+Queue}!ant\+::\+System\+Factory@{ant\+::\+System\+Factory}}
+\subsubsection[{set\+Event\+Queue}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+System\+Factory\+::set\+Event\+Queue (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Event\+Queue} $>$}]{eq}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_system_factory_a759cba610a22c58876d4edb528690ece}
+
+
+Setter para la cola de eventos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em eq} & std\+::shared\+\_\+ptr$<$\+Event\+Queue$>$ \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 10 of file System\+Factory.\+cpp.
+
+\hypertarget{classant_1_1_system_factory_ab4c382d78bd0214fb91e4e07ed3ee24d}{\index{ant\+::\+System\+Factory@{ant\+::\+System\+Factory}!set\+Game\+Event\+Dispatcher@{set\+Game\+Event\+Dispatcher}}
+\index{set\+Game\+Event\+Dispatcher@{set\+Game\+Event\+Dispatcher}!ant\+::\+System\+Factory@{ant\+::\+System\+Factory}}
+\subsubsection[{set\+Game\+Event\+Dispatcher}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+System\+Factory\+::set\+Game\+Event\+Dispatcher (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Game\+Event\+Dispatcher} $>$}]{ged}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_system_factory_ab4c382d78bd0214fb91e4e07ed3ee24d}
+
+
+Setter para el suscritor de eventos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ged} & std\+::shared\+\_\+ptr$<$\+Game\+Event\+Dispatcher$>$ \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 13 of file System\+Factory.\+cpp.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classant_1_1_system_factory_ae72909e917f13c79cf1a44731d473c02}{\index{ant\+::\+System\+Factory@{ant\+::\+System\+Factory}!event\+Queue@{event\+Queue}}
+\index{event\+Queue@{event\+Queue}!ant\+::\+System\+Factory@{ant\+::\+System\+Factory}}
+\subsubsection[{event\+Queue}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Event\+Queue}$>$ ant\+::\+System\+Factory\+::event\+Queue\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1_system_factory_ae72909e917f13c79cf1a44731d473c02}
+
+
+Definition at line 99 of file System\+Factory.\+hpp.
+
+\hypertarget{classant_1_1_system_factory_ac2e43c03f569c09b2ab6a3539e0fc42a}{\index{ant\+::\+System\+Factory@{ant\+::\+System\+Factory}!game\+Event\+Dispatcher@{game\+Event\+Dispatcher}}
+\index{game\+Event\+Dispatcher@{game\+Event\+Dispatcher}!ant\+::\+System\+Factory@{ant\+::\+System\+Factory}}
+\subsubsection[{game\+Event\+Dispatcher}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Game\+Event\+Dispatcher}$>$ ant\+::\+System\+Factory\+::game\+Event\+Dispatcher\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1_system_factory_ac2e43c03f569c09b2ab6a3539e0fc42a}
+
+
+Definition at line 98 of file System\+Factory.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_system_factory_8hpp}{System\+Factory.\+hpp}\item 
+\hyperlink{_system_factory_8cpp}{System\+Factory.\+cpp}\end{DoxyCompactItemize}

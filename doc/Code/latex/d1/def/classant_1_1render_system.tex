@@ -1,0 +1,346 @@
+\hypertarget{classant_1_1render_system}{\section{ant\+:\+:render\+System Class Reference}
+\label{classant_1_1render_system}\index{ant\+::render\+System@{ant\+::render\+System}}
+}
+
+
+Sistema encargado de mostrar las entidades que tengan los componentes necesarios.  
+
+
+
+
+{\ttfamily \#include $<$render\+System.\+hpp$>$}
+
+
+
+Inheritance diagram for ant\+:\+:render\+System\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{d6/d5d/classant_1_1render_system__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ant\+:\+:render\+System\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{d2/d4f/classant_1_1render_system__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classant_1_1render_system_a519835cb3318b0eaad3b5143b3d23121}{render\+System} ()
+\begin{DoxyCompactList}\small\item\em Constructor por defecto. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classant_1_1render_system_ad5284fb701e3d9ea1c3645e553083ba6}{render} (sf\+::\+Render\+Window \&win)
+\begin{DoxyCompactList}\small\item\em Renderiza las \hyperlink{classant_1_1_entity}{Entity} con los componentes Transform y Sprite, Destructable. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classant_1_1render_system_a9a8fd550b795db266510831276bfe957}{update} (sf\+::\+Time dt)
+\begin{DoxyCompactList}\small\item\em No hace nada. \end{DoxyCompactList}\item 
+\hyperlink{classant_1_1render_system_a44a7a39c0946d5d9d2d8e7287860d071}{$\sim$render\+System} ()
+\item 
+void \hyperlink{classant_1_1_system_a35662ff3739ff4290df1106bfdccfaca}{set\+Required\+Components} (long int req)
+\begin{DoxyCompactList}\small\item\em Setter para los requisitos necesarios. \end{DoxyCompactList}\item 
+long int \hyperlink{classant_1_1_system_a2d94338969f43d4fd2fd972deb099258}{get\+Required\+Componts} ()
+\begin{DoxyCompactList}\small\item\em Getter de los requisitos para el sistema. \end{DoxyCompactList}\item 
+void \hyperlink{classant_1_1_system_a1effe9f0e5615e516a34be02d5895434}{set\+Event\+Queue} (std\+::shared\+\_\+ptr$<$ \hyperlink{classant_1_1_event_queue}{Event\+Queue} $>$ eq)
+\begin{DoxyCompactList}\small\item\em Setter para la \hyperlink{classant_1_1_event_queue}{Event\+Queue}. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classant_1_1_event_queue}{Event\+Queue} $>$ \hyperlink{classant_1_1_system_ac3e2bbbdb622276d194ad3a687d8e4f1}{get\+Event\+Queue} ()
+\begin{DoxyCompactList}\small\item\em Getter para la \hyperlink{classant_1_1_event_queue}{Event\+Queue}. \end{DoxyCompactList}\item 
+void \hyperlink{classant_1_1_system_a231f9fc93b55ee67deb9597ae6be13ba}{set\+Name} (std\+::string \hyperlink{classant_1_1_system_a60b3c00a760a3b4947ab1f1fc534a5b2}{name})
+\begin{DoxyCompactList}\small\item\em Setter Para el nombre del sistema. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classant_1_1_system_a52a559b2c3ddbec5c846df1badd7f7f8}{get\+Name} () const 
+\begin{DoxyCompactList}\small\item\em Getter para el nombre del sistema. \end{DoxyCompactList}\item 
+void \hyperlink{classant_1_1_system_a1f983382d142ea697f1811f7f6f6ab17}{set\+Entity\+Manager} (std\+::shared\+\_\+ptr$<$ \hyperlink{classant_1_1_entity_manager}{Entity\+Manager} $>$ \hyperlink{classant_1_1_system_a5661d872ff769be150bd4e9a9552f6b9}{em})
+\begin{DoxyCompactList}\small\item\em Setter para el \hyperlink{classant_1_1_entity_manager}{Entity\+Manager}. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classant_1_1_entity_manager}{Entity\+Manager} $>$ \hyperlink{classant_1_1_system_adaad2087de7fc71924cfb5b134014b0a}{get\+Entity\+Manager} ()
+\begin{DoxyCompactList}\small\item\em Getter para el \hyperlink{classant_1_1_entity_manager}{Entity\+Manager}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+long int \hyperlink{classant_1_1_system_a4ef41cfc496e41ac6730f90629524ec7}{Required\+Components}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classant_1_1_event_queue}{Event\+Queue} $>$ \hyperlink{classant_1_1_system_a27e1814e13d161b5ef0e848e3da16d29}{event\+Queue}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classant_1_1_entity_manager}{Entity\+Manager} $>$ \hyperlink{classant_1_1_system_a5661d872ff769be150bd4e9a9552f6b9}{em}
+\item 
+std\+::string \hyperlink{classant_1_1_system_a60b3c00a760a3b4947ab1f1fc534a5b2}{name}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Sistema encargado de mostrar las entidades que tengan los componentes necesarios. 
+
+\begin{DoxyAuthor}{Author}
+Cristian Glez \href{mailto:Cristian.glez.m@gmail.com}{\tt Cristian.\+glez.\+m@gmail.\+com} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+
+
+Definition at line 15 of file render\+System.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classant_1_1render_system_a519835cb3318b0eaad3b5143b3d23121}{\index{ant\+::render\+System@{ant\+::render\+System}!render\+System@{render\+System}}
+\index{render\+System@{render\+System}!ant\+::render\+System@{ant\+::render\+System}}
+\subsubsection[{render\+System}]{\setlength{\rightskip}{0pt plus 5cm}ant\+::render\+System\+::render\+System (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1render_system_a519835cb3318b0eaad3b5143b3d23121}
+
+
+Constructor por defecto. 
+
+
+
+Definition at line 3 of file render\+System.\+cpp.
+
+\hypertarget{classant_1_1render_system_a44a7a39c0946d5d9d2d8e7287860d071}{\index{ant\+::render\+System@{ant\+::render\+System}!````~render\+System@{$\sim$render\+System}}
+\index{````~render\+System@{$\sim$render\+System}!ant\+::render\+System@{ant\+::render\+System}}
+\subsubsection[{$\sim$render\+System}]{\setlength{\rightskip}{0pt plus 5cm}ant\+::render\+System\+::$\sim$render\+System (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1render_system_a44a7a39c0946d5d9d2d8e7287860d071}
+
+
+Definition at line 37 of file render\+System.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classant_1_1_system_adaad2087de7fc71924cfb5b134014b0a}{\index{ant\+::render\+System@{ant\+::render\+System}!get\+Entity\+Manager@{get\+Entity\+Manager}}
+\index{get\+Entity\+Manager@{get\+Entity\+Manager}!ant\+::render\+System@{ant\+::render\+System}}
+\subsubsection[{get\+Entity\+Manager}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Entity\+Manager}$>$ ant\+::\+System\+::get\+Entity\+Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [inherited]}}}\label{classant_1_1_system_adaad2087de7fc71924cfb5b134014b0a}
+
+
+Getter para el \hyperlink{classant_1_1_entity_manager}{Entity\+Manager}. 
+
+\begin{DoxyReturn}{Returns}
+std\+::shared\+\_\+ptr$<$\+Entity\+Manager$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 71 of file System.\+hpp.
+
+\hypertarget{classant_1_1_system_ac3e2bbbdb622276d194ad3a687d8e4f1}{\index{ant\+::render\+System@{ant\+::render\+System}!get\+Event\+Queue@{get\+Event\+Queue}}
+\index{get\+Event\+Queue@{get\+Event\+Queue}!ant\+::render\+System@{ant\+::render\+System}}
+\subsubsection[{get\+Event\+Queue}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Event\+Queue}$>$ ant\+::\+System\+::get\+Event\+Queue (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [inherited]}}}\label{classant_1_1_system_ac3e2bbbdb622276d194ad3a687d8e4f1}
+
+
+Getter para la \hyperlink{classant_1_1_event_queue}{Event\+Queue}. 
+
+\begin{DoxyReturn}{Returns}
+std\+::shared\+\_\+ptr$<$\+Event\+Queue$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 51 of file System.\+hpp.
+
+\hypertarget{classant_1_1_system_a52a559b2c3ddbec5c846df1badd7f7f8}{\index{ant\+::render\+System@{ant\+::render\+System}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!ant\+::render\+System@{ant\+::render\+System}}
+\subsubsection[{get\+Name}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string ant\+::\+System\+::get\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [inherited]}}}\label{classant_1_1_system_a52a559b2c3ddbec5c846df1badd7f7f8}
+
+
+Getter para el nombre del sistema. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string 
+\end{DoxyReturn}
+
+
+Definition at line 61 of file System.\+hpp.
+
+\hypertarget{classant_1_1_system_a2d94338969f43d4fd2fd972deb099258}{\index{ant\+::render\+System@{ant\+::render\+System}!get\+Required\+Componts@{get\+Required\+Componts}}
+\index{get\+Required\+Componts@{get\+Required\+Componts}!ant\+::render\+System@{ant\+::render\+System}}
+\subsubsection[{get\+Required\+Componts}]{\setlength{\rightskip}{0pt plus 5cm}long int ant\+::\+System\+::get\+Required\+Componts (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [inherited]}}}\label{classant_1_1_system_a2d94338969f43d4fd2fd972deb099258}
+
+
+Getter de los requisitos para el sistema. 
+
+
+
+Definition at line 41 of file System.\+hpp.
+
+\hypertarget{classant_1_1render_system_ad5284fb701e3d9ea1c3645e553083ba6}{\index{ant\+::render\+System@{ant\+::render\+System}!render@{render}}
+\index{render@{render}!ant\+::render\+System@{ant\+::render\+System}}
+\subsubsection[{render}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::render\+System\+::render (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Render\+Window \&}]{win}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classant_1_1render_system_ad5284fb701e3d9ea1c3645e553083ba6}
+
+
+Renderiza las \hyperlink{classant_1_1_entity}{Entity} con los componentes Transform y Sprite, Destructable. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em win} & sf\+::\+Render\+Window \& Ventana a la cual dibujar. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classant_1_1_system_a30a815d199fea90e9d2f7167eb2bf86e}{ant\+::\+System}.
+
+
+
+Definition at line 7 of file render\+System.\+cpp.
+
+\hypertarget{classant_1_1_system_a1f983382d142ea697f1811f7f6f6ab17}{\index{ant\+::render\+System@{ant\+::render\+System}!set\+Entity\+Manager@{set\+Entity\+Manager}}
+\index{set\+Entity\+Manager@{set\+Entity\+Manager}!ant\+::render\+System@{ant\+::render\+System}}
+\subsubsection[{set\+Entity\+Manager}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+System\+::set\+Entity\+Manager (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Entity\+Manager} $>$}]{em}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inherited]}}}\label{classant_1_1_system_a1f983382d142ea697f1811f7f6f6ab17}
+
+
+Setter para el \hyperlink{classant_1_1_entity_manager}{Entity\+Manager}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em em} & std\+::shared\+\_\+ptr$<$\+Entity\+Manager$>$ \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 25 of file System.\+cpp.
+
+\hypertarget{classant_1_1_system_a1effe9f0e5615e516a34be02d5895434}{\index{ant\+::render\+System@{ant\+::render\+System}!set\+Event\+Queue@{set\+Event\+Queue}}
+\index{set\+Event\+Queue@{set\+Event\+Queue}!ant\+::render\+System@{ant\+::render\+System}}
+\subsubsection[{set\+Event\+Queue}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+System\+::set\+Event\+Queue (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Event\+Queue} $>$}]{eq}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inherited]}}}\label{classant_1_1_system_a1effe9f0e5615e516a34be02d5895434}
+
+
+Setter para la \hyperlink{classant_1_1_event_queue}{Event\+Queue}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em eq} & std\+::shared\+\_\+ptr$<$\+Event\+Queue$>$ \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 19 of file System.\+cpp.
+
+\hypertarget{classant_1_1_system_a231f9fc93b55ee67deb9597ae6be13ba}{\index{ant\+::render\+System@{ant\+::render\+System}!set\+Name@{set\+Name}}
+\index{set\+Name@{set\+Name}!ant\+::render\+System@{ant\+::render\+System}}
+\subsubsection[{set\+Name}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+System\+::set\+Name (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inherited]}}}\label{classant_1_1_system_a231f9fc93b55ee67deb9597ae6be13ba}
+
+
+Setter Para el nombre del sistema. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & std\+::string \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 22 of file System.\+cpp.
+
+\hypertarget{classant_1_1_system_a35662ff3739ff4290df1106bfdccfaca}{\index{ant\+::render\+System@{ant\+::render\+System}!set\+Required\+Components@{set\+Required\+Components}}
+\index{set\+Required\+Components@{set\+Required\+Components}!ant\+::render\+System@{ant\+::render\+System}}
+\subsubsection[{set\+Required\+Components}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+System\+::set\+Required\+Components (
+\begin{DoxyParamCaption}
+\item[{long int}]{req}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inherited]}}}\label{classant_1_1_system_a35662ff3739ff4290df1106bfdccfaca}
+
+
+Setter para los requisitos necesarios. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em req} & long int \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 16 of file System.\+cpp.
+
+\hypertarget{classant_1_1render_system_a9a8fd550b795db266510831276bfe957}{\index{ant\+::render\+System@{ant\+::render\+System}!update@{update}}
+\index{update@{update}!ant\+::render\+System@{ant\+::render\+System}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::render\+System\+::update (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Time}]{dt}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classant_1_1render_system_a9a8fd550b795db266510831276bfe957}
+
+
+No hace nada. 
+
+
+
+Implements \hyperlink{classant_1_1_system_a4d97de105123df07d4d90ac2914f9e6c}{ant\+::\+System}.
+
+
+
+Definition at line 34 of file render\+System.\+cpp.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classant_1_1_system_a5661d872ff769be150bd4e9a9552f6b9}{\index{ant\+::render\+System@{ant\+::render\+System}!em@{em}}
+\index{em@{em}!ant\+::render\+System@{ant\+::render\+System}}
+\subsubsection[{em}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Entity\+Manager}$>$ ant\+::\+System\+::em\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{classant_1_1_system_a5661d872ff769be150bd4e9a9552f6b9}
+
+
+Definition at line 86 of file System.\+hpp.
+
+\hypertarget{classant_1_1_system_a27e1814e13d161b5ef0e848e3da16d29}{\index{ant\+::render\+System@{ant\+::render\+System}!event\+Queue@{event\+Queue}}
+\index{event\+Queue@{event\+Queue}!ant\+::render\+System@{ant\+::render\+System}}
+\subsubsection[{event\+Queue}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Event\+Queue}$>$ ant\+::\+System\+::event\+Queue\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{classant_1_1_system_a27e1814e13d161b5ef0e848e3da16d29}
+
+
+Definition at line 85 of file System.\+hpp.
+
+\hypertarget{classant_1_1_system_a60b3c00a760a3b4947ab1f1fc534a5b2}{\index{ant\+::render\+System@{ant\+::render\+System}!name@{name}}
+\index{name@{name}!ant\+::render\+System@{ant\+::render\+System}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string ant\+::\+System\+::name\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{classant_1_1_system_a60b3c00a760a3b4947ab1f1fc534a5b2}
+
+
+Definition at line 87 of file System.\+hpp.
+
+\hypertarget{classant_1_1_system_a4ef41cfc496e41ac6730f90629524ec7}{\index{ant\+::render\+System@{ant\+::render\+System}!Required\+Components@{Required\+Components}}
+\index{Required\+Components@{Required\+Components}!ant\+::render\+System@{ant\+::render\+System}}
+\subsubsection[{Required\+Components}]{\setlength{\rightskip}{0pt plus 5cm}long int ant\+::\+System\+::\+Required\+Components\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{classant_1_1_system_a4ef41cfc496e41ac6730f90629524ec7}
+
+
+Definition at line 84 of file System.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{render_system_8hpp}{render\+System.\+hpp}\item 
+\hyperlink{render_system_8cpp}{render\+System.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,477 @@
+\hypertarget{classant_1_1_application}{\section{ant\+:\+:Application Class Reference}
+\label{classant_1_1_application}\index{ant\+::\+Application@{ant\+::\+Application}}
+}
+
+
+Clase de aplicacion.  
+
+
+
+
+{\ttfamily \#include $<$Application.\+hpp$>$}
+
+
+
+Collaboration diagram for ant\+:\+:Application\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{d4/da3/classant_1_1_application__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classant_1_1_application_afaff8830dce721acf4d6924a2a0e08f2}{Application} ()
+\begin{DoxyCompactList}\small\item\em Constructor Principal. \end{DoxyCompactList}\item 
+void \hyperlink{classant_1_1_application_a98b4cb1093562a39e0c95309cec18c48}{run} ()
+\begin{DoxyCompactList}\small\item\em Comienza la aplicacion. \end{DoxyCompactList}\item 
+\hyperlink{classant_1_1_application_abca39610feae0ca562cba54bbcf9e11f}{$\sim$\+Application} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classant_1_1_application_ae16ecef2ce89b5c86bcade38e2566528}{process\+Input} ()
+\begin{DoxyCompactList}\small\item\em Procesa el input del teclado/raton etc. \end{DoxyCompactList}\item 
+void \hyperlink{classant_1_1_application_ae29763345c102458d5c4d478b116368b}{update} (sf\+::\+Time dt)
+\begin{DoxyCompactList}\small\item\em Actualiza el estado de la aplicacion. \end{DoxyCompactList}\item 
+void \hyperlink{classant_1_1_application_a3725d8c9b586e63892511da2d619492d}{render} ()
+\begin{DoxyCompactList}\small\item\em Renderiza la aplicacion. \end{DoxyCompactList}\item 
+void \hyperlink{classant_1_1_application_acb3fcc5ed9887411f25e3705bcebe735}{load\+Config} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Carga la configuracion. \end{DoxyCompactList}\item 
+void \hyperlink{classant_1_1_application_a46fc32ba7689d272e8fe7d8f917ddaff}{update\+Statistics} (sf\+::\+Time dt)
+\begin{DoxyCompactList}\small\item\em Actualiza las estadisticas del juego. \end{DoxyCompactList}\item 
+void \hyperlink{classant_1_1_application_a4a9143ee697efe0980056c6ed4a60e9d}{register\+States} ()
+\begin{DoxyCompactList}\small\item\em Registra los estados que usara la aplicacion. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ sf\+::\+Render\+Window $>$ \hyperlink{classant_1_1_application_a6050fab136705ac705b727da336bb586}{m\+Window}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classant_1_1_asset_manager}{Asset\+Manager} $>$ \hyperlink{classant_1_1_application_a8a884f6f63b2ed9928543ce493e3bc2c}{m\+Assets}
+\item 
+\hyperlink{classant_1_1_state_stack}{State\+Stack} \hyperlink{classant_1_1_application_affce09adbc792733866c8a45d7d9bda8}{m\+State\+Stack}
+\item 
+sf\+::\+Text \hyperlink{classant_1_1_application_ac6efeaf0017a5847c404d569134bdb17}{m\+Statistics\+Text}
+\item 
+sf\+::\+Time \hyperlink{classant_1_1_application_a85a5669b50f423d557deab7c0315a0f7}{m\+Statistics\+Update\+Time}
+\item 
+std\+::size\+\_\+t \hyperlink{classant_1_1_application_aaba4dc5709cab5ea4e77b27e5f5fb9e4}{m\+Statistics\+Num\+Frames}
+\item 
+sf\+::\+Text \hyperlink{classant_1_1_application_a1d16f830e0f443b71d7c654681857e0d}{version}
+\item 
+std\+::string \hyperlink{classant_1_1_application_a0d20386c229838fe386929ddd5fbd678}{font}
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const sf\+::\+Time \hyperlink{classant_1_1_application_a4b9bf663914a5195a2b4a699c81efd22}{Time\+Per\+Frame} = sf\+::seconds(1.f/60.f)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Clase de aplicacion. 
+
+\begin{DoxyAuthor}{Author}
+Cristian Glez \href{mailto:Cristian.glez.m@gmail.com}{\tt Cristian.\+glez.\+m@gmail.\+com} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+
+
+Definition at line 19 of file Application.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classant_1_1_application_afaff8830dce721acf4d6924a2a0e08f2}{\index{ant\+::\+Application@{ant\+::\+Application}!Application@{Application}}
+\index{Application@{Application}!ant\+::\+Application@{ant\+::\+Application}}
+\subsubsection[{Application}]{\setlength{\rightskip}{0pt plus 5cm}ant\+::\+Application\+::\+Application (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_application_afaff8830dce721acf4d6924a2a0e08f2}
+
+
+Constructor Principal. 
+
+
+
+Definition at line 8 of file Application.\+cpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d57/classant_1_1_application_afaff8830dce721acf4d6924a2a0e08f2_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classant_1_1_application_abca39610feae0ca562cba54bbcf9e11f}{\index{ant\+::\+Application@{ant\+::\+Application}!````~Application@{$\sim$\+Application}}
+\index{````~Application@{$\sim$\+Application}!ant\+::\+Application@{ant\+::\+Application}}
+\subsubsection[{$\sim$\+Application}]{\setlength{\rightskip}{0pt plus 5cm}ant\+::\+Application\+::$\sim$\+Application (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_application_abca39610feae0ca562cba54bbcf9e11f}
+
+
+Definition at line 93 of file Application.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classant_1_1_application_acb3fcc5ed9887411f25e3705bcebe735}{\index{ant\+::\+Application@{ant\+::\+Application}!load\+Config@{load\+Config}}
+\index{load\+Config@{load\+Config}!ant\+::\+Application@{ant\+::\+Application}}
+\subsubsection[{load\+Config}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+Application\+::load\+Config (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{filename}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1_application_acb3fcc5ed9887411f25e3705bcebe735}
+
+
+Carga la configuracion. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & std\+::string nombre del fichero de configuracion. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 42 of file Application.\+cpp.
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d57/classant_1_1_application_acb3fcc5ed9887411f25e3705bcebe735_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classant_1_1_application_ae16ecef2ce89b5c86bcade38e2566528}{\index{ant\+::\+Application@{ant\+::\+Application}!process\+Input@{process\+Input}}
+\index{process\+Input@{process\+Input}!ant\+::\+Application@{ant\+::\+Application}}
+\subsubsection[{process\+Input}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+Application\+::process\+Input (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1_application_ae16ecef2ce89b5c86bcade38e2566528}
+
+
+Procesa el input del teclado/raton etc. 
+
+
+
+Definition at line 49 of file Application.\+cpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d57/classant_1_1_application_ae16ecef2ce89b5c86bcade38e2566528_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d57/classant_1_1_application_ae16ecef2ce89b5c86bcade38e2566528_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classant_1_1_application_a4a9143ee697efe0980056c6ed4a60e9d}{\index{ant\+::\+Application@{ant\+::\+Application}!register\+States@{register\+States}}
+\index{register\+States@{register\+States}!ant\+::\+Application@{ant\+::\+Application}}
+\subsubsection[{register\+States}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+Application\+::register\+States (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1_application_a4a9143ee697efe0980056c6ed4a60e9d}
+
+
+Registra los estados que usara la aplicacion. 
+
+
+
+Definition at line 85 of file Application.\+cpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d57/classant_1_1_application_a4a9143ee697efe0980056c6ed4a60e9d_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d57/classant_1_1_application_a4a9143ee697efe0980056c6ed4a60e9d_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classant_1_1_application_a3725d8c9b586e63892511da2d619492d}{\index{ant\+::\+Application@{ant\+::\+Application}!render@{render}}
+\index{render@{render}!ant\+::\+Application@{ant\+::\+Application}}
+\subsubsection[{render}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+Application\+::render (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1_application_a3725d8c9b586e63892511da2d619492d}
+
+
+Renderiza la aplicacion. 
+
+
+
+Definition at line 61 of file Application.\+cpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d57/classant_1_1_application_a3725d8c9b586e63892511da2d619492d_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d57/classant_1_1_application_a3725d8c9b586e63892511da2d619492d_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classant_1_1_application_a98b4cb1093562a39e0c95309cec18c48}{\index{ant\+::\+Application@{ant\+::\+Application}!run@{run}}
+\index{run@{run}!ant\+::\+Application@{ant\+::\+Application}}
+\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+Application\+::run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_application_a98b4cb1093562a39e0c95309cec18c48}
+
+
+Comienza la aplicacion. 
+
+
+
+Definition at line 24 of file Application.\+cpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d57/classant_1_1_application_a98b4cb1093562a39e0c95309cec18c48_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{d7/d57/classant_1_1_application_a98b4cb1093562a39e0c95309cec18c48_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classant_1_1_application_ae29763345c102458d5c4d478b116368b}{\index{ant\+::\+Application@{ant\+::\+Application}!update@{update}}
+\index{update@{update}!ant\+::\+Application@{ant\+::\+Application}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+Application\+::update (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Time}]{dt}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1_application_ae29763345c102458d5c4d478b116368b}
+
+
+Actualiza el estado de la aplicacion. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & sf\+::\+Time delta time \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 58 of file Application.\+cpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d57/classant_1_1_application_ae29763345c102458d5c4d478b116368b_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d57/classant_1_1_application_ae29763345c102458d5c4d478b116368b_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classant_1_1_application_a46fc32ba7689d272e8fe7d8f917ddaff}{\index{ant\+::\+Application@{ant\+::\+Application}!update\+Statistics@{update\+Statistics}}
+\index{update\+Statistics@{update\+Statistics}!ant\+::\+Application@{ant\+::\+Application}}
+\subsubsection[{update\+Statistics}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+Application\+::update\+Statistics (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Time}]{dt}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1_application_a46fc32ba7689d272e8fe7d8f917ddaff}
+
+
+Actualiza las estadisticas del juego. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & sf\+::\+Time \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 69 of file Application.\+cpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{d7/d57/classant_1_1_application_a46fc32ba7689d272e8fe7d8f917ddaff_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d57/classant_1_1_application_a46fc32ba7689d272e8fe7d8f917ddaff_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classant_1_1_application_a0d20386c229838fe386929ddd5fbd678}{\index{ant\+::\+Application@{ant\+::\+Application}!font@{font}}
+\index{font@{font}!ant\+::\+Application@{ant\+::\+Application}}
+\subsubsection[{font}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string ant\+::\+Application\+::font\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1_application_a0d20386c229838fe386929ddd5fbd678}
+
+
+Definition at line 67 of file Application.\+hpp.
+
+\hypertarget{classant_1_1_application_a8a884f6f63b2ed9928543ce493e3bc2c}{\index{ant\+::\+Application@{ant\+::\+Application}!m\+Assets@{m\+Assets}}
+\index{m\+Assets@{m\+Assets}!ant\+::\+Application@{ant\+::\+Application}}
+\subsubsection[{m\+Assets}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Asset\+Manager}$>$ ant\+::\+Application\+::m\+Assets\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1_application_a8a884f6f63b2ed9928543ce493e3bc2c}
+
+
+Definition at line 61 of file Application.\+hpp.
+
+\hypertarget{classant_1_1_application_affce09adbc792733866c8a45d7d9bda8}{\index{ant\+::\+Application@{ant\+::\+Application}!m\+State\+Stack@{m\+State\+Stack}}
+\index{m\+State\+Stack@{m\+State\+Stack}!ant\+::\+Application@{ant\+::\+Application}}
+\subsubsection[{m\+State\+Stack}]{\setlength{\rightskip}{0pt plus 5cm}{\bf State\+Stack} ant\+::\+Application\+::m\+State\+Stack\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1_application_affce09adbc792733866c8a45d7d9bda8}
+
+
+Definition at line 62 of file Application.\+hpp.
+
+\hypertarget{classant_1_1_application_aaba4dc5709cab5ea4e77b27e5f5fb9e4}{\index{ant\+::\+Application@{ant\+::\+Application}!m\+Statistics\+Num\+Frames@{m\+Statistics\+Num\+Frames}}
+\index{m\+Statistics\+Num\+Frames@{m\+Statistics\+Num\+Frames}!ant\+::\+Application@{ant\+::\+Application}}
+\subsubsection[{m\+Statistics\+Num\+Frames}]{\setlength{\rightskip}{0pt plus 5cm}std\+::size\+\_\+t ant\+::\+Application\+::m\+Statistics\+Num\+Frames\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1_application_aaba4dc5709cab5ea4e77b27e5f5fb9e4}
+
+
+Definition at line 65 of file Application.\+hpp.
+
+\hypertarget{classant_1_1_application_ac6efeaf0017a5847c404d569134bdb17}{\index{ant\+::\+Application@{ant\+::\+Application}!m\+Statistics\+Text@{m\+Statistics\+Text}}
+\index{m\+Statistics\+Text@{m\+Statistics\+Text}!ant\+::\+Application@{ant\+::\+Application}}
+\subsubsection[{m\+Statistics\+Text}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Text ant\+::\+Application\+::m\+Statistics\+Text\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1_application_ac6efeaf0017a5847c404d569134bdb17}
+
+
+Definition at line 63 of file Application.\+hpp.
+
+\hypertarget{classant_1_1_application_a85a5669b50f423d557deab7c0315a0f7}{\index{ant\+::\+Application@{ant\+::\+Application}!m\+Statistics\+Update\+Time@{m\+Statistics\+Update\+Time}}
+\index{m\+Statistics\+Update\+Time@{m\+Statistics\+Update\+Time}!ant\+::\+Application@{ant\+::\+Application}}
+\subsubsection[{m\+Statistics\+Update\+Time}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Time ant\+::\+Application\+::m\+Statistics\+Update\+Time\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1_application_a85a5669b50f423d557deab7c0315a0f7}
+
+
+Definition at line 64 of file Application.\+hpp.
+
+\hypertarget{classant_1_1_application_a6050fab136705ac705b727da336bb586}{\index{ant\+::\+Application@{ant\+::\+Application}!m\+Window@{m\+Window}}
+\index{m\+Window@{m\+Window}!ant\+::\+Application@{ant\+::\+Application}}
+\subsubsection[{m\+Window}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<$sf\+::\+Render\+Window$>$ ant\+::\+Application\+::m\+Window\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1_application_a6050fab136705ac705b727da336bb586}
+
+
+Definition at line 60 of file Application.\+hpp.
+
+\hypertarget{classant_1_1_application_a4b9bf663914a5195a2b4a699c81efd22}{\index{ant\+::\+Application@{ant\+::\+Application}!Time\+Per\+Frame@{Time\+Per\+Frame}}
+\index{Time\+Per\+Frame@{Time\+Per\+Frame}!ant\+::\+Application@{ant\+::\+Application}}
+\subsubsection[{Time\+Per\+Frame}]{\setlength{\rightskip}{0pt plus 5cm}const sf\+::\+Time ant\+::\+Application\+::\+Time\+Per\+Frame = sf\+::seconds(1.f/60.f)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classant_1_1_application_a4b9bf663914a5195a2b4a699c81efd22}
+
+
+Definition at line 59 of file Application.\+hpp.
+
+\hypertarget{classant_1_1_application_a1d16f830e0f443b71d7c654681857e0d}{\index{ant\+::\+Application@{ant\+::\+Application}!version@{version}}
+\index{version@{version}!ant\+::\+Application@{ant\+::\+Application}}
+\subsubsection[{version}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Text ant\+::\+Application\+::version\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1_application_a1d16f830e0f443b71d7c654681857e0d}
+
+
+Definition at line 66 of file Application.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_application_8hpp}{Application.\+hpp}\item 
+\hyperlink{_application_8cpp}{Application.\+cpp}\end{DoxyCompactItemize}

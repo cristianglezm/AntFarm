@@ -1,0 +1,175 @@
+\hypertarget{classant_1_1_subject}{\section{ant\+:\+:Subject Class Reference}
+\label{classant_1_1_subject}\index{ant\+::\+Subject@{ant\+::\+Subject}}
+}
+
+
+Tema al cual se suscriben los observadores \hyperlink{classant_1_1_observer}{Observer}.  
+
+
+
+
+{\ttfamily \#include $<$Subject.\+hpp$>$}
+
+
+
+Collaboration diagram for ant\+:\+:Subject\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=181pt]{da/dea/classant_1_1_subject__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classant_1_1_subject_abead80bfd62dbf3e728c92c77662867c}{Subject} ()
+\begin{DoxyCompactList}\small\item\em Constructor por defecto. \end{DoxyCompactList}\item 
+void \hyperlink{classant_1_1_subject_a2e6e33458f5bfe1159371cf3ea19cd49}{add\+Observer} (\hyperlink{classant_1_1_observer}{Observer} $\ast$o)
+\begin{DoxyCompactList}\small\item\em Añade un observador. \end{DoxyCompactList}\item 
+void \hyperlink{classant_1_1_subject_a71ab55e4aa4f23c1e60ff15bfab0d856}{remove\+Observer} (\hyperlink{classant_1_1_observer}{Observer} $\ast$o)
+\begin{DoxyCompactList}\small\item\em Elimina el primer observador que coincida. \end{DoxyCompactList}\item 
+void \hyperlink{classant_1_1_subject_aefef04b082bfba8c7117b4facf7af4e8}{notify\+Observers} (std\+::shared\+\_\+ptr$<$ \hyperlink{classant_1_1base_event}{base\+Event} $>$ e)
+\begin{DoxyCompactList}\small\item\em Notifica a los Observadores que esten en suscritos a este tema. \end{DoxyCompactList}\item 
+\hyperlink{classant_1_1_subject_a6aefd4023994173e82fcef3c0ce9682f}{$\sim$\+Subject} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::list$<$ \hyperlink{classant_1_1_observer}{Observer} $\ast$ $>$ \hyperlink{classant_1_1_subject_ac529487e73b1af66dabfdb4d9e30c0cc}{Observers}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Tema al cual se suscriben los observadores \hyperlink{classant_1_1_observer}{Observer}. 
+
+\begin{DoxyAuthor}{Author}
+Cristian Glez \href{mailto:Cristian.glez.m@gmail.com}{\tt Cristian.\+glez.\+m@gmail.\+com} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+
+
+Definition at line 12 of file Subject.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classant_1_1_subject_abead80bfd62dbf3e728c92c77662867c}{\index{ant\+::\+Subject@{ant\+::\+Subject}!Subject@{Subject}}
+\index{Subject@{Subject}!ant\+::\+Subject@{ant\+::\+Subject}}
+\subsubsection[{Subject}]{\setlength{\rightskip}{0pt plus 5cm}ant\+::\+Subject\+::\+Subject (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_subject_abead80bfd62dbf3e728c92c77662867c}
+
+
+Constructor por defecto. 
+
+
+
+Definition at line 4 of file Subject.\+cpp.
+
+\hypertarget{classant_1_1_subject_a6aefd4023994173e82fcef3c0ce9682f}{\index{ant\+::\+Subject@{ant\+::\+Subject}!````~Subject@{$\sim$\+Subject}}
+\index{````~Subject@{$\sim$\+Subject}!ant\+::\+Subject@{ant\+::\+Subject}}
+\subsubsection[{$\sim$\+Subject}]{\setlength{\rightskip}{0pt plus 5cm}ant\+::\+Subject\+::$\sim$\+Subject (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_subject_a6aefd4023994173e82fcef3c0ce9682f}
+
+
+Definition at line 18 of file Subject.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classant_1_1_subject_a2e6e33458f5bfe1159371cf3ea19cd49}{\index{ant\+::\+Subject@{ant\+::\+Subject}!add\+Observer@{add\+Observer}}
+\index{add\+Observer@{add\+Observer}!ant\+::\+Subject@{ant\+::\+Subject}}
+\subsubsection[{add\+Observer}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+Subject\+::add\+Observer (
+\begin{DoxyParamCaption}
+\item[{{\bf Observer} $\ast$}]{o}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_subject_a2e6e33458f5bfe1159371cf3ea19cd49}
+
+
+Añade un observador. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em o} & Observer$\ast$ \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 7 of file Subject.\+cpp.
+
+\hypertarget{classant_1_1_subject_aefef04b082bfba8c7117b4facf7af4e8}{\index{ant\+::\+Subject@{ant\+::\+Subject}!notify\+Observers@{notify\+Observers}}
+\index{notify\+Observers@{notify\+Observers}!ant\+::\+Subject@{ant\+::\+Subject}}
+\subsubsection[{notify\+Observers}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+Subject\+::notify\+Observers (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ {\bf base\+Event} $>$}]{e}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_subject_aefef04b082bfba8c7117b4facf7af4e8}
+
+
+Notifica a los Observadores que esten en suscritos a este tema. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & std\+::shared\+\_\+ptr$<$base\+Event$>$ evento que se envia. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 13 of file Subject.\+cpp.
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d29/classant_1_1_subject_aefef04b082bfba8c7117b4facf7af4e8_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classant_1_1_subject_a71ab55e4aa4f23c1e60ff15bfab0d856}{\index{ant\+::\+Subject@{ant\+::\+Subject}!remove\+Observer@{remove\+Observer}}
+\index{remove\+Observer@{remove\+Observer}!ant\+::\+Subject@{ant\+::\+Subject}}
+\subsubsection[{remove\+Observer}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+Subject\+::remove\+Observer (
+\begin{DoxyParamCaption}
+\item[{{\bf Observer} $\ast$}]{o}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_subject_a71ab55e4aa4f23c1e60ff15bfab0d856}
+
+
+Elimina el primer observador que coincida. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em o} & Observer$\ast$ observador a eliminar. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 10 of file Subject.\+cpp.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classant_1_1_subject_ac529487e73b1af66dabfdb4d9e30c0cc}{\index{ant\+::\+Subject@{ant\+::\+Subject}!Observers@{Observers}}
+\index{Observers@{Observers}!ant\+::\+Subject@{ant\+::\+Subject}}
+\subsubsection[{Observers}]{\setlength{\rightskip}{0pt plus 5cm}std\+::list$<${\bf Observer}$\ast$$>$ ant\+::\+Subject\+::\+Observers\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1_subject_ac529487e73b1af66dabfdb4d9e30c0cc}
+
+
+Definition at line 35 of file Subject.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_subject_8hpp}{Subject.\+hpp}\item 
+\hyperlink{_subject_8cpp}{Subject.\+cpp}\end{DoxyCompactItemize}

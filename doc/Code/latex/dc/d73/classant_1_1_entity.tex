@@ -1,0 +1,674 @@
+\hypertarget{classant_1_1_entity}{\section{ant\+:\+:Entity Class Reference}
+\label{classant_1_1_entity}\index{ant\+::\+Entity@{ant\+::\+Entity}}
+}
+
+
+Clase para tener los componentes, solo puede tener un componente de cada tipo.  
+
+
+
+
+{\ttfamily \#include $<$Entity.\+hpp$>$}
+
+
+
+Collaboration diagram for ant\+:\+:Entity\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=192pt]{d0/d83/classant_1_1_entity__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::map$<$ long int, \\*
+std\+::unique\+\_\+ptr$<$ \hyperlink{classant_1_1base_component}{base\+Component} $>$ $>$ \hyperlink{classant_1_1_entity_aa823933535346583f2a1edc2b989b037}{map}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classant_1_1_entity_a7fe02d14320908c7b5eb080a113f1442}{Entity} ()
+\begin{DoxyCompactList}\small\item\em Constructor por defecto. \end{DoxyCompactList}\item 
+\hyperlink{classant_1_1_entity_af3da175fdcde326a758aaa1dc438cc51}{Entity} (std\+::string \hyperlink{classant_1_1_entity_acf759caee667dc4c2939aa04e2f06da7}{name})
+\begin{DoxyCompactList}\small\item\em Constructor con nombre. \end{DoxyCompactList}\item 
+\hyperlink{classant_1_1_entity_a57a565f2520d69915f565ba093a7f27a}{Entity} (std\+::string \hyperlink{classant_1_1_entity_acf759caee667dc4c2939aa04e2f06da7}{name}, \hyperlink{classant_1_1_entity_aa823933535346583f2a1edc2b989b037}{map} \hyperlink{classant_1_1_entity_afdd3c5d05d3dc1d43cf56026261c3c3a}{Components})
+\begin{DoxyCompactList}\small\item\em Constructor con nombre y componentes. \end{DoxyCompactList}\item 
+void \hyperlink{classant_1_1_entity_a4fe4572015760b0e486df6c1b94d3f96}{add\+Component} (std\+::unique\+\_\+ptr$<$ \hyperlink{classant_1_1base_component}{base\+Component} $>$ component)
+\begin{DoxyCompactList}\small\item\em Añade un componente a la entidad. \end{DoxyCompactList}\item 
+\hyperlink{classant_1_1base_component}{base\+Component} $\ast$ \hyperlink{classant_1_1_entity_a78b3cd3f28801cbd21faf67e7dd028e4}{get\+Component} (long int id)
+\begin{DoxyCompactList}\small\item\em Obtiene una referencia al componente. \end{DoxyCompactList}\item 
+void \hyperlink{classant_1_1_entity_a4b083a6d2567009fdff3a1fba2f4f2ee}{remove\+Component} (long int id)
+\begin{DoxyCompactList}\small\item\em Elimina el componente de la entidad. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classant_1_1_entity_ab22630399795df9625218fc158dd02b6}{get\+Name} () const 
+\begin{DoxyCompactList}\small\item\em Getter del nombre de la entidad. \end{DoxyCompactList}\item 
+void \hyperlink{classant_1_1_entity_af0d4541cfec26963b714d500f8fe5f48}{set\+Name} (std\+::string \hyperlink{classant_1_1_entity_acf759caee667dc4c2939aa04e2f06da7}{name})
+\begin{DoxyCompactList}\small\item\em Setter del nombre de la entidad. \end{DoxyCompactList}\item 
+void \hyperlink{classant_1_1_entity_a68d0751b571edf04c39319c81fd16861}{set\+Components} (\hyperlink{classant_1_1_entity_aa823933535346583f2a1edc2b989b037}{map} \hyperlink{classant_1_1_entity_afdd3c5d05d3dc1d43cf56026261c3c3a}{Components})
+\begin{DoxyCompactList}\small\item\em Setter de los componentes de la entidad. \end{DoxyCompactList}\item 
+\hyperlink{classant_1_1_entity_aa823933535346583f2a1edc2b989b037}{map} \& \hyperlink{classant_1_1_entity_a81bcfa152047d1c653eb7af21daf3c10}{get\+Components} ()
+\begin{DoxyCompactList}\small\item\em Getter de los componentes. \end{DoxyCompactList}\item 
+long int \hyperlink{classant_1_1_entity_a508baf12c760f45032e24fae27af6f09}{get\+Mask} () const 
+\begin{DoxyCompactList}\small\item\em Getter de la mascara de la entidad. \end{DoxyCompactList}\item 
+bool \hyperlink{classant_1_1_entity_adfd34f851602409da9db04f6488d58eb}{has\+Component} (long int id)
+\begin{DoxyCompactList}\small\item\em Devuelve si esta entidad tiene el componente. \end{DoxyCompactList}\item 
+bool \hyperlink{classant_1_1_entity_a60b2c39a46a2fb44cb63105e2b3a23b1}{is} (long int states\+I\+D)
+\begin{DoxyCompactList}\small\item\em Devuelve los estados que tiene la entidad. \end{DoxyCompactList}\item 
+void \hyperlink{classant_1_1_entity_ac47ecff29b8d86d822f0ce83ace4ed8c}{add\+State} (long int state)
+\begin{DoxyCompactList}\small\item\em Añade un estado a la entidad. \end{DoxyCompactList}\item 
+void \hyperlink{classant_1_1_entity_a362f4c8352e409e30284429d535fcc62}{remove\+State} (long int state)
+\begin{DoxyCompactList}\small\item\em Elimina un estado de la entidad. \end{DoxyCompactList}\item 
+long int \hyperlink{classant_1_1_entity_ac960e72954677f4f8b7946376bbca059}{get\+States} ()
+\begin{DoxyCompactList}\small\item\em devuelve los estados de la entidad. \end{DoxyCompactList}\item 
+void \hyperlink{classant_1_1_entity_ae878cec956ac960d0d60e357bb970a40}{clear} ()
+\begin{DoxyCompactList}\small\item\em Limpia los componentes de la entidad. \end{DoxyCompactList}\item 
+bool \hyperlink{classant_1_1_entity_a379c70555ca47177ec607a992ef97f3f}{operator==} (const \hyperlink{classant_1_1_entity}{Entity} \&e) const 
+\begin{DoxyCompactList}\small\item\em Operator overload para comparar la entidad contra otra entidad. \end{DoxyCompactList}\item 
+bool \hyperlink{classant_1_1_entity_a2eb6d101219432563bd36f9535700557}{operator!=} (const \hyperlink{classant_1_1_entity}{Entity} \&e) const 
+\begin{DoxyCompactList}\small\item\em Operator overload para comparar la entidad contra otra entidad. \end{DoxyCompactList}\item 
+bool \hyperlink{classant_1_1_entity_ac4965e92e1827c22718b8f13b67f7c66}{operator==} (const std\+::string \&\hyperlink{classant_1_1_entity_acf759caee667dc4c2939aa04e2f06da7}{name}) const 
+\begin{DoxyCompactList}\small\item\em Operator overload para comparar la entidad por nombre. \end{DoxyCompactList}\item 
+\hyperlink{classant_1_1_entity_a125b5f8608b1ff872a842060003ffe32}{$\sim$\+Entity} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{classant_1_1_entity_acf759caee667dc4c2939aa04e2f06da7}{name}
+\item 
+long int \hyperlink{classant_1_1_entity_aeb012401caea5c69acd3836612fec18f}{mask}
+\item 
+long int \hyperlink{classant_1_1_entity_aa05dacb81ac4188057dc18f053dcc491}{states}
+\item 
+\hyperlink{classant_1_1_entity_aa823933535346583f2a1edc2b989b037}{map} \hyperlink{classant_1_1_entity_afdd3c5d05d3dc1d43cf56026261c3c3a}{Components}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Clase para tener los componentes, solo puede tener un componente de cada tipo. 
+
+\begin{DoxyAuthor}{Author}
+Cristian Glez \href{mailto:Cristian.glez.m@gmail.com}{\tt Cristian.\+glez.\+m@gmail.\+com} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+
+
+Definition at line 16 of file Entity.\+hpp.
+
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classant_1_1_entity_aa823933535346583f2a1edc2b989b037}{\index{ant\+::\+Entity@{ant\+::\+Entity}!map@{map}}
+\index{map@{map}!ant\+::\+Entity@{ant\+::\+Entity}}
+\subsubsection[{map}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::map$<$long int,std\+::unique\+\_\+ptr$<${\bf base\+Component}$>$ $>$ {\bf ant\+::\+Entity\+::map}}}\label{classant_1_1_entity_aa823933535346583f2a1edc2b989b037}
+Contenedor que utiliza la entidad para los componentes. 
+
+Definition at line 21 of file Entity.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classant_1_1_entity_a7fe02d14320908c7b5eb080a113f1442}{\index{ant\+::\+Entity@{ant\+::\+Entity}!Entity@{Entity}}
+\index{Entity@{Entity}!ant\+::\+Entity@{ant\+::\+Entity}}
+\subsubsection[{Entity}]{\setlength{\rightskip}{0pt plus 5cm}ant\+::\+Entity\+::\+Entity (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_entity_a7fe02d14320908c7b5eb080a113f1442}
+
+
+Constructor por defecto. 
+
+
+
+Definition at line 3 of file Entity.\+cpp.
+
+\hypertarget{classant_1_1_entity_af3da175fdcde326a758aaa1dc438cc51}{\index{ant\+::\+Entity@{ant\+::\+Entity}!Entity@{Entity}}
+\index{Entity@{Entity}!ant\+::\+Entity@{ant\+::\+Entity}}
+\subsubsection[{Entity}]{\setlength{\rightskip}{0pt plus 5cm}ant\+::\+Entity\+::\+Entity (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{name}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_entity_af3da175fdcde326a758aaa1dc438cc51}
+
+
+Constructor con nombre. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & std\+::string nombre que tendra la entidad. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 8 of file Entity.\+cpp.
+
+\hypertarget{classant_1_1_entity_a57a565f2520d69915f565ba093a7f27a}{\index{ant\+::\+Entity@{ant\+::\+Entity}!Entity@{Entity}}
+\index{Entity@{Entity}!ant\+::\+Entity@{ant\+::\+Entity}}
+\subsubsection[{Entity}]{\setlength{\rightskip}{0pt plus 5cm}ant\+::\+Entity\+::\+Entity (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{name, }
+\item[{{\bf map}}]{Components}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_entity_a57a565f2520d69915f565ba093a7f27a}
+
+
+Constructor con nombre y componentes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & std\+::string nombre que tendra la entidad. \\
+\hline
+{\em Components} & \hyperlink{classant_1_1_entity_aa823933535346583f2a1edc2b989b037}{Entity\+::map} mapa de los componentes. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 13 of file Entity.\+cpp.
+
+\hypertarget{classant_1_1_entity_a125b5f8608b1ff872a842060003ffe32}{\index{ant\+::\+Entity@{ant\+::\+Entity}!````~Entity@{$\sim$\+Entity}}
+\index{````~Entity@{$\sim$\+Entity}!ant\+::\+Entity@{ant\+::\+Entity}}
+\subsubsection[{$\sim$\+Entity}]{\setlength{\rightskip}{0pt plus 5cm}ant\+::\+Entity\+::$\sim$\+Entity (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_entity_a125b5f8608b1ff872a842060003ffe32}
+
+
+Definition at line 63 of file Entity.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classant_1_1_entity_a4fe4572015760b0e486df6c1b94d3f96}{\index{ant\+::\+Entity@{ant\+::\+Entity}!add\+Component@{add\+Component}}
+\index{add\+Component@{add\+Component}!ant\+::\+Entity@{ant\+::\+Entity}}
+\subsubsection[{add\+Component}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+Entity\+::add\+Component (
+\begin{DoxyParamCaption}
+\item[{std\+::unique\+\_\+ptr$<$ {\bf base\+Component} $>$}]{component}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_entity_a4fe4572015760b0e486df6c1b94d3f96}
+
+
+Añade un componente a la entidad. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em component} & std\+::unique\+\_\+ptr$<$base\+Component$>$ componente para añadir. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 22 of file Entity.\+cpp.
+
+\hypertarget{classant_1_1_entity_ac47ecff29b8d86d822f0ce83ace4ed8c}{\index{ant\+::\+Entity@{ant\+::\+Entity}!add\+State@{add\+State}}
+\index{add\+State@{add\+State}!ant\+::\+Entity@{ant\+::\+Entity}}
+\subsubsection[{add\+State}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+Entity\+::add\+State (
+\begin{DoxyParamCaption}
+\item[{long int}]{state}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_entity_ac47ecff29b8d86d822f0ce83ace4ed8c}
+
+
+Añade un estado a la entidad. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & long int estado a añadir. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 33 of file Entity.\+cpp.
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d73/classant_1_1_entity_ac47ecff29b8d86d822f0ce83ace4ed8c_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classant_1_1_entity_ae878cec956ac960d0d60e357bb970a40}{\index{ant\+::\+Entity@{ant\+::\+Entity}!clear@{clear}}
+\index{clear@{clear}!ant\+::\+Entity@{ant\+::\+Entity}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+Entity\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_entity_ae878cec956ac960d0d60e357bb970a40}
+
+
+Limpia los componentes de la entidad. 
+
+
+
+Definition at line 50 of file Entity.\+cpp.
+
+\hypertarget{classant_1_1_entity_a78b3cd3f28801cbd21faf67e7dd028e4}{\index{ant\+::\+Entity@{ant\+::\+Entity}!get\+Component@{get\+Component}}
+\index{get\+Component@{get\+Component}!ant\+::\+Entity@{ant\+::\+Entity}}
+\subsubsection[{get\+Component}]{\setlength{\rightskip}{0pt plus 5cm}{\bf base\+Component}$\ast$ ant\+::\+Entity\+::get\+Component (
+\begin{DoxyParamCaption}
+\item[{long int}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classant_1_1_entity_a78b3cd3f28801cbd21faf67e7dd028e4}
+
+
+Obtiene una referencia al componente. 
+
+Si el componente no se encuentra devuelve un nullptr.
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & long int id del componente. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classant_1_1base_component}{base\+Component} $\ast$ puntero al componente. 
+\end{DoxyReturn}
+
+
+Definition at line 51 of file Entity.\+hpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d73/classant_1_1_entity_a78b3cd3f28801cbd21faf67e7dd028e4_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d73/classant_1_1_entity_a78b3cd3f28801cbd21faf67e7dd028e4_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classant_1_1_entity_a81bcfa152047d1c653eb7af21daf3c10}{\index{ant\+::\+Entity@{ant\+::\+Entity}!get\+Components@{get\+Components}}
+\index{get\+Components@{get\+Components}!ant\+::\+Entity@{ant\+::\+Entity}}
+\subsubsection[{get\+Components}]{\setlength{\rightskip}{0pt plus 5cm}{\bf map}\& ant\+::\+Entity\+::get\+Components (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classant_1_1_entity_a81bcfa152047d1c653eb7af21daf3c10}
+
+
+Getter de los componentes. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{classant_1_1_entity_aa823933535346583f2a1edc2b989b037}{Entity\+::map} referencia a los componentes. 
+\end{DoxyReturn}
+
+
+Definition at line 82 of file Entity.\+hpp.
+
+\hypertarget{classant_1_1_entity_a508baf12c760f45032e24fae27af6f09}{\index{ant\+::\+Entity@{ant\+::\+Entity}!get\+Mask@{get\+Mask}}
+\index{get\+Mask@{get\+Mask}!ant\+::\+Entity@{ant\+::\+Entity}}
+\subsubsection[{get\+Mask}]{\setlength{\rightskip}{0pt plus 5cm}long int ant\+::\+Entity\+::get\+Mask (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classant_1_1_entity_a508baf12c760f45032e24fae27af6f09}
+
+
+Getter de la mascara de la entidad. 
+
+Con este metodo comprobaras si una entidad tiene los componentes que necesitas antes de utilizar el get\+Component(\+Component\+::\+I\+D); 
+\begin{DoxyCode}
+\textcolor{keywordflow}{if}((e.getMask() & Component:\hyperlink{namespaceant_1_1_app_states_a8e30476d77a5da5e0c1c3b9c7042e62a}{ID}) == \hyperlink{namespaceant_1_1_app_states_a8e30476d77a5da5e0c1c3b9c7042e62a}{Component::ID}) 
+\end{DoxyCode}
+
+
+\begin{DoxyReturn}{Returns}
+long int 
+\end{DoxyReturn}
+
+
+Definition at line 92 of file Entity.\+hpp.
+
+\hypertarget{classant_1_1_entity_ab22630399795df9625218fc158dd02b6}{\index{ant\+::\+Entity@{ant\+::\+Entity}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!ant\+::\+Entity@{ant\+::\+Entity}}
+\subsubsection[{get\+Name}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string ant\+::\+Entity\+::get\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classant_1_1_entity_ab22630399795df9625218fc158dd02b6}
+
+
+Getter del nombre de la entidad. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string nombre de la entidad. 
+\end{DoxyReturn}
+
+
+Definition at line 67 of file Entity.\+hpp.
+
+\hypertarget{classant_1_1_entity_ac960e72954677f4f8b7946376bbca059}{\index{ant\+::\+Entity@{ant\+::\+Entity}!get\+States@{get\+States}}
+\index{get\+States@{get\+States}!ant\+::\+Entity@{ant\+::\+Entity}}
+\subsubsection[{get\+States}]{\setlength{\rightskip}{0pt plus 5cm}long int ant\+::\+Entity\+::get\+States (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classant_1_1_entity_ac960e72954677f4f8b7946376bbca059}
+
+
+devuelve los estados de la entidad. 
+
+\begin{DoxyReturn}{Returns}
+long int Estados de la entidad. 
+\end{DoxyReturn}
+
+
+Definition at line 122 of file Entity.\+hpp.
+
+\hypertarget{classant_1_1_entity_adfd34f851602409da9db04f6488d58eb}{\index{ant\+::\+Entity@{ant\+::\+Entity}!has\+Component@{has\+Component}}
+\index{has\+Component@{has\+Component}!ant\+::\+Entity@{ant\+::\+Entity}}
+\subsubsection[{has\+Component}]{\setlength{\rightskip}{0pt plus 5cm}bool ant\+::\+Entity\+::has\+Component (
+\begin{DoxyParamCaption}
+\item[{long int}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classant_1_1_entity_adfd34f851602409da9db04f6488d58eb}
+
+
+Devuelve si esta entidad tiene el componente. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & long int Id del componente. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Definition at line 98 of file Entity.\+hpp.
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d73/classant_1_1_entity_adfd34f851602409da9db04f6488d58eb_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classant_1_1_entity_a60b2c39a46a2fb44cb63105e2b3a23b1}{\index{ant\+::\+Entity@{ant\+::\+Entity}!is@{is}}
+\index{is@{is}!ant\+::\+Entity@{ant\+::\+Entity}}
+\subsubsection[{is}]{\setlength{\rightskip}{0pt plus 5cm}bool ant\+::\+Entity\+::is (
+\begin{DoxyParamCaption}
+\item[{long int}]{states\+I\+D}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classant_1_1_entity_a60b2c39a46a2fb44cb63105e2b3a23b1}
+
+
+Devuelve los estados que tiene la entidad. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em states\+I\+D} & long int id de los estados. 
+\begin{DoxyCode}
+e->is(\hyperlink{class_states_ae464e17ebc3214e3c17186d614e37c54}{States::FALLING} | States::OnFIRE);
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Definition at line 107 of file Entity.\+hpp.
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d73/classant_1_1_entity_a60b2c39a46a2fb44cb63105e2b3a23b1_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classant_1_1_entity_a2eb6d101219432563bd36f9535700557}{\index{ant\+::\+Entity@{ant\+::\+Entity}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!ant\+::\+Entity@{ant\+::\+Entity}}
+\subsubsection[{operator"!=}]{\setlength{\rightskip}{0pt plus 5cm}bool ant\+::\+Entity\+::operator!= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Entity} \&}]{e}
+\end{DoxyParamCaption}
+) const}}\label{classant_1_1_entity_a2eb6d101219432563bd36f9535700557}
+
+
+Operator overload para comparar la entidad contra otra entidad. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & \hyperlink{classant_1_1_entity}{Entity} entidad a la cual se compara. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Definition at line 57 of file Entity.\+cpp.
+
+\hypertarget{classant_1_1_entity_a379c70555ca47177ec607a992ef97f3f}{\index{ant\+::\+Entity@{ant\+::\+Entity}!operator==@{operator==}}
+\index{operator==@{operator==}!ant\+::\+Entity@{ant\+::\+Entity}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}bool ant\+::\+Entity\+::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf Entity} \&}]{e}
+\end{DoxyParamCaption}
+) const}}\label{classant_1_1_entity_a379c70555ca47177ec607a992ef97f3f}
+
+
+Operator overload para comparar la entidad contra otra entidad. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & \hyperlink{classant_1_1_entity}{Entity} entidad a la cual compararse. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Definition at line 54 of file Entity.\+cpp.
+
+\hypertarget{classant_1_1_entity_ac4965e92e1827c22718b8f13b67f7c66}{\index{ant\+::\+Entity@{ant\+::\+Entity}!operator==@{operator==}}
+\index{operator==@{operator==}!ant\+::\+Entity@{ant\+::\+Entity}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}bool ant\+::\+Entity\+::operator== (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name}
+\end{DoxyParamCaption}
+) const}}\label{classant_1_1_entity_ac4965e92e1827c22718b8f13b67f7c66}
+
+
+Operator overload para comparar la entidad por nombre. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & std\+::string nombre con el cual comparar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Definition at line 60 of file Entity.\+cpp.
+
+\hypertarget{classant_1_1_entity_a4b083a6d2567009fdff3a1fba2f4f2ee}{\index{ant\+::\+Entity@{ant\+::\+Entity}!remove\+Component@{remove\+Component}}
+\index{remove\+Component@{remove\+Component}!ant\+::\+Entity@{ant\+::\+Entity}}
+\subsubsection[{remove\+Component}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+Entity\+::remove\+Component (
+\begin{DoxyParamCaption}
+\item[{long int}]{id}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_entity_a4b083a6d2567009fdff3a1fba2f4f2ee}
+
+
+Elimina el componente de la entidad. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & long int \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 27 of file Entity.\+cpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d73/classant_1_1_entity_a4b083a6d2567009fdff3a1fba2f4f2ee_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classant_1_1_entity_a362f4c8352e409e30284429d535fcc62}{\index{ant\+::\+Entity@{ant\+::\+Entity}!remove\+State@{remove\+State}}
+\index{remove\+State@{remove\+State}!ant\+::\+Entity@{ant\+::\+Entity}}
+\subsubsection[{remove\+State}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+Entity\+::remove\+State (
+\begin{DoxyParamCaption}
+\item[{long int}]{state}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_entity_a362f4c8352e409e30284429d535fcc62}
+
+
+Elimina un estado de la entidad. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & long int estado a eliminar. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 36 of file Entity.\+cpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=313pt]{dc/d73/classant_1_1_entity_a362f4c8352e409e30284429d535fcc62_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/d73/classant_1_1_entity_a362f4c8352e409e30284429d535fcc62_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classant_1_1_entity_a68d0751b571edf04c39319c81fd16861}{\index{ant\+::\+Entity@{ant\+::\+Entity}!set\+Components@{set\+Components}}
+\index{set\+Components@{set\+Components}!ant\+::\+Entity@{ant\+::\+Entity}}
+\subsubsection[{set\+Components}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+Entity\+::set\+Components (
+\begin{DoxyParamCaption}
+\item[{{\bf map}}]{Components}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_entity_a68d0751b571edf04c39319c81fd16861}
+
+
+Setter de los componentes de la entidad. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Components} & \hyperlink{classant_1_1_entity_aa823933535346583f2a1edc2b989b037}{Entity\+::map} \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 44 of file Entity.\+cpp.
+
+\hypertarget{classant_1_1_entity_af0d4541cfec26963b714d500f8fe5f48}{\index{ant\+::\+Entity@{ant\+::\+Entity}!set\+Name@{set\+Name}}
+\index{set\+Name@{set\+Name}!ant\+::\+Entity@{ant\+::\+Entity}}
+\subsubsection[{set\+Name}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+Entity\+::set\+Name (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{name}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_entity_af0d4541cfec26963b714d500f8fe5f48}
+
+
+Setter del nombre de la entidad. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & std\+::string nombre nuevo de la entidad. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 41 of file Entity.\+cpp.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classant_1_1_entity_afdd3c5d05d3dc1d43cf56026261c3c3a}{\index{ant\+::\+Entity@{ant\+::\+Entity}!Components@{Components}}
+\index{Components@{Components}!ant\+::\+Entity@{ant\+::\+Entity}}
+\subsubsection[{Components}]{\setlength{\rightskip}{0pt plus 5cm}{\bf map} ant\+::\+Entity\+::\+Components\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1_entity_afdd3c5d05d3dc1d43cf56026261c3c3a}
+
+
+Definition at line 150 of file Entity.\+hpp.
+
+\hypertarget{classant_1_1_entity_aeb012401caea5c69acd3836612fec18f}{\index{ant\+::\+Entity@{ant\+::\+Entity}!mask@{mask}}
+\index{mask@{mask}!ant\+::\+Entity@{ant\+::\+Entity}}
+\subsubsection[{mask}]{\setlength{\rightskip}{0pt plus 5cm}long int ant\+::\+Entity\+::mask\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1_entity_aeb012401caea5c69acd3836612fec18f}
+
+
+Definition at line 148 of file Entity.\+hpp.
+
+\hypertarget{classant_1_1_entity_acf759caee667dc4c2939aa04e2f06da7}{\index{ant\+::\+Entity@{ant\+::\+Entity}!name@{name}}
+\index{name@{name}!ant\+::\+Entity@{ant\+::\+Entity}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string ant\+::\+Entity\+::name\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1_entity_acf759caee667dc4c2939aa04e2f06da7}
+
+
+Definition at line 147 of file Entity.\+hpp.
+
+\hypertarget{classant_1_1_entity_aa05dacb81ac4188057dc18f053dcc491}{\index{ant\+::\+Entity@{ant\+::\+Entity}!states@{states}}
+\index{states@{states}!ant\+::\+Entity@{ant\+::\+Entity}}
+\subsubsection[{states}]{\setlength{\rightskip}{0pt plus 5cm}long int ant\+::\+Entity\+::states\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1_entity_aa05dacb81ac4188057dc18f053dcc491}
+
+
+Definition at line 149 of file Entity.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_entity_8hpp}{Entity.\+hpp}\item 
+\hyperlink{_entity_8cpp}{Entity.\+cpp}\end{DoxyCompactItemize}

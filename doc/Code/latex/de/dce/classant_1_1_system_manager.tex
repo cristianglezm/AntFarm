@@ -1,0 +1,321 @@
+\hypertarget{classant_1_1_system_manager}{\section{ant\+:\+:System\+Manager Class Reference}
+\label{classant_1_1_system_manager}\index{ant\+::\+System\+Manager@{ant\+::\+System\+Manager}}
+}
+
+
+Clase contenedor para los systemas.  
+
+
+
+
+{\ttfamily \#include $<$System\+Manager.\+hpp$>$}
+
+
+
+Collaboration diagram for ant\+:\+:System\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=189pt]{d5/de7/classant_1_1_system_manager__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::map$<$ std\+::string, \\*
+std\+::shared\+\_\+ptr$<$ \hyperlink{classant_1_1_system}{System} $>$ $>$ \hyperlink{classant_1_1_system_manager_a4dfd264b3b229d3f4b64a9203c68090c}{map}
+\begin{DoxyCompactList}\small\item\em Contenedor usado por la clase. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classant_1_1_system_manager_aa18f972d58796c53db6d48e4d94532f4}{System\+Manager} ()
+\begin{DoxyCompactList}\small\item\em Constructor por defecto. \end{DoxyCompactList}\item 
+bool \hyperlink{classant_1_1_system_manager_a5a1222988ac6893cfeb16101509ee2bd}{add\+System} (std\+::shared\+\_\+ptr$<$ \hyperlink{classant_1_1_system}{System} $>$ s)
+\begin{DoxyCompactList}\small\item\em Añade un sistema al manager. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classant_1_1_system}{System} $>$ \hyperlink{classant_1_1_system_manager_a8360e89d83872c334e95cc0315e879ed}{get\+System} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em Devuelve el sistema con el nombre especificado. \end{DoxyCompactList}\item 
+void \hyperlink{classant_1_1_system_manager_a368e3a047fe8ab59bd6b680804e906ed}{set\+Systems} (\hyperlink{classant_1_1_system_manager_a4dfd264b3b229d3f4b64a9203c68090c}{map} \hyperlink{classant_1_1_system_manager_afd6f093281a44ec1524f84d3ea633e09}{systems})
+\begin{DoxyCompactList}\small\item\em Setter para poner el contenedor con todos los sistemas. \end{DoxyCompactList}\item 
+\hyperlink{classant_1_1_system_manager_a4dfd264b3b229d3f4b64a9203c68090c}{System\+Manager\+::map} \& \hyperlink{classant_1_1_system_manager_a911b9d95d0301372dd6c2ed58d692bf7}{get\+Systems} ()
+\begin{DoxyCompactList}\small\item\em Getter para obtener el contenedor de los sistemas. \end{DoxyCompactList}\item 
+void \hyperlink{classant_1_1_system_manager_a8f9691606440561bb4b921a38ea9a9a0}{remove\+System} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em Elimina el sistema del manager. \end{DoxyCompactList}\item 
+void \hyperlink{classant_1_1_system_manager_aa875685c2cbcf4f4a72509d00f0904a8}{set\+Entity\+Manager} (std\+::shared\+\_\+ptr$<$ \hyperlink{classant_1_1_entity_manager}{Entity\+Manager} $>$ entity\+Manager)
+\begin{DoxyCompactList}\small\item\em Establece el mismo \hyperlink{classant_1_1_entity_manager}{Entity\+Manager} a todos los sistemas que esten agregados. \end{DoxyCompactList}\item 
+void \hyperlink{classant_1_1_system_manager_a857eb475d85f432d81d75756c4259931}{set\+Event\+Queue} (std\+::shared\+\_\+ptr$<$ \hyperlink{classant_1_1_event_queue}{Event\+Queue} $>$ event\+Queue)
+\begin{DoxyCompactList}\small\item\em Establece la misma \hyperlink{classant_1_1_event_queue}{Event\+Queue} a todos los sistemas que esten agregados. \end{DoxyCompactList}\item 
+void \hyperlink{classant_1_1_system_manager_a301250d5639f08e39960134eeed2c1c1}{update} (sf\+::\+Time dt)
+\begin{DoxyCompactList}\small\item\em Hace que todos los sistemas apliquen sus actualizaciones a sus \hyperlink{classant_1_1_entity_manager}{Entity\+Manager}. \end{DoxyCompactList}\item 
+void \hyperlink{classant_1_1_system_manager_af7a916ef5a14b3b2fb147f4249165201}{render} (sf\+::\+Render\+Window \&win)
+\begin{DoxyCompactList}\small\item\em Hace que todos los sistemas renderizen a las Entidades que tengan que ser renderizadas. \end{DoxyCompactList}\item 
+\hyperlink{classant_1_1_system_manager_a3a9c7cb0a2f4a57f60b36e57660e1f16}{$\sim$\+System\+Manager} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classant_1_1_system_manager_a4dfd264b3b229d3f4b64a9203c68090c}{map} \hyperlink{classant_1_1_system_manager_afd6f093281a44ec1524f84d3ea633e09}{systems}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Clase contenedor para los systemas. 
+
+\begin{DoxyAuthor}{Author}
+Cristian Glez \href{mailto:Cristian.glez.m@gmail.com}{\tt Cristian.\+glez.\+m@gmail.\+com} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+
+
+Definition at line 15 of file System\+Manager.\+hpp.
+
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classant_1_1_system_manager_a4dfd264b3b229d3f4b64a9203c68090c}{\index{ant\+::\+System\+Manager@{ant\+::\+System\+Manager}!map@{map}}
+\index{map@{map}!ant\+::\+System\+Manager@{ant\+::\+System\+Manager}}
+\subsubsection[{map}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::map$<$std\+::string,std\+::shared\+\_\+ptr$<${\bf System}$>$ $>$ {\bf ant\+::\+System\+Manager\+::map}}}\label{classant_1_1_system_manager_a4dfd264b3b229d3f4b64a9203c68090c}
+
+
+Contenedor usado por la clase. 
+
+
+
+Definition at line 20 of file System\+Manager.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classant_1_1_system_manager_aa18f972d58796c53db6d48e4d94532f4}{\index{ant\+::\+System\+Manager@{ant\+::\+System\+Manager}!System\+Manager@{System\+Manager}}
+\index{System\+Manager@{System\+Manager}!ant\+::\+System\+Manager@{ant\+::\+System\+Manager}}
+\subsubsection[{System\+Manager}]{\setlength{\rightskip}{0pt plus 5cm}ant\+::\+System\+Manager\+::\+System\+Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_system_manager_aa18f972d58796c53db6d48e4d94532f4}
+
+
+Constructor por defecto. 
+
+
+
+Definition at line 4 of file System\+Manager.\+cpp.
+
+\hypertarget{classant_1_1_system_manager_a3a9c7cb0a2f4a57f60b36e57660e1f16}{\index{ant\+::\+System\+Manager@{ant\+::\+System\+Manager}!````~System\+Manager@{$\sim$\+System\+Manager}}
+\index{````~System\+Manager@{$\sim$\+System\+Manager}!ant\+::\+System\+Manager@{ant\+::\+System\+Manager}}
+\subsubsection[{$\sim$\+System\+Manager}]{\setlength{\rightskip}{0pt plus 5cm}ant\+::\+System\+Manager\+::$\sim$\+System\+Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_system_manager_a3a9c7cb0a2f4a57f60b36e57660e1f16}
+
+
+Definition at line 38 of file System\+Manager.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classant_1_1_system_manager_a5a1222988ac6893cfeb16101509ee2bd}{\index{ant\+::\+System\+Manager@{ant\+::\+System\+Manager}!add\+System@{add\+System}}
+\index{add\+System@{add\+System}!ant\+::\+System\+Manager@{ant\+::\+System\+Manager}}
+\subsubsection[{add\+System}]{\setlength{\rightskip}{0pt plus 5cm}bool ant\+::\+System\+Manager\+::add\+System (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ {\bf System} $>$}]{s}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_system_manager_a5a1222988ac6893cfeb16101509ee2bd}
+
+
+Añade un sistema al manager. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & std\+::shared\+\_\+ptr$<$\+System$>$ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Definition at line 5 of file System\+Manager.\+cpp.
+
+\hypertarget{classant_1_1_system_manager_a8360e89d83872c334e95cc0315e879ed}{\index{ant\+::\+System\+Manager@{ant\+::\+System\+Manager}!get\+System@{get\+System}}
+\index{get\+System@{get\+System}!ant\+::\+System\+Manager@{ant\+::\+System\+Manager}}
+\subsubsection[{get\+System}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<$ {\bf System} $>$ ant\+::\+System\+Manager\+::get\+System (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{name}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_system_manager_a8360e89d83872c334e95cc0315e879ed}
+
+
+Devuelve el sistema con el nombre especificado. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & std\+::string nombre del sistema. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::shared\+\_\+ptr$<$\+System$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 9 of file System\+Manager.\+cpp.
+
+\hypertarget{classant_1_1_system_manager_a911b9d95d0301372dd6c2ed58d692bf7}{\index{ant\+::\+System\+Manager@{ant\+::\+System\+Manager}!get\+Systems@{get\+Systems}}
+\index{get\+Systems@{get\+Systems}!ant\+::\+System\+Manager@{ant\+::\+System\+Manager}}
+\subsubsection[{get\+Systems}]{\setlength{\rightskip}{0pt plus 5cm}{\bf System\+Manager\+::map}\& ant\+::\+System\+Manager\+::get\+Systems (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classant_1_1_system_manager_a911b9d95d0301372dd6c2ed58d692bf7}
+
+
+Getter para obtener el contenedor de los sistemas. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{classant_1_1_system_manager_a4dfd264b3b229d3f4b64a9203c68090c}{System\+Manager\+::map} 
+\end{DoxyReturn}
+
+
+Definition at line 46 of file System\+Manager.\+hpp.
+
+\hypertarget{classant_1_1_system_manager_a8f9691606440561bb4b921a38ea9a9a0}{\index{ant\+::\+System\+Manager@{ant\+::\+System\+Manager}!remove\+System@{remove\+System}}
+\index{remove\+System@{remove\+System}!ant\+::\+System\+Manager@{ant\+::\+System\+Manager}}
+\subsubsection[{remove\+System}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+System\+Manager\+::remove\+System (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{name}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_system_manager_a8f9691606440561bb4b921a38ea9a9a0}
+
+
+Elimina el sistema del manager. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & std\+::string nombre del sistema. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 15 of file System\+Manager.\+cpp.
+
+\hypertarget{classant_1_1_system_manager_af7a916ef5a14b3b2fb147f4249165201}{\index{ant\+::\+System\+Manager@{ant\+::\+System\+Manager}!render@{render}}
+\index{render@{render}!ant\+::\+System\+Manager@{ant\+::\+System\+Manager}}
+\subsubsection[{render}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+System\+Manager\+::render (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Render\+Window \&}]{win}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_system_manager_af7a916ef5a14b3b2fb147f4249165201}
+
+
+Hace que todos los sistemas renderizen a las Entidades que tengan que ser renderizadas. 
+
+Este metodo necesita ir entre sf\+::\+Render\+Window\+::clear() y sf\+::\+Render\+Window\+::display()
+
+
+\begin{DoxyParams}{Parameters}
+{\em win} & sf\+::\+Render\+Window \& \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 33 of file System\+Manager.\+cpp.
+
+\hypertarget{classant_1_1_system_manager_aa875685c2cbcf4f4a72509d00f0904a8}{\index{ant\+::\+System\+Manager@{ant\+::\+System\+Manager}!set\+Entity\+Manager@{set\+Entity\+Manager}}
+\index{set\+Entity\+Manager@{set\+Entity\+Manager}!ant\+::\+System\+Manager@{ant\+::\+System\+Manager}}
+\subsubsection[{set\+Entity\+Manager}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+System\+Manager\+::set\+Entity\+Manager (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Entity\+Manager} $>$}]{entity\+Manager}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_system_manager_aa875685c2cbcf4f4a72509d00f0904a8}
+
+
+Establece el mismo \hyperlink{classant_1_1_entity_manager}{Entity\+Manager} a todos los sistemas que esten agregados. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em entity\+Manager} & std\+::shared\+\_\+ptr$<$\+Entity\+Manager$>$ \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 18 of file System\+Manager.\+cpp.
+
+\hypertarget{classant_1_1_system_manager_a857eb475d85f432d81d75756c4259931}{\index{ant\+::\+System\+Manager@{ant\+::\+System\+Manager}!set\+Event\+Queue@{set\+Event\+Queue}}
+\index{set\+Event\+Queue@{set\+Event\+Queue}!ant\+::\+System\+Manager@{ant\+::\+System\+Manager}}
+\subsubsection[{set\+Event\+Queue}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+System\+Manager\+::set\+Event\+Queue (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Event\+Queue} $>$}]{event\+Queue}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_system_manager_a857eb475d85f432d81d75756c4259931}
+
+
+Establece la misma \hyperlink{classant_1_1_event_queue}{Event\+Queue} a todos los sistemas que esten agregados. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event\+Queue} & std\+::shared\+\_\+ptr$<$\+Event\+Queue$>$ \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 23 of file System\+Manager.\+cpp.
+
+\hypertarget{classant_1_1_system_manager_a368e3a047fe8ab59bd6b680804e906ed}{\index{ant\+::\+System\+Manager@{ant\+::\+System\+Manager}!set\+Systems@{set\+Systems}}
+\index{set\+Systems@{set\+Systems}!ant\+::\+System\+Manager@{ant\+::\+System\+Manager}}
+\subsubsection[{set\+Systems}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+System\+Manager\+::set\+Systems (
+\begin{DoxyParamCaption}
+\item[{{\bf map}}]{systems}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_system_manager_a368e3a047fe8ab59bd6b680804e906ed}
+
+
+Setter para poner el contenedor con todos los sistemas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em systems} & map \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 12 of file System\+Manager.\+cpp.
+
+\hypertarget{classant_1_1_system_manager_a301250d5639f08e39960134eeed2c1c1}{\index{ant\+::\+System\+Manager@{ant\+::\+System\+Manager}!update@{update}}
+\index{update@{update}!ant\+::\+System\+Manager@{ant\+::\+System\+Manager}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+System\+Manager\+::update (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Time}]{dt}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_system_manager_a301250d5639f08e39960134eeed2c1c1}
+
+
+Hace que todos los sistemas apliquen sus actualizaciones a sus \hyperlink{classant_1_1_entity_manager}{Entity\+Manager}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & sf\+::\+Time delta time \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 28 of file System\+Manager.\+cpp.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classant_1_1_system_manager_afd6f093281a44ec1524f84d3ea633e09}{\index{ant\+::\+System\+Manager@{ant\+::\+System\+Manager}!systems@{systems}}
+\index{systems@{systems}!ant\+::\+System\+Manager@{ant\+::\+System\+Manager}}
+\subsubsection[{systems}]{\setlength{\rightskip}{0pt plus 5cm}{\bf map} ant\+::\+System\+Manager\+::systems\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1_system_manager_afd6f093281a44ec1524f84d3ea633e09}
+
+
+Definition at line 77 of file System\+Manager.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_system_manager_8hpp}{System\+Manager.\+hpp}\item 
+\hyperlink{_system_manager_8cpp}{System\+Manager.\+cpp}\end{DoxyCompactItemize}

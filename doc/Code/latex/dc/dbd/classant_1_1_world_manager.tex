@@ -1,0 +1,329 @@
+\hypertarget{classant_1_1_world_manager}{\section{ant\+:\+:World\+Manager Class Reference}
+\label{classant_1_1_world_manager}\index{ant\+::\+World\+Manager@{ant\+::\+World\+Manager}}
+}
+
+
+Clase Contenedor para los mundos.  
+
+
+
+
+{\ttfamily \#include $<$World\+Manager.\+hpp$>$}
+
+
+
+Collaboration diagram for ant\+:\+:World\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=181pt]{d2/dee/classant_1_1_world_manager__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::map$<$ long int, \\*
+std\+::unique\+\_\+ptr$<$ \hyperlink{classant_1_1_world}{World} $>$ $>$ \hyperlink{classant_1_1_world_manager_a721c8e435f32fa2f9a3ac9b82bf042b2}{map}
+\begin{DoxyCompactList}\small\item\em Contenedor usado por \hyperlink{classant_1_1_world_manager}{World\+Manager}. \end{DoxyCompactList}\item 
+typedef map\+::iterator \hyperlink{classant_1_1_world_manager_a5271942cc141b1b903fd3648afcddea9}{iterator}
+\begin{DoxyCompactList}\small\item\em Iterador del Contenedor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classant_1_1_world_manager_a845389f52e654ff947b83c993c72ff08}{World\+Manager} ()
+\begin{DoxyCompactList}\small\item\em Constructor por defecto. \end{DoxyCompactList}\item 
+void \hyperlink{classant_1_1_world_manager_ae99e4466fbef273a555dd093bf46fbb5}{add\+World} (std\+::unique\+\_\+ptr$<$ \hyperlink{classant_1_1_world}{World} $>$ w)
+\begin{DoxyCompactList}\small\item\em Añade un \hyperlink{classant_1_1_world}{World} al contenedor. \end{DoxyCompactList}\item 
+\hyperlink{classant_1_1_world}{World} $\ast$ \hyperlink{classant_1_1_world_manager_a94e6d6054814eda8a3ec4f476ea8cf02}{get\+World} (long int id)
+\begin{DoxyCompactList}\small\item\em Obtiene un \char`\"{}naked Pointer\char`\"{} del mundo especificado. Si no se encuentra devuelve un nullptr. \end{DoxyCompactList}\item 
+void \hyperlink{classant_1_1_world_manager_a13377656880523bc48ca4e963017a7e3}{remove\+World} (long int id)
+\begin{DoxyCompactList}\small\item\em Elimina el mundo especificado. \end{DoxyCompactList}\item 
+\hyperlink{classant_1_1_world_manager_a721c8e435f32fa2f9a3ac9b82bf042b2}{map} \& \hyperlink{classant_1_1_world_manager_ab3b9b8a1497007738f66539768491f7c}{get\+Worlds} ()
+\begin{DoxyCompactList}\small\item\em Devuelve el contendor usado. \end{DoxyCompactList}\item 
+void \hyperlink{classant_1_1_world_manager_aebeb93325dd1dfd83a8b4a13eb481620}{set\+Worlds} (\hyperlink{classant_1_1_world_manager_a721c8e435f32fa2f9a3ac9b82bf042b2}{map} \hyperlink{classant_1_1_world_manager_aff9f64b25da76a0a94ea41f70f353a5e}{worlds})
+\begin{DoxyCompactList}\small\item\em Establece el contenedor. \end{DoxyCompactList}\item 
+void \hyperlink{classant_1_1_world_manager_ab9c6b7726219771e992a0c6714cd84b3}{update} (long int id, sf\+::\+Time dt)
+\begin{DoxyCompactList}\small\item\em Actualiza el mundo especificado por id. \end{DoxyCompactList}\item 
+int \hyperlink{classant_1_1_world_manager_af45a459de72c22deeb55f1dc8739e58a}{size} ()
+\begin{DoxyCompactList}\small\item\em Devuelve el numero de mundos que tiene. \end{DoxyCompactList}\item 
+void \hyperlink{classant_1_1_world_manager_a5050c12e78f005607394041e384ca297}{render} (long int id, sf\+::\+Render\+Window \&win)
+\begin{DoxyCompactList}\small\item\em Renderiza el mundo especificado por el id. \end{DoxyCompactList}\item 
+void \hyperlink{classant_1_1_world_manager_a58b029f457d22afa789eaec4683539eb}{clear} ()
+\begin{DoxyCompactList}\small\item\em Limpia los mundos que contiene. \end{DoxyCompactList}\item 
+\hyperlink{classant_1_1_world_manager_a6901058e71f2f0b1855c495ce060be76}{$\sim$\+World\+Manager} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classant_1_1_world_manager_a721c8e435f32fa2f9a3ac9b82bf042b2}{map} \hyperlink{classant_1_1_world_manager_aff9f64b25da76a0a94ea41f70f353a5e}{worlds}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Clase Contenedor para los mundos. 
+
+\begin{DoxyAuthor}{Author}
+Cristian Glez \href{mailto:Cristian.glez.m@gmail.com}{\tt Cristian.\+glez.\+m@gmail.\+com} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+
+
+Definition at line 14 of file World\+Manager.\+hpp.
+
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classant_1_1_world_manager_a5271942cc141b1b903fd3648afcddea9}{\index{ant\+::\+World\+Manager@{ant\+::\+World\+Manager}!iterator@{iterator}}
+\index{iterator@{iterator}!ant\+::\+World\+Manager@{ant\+::\+World\+Manager}}
+\subsubsection[{iterator}]{\setlength{\rightskip}{0pt plus 5cm}typedef map\+::iterator {\bf ant\+::\+World\+Manager\+::iterator}}}\label{classant_1_1_world_manager_a5271942cc141b1b903fd3648afcddea9}
+
+
+Iterador del Contenedor. 
+
+
+
+Definition at line 23 of file World\+Manager.\+hpp.
+
+\hypertarget{classant_1_1_world_manager_a721c8e435f32fa2f9a3ac9b82bf042b2}{\index{ant\+::\+World\+Manager@{ant\+::\+World\+Manager}!map@{map}}
+\index{map@{map}!ant\+::\+World\+Manager@{ant\+::\+World\+Manager}}
+\subsubsection[{map}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::map$<$long int,std\+::unique\+\_\+ptr$<${\bf World}$>$ $>$ {\bf ant\+::\+World\+Manager\+::map}}}\label{classant_1_1_world_manager_a721c8e435f32fa2f9a3ac9b82bf042b2}
+
+
+Contenedor usado por \hyperlink{classant_1_1_world_manager}{World\+Manager}. 
+
+
+
+Definition at line 19 of file World\+Manager.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classant_1_1_world_manager_a845389f52e654ff947b83c993c72ff08}{\index{ant\+::\+World\+Manager@{ant\+::\+World\+Manager}!World\+Manager@{World\+Manager}}
+\index{World\+Manager@{World\+Manager}!ant\+::\+World\+Manager@{ant\+::\+World\+Manager}}
+\subsubsection[{World\+Manager}]{\setlength{\rightskip}{0pt plus 5cm}ant\+::\+World\+Manager\+::\+World\+Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_world_manager_a845389f52e654ff947b83c993c72ff08}
+
+
+Constructor por defecto. 
+
+
+
+Definition at line 4 of file World\+Manager.\+cpp.
+
+\hypertarget{classant_1_1_world_manager_a6901058e71f2f0b1855c495ce060be76}{\index{ant\+::\+World\+Manager@{ant\+::\+World\+Manager}!````~World\+Manager@{$\sim$\+World\+Manager}}
+\index{````~World\+Manager@{$\sim$\+World\+Manager}!ant\+::\+World\+Manager@{ant\+::\+World\+Manager}}
+\subsubsection[{$\sim$\+World\+Manager}]{\setlength{\rightskip}{0pt plus 5cm}ant\+::\+World\+Manager\+::$\sim$\+World\+Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_world_manager_a6901058e71f2f0b1855c495ce060be76}
+
+
+Definition at line 40 of file World\+Manager.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classant_1_1_world_manager_ae99e4466fbef273a555dd093bf46fbb5}{\index{ant\+::\+World\+Manager@{ant\+::\+World\+Manager}!add\+World@{add\+World}}
+\index{add\+World@{add\+World}!ant\+::\+World\+Manager@{ant\+::\+World\+Manager}}
+\subsubsection[{add\+World}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+World\+Manager\+::add\+World (
+\begin{DoxyParamCaption}
+\item[{std\+::unique\+\_\+ptr$<$ {\bf World} $>$}]{w}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_world_manager_ae99e4466fbef273a555dd093bf46fbb5}
+
+
+Añade un \hyperlink{classant_1_1_world}{World} al contenedor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em w} & std\+::unique\+\_\+ptr$<$\+World$>$ \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 7 of file World\+Manager.\+cpp.
+
+\hypertarget{classant_1_1_world_manager_a58b029f457d22afa789eaec4683539eb}{\index{ant\+::\+World\+Manager@{ant\+::\+World\+Manager}!clear@{clear}}
+\index{clear@{clear}!ant\+::\+World\+Manager@{ant\+::\+World\+Manager}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+World\+Manager\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_world_manager_a58b029f457d22afa789eaec4683539eb}
+
+
+Limpia los mundos que contiene. 
+
+
+
+Definition at line 37 of file World\+Manager.\+cpp.
+
+\hypertarget{classant_1_1_world_manager_a94e6d6054814eda8a3ec4f476ea8cf02}{\index{ant\+::\+World\+Manager@{ant\+::\+World\+Manager}!get\+World@{get\+World}}
+\index{get\+World@{get\+World}!ant\+::\+World\+Manager@{ant\+::\+World\+Manager}}
+\subsubsection[{get\+World}]{\setlength{\rightskip}{0pt plus 5cm}{\bf World} $\ast$ ant\+::\+World\+Manager\+::get\+World (
+\begin{DoxyParamCaption}
+\item[{long int}]{id}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_world_manager_a94e6d6054814eda8a3ec4f476ea8cf02}
+
+
+Obtiene un \char`\"{}naked Pointer\char`\"{} del mundo especificado. Si no se encuentra devuelve un nullptr. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & long int id del mundo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classant_1_1_world}{World} $\ast$ 
+\end{DoxyReturn}
+
+
+Definition at line 10 of file World\+Manager.\+cpp.
+
+\hypertarget{classant_1_1_world_manager_ab3b9b8a1497007738f66539768491f7c}{\index{ant\+::\+World\+Manager@{ant\+::\+World\+Manager}!get\+Worlds@{get\+Worlds}}
+\index{get\+Worlds@{get\+Worlds}!ant\+::\+World\+Manager@{ant\+::\+World\+Manager}}
+\subsubsection[{get\+Worlds}]{\setlength{\rightskip}{0pt plus 5cm}{\bf map}\& ant\+::\+World\+Manager\+::get\+Worlds (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classant_1_1_world_manager_ab3b9b8a1497007738f66539768491f7c}
+
+
+Devuelve el contendor usado. 
+
+\begin{DoxyReturn}{Returns}
+map 
+\end{DoxyReturn}
+
+
+Definition at line 49 of file World\+Manager.\+hpp.
+
+\hypertarget{classant_1_1_world_manager_a13377656880523bc48ca4e963017a7e3}{\index{ant\+::\+World\+Manager@{ant\+::\+World\+Manager}!remove\+World@{remove\+World}}
+\index{remove\+World@{remove\+World}!ant\+::\+World\+Manager@{ant\+::\+World\+Manager}}
+\subsubsection[{remove\+World}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+World\+Manager\+::remove\+World (
+\begin{DoxyParamCaption}
+\item[{long int}]{id}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_world_manager_a13377656880523bc48ca4e963017a7e3}
+
+
+Elimina el mundo especificado. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & long int \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 13 of file World\+Manager.\+cpp.
+
+\hypertarget{classant_1_1_world_manager_a5050c12e78f005607394041e384ca297}{\index{ant\+::\+World\+Manager@{ant\+::\+World\+Manager}!render@{render}}
+\index{render@{render}!ant\+::\+World\+Manager@{ant\+::\+World\+Manager}}
+\subsubsection[{render}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+World\+Manager\+::render (
+\begin{DoxyParamCaption}
+\item[{long int}]{id, }
+\item[{sf\+::\+Render\+Window \&}]{win}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_world_manager_a5050c12e78f005607394041e384ca297}
+
+
+Renderiza el mundo especificado por el id. 
+
+Si se pone -\/1 Renderizara todos los mundos, en pantalla se vera el ultimo.
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & long int id del mundo (-\/1 para renderizar a todos) \\
+\hline
+{\em win} & sf\+::\+Render\+Window \& ventana a la cual dibujar. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 28 of file World\+Manager.\+cpp.
+
+\hypertarget{classant_1_1_world_manager_aebeb93325dd1dfd83a8b4a13eb481620}{\index{ant\+::\+World\+Manager@{ant\+::\+World\+Manager}!set\+Worlds@{set\+Worlds}}
+\index{set\+Worlds@{set\+Worlds}!ant\+::\+World\+Manager@{ant\+::\+World\+Manager}}
+\subsubsection[{set\+Worlds}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+World\+Manager\+::set\+Worlds (
+\begin{DoxyParamCaption}
+\item[{{\bf map}}]{worlds}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_world_manager_aebeb93325dd1dfd83a8b4a13eb481620}
+
+
+Establece el contenedor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em worlds} & map \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 16 of file World\+Manager.\+cpp.
+
+\hypertarget{classant_1_1_world_manager_af45a459de72c22deeb55f1dc8739e58a}{\index{ant\+::\+World\+Manager@{ant\+::\+World\+Manager}!size@{size}}
+\index{size@{size}!ant\+::\+World\+Manager@{ant\+::\+World\+Manager}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}int ant\+::\+World\+Manager\+::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classant_1_1_world_manager_af45a459de72c22deeb55f1dc8739e58a}
+
+
+Devuelve el numero de mundos que tiene. 
+
+
+
+Definition at line 67 of file World\+Manager.\+hpp.
+
+\hypertarget{classant_1_1_world_manager_ab9c6b7726219771e992a0c6714cd84b3}{\index{ant\+::\+World\+Manager@{ant\+::\+World\+Manager}!update@{update}}
+\index{update@{update}!ant\+::\+World\+Manager@{ant\+::\+World\+Manager}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+World\+Manager\+::update (
+\begin{DoxyParamCaption}
+\item[{long int}]{id, }
+\item[{sf\+::\+Time}]{dt}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_world_manager_ab9c6b7726219771e992a0c6714cd84b3}
+
+
+Actualiza el mundo especificado por id. 
+
+Si se pone -\/1 actualiza a todos los mundos que contenga.
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & long int id del mundo (-\/1 para actualizar todos) \\
+\hline
+{\em dt} & sf\+::\+Time delta time \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 19 of file World\+Manager.\+cpp.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classant_1_1_world_manager_aff9f64b25da76a0a94ea41f70f353a5e}{\index{ant\+::\+World\+Manager@{ant\+::\+World\+Manager}!worlds@{worlds}}
+\index{worlds@{worlds}!ant\+::\+World\+Manager@{ant\+::\+World\+Manager}}
+\subsubsection[{worlds}]{\setlength{\rightskip}{0pt plus 5cm}{\bf map} ant\+::\+World\+Manager\+::worlds\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1_world_manager_aff9f64b25da76a0a94ea41f70f353a5e}
+
+
+Definition at line 83 of file World\+Manager.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_world_manager_8hpp}{World\+Manager.\+hpp}\item 
+\hyperlink{_world_manager_8cpp}{World\+Manager.\+cpp}\end{DoxyCompactItemize}

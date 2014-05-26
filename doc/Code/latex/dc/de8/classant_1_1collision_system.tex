@@ -1,0 +1,479 @@
+\hypertarget{classant_1_1collision_system}{\section{ant\+:\+:collision\+System Class Reference}
+\label{classant_1_1collision_system}\index{ant\+::collision\+System@{ant\+::collision\+System}}
+}
+
+
+Sistema que comprueba las colisiones entre entidades.  
+
+
+
+
+{\ttfamily \#include $<$collision\+System.\+hpp$>$}
+
+
+
+Inheritance diagram for ant\+:\+:collision\+System\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{de/d4c/classant_1_1collision_system__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ant\+:\+:collision\+System\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{d9/d48/classant_1_1collision_system__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classant_1_1collision_system_a60197fa14edf90555a49d53cad095c8c}{collision\+System} (sf\+::\+Float\+Rect bounds, sf\+::\+Vertex\+Array $\ast$Game\+Map)
+\begin{DoxyCompactList}\small\item\em Constructor por defecto. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classant_1_1collision_system_a9d53ad5d64a749e883edfc9049734bc5}{render} (sf\+::\+Render\+Window \&win)
+\begin{DoxyCompactList}\small\item\em Renderiza el Quadtree si R\+E\+N\+D\+E\+R\+\_\+\+Q\+T\+R\+E\+E esta definido. si no no hace nada. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classant_1_1collision_system_abef6a9cb5378ddb9ddf6cfdd46b6dbfa}{update} (sf\+::\+Time dt)
+\begin{DoxyCompactList}\small\item\em Comprueba las colisiones de las entidades. \end{DoxyCompactList}\item 
+virtual \hyperlink{classant_1_1collision_system_acb5ba1573cd34e251caac81cb499094e}{$\sim$collision\+System} ()
+\item 
+void \hyperlink{classant_1_1_system_a35662ff3739ff4290df1106bfdccfaca}{set\+Required\+Components} (long int req)
+\begin{DoxyCompactList}\small\item\em Setter para los requisitos necesarios. \end{DoxyCompactList}\item 
+long int \hyperlink{classant_1_1_system_a2d94338969f43d4fd2fd972deb099258}{get\+Required\+Componts} ()
+\begin{DoxyCompactList}\small\item\em Getter de los requisitos para el sistema. \end{DoxyCompactList}\item 
+void \hyperlink{classant_1_1_system_a1effe9f0e5615e516a34be02d5895434}{set\+Event\+Queue} (std\+::shared\+\_\+ptr$<$ \hyperlink{classant_1_1_event_queue}{Event\+Queue} $>$ eq)
+\begin{DoxyCompactList}\small\item\em Setter para la \hyperlink{classant_1_1_event_queue}{Event\+Queue}. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classant_1_1_event_queue}{Event\+Queue} $>$ \hyperlink{classant_1_1_system_ac3e2bbbdb622276d194ad3a687d8e4f1}{get\+Event\+Queue} ()
+\begin{DoxyCompactList}\small\item\em Getter para la \hyperlink{classant_1_1_event_queue}{Event\+Queue}. \end{DoxyCompactList}\item 
+void \hyperlink{classant_1_1_system_a231f9fc93b55ee67deb9597ae6be13ba}{set\+Name} (std\+::string \hyperlink{classant_1_1_system_a60b3c00a760a3b4947ab1f1fc534a5b2}{name})
+\begin{DoxyCompactList}\small\item\em Setter Para el nombre del sistema. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classant_1_1_system_a52a559b2c3ddbec5c846df1badd7f7f8}{get\+Name} () const 
+\begin{DoxyCompactList}\small\item\em Getter para el nombre del sistema. \end{DoxyCompactList}\item 
+void \hyperlink{classant_1_1_system_a1f983382d142ea697f1811f7f6f6ab17}{set\+Entity\+Manager} (std\+::shared\+\_\+ptr$<$ \hyperlink{classant_1_1_entity_manager}{Entity\+Manager} $>$ \hyperlink{classant_1_1_system_a5661d872ff769be150bd4e9a9552f6b9}{em})
+\begin{DoxyCompactList}\small\item\em Setter para el \hyperlink{classant_1_1_entity_manager}{Entity\+Manager}. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classant_1_1_entity_manager}{Entity\+Manager} $>$ \hyperlink{classant_1_1_system_adaad2087de7fc71924cfb5b134014b0a}{get\+Entity\+Manager} ()
+\begin{DoxyCompactList}\small\item\em Getter para el \hyperlink{classant_1_1_entity_manager}{Entity\+Manager}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+long int \hyperlink{classant_1_1_system_a4ef41cfc496e41ac6730f90629524ec7}{Required\+Components}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classant_1_1_event_queue}{Event\+Queue} $>$ \hyperlink{classant_1_1_system_a27e1814e13d161b5ef0e848e3da16d29}{event\+Queue}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classant_1_1_entity_manager}{Entity\+Manager} $>$ \hyperlink{classant_1_1_system_a5661d872ff769be150bd4e9a9552f6b9}{em}
+\item 
+std\+::string \hyperlink{classant_1_1_system_a60b3c00a760a3b4947ab1f1fc534a5b2}{name}
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classant_1_1collision_system_a3d90ed206a38d715ba267853d79886d6}{test\+Terrain\+Collision} (\hyperlink{classant_1_1_entity}{Entity} $\ast$entity, const sf\+::\+Float\+Rect \&e\+Bounds)
+\begin{DoxyCompactList}\small\item\em Comprueba si una entidad y sus bordes estan dentro del mapa. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classant_1_1_utils_1_1_quadtree}{Utils\+::\+Quadtree} \hyperlink{classant_1_1collision_system_a734fbe21cb68e11bee2224c01f808cdd}{qtree}
+\item 
+sf\+::\+Float\+Rect \hyperlink{classant_1_1collision_system_a8103e85df3ce0b3ed9c58becea61fafb}{game\+Bounds}
+\item 
+sf\+::\+Vertex\+Array $\ast$ \hyperlink{classant_1_1collision_system_aaadfabecc42a47e7fc8219178bd712ca}{game\+Map}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Sistema que comprueba las colisiones entre entidades. 
+
+Cuando detecta una colision añade un evento a la \hyperlink{classant_1_1_event_queue}{Event\+Queue} con las dos entidades que colisionaron.
+\begin{DoxyEnumerate}
+\item Event$<$\+Entity$\ast$,\+Entity$\ast$$>$ -\/$>$ type\+: C\+O\+L\+L\+I\+S\+I\+O\+N\+\_\+\+E\+V\+E\+N\+T
+\item Event$<$\+Entity$\ast$,int$>$ -\/$>$ type\+: T\+E\+R\+R\+A\+I\+N\+\_\+\+C\+O\+L\+L\+I\+S\+I\+O\+N
+\item Event$<$\+Entity$\ast$$>$ -\/$>$ type\+: O\+U\+T\+\_\+\+M\+A\+P \begin{DoxyAuthor}{Author}
+Cristian Glez \href{mailto:Cristian.glez.m@gmail.com}{\tt Cristian.\+glez.\+m@gmail.\+com} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+
+\end{DoxyEnumerate}
+
+Definition at line 25 of file collision\+System.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classant_1_1collision_system_a60197fa14edf90555a49d53cad095c8c}{\index{ant\+::collision\+System@{ant\+::collision\+System}!collision\+System@{collision\+System}}
+\index{collision\+System@{collision\+System}!ant\+::collision\+System@{ant\+::collision\+System}}
+\subsubsection[{collision\+System}]{\setlength{\rightskip}{0pt plus 5cm}ant\+::collision\+System\+::collision\+System (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Float\+Rect}]{bounds, }
+\item[{sf\+::\+Vertex\+Array $\ast$}]{Game\+Map}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1collision_system_a60197fa14edf90555a49d53cad095c8c}
+
+
+Constructor por defecto. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bounds} & sf\+::\+Float\+Rect rectangulo del Quad\+Tree. \\
+\hline
+{\em Game\+Map} & sf\+::\+Vertex\+Array $\ast$ Terreno del juego. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 4 of file collision\+System.\+cpp.
+
+\hypertarget{classant_1_1collision_system_acb5ba1573cd34e251caac81cb499094e}{\index{ant\+::collision\+System@{ant\+::collision\+System}!````~collision\+System@{$\sim$collision\+System}}
+\index{````~collision\+System@{$\sim$collision\+System}!ant\+::collision\+System@{ant\+::collision\+System}}
+\subsubsection[{$\sim$collision\+System}]{\setlength{\rightskip}{0pt plus 5cm}ant\+::collision\+System\+::$\sim$collision\+System (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classant_1_1collision_system_acb5ba1573cd34e251caac81cb499094e}
+
+
+Definition at line 105 of file collision\+System.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classant_1_1_system_adaad2087de7fc71924cfb5b134014b0a}{\index{ant\+::collision\+System@{ant\+::collision\+System}!get\+Entity\+Manager@{get\+Entity\+Manager}}
+\index{get\+Entity\+Manager@{get\+Entity\+Manager}!ant\+::collision\+System@{ant\+::collision\+System}}
+\subsubsection[{get\+Entity\+Manager}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Entity\+Manager}$>$ ant\+::\+System\+::get\+Entity\+Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [inherited]}}}\label{classant_1_1_system_adaad2087de7fc71924cfb5b134014b0a}
+
+
+Getter para el \hyperlink{classant_1_1_entity_manager}{Entity\+Manager}. 
+
+\begin{DoxyReturn}{Returns}
+std\+::shared\+\_\+ptr$<$\+Entity\+Manager$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 71 of file System.\+hpp.
+
+\hypertarget{classant_1_1_system_ac3e2bbbdb622276d194ad3a687d8e4f1}{\index{ant\+::collision\+System@{ant\+::collision\+System}!get\+Event\+Queue@{get\+Event\+Queue}}
+\index{get\+Event\+Queue@{get\+Event\+Queue}!ant\+::collision\+System@{ant\+::collision\+System}}
+\subsubsection[{get\+Event\+Queue}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Event\+Queue}$>$ ant\+::\+System\+::get\+Event\+Queue (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [inherited]}}}\label{classant_1_1_system_ac3e2bbbdb622276d194ad3a687d8e4f1}
+
+
+Getter para la \hyperlink{classant_1_1_event_queue}{Event\+Queue}. 
+
+\begin{DoxyReturn}{Returns}
+std\+::shared\+\_\+ptr$<$\+Event\+Queue$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 51 of file System.\+hpp.
+
+\hypertarget{classant_1_1_system_a52a559b2c3ddbec5c846df1badd7f7f8}{\index{ant\+::collision\+System@{ant\+::collision\+System}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!ant\+::collision\+System@{ant\+::collision\+System}}
+\subsubsection[{get\+Name}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string ant\+::\+System\+::get\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [inherited]}}}\label{classant_1_1_system_a52a559b2c3ddbec5c846df1badd7f7f8}
+
+
+Getter para el nombre del sistema. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string 
+\end{DoxyReturn}
+
+
+Definition at line 61 of file System.\+hpp.
+
+\hypertarget{classant_1_1_system_a2d94338969f43d4fd2fd972deb099258}{\index{ant\+::collision\+System@{ant\+::collision\+System}!get\+Required\+Componts@{get\+Required\+Componts}}
+\index{get\+Required\+Componts@{get\+Required\+Componts}!ant\+::collision\+System@{ant\+::collision\+System}}
+\subsubsection[{get\+Required\+Componts}]{\setlength{\rightskip}{0pt plus 5cm}long int ant\+::\+System\+::get\+Required\+Componts (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [inherited]}}}\label{classant_1_1_system_a2d94338969f43d4fd2fd972deb099258}
+
+
+Getter de los requisitos para el sistema. 
+
+
+
+Definition at line 41 of file System.\+hpp.
+
+\hypertarget{classant_1_1collision_system_a9d53ad5d64a749e883edfc9049734bc5}{\index{ant\+::collision\+System@{ant\+::collision\+System}!render@{render}}
+\index{render@{render}!ant\+::collision\+System@{ant\+::collision\+System}}
+\subsubsection[{render}]{\setlength{\rightskip}{0pt plus 5cm}virtual void ant\+::collision\+System\+::render (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Render\+Window \&}]{win}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classant_1_1collision_system_a9d53ad5d64a749e883edfc9049734bc5}
+
+
+Renderiza el Quadtree si R\+E\+N\+D\+E\+R\+\_\+\+Q\+T\+R\+E\+E esta definido. si no no hace nada. 
+
+
+
+Implements \hyperlink{classant_1_1_system_a30a815d199fea90e9d2f7167eb2bf86e}{ant\+::\+System}.
+
+
+
+Definition at line 37 of file collision\+System.\+hpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{dc/de8/classant_1_1collision_system_a9d53ad5d64a749e883edfc9049734bc5_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classant_1_1_system_a1f983382d142ea697f1811f7f6f6ab17}{\index{ant\+::collision\+System@{ant\+::collision\+System}!set\+Entity\+Manager@{set\+Entity\+Manager}}
+\index{set\+Entity\+Manager@{set\+Entity\+Manager}!ant\+::collision\+System@{ant\+::collision\+System}}
+\subsubsection[{set\+Entity\+Manager}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+System\+::set\+Entity\+Manager (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Entity\+Manager} $>$}]{em}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inherited]}}}\label{classant_1_1_system_a1f983382d142ea697f1811f7f6f6ab17}
+
+
+Setter para el \hyperlink{classant_1_1_entity_manager}{Entity\+Manager}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em em} & std\+::shared\+\_\+ptr$<$\+Entity\+Manager$>$ \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 25 of file System.\+cpp.
+
+\hypertarget{classant_1_1_system_a1effe9f0e5615e516a34be02d5895434}{\index{ant\+::collision\+System@{ant\+::collision\+System}!set\+Event\+Queue@{set\+Event\+Queue}}
+\index{set\+Event\+Queue@{set\+Event\+Queue}!ant\+::collision\+System@{ant\+::collision\+System}}
+\subsubsection[{set\+Event\+Queue}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+System\+::set\+Event\+Queue (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Event\+Queue} $>$}]{eq}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inherited]}}}\label{classant_1_1_system_a1effe9f0e5615e516a34be02d5895434}
+
+
+Setter para la \hyperlink{classant_1_1_event_queue}{Event\+Queue}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em eq} & std\+::shared\+\_\+ptr$<$\+Event\+Queue$>$ \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 19 of file System.\+cpp.
+
+\hypertarget{classant_1_1_system_a231f9fc93b55ee67deb9597ae6be13ba}{\index{ant\+::collision\+System@{ant\+::collision\+System}!set\+Name@{set\+Name}}
+\index{set\+Name@{set\+Name}!ant\+::collision\+System@{ant\+::collision\+System}}
+\subsubsection[{set\+Name}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+System\+::set\+Name (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inherited]}}}\label{classant_1_1_system_a231f9fc93b55ee67deb9597ae6be13ba}
+
+
+Setter Para el nombre del sistema. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & std\+::string \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 22 of file System.\+cpp.
+
+\hypertarget{classant_1_1_system_a35662ff3739ff4290df1106bfdccfaca}{\index{ant\+::collision\+System@{ant\+::collision\+System}!set\+Required\+Components@{set\+Required\+Components}}
+\index{set\+Required\+Components@{set\+Required\+Components}!ant\+::collision\+System@{ant\+::collision\+System}}
+\subsubsection[{set\+Required\+Components}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+System\+::set\+Required\+Components (
+\begin{DoxyParamCaption}
+\item[{long int}]{req}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inherited]}}}\label{classant_1_1_system_a35662ff3739ff4290df1106bfdccfaca}
+
+
+Setter para los requisitos necesarios. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em req} & long int \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 16 of file System.\+cpp.
+
+\hypertarget{classant_1_1collision_system_a3d90ed206a38d715ba267853d79886d6}{\index{ant\+::collision\+System@{ant\+::collision\+System}!test\+Terrain\+Collision@{test\+Terrain\+Collision}}
+\index{test\+Terrain\+Collision@{test\+Terrain\+Collision}!ant\+::collision\+System@{ant\+::collision\+System}}
+\subsubsection[{test\+Terrain\+Collision}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::collision\+System\+::test\+Terrain\+Collision (
+\begin{DoxyParamCaption}
+\item[{{\bf Entity} $\ast$}]{entity, }
+\item[{const sf\+::\+Float\+Rect \&}]{e\+Bounds}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1collision_system_a3d90ed206a38d715ba267853d79886d6}
+
+
+Comprueba si una entidad y sus bordes estan dentro del mapa. 
+
+Envia un evento para decir por donde a colisionado la entidad con el suelo.
+
+1 esquina superior izquierda -\/$>$ envia evento de colision con pared 0 2 esquina superior derecha -\/$>$ envia evento de colision con pared 1 3 esquina inferior mediana izquierda -\/$>$ envia evento de colision con escalon para subirlo 2 4 esquina inferior izquierda -\/$>$ Cambia estado de F\+A\+L\+L\+I\+N\+G a G\+R\+O\+U\+N\+D 5 esquina inferior mediana derecha -\/$>$ envia evento de colision con escalon para subirlo 2 6 esquina inferior derecha -\/$>$ Cambia estado de F\+A\+L\+L\+I\+N\+G a G\+R\+O\+U\+N\+D
+
+
+\begin{DoxyEnumerate}
+\item Event$<$\+Entity$\ast$,int$>$ -\/$>$ type\+: T\+E\+R\+R\+A\+I\+N\+\_\+\+C\+O\+L\+L\+I\+S\+I\+O\+N
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}{Parameters}
+{\em entity} & \hyperlink{classant_1_1_entity}{Entity} $\ast$ puntero de la entidad \\
+\hline
+{\em e\+Bounds} & sf\+::\+Float\+Rect bordes de la entidad \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 64 of file collision\+System.\+cpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/de8/classant_1_1collision_system_a3d90ed206a38d715ba267853d79886d6_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=326pt]{dc/de8/classant_1_1collision_system_a3d90ed206a38d715ba267853d79886d6_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classant_1_1collision_system_abef6a9cb5378ddb9ddf6cfdd46b6dbfa}{\index{ant\+::collision\+System@{ant\+::collision\+System}!update@{update}}
+\index{update@{update}!ant\+::collision\+System@{ant\+::collision\+System}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::collision\+System\+::update (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Time}]{dt}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classant_1_1collision_system_abef6a9cb5378ddb9ddf6cfdd46b6dbfa}
+
+
+Comprueba las colisiones de las entidades. 
+
+Envia eventos de colision y eventos especificos del suelo.
+\begin{DoxyEnumerate}
+\item Event$<$\+Entity$\ast$,\+Entity$\ast$$>$ -\/$>$ type\+: C\+O\+L\+L\+I\+S\+I\+O\+N\+\_\+\+E\+V\+E\+N\+T
+\item Event$<$\+Entity$\ast$,int$>$ -\/$>$ type\+: T\+E\+R\+R\+A\+I\+N\+\_\+\+C\+O\+L\+L\+I\+S\+I\+O\+N
+\item Event$<$\+Entity$\ast$$>$ -\/$>$ type\+: O\+U\+T\+\_\+\+M\+A\+P 
+\begin{DoxyParams}{Parameters}
+{\em dt} & sf\+::\+Time delta time \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyEnumerate}
+
+Implements \hyperlink{classant_1_1_system_a4d97de105123df07d4d90ac2914f9e6c}{ant\+::\+System}.
+
+
+
+Definition at line 11 of file collision\+System.\+cpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/de8/classant_1_1collision_system_abef6a9cb5378ddb9ddf6cfdd46b6dbfa_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classant_1_1_system_a5661d872ff769be150bd4e9a9552f6b9}{\index{ant\+::collision\+System@{ant\+::collision\+System}!em@{em}}
+\index{em@{em}!ant\+::collision\+System@{ant\+::collision\+System}}
+\subsubsection[{em}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Entity\+Manager}$>$ ant\+::\+System\+::em\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{classant_1_1_system_a5661d872ff769be150bd4e9a9552f6b9}
+
+
+Definition at line 86 of file System.\+hpp.
+
+\hypertarget{classant_1_1_system_a27e1814e13d161b5ef0e848e3da16d29}{\index{ant\+::collision\+System@{ant\+::collision\+System}!event\+Queue@{event\+Queue}}
+\index{event\+Queue@{event\+Queue}!ant\+::collision\+System@{ant\+::collision\+System}}
+\subsubsection[{event\+Queue}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Event\+Queue}$>$ ant\+::\+System\+::event\+Queue\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{classant_1_1_system_a27e1814e13d161b5ef0e848e3da16d29}
+
+
+Definition at line 85 of file System.\+hpp.
+
+\hypertarget{classant_1_1collision_system_a8103e85df3ce0b3ed9c58becea61fafb}{\index{ant\+::collision\+System@{ant\+::collision\+System}!game\+Bounds@{game\+Bounds}}
+\index{game\+Bounds@{game\+Bounds}!ant\+::collision\+System@{ant\+::collision\+System}}
+\subsubsection[{game\+Bounds}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Float\+Rect ant\+::collision\+System\+::game\+Bounds\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1collision_system_a8103e85df3ce0b3ed9c58becea61fafb}
+
+
+Definition at line 75 of file collision\+System.\+hpp.
+
+\hypertarget{classant_1_1collision_system_aaadfabecc42a47e7fc8219178bd712ca}{\index{ant\+::collision\+System@{ant\+::collision\+System}!game\+Map@{game\+Map}}
+\index{game\+Map@{game\+Map}!ant\+::collision\+System@{ant\+::collision\+System}}
+\subsubsection[{game\+Map}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Vertex\+Array$\ast$ ant\+::collision\+System\+::game\+Map\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1collision_system_aaadfabecc42a47e7fc8219178bd712ca}
+
+
+Definition at line 76 of file collision\+System.\+hpp.
+
+\hypertarget{classant_1_1_system_a60b3c00a760a3b4947ab1f1fc534a5b2}{\index{ant\+::collision\+System@{ant\+::collision\+System}!name@{name}}
+\index{name@{name}!ant\+::collision\+System@{ant\+::collision\+System}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string ant\+::\+System\+::name\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{classant_1_1_system_a60b3c00a760a3b4947ab1f1fc534a5b2}
+
+
+Definition at line 87 of file System.\+hpp.
+
+\hypertarget{classant_1_1collision_system_a734fbe21cb68e11bee2224c01f808cdd}{\index{ant\+::collision\+System@{ant\+::collision\+System}!qtree@{qtree}}
+\index{qtree@{qtree}!ant\+::collision\+System@{ant\+::collision\+System}}
+\subsubsection[{qtree}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Utils\+::\+Quadtree} ant\+::collision\+System\+::qtree\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1collision_system_a734fbe21cb68e11bee2224c01f808cdd}
+
+
+Definition at line 74 of file collision\+System.\+hpp.
+
+\hypertarget{classant_1_1_system_a4ef41cfc496e41ac6730f90629524ec7}{\index{ant\+::collision\+System@{ant\+::collision\+System}!Required\+Components@{Required\+Components}}
+\index{Required\+Components@{Required\+Components}!ant\+::collision\+System@{ant\+::collision\+System}}
+\subsubsection[{Required\+Components}]{\setlength{\rightskip}{0pt plus 5cm}long int ant\+::\+System\+::\+Required\+Components\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{classant_1_1_system_a4ef41cfc496e41ac6730f90629524ec7}
+
+
+Definition at line 84 of file System.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{collision_system_8hpp}{collision\+System.\+hpp}\item 
+\hyperlink{collision_system_8cpp}{collision\+System.\+cpp}\end{DoxyCompactItemize}

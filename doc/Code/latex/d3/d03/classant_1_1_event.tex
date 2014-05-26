@@ -1,0 +1,218 @@
+\hypertarget{classant_1_1_event}{\section{ant\+:\+:Event$<$ T $>$ Class Template Reference}
+\label{classant_1_1_event}\index{ant\+::\+Event$<$ T $>$@{ant\+::\+Event$<$ T $>$}}
+}
+
+
+Clase Especializada de evento.  
+
+
+
+
+{\ttfamily \#include $<$Event.\+hpp$>$}
+
+
+
+Inheritance diagram for ant\+:\+:Event$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=167pt]{d8/d5c/classant_1_1_event__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ant\+:\+:Event$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=167pt]{d7/d45/classant_1_1_event__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classant_1_1_event_a5c93fd01dd1e5386716b691ecb66b0bc}{Event} (int \hyperlink{classant_1_1base_event_a432df0c459b20666e81c53ffab82caf4}{type}, T...\+data)
+\begin{DoxyCompactList}\small\item\em Constructor del Evento Especializado. \end{DoxyCompactList}\item 
+const std\+::tuple$<$ T...$>$ \& \hyperlink{classant_1_1_event_a120fa7dcb23ac66c2bb5bb15e7dcc4bf}{get\+Attributes} () const 
+\begin{DoxyCompactList}\small\item\em Getter de los attributos del evento. \end{DoxyCompactList}\item 
+void \hyperlink{classant_1_1_event_a47becb76c4999b7b446db567013e6259}{set\+Attributes} (std\+::tuple$<$ T...$>$ \hyperlink{classant_1_1_event_af66dcaa27ed84fbcaa880d80ec206a15}{attributes})
+\begin{DoxyCompactList}\small\item\em Setter de los attributos del evento. \end{DoxyCompactList}\item 
+void \hyperlink{classant_1_1base_event_a6d6f1170cb6f01301d137d732c0f2704}{set\+Type} (int \hyperlink{classant_1_1base_event_a432df0c459b20666e81c53ffab82caf4}{type})
+\begin{DoxyCompactList}\small\item\em Setter para poner el tipo al evento. \end{DoxyCompactList}\item 
+int \hyperlink{classant_1_1base_event_ad6672f6ff1522b7b66ff7ae43613ed71}{get\+Type} () const 
+\begin{DoxyCompactList}\small\item\em Getter del tipo de evento. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::tuple$<$ T...$>$ \hyperlink{classant_1_1_event_af66dcaa27ed84fbcaa880d80ec206a15}{attributes}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename... T$>$class ant\+::\+Event$<$ T $>$}
+
+Clase Especializada de evento. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em ...\+T} & tipo de datos que tendra el evento. \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyAuthor}{Author}
+Cristian Glez \href{mailto:Cristian.glez.m@gmail.com}{\tt Cristian.\+glez.\+m@gmail.\+com} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+
+
+Definition at line 55 of file Event.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classant_1_1_event_a5c93fd01dd1e5386716b691ecb66b0bc}{\index{ant\+::\+Event@{ant\+::\+Event}!Event@{Event}}
+\index{Event@{Event}!ant\+::\+Event@{ant\+::\+Event}}
+\subsubsection[{Event}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename... T$>$ {\bf ant\+::\+Event}$<$ T $>$\+::{\bf Event} (
+\begin{DoxyParamCaption}
+\item[{int}]{type, }
+\item[{T...}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classant_1_1_event_a5c93fd01dd1e5386716b691ecb66b0bc}
+
+
+Constructor del Evento Especializado. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & int Tipo del evento. \\
+\hline
+{\em data} & T... attributos del evento. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 63 of file Event.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classant_1_1_event_a120fa7dcb23ac66c2bb5bb15e7dcc4bf}{\index{ant\+::\+Event@{ant\+::\+Event}!get\+Attributes@{get\+Attributes}}
+\index{get\+Attributes@{get\+Attributes}!ant\+::\+Event@{ant\+::\+Event}}
+\subsubsection[{get\+Attributes}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename... T$>$ const std\+::tuple$<$T...$>$\& {\bf ant\+::\+Event}$<$ T $>$\+::get\+Attributes (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classant_1_1_event_a120fa7dcb23ac66c2bb5bb15e7dcc4bf}
+
+
+Getter de los attributos del evento. 
+
+Los datos del evento no se pueden modificar, son solo lectura.
+
+\begin{DoxyReturn}{Returns}
+std\+::tuple$<$\+T...$>$\& const reference a la tupla. 
+\end{DoxyReturn}
+
+
+Definition at line 73 of file Event.\+hpp.
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/d03/classant_1_1_event_a120fa7dcb23ac66c2bb5bb15e7dcc4bf_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classant_1_1base_event_ad6672f6ff1522b7b66ff7ae43613ed71}{\index{ant\+::\+Event@{ant\+::\+Event}!get\+Type@{get\+Type}}
+\index{get\+Type@{get\+Type}!ant\+::\+Event@{ant\+::\+Event}}
+\subsubsection[{get\+Type}]{\setlength{\rightskip}{0pt plus 5cm}int ant\+::base\+Event\+::get\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [inherited]}}}\label{classant_1_1base_event_ad6672f6ff1522b7b66ff7ae43613ed71}
+
+
+Getter del tipo de evento. 
+
+\begin{DoxyReturn}{Returns}
+int tipo del evento. 
+\end{DoxyReturn}
+
+
+Definition at line 28 of file Event.\+hpp.
+
+\hypertarget{classant_1_1_event_a47becb76c4999b7b446db567013e6259}{\index{ant\+::\+Event@{ant\+::\+Event}!set\+Attributes@{set\+Attributes}}
+\index{set\+Attributes@{set\+Attributes}!ant\+::\+Event@{ant\+::\+Event}}
+\subsubsection[{set\+Attributes}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename... T$>$ void {\bf ant\+::\+Event}$<$ T $>$\+::set\+Attributes (
+\begin{DoxyParamCaption}
+\item[{std\+::tuple$<$ T...$>$}]{attributes}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classant_1_1_event_a47becb76c4999b7b446db567013e6259}
+
+
+Setter de los attributos del evento. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em attributes} & std\+::tuple$<$\+T...$>$ attributos del evento. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 79 of file Event.\+hpp.
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/d03/classant_1_1_event_a47becb76c4999b7b446db567013e6259_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classant_1_1base_event_a6d6f1170cb6f01301d137d732c0f2704}{\index{ant\+::\+Event@{ant\+::\+Event}!set\+Type@{set\+Type}}
+\index{set\+Type@{set\+Type}!ant\+::\+Event@{ant\+::\+Event}}
+\subsubsection[{set\+Type}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::base\+Event\+::set\+Type (
+\begin{DoxyParamCaption}
+\item[{int}]{type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [inherited]}}}\label{classant_1_1base_event_a6d6f1170cb6f01301d137d732c0f2704}
+
+
+Setter para poner el tipo al evento. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & int tipo de evento. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 23 of file Event.\+hpp.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classant_1_1_event_af66dcaa27ed84fbcaa880d80ec206a15}{\index{ant\+::\+Event@{ant\+::\+Event}!attributes@{attributes}}
+\index{attributes@{attributes}!ant\+::\+Event@{ant\+::\+Event}}
+\subsubsection[{attributes}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename... T$>$ std\+::tuple$<$T...$>$ {\bf ant\+::\+Event}$<$ T $>$\+::attributes\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1_event_af66dcaa27ed84fbcaa880d80ec206a15}
+
+
+Definition at line 81 of file Event.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_event_8hpp}{Event.\+hpp}\end{DoxyCompactItemize}

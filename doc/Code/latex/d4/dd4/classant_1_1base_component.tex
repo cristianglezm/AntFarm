@@ -1,0 +1,252 @@
+\hypertarget{classant_1_1base_component}{\section{ant\+:\+:base\+Component Class Reference}
+\label{classant_1_1base_component}\index{ant\+::base\+Component@{ant\+::base\+Component}}
+}
+
+
+Clase base de componente.  
+
+
+
+
+{\ttfamily \#include $<$Component.\+hpp$>$}
+
+
+
+Inheritance diagram for ant\+:\+:base\+Component\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=189pt]{d2/ddb/classant_1_1base_component__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ant\+:\+:base\+Component\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=188pt]{d4/d8a/classant_1_1base_component__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classant_1_1base_component_a661d33dcb2f1c52ef7a8b080be14eb79}{$\sim$base\+Component} ()=default
+\item 
+void \hyperlink{classant_1_1base_component_ae033339154fcd331683f5864741b9bba}{set\+Id} (long int \hyperlink{classant_1_1base_component_a27d4ac318ff9a3aa9e7be2391dbb85be}{id})
+\begin{DoxyCompactList}\small\item\em Setter para el id. \end{DoxyCompactList}\item 
+const long int \& \hyperlink{classant_1_1base_component_a497d74829d42df8216d4ea0c2d351335}{get\+Id} () const 
+\begin{DoxyCompactList}\small\item\em Getter para el id. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename... T$>$ }\\std\+::tuple$<$ T...$>$ \& \hyperlink{classant_1_1base_component_a88bc0531ed99c8978e95257131653efe}{get\+Properties} ()
+\begin{DoxyCompactList}\small\item\em Getter de las propiedades del componente,. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename... T$>$ }\\void \hyperlink{classant_1_1base_component_a85aa249d86676f21407ddc7ef321c6c4}{set\+Properties} (std\+::tuple$<$ T...$>$ properties)
+\begin{DoxyCompactList}\small\item\em Setter de las propiedades del componente. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classant_1_1base_component_a8033039184654f8e1337bc78d3299d57}{base\+Component} (long int \hyperlink{classant_1_1base_component_a27d4ac318ff9a3aa9e7be2391dbb85be}{id})
+\begin{DoxyCompactList}\small\item\em Contructor para la clase derivada. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+long int \hyperlink{classant_1_1base_component_a27d4ac318ff9a3aa9e7be2391dbb85be}{id}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Clase base de componente. 
+
+\begin{DoxyAuthor}{Author}
+Cristian Gonzalez Moreno \href{mailto:cristian.glez.m@gmail.com}{\tt cristian.\+glez.\+m@gmail.\+com} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+
+
+Definition at line 14 of file Component.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classant_1_1base_component_a8033039184654f8e1337bc78d3299d57}{\index{ant\+::base\+Component@{ant\+::base\+Component}!base\+Component@{base\+Component}}
+\index{base\+Component@{base\+Component}!ant\+::base\+Component@{ant\+::base\+Component}}
+\subsubsection[{base\+Component}]{\setlength{\rightskip}{0pt plus 5cm}ant\+::base\+Component\+::base\+Component (
+\begin{DoxyParamCaption}
+\item[{long int}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classant_1_1base_component_a8033039184654f8e1337bc78d3299d57}
+
+
+Contructor para la clase derivada. 
+
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000001}{Todo}]posible cambio en el id de long int a bitset$<$\+N\+Bits$>$\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & long int id del componente. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 23 of file Component.\+hpp.
+
+\hypertarget{classant_1_1base_component_a661d33dcb2f1c52ef7a8b080be14eb79}{\index{ant\+::base\+Component@{ant\+::base\+Component}!````~base\+Component@{$\sim$base\+Component}}
+\index{````~base\+Component@{$\sim$base\+Component}!ant\+::base\+Component@{ant\+::base\+Component}}
+\subsubsection[{$\sim$base\+Component}]{\setlength{\rightskip}{0pt plus 5cm}virtual ant\+::base\+Component\+::$\sim$base\+Component (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}}\label{classant_1_1base_component_a661d33dcb2f1c52ef7a8b080be14eb79}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classant_1_1base_component_a497d74829d42df8216d4ea0c2d351335}{\index{ant\+::base\+Component@{ant\+::base\+Component}!get\+Id@{get\+Id}}
+\index{get\+Id@{get\+Id}!ant\+::base\+Component@{ant\+::base\+Component}}
+\subsubsection[{get\+Id}]{\setlength{\rightskip}{0pt plus 5cm}const long int\& ant\+::base\+Component\+::get\+Id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classant_1_1base_component_a497d74829d42df8216d4ea0c2d351335}
+
+
+Getter para el id. 
+
+\begin{DoxyReturn}{Returns}
+long int id del componente. 
+\end{DoxyReturn}
+
+
+Definition at line 35 of file Component.\+hpp.
+
+\hypertarget{classant_1_1base_component_a88bc0531ed99c8978e95257131653efe}{\index{ant\+::base\+Component@{ant\+::base\+Component}!get\+Properties@{get\+Properties}}
+\index{get\+Properties@{get\+Properties}!ant\+::base\+Component@{ant\+::base\+Component}}
+\subsubsection[{get\+Properties}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename... T$>$ std\+::tuple$<$ T...$>$ \& ant\+::base\+Component\+::get\+Properties (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1base_component_a88bc0531ed99c8978e95257131653efe}
+
+
+Getter de las propiedades del componente,. 
+
+Es necesario especificar los datos que tiene el componente en el orden adecuado. 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em ...\+T} & tipo de datos que contiene el componente en su orden adecuado. 
+\begin{DoxyCode}
+getProperties<float,int,std::string>();
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+std\+::tuple$<$\+T...$>$ la tupla con los datos. 
+\end{DoxyReturn}
+
+
+Definition at line 115 of file Component.\+hpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/dd4/classant_1_1base_component_a88bc0531ed99c8978e95257131653efe_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/dd4/classant_1_1base_component_a88bc0531ed99c8978e95257131653efe_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classant_1_1base_component_ae033339154fcd331683f5864741b9bba}{\index{ant\+::base\+Component@{ant\+::base\+Component}!set\+Id@{set\+Id}}
+\index{set\+Id@{set\+Id}!ant\+::base\+Component@{ant\+::base\+Component}}
+\subsubsection[{set\+Id}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::base\+Component\+::set\+Id (
+\begin{DoxyParamCaption}
+\item[{long int}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classant_1_1base_component_ae033339154fcd331683f5864741b9bba}
+
+
+Setter para el id. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & long int id para el componente. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 30 of file Component.\+hpp.
+
+\hypertarget{classant_1_1base_component_a85aa249d86676f21407ddc7ef321c6c4}{\index{ant\+::base\+Component@{ant\+::base\+Component}!set\+Properties@{set\+Properties}}
+\index{set\+Properties@{set\+Properties}!ant\+::base\+Component@{ant\+::base\+Component}}
+\subsubsection[{set\+Properties}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename... T$>$ void ant\+::base\+Component\+::set\+Properties (
+\begin{DoxyParamCaption}
+\item[{std\+::tuple$<$ T...$>$}]{properties}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1base_component_a85aa249d86676f21407ddc7ef321c6c4}
+
+
+Setter de las propiedades del componente. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em ...\+T} & tipo de datos que contiene el componente en su orden adecuado. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em properties} & ...T tipo de datos 
+\begin{DoxyCode}
+setProperties<float,int,int>(std::tuple<float,int,int>(2.4,5,6));
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 109 of file Component.\+hpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/dd4/classant_1_1base_component_a85aa249d86676f21407ddc7ef321c6c4_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classant_1_1base_component_a27d4ac318ff9a3aa9e7be2391dbb85be}{\index{ant\+::base\+Component@{ant\+::base\+Component}!id@{id}}
+\index{id@{id}!ant\+::base\+Component@{ant\+::base\+Component}}
+\subsubsection[{id}]{\setlength{\rightskip}{0pt plus 5cm}long int ant\+::base\+Component\+::id\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1base_component_a27d4ac318ff9a3aa9e7be2391dbb85be}
+
+
+Definition at line 60 of file Component.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_component_8hpp}{Component.\+hpp}\end{DoxyCompactItemize}

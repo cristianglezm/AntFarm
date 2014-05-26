@@ -1,0 +1,463 @@
+\hypertarget{classant_1_1_utils_1_1_quadtree}{\section{ant\+:\+:Utils\+:\+:Quadtree Class Reference}
+\label{classant_1_1_utils_1_1_quadtree}\index{ant\+::\+Utils\+::\+Quadtree@{ant\+::\+Utils\+::\+Quadtree}}
+}
+
+
+Clase para reducir el numero de test de collisiones.  
+
+
+
+
+{\ttfamily \#include $<$Quadtree.\+hpp$>$}
+
+
+
+Collaboration diagram for ant\+:\+:Utils\+:\+:Quadtree\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=181pt]{d0/d1a/classant_1_1_utils_1_1_quadtree__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::list$<$ \hyperlink{classant_1_1_entity}{Entity} $\ast$ $>$ \hyperlink{classant_1_1_utils_1_1_quadtree_a744668597e9815bc6cdeb44a48f527dd}{list}
+\begin{DoxyCompactList}\small\item\em Contenedor que usa el \hyperlink{classant_1_1_utils_1_1_quadtree}{Quadtree}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classant_1_1_utils_1_1_quadtree_a2dc005f81ddcd318dac8d1d53460e3ff}{Quadtree} (sf\+::\+Float\+Rect \hyperlink{classant_1_1_utils_1_1_quadtree_a1b9aecf327adee874486c11a56ce5334}{bounds})
+\begin{DoxyCompactList}\small\item\em Constructor principal, necesita que se especifique el rectangulo que Ocupara. \end{DoxyCompactList}\item 
+void \hyperlink{classant_1_1_utils_1_1_quadtree_af1f8e490445ee493d7639dc6f621bdfc}{insert} (\hyperlink{classant_1_1_entity}{Entity} $\ast$e)
+\begin{DoxyCompactList}\small\item\em Agrega un puntero a una entidad, la posiciona en el nodo correcto, si no cabe en ningun nodo inferior se mantiene en el padre. \end{DoxyCompactList}\item 
+void \hyperlink{classant_1_1_utils_1_1_quadtree_aace6744ed7023825a1863f9953421a4b}{clear} ()
+\begin{DoxyCompactList}\small\item\em Limpia el quadtree y sus nodos. \end{DoxyCompactList}\item 
+\hyperlink{classant_1_1_utils_1_1_quadtree_a744668597e9815bc6cdeb44a48f527dd}{list} \hyperlink{classant_1_1_utils_1_1_quadtree_acef35673069f1edbafd93579e0a64df7}{retrieve} (\hyperlink{classant_1_1_utils_1_1_quadtree_a744668597e9815bc6cdeb44a48f527dd}{list} \&\hyperlink{classant_1_1_utils_1_1_quadtree_af71256d6656bfde8f416e5a34bc71607}{entities}, \hyperlink{classant_1_1_entity}{Entity} $\ast$e)
+\begin{DoxyCompactList}\small\item\em Agrega las entidades del mismo sector que la entidad especificada a la lista(la misma entidad especificada es agregada tambien) \end{DoxyCompactList}\item 
+void \hyperlink{classant_1_1_utils_1_1_quadtree_acb64f3de7ac64139734c78c074a5509c}{render} (sf\+::\+Render\+Window \&win)
+\begin{DoxyCompactList}\small\item\em Metodo para ver las divisiones en la pantalla. \end{DoxyCompactList}\item 
+\hyperlink{classant_1_1_utils_1_1_quadtree_a8d8e7d44a86d3a453684e4ead13ac8cb}{$\sim$\+Quadtree} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classant_1_1_utils_1_1_quadtree_ae48089152524a9c3ec84184bcc8a45a7}{Quadtree} (int \hyperlink{classant_1_1_utils_1_1_quadtree_afae97d3832d54987e09661dd7c14cfc6}{level}, sf\+::\+Float\+Rect \hyperlink{classant_1_1_utils_1_1_quadtree_a1b9aecf327adee874486c11a56ce5334}{bounds})
+\begin{DoxyCompactList}\small\item\em Constructor privado para la division de los nodos. \end{DoxyCompactList}\item 
+void \hyperlink{classant_1_1_utils_1_1_quadtree_abbe98f5025b0127b91c97142237f13db}{split} ()
+\begin{DoxyCompactList}\small\item\em Metodo para dividir el quadtree. \end{DoxyCompactList}\item 
+int \hyperlink{classant_1_1_utils_1_1_quadtree_a9a6fd9ec9d64fbb7e272828159241445}{get\+Index} (\hyperlink{classant_1_1_entity}{Entity} $\ast$e)
+\begin{DoxyCompactList}\small\item\em Obtiene el indice(nodo donde esta) de la entidad especificada. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \hyperlink{classant_1_1_utils_1_1_quadtree_afae97d3832d54987e09661dd7c14cfc6}{level}
+\item 
+std\+::array$<$ std\+::unique\+\_\+ptr\\*
+$<$ \hyperlink{classant_1_1_utils_1_1_quadtree}{Quadtree} $>$, 4 $>$ \hyperlink{classant_1_1_utils_1_1_quadtree_a188cbcea719019bfefe8adb050a51718}{nodes}
+\item 
+sf\+::\+Float\+Rect \hyperlink{classant_1_1_utils_1_1_quadtree_a1b9aecf327adee874486c11a56ce5334}{bounds}
+\item 
+\hyperlink{classant_1_1_utils_1_1_quadtree_a744668597e9815bc6cdeb44a48f527dd}{list} \hyperlink{classant_1_1_utils_1_1_quadtree_af71256d6656bfde8f416e5a34bc71607}{entities}
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const unsigned int \hyperlink{classant_1_1_utils_1_1_quadtree_af040bf0509e7bf6cecd9b7d5c7cf5c0b}{M\+A\+X\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y} = 10
+\item 
+static const unsigned int \hyperlink{classant_1_1_utils_1_1_quadtree_a5c8873d75fa20002086f506ecfcf8354}{M\+A\+X\+\_\+\+L\+E\+V\+E\+L} = 1000
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Clase para reducir el numero de test de collisiones. 
+
+\begin{DoxyAuthor}{Author}
+Cristian Glez \href{mailto:Cristian.glez.m@gmail.com}{\tt Cristian.\+glez.\+m@gmail.\+com} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000003}{Todo}]Posible cambio por Quadtree$<$\+T$>$ tarda 1ms mas. \end{DoxyRefDesc}
+
+
+Definition at line 21 of file Quadtree.\+hpp.
+
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classant_1_1_utils_1_1_quadtree_a744668597e9815bc6cdeb44a48f527dd}{\index{ant\+::\+Utils\+::\+Quadtree@{ant\+::\+Utils\+::\+Quadtree}!list@{list}}
+\index{list@{list}!ant\+::\+Utils\+::\+Quadtree@{ant\+::\+Utils\+::\+Quadtree}}
+\subsubsection[{list}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::list$<${\bf Entity}$\ast$$>$ {\bf ant\+::\+Utils\+::\+Quadtree\+::list}}}\label{classant_1_1_utils_1_1_quadtree_a744668597e9815bc6cdeb44a48f527dd}
+
+
+Contenedor que usa el \hyperlink{classant_1_1_utils_1_1_quadtree}{Quadtree}. 
+
+
+
+Definition at line 26 of file Quadtree.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classant_1_1_utils_1_1_quadtree_a2dc005f81ddcd318dac8d1d53460e3ff}{\index{ant\+::\+Utils\+::\+Quadtree@{ant\+::\+Utils\+::\+Quadtree}!Quadtree@{Quadtree}}
+\index{Quadtree@{Quadtree}!ant\+::\+Utils\+::\+Quadtree@{ant\+::\+Utils\+::\+Quadtree}}
+\subsubsection[{Quadtree}]{\setlength{\rightskip}{0pt plus 5cm}ant\+::\+Utils\+::\+Quadtree\+::\+Quadtree (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Float\+Rect}]{bounds}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_utils_1_1_quadtree_a2dc005f81ddcd318dac8d1d53460e3ff}
+
+
+Constructor principal, necesita que se especifique el rectangulo que Ocupara. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bounds} & sf\+::\+Float\+Rect Rectangulo marcando la zona de este quadtree. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 52 of file Quadtree.\+cpp.
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d94/classant_1_1_utils_1_1_quadtree_a2dc005f81ddcd318dac8d1d53460e3ff_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classant_1_1_utils_1_1_quadtree_a8d8e7d44a86d3a453684e4ead13ac8cb}{\index{ant\+::\+Utils\+::\+Quadtree@{ant\+::\+Utils\+::\+Quadtree}!````~Quadtree@{$\sim$\+Quadtree}}
+\index{````~Quadtree@{$\sim$\+Quadtree}!ant\+::\+Utils\+::\+Quadtree@{ant\+::\+Utils\+::\+Quadtree}}
+\subsubsection[{$\sim$\+Quadtree}]{\setlength{\rightskip}{0pt plus 5cm}ant\+::\+Utils\+::\+Quadtree\+::$\sim$\+Quadtree (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_utils_1_1_quadtree_a8d8e7d44a86d3a453684e4ead13ac8cb}
+
+
+Definition at line 126 of file Quadtree.\+cpp.
+
+\hypertarget{classant_1_1_utils_1_1_quadtree_ae48089152524a9c3ec84184bcc8a45a7}{\index{ant\+::\+Utils\+::\+Quadtree@{ant\+::\+Utils\+::\+Quadtree}!Quadtree@{Quadtree}}
+\index{Quadtree@{Quadtree}!ant\+::\+Utils\+::\+Quadtree@{ant\+::\+Utils\+::\+Quadtree}}
+\subsubsection[{Quadtree}]{\setlength{\rightskip}{0pt plus 5cm}ant\+::\+Utils\+::\+Quadtree\+::\+Quadtree (
+\begin{DoxyParamCaption}
+\item[{int}]{level, }
+\item[{sf\+::\+Float\+Rect}]{bounds}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1_utils_1_1_quadtree_ae48089152524a9c3ec84184bcc8a45a7}
+
+
+Constructor privado para la division de los nodos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em level} & int numero del nivel. \\
+\hline
+{\em bounds} & sf\+::\+Float\+Rect rectangulo de la division. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 44 of file Quadtree.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classant_1_1_utils_1_1_quadtree_aace6744ed7023825a1863f9953421a4b}{\index{ant\+::\+Utils\+::\+Quadtree@{ant\+::\+Utils\+::\+Quadtree}!clear@{clear}}
+\index{clear@{clear}!ant\+::\+Utils\+::\+Quadtree@{ant\+::\+Utils\+::\+Quadtree}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+Utils\+::\+Quadtree\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_utils_1_1_quadtree_aace6744ed7023825a1863f9953421a4b}
+
+
+Limpia el quadtree y sus nodos. 
+
+
+
+Definition at line 86 of file Quadtree.\+cpp.
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{d6/d94/classant_1_1_utils_1_1_quadtree_aace6744ed7023825a1863f9953421a4b_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classant_1_1_utils_1_1_quadtree_a9a6fd9ec9d64fbb7e272828159241445}{\index{ant\+::\+Utils\+::\+Quadtree@{ant\+::\+Utils\+::\+Quadtree}!get\+Index@{get\+Index}}
+\index{get\+Index@{get\+Index}!ant\+::\+Utils\+::\+Quadtree@{ant\+::\+Utils\+::\+Quadtree}}
+\subsubsection[{get\+Index}]{\setlength{\rightskip}{0pt plus 5cm}int ant\+::\+Utils\+::\+Quadtree\+::get\+Index (
+\begin{DoxyParamCaption}
+\item[{{\bf Entity} $\ast$}]{e}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1_utils_1_1_quadtree_a9a6fd9ec9d64fbb7e272828159241445}
+
+
+Obtiene el indice(nodo donde esta) de la entidad especificada. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Entity$\ast$ Entidad para sacar su indice. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int devuelve el indice(0-\/3) -\/1 si esta en el mismo. 
+\end{DoxyReturn}
+
+
+Definition at line 16 of file Quadtree.\+cpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d94/classant_1_1_utils_1_1_quadtree_a9a6fd9ec9d64fbb7e272828159241445_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d94/classant_1_1_utils_1_1_quadtree_a9a6fd9ec9d64fbb7e272828159241445_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classant_1_1_utils_1_1_quadtree_af1f8e490445ee493d7639dc6f621bdfc}{\index{ant\+::\+Utils\+::\+Quadtree@{ant\+::\+Utils\+::\+Quadtree}!insert@{insert}}
+\index{insert@{insert}!ant\+::\+Utils\+::\+Quadtree@{ant\+::\+Utils\+::\+Quadtree}}
+\subsubsection[{insert}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+Utils\+::\+Quadtree\+::insert (
+\begin{DoxyParamCaption}
+\item[{{\bf Entity} $\ast$}]{e}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_utils_1_1_quadtree_af1f8e490445ee493d7639dc6f621bdfc}
+
+
+Agrega un puntero a una entidad, la posiciona en el nodo correcto, si no cabe en ningun nodo inferior se mantiene en el padre. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & \hyperlink{classant_1_1_entity}{Entity} $\ast$ \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 60 of file Quadtree.\+cpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d94/classant_1_1_utils_1_1_quadtree_af1f8e490445ee493d7639dc6f621bdfc_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{d6/d94/classant_1_1_utils_1_1_quadtree_af1f8e490445ee493d7639dc6f621bdfc_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classant_1_1_utils_1_1_quadtree_acb64f3de7ac64139734c78c074a5509c}{\index{ant\+::\+Utils\+::\+Quadtree@{ant\+::\+Utils\+::\+Quadtree}!render@{render}}
+\index{render@{render}!ant\+::\+Utils\+::\+Quadtree@{ant\+::\+Utils\+::\+Quadtree}}
+\subsubsection[{render}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+Utils\+::\+Quadtree\+::render (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Render\+Window \&}]{win}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_utils_1_1_quadtree_acb64f3de7ac64139734c78c074a5509c}
+
+
+Metodo para ver las divisiones en la pantalla. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em win} & sf\+::\+Render\+Window\& ventana a la cual dibujar. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 105 of file Quadtree.\+cpp.
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{d6/d94/classant_1_1_utils_1_1_quadtree_acb64f3de7ac64139734c78c074a5509c_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classant_1_1_utils_1_1_quadtree_acef35673069f1edbafd93579e0a64df7}{\index{ant\+::\+Utils\+::\+Quadtree@{ant\+::\+Utils\+::\+Quadtree}!retrieve@{retrieve}}
+\index{retrieve@{retrieve}!ant\+::\+Utils\+::\+Quadtree@{ant\+::\+Utils\+::\+Quadtree}}
+\subsubsection[{retrieve}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Quadtree\+::list} ant\+::\+Utils\+::\+Quadtree\+::retrieve (
+\begin{DoxyParamCaption}
+\item[{{\bf list} \&}]{entities, }
+\item[{{\bf Entity} $\ast$}]{e}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_utils_1_1_quadtree_acef35673069f1edbafd93579e0a64df7}
+
+
+Agrega las entidades del mismo sector que la entidad especificada a la lista(la misma entidad especificada es agregada tambien) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em entities} & \hyperlink{classant_1_1_utils_1_1_quadtree_a744668597e9815bc6cdeb44a48f527dd}{Quadtree\+::list}\& lista a la que agregan las entidades del mismo sector de la especificada. \\
+\hline
+{\em e} & \hyperlink{classant_1_1_entity}{Entity} $\ast$ Entidad a comprobar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classant_1_1_utils_1_1_quadtree_a744668597e9815bc6cdeb44a48f527dd}{Quadtree\+::list} lista de entidades 
+\end{DoxyReturn}
+
+
+Definition at line 95 of file Quadtree.\+cpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d94/classant_1_1_utils_1_1_quadtree_acef35673069f1edbafd93579e0a64df7_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{d6/d94/classant_1_1_utils_1_1_quadtree_acef35673069f1edbafd93579e0a64df7_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classant_1_1_utils_1_1_quadtree_abbe98f5025b0127b91c97142237f13db}{\index{ant\+::\+Utils\+::\+Quadtree@{ant\+::\+Utils\+::\+Quadtree}!split@{split}}
+\index{split@{split}!ant\+::\+Utils\+::\+Quadtree@{ant\+::\+Utils\+::\+Quadtree}}
+\subsubsection[{split}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+Utils\+::\+Quadtree\+::split (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1_utils_1_1_quadtree_abbe98f5025b0127b91c97142237f13db}
+
+
+Metodo para dividir el quadtree. 
+
+Inicializa los nodos del quadtree y se empiezan a usar. 
+
+Definition at line 6 of file Quadtree.\+cpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{d6/d94/classant_1_1_utils_1_1_quadtree_abbe98f5025b0127b91c97142237f13db_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d94/classant_1_1_utils_1_1_quadtree_abbe98f5025b0127b91c97142237f13db_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classant_1_1_utils_1_1_quadtree_a1b9aecf327adee874486c11a56ce5334}{\index{ant\+::\+Utils\+::\+Quadtree@{ant\+::\+Utils\+::\+Quadtree}!bounds@{bounds}}
+\index{bounds@{bounds}!ant\+::\+Utils\+::\+Quadtree@{ant\+::\+Utils\+::\+Quadtree}}
+\subsubsection[{bounds}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Float\+Rect ant\+::\+Utils\+::\+Quadtree\+::bounds\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1_utils_1_1_quadtree_a1b9aecf327adee874486c11a56ce5334}
+
+
+Definition at line 66 of file Quadtree.\+hpp.
+
+\hypertarget{classant_1_1_utils_1_1_quadtree_af71256d6656bfde8f416e5a34bc71607}{\index{ant\+::\+Utils\+::\+Quadtree@{ant\+::\+Utils\+::\+Quadtree}!entities@{entities}}
+\index{entities@{entities}!ant\+::\+Utils\+::\+Quadtree@{ant\+::\+Utils\+::\+Quadtree}}
+\subsubsection[{entities}]{\setlength{\rightskip}{0pt plus 5cm}{\bf list} ant\+::\+Utils\+::\+Quadtree\+::entities\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1_utils_1_1_quadtree_af71256d6656bfde8f416e5a34bc71607}
+
+
+Definition at line 67 of file Quadtree.\+hpp.
+
+\hypertarget{classant_1_1_utils_1_1_quadtree_afae97d3832d54987e09661dd7c14cfc6}{\index{ant\+::\+Utils\+::\+Quadtree@{ant\+::\+Utils\+::\+Quadtree}!level@{level}}
+\index{level@{level}!ant\+::\+Utils\+::\+Quadtree@{ant\+::\+Utils\+::\+Quadtree}}
+\subsubsection[{level}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int ant\+::\+Utils\+::\+Quadtree\+::level\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1_utils_1_1_quadtree_afae97d3832d54987e09661dd7c14cfc6}
+
+
+Definition at line 64 of file Quadtree.\+hpp.
+
+\hypertarget{classant_1_1_utils_1_1_quadtree_af040bf0509e7bf6cecd9b7d5c7cf5c0b}{\index{ant\+::\+Utils\+::\+Quadtree@{ant\+::\+Utils\+::\+Quadtree}!M\+A\+X\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y@{M\+A\+X\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y}}
+\index{M\+A\+X\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y@{M\+A\+X\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y}!ant\+::\+Utils\+::\+Quadtree@{ant\+::\+Utils\+::\+Quadtree}}
+\subsubsection[{M\+A\+X\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned int ant\+::\+Utils\+::\+Quadtree\+::\+M\+A\+X\+\_\+\+C\+A\+P\+A\+C\+I\+T\+Y = 10\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classant_1_1_utils_1_1_quadtree_af040bf0509e7bf6cecd9b7d5c7cf5c0b}
+
+
+Definition at line 62 of file Quadtree.\+hpp.
+
+\hypertarget{classant_1_1_utils_1_1_quadtree_a5c8873d75fa20002086f506ecfcf8354}{\index{ant\+::\+Utils\+::\+Quadtree@{ant\+::\+Utils\+::\+Quadtree}!M\+A\+X\+\_\+\+L\+E\+V\+E\+L@{M\+A\+X\+\_\+\+L\+E\+V\+E\+L}}
+\index{M\+A\+X\+\_\+\+L\+E\+V\+E\+L@{M\+A\+X\+\_\+\+L\+E\+V\+E\+L}!ant\+::\+Utils\+::\+Quadtree@{ant\+::\+Utils\+::\+Quadtree}}
+\subsubsection[{M\+A\+X\+\_\+\+L\+E\+V\+E\+L}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned int ant\+::\+Utils\+::\+Quadtree\+::\+M\+A\+X\+\_\+\+L\+E\+V\+E\+L = 1000\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}}\label{classant_1_1_utils_1_1_quadtree_a5c8873d75fa20002086f506ecfcf8354}
+
+
+Definition at line 63 of file Quadtree.\+hpp.
+
+\hypertarget{classant_1_1_utils_1_1_quadtree_a188cbcea719019bfefe8adb050a51718}{\index{ant\+::\+Utils\+::\+Quadtree@{ant\+::\+Utils\+::\+Quadtree}!nodes@{nodes}}
+\index{nodes@{nodes}!ant\+::\+Utils\+::\+Quadtree@{ant\+::\+Utils\+::\+Quadtree}}
+\subsubsection[{nodes}]{\setlength{\rightskip}{0pt plus 5cm}std\+::array$<$std\+::unique\+\_\+ptr$<${\bf Quadtree}$>$,4$>$ ant\+::\+Utils\+::\+Quadtree\+::nodes\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1_utils_1_1_quadtree_a188cbcea719019bfefe8adb050a51718}
+
+
+Definition at line 65 of file Quadtree.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_quadtree_8hpp}{Quadtree.\+hpp}\item 
+\hyperlink{_quadtree_8cpp}{Quadtree.\+cpp}\end{DoxyCompactItemize}

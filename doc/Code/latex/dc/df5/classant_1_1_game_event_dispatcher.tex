@@ -1,0 +1,218 @@
+\hypertarget{classant_1_1_game_event_dispatcher}{\section{ant\+:\+:Game\+Event\+Dispatcher Class Reference}
+\label{classant_1_1_game_event_dispatcher}\index{ant\+::\+Game\+Event\+Dispatcher@{ant\+::\+Game\+Event\+Dispatcher}}
+}
+
+
+Clase encargada de processar eventos.  
+
+
+
+
+{\ttfamily \#include $<$Game\+Event\+Dispatcher.\+hpp$>$}
+
+
+
+Collaboration diagram for ant\+:\+:Game\+Event\+Dispatcher\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{da/da7/classant_1_1_game_event_dispatcher__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classant_1_1_game_event_dispatcher_a5240dcf9c2048e9ac70ddf7a3d938c2f}{Game\+Event\+Dispatcher} ()
+\begin{DoxyCompactList}\small\item\em Constructor por defecto. \end{DoxyCompactList}\item 
+bool \hyperlink{classant_1_1_game_event_dispatcher_a63b9ec91ca5a593b7217a5e74e984459}{Dispatch\+Event} (std\+::shared\+\_\+ptr$<$ \hyperlink{classant_1_1base_event}{base\+Event} $>$ e)
+\begin{DoxyCompactList}\small\item\em Procesa el evento y lo envia a los observadores que esten subscritos. \end{DoxyCompactList}\item 
+\hyperlink{classant_1_1_game_event_dispatcher_a7ebe7e59248718a0bd7e2d3c5daa5828}{$\sim$\+Game\+Event\+Dispatcher} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classant_1_1_subject}{Subject} \hyperlink{classant_1_1_game_event_dispatcher_a610093857ac94ea9c91d8896928424c4}{on\+Collision}
+\begin{DoxyCompactList}\small\item\em lista de observadores del evento on\+Collision. \end{DoxyCompactList}\item 
+\hyperlink{classant_1_1_subject}{Subject} \hyperlink{classant_1_1_game_event_dispatcher_a18ce79039513ba4a440bf0f16862932b}{spawn\+Events}
+\begin{DoxyCompactList}\small\item\em Eventos para el sistema de creacion de entidades. \end{DoxyCompactList}\item 
+\hyperlink{classant_1_1_subject}{Subject} \hyperlink{classant_1_1_game_event_dispatcher_ac3aff44451719b319fbdd9cbba0e9e96}{Click\+Events}
+\begin{DoxyCompactList}\small\item\em Eventos de click dan evento con un punto. \end{DoxyCompactList}\item 
+\hyperlink{classant_1_1_subject}{Subject} \hyperlink{classant_1_1_game_event_dispatcher_a4ad76b52e706a61ca46d274b9fb50269}{Change\+Command}
+\begin{DoxyCompactList}\small\item\em Envia un Comando al sistema de construccion. \end{DoxyCompactList}\item 
+\hyperlink{classant_1_1_subject}{Subject} \hyperlink{classant_1_1_game_event_dispatcher_a109269d2769c69e6ffdd83ac777c8e56}{out\+Map}
+\begin{DoxyCompactList}\small\item\em Envia una entidad que ha salido del mapa. \end{DoxyCompactList}\item 
+\hyperlink{classant_1_1_subject}{Subject} \hyperlink{classant_1_1_game_event_dispatcher_a0ea1a629f7efdd3f7002530c6148c7e3}{Level\+Complete}
+\begin{DoxyCompactList}\small\item\em El sistema de out envia este evento. \end{DoxyCompactList}\item 
+\hyperlink{classant_1_1_subject}{Subject} \hyperlink{classant_1_1_game_event_dispatcher_a0a9bbdc52262860271909d1461e7b451}{Level\+Failed}
+\begin{DoxyCompactList}\small\item\em El sistema de out envia este evento. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Clase encargada de processar eventos. 
+
+Esta clase contiene a los eventos a los cuales se pueden suscribir los observadores.
+
+\begin{DoxyAuthor}{Author}
+Cristian Gonzalez Moreno \href{mailto:Cristian.glez.m@gmail.com}{\tt Cristian.\+glez.\+m@gmail.\+com} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+
+
+Definition at line 16 of file Game\+Event\+Dispatcher.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classant_1_1_game_event_dispatcher_a5240dcf9c2048e9ac70ddf7a3d938c2f}{\index{ant\+::\+Game\+Event\+Dispatcher@{ant\+::\+Game\+Event\+Dispatcher}!Game\+Event\+Dispatcher@{Game\+Event\+Dispatcher}}
+\index{Game\+Event\+Dispatcher@{Game\+Event\+Dispatcher}!ant\+::\+Game\+Event\+Dispatcher@{ant\+::\+Game\+Event\+Dispatcher}}
+\subsubsection[{Game\+Event\+Dispatcher}]{\setlength{\rightskip}{0pt plus 5cm}ant\+::\+Game\+Event\+Dispatcher\+::\+Game\+Event\+Dispatcher (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_game_event_dispatcher_a5240dcf9c2048e9ac70ddf7a3d938c2f}
+
+
+Constructor por defecto. 
+
+
+
+Definition at line 3 of file Game\+Event\+Dispatcher.\+cpp.
+
+\hypertarget{classant_1_1_game_event_dispatcher_a7ebe7e59248718a0bd7e2d3c5daa5828}{\index{ant\+::\+Game\+Event\+Dispatcher@{ant\+::\+Game\+Event\+Dispatcher}!````~Game\+Event\+Dispatcher@{$\sim$\+Game\+Event\+Dispatcher}}
+\index{````~Game\+Event\+Dispatcher@{$\sim$\+Game\+Event\+Dispatcher}!ant\+::\+Game\+Event\+Dispatcher@{ant\+::\+Game\+Event\+Dispatcher}}
+\subsubsection[{$\sim$\+Game\+Event\+Dispatcher}]{\setlength{\rightskip}{0pt plus 5cm}ant\+::\+Game\+Event\+Dispatcher\+::$\sim$\+Game\+Event\+Dispatcher (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_game_event_dispatcher_a7ebe7e59248718a0bd7e2d3c5daa5828}
+
+
+Definition at line 34 of file Game\+Event\+Dispatcher.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classant_1_1_game_event_dispatcher_a63b9ec91ca5a593b7217a5e74e984459}{\index{ant\+::\+Game\+Event\+Dispatcher@{ant\+::\+Game\+Event\+Dispatcher}!Dispatch\+Event@{Dispatch\+Event}}
+\index{Dispatch\+Event@{Dispatch\+Event}!ant\+::\+Game\+Event\+Dispatcher@{ant\+::\+Game\+Event\+Dispatcher}}
+\subsubsection[{Dispatch\+Event}]{\setlength{\rightskip}{0pt plus 5cm}bool ant\+::\+Game\+Event\+Dispatcher\+::\+Dispatch\+Event (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ {\bf base\+Event} $>$}]{e}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_game_event_dispatcher_a63b9ec91ca5a593b7217a5e74e984459}
+
+
+Procesa el evento y lo envia a los observadores que esten subscritos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & std\+::shared\+\_\+ptr$<$base\+Event$>$ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Definition at line 6 of file Game\+Event\+Dispatcher.\+cpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/df5/classant_1_1_game_event_dispatcher_a63b9ec91ca5a593b7217a5e74e984459_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classant_1_1_game_event_dispatcher_a4ad76b52e706a61ca46d274b9fb50269}{\index{ant\+::\+Game\+Event\+Dispatcher@{ant\+::\+Game\+Event\+Dispatcher}!Change\+Command@{Change\+Command}}
+\index{Change\+Command@{Change\+Command}!ant\+::\+Game\+Event\+Dispatcher@{ant\+::\+Game\+Event\+Dispatcher}}
+\subsubsection[{Change\+Command}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Subject} ant\+::\+Game\+Event\+Dispatcher\+::\+Change\+Command}}\label{classant_1_1_game_event_dispatcher_a4ad76b52e706a61ca46d274b9fb50269}
+
+
+Envia un Comando al sistema de construccion. 
+
+
+
+Definition at line 37 of file Game\+Event\+Dispatcher.\+hpp.
+
+\hypertarget{classant_1_1_game_event_dispatcher_ac3aff44451719b319fbdd9cbba0e9e96}{\index{ant\+::\+Game\+Event\+Dispatcher@{ant\+::\+Game\+Event\+Dispatcher}!Click\+Events@{Click\+Events}}
+\index{Click\+Events@{Click\+Events}!ant\+::\+Game\+Event\+Dispatcher@{ant\+::\+Game\+Event\+Dispatcher}}
+\subsubsection[{Click\+Events}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Subject} ant\+::\+Game\+Event\+Dispatcher\+::\+Click\+Events}}\label{classant_1_1_game_event_dispatcher_ac3aff44451719b319fbdd9cbba0e9e96}
+
+
+Eventos de click dan evento con un punto. 
+
+
+
+Definition at line 33 of file Game\+Event\+Dispatcher.\+hpp.
+
+\hypertarget{classant_1_1_game_event_dispatcher_a0ea1a629f7efdd3f7002530c6148c7e3}{\index{ant\+::\+Game\+Event\+Dispatcher@{ant\+::\+Game\+Event\+Dispatcher}!Level\+Complete@{Level\+Complete}}
+\index{Level\+Complete@{Level\+Complete}!ant\+::\+Game\+Event\+Dispatcher@{ant\+::\+Game\+Event\+Dispatcher}}
+\subsubsection[{Level\+Complete}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Subject} ant\+::\+Game\+Event\+Dispatcher\+::\+Level\+Complete}}\label{classant_1_1_game_event_dispatcher_a0ea1a629f7efdd3f7002530c6148c7e3}
+
+
+El sistema de out envia este evento. 
+
+
+
+Definition at line 45 of file Game\+Event\+Dispatcher.\+hpp.
+
+\hypertarget{classant_1_1_game_event_dispatcher_a0a9bbdc52262860271909d1461e7b451}{\index{ant\+::\+Game\+Event\+Dispatcher@{ant\+::\+Game\+Event\+Dispatcher}!Level\+Failed@{Level\+Failed}}
+\index{Level\+Failed@{Level\+Failed}!ant\+::\+Game\+Event\+Dispatcher@{ant\+::\+Game\+Event\+Dispatcher}}
+\subsubsection[{Level\+Failed}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Subject} ant\+::\+Game\+Event\+Dispatcher\+::\+Level\+Failed}}\label{classant_1_1_game_event_dispatcher_a0a9bbdc52262860271909d1461e7b451}
+
+
+El sistema de out envia este evento. 
+
+
+
+Definition at line 49 of file Game\+Event\+Dispatcher.\+hpp.
+
+\hypertarget{classant_1_1_game_event_dispatcher_a610093857ac94ea9c91d8896928424c4}{\index{ant\+::\+Game\+Event\+Dispatcher@{ant\+::\+Game\+Event\+Dispatcher}!on\+Collision@{on\+Collision}}
+\index{on\+Collision@{on\+Collision}!ant\+::\+Game\+Event\+Dispatcher@{ant\+::\+Game\+Event\+Dispatcher}}
+\subsubsection[{on\+Collision}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Subject} ant\+::\+Game\+Event\+Dispatcher\+::on\+Collision}}\label{classant_1_1_game_event_dispatcher_a610093857ac94ea9c91d8896928424c4}
+
+
+lista de observadores del evento on\+Collision. 
+
+
+
+Definition at line 25 of file Game\+Event\+Dispatcher.\+hpp.
+
+\hypertarget{classant_1_1_game_event_dispatcher_a109269d2769c69e6ffdd83ac777c8e56}{\index{ant\+::\+Game\+Event\+Dispatcher@{ant\+::\+Game\+Event\+Dispatcher}!out\+Map@{out\+Map}}
+\index{out\+Map@{out\+Map}!ant\+::\+Game\+Event\+Dispatcher@{ant\+::\+Game\+Event\+Dispatcher}}
+\subsubsection[{out\+Map}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Subject} ant\+::\+Game\+Event\+Dispatcher\+::out\+Map}}\label{classant_1_1_game_event_dispatcher_a109269d2769c69e6ffdd83ac777c8e56}
+
+
+Envia una entidad que ha salido del mapa. 
+
+
+
+Definition at line 41 of file Game\+Event\+Dispatcher.\+hpp.
+
+\hypertarget{classant_1_1_game_event_dispatcher_a18ce79039513ba4a440bf0f16862932b}{\index{ant\+::\+Game\+Event\+Dispatcher@{ant\+::\+Game\+Event\+Dispatcher}!spawn\+Events@{spawn\+Events}}
+\index{spawn\+Events@{spawn\+Events}!ant\+::\+Game\+Event\+Dispatcher@{ant\+::\+Game\+Event\+Dispatcher}}
+\subsubsection[{spawn\+Events}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Subject} ant\+::\+Game\+Event\+Dispatcher\+::spawn\+Events}}\label{classant_1_1_game_event_dispatcher_a18ce79039513ba4a440bf0f16862932b}
+
+
+Eventos para el sistema de creacion de entidades. 
+
+
+
+Definition at line 29 of file Game\+Event\+Dispatcher.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_game_event_dispatcher_8hpp}{Game\+Event\+Dispatcher.\+hpp}\item 
+\hyperlink{_game_event_dispatcher_8cpp}{Game\+Event\+Dispatcher.\+cpp}\end{DoxyCompactItemize}

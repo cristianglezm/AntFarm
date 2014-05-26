@@ -1,0 +1,382 @@
+\hypertarget{classant_1_1_entity_manager}{\section{ant\+:\+:Entity\+Manager Class Reference}
+\label{classant_1_1_entity_manager}\index{ant\+::\+Entity\+Manager@{ant\+::\+Entity\+Manager}}
+}
+
+
+Clase Para manejar las entidades.  
+
+
+
+
+{\ttfamily \#include $<$Entity\+Manager.\+hpp$>$}
+
+
+
+Collaboration diagram for ant\+:\+:Entity\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=181pt]{d3/d98/classant_1_1_entity_manager__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::list\\*
+$<$ std\+::unique\+\_\+ptr$<$ \hyperlink{classant_1_1_entity}{Entity} $>$\\*
+ $>$\+::\hyperlink{classant_1_1_entity_manager_a60b5d97167e38d66d7d245a59735c1b5}{iterator} \hyperlink{classant_1_1_entity_manager_a60b5d97167e38d66d7d245a59735c1b5}{iterator}
+\begin{DoxyCompactList}\small\item\em Iterador del \hyperlink{classant_1_1_entity_manager}{Entity\+Manager}. \end{DoxyCompactList}\item 
+typedef std\+::list\\*
+$<$ std\+::unique\+\_\+ptr$<$ \hyperlink{classant_1_1_entity}{Entity} $>$ $>$ \hyperlink{classant_1_1_entity_manager_a473e6ef8480bf2998f7c4d03e5ed20fc}{list}
+\begin{DoxyCompactList}\small\item\em Contenedor utilizado por el \hyperlink{classant_1_1_entity_manager}{Entity\+Manager}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classant_1_1_entity_manager_a9d98e7cba15c2663b79df62f65b39a8f}{Entity\+Manager} ()
+\begin{DoxyCompactList}\small\item\em Constructor por defecto. \end{DoxyCompactList}\item 
+void \hyperlink{classant_1_1_entity_manager_af8cba501bcdac99f43f12047c8f857c4}{add\+Entity} (std\+::unique\+\_\+ptr$<$ \hyperlink{classant_1_1_entity}{Entity} $>$ e)
+\begin{DoxyCompactList}\small\item\em Añade una entidad al manager. \end{DoxyCompactList}\item 
+void \hyperlink{classant_1_1_entity_manager_ac3645cbade4566b1e035923d12688811}{remove\+Entity} (std\+::unique\+\_\+ptr$<$ \hyperlink{classant_1_1_entity}{Entity} $>$ \&e)
+\begin{DoxyCompactList}\small\item\em Elimina una entidad del manager. \end{DoxyCompactList}\item 
+\hyperlink{classant_1_1_entity_manager_a60b5d97167e38d66d7d245a59735c1b5}{iterator} \hyperlink{classant_1_1_entity_manager_a62fcaeadb65e7580eb396d5a25e47071}{remove\+Entity} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Elimina la primera entidad que coincida el nombre. \end{DoxyCompactList}\item 
+\hyperlink{classant_1_1_entity_manager_a60b5d97167e38d66d7d245a59735c1b5}{iterator} \hyperlink{classant_1_1_entity_manager_a9fe7570482ce955d895430e1c3f1b107}{remove\+Entity} (\hyperlink{classant_1_1_entity_manager_a60b5d97167e38d66d7d245a59735c1b5}{iterator} it)
+\begin{DoxyCompactList}\small\item\em Elimina la primera entidad que coincida. \end{DoxyCompactList}\item 
+\hyperlink{classant_1_1_entity}{Entity} $\ast$ \hyperlink{classant_1_1_entity_manager_aa28e915d3d3460f04feae33c85bd3df3}{get\+Entity} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Obtiene la primera entidad que tenga el nombre proporcionado. \end{DoxyCompactList}\item 
+void \hyperlink{classant_1_1_entity_manager_a2f7ad52093982066f82a97c525501320}{add\+Entities} (\hyperlink{classant_1_1_entity_manager_a473e6ef8480bf2998f7c4d03e5ed20fc}{list} e)
+\begin{DoxyCompactList}\small\item\em Añade todas las entidades a la vez. \end{DoxyCompactList}\item 
+\hyperlink{classant_1_1_entity_manager_a473e6ef8480bf2998f7c4d03e5ed20fc}{list} \& \hyperlink{classant_1_1_entity_manager_a1dbb77029a458daf2bce15e9405c9b84}{get\+Entities} ()
+\begin{DoxyCompactList}\small\item\em devuelve la lista de las entidades. \end{DoxyCompactList}\item 
+\hyperlink{classant_1_1_entity_manager_a60b5d97167e38d66d7d245a59735c1b5}{iterator} \hyperlink{classant_1_1_entity_manager_a426b3fdbb72efce9a0e8989a448b22bb}{begin} ()
+\begin{DoxyCompactList}\small\item\em Devuelve el principio de la lista. \end{DoxyCompactList}\item 
+\hyperlink{classant_1_1_entity_manager_a60b5d97167e38d66d7d245a59735c1b5}{iterator} \hyperlink{classant_1_1_entity_manager_abeac423dde88812cb4c51235d1790b34}{end} ()
+\begin{DoxyCompactList}\small\item\em Devuelve el final de la lista. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \hyperlink{classant_1_1_entity}{Entity} $>$ \hyperlink{classant_1_1_entity_manager_ae84ee9cc6de695914727dae5af4909ae}{Transfer} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Transfiere la primera entidad que coincida con el nombre. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \hyperlink{classant_1_1_entity}{Entity} $>$ \hyperlink{classant_1_1_entity_manager_a9f45bd8317a4c8b0f0f00a44ccdd9049}{Transfer} (const \hyperlink{classant_1_1_entity}{Entity} $\ast$e)
+\begin{DoxyCompactList}\small\item\em Transfiere la primera entidad que coincida con el puntero de entidad. \end{DoxyCompactList}\item 
+\hyperlink{classant_1_1_entity_manager_af0dac6b2bdf3d16aa956ad82f23dc917}{$\sim$\+Entity\+Manager} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classant_1_1_entity_manager_a473e6ef8480bf2998f7c4d03e5ed20fc}{list} \hyperlink{classant_1_1_entity_manager_a45886b69a666fd7da630b2ab5fee54e6}{entities}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Clase Para manejar las entidades. 
+
+\begin{DoxyAuthor}{Author}
+Cristian Glez \href{mailto:Cristian.glez.m@gmail.com}{\tt Cristian.\+glez.\+m@gmail.\+com} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+
+
+Definition at line 13 of file Entity\+Manager.\+hpp.
+
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classant_1_1_entity_manager_a60b5d97167e38d66d7d245a59735c1b5}{\index{ant\+::\+Entity\+Manager@{ant\+::\+Entity\+Manager}!iterator@{iterator}}
+\index{iterator@{iterator}!ant\+::\+Entity\+Manager@{ant\+::\+Entity\+Manager}}
+\subsubsection[{iterator}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::list$<$std\+::unique\+\_\+ptr$<${\bf Entity}$>$ $>$\+::{\bf iterator} {\bf ant\+::\+Entity\+Manager\+::iterator}}}\label{classant_1_1_entity_manager_a60b5d97167e38d66d7d245a59735c1b5}
+
+
+Iterador del \hyperlink{classant_1_1_entity_manager}{Entity\+Manager}. 
+
+
+
+Definition at line 18 of file Entity\+Manager.\+hpp.
+
+\hypertarget{classant_1_1_entity_manager_a473e6ef8480bf2998f7c4d03e5ed20fc}{\index{ant\+::\+Entity\+Manager@{ant\+::\+Entity\+Manager}!list@{list}}
+\index{list@{list}!ant\+::\+Entity\+Manager@{ant\+::\+Entity\+Manager}}
+\subsubsection[{list}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::list$<$std\+::unique\+\_\+ptr$<${\bf Entity}$>$ $>$ {\bf ant\+::\+Entity\+Manager\+::list}}}\label{classant_1_1_entity_manager_a473e6ef8480bf2998f7c4d03e5ed20fc}
+
+
+Contenedor utilizado por el \hyperlink{classant_1_1_entity_manager}{Entity\+Manager}. 
+
+
+
+Definition at line 22 of file Entity\+Manager.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classant_1_1_entity_manager_a9d98e7cba15c2663b79df62f65b39a8f}{\index{ant\+::\+Entity\+Manager@{ant\+::\+Entity\+Manager}!Entity\+Manager@{Entity\+Manager}}
+\index{Entity\+Manager@{Entity\+Manager}!ant\+::\+Entity\+Manager@{ant\+::\+Entity\+Manager}}
+\subsubsection[{Entity\+Manager}]{\setlength{\rightskip}{0pt plus 5cm}ant\+::\+Entity\+Manager\+::\+Entity\+Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_entity_manager_a9d98e7cba15c2663b79df62f65b39a8f}
+
+
+Constructor por defecto. 
+
+
+
+Definition at line 4 of file Entity\+Manager.\+cpp.
+
+\hypertarget{classant_1_1_entity_manager_af0dac6b2bdf3d16aa956ad82f23dc917}{\index{ant\+::\+Entity\+Manager@{ant\+::\+Entity\+Manager}!````~Entity\+Manager@{$\sim$\+Entity\+Manager}}
+\index{````~Entity\+Manager@{$\sim$\+Entity\+Manager}!ant\+::\+Entity\+Manager@{ant\+::\+Entity\+Manager}}
+\subsubsection[{$\sim$\+Entity\+Manager}]{\setlength{\rightskip}{0pt plus 5cm}ant\+::\+Entity\+Manager\+::$\sim$\+Entity\+Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_entity_manager_af0dac6b2bdf3d16aa956ad82f23dc917}
+
+
+Definition at line 65 of file Entity\+Manager.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classant_1_1_entity_manager_a2f7ad52093982066f82a97c525501320}{\index{ant\+::\+Entity\+Manager@{ant\+::\+Entity\+Manager}!add\+Entities@{add\+Entities}}
+\index{add\+Entities@{add\+Entities}!ant\+::\+Entity\+Manager@{ant\+::\+Entity\+Manager}}
+\subsubsection[{add\+Entities}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+Entity\+Manager\+::add\+Entities (
+\begin{DoxyParamCaption}
+\item[{{\bf list}}]{e}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_entity_manager_a2f7ad52093982066f82a97c525501320}
+
+
+Añade todas las entidades a la vez. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & list lista de entidades. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 36 of file Entity\+Manager.\+cpp.
+
+\hypertarget{classant_1_1_entity_manager_af8cba501bcdac99f43f12047c8f857c4}{\index{ant\+::\+Entity\+Manager@{ant\+::\+Entity\+Manager}!add\+Entity@{add\+Entity}}
+\index{add\+Entity@{add\+Entity}!ant\+::\+Entity\+Manager@{ant\+::\+Entity\+Manager}}
+\subsubsection[{add\+Entity}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+Entity\+Manager\+::add\+Entity (
+\begin{DoxyParamCaption}
+\item[{std\+::unique\+\_\+ptr$<$ {\bf Entity} $>$}]{e}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_entity_manager_af8cba501bcdac99f43f12047c8f857c4}
+
+
+Añade una entidad al manager. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & std\+::unique\+\_\+ptr$<$\+Entity$>$ \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 7 of file Entity\+Manager.\+cpp.
+
+\hypertarget{classant_1_1_entity_manager_a426b3fdbb72efce9a0e8989a448b22bb}{\index{ant\+::\+Entity\+Manager@{ant\+::\+Entity\+Manager}!begin@{begin}}
+\index{begin@{begin}!ant\+::\+Entity\+Manager@{ant\+::\+Entity\+Manager}}
+\subsubsection[{begin}]{\setlength{\rightskip}{0pt plus 5cm}{\bf iterator} ant\+::\+Entity\+Manager\+::begin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classant_1_1_entity_manager_a426b3fdbb72efce9a0e8989a448b22bb}
+
+
+Devuelve el principio de la lista. 
+
+
+
+Definition at line 80 of file Entity\+Manager.\+hpp.
+
+\hypertarget{classant_1_1_entity_manager_abeac423dde88812cb4c51235d1790b34}{\index{ant\+::\+Entity\+Manager@{ant\+::\+Entity\+Manager}!end@{end}}
+\index{end@{end}!ant\+::\+Entity\+Manager@{ant\+::\+Entity\+Manager}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}{\bf iterator} ant\+::\+Entity\+Manager\+::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classant_1_1_entity_manager_abeac423dde88812cb4c51235d1790b34}
+
+
+Devuelve el final de la lista. 
+
+
+
+Definition at line 84 of file Entity\+Manager.\+hpp.
+
+\hypertarget{classant_1_1_entity_manager_a1dbb77029a458daf2bce15e9405c9b84}{\index{ant\+::\+Entity\+Manager@{ant\+::\+Entity\+Manager}!get\+Entities@{get\+Entities}}
+\index{get\+Entities@{get\+Entities}!ant\+::\+Entity\+Manager@{ant\+::\+Entity\+Manager}}
+\subsubsection[{get\+Entities}]{\setlength{\rightskip}{0pt plus 5cm}{\bf list}\& ant\+::\+Entity\+Manager\+::get\+Entities (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classant_1_1_entity_manager_a1dbb77029a458daf2bce15e9405c9b84}
+
+
+devuelve la lista de las entidades. 
+
+\begin{DoxyReturn}{Returns}
+list \& 
+\end{DoxyReturn}
+
+
+Definition at line 76 of file Entity\+Manager.\+hpp.
+
+\hypertarget{classant_1_1_entity_manager_aa28e915d3d3460f04feae33c85bd3df3}{\index{ant\+::\+Entity\+Manager@{ant\+::\+Entity\+Manager}!get\+Entity@{get\+Entity}}
+\index{get\+Entity@{get\+Entity}!ant\+::\+Entity\+Manager@{ant\+::\+Entity\+Manager}}
+\subsubsection[{get\+Entity}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Entity} $\ast$ ant\+::\+Entity\+Manager\+::get\+Entity (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_entity_manager_aa28e915d3d3460f04feae33c85bd3df3}
+
+
+Obtiene la primera entidad que tenga el nombre proporcionado. 
+
+Si no encuentra la entidad devuelve un puntero nulo(nullptr).
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & std\+::string nombre de la entidad. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classant_1_1_entity}{Entity} $\ast$ naked pointer hacia la entidad o nullptr si no la encuentra. 
+\end{DoxyReturn}
+
+
+Definition at line 28 of file Entity\+Manager.\+cpp.
+
+\hypertarget{classant_1_1_entity_manager_ac3645cbade4566b1e035923d12688811}{\index{ant\+::\+Entity\+Manager@{ant\+::\+Entity\+Manager}!remove\+Entity@{remove\+Entity}}
+\index{remove\+Entity@{remove\+Entity}!ant\+::\+Entity\+Manager@{ant\+::\+Entity\+Manager}}
+\subsubsection[{remove\+Entity}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+Entity\+Manager\+::remove\+Entity (
+\begin{DoxyParamCaption}
+\item[{std\+::unique\+\_\+ptr$<$ {\bf Entity} $>$ \&}]{e}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_entity_manager_ac3645cbade4566b1e035923d12688811}
+
+
+Elimina una entidad del manager. 
+
+Elimina la primera entidad que sea igual a la proporcionada. 
+\begin{DoxyParams}{Parameters}
+{\em e} & std\+::unique\+\_\+ptr$<$\+Entity$>$ \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 10 of file Entity\+Manager.\+cpp.
+
+\hypertarget{classant_1_1_entity_manager_a62fcaeadb65e7580eb396d5a25e47071}{\index{ant\+::\+Entity\+Manager@{ant\+::\+Entity\+Manager}!remove\+Entity@{remove\+Entity}}
+\index{remove\+Entity@{remove\+Entity}!ant\+::\+Entity\+Manager@{ant\+::\+Entity\+Manager}}
+\subsubsection[{remove\+Entity}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Entity\+Manager\+::iterator} ant\+::\+Entity\+Manager\+::remove\+Entity (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_entity_manager_a62fcaeadb65e7580eb396d5a25e47071}
+
+
+Elimina la primera entidad que coincida el nombre. 
+
+Devuelve un iterador por si estas iterando y necesitas borrar alguna entidad.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & std\+::string nombre de la entidad. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+iterator la posicion siguiente de la entidad eliminada. 
+\end{DoxyReturn}
+
+
+Definition at line 13 of file Entity\+Manager.\+cpp.
+
+\hypertarget{classant_1_1_entity_manager_a9fe7570482ce955d895430e1c3f1b107}{\index{ant\+::\+Entity\+Manager@{ant\+::\+Entity\+Manager}!remove\+Entity@{remove\+Entity}}
+\index{remove\+Entity@{remove\+Entity}!ant\+::\+Entity\+Manager@{ant\+::\+Entity\+Manager}}
+\subsubsection[{remove\+Entity}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Entity\+Manager\+::iterator} ant\+::\+Entity\+Manager\+::remove\+Entity (
+\begin{DoxyParamCaption}
+\item[{{\bf Entity\+Manager\+::iterator}}]{it}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_entity_manager_a9fe7570482ce955d895430e1c3f1b107}
+
+
+Elimina la primera entidad que coincida. 
+
+Devuelve un iterador por si estas iterando y necesitas borrar alguna entidad.
+
+\begin{DoxyReturn}{Returns}
+iterator la posicion siguiente de la entidad eliminada. 
+\end{DoxyReturn}
+
+
+Definition at line 25 of file Entity\+Manager.\+cpp.
+
+\hypertarget{classant_1_1_entity_manager_ae84ee9cc6de695914727dae5af4909ae}{\index{ant\+::\+Entity\+Manager@{ant\+::\+Entity\+Manager}!Transfer@{Transfer}}
+\index{Transfer@{Transfer}!ant\+::\+Entity\+Manager@{ant\+::\+Entity\+Manager}}
+\subsubsection[{Transfer}]{\setlength{\rightskip}{0pt plus 5cm}std\+::unique\+\_\+ptr$<$ {\bf Entity} $>$ ant\+::\+Entity\+Manager\+::\+Transfer (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_entity_manager_ae84ee9cc6de695914727dae5af4909ae}
+
+
+Transfiere la primera entidad que coincida con el nombre. 
+
+Transfiere la posesion(ownership) de la entidad y la elimina del contenedor.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & std\+::string nombre de la entidad a transferir. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::unique\+\_\+ptr$<$\+Entity$>$ entidad transferida o nullptr si no es encontrada. 
+\end{DoxyReturn}
+
+
+Definition at line 39 of file Entity\+Manager.\+cpp.
+
+\hypertarget{classant_1_1_entity_manager_a9f45bd8317a4c8b0f0f00a44ccdd9049}{\index{ant\+::\+Entity\+Manager@{ant\+::\+Entity\+Manager}!Transfer@{Transfer}}
+\index{Transfer@{Transfer}!ant\+::\+Entity\+Manager@{ant\+::\+Entity\+Manager}}
+\subsubsection[{Transfer}]{\setlength{\rightskip}{0pt plus 5cm}std\+::unique\+\_\+ptr$<$ {\bf Entity} $>$ ant\+::\+Entity\+Manager\+::\+Transfer (
+\begin{DoxyParamCaption}
+\item[{const {\bf Entity} $\ast$}]{e}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_entity_manager_a9f45bd8317a4c8b0f0f00a44ccdd9049}
+
+
+Transfiere la primera entidad que coincida con el puntero de entidad. 
+
+Transfiere la posesion(ownership) de la entidad y la elimina del contenedor.
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & \hyperlink{classant_1_1_entity}{Entity} $\ast$ Puntero a la entidad \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::unique\+\_\+ptr$<$\+Entity$>$ entidad transferida o nullptr si no es encontrada. 
+\end{DoxyReturn}
+
+
+Definition at line 52 of file Entity\+Manager.\+cpp.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classant_1_1_entity_manager_a45886b69a666fd7da630b2ab5fee54e6}{\index{ant\+::\+Entity\+Manager@{ant\+::\+Entity\+Manager}!entities@{entities}}
+\index{entities@{entities}!ant\+::\+Entity\+Manager@{ant\+::\+Entity\+Manager}}
+\subsubsection[{entities}]{\setlength{\rightskip}{0pt plus 5cm}{\bf list} ant\+::\+Entity\+Manager\+::entities\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1_entity_manager_a45886b69a666fd7da630b2ab5fee54e6}
+
+
+Definition at line 105 of file Entity\+Manager.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_entity_manager_8hpp}{Entity\+Manager.\+hpp}\item 
+\hyperlink{_entity_manager_8cpp}{Entity\+Manager.\+cpp}\end{DoxyCompactItemize}

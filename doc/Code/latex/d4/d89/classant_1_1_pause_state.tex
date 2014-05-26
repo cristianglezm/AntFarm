@@ -1,0 +1,458 @@
+\hypertarget{classant_1_1_pause_state}{\section{ant\+:\+:Pause\+State Class Reference}
+\label{classant_1_1_pause_state}\index{ant\+::\+Pause\+State@{ant\+::\+Pause\+State}}
+}
+
+
+Estado de pausa.  
+
+
+
+
+{\ttfamily \#include $<$Pause\+State.\+hpp$>$}
+
+
+
+Inheritance diagram for ant\+:\+:Pause\+State\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=191pt]{d8/d1e/classant_1_1_pause_state__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ant\+:\+:Pause\+State\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{da/dde/classant_1_1_pause_state__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::unique\+\_\+ptr$<$ \hyperlink{classant_1_1_app_state}{App\+State} $>$ \hyperlink{classant_1_1_app_state_a94963d69f76e53c5e3b6cfa58f99fff9}{u\+Ptr}
+\begin{DoxyCompactList}\small\item\em Puntero unico de \hyperlink{classant_1_1_app_state}{App\+State}. \end{DoxyCompactList}\item 
+typedef std\+::shared\+\_\+ptr$<$ \hyperlink{classant_1_1_app_state}{App\+State} $>$ \hyperlink{classant_1_1_app_state_a772c49d9b95d2447149218ce7914d40c}{s\+Ptr}
+\begin{DoxyCompactList}\small\item\em Puntero Compartido de \hyperlink{classant_1_1_app_state}{App\+State}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classant_1_1_pause_state_a5d5b0e4d75f18ab6b0697821aee68d83}{Pause\+State} (\hyperlink{classant_1_1_state_stack}{State\+Stack} \&stack, \hyperlink{structant_1_1_app_state_1_1_context}{Context} context)
+\begin{DoxyCompactList}\small\item\em Constructor por defecto. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classant_1_1_pause_state_a8c99d68f9ac3147a0fb3f8bee008e73f}{render} ()
+\begin{DoxyCompactList}\small\item\em Renderiza el estado. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classant_1_1_pause_state_acc86d012ec67efad3d5339cfce2a983f}{update} (sf\+::\+Time dt)
+\begin{DoxyCompactList}\small\item\em Actualiza. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classant_1_1_pause_state_af22b38989f774e2ed557b91531048d42}{handle\+Event} (const sf\+::\+Event \&event)
+\begin{DoxyCompactList}\small\item\em Maneja el input del teclado/raton. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classant_1_1_app_state_a2830ba9f7de8efbf03bab5249d5d3f0a}{request\+Stack\+Push} (\hyperlink{namespaceant_1_1_app_states_a8e30476d77a5da5e0c1c3b9c7042e62a}{App\+States\+::\+I\+D} state\+I\+D)
+\begin{DoxyCompactList}\small\item\em Pide al stack que añada un estado nuevo. \end{DoxyCompactList}\item 
+void \hyperlink{classant_1_1_app_state_a65a59f018d590e807fd61adfa307651e}{request\+Stack\+Pop} ()
+\begin{DoxyCompactList}\small\item\em Pide al stack que quite el ultimo estado añadido. \end{DoxyCompactList}\item 
+void \hyperlink{classant_1_1_app_state_a16e430d3eb803f4ff7995214bd66665e}{request\+State\+Clear} ()
+\begin{DoxyCompactList}\small\item\em Pide al stack que se limpie. \end{DoxyCompactList}\item 
+\hyperlink{structant_1_1_app_state_1_1_context}{Context} \hyperlink{classant_1_1_app_state_aa7abef18b5d2d32dbb9b35d4f630cb31}{get\+Context} () const 
+\begin{DoxyCompactList}\small\item\em Devuelve el contexto. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classant_1_1_pause_state_af9bb1258e9c7960cceeb90ee8b1fbc21}{load\+Config} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Carga la configuracion de este estado. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Text \hyperlink{classant_1_1_pause_state_aa91263eca22d8ee20c7dc1d47e81c3de}{m\+Text}
+\item 
+std\+::string \hyperlink{classant_1_1_pause_state_af20e85c9fe7792e3664eb3d96500debc}{font}
+\item 
+bool \hyperlink{classant_1_1_pause_state_a210ba9bf56634850b82a9187f6f4969c}{m\+Show\+Text}
+\item 
+sf\+::\+Time \hyperlink{classant_1_1_pause_state_a5ed33b12d057da1fd71dbe5f4c146a9a}{m\+Text\+Effect\+Time}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Estado de pausa. 
+
+\begin{DoxyAuthor}{Author}
+Cristian Glez \href{mailto:Cristian.glez.m@gmail.com}{\tt Cristian.\+glez.\+m@gmail.\+com} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+
+
+Definition at line 13 of file Pause\+State.\+hpp.
+
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classant_1_1_app_state_a772c49d9b95d2447149218ce7914d40c}{\index{ant\+::\+Pause\+State@{ant\+::\+Pause\+State}!s\+Ptr@{s\+Ptr}}
+\index{s\+Ptr@{s\+Ptr}!ant\+::\+Pause\+State@{ant\+::\+Pause\+State}}
+\subsubsection[{s\+Ptr}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::shared\+\_\+ptr$<${\bf App\+State}$>$ {\bf ant\+::\+App\+State\+::s\+Ptr}\hspace{0.3cm}{\ttfamily [inherited]}}}\label{classant_1_1_app_state_a772c49d9b95d2447149218ce7914d40c}
+
+
+Puntero Compartido de \hyperlink{classant_1_1_app_state}{App\+State}. 
+
+
+
+Definition at line 26 of file App\+State.\+hpp.
+
+\hypertarget{classant_1_1_app_state_a94963d69f76e53c5e3b6cfa58f99fff9}{\index{ant\+::\+Pause\+State@{ant\+::\+Pause\+State}!u\+Ptr@{u\+Ptr}}
+\index{u\+Ptr@{u\+Ptr}!ant\+::\+Pause\+State@{ant\+::\+Pause\+State}}
+\subsubsection[{u\+Ptr}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::unique\+\_\+ptr$<${\bf App\+State}$>$ {\bf ant\+::\+App\+State\+::u\+Ptr}\hspace{0.3cm}{\ttfamily [inherited]}}}\label{classant_1_1_app_state_a94963d69f76e53c5e3b6cfa58f99fff9}
+
+
+Puntero unico de \hyperlink{classant_1_1_app_state}{App\+State}. 
+
+
+
+Definition at line 22 of file App\+State.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classant_1_1_pause_state_a5d5b0e4d75f18ab6b0697821aee68d83}{\index{ant\+::\+Pause\+State@{ant\+::\+Pause\+State}!Pause\+State@{Pause\+State}}
+\index{Pause\+State@{Pause\+State}!ant\+::\+Pause\+State@{ant\+::\+Pause\+State}}
+\subsubsection[{Pause\+State}]{\setlength{\rightskip}{0pt plus 5cm}ant\+::\+Pause\+State\+::\+Pause\+State (
+\begin{DoxyParamCaption}
+\item[{{\bf State\+Stack} \&}]{stack, }
+\item[{{\bf Context}}]{context}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_pause_state_a5d5b0e4d75f18ab6b0697821aee68d83}
+
+
+Constructor por defecto. 
+
+
+
+Definition at line 3 of file Pause\+State.\+cpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/d89/classant_1_1_pause_state_a5d5b0e4d75f18ab6b0697821aee68d83_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classant_1_1_app_state_aa7abef18b5d2d32dbb9b35d4f630cb31}{\index{ant\+::\+Pause\+State@{ant\+::\+Pause\+State}!get\+Context@{get\+Context}}
+\index{get\+Context@{get\+Context}!ant\+::\+Pause\+State@{ant\+::\+Pause\+State}}
+\subsubsection[{get\+Context}]{\setlength{\rightskip}{0pt plus 5cm}{\bf App\+State\+::\+Context} ant\+::\+App\+State\+::get\+Context (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{classant_1_1_app_state_aa7abef18b5d2d32dbb9b35d4f630cb31}
+
+
+Devuelve el contexto. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{structant_1_1_app_state_1_1_context}{App\+State\+::\+Context} 
+\end{DoxyReturn}
+
+
+Definition at line 21 of file App\+State.\+cpp.
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/df7/classant_1_1_app_state_aa7abef18b5d2d32dbb9b35d4f630cb31_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classant_1_1_pause_state_af22b38989f774e2ed557b91531048d42}{\index{ant\+::\+Pause\+State@{ant\+::\+Pause\+State}!handle\+Event@{handle\+Event}}
+\index{handle\+Event@{handle\+Event}!ant\+::\+Pause\+State@{ant\+::\+Pause\+State}}
+\subsubsection[{handle\+Event}]{\setlength{\rightskip}{0pt plus 5cm}bool ant\+::\+Pause\+State\+::handle\+Event (
+\begin{DoxyParamCaption}
+\item[{const sf\+::\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classant_1_1_pause_state_af22b38989f774e2ed557b91531048d42}
+
+
+Maneja el input del teclado/raton. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & sf\+::\+Event evento. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classant_1_1_app_state_ae70866194e3c8cf2fd42041804d0905a}{ant\+::\+App\+State}.
+
+
+
+Definition at line 35 of file Pause\+State.\+cpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/d89/classant_1_1_pause_state_af22b38989f774e2ed557b91531048d42_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classant_1_1_pause_state_af9bb1258e9c7960cceeb90ee8b1fbc21}{\index{ant\+::\+Pause\+State@{ant\+::\+Pause\+State}!load\+Config@{load\+Config}}
+\index{load\+Config@{load\+Config}!ant\+::\+Pause\+State@{ant\+::\+Pause\+State}}
+\subsubsection[{load\+Config}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+Pause\+State\+::load\+Config (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{filename}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1_pause_state_af9bb1258e9c7960cceeb90ee8b1fbc21}
+
+
+Carga la configuracion de este estado. 
+
+
+
+Definition at line 20 of file Pause\+State.\+cpp.
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/d89/classant_1_1_pause_state_af9bb1258e9c7960cceeb90ee8b1fbc21_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classant_1_1_pause_state_a8c99d68f9ac3147a0fb3f8bee008e73f}{\index{ant\+::\+Pause\+State@{ant\+::\+Pause\+State}!render@{render}}
+\index{render@{render}!ant\+::\+Pause\+State@{ant\+::\+Pause\+State}}
+\subsubsection[{render}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+Pause\+State\+::render (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classant_1_1_pause_state_a8c99d68f9ac3147a0fb3f8bee008e73f}
+
+
+Renderiza el estado. 
+
+
+
+Implements \hyperlink{classant_1_1_app_state_a8e4e13cdf558c5d57339548d8b5acaf9}{ant\+::\+App\+State}.
+
+
+
+Definition at line 14 of file Pause\+State.\+cpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/d89/classant_1_1_pause_state_a8c99d68f9ac3147a0fb3f8bee008e73f_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classant_1_1_app_state_a65a59f018d590e807fd61adfa307651e}{\index{ant\+::\+Pause\+State@{ant\+::\+Pause\+State}!request\+Stack\+Pop@{request\+Stack\+Pop}}
+\index{request\+Stack\+Pop@{request\+Stack\+Pop}!ant\+::\+Pause\+State@{ant\+::\+Pause\+State}}
+\subsubsection[{request\+Stack\+Pop}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+App\+State\+::request\+Stack\+Pop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{classant_1_1_app_state_a65a59f018d590e807fd61adfa307651e}
+
+
+Pide al stack que quite el ultimo estado añadido. 
+
+
+
+Definition at line 15 of file App\+State.\+cpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/df7/classant_1_1_app_state_a65a59f018d590e807fd61adfa307651e_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/df7/classant_1_1_app_state_a65a59f018d590e807fd61adfa307651e_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classant_1_1_app_state_a2830ba9f7de8efbf03bab5249d5d3f0a}{\index{ant\+::\+Pause\+State@{ant\+::\+Pause\+State}!request\+Stack\+Push@{request\+Stack\+Push}}
+\index{request\+Stack\+Push@{request\+Stack\+Push}!ant\+::\+Pause\+State@{ant\+::\+Pause\+State}}
+\subsubsection[{request\+Stack\+Push}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+App\+State\+::request\+Stack\+Push (
+\begin{DoxyParamCaption}
+\item[{{\bf App\+States\+::\+I\+D}}]{state\+I\+D}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{classant_1_1_app_state_a2830ba9f7de8efbf03bab5249d5d3f0a}
+
+
+Pide al stack que añada un estado nuevo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state\+I\+D} & \hyperlink{namespaceant_1_1_app_states_a8e30476d77a5da5e0c1c3b9c7042e62a}{App\+States\+::\+I\+D} id del estado. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 12 of file App\+State.\+cpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/df7/classant_1_1_app_state_a2830ba9f7de8efbf03bab5249d5d3f0a_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/df7/classant_1_1_app_state_a2830ba9f7de8efbf03bab5249d5d3f0a_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classant_1_1_app_state_a16e430d3eb803f4ff7995214bd66665e}{\index{ant\+::\+Pause\+State@{ant\+::\+Pause\+State}!request\+State\+Clear@{request\+State\+Clear}}
+\index{request\+State\+Clear@{request\+State\+Clear}!ant\+::\+Pause\+State@{ant\+::\+Pause\+State}}
+\subsubsection[{request\+State\+Clear}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+App\+State\+::request\+State\+Clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{classant_1_1_app_state_a16e430d3eb803f4ff7995214bd66665e}
+
+
+Pide al stack que se limpie. 
+
+
+
+Definition at line 18 of file App\+State.\+cpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/df7/classant_1_1_app_state_a16e430d3eb803f4ff7995214bd66665e_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/df7/classant_1_1_app_state_a16e430d3eb803f4ff7995214bd66665e_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classant_1_1_pause_state_acc86d012ec67efad3d5339cfce2a983f}{\index{ant\+::\+Pause\+State@{ant\+::\+Pause\+State}!update@{update}}
+\index{update@{update}!ant\+::\+Pause\+State@{ant\+::\+Pause\+State}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}bool ant\+::\+Pause\+State\+::update (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Time}]{dt}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classant_1_1_pause_state_acc86d012ec67efad3d5339cfce2a983f}
+
+
+Actualiza. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & sf\+::\+Time delta time \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classant_1_1_app_state_a536738e3c366a35ff6406dccb34ce215}{ant\+::\+App\+State}.
+
+
+
+Definition at line 27 of file Pause\+State.\+cpp.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classant_1_1_pause_state_af20e85c9fe7792e3664eb3d96500debc}{\index{ant\+::\+Pause\+State@{ant\+::\+Pause\+State}!font@{font}}
+\index{font@{font}!ant\+::\+Pause\+State@{ant\+::\+Pause\+State}}
+\subsubsection[{font}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string ant\+::\+Pause\+State\+::font\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1_pause_state_af20e85c9fe7792e3664eb3d96500debc}
+
+
+Definition at line 40 of file Pause\+State.\+hpp.
+
+\hypertarget{classant_1_1_pause_state_a210ba9bf56634850b82a9187f6f4969c}{\index{ant\+::\+Pause\+State@{ant\+::\+Pause\+State}!m\+Show\+Text@{m\+Show\+Text}}
+\index{m\+Show\+Text@{m\+Show\+Text}!ant\+::\+Pause\+State@{ant\+::\+Pause\+State}}
+\subsubsection[{m\+Show\+Text}]{\setlength{\rightskip}{0pt plus 5cm}bool ant\+::\+Pause\+State\+::m\+Show\+Text\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1_pause_state_a210ba9bf56634850b82a9187f6f4969c}
+
+
+Definition at line 41 of file Pause\+State.\+hpp.
+
+\hypertarget{classant_1_1_pause_state_aa91263eca22d8ee20c7dc1d47e81c3de}{\index{ant\+::\+Pause\+State@{ant\+::\+Pause\+State}!m\+Text@{m\+Text}}
+\index{m\+Text@{m\+Text}!ant\+::\+Pause\+State@{ant\+::\+Pause\+State}}
+\subsubsection[{m\+Text}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Text ant\+::\+Pause\+State\+::m\+Text\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1_pause_state_aa91263eca22d8ee20c7dc1d47e81c3de}
+
+
+Definition at line 39 of file Pause\+State.\+hpp.
+
+\hypertarget{classant_1_1_pause_state_a5ed33b12d057da1fd71dbe5f4c146a9a}{\index{ant\+::\+Pause\+State@{ant\+::\+Pause\+State}!m\+Text\+Effect\+Time@{m\+Text\+Effect\+Time}}
+\index{m\+Text\+Effect\+Time@{m\+Text\+Effect\+Time}!ant\+::\+Pause\+State@{ant\+::\+Pause\+State}}
+\subsubsection[{m\+Text\+Effect\+Time}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Time ant\+::\+Pause\+State\+::m\+Text\+Effect\+Time\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1_pause_state_a5ed33b12d057da1fd71dbe5f4c146a9a}
+
+
+Definition at line 42 of file Pause\+State.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_pause_state_8hpp}{Pause\+State.\+hpp}\item 
+\hyperlink{_pause_state_8cpp}{Pause\+State.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,552 @@
+\hypertarget{classant_1_1_component_factory}{\section{ant\+:\+:Component\+Factory Class Reference}
+\label{classant_1_1_component_factory}\index{ant\+::\+Component\+Factory@{ant\+::\+Component\+Factory}}
+}
+
+
+Clase para crear los componentes de las entidades.  
+
+
+
+
+{\ttfamily \#include $<$Component\+Factory.\+hpp$>$}
+
+
+
+Collaboration diagram for ant\+:\+:Component\+Factory\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=200pt]{d7/da6/classant_1_1_component_factory__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classant_1_1_component_factory_addc8722804069b1968c8fdc9a2308219}{Component\+Factory} ()
+\begin{DoxyCompactList}\small\item\em Constructor sin argumentos. \end{DoxyCompactList}\item 
+\hyperlink{classant_1_1_component_factory_acfbc5b67afb1f3325d9a9eab61d7b56d}{Component\+Factory} (std\+::shared\+\_\+ptr$<$ \hyperlink{classant_1_1_asset_manager}{Asset\+Manager} $>$ \hyperlink{classant_1_1_component_factory_a624849c9a8fcd1df41b49f04d25fbce6}{assets})
+\begin{DoxyCompactList}\small\item\em Constructor que le pasa los assets. \end{DoxyCompactList}\item 
+bool \hyperlink{classant_1_1_component_factory_a4ebe19f09d51965ff61c0df7251e9e99}{load\+Assets} (const std\+::string \&json)
+\begin{DoxyCompactList}\small\item\em Llama a la funcion de Assets\+Manager\+::load\+Assets() para cargar los assets desde un fichero, tiene que tener el formato especificado en la funcion. \end{DoxyCompactList}\item 
+bool \hyperlink{classant_1_1_component_factory_a57a64f3a57be7ddc893c999206f2410c}{unload\+Assets} ()
+\begin{DoxyCompactList}\small\item\em Descarga los assets cargados. \end{DoxyCompactList}\item 
+void \hyperlink{classant_1_1_component_factory_a65344c3c8f3d7b48c65205b1fd013724}{set\+Asset\+Manager} (std\+::shared\+\_\+ptr$<$ \hyperlink{classant_1_1_asset_manager}{Asset\+Manager} $>$ \hyperlink{classant_1_1_component_factory_a624849c9a8fcd1df41b49f04d25fbce6}{assets})
+\begin{DoxyCompactList}\small\item\em Pone el \hyperlink{classant_1_1_asset_manager}{Asset\+Manager} especificado para usar, en la creacion de los componentes que requieran de assets. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classant_1_1_asset_manager}{Asset\+Manager} $>$ \hyperlink{classant_1_1_component_factory_a3fa7c2478df473516ed2ce6814d6bcb4}{get\+Asset\+Manager} ()
+\begin{DoxyCompactList}\small\item\em Devuelve el asset manager que utiliza. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \hyperlink{classant_1_1base_component}{base\+Component} $>$ \hyperlink{classant_1_1_component_factory_a0438691a164fa293f5551179f2051620}{create\+Transform} (sf\+::\+Vector2f position, sf\+::\+Vector2f scale, float rotation)
+\begin{DoxyCompactList}\small\item\em Crea un componente tipo Transform. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \hyperlink{classant_1_1base_component}{base\+Component} $>$ \hyperlink{classant_1_1_component_factory_a1c2757122638b6dd751bfad7451ce4a6}{create\+Velocity} (float speed, float min\+Speed, float max\+Speed)
+\begin{DoxyCompactList}\small\item\em Crea un componente Tipo Velocity. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \hyperlink{classant_1_1base_component}{base\+Component} $>$ \hyperlink{classant_1_1_component_factory_a745012207b846a3a31ab42337f957579}{create\+Bounds} (sf\+::\+Float\+Rect bounds)
+\begin{DoxyCompactList}\small\item\em Crea un componente Tipo Bounds. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \hyperlink{classant_1_1base_component}{base\+Component} $>$ \hyperlink{classant_1_1_component_factory_af55da53ce3a1ba4782d1f27c987675ed}{create\+Destructable} (sf\+::\+Vector2f position, const std\+::string \&image\+I\+D)
+\begin{DoxyCompactList}\small\item\em Crea un componente tipo Destructable. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \hyperlink{classant_1_1base_component}{base\+Component} $>$ \hyperlink{classant_1_1_component_factory_a9396c4db274bba3299fc3a231fed768b}{create\+Animation} (std\+::vector$<$ std\+::string $>$ ids)
+\begin{DoxyCompactList}\small\item\em Crea un componente tipo Animation. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \hyperlink{classant_1_1base_component}{base\+Component} $>$ \hyperlink{classant_1_1_component_factory_ac76f4b8d6b9356e49ded116f77171027}{create\+Sprite} (std\+::string id)
+\begin{DoxyCompactList}\small\item\em Crea un componente tipo Sprite. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \hyperlink{classant_1_1base_component}{base\+Component} $>$ \hyperlink{classant_1_1_component_factory_af0058eda5c3578e2bd25772a5fe76c7e}{create\+Passage} (sf\+::\+Vector2f dest)
+\begin{DoxyCompactList}\small\item\em Crea un componente tipo Passage. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \hyperlink{classant_1_1base_component}{base\+Component} $>$ \hyperlink{classant_1_1_component_factory_ac366ce2c2eafa4ceb651f505b5c311d2}{create\+In} ()
+\begin{DoxyCompactList}\small\item\em Crea un componente que indica la direccion. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \hyperlink{classant_1_1base_component}{base\+Component} $>$ \hyperlink{classant_1_1_component_factory_ab29393c2d735a345463778a26ff5f27a}{create\+Out} ()
+\begin{DoxyCompactList}\small\item\em Crea un componente que indica la direccion. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \hyperlink{classant_1_1base_component}{base\+Component} $>$ \hyperlink{classant_1_1_component_factory_acc62766cadafd7a835bcd453a1aabf0b}{create\+Counter} (int count)
+\begin{DoxyCompactList}\small\item\em Crea un componente que tiene un numero de veces. \end{DoxyCompactList}\item 
+\hyperlink{classant_1_1_component_factory_acd6746a981623117ef590e8065a51061}{$\sim$\+Component\+Factory} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unique\+\_\+ptr$<$ sf\+::\+Vertex\+Array $>$ \hyperlink{classant_1_1_component_factory_a646fbdf216ba6ddfc45c6e28f99af331}{map\+Image} (const sf\+::\+Vector2f \&position, sf\+::\+Image \&img, sf\+::\+Float\+Rect $\ast$bounds)
+\begin{DoxyCompactList}\small\item\em Sirve para mapear una imagen a un sf\+::\+Vertex\+Array. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classant_1_1_asset_manager}{Asset\+Manager} $>$ \hyperlink{classant_1_1_component_factory_a624849c9a8fcd1df41b49f04d25fbce6}{assets}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Clase para crear los componentes de las entidades. 
+
+\begin{DoxyAuthor}{Author}
+Cristian Glez \href{mailto:Cristian.glez.m@gmail.com}{\tt Cristian.\+glez.\+m@gmail.\+com} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+
+
+Definition at line 15 of file Component\+Factory.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classant_1_1_component_factory_addc8722804069b1968c8fdc9a2308219}{\index{ant\+::\+Component\+Factory@{ant\+::\+Component\+Factory}!Component\+Factory@{Component\+Factory}}
+\index{Component\+Factory@{Component\+Factory}!ant\+::\+Component\+Factory@{ant\+::\+Component\+Factory}}
+\subsubsection[{Component\+Factory}]{\setlength{\rightskip}{0pt plus 5cm}ant\+::\+Component\+Factory\+::\+Component\+Factory (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_component_factory_addc8722804069b1968c8fdc9a2308219}
+
+
+Constructor sin argumentos. 
+
+
+
+Definition at line 29 of file Component\+Factory.\+cpp.
+
+\hypertarget{classant_1_1_component_factory_acfbc5b67afb1f3325d9a9eab61d7b56d}{\index{ant\+::\+Component\+Factory@{ant\+::\+Component\+Factory}!Component\+Factory@{Component\+Factory}}
+\index{Component\+Factory@{Component\+Factory}!ant\+::\+Component\+Factory@{ant\+::\+Component\+Factory}}
+\subsubsection[{Component\+Factory}]{\setlength{\rightskip}{0pt plus 5cm}ant\+::\+Component\+Factory\+::\+Component\+Factory (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Asset\+Manager} $>$}]{assets}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_component_factory_acfbc5b67afb1f3325d9a9eab61d7b56d}
+
+
+Constructor que le pasa los assets. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em assets} & std\+::shared\+\_\+ptr$<$\+Asset\+Manager$>$ \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 32 of file Component\+Factory.\+cpp.
+
+\hypertarget{classant_1_1_component_factory_acd6746a981623117ef590e8065a51061}{\index{ant\+::\+Component\+Factory@{ant\+::\+Component\+Factory}!````~Component\+Factory@{$\sim$\+Component\+Factory}}
+\index{````~Component\+Factory@{$\sim$\+Component\+Factory}!ant\+::\+Component\+Factory@{ant\+::\+Component\+Factory}}
+\subsubsection[{$\sim$\+Component\+Factory}]{\setlength{\rightskip}{0pt plus 5cm}ant\+::\+Component\+Factory\+::$\sim$\+Component\+Factory (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_component_factory_acd6746a981623117ef590e8065a51061}
+
+
+Definition at line 97 of file Component\+Factory.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classant_1_1_component_factory_a9396c4db274bba3299fc3a231fed768b}{\index{ant\+::\+Component\+Factory@{ant\+::\+Component\+Factory}!create\+Animation@{create\+Animation}}
+\index{create\+Animation@{create\+Animation}!ant\+::\+Component\+Factory@{ant\+::\+Component\+Factory}}
+\subsubsection[{create\+Animation}]{\setlength{\rightskip}{0pt plus 5cm}std\+::unique\+\_\+ptr$<$ {\bf base\+Component} $>$ ant\+::\+Component\+Factory\+::create\+Animation (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ std\+::string $>$}]{ids}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_component_factory_a9396c4db274bba3299fc3a231fed768b}
+
+
+Crea un componente tipo Animation. 
+
+Este componente basico es el cual permite hacer animaciones. necesita un sistema especifico por cada animacion. 
+\begin{DoxyCode}
+Component<std::vector<std::string>>>
+\end{DoxyCode}
+ 
+\begin{DoxyParams}{Parameters}
+{\em ids} & std\+::vector$<$std\+::string$>$ id de las texturas para la animacion. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::unique\+\_\+ptr$<$base\+Component$>$ componente creado. 
+\end{DoxyReturn}
+
+
+Definition at line 70 of file Component\+Factory.\+cpp.
+
+\hypertarget{classant_1_1_component_factory_a745012207b846a3a31ab42337f957579}{\index{ant\+::\+Component\+Factory@{ant\+::\+Component\+Factory}!create\+Bounds@{create\+Bounds}}
+\index{create\+Bounds@{create\+Bounds}!ant\+::\+Component\+Factory@{ant\+::\+Component\+Factory}}
+\subsubsection[{create\+Bounds}]{\setlength{\rightskip}{0pt plus 5cm}std\+::unique\+\_\+ptr$<$ {\bf base\+Component} $>$ ant\+::\+Component\+Factory\+::create\+Bounds (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Float\+Rect}]{bounds}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_component_factory_a745012207b846a3a31ab42337f957579}
+
+
+Crea un componente Tipo Bounds. 
+
+Este componente basico es el cual permite a la entidad tener colisiones. 
+\begin{DoxyCode}
+Component<sf::FloatReact>
+\end{DoxyCode}
+ 
+\begin{DoxyParams}{Parameters}
+{\em bounds} & sf\+::\+Float\+Rect rectangulo de colision. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::unique\+\_\+ptr$<$base\+Component$>$ componente Creado. 
+\end{DoxyReturn}
+
+
+Definition at line 59 of file Component\+Factory.\+cpp.
+
+\hypertarget{classant_1_1_component_factory_acc62766cadafd7a835bcd453a1aabf0b}{\index{ant\+::\+Component\+Factory@{ant\+::\+Component\+Factory}!create\+Counter@{create\+Counter}}
+\index{create\+Counter@{create\+Counter}!ant\+::\+Component\+Factory@{ant\+::\+Component\+Factory}}
+\subsubsection[{create\+Counter}]{\setlength{\rightskip}{0pt plus 5cm}std\+::unique\+\_\+ptr$<$ {\bf base\+Component} $>$ ant\+::\+Component\+Factory\+::create\+Counter (
+\begin{DoxyParamCaption}
+\item[{int}]{count}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_component_factory_acc62766cadafd7a835bcd453a1aabf0b}
+
+
+Crea un componente que tiene un numero de veces. 
+
+
+\begin{DoxyCode}
+Component<int>
+\end{DoxyCode}
+ \begin{DoxyReturn}{Returns}
+std\+::unique\+\_\+ptr$<$base\+Component$>$ componente creado. 
+\end{DoxyReturn}
+
+
+Definition at line 93 of file Component\+Factory.\+cpp.
+
+\hypertarget{classant_1_1_component_factory_af55da53ce3a1ba4782d1f27c987675ed}{\index{ant\+::\+Component\+Factory@{ant\+::\+Component\+Factory}!create\+Destructable@{create\+Destructable}}
+\index{create\+Destructable@{create\+Destructable}!ant\+::\+Component\+Factory@{ant\+::\+Component\+Factory}}
+\subsubsection[{create\+Destructable}]{\setlength{\rightskip}{0pt plus 5cm}std\+::unique\+\_\+ptr$<$ {\bf base\+Component} $>$ ant\+::\+Component\+Factory\+::create\+Destructable (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Vector2f}]{position, }
+\item[{const std\+::string \&}]{image\+I\+D}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_component_factory_af55da53ce3a1ba4782d1f27c987675ed}
+
+
+Crea un componente tipo Destructable. 
+
+Este componente basico es el cual permite a la entidad ser destruida. Son pixeles individuales las operaciones de mover no se pueden aplicar sin tener un coste elevado, tarda mas segun lo grande que sea la imagen. 
+\begin{DoxyCode}
+Component<std::string,sf::VertexArray>
+\end{DoxyCode}
+ 
+\begin{DoxyParams}{Parameters}
+{\em position} & sf\+::\+Vector2f posicion en la que dibuja el primer pixel. \\
+\hline
+{\em image\+I\+D} & std\+::string\& id de la imagen a mapear. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::unique\+\_\+ptr$<$base\+Component$>$ componente creado. 
+\end{DoxyReturn}
+
+
+Definition at line 63 of file Component\+Factory.\+cpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/df6/classant_1_1_component_factory_af55da53ce3a1ba4782d1f27c987675ed_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classant_1_1_component_factory_ac366ce2c2eafa4ceb651f505b5c311d2}{\index{ant\+::\+Component\+Factory@{ant\+::\+Component\+Factory}!create\+In@{create\+In}}
+\index{create\+In@{create\+In}!ant\+::\+Component\+Factory@{ant\+::\+Component\+Factory}}
+\subsubsection[{create\+In}]{\setlength{\rightskip}{0pt plus 5cm}std\+::unique\+\_\+ptr$<$ {\bf base\+Component} $>$ ant\+::\+Component\+Factory\+::create\+In (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_component_factory_ac366ce2c2eafa4ceb651f505b5c311d2}
+
+
+Crea un componente que indica la direccion. 
+
+Este componente permite hacer que una entidad haga aparecer otras entidades.
+
+
+\begin{DoxyCode}
+Component<>
+\end{DoxyCode}
+ \begin{DoxyReturn}{Returns}
+std\+::unique\+\_\+ptr$<$base\+Component$>$ componente creado. 
+\end{DoxyReturn}
+
+
+Definition at line 85 of file Component\+Factory.\+cpp.
+
+\hypertarget{classant_1_1_component_factory_ab29393c2d735a345463778a26ff5f27a}{\index{ant\+::\+Component\+Factory@{ant\+::\+Component\+Factory}!create\+Out@{create\+Out}}
+\index{create\+Out@{create\+Out}!ant\+::\+Component\+Factory@{ant\+::\+Component\+Factory}}
+\subsubsection[{create\+Out}]{\setlength{\rightskip}{0pt plus 5cm}std\+::unique\+\_\+ptr$<$ {\bf base\+Component} $>$ ant\+::\+Component\+Factory\+::create\+Out (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_component_factory_ab29393c2d735a345463778a26ff5f27a}
+
+
+Crea un componente que indica la direccion. 
+
+Este componente permite hacer que una entidad haga desparecer las entidades que colisiones contra ella.
+
+
+\begin{DoxyCode}
+Component<>
+\end{DoxyCode}
+ \begin{DoxyReturn}{Returns}
+std\+::unique\+\_\+ptr$<$base\+Component$>$ componente creado. 
+\end{DoxyReturn}
+
+
+Definition at line 89 of file Component\+Factory.\+cpp.
+
+\hypertarget{classant_1_1_component_factory_af0058eda5c3578e2bd25772a5fe76c7e}{\index{ant\+::\+Component\+Factory@{ant\+::\+Component\+Factory}!create\+Passage@{create\+Passage}}
+\index{create\+Passage@{create\+Passage}!ant\+::\+Component\+Factory@{ant\+::\+Component\+Factory}}
+\subsubsection[{create\+Passage}]{\setlength{\rightskip}{0pt plus 5cm}std\+::unique\+\_\+ptr$<$ {\bf base\+Component} $>$ ant\+::\+Component\+Factory\+::create\+Passage (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Vector2f}]{dest}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_component_factory_af0058eda5c3578e2bd25772a5fe76c7e}
+
+
+Crea un componente tipo Passage. 
+
+Este componente permite ir de un sitio a otro. 
+\begin{DoxyCode}
+Component<sf::Vector2f>
+\end{DoxyCode}
+ \begin{DoxyReturn}{Returns}
+std\+::unique\+\_\+ptr$<$base\+Component$>$ componente creado. 
+\end{DoxyReturn}
+
+
+Definition at line 81 of file Component\+Factory.\+cpp.
+
+\hypertarget{classant_1_1_component_factory_ac76f4b8d6b9356e49ded116f77171027}{\index{ant\+::\+Component\+Factory@{ant\+::\+Component\+Factory}!create\+Sprite@{create\+Sprite}}
+\index{create\+Sprite@{create\+Sprite}!ant\+::\+Component\+Factory@{ant\+::\+Component\+Factory}}
+\subsubsection[{create\+Sprite}]{\setlength{\rightskip}{0pt plus 5cm}std\+::unique\+\_\+ptr$<$ {\bf base\+Component} $>$ ant\+::\+Component\+Factory\+::create\+Sprite (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{id}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_component_factory_ac76f4b8d6b9356e49ded116f77171027}
+
+
+Crea un componente tipo Sprite. 
+
+Este componente basico es el cual permite a una entidad ser renderizada en 2d. 
+\begin{DoxyCode}
+Component<std::string,sf::Sprite>
+\end{DoxyCode}
+ 
+\begin{DoxyParams}{Parameters}
+{\em id} & std\+::string id de la textura. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::unique\+\_\+ptr$<$base\+Component$>$ componente creado. 
+\end{DoxyReturn}
+
+
+Definition at line 75 of file Component\+Factory.\+cpp.
+
+\hypertarget{classant_1_1_component_factory_a0438691a164fa293f5551179f2051620}{\index{ant\+::\+Component\+Factory@{ant\+::\+Component\+Factory}!create\+Transform@{create\+Transform}}
+\index{create\+Transform@{create\+Transform}!ant\+::\+Component\+Factory@{ant\+::\+Component\+Factory}}
+\subsubsection[{create\+Transform}]{\setlength{\rightskip}{0pt plus 5cm}std\+::unique\+\_\+ptr$<$ {\bf base\+Component} $>$ ant\+::\+Component\+Factory\+::create\+Transform (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Vector2f}]{position, }
+\item[{sf\+::\+Vector2f}]{scale, }
+\item[{float}]{rotation}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_component_factory_a0438691a164fa293f5551179f2051620}
+
+
+Crea un componente tipo Transform. 
+
+Este componente basico es el cual permite a la entidad tener posicion. necesario para poder renderizar, moverse, etc. 
+\begin{DoxyCode}
+Component<sf::Vector2f,sf::Vector2f,float>
+\end{DoxyCode}
+ 
+\begin{DoxyParams}{Parameters}
+{\em position} & sf\+::\+Vector2f posicion de la entidad. \\
+\hline
+{\em scale} & sf\+::\+Vector2f escala de la entidad. \\
+\hline
+{\em rotation} & float rotacion de la entidad. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::unique\+\_\+ptr$<$base\+Component$>$ componente creado. 
+\end{DoxyReturn}
+
+
+Definition at line 44 of file Component\+Factory.\+cpp.
+
+\hypertarget{classant_1_1_component_factory_a1c2757122638b6dd751bfad7451ce4a6}{\index{ant\+::\+Component\+Factory@{ant\+::\+Component\+Factory}!create\+Velocity@{create\+Velocity}}
+\index{create\+Velocity@{create\+Velocity}!ant\+::\+Component\+Factory@{ant\+::\+Component\+Factory}}
+\subsubsection[{create\+Velocity}]{\setlength{\rightskip}{0pt plus 5cm}std\+::unique\+\_\+ptr$<$ {\bf base\+Component} $>$ ant\+::\+Component\+Factory\+::create\+Velocity (
+\begin{DoxyParamCaption}
+\item[{float}]{speed, }
+\item[{float}]{min\+Speed, }
+\item[{float}]{max\+Speed}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_component_factory_a1c2757122638b6dd751bfad7451ce4a6}
+
+
+Crea un componente Tipo Velocity. 
+
+Este componente basico es el cual permite a la entidad moverse. necesario para poder moverse. 
+\begin{DoxyCode}
+Component<sf::Vector2f,float,float,float>
+\end{DoxyCode}
+ 
+\begin{DoxyParams}{Parameters}
+{\em speed} & float Velocidad actual. \\
+\hline
+{\em min\+Speed} & float Velocidad minima a la cual puede ir. \\
+\hline
+{\em max\+Speed} & float Velocidad Maxima a la cual puede ir. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::unique\+\_\+ptr$<$base\+Component$>$ componente creado. 
+\end{DoxyReturn}
+
+
+Definition at line 49 of file Component\+Factory.\+cpp.
+
+\hypertarget{classant_1_1_component_factory_a3fa7c2478df473516ed2ce6814d6bcb4}{\index{ant\+::\+Component\+Factory@{ant\+::\+Component\+Factory}!get\+Asset\+Manager@{get\+Asset\+Manager}}
+\index{get\+Asset\+Manager@{get\+Asset\+Manager}!ant\+::\+Component\+Factory@{ant\+::\+Component\+Factory}}
+\subsubsection[{get\+Asset\+Manager}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Asset\+Manager}$>$ ant\+::\+Component\+Factory\+::get\+Asset\+Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classant_1_1_component_factory_a3fa7c2478df473516ed2ce6814d6bcb4}
+
+
+Devuelve el asset manager que utiliza. 
+
+\begin{DoxyReturn}{Returns}
+std\+::shared\+\_\+ptr$<$\+Asset\+Manager$>$ \hyperlink{classant_1_1_asset_manager}{Asset\+Manager} que utiliza. 
+\end{DoxyReturn}
+
+
+Definition at line 53 of file Component\+Factory.\+hpp.
+
+\hypertarget{classant_1_1_component_factory_a4ebe19f09d51965ff61c0df7251e9e99}{\index{ant\+::\+Component\+Factory@{ant\+::\+Component\+Factory}!load\+Assets@{load\+Assets}}
+\index{load\+Assets@{load\+Assets}!ant\+::\+Component\+Factory@{ant\+::\+Component\+Factory}}
+\subsubsection[{load\+Assets}]{\setlength{\rightskip}{0pt plus 5cm}bool ant\+::\+Component\+Factory\+::load\+Assets (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{json}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_component_factory_a4ebe19f09d51965ff61c0df7251e9e99}
+
+
+Llama a la funcion de Assets\+Manager\+::load\+Assets() para cargar los assets desde un fichero, tiene que tener el formato especificado en la funcion. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em json} & std\+::string fichero json a cargar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Definition at line 35 of file Component\+Factory.\+cpp.
+
+\hypertarget{classant_1_1_component_factory_a646fbdf216ba6ddfc45c6e28f99af331}{\index{ant\+::\+Component\+Factory@{ant\+::\+Component\+Factory}!map\+Image@{map\+Image}}
+\index{map\+Image@{map\+Image}!ant\+::\+Component\+Factory@{ant\+::\+Component\+Factory}}
+\subsubsection[{map\+Image}]{\setlength{\rightskip}{0pt plus 5cm}std\+::unique\+\_\+ptr$<$ sf\+::\+Vertex\+Array $>$ ant\+::\+Component\+Factory\+::map\+Image (
+\begin{DoxyParamCaption}
+\item[{const sf\+::\+Vector2f \&}]{position, }
+\item[{sf\+::\+Image \&}]{img, }
+\item[{sf\+::\+Float\+Rect $\ast$}]{bounds}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1_component_factory_a646fbdf216ba6ddfc45c6e28f99af331}
+
+
+Sirve para mapear una imagen a un sf\+::\+Vertex\+Array. 
+
+Se utiliza para mapear una imagen a un sf\+::\+Vertex\+Array, si la posicion es diferente a 0 la array se recorrera otra vez para poner las posiciones de los pixels segun la posicion puesta.
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & sf\+::\+Vector2f Donde empezara a poner la posicion de cada pixel. \\
+\hline
+{\em img} & sf\+::\+Image\& referencia de la imagen a mapear. \\
+\hline
+{\em bounds} & $\ast$ sf\+::\+Float\+Rect la posicion y tamaño del destuctible \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 4 of file Component\+Factory.\+cpp.
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/df6/classant_1_1_component_factory_a646fbdf216ba6ddfc45c6e28f99af331_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classant_1_1_component_factory_a65344c3c8f3d7b48c65205b1fd013724}{\index{ant\+::\+Component\+Factory@{ant\+::\+Component\+Factory}!set\+Asset\+Manager@{set\+Asset\+Manager}}
+\index{set\+Asset\+Manager@{set\+Asset\+Manager}!ant\+::\+Component\+Factory@{ant\+::\+Component\+Factory}}
+\subsubsection[{set\+Asset\+Manager}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+Component\+Factory\+::set\+Asset\+Manager (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Asset\+Manager} $>$}]{assets}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_component_factory_a65344c3c8f3d7b48c65205b1fd013724}
+
+
+Pone el \hyperlink{classant_1_1_asset_manager}{Asset\+Manager} especificado para usar, en la creacion de los componentes que requieran de assets. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em assets} & std\+::shared\+\_\+ptr$<$\+Asset\+Manager$>$ Assets \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 41 of file Component\+Factory.\+cpp.
+
+\hypertarget{classant_1_1_component_factory_a57a64f3a57be7ddc893c999206f2410c}{\index{ant\+::\+Component\+Factory@{ant\+::\+Component\+Factory}!unload\+Assets@{unload\+Assets}}
+\index{unload\+Assets@{unload\+Assets}!ant\+::\+Component\+Factory@{ant\+::\+Component\+Factory}}
+\subsubsection[{unload\+Assets}]{\setlength{\rightskip}{0pt plus 5cm}bool ant\+::\+Component\+Factory\+::unload\+Assets (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_component_factory_a57a64f3a57be7ddc893c999206f2410c}
+
+
+Descarga los assets cargados. 
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Definition at line 38 of file Component\+Factory.\+cpp.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classant_1_1_component_factory_a624849c9a8fcd1df41b49f04d25fbce6}{\index{ant\+::\+Component\+Factory@{ant\+::\+Component\+Factory}!assets@{assets}}
+\index{assets@{assets}!ant\+::\+Component\+Factory@{ant\+::\+Component\+Factory}}
+\subsubsection[{assets}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Asset\+Manager}$>$ ant\+::\+Component\+Factory\+::assets\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1_component_factory_a624849c9a8fcd1df41b49f04d25fbce6}
+
+
+Definition at line 174 of file Component\+Factory.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_component_factory_8hpp}{Component\+Factory.\+hpp}\item 
+\hyperlink{_component_factory_8cpp}{Component\+Factory.\+cpp}\end{DoxyCompactItemize}

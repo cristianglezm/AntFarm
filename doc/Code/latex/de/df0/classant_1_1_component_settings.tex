@@ -1,0 +1,320 @@
+\hypertarget{classant_1_1_component_settings}{\section{ant\+:\+:Component\+Settings Class Reference}
+\label{classant_1_1_component_settings}\index{ant\+::\+Component\+Settings@{ant\+::\+Component\+Settings}}
+}
+
+
+Clase para la configuracion de los componentes en \hyperlink{classant_1_1_entity_factory}{Entity\+Factory}.  
+
+
+
+
+{\ttfamily \#include $<$Component\+Settings.\+hpp$>$}
+
+
+
+Collaboration diagram for ant\+:\+:Component\+Settings\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=203pt]{d4/d8f/classant_1_1_component_settings__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classant_1_1_component_settings_a656fd2e5c9c2385ccc54aa73387c7c3a}{Component\+Settings} ()
+\item 
+void \hyperlink{classant_1_1_component_settings_accaca2bae161ce60c84d78817a3864bc}{load\+Settings} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Carga la configuracion de la entidad. \end{DoxyCompactList}\item 
+void \hyperlink{classant_1_1_component_settings_a63c2383733a1a7b51029f055791c5569}{set\+Speed} (float speed)
+\begin{DoxyCompactList}\small\item\em Establece la Velocidad. \end{DoxyCompactList}\item 
+float \hyperlink{classant_1_1_component_settings_a97dbdc0fd21ce4904c8caaac774d9b93}{get\+Speed} ()
+\item 
+\hyperlink{classant_1_1_component_settings_aaf467fb092f589167d639172608931f9}{$\sim$\+Component\+Settings} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{classant_1_1_component_settings_ad2d40618bceb1e55dcefd5ed9770a3da}{entity\+Name}
+\item 
+float \hyperlink{classant_1_1_component_settings_a60bbb1cde99a1524cac65b3ea6ced5d4}{min\+Speed}
+\item 
+float \hyperlink{classant_1_1_component_settings_aa986b37a02f101f7c0ee17a4e8baf869}{max\+Speed}
+\item 
+sf\+::\+Vector2f \hyperlink{classant_1_1_component_settings_af5401836ccc8522236ce460c3b0b7dc4}{scale}
+\item 
+sf\+::\+Vector2f \hyperlink{classant_1_1_component_settings_a804dcaebc434be8174762ac18fa8c8e9}{position}
+\item 
+float \hyperlink{classant_1_1_component_settings_af6510ce7e9046dae09b36ae090ff29e2}{rotation}
+\item 
+std\+::string \hyperlink{classant_1_1_component_settings_aa75c8c1dee1ae6487858af03b2c0d0ce}{sprite\+I\+D}
+\item 
+std\+::vector$<$ std\+::string $>$ \hyperlink{classant_1_1_component_settings_a31983ef81c97cd5ed7e7fc858dca0790}{animation}
+\item 
+sf\+::\+Vector2f \hyperlink{classant_1_1_component_settings_a17c51bba2be5a2a29db30c2aea842f23}{dest}
+\item 
+sf\+::\+Vector2f \hyperlink{classant_1_1_component_settings_a29c818f14771a383adda38637635235c}{Destructible\+Position}
+\item 
+std\+::string \hyperlink{classant_1_1_component_settings_abd24a47a0779d046fd85b00a79f2dc75}{image\+I\+D}
+\item 
+sf\+::\+Float\+Rect \hyperlink{classant_1_1_component_settings_a73dafad1f52d54aed792e01c74c4d7d5}{bounds}
+\item 
+int \hyperlink{classant_1_1_component_settings_a38cc2b2e94b54f023df27b3553af19ed}{count}
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{classant_1_1_component_settings_a56a5b8bb6e11382014d1b160517a27d8}{Speed}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Clase para la configuracion de los componentes en \hyperlink{classant_1_1_entity_factory}{Entity\+Factory}. 
+
+\begin{DoxyAuthor}{Author}
+Cristian Glez \href{mailto:Cristian.glez.m@gmail.com}{\tt Cristian.\+glez.\+m@gmail.\+com} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+
+
+Definition at line 14 of file Component\+Settings.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classant_1_1_component_settings_a656fd2e5c9c2385ccc54aa73387c7c3a}{\index{ant\+::\+Component\+Settings@{ant\+::\+Component\+Settings}!Component\+Settings@{Component\+Settings}}
+\index{Component\+Settings@{Component\+Settings}!ant\+::\+Component\+Settings@{ant\+::\+Component\+Settings}}
+\subsubsection[{Component\+Settings}]{\setlength{\rightskip}{0pt plus 5cm}ant\+::\+Component\+Settings\+::\+Component\+Settings (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_component_settings_a656fd2e5c9c2385ccc54aa73387c7c3a}
+
+
+Definition at line 4 of file Component\+Settings.\+cpp.
+
+\hypertarget{classant_1_1_component_settings_aaf467fb092f589167d639172608931f9}{\index{ant\+::\+Component\+Settings@{ant\+::\+Component\+Settings}!````~Component\+Settings@{$\sim$\+Component\+Settings}}
+\index{````~Component\+Settings@{$\sim$\+Component\+Settings}!ant\+::\+Component\+Settings@{ant\+::\+Component\+Settings}}
+\subsubsection[{$\sim$\+Component\+Settings}]{\setlength{\rightskip}{0pt plus 5cm}ant\+::\+Component\+Settings\+::$\sim$\+Component\+Settings (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_component_settings_aaf467fb092f589167d639172608931f9}
+
+
+Definition at line 69 of file Component\+Settings.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classant_1_1_component_settings_a97dbdc0fd21ce4904c8caaac774d9b93}{\index{ant\+::\+Component\+Settings@{ant\+::\+Component\+Settings}!get\+Speed@{get\+Speed}}
+\index{get\+Speed@{get\+Speed}!ant\+::\+Component\+Settings@{ant\+::\+Component\+Settings}}
+\subsubsection[{get\+Speed}]{\setlength{\rightskip}{0pt plus 5cm}float ant\+::\+Component\+Settings\+::get\+Speed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classant_1_1_component_settings_a97dbdc0fd21ce4904c8caaac774d9b93}
+
+
+Definition at line 47 of file Component\+Settings.\+hpp.
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{de/df0/classant_1_1_component_settings_a97dbdc0fd21ce4904c8caaac774d9b93_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classant_1_1_component_settings_accaca2bae161ce60c84d78817a3864bc}{\index{ant\+::\+Component\+Settings@{ant\+::\+Component\+Settings}!load\+Settings@{load\+Settings}}
+\index{load\+Settings@{load\+Settings}!ant\+::\+Component\+Settings@{ant\+::\+Component\+Settings}}
+\subsubsection[{load\+Settings}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+Component\+Settings\+::load\+Settings (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{filename}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_component_settings_accaca2bae161ce60c84d78817a3864bc}
+
+
+Carga la configuracion de la entidad. 
+
+Carga un fichero json con las propiedades de los componentes las propiedades que no encuentre las pondra por defecto.
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & std\+::string nombre del fichero(json) a cargar. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 19 of file Component\+Settings.\+cpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/df0/classant_1_1_component_settings_accaca2bae161ce60c84d78817a3864bc_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/df0/classant_1_1_component_settings_accaca2bae161ce60c84d78817a3864bc_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classant_1_1_component_settings_a63c2383733a1a7b51029f055791c5569}{\index{ant\+::\+Component\+Settings@{ant\+::\+Component\+Settings}!set\+Speed@{set\+Speed}}
+\index{set\+Speed@{set\+Speed}!ant\+::\+Component\+Settings@{ant\+::\+Component\+Settings}}
+\subsubsection[{set\+Speed}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+Component\+Settings\+::set\+Speed (
+\begin{DoxyParamCaption}
+\item[{float}]{speed}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_component_settings_a63c2383733a1a7b51029f055791c5569}
+
+
+Establece la Velocidad. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em speed} & float velocidad \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 61 of file Component\+Settings.\+cpp.
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/df0/classant_1_1_component_settings_a63c2383733a1a7b51029f055791c5569_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classant_1_1_component_settings_a31983ef81c97cd5ed7e7fc858dca0790}{\index{ant\+::\+Component\+Settings@{ant\+::\+Component\+Settings}!animation@{animation}}
+\index{animation@{animation}!ant\+::\+Component\+Settings@{ant\+::\+Component\+Settings}}
+\subsubsection[{animation}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$std\+::string$>$ ant\+::\+Component\+Settings\+::animation}}\label{classant_1_1_component_settings_a31983ef81c97cd5ed7e7fc858dca0790}
+
+
+Definition at line 23 of file Component\+Settings.\+hpp.
+
+\hypertarget{classant_1_1_component_settings_a73dafad1f52d54aed792e01c74c4d7d5}{\index{ant\+::\+Component\+Settings@{ant\+::\+Component\+Settings}!bounds@{bounds}}
+\index{bounds@{bounds}!ant\+::\+Component\+Settings@{ant\+::\+Component\+Settings}}
+\subsubsection[{bounds}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Float\+Rect ant\+::\+Component\+Settings\+::bounds}}\label{classant_1_1_component_settings_a73dafad1f52d54aed792e01c74c4d7d5}
+
+
+Definition at line 27 of file Component\+Settings.\+hpp.
+
+\hypertarget{classant_1_1_component_settings_a38cc2b2e94b54f023df27b3553af19ed}{\index{ant\+::\+Component\+Settings@{ant\+::\+Component\+Settings}!count@{count}}
+\index{count@{count}!ant\+::\+Component\+Settings@{ant\+::\+Component\+Settings}}
+\subsubsection[{count}]{\setlength{\rightskip}{0pt plus 5cm}int ant\+::\+Component\+Settings\+::count}}\label{classant_1_1_component_settings_a38cc2b2e94b54f023df27b3553af19ed}
+
+
+Definition at line 28 of file Component\+Settings.\+hpp.
+
+\hypertarget{classant_1_1_component_settings_a17c51bba2be5a2a29db30c2aea842f23}{\index{ant\+::\+Component\+Settings@{ant\+::\+Component\+Settings}!dest@{dest}}
+\index{dest@{dest}!ant\+::\+Component\+Settings@{ant\+::\+Component\+Settings}}
+\subsubsection[{dest}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Vector2f ant\+::\+Component\+Settings\+::dest}}\label{classant_1_1_component_settings_a17c51bba2be5a2a29db30c2aea842f23}
+
+
+Definition at line 24 of file Component\+Settings.\+hpp.
+
+\hypertarget{classant_1_1_component_settings_a29c818f14771a383adda38637635235c}{\index{ant\+::\+Component\+Settings@{ant\+::\+Component\+Settings}!Destructible\+Position@{Destructible\+Position}}
+\index{Destructible\+Position@{Destructible\+Position}!ant\+::\+Component\+Settings@{ant\+::\+Component\+Settings}}
+\subsubsection[{Destructible\+Position}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Vector2f ant\+::\+Component\+Settings\+::\+Destructible\+Position}}\label{classant_1_1_component_settings_a29c818f14771a383adda38637635235c}
+
+
+Definition at line 25 of file Component\+Settings.\+hpp.
+
+\hypertarget{classant_1_1_component_settings_ad2d40618bceb1e55dcefd5ed9770a3da}{\index{ant\+::\+Component\+Settings@{ant\+::\+Component\+Settings}!entity\+Name@{entity\+Name}}
+\index{entity\+Name@{entity\+Name}!ant\+::\+Component\+Settings@{ant\+::\+Component\+Settings}}
+\subsubsection[{entity\+Name}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string ant\+::\+Component\+Settings\+::entity\+Name}}\label{classant_1_1_component_settings_ad2d40618bceb1e55dcefd5ed9770a3da}
+
+
+Definition at line 16 of file Component\+Settings.\+hpp.
+
+\hypertarget{classant_1_1_component_settings_abd24a47a0779d046fd85b00a79f2dc75}{\index{ant\+::\+Component\+Settings@{ant\+::\+Component\+Settings}!image\+I\+D@{image\+I\+D}}
+\index{image\+I\+D@{image\+I\+D}!ant\+::\+Component\+Settings@{ant\+::\+Component\+Settings}}
+\subsubsection[{image\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string ant\+::\+Component\+Settings\+::image\+I\+D}}\label{classant_1_1_component_settings_abd24a47a0779d046fd85b00a79f2dc75}
+
+
+Definition at line 26 of file Component\+Settings.\+hpp.
+
+\hypertarget{classant_1_1_component_settings_aa986b37a02f101f7c0ee17a4e8baf869}{\index{ant\+::\+Component\+Settings@{ant\+::\+Component\+Settings}!max\+Speed@{max\+Speed}}
+\index{max\+Speed@{max\+Speed}!ant\+::\+Component\+Settings@{ant\+::\+Component\+Settings}}
+\subsubsection[{max\+Speed}]{\setlength{\rightskip}{0pt plus 5cm}float ant\+::\+Component\+Settings\+::max\+Speed}}\label{classant_1_1_component_settings_aa986b37a02f101f7c0ee17a4e8baf869}
+
+
+Definition at line 18 of file Component\+Settings.\+hpp.
+
+\hypertarget{classant_1_1_component_settings_a60bbb1cde99a1524cac65b3ea6ced5d4}{\index{ant\+::\+Component\+Settings@{ant\+::\+Component\+Settings}!min\+Speed@{min\+Speed}}
+\index{min\+Speed@{min\+Speed}!ant\+::\+Component\+Settings@{ant\+::\+Component\+Settings}}
+\subsubsection[{min\+Speed}]{\setlength{\rightskip}{0pt plus 5cm}float ant\+::\+Component\+Settings\+::min\+Speed}}\label{classant_1_1_component_settings_a60bbb1cde99a1524cac65b3ea6ced5d4}
+
+
+Definition at line 17 of file Component\+Settings.\+hpp.
+
+\hypertarget{classant_1_1_component_settings_a804dcaebc434be8174762ac18fa8c8e9}{\index{ant\+::\+Component\+Settings@{ant\+::\+Component\+Settings}!position@{position}}
+\index{position@{position}!ant\+::\+Component\+Settings@{ant\+::\+Component\+Settings}}
+\subsubsection[{position}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Vector2f ant\+::\+Component\+Settings\+::position}}\label{classant_1_1_component_settings_a804dcaebc434be8174762ac18fa8c8e9}
+
+
+Definition at line 20 of file Component\+Settings.\+hpp.
+
+\hypertarget{classant_1_1_component_settings_af6510ce7e9046dae09b36ae090ff29e2}{\index{ant\+::\+Component\+Settings@{ant\+::\+Component\+Settings}!rotation@{rotation}}
+\index{rotation@{rotation}!ant\+::\+Component\+Settings@{ant\+::\+Component\+Settings}}
+\subsubsection[{rotation}]{\setlength{\rightskip}{0pt plus 5cm}float ant\+::\+Component\+Settings\+::rotation}}\label{classant_1_1_component_settings_af6510ce7e9046dae09b36ae090ff29e2}
+
+
+Definition at line 21 of file Component\+Settings.\+hpp.
+
+\hypertarget{classant_1_1_component_settings_af5401836ccc8522236ce460c3b0b7dc4}{\index{ant\+::\+Component\+Settings@{ant\+::\+Component\+Settings}!scale@{scale}}
+\index{scale@{scale}!ant\+::\+Component\+Settings@{ant\+::\+Component\+Settings}}
+\subsubsection[{scale}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Vector2f ant\+::\+Component\+Settings\+::scale}}\label{classant_1_1_component_settings_af5401836ccc8522236ce460c3b0b7dc4}
+
+
+Definition at line 19 of file Component\+Settings.\+hpp.
+
+\hypertarget{classant_1_1_component_settings_a56a5b8bb6e11382014d1b160517a27d8}{\index{ant\+::\+Component\+Settings@{ant\+::\+Component\+Settings}!Speed@{Speed}}
+\index{Speed@{Speed}!ant\+::\+Component\+Settings@{ant\+::\+Component\+Settings}}
+\subsubsection[{Speed}]{\setlength{\rightskip}{0pt plus 5cm}float ant\+::\+Component\+Settings\+::\+Speed\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1_component_settings_a56a5b8bb6e11382014d1b160517a27d8}
+
+
+Definition at line 50 of file Component\+Settings.\+hpp.
+
+\hypertarget{classant_1_1_component_settings_aa75c8c1dee1ae6487858af03b2c0d0ce}{\index{ant\+::\+Component\+Settings@{ant\+::\+Component\+Settings}!sprite\+I\+D@{sprite\+I\+D}}
+\index{sprite\+I\+D@{sprite\+I\+D}!ant\+::\+Component\+Settings@{ant\+::\+Component\+Settings}}
+\subsubsection[{sprite\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string ant\+::\+Component\+Settings\+::sprite\+I\+D}}\label{classant_1_1_component_settings_aa75c8c1dee1ae6487858af03b2c0d0ce}
+
+
+Definition at line 22 of file Component\+Settings.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_component_settings_8hpp}{Component\+Settings.\+hpp}\item 
+\hyperlink{_component_settings_8cpp}{Component\+Settings.\+cpp}\end{DoxyCompactItemize}

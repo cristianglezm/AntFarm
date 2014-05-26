@@ -1,0 +1,597 @@
+\hypertarget{classant_1_1_game_state}{\section{ant\+:\+:Game\+State Class Reference}
+\label{classant_1_1_game_state}\index{ant\+::\+Game\+State@{ant\+::\+Game\+State}}
+}
+
+
+Estado de juego, Inicia el juego.  
+
+
+
+
+{\ttfamily \#include $<$Game\+State.\+hpp$>$}
+
+
+
+Inheritance diagram for ant\+:\+:Game\+State\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=286pt]{d6/d7f/classant_1_1_game_state__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ant\+:\+:Game\+State\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{d3/dc8/classant_1_1_game_state__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::unique\+\_\+ptr$<$ \hyperlink{classant_1_1_app_state}{App\+State} $>$ \hyperlink{classant_1_1_app_state_a94963d69f76e53c5e3b6cfa58f99fff9}{u\+Ptr}
+\begin{DoxyCompactList}\small\item\em Puntero unico de \hyperlink{classant_1_1_app_state}{App\+State}. \end{DoxyCompactList}\item 
+typedef std\+::shared\+\_\+ptr$<$ \hyperlink{classant_1_1_app_state}{App\+State} $>$ \hyperlink{classant_1_1_app_state_a772c49d9b95d2447149218ce7914d40c}{s\+Ptr}
+\begin{DoxyCompactList}\small\item\em Puntero Compartido de \hyperlink{classant_1_1_app_state}{App\+State}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classant_1_1_game_state_a024b020260791f23d168425fc67291af}{Game\+State} (\hyperlink{classant_1_1_state_stack}{State\+Stack} \&stack, \hyperlink{structant_1_1_app_state_1_1_context}{Context} context)
+\begin{DoxyCompactList}\small\item\em Constructor principal. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classant_1_1_game_state_a284e9f6e2b1050f22aa071e02da5477a}{render} ()
+\begin{DoxyCompactList}\small\item\em Renderiza el juego. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classant_1_1_game_state_acac7f6261d21061de5a92d9887ff3cfe}{update} (sf\+::\+Time dt)
+\begin{DoxyCompactList}\small\item\em Actualiza el juego. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classant_1_1_game_state_a379cc1dbbea0e0f559a174676da966fe}{handle\+Event} (const sf\+::\+Event \&event)
+\begin{DoxyCompactList}\small\item\em Maneja el input del juego. \end{DoxyCompactList}\item 
+void \hyperlink{classant_1_1_game_state_a90274b8fa005424e2d42fd526331f763}{on\+Notify} (std\+::shared\+\_\+ptr$<$ \hyperlink{classant_1_1base_event}{base\+Event} $>$ e)
+\begin{DoxyCompactList}\small\item\em Recibe los eventos.
+\begin{DoxyEnumerate}
+\item L\+E\+V\+E\+L\+\_\+\+C\+O\+M\+P\+L\+E\+T\+E cambia de nivel.
+\item L\+E\+V\+E\+L\+\_\+\+F\+A\+I\+L\+E\+D vuelve al menu. 
+\end{DoxyEnumerate}\end{DoxyCompactList}\item 
+virtual \hyperlink{classant_1_1_game_state_af26e1aa75b033b28eacde5a588e2066a}{$\sim$\+Game\+State} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classant_1_1_app_state_a2830ba9f7de8efbf03bab5249d5d3f0a}{request\+Stack\+Push} (\hyperlink{namespaceant_1_1_app_states_a8e30476d77a5da5e0c1c3b9c7042e62a}{App\+States\+::\+I\+D} state\+I\+D)
+\begin{DoxyCompactList}\small\item\em Pide al stack que añada un estado nuevo. \end{DoxyCompactList}\item 
+void \hyperlink{classant_1_1_app_state_a65a59f018d590e807fd61adfa307651e}{request\+Stack\+Pop} ()
+\begin{DoxyCompactList}\small\item\em Pide al stack que quite el ultimo estado añadido. \end{DoxyCompactList}\item 
+void \hyperlink{classant_1_1_app_state_a16e430d3eb803f4ff7995214bd66665e}{request\+State\+Clear} ()
+\begin{DoxyCompactList}\small\item\em Pide al stack que se limpie. \end{DoxyCompactList}\item 
+\hyperlink{structant_1_1_app_state_1_1_context}{Context} \hyperlink{classant_1_1_app_state_aa7abef18b5d2d32dbb9b35d4f630cb31}{get\+Context} () const 
+\begin{DoxyCompactList}\small\item\em Devuelve el contexto. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classant_1_1_game_state_afbabc6b4f41915d8c0f9b8d1b1a55727}{load\+Config} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Carga la configuracion de este estado. \end{DoxyCompactList}\item 
+void \hyperlink{classant_1_1_game_state_a66275726c99c052f89892db66310b30f}{load\+G\+U\+I\+Conf} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Carga la interfaz grafica. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Render\+Window \& \hyperlink{classant_1_1_game_state_acf079d8d9e634b6a2c30356933f7b9b3}{win}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classant_1_1_asset_manager}{Asset\+Manager} $>$ \hyperlink{classant_1_1_game_state_a4537d52e3ebce5b280a862b0e3cad1b9}{assets}
+\item 
+std\+::shared\+\_\+ptr\\*
+$<$ \hyperlink{classant_1_1_game_event_dispatcher}{Game\+Event\+Dispatcher} $>$ \hyperlink{classant_1_1_game_state_ad109775544bc8d03e47a5c9a41493d04}{game\+Event\+Dispatcher}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classant_1_1_level}{Level} $>$ \hyperlink{classant_1_1_game_state_a1c31323c9a09ae49d33b9aa3a15a6348}{level}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classant_1_1_event_queue}{Event\+Queue} $>$ \hyperlink{classant_1_1_game_state_a931f64dcd713af5c143745c11e4568d1}{event\+Queue}
+\item 
+std\+::vector$<$ std\+::unique\+\_\+ptr\\*
+$<$ \hyperlink{classant_1_1_g_u_i_1_1_button}{G\+U\+I\+::\+Button} $>$ $>$ \hyperlink{classant_1_1_game_state_a0e1f1d688b1179bff689e10d925343ac}{buttons}
+\item 
+int \hyperlink{classant_1_1_game_state_a1ae14bf9a671d4372abe4b9093ce5f45}{current\+Level}
+\item 
+int \hyperlink{classant_1_1_game_state_a376062c96e23aca3750fd4196c585a36}{total\+Levels}
+\item 
+float \hyperlink{classant_1_1_game_state_af9c5ac223f5bebb7df9a5b4dfff4232c}{Game\+Speed}
+\item 
+std\+::string \hyperlink{classant_1_1_game_state_a0f648fe38b57ba74842572b8e9c05fdd}{font}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Estado de juego, Inicia el juego. 
+
+\begin{DoxyAuthor}{Author}
+Cristian Glez \href{mailto:Cristian.glez.m@gmail.com}{\tt Cristian.\+glez.\+m@gmail.\+com} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+
+
+Definition at line 18 of file Game\+State.\+hpp.
+
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classant_1_1_app_state_a772c49d9b95d2447149218ce7914d40c}{\index{ant\+::\+Game\+State@{ant\+::\+Game\+State}!s\+Ptr@{s\+Ptr}}
+\index{s\+Ptr@{s\+Ptr}!ant\+::\+Game\+State@{ant\+::\+Game\+State}}
+\subsubsection[{s\+Ptr}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::shared\+\_\+ptr$<${\bf App\+State}$>$ {\bf ant\+::\+App\+State\+::s\+Ptr}\hspace{0.3cm}{\ttfamily [inherited]}}}\label{classant_1_1_app_state_a772c49d9b95d2447149218ce7914d40c}
+
+
+Puntero Compartido de \hyperlink{classant_1_1_app_state}{App\+State}. 
+
+
+
+Definition at line 26 of file App\+State.\+hpp.
+
+\hypertarget{classant_1_1_app_state_a94963d69f76e53c5e3b6cfa58f99fff9}{\index{ant\+::\+Game\+State@{ant\+::\+Game\+State}!u\+Ptr@{u\+Ptr}}
+\index{u\+Ptr@{u\+Ptr}!ant\+::\+Game\+State@{ant\+::\+Game\+State}}
+\subsubsection[{u\+Ptr}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::unique\+\_\+ptr$<${\bf App\+State}$>$ {\bf ant\+::\+App\+State\+::u\+Ptr}\hspace{0.3cm}{\ttfamily [inherited]}}}\label{classant_1_1_app_state_a94963d69f76e53c5e3b6cfa58f99fff9}
+
+
+Puntero unico de \hyperlink{classant_1_1_app_state}{App\+State}. 
+
+
+
+Definition at line 22 of file App\+State.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classant_1_1_game_state_a024b020260791f23d168425fc67291af}{\index{ant\+::\+Game\+State@{ant\+::\+Game\+State}!Game\+State@{Game\+State}}
+\index{Game\+State@{Game\+State}!ant\+::\+Game\+State@{ant\+::\+Game\+State}}
+\subsubsection[{Game\+State}]{\setlength{\rightskip}{0pt plus 5cm}ant\+::\+Game\+State\+::\+Game\+State (
+\begin{DoxyParamCaption}
+\item[{{\bf State\+Stack} \&}]{stack, }
+\item[{{\bf Context}}]{context}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_game_state_a024b020260791f23d168425fc67291af}
+
+
+Constructor principal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stack} & \hyperlink{classant_1_1_state_stack}{State\+Stack} stack para pedir otros estados etc. \\
+\hline
+{\em context} & Context contexto de la applicacion. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 4 of file Game\+State.\+cpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/da6/classant_1_1_game_state_a024b020260791f23d168425fc67291af_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classant_1_1_game_state_af26e1aa75b033b28eacde5a588e2066a}{\index{ant\+::\+Game\+State@{ant\+::\+Game\+State}!````~Game\+State@{$\sim$\+Game\+State}}
+\index{````~Game\+State@{$\sim$\+Game\+State}!ant\+::\+Game\+State@{ant\+::\+Game\+State}}
+\subsubsection[{$\sim$\+Game\+State}]{\setlength{\rightskip}{0pt plus 5cm}ant\+::\+Game\+State\+::$\sim$\+Game\+State (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classant_1_1_game_state_af26e1aa75b033b28eacde5a588e2066a}
+
+
+Definition at line 219 of file Game\+State.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classant_1_1_app_state_aa7abef18b5d2d32dbb9b35d4f630cb31}{\index{ant\+::\+Game\+State@{ant\+::\+Game\+State}!get\+Context@{get\+Context}}
+\index{get\+Context@{get\+Context}!ant\+::\+Game\+State@{ant\+::\+Game\+State}}
+\subsubsection[{get\+Context}]{\setlength{\rightskip}{0pt plus 5cm}{\bf App\+State\+::\+Context} ant\+::\+App\+State\+::get\+Context (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{classant_1_1_app_state_aa7abef18b5d2d32dbb9b35d4f630cb31}
+
+
+Devuelve el contexto. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{structant_1_1_app_state_1_1_context}{App\+State\+::\+Context} 
+\end{DoxyReturn}
+
+
+Definition at line 21 of file App\+State.\+cpp.
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/df7/classant_1_1_app_state_aa7abef18b5d2d32dbb9b35d4f630cb31_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classant_1_1_game_state_a379cc1dbbea0e0f559a174676da966fe}{\index{ant\+::\+Game\+State@{ant\+::\+Game\+State}!handle\+Event@{handle\+Event}}
+\index{handle\+Event@{handle\+Event}!ant\+::\+Game\+State@{ant\+::\+Game\+State}}
+\subsubsection[{handle\+Event}]{\setlength{\rightskip}{0pt plus 5cm}bool ant\+::\+Game\+State\+::handle\+Event (
+\begin{DoxyParamCaption}
+\item[{const sf\+::\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classant_1_1_game_state_a379cc1dbbea0e0f559a174676da966fe}
+
+
+Maneja el input del juego. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & sf\+::\+Event \& eventos de teclado/\+Raton etc \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classant_1_1_app_state_ae70866194e3c8cf2fd42041804d0905a}{ant\+::\+App\+State}.
+
+
+
+Definition at line 32 of file Game\+State.\+cpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/da6/classant_1_1_game_state_a379cc1dbbea0e0f559a174676da966fe_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classant_1_1_game_state_afbabc6b4f41915d8c0f9b8d1b1a55727}{\index{ant\+::\+Game\+State@{ant\+::\+Game\+State}!load\+Config@{load\+Config}}
+\index{load\+Config@{load\+Config}!ant\+::\+Game\+State@{ant\+::\+Game\+State}}
+\subsubsection[{load\+Config}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+Game\+State\+::load\+Config (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{filename}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1_game_state_afbabc6b4f41915d8c0f9b8d1b1a55727}
+
+
+Carga la configuracion de este estado. 
+
+
+
+Definition at line 212 of file Game\+State.\+cpp.
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/da6/classant_1_1_game_state_afbabc6b4f41915d8c0f9b8d1b1a55727_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classant_1_1_game_state_a66275726c99c052f89892db66310b30f}{\index{ant\+::\+Game\+State@{ant\+::\+Game\+State}!load\+G\+U\+I\+Conf@{load\+G\+U\+I\+Conf}}
+\index{load\+G\+U\+I\+Conf@{load\+G\+U\+I\+Conf}!ant\+::\+Game\+State@{ant\+::\+Game\+State}}
+\subsubsection[{load\+G\+U\+I\+Conf}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+Game\+State\+::load\+G\+U\+I\+Conf (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{filename}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1_game_state_a66275726c99c052f89892db66310b30f}
+
+
+Carga la interfaz grafica. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & std\+::string \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 165 of file Game\+State.\+cpp.
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/da6/classant_1_1_game_state_a66275726c99c052f89892db66310b30f_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classant_1_1_game_state_a90274b8fa005424e2d42fd526331f763}{\index{ant\+::\+Game\+State@{ant\+::\+Game\+State}!on\+Notify@{on\+Notify}}
+\index{on\+Notify@{on\+Notify}!ant\+::\+Game\+State@{ant\+::\+Game\+State}}
+\subsubsection[{on\+Notify}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+Game\+State\+::on\+Notify (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ {\bf base\+Event} $>$}]{e}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classant_1_1_game_state_a90274b8fa005424e2d42fd526331f763}
+
+
+Recibe los eventos.
+\begin{DoxyEnumerate}
+\item L\+E\+V\+E\+L\+\_\+\+C\+O\+M\+P\+L\+E\+T\+E cambia de nivel.
+\item L\+E\+V\+E\+L\+\_\+\+F\+A\+I\+L\+E\+D vuelve al menu. 
+\end{DoxyEnumerate}
+
+
+
+Implements \hyperlink{classant_1_1_observer_a4f03efedb538d91297ebd7341bc4698c}{ant\+::\+Observer}.
+
+
+
+Definition at line 149 of file Game\+State.\+cpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/da6/classant_1_1_game_state_a90274b8fa005424e2d42fd526331f763_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classant_1_1_game_state_a284e9f6e2b1050f22aa071e02da5477a}{\index{ant\+::\+Game\+State@{ant\+::\+Game\+State}!render@{render}}
+\index{render@{render}!ant\+::\+Game\+State@{ant\+::\+Game\+State}}
+\subsubsection[{render}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+Game\+State\+::render (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classant_1_1_game_state_a284e9f6e2b1050f22aa071e02da5477a}
+
+
+Renderiza el juego. 
+
+
+
+Implements \hyperlink{classant_1_1_app_state_a8e4e13cdf558c5d57339548d8b5acaf9}{ant\+::\+App\+State}.
+
+
+
+Definition at line 19 of file Game\+State.\+cpp.
+
+\hypertarget{classant_1_1_app_state_a65a59f018d590e807fd61adfa307651e}{\index{ant\+::\+Game\+State@{ant\+::\+Game\+State}!request\+Stack\+Pop@{request\+Stack\+Pop}}
+\index{request\+Stack\+Pop@{request\+Stack\+Pop}!ant\+::\+Game\+State@{ant\+::\+Game\+State}}
+\subsubsection[{request\+Stack\+Pop}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+App\+State\+::request\+Stack\+Pop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{classant_1_1_app_state_a65a59f018d590e807fd61adfa307651e}
+
+
+Pide al stack que quite el ultimo estado añadido. 
+
+
+
+Definition at line 15 of file App\+State.\+cpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/df7/classant_1_1_app_state_a65a59f018d590e807fd61adfa307651e_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/df7/classant_1_1_app_state_a65a59f018d590e807fd61adfa307651e_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classant_1_1_app_state_a2830ba9f7de8efbf03bab5249d5d3f0a}{\index{ant\+::\+Game\+State@{ant\+::\+Game\+State}!request\+Stack\+Push@{request\+Stack\+Push}}
+\index{request\+Stack\+Push@{request\+Stack\+Push}!ant\+::\+Game\+State@{ant\+::\+Game\+State}}
+\subsubsection[{request\+Stack\+Push}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+App\+State\+::request\+Stack\+Push (
+\begin{DoxyParamCaption}
+\item[{{\bf App\+States\+::\+I\+D}}]{state\+I\+D}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{classant_1_1_app_state_a2830ba9f7de8efbf03bab5249d5d3f0a}
+
+
+Pide al stack que añada un estado nuevo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state\+I\+D} & \hyperlink{namespaceant_1_1_app_states_a8e30476d77a5da5e0c1c3b9c7042e62a}{App\+States\+::\+I\+D} id del estado. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 12 of file App\+State.\+cpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/df7/classant_1_1_app_state_a2830ba9f7de8efbf03bab5249d5d3f0a_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/df7/classant_1_1_app_state_a2830ba9f7de8efbf03bab5249d5d3f0a_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classant_1_1_app_state_a16e430d3eb803f4ff7995214bd66665e}{\index{ant\+::\+Game\+State@{ant\+::\+Game\+State}!request\+State\+Clear@{request\+State\+Clear}}
+\index{request\+State\+Clear@{request\+State\+Clear}!ant\+::\+Game\+State@{ant\+::\+Game\+State}}
+\subsubsection[{request\+State\+Clear}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+App\+State\+::request\+State\+Clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{classant_1_1_app_state_a16e430d3eb803f4ff7995214bd66665e}
+
+
+Pide al stack que se limpie. 
+
+
+
+Definition at line 18 of file App\+State.\+cpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/df7/classant_1_1_app_state_a16e430d3eb803f4ff7995214bd66665e_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/df7/classant_1_1_app_state_a16e430d3eb803f4ff7995214bd66665e_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classant_1_1_game_state_acac7f6261d21061de5a92d9887ff3cfe}{\index{ant\+::\+Game\+State@{ant\+::\+Game\+State}!update@{update}}
+\index{update@{update}!ant\+::\+Game\+State@{ant\+::\+Game\+State}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}bool ant\+::\+Game\+State\+::update (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Time}]{dt}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classant_1_1_game_state_acac7f6261d21061de5a92d9887ff3cfe}
+
+
+Actualiza el juego. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & sf\+::\+Time delta time \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classant_1_1_app_state_a536738e3c366a35ff6406dccb34ce215}{ant\+::\+App\+State}.
+
+
+
+Definition at line 25 of file Game\+State.\+cpp.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classant_1_1_game_state_a4537d52e3ebce5b280a862b0e3cad1b9}{\index{ant\+::\+Game\+State@{ant\+::\+Game\+State}!assets@{assets}}
+\index{assets@{assets}!ant\+::\+Game\+State@{ant\+::\+Game\+State}}
+\subsubsection[{assets}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Asset\+Manager}$>$ ant\+::\+Game\+State\+::assets\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1_game_state_a4537d52e3ebce5b280a862b0e3cad1b9}
+
+
+Definition at line 59 of file Game\+State.\+hpp.
+
+\hypertarget{classant_1_1_game_state_a0e1f1d688b1179bff689e10d925343ac}{\index{ant\+::\+Game\+State@{ant\+::\+Game\+State}!buttons@{buttons}}
+\index{buttons@{buttons}!ant\+::\+Game\+State@{ant\+::\+Game\+State}}
+\subsubsection[{buttons}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$std\+::unique\+\_\+ptr$<${\bf G\+U\+I\+::\+Button}$>$ $>$ ant\+::\+Game\+State\+::buttons\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1_game_state_a0e1f1d688b1179bff689e10d925343ac}
+
+
+Definition at line 63 of file Game\+State.\+hpp.
+
+\hypertarget{classant_1_1_game_state_a1ae14bf9a671d4372abe4b9093ce5f45}{\index{ant\+::\+Game\+State@{ant\+::\+Game\+State}!current\+Level@{current\+Level}}
+\index{current\+Level@{current\+Level}!ant\+::\+Game\+State@{ant\+::\+Game\+State}}
+\subsubsection[{current\+Level}]{\setlength{\rightskip}{0pt plus 5cm}int ant\+::\+Game\+State\+::current\+Level\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1_game_state_a1ae14bf9a671d4372abe4b9093ce5f45}
+
+
+Definition at line 64 of file Game\+State.\+hpp.
+
+\hypertarget{classant_1_1_game_state_a931f64dcd713af5c143745c11e4568d1}{\index{ant\+::\+Game\+State@{ant\+::\+Game\+State}!event\+Queue@{event\+Queue}}
+\index{event\+Queue@{event\+Queue}!ant\+::\+Game\+State@{ant\+::\+Game\+State}}
+\subsubsection[{event\+Queue}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Event\+Queue}$>$ ant\+::\+Game\+State\+::event\+Queue\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1_game_state_a931f64dcd713af5c143745c11e4568d1}
+
+
+Definition at line 62 of file Game\+State.\+hpp.
+
+\hypertarget{classant_1_1_game_state_a0f648fe38b57ba74842572b8e9c05fdd}{\index{ant\+::\+Game\+State@{ant\+::\+Game\+State}!font@{font}}
+\index{font@{font}!ant\+::\+Game\+State@{ant\+::\+Game\+State}}
+\subsubsection[{font}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string ant\+::\+Game\+State\+::font\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1_game_state_a0f648fe38b57ba74842572b8e9c05fdd}
+
+
+Definition at line 67 of file Game\+State.\+hpp.
+
+\hypertarget{classant_1_1_game_state_ad109775544bc8d03e47a5c9a41493d04}{\index{ant\+::\+Game\+State@{ant\+::\+Game\+State}!game\+Event\+Dispatcher@{game\+Event\+Dispatcher}}
+\index{game\+Event\+Dispatcher@{game\+Event\+Dispatcher}!ant\+::\+Game\+State@{ant\+::\+Game\+State}}
+\subsubsection[{game\+Event\+Dispatcher}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Game\+Event\+Dispatcher}$>$ ant\+::\+Game\+State\+::game\+Event\+Dispatcher\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1_game_state_ad109775544bc8d03e47a5c9a41493d04}
+
+
+Definition at line 60 of file Game\+State.\+hpp.
+
+\hypertarget{classant_1_1_game_state_af9c5ac223f5bebb7df9a5b4dfff4232c}{\index{ant\+::\+Game\+State@{ant\+::\+Game\+State}!Game\+Speed@{Game\+Speed}}
+\index{Game\+Speed@{Game\+Speed}!ant\+::\+Game\+State@{ant\+::\+Game\+State}}
+\subsubsection[{Game\+Speed}]{\setlength{\rightskip}{0pt plus 5cm}float ant\+::\+Game\+State\+::\+Game\+Speed\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1_game_state_af9c5ac223f5bebb7df9a5b4dfff4232c}
+
+
+Definition at line 66 of file Game\+State.\+hpp.
+
+\hypertarget{classant_1_1_game_state_a1c31323c9a09ae49d33b9aa3a15a6348}{\index{ant\+::\+Game\+State@{ant\+::\+Game\+State}!level@{level}}
+\index{level@{level}!ant\+::\+Game\+State@{ant\+::\+Game\+State}}
+\subsubsection[{level}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Level}$>$ ant\+::\+Game\+State\+::level\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1_game_state_a1c31323c9a09ae49d33b9aa3a15a6348}
+
+
+Definition at line 61 of file Game\+State.\+hpp.
+
+\hypertarget{classant_1_1_game_state_a376062c96e23aca3750fd4196c585a36}{\index{ant\+::\+Game\+State@{ant\+::\+Game\+State}!total\+Levels@{total\+Levels}}
+\index{total\+Levels@{total\+Levels}!ant\+::\+Game\+State@{ant\+::\+Game\+State}}
+\subsubsection[{total\+Levels}]{\setlength{\rightskip}{0pt plus 5cm}int ant\+::\+Game\+State\+::total\+Levels\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1_game_state_a376062c96e23aca3750fd4196c585a36}
+
+
+Definition at line 65 of file Game\+State.\+hpp.
+
+\hypertarget{classant_1_1_game_state_acf079d8d9e634b6a2c30356933f7b9b3}{\index{ant\+::\+Game\+State@{ant\+::\+Game\+State}!win@{win}}
+\index{win@{win}!ant\+::\+Game\+State@{ant\+::\+Game\+State}}
+\subsubsection[{win}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Render\+Window\& ant\+::\+Game\+State\+::win\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1_game_state_acf079d8d9e634b6a2c30356933f7b9b3}
+
+
+Definition at line 58 of file Game\+State.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_game_state_8hpp}{Game\+State.\+hpp}\item 
+\hyperlink{_game_state_8cpp}{Game\+State.\+cpp}\end{DoxyCompactItemize}

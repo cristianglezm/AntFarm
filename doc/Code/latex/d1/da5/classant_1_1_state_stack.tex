@@ -1,0 +1,560 @@
+\hypertarget{classant_1_1_state_stack}{\section{ant\+:\+:State\+Stack Class Reference}
+\label{classant_1_1_state_stack}\index{ant\+::\+State\+Stack@{ant\+::\+State\+Stack}}
+}
+
+
+Clase para almacenar los estados del juego.  
+
+
+
+
+{\ttfamily \#include $<$State\+Stack.\+hpp$>$}
+
+
+
+Collaboration diagram for ant\+:\+:State\+Stack\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=205pt]{d5/dde/classant_1_1_state_stack__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structant_1_1_state_stack_1_1_pending_change}{Pending\+Change}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classant_1_1_state_stack_a5958413df50ebb647a5bcc5a2d3ee1ce}{Action} \{ \hyperlink{classant_1_1_state_stack_a5958413df50ebb647a5bcc5a2d3ee1cea1a317e70949db7ef880de05c5c988219}{Push}, 
+\hyperlink{classant_1_1_state_stack_a5958413df50ebb647a5bcc5a2d3ee1cea2ef3811cc672c7241af5d1de0c4aa88b}{Pop}, 
+\hyperlink{classant_1_1_state_stack_a5958413df50ebb647a5bcc5a2d3ee1cea08eaa646dcbd9a31b14944b6f9924eaa}{Clear}
+ \}
+\begin{DoxyCompactList}\small\item\em enumeracion para efectuar acciones. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classant_1_1_state_stack_abc08958d4e5fd16d1c6da4ccaf531bd8}{State\+Stack} (\hyperlink{structant_1_1_app_state_1_1_context}{App\+State\+::\+Context} context)
+\begin{DoxyCompactList}\small\item\em Constructor principal. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \hyperlink{classant_1_1_state_stack_a7ffe3d00b54d682346f3fab38e7cfc2c}{register\+State} (\hyperlink{namespaceant_1_1_app_states_a8e30476d77a5da5e0c1c3b9c7042e62a}{App\+States\+::\+I\+D} state\+I\+D)
+\begin{DoxyCompactList}\small\item\em Registra un estado en la fabrica, el estado tiene que tener 2 argumentos. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \hyperlink{classant_1_1_state_stack_a13faaea274a239bde3344c37cacba0f9}{register\+State} (\hyperlink{namespaceant_1_1_app_states_a8e30476d77a5da5e0c1c3b9c7042e62a}{App\+States\+::\+I\+D} state\+I\+D, std\+::string msg)
+\begin{DoxyCompactList}\small\item\em Registra un estado en la fabrica, el estado tiene que tener 3 argumentos. \end{DoxyCompactList}\item 
+void \hyperlink{classant_1_1_state_stack_a8c86e2280d7093c745d700269b25d064}{update} (sf\+::\+Time dt)
+\begin{DoxyCompactList}\small\item\em Actualiza los estados que tiene. \end{DoxyCompactList}\item 
+void \hyperlink{classant_1_1_state_stack_af8eac07820fb43a4624b7b2a55a279de}{render} ()
+\begin{DoxyCompactList}\small\item\em Renderiza los estados. \end{DoxyCompactList}\item 
+void \hyperlink{classant_1_1_state_stack_ac20f05b7af54c72199a3fef098c9dc2f}{handle\+Event} (const sf\+::\+Event \&event)
+\begin{DoxyCompactList}\small\item\em maneja la input de los estados(teclado/ raton). \end{DoxyCompactList}\item 
+void \hyperlink{classant_1_1_state_stack_a6f9c84764f4646cf937f245af1c1c1fb}{push\+State} (\hyperlink{namespaceant_1_1_app_states_a8e30476d77a5da5e0c1c3b9c7042e62a}{App\+States\+::\+I\+D} state\+I\+D)
+\begin{DoxyCompactList}\small\item\em Añade un estado al Stack. \end{DoxyCompactList}\item 
+void \hyperlink{classant_1_1_state_stack_a428daca2badf554f4737a763e576e111}{pop\+State} ()
+\begin{DoxyCompactList}\small\item\em Elimina el ultimo estado añadido. \end{DoxyCompactList}\item 
+void \hyperlink{classant_1_1_state_stack_aa7d1be300f9f5d840572138552888596}{clear\+States} ()
+\begin{DoxyCompactList}\small\item\em Elimina todos los estados. \end{DoxyCompactList}\item 
+bool \hyperlink{classant_1_1_state_stack_ad697b369f96e1468c8eaa48adc1781b6}{is\+Empty} () const 
+\begin{DoxyCompactList}\small\item\em Devuelve si el Stack esta vacio. \end{DoxyCompactList}\item 
+\hyperlink{classant_1_1_state_stack_a2844caa16fb3a5dfbc80a15090f0629c}{$\sim$\+State\+Stack} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classant_1_1_app_state_a94963d69f76e53c5e3b6cfa58f99fff9}{App\+State\+::u\+Ptr} \hyperlink{classant_1_1_state_stack_a616cd23d2b8c0ade57d016ae929001cd}{create\+State} (\hyperlink{namespaceant_1_1_app_states_a8e30476d77a5da5e0c1c3b9c7042e62a}{App\+States\+::\+I\+D} state\+I\+D)
+\begin{DoxyCompactList}\small\item\em Crea el estado especificado. \end{DoxyCompactList}\item 
+void \hyperlink{classant_1_1_state_stack_a22b55b41158c41bd7c6ef54ae317a6b7}{apply\+Pending\+Changes} ()
+\begin{DoxyCompactList}\small\item\em Aplica los cambios pendientes al Stack. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \hyperlink{classant_1_1_app_state_a94963d69f76e53c5e3b6cfa58f99fff9}{App\+State\+::u\+Ptr} $>$ \hyperlink{classant_1_1_state_stack_a0933a422d35db2f59c682070c7eab470}{m\+Stack}
+\item 
+std\+::vector$<$ \hyperlink{structant_1_1_state_stack_1_1_pending_change}{Pending\+Change} $>$ \hyperlink{classant_1_1_state_stack_a757254b1538fa12fc0452be1b7edb798}{m\+Pending\+List}
+\item 
+\hyperlink{structant_1_1_app_state_1_1_context}{App\+State\+::\+Context} \hyperlink{classant_1_1_state_stack_a3c005609bf1f4b7e3b1844ace66a3a3a}{m\+Context}
+\item 
+std\+::map$<$ \hyperlink{namespaceant_1_1_app_states_a8e30476d77a5da5e0c1c3b9c7042e62a}{App\+States\+::\+I\+D}, \\*
+std\+::function$<$ \hyperlink{classant_1_1_app_state_a94963d69f76e53c5e3b6cfa58f99fff9}{App\+State\+::u\+Ptr}()$>$ $>$ \hyperlink{classant_1_1_state_stack_a331a2423e1b5e54519524da124de6fdb}{m\+Factories}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Clase para almacenar los estados del juego. 
+
+\begin{DoxyAuthor}{Author}
+Cristian Glez \href{mailto:Cristian.glez.m@gmail.com}{\tt Cristian.\+glez.\+m@gmail.\+com} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+
+
+Definition at line 18 of file State\+Stack.\+hpp.
+
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classant_1_1_state_stack_a5958413df50ebb647a5bcc5a2d3ee1ce}{\index{ant\+::\+State\+Stack@{ant\+::\+State\+Stack}!Action@{Action}}
+\index{Action@{Action}!ant\+::\+State\+Stack@{ant\+::\+State\+Stack}}
+\subsubsection[{Action}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf ant\+::\+State\+Stack\+::\+Action}}}\label{classant_1_1_state_stack_a5958413df50ebb647a5bcc5a2d3ee1ce}
+
+
+enumeracion para efectuar acciones. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Push@{Push}!ant\+::\+State\+Stack@{ant\+::\+State\+Stack}}\index{ant\+::\+State\+Stack@{ant\+::\+State\+Stack}!Push@{Push}}\item[{\em 
+\hypertarget{classant_1_1_state_stack_a5958413df50ebb647a5bcc5a2d3ee1cea1a317e70949db7ef880de05c5c988219}{Push}\label{classant_1_1_state_stack_a5958413df50ebb647a5bcc5a2d3ee1cea1a317e70949db7ef880de05c5c988219}
+}]\index{Pop@{Pop}!ant\+::\+State\+Stack@{ant\+::\+State\+Stack}}\index{ant\+::\+State\+Stack@{ant\+::\+State\+Stack}!Pop@{Pop}}\item[{\em 
+\hypertarget{classant_1_1_state_stack_a5958413df50ebb647a5bcc5a2d3ee1cea2ef3811cc672c7241af5d1de0c4aa88b}{Pop}\label{classant_1_1_state_stack_a5958413df50ebb647a5bcc5a2d3ee1cea2ef3811cc672c7241af5d1de0c4aa88b}
+}]\index{Clear@{Clear}!ant\+::\+State\+Stack@{ant\+::\+State\+Stack}}\index{ant\+::\+State\+Stack@{ant\+::\+State\+Stack}!Clear@{Clear}}\item[{\em 
+\hypertarget{classant_1_1_state_stack_a5958413df50ebb647a5bcc5a2d3ee1cea08eaa646dcbd9a31b14944b6f9924eaa}{Clear}\label{classant_1_1_state_stack_a5958413df50ebb647a5bcc5a2d3ee1cea08eaa646dcbd9a31b14944b6f9924eaa}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 23 of file State\+Stack.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classant_1_1_state_stack_abc08958d4e5fd16d1c6da4ccaf531bd8}{\index{ant\+::\+State\+Stack@{ant\+::\+State\+Stack}!State\+Stack@{State\+Stack}}
+\index{State\+Stack@{State\+Stack}!ant\+::\+State\+Stack@{ant\+::\+State\+Stack}}
+\subsubsection[{State\+Stack}]{\setlength{\rightskip}{0pt plus 5cm}ant\+::\+State\+Stack\+::\+State\+Stack (
+\begin{DoxyParamCaption}
+\item[{{\bf App\+State\+::\+Context}}]{context}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}}\label{classant_1_1_state_stack_abc08958d4e5fd16d1c6da4ccaf531bd8}
+
+
+Constructor principal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & \hyperlink{structant_1_1_app_state_1_1_context}{App\+State\+::\+Context} contexto de ejecucion. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 4 of file State\+Stack.\+cpp.
+
+\hypertarget{classant_1_1_state_stack_a2844caa16fb3a5dfbc80a15090f0629c}{\index{ant\+::\+State\+Stack@{ant\+::\+State\+Stack}!````~State\+Stack@{$\sim$\+State\+Stack}}
+\index{````~State\+Stack@{$\sim$\+State\+Stack}!ant\+::\+State\+Stack@{ant\+::\+State\+Stack}}
+\subsubsection[{$\sim$\+State\+Stack}]{\setlength{\rightskip}{0pt plus 5cm}ant\+::\+State\+Stack\+::$\sim$\+State\+Stack (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_state_stack_a2844caa16fb3a5dfbc80a15090f0629c}
+
+
+Definition at line 66 of file State\+Stack.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classant_1_1_state_stack_a22b55b41158c41bd7c6ef54ae317a6b7}{\index{ant\+::\+State\+Stack@{ant\+::\+State\+Stack}!apply\+Pending\+Changes@{apply\+Pending\+Changes}}
+\index{apply\+Pending\+Changes@{apply\+Pending\+Changes}!ant\+::\+State\+Stack@{ant\+::\+State\+Stack}}
+\subsubsection[{apply\+Pending\+Changes}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+State\+Stack\+::apply\+Pending\+Changes (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1_state_stack_a22b55b41158c41bd7c6ef54ae317a6b7}
+
+
+Aplica los cambios pendientes al Stack. 
+
+
+
+Definition at line 47 of file State\+Stack.\+cpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da5/classant_1_1_state_stack_a22b55b41158c41bd7c6ef54ae317a6b7_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da5/classant_1_1_state_stack_a22b55b41158c41bd7c6ef54ae317a6b7_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classant_1_1_state_stack_aa7d1be300f9f5d840572138552888596}{\index{ant\+::\+State\+Stack@{ant\+::\+State\+Stack}!clear\+States@{clear\+States}}
+\index{clear\+States@{clear\+States}!ant\+::\+State\+Stack@{ant\+::\+State\+Stack}}
+\subsubsection[{clear\+States}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+State\+Stack\+::clear\+States (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_state_stack_aa7d1be300f9f5d840572138552888596}
+
+
+Elimina todos los estados. 
+
+
+
+Definition at line 36 of file State\+Stack.\+cpp.
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da5/classant_1_1_state_stack_aa7d1be300f9f5d840572138552888596_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classant_1_1_state_stack_a616cd23d2b8c0ade57d016ae929001cd}{\index{ant\+::\+State\+Stack@{ant\+::\+State\+Stack}!create\+State@{create\+State}}
+\index{create\+State@{create\+State}!ant\+::\+State\+Stack@{ant\+::\+State\+Stack}}
+\subsubsection[{create\+State}]{\setlength{\rightskip}{0pt plus 5cm}{\bf App\+State\+::u\+Ptr} ant\+::\+State\+Stack\+::create\+State (
+\begin{DoxyParamCaption}
+\item[{{\bf App\+States\+::\+I\+D}}]{state\+I\+D}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1_state_stack_a616cd23d2b8c0ade57d016ae929001cd}
+
+
+Crea el estado especificado. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state\+I\+D} & \hyperlink{namespaceant_1_1_app_states_a8e30476d77a5da5e0c1c3b9c7042e62a}{App\+States\+::\+I\+D} \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 42 of file State\+Stack.\+cpp.
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da5/classant_1_1_state_stack_a616cd23d2b8c0ade57d016ae929001cd_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classant_1_1_state_stack_ac20f05b7af54c72199a3fef098c9dc2f}{\index{ant\+::\+State\+Stack@{ant\+::\+State\+Stack}!handle\+Event@{handle\+Event}}
+\index{handle\+Event@{handle\+Event}!ant\+::\+State\+Stack@{ant\+::\+State\+Stack}}
+\subsubsection[{handle\+Event}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+State\+Stack\+::handle\+Event (
+\begin{DoxyParamCaption}
+\item[{const sf\+::\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_state_stack_ac20f05b7af54c72199a3fef098c9dc2f}
+
+
+maneja la input de los estados(teclado/ raton). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & sf\+::\+Event \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 22 of file State\+Stack.\+cpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da5/classant_1_1_state_stack_ac20f05b7af54c72199a3fef098c9dc2f_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da5/classant_1_1_state_stack_ac20f05b7af54c72199a3fef098c9dc2f_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classant_1_1_state_stack_ad697b369f96e1468c8eaa48adc1781b6}{\index{ant\+::\+State\+Stack@{ant\+::\+State\+Stack}!is\+Empty@{is\+Empty}}
+\index{is\+Empty@{is\+Empty}!ant\+::\+State\+Stack@{ant\+::\+State\+Stack}}
+\subsubsection[{is\+Empty}]{\setlength{\rightskip}{0pt plus 5cm}bool ant\+::\+State\+Stack\+::is\+Empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classant_1_1_state_stack_ad697b369f96e1468c8eaa48adc1781b6}
+
+
+Devuelve si el Stack esta vacio. 
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Definition at line 39 of file State\+Stack.\+cpp.
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da5/classant_1_1_state_stack_ad697b369f96e1468c8eaa48adc1781b6_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classant_1_1_state_stack_a428daca2badf554f4737a763e576e111}{\index{ant\+::\+State\+Stack@{ant\+::\+State\+Stack}!pop\+State@{pop\+State}}
+\index{pop\+State@{pop\+State}!ant\+::\+State\+Stack@{ant\+::\+State\+Stack}}
+\subsubsection[{pop\+State}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+State\+Stack\+::pop\+State (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_state_stack_a428daca2badf554f4737a763e576e111}
+
+
+Elimina el ultimo estado añadido. 
+
+
+
+Definition at line 33 of file State\+Stack.\+cpp.
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da5/classant_1_1_state_stack_a428daca2badf554f4737a763e576e111_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classant_1_1_state_stack_a6f9c84764f4646cf937f245af1c1c1fb}{\index{ant\+::\+State\+Stack@{ant\+::\+State\+Stack}!push\+State@{push\+State}}
+\index{push\+State@{push\+State}!ant\+::\+State\+Stack@{ant\+::\+State\+Stack}}
+\subsubsection[{push\+State}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+State\+Stack\+::push\+State (
+\begin{DoxyParamCaption}
+\item[{{\bf App\+States\+::\+I\+D}}]{state\+I\+D}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_state_stack_a6f9c84764f4646cf937f245af1c1c1fb}
+
+
+Añade un estado al Stack. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state\+I\+D} & \hyperlink{namespaceant_1_1_app_states_a8e30476d77a5da5e0c1c3b9c7042e62a}{App\+States\+::\+I\+D} \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 30 of file State\+Stack.\+cpp.
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da5/classant_1_1_state_stack_a6f9c84764f4646cf937f245af1c1c1fb_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classant_1_1_state_stack_a7ffe3d00b54d682346f3fab38e7cfc2c}{\index{ant\+::\+State\+Stack@{ant\+::\+State\+Stack}!register\+State@{register\+State}}
+\index{register\+State@{register\+State}!ant\+::\+State\+Stack@{ant\+::\+State\+Stack}}
+\subsubsection[{register\+State}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void ant\+::\+State\+Stack\+::register\+State (
+\begin{DoxyParamCaption}
+\item[{{\bf App\+States\+::\+I\+D}}]{state\+I\+D}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_state_stack_a7ffe3d00b54d682346f3fab38e7cfc2c}
+
+
+Registra un estado en la fabrica, el estado tiene que tener 2 argumentos. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & clase del estado a crear. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em state\+I\+D} & App\+State\+::\+I\+D estado a crear. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 105 of file State\+Stack.\+hpp.
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da5/classant_1_1_state_stack_a7ffe3d00b54d682346f3fab38e7cfc2c_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classant_1_1_state_stack_a13faaea274a239bde3344c37cacba0f9}{\index{ant\+::\+State\+Stack@{ant\+::\+State\+Stack}!register\+State@{register\+State}}
+\index{register\+State@{register\+State}!ant\+::\+State\+Stack@{ant\+::\+State\+Stack}}
+\subsubsection[{register\+State}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void ant\+::\+State\+Stack\+::register\+State (
+\begin{DoxyParamCaption}
+\item[{{\bf App\+States\+::\+I\+D}}]{state\+I\+D, }
+\item[{std\+::string}]{msg}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_state_stack_a13faaea274a239bde3344c37cacba0f9}
+
+
+Registra un estado en la fabrica, el estado tiene que tener 3 argumentos. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & clase del estado a crear. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em state\+I\+D} & App\+State\+::\+I\+D estado a crear, \\
+\hline
+{\em msg} & std\+::string mensaje que mostrara el estado. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 111 of file State\+Stack.\+hpp.
+
+\hypertarget{classant_1_1_state_stack_af8eac07820fb43a4624b7b2a55a279de}{\index{ant\+::\+State\+Stack@{ant\+::\+State\+Stack}!render@{render}}
+\index{render@{render}!ant\+::\+State\+Stack@{ant\+::\+State\+Stack}}
+\subsubsection[{render}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+State\+Stack\+::render (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_state_stack_af8eac07820fb43a4624b7b2a55a279de}
+
+
+Renderiza los estados. 
+
+
+
+Definition at line 17 of file State\+Stack.\+cpp.
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da5/classant_1_1_state_stack_af8eac07820fb43a4624b7b2a55a279de_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classant_1_1_state_stack_a8c86e2280d7093c745d700269b25d064}{\index{ant\+::\+State\+Stack@{ant\+::\+State\+Stack}!update@{update}}
+\index{update@{update}!ant\+::\+State\+Stack@{ant\+::\+State\+Stack}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+State\+Stack\+::update (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Time}]{dt}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_state_stack_a8c86e2280d7093c745d700269b25d064}
+
+
+Actualiza los estados que tiene. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & sf\+::\+Time delta time \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 9 of file State\+Stack.\+cpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da5/classant_1_1_state_stack_a8c86e2280d7093c745d700269b25d064_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d1/da5/classant_1_1_state_stack_a8c86e2280d7093c745d700269b25d064_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classant_1_1_state_stack_a3c005609bf1f4b7e3b1844ace66a3a3a}{\index{ant\+::\+State\+Stack@{ant\+::\+State\+Stack}!m\+Context@{m\+Context}}
+\index{m\+Context@{m\+Context}!ant\+::\+State\+Stack@{ant\+::\+State\+Stack}}
+\subsubsection[{m\+Context}]{\setlength{\rightskip}{0pt plus 5cm}{\bf App\+State\+::\+Context} ant\+::\+State\+Stack\+::m\+Context\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1_state_stack_a3c005609bf1f4b7e3b1844ace66a3a3a}
+
+
+Definition at line 101 of file State\+Stack.\+hpp.
+
+\hypertarget{classant_1_1_state_stack_a331a2423e1b5e54519524da124de6fdb}{\index{ant\+::\+State\+Stack@{ant\+::\+State\+Stack}!m\+Factories@{m\+Factories}}
+\index{m\+Factories@{m\+Factories}!ant\+::\+State\+Stack@{ant\+::\+State\+Stack}}
+\subsubsection[{m\+Factories}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<${\bf App\+States\+::\+I\+D}, std\+::function$<${\bf App\+State\+::u\+Ptr}()$>$ $>$ ant\+::\+State\+Stack\+::m\+Factories\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1_state_stack_a331a2423e1b5e54519524da124de6fdb}
+
+
+Definition at line 102 of file State\+Stack.\+hpp.
+
+\hypertarget{classant_1_1_state_stack_a757254b1538fa12fc0452be1b7edb798}{\index{ant\+::\+State\+Stack@{ant\+::\+State\+Stack}!m\+Pending\+List@{m\+Pending\+List}}
+\index{m\+Pending\+List@{m\+Pending\+List}!ant\+::\+State\+Stack@{ant\+::\+State\+Stack}}
+\subsubsection[{m\+Pending\+List}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf Pending\+Change}$>$ ant\+::\+State\+Stack\+::m\+Pending\+List\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1_state_stack_a757254b1538fa12fc0452be1b7edb798}
+
+
+Definition at line 100 of file State\+Stack.\+hpp.
+
+\hypertarget{classant_1_1_state_stack_a0933a422d35db2f59c682070c7eab470}{\index{ant\+::\+State\+Stack@{ant\+::\+State\+Stack}!m\+Stack@{m\+Stack}}
+\index{m\+Stack@{m\+Stack}!ant\+::\+State\+Stack@{ant\+::\+State\+Stack}}
+\subsubsection[{m\+Stack}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf App\+State\+::u\+Ptr}$>$ ant\+::\+State\+Stack\+::m\+Stack\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1_state_stack_a0933a422d35db2f59c682070c7eab470}
+
+
+Definition at line 99 of file State\+Stack.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_state_stack_8hpp}{State\+Stack.\+hpp}\item 
+\hyperlink{_state_stack_8cpp}{State\+Stack.\+cpp}\end{DoxyCompactItemize}

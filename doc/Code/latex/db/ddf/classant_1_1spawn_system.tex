@@ -1,0 +1,524 @@
+\hypertarget{classant_1_1spawn_system}{\section{ant\+:\+:spawn\+System Class Reference}
+\label{classant_1_1spawn_system}\index{ant\+::spawn\+System@{ant\+::spawn\+System}}
+}
+
+
+Sistema encargado de crear las entidades sobre el tiempo establecido.  
+
+
+
+
+{\ttfamily \#include $<$spawn\+System.\+hpp$>$}
+
+
+
+Inheritance diagram for ant\+:\+:spawn\+System\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{db/dea/classant_1_1spawn_system__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ant\+:\+:spawn\+System\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d79/classant_1_1spawn_system__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classant_1_1spawn_system_aa5b27276b3bd50f135602081fd126a8a}{spawn\+System} (int \hyperlink{classant_1_1spawn_system_ac15adf011d5664cfcecad025ece96c09}{n\+Entities}, \hyperlink{classant_1_1_entity_factory}{Entity\+Factory} $\ast$ef, sf\+::\+Time ot, sf\+::\+Vector2f \hyperlink{classant_1_1spawn_system_ae44b8fd02249453a7c4b4390bc7e32c7}{spawn\+Point}, long int state)
+\begin{DoxyCompactList}\small\item\em constructor por defecto. \end{DoxyCompactList}\item 
+void \hyperlink{classant_1_1spawn_system_a39010e5a88525ea18c0524b296ad18bf}{set\+States} (long int state)
+\begin{DoxyCompactList}\small\item\em Establece el estado por defecto que pondra a las entidades. \end{DoxyCompactList}\item 
+const long int \hyperlink{classant_1_1spawn_system_a958514aaac9187f9f95a8de9909d8238}{get\+States} () const 
+\begin{DoxyCompactList}\small\item\em Obtiene los estados que pone por defecto al crear las entidades. \end{DoxyCompactList}\item 
+void \hyperlink{classant_1_1spawn_system_a080ec242e6f934bea895dbc3429bea9b}{update} (sf\+::\+Time dt)
+\begin{DoxyCompactList}\small\item\em Cada x segundos crea un entidad en el sitio establecido. \end{DoxyCompactList}\item 
+void \hyperlink{classant_1_1spawn_system_a1eae29ce581e7625c70e9327c3b9ce1b}{render} (sf\+::\+Render\+Window \&win)
+\begin{DoxyCompactList}\small\item\em no hace nada. \end{DoxyCompactList}\item 
+void \hyperlink{classant_1_1spawn_system_a3950f006745c8beba1c579e2ea88b8d1}{on\+Notify} (std\+::shared\+\_\+ptr$<$ \hyperlink{classant_1_1base_event}{base\+Event} $>$ e)
+\begin{DoxyCompactList}\small\item\em Recibe eventos para cambiar el tiempo o el numero de entidades que tiene que crear. \end{DoxyCompactList}\item 
+\hyperlink{classant_1_1spawn_system_aa6aaf615d55fd08d59a0a5ad9faeb024}{$\sim$spawn\+System} ()
+\item 
+void \hyperlink{classant_1_1_system_a35662ff3739ff4290df1106bfdccfaca}{set\+Required\+Components} (long int req)
+\begin{DoxyCompactList}\small\item\em Setter para los requisitos necesarios. \end{DoxyCompactList}\item 
+long int \hyperlink{classant_1_1_system_a2d94338969f43d4fd2fd972deb099258}{get\+Required\+Componts} ()
+\begin{DoxyCompactList}\small\item\em Getter de los requisitos para el sistema. \end{DoxyCompactList}\item 
+void \hyperlink{classant_1_1_system_a1effe9f0e5615e516a34be02d5895434}{set\+Event\+Queue} (std\+::shared\+\_\+ptr$<$ \hyperlink{classant_1_1_event_queue}{Event\+Queue} $>$ eq)
+\begin{DoxyCompactList}\small\item\em Setter para la \hyperlink{classant_1_1_event_queue}{Event\+Queue}. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classant_1_1_event_queue}{Event\+Queue} $>$ \hyperlink{classant_1_1_system_ac3e2bbbdb622276d194ad3a687d8e4f1}{get\+Event\+Queue} ()
+\begin{DoxyCompactList}\small\item\em Getter para la \hyperlink{classant_1_1_event_queue}{Event\+Queue}. \end{DoxyCompactList}\item 
+void \hyperlink{classant_1_1_system_a231f9fc93b55ee67deb9597ae6be13ba}{set\+Name} (std\+::string \hyperlink{classant_1_1_system_a60b3c00a760a3b4947ab1f1fc534a5b2}{name})
+\begin{DoxyCompactList}\small\item\em Setter Para el nombre del sistema. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classant_1_1_system_a52a559b2c3ddbec5c846df1badd7f7f8}{get\+Name} () const 
+\begin{DoxyCompactList}\small\item\em Getter para el nombre del sistema. \end{DoxyCompactList}\item 
+void \hyperlink{classant_1_1_system_a1f983382d142ea697f1811f7f6f6ab17}{set\+Entity\+Manager} (std\+::shared\+\_\+ptr$<$ \hyperlink{classant_1_1_entity_manager}{Entity\+Manager} $>$ \hyperlink{classant_1_1_system_a5661d872ff769be150bd4e9a9552f6b9}{em})
+\begin{DoxyCompactList}\small\item\em Setter para el \hyperlink{classant_1_1_entity_manager}{Entity\+Manager}. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classant_1_1_entity_manager}{Entity\+Manager} $>$ \hyperlink{classant_1_1_system_adaad2087de7fc71924cfb5b134014b0a}{get\+Entity\+Manager} ()
+\begin{DoxyCompactList}\small\item\em Getter para el \hyperlink{classant_1_1_entity_manager}{Entity\+Manager}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+long int \hyperlink{classant_1_1_system_a4ef41cfc496e41ac6730f90629524ec7}{Required\+Components}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classant_1_1_event_queue}{Event\+Queue} $>$ \hyperlink{classant_1_1_system_a27e1814e13d161b5ef0e848e3da16d29}{event\+Queue}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classant_1_1_entity_manager}{Entity\+Manager} $>$ \hyperlink{classant_1_1_system_a5661d872ff769be150bd4e9a9552f6b9}{em}
+\item 
+std\+::string \hyperlink{classant_1_1_system_a60b3c00a760a3b4947ab1f1fc534a5b2}{name}
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classant_1_1_entity_factory}{Entity\+Factory} $\ast$ \hyperlink{classant_1_1spawn_system_aa6597a6902da56181752851938ce8356}{entity\+Factory}
+\item 
+int \hyperlink{classant_1_1spawn_system_ac15adf011d5664cfcecad025ece96c09}{n\+Entities}
+\item 
+int \hyperlink{classant_1_1spawn_system_af01da0544d6bcd40342b87eff15f0e28}{created\+Entities}
+\item 
+sf\+::\+Time \hyperlink{classant_1_1spawn_system_a5d716493bd70cb52490152d7075a490e}{over\+Time}
+\item 
+sf\+::\+Time \hyperlink{classant_1_1spawn_system_ad9cfddea638866f36562f0c02bf7b789}{elapsed\+Time}
+\item 
+sf\+::\+Vector2f \hyperlink{classant_1_1spawn_system_ae44b8fd02249453a7c4b4390bc7e32c7}{spawn\+Point}
+\item 
+sf\+::\+Clock \hyperlink{classant_1_1spawn_system_a0ab34f70ff78bd5082faf4555a40a729}{clock}
+\item 
+long int \hyperlink{classant_1_1spawn_system_a76dbde294f95b3aadd2b1df30699ebf1}{states}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Sistema encargado de crear las entidades sobre el tiempo establecido. 
+
+Crea las entidades en la posicion de las entidades con \hyperlink{class_components_mask_a6a8d73981d65f39acb16bbeeced5a95b}{Components\+Mask\+::\+C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+I\+N}.
+
+\begin{DoxyAuthor}{Author}
+Cristian Glez \href{mailto:Cristian.glez.m@gmail.com}{\tt Cristian.\+glez.\+m@gmail.\+com} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+
+
+Definition at line 18 of file spawn\+System.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classant_1_1spawn_system_aa5b27276b3bd50f135602081fd126a8a}{\index{ant\+::spawn\+System@{ant\+::spawn\+System}!spawn\+System@{spawn\+System}}
+\index{spawn\+System@{spawn\+System}!ant\+::spawn\+System@{ant\+::spawn\+System}}
+\subsubsection[{spawn\+System}]{\setlength{\rightskip}{0pt plus 5cm}ant\+::spawn\+System\+::spawn\+System (
+\begin{DoxyParamCaption}
+\item[{int}]{n\+Entities, }
+\item[{{\bf Entity\+Factory} $\ast$}]{ef, }
+\item[{sf\+::\+Time}]{ot, }
+\item[{sf\+::\+Vector2f}]{spawn\+Point, }
+\item[{long int}]{state}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1spawn_system_aa5b27276b3bd50f135602081fd126a8a}
+
+
+constructor por defecto. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n\+Entities} & int numero de entidades a crear. \\
+\hline
+{\em ot} & sf\+::\+Time Tiempo para crear las entidades cada X tiempo. \\
+\hline
+{\em ef} & \hyperlink{classant_1_1_entity_factory}{Entity\+Factory} $\ast$ Para crear las entidades. \\
+\hline
+{\em spawn\+Point} & sf\+::\+Vector2f sitio donde saldran las entidades. \\
+\hline
+{\em state} & long int Estados iniciales para cuando las entidades son creadas. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 4 of file spawn\+System.\+cpp.
+
+\hypertarget{classant_1_1spawn_system_aa6aaf615d55fd08d59a0a5ad9faeb024}{\index{ant\+::spawn\+System@{ant\+::spawn\+System}!````~spawn\+System@{$\sim$spawn\+System}}
+\index{````~spawn\+System@{$\sim$spawn\+System}!ant\+::spawn\+System@{ant\+::spawn\+System}}
+\subsubsection[{$\sim$spawn\+System}]{\setlength{\rightskip}{0pt plus 5cm}ant\+::spawn\+System\+::$\sim$spawn\+System (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1spawn_system_aa6aaf615d55fd08d59a0a5ad9faeb024}
+
+
+Definition at line 56 of file spawn\+System.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classant_1_1_system_adaad2087de7fc71924cfb5b134014b0a}{\index{ant\+::spawn\+System@{ant\+::spawn\+System}!get\+Entity\+Manager@{get\+Entity\+Manager}}
+\index{get\+Entity\+Manager@{get\+Entity\+Manager}!ant\+::spawn\+System@{ant\+::spawn\+System}}
+\subsubsection[{get\+Entity\+Manager}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Entity\+Manager}$>$ ant\+::\+System\+::get\+Entity\+Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [inherited]}}}\label{classant_1_1_system_adaad2087de7fc71924cfb5b134014b0a}
+
+
+Getter para el \hyperlink{classant_1_1_entity_manager}{Entity\+Manager}. 
+
+\begin{DoxyReturn}{Returns}
+std\+::shared\+\_\+ptr$<$\+Entity\+Manager$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 71 of file System.\+hpp.
+
+\hypertarget{classant_1_1_system_ac3e2bbbdb622276d194ad3a687d8e4f1}{\index{ant\+::spawn\+System@{ant\+::spawn\+System}!get\+Event\+Queue@{get\+Event\+Queue}}
+\index{get\+Event\+Queue@{get\+Event\+Queue}!ant\+::spawn\+System@{ant\+::spawn\+System}}
+\subsubsection[{get\+Event\+Queue}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Event\+Queue}$>$ ant\+::\+System\+::get\+Event\+Queue (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [inherited]}}}\label{classant_1_1_system_ac3e2bbbdb622276d194ad3a687d8e4f1}
+
+
+Getter para la \hyperlink{classant_1_1_event_queue}{Event\+Queue}. 
+
+\begin{DoxyReturn}{Returns}
+std\+::shared\+\_\+ptr$<$\+Event\+Queue$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 51 of file System.\+hpp.
+
+\hypertarget{classant_1_1_system_a52a559b2c3ddbec5c846df1badd7f7f8}{\index{ant\+::spawn\+System@{ant\+::spawn\+System}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!ant\+::spawn\+System@{ant\+::spawn\+System}}
+\subsubsection[{get\+Name}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string ant\+::\+System\+::get\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [inherited]}}}\label{classant_1_1_system_a52a559b2c3ddbec5c846df1badd7f7f8}
+
+
+Getter para el nombre del sistema. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string 
+\end{DoxyReturn}
+
+
+Definition at line 61 of file System.\+hpp.
+
+\hypertarget{classant_1_1_system_a2d94338969f43d4fd2fd972deb099258}{\index{ant\+::spawn\+System@{ant\+::spawn\+System}!get\+Required\+Componts@{get\+Required\+Componts}}
+\index{get\+Required\+Componts@{get\+Required\+Componts}!ant\+::spawn\+System@{ant\+::spawn\+System}}
+\subsubsection[{get\+Required\+Componts}]{\setlength{\rightskip}{0pt plus 5cm}long int ant\+::\+System\+::get\+Required\+Componts (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [inherited]}}}\label{classant_1_1_system_a2d94338969f43d4fd2fd972deb099258}
+
+
+Getter de los requisitos para el sistema. 
+
+
+
+Definition at line 41 of file System.\+hpp.
+
+\hypertarget{classant_1_1spawn_system_a958514aaac9187f9f95a8de9909d8238}{\index{ant\+::spawn\+System@{ant\+::spawn\+System}!get\+States@{get\+States}}
+\index{get\+States@{get\+States}!ant\+::spawn\+System@{ant\+::spawn\+System}}
+\subsubsection[{get\+States}]{\setlength{\rightskip}{0pt plus 5cm}const long int ant\+::spawn\+System\+::get\+States (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classant_1_1spawn_system_a958514aaac9187f9f95a8de9909d8238}
+
+
+Obtiene los estados que pone por defecto al crear las entidades. 
+
+\begin{DoxyReturn}{Returns}
+long int 
+\end{DoxyReturn}
+
+
+Definition at line 41 of file spawn\+System.\+hpp.
+
+\hypertarget{classant_1_1spawn_system_a3950f006745c8beba1c579e2ea88b8d1}{\index{ant\+::spawn\+System@{ant\+::spawn\+System}!on\+Notify@{on\+Notify}}
+\index{on\+Notify@{on\+Notify}!ant\+::spawn\+System@{ant\+::spawn\+System}}
+\subsubsection[{on\+Notify}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::spawn\+System\+::on\+Notify (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ {\bf base\+Event} $>$}]{e}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classant_1_1spawn_system_a3950f006745c8beba1c579e2ea88b8d1}
+
+
+Recibe eventos para cambiar el tiempo o el numero de entidades que tiene que crear. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & std\+::shared\+\_\+ptr$<$base\+Event$>$ \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classant_1_1_observer_a4f03efedb538d91297ebd7341bc4698c}{ant\+::\+Observer}.
+
+
+
+Definition at line 38 of file spawn\+System.\+cpp.
+
+\hypertarget{classant_1_1spawn_system_a1eae29ce581e7625c70e9327c3b9ce1b}{\index{ant\+::spawn\+System@{ant\+::spawn\+System}!render@{render}}
+\index{render@{render}!ant\+::spawn\+System@{ant\+::spawn\+System}}
+\subsubsection[{render}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::spawn\+System\+::render (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Render\+Window \&}]{win}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classant_1_1spawn_system_a1eae29ce581e7625c70e9327c3b9ce1b}
+
+
+no hace nada. 
+
+
+
+Implements \hyperlink{classant_1_1_system_a30a815d199fea90e9d2f7167eb2bf86e}{ant\+::\+System}.
+
+
+
+Definition at line 35 of file spawn\+System.\+cpp.
+
+\hypertarget{classant_1_1_system_a1f983382d142ea697f1811f7f6f6ab17}{\index{ant\+::spawn\+System@{ant\+::spawn\+System}!set\+Entity\+Manager@{set\+Entity\+Manager}}
+\index{set\+Entity\+Manager@{set\+Entity\+Manager}!ant\+::spawn\+System@{ant\+::spawn\+System}}
+\subsubsection[{set\+Entity\+Manager}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+System\+::set\+Entity\+Manager (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Entity\+Manager} $>$}]{em}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inherited]}}}\label{classant_1_1_system_a1f983382d142ea697f1811f7f6f6ab17}
+
+
+Setter para el \hyperlink{classant_1_1_entity_manager}{Entity\+Manager}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em em} & std\+::shared\+\_\+ptr$<$\+Entity\+Manager$>$ \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 25 of file System.\+cpp.
+
+\hypertarget{classant_1_1_system_a1effe9f0e5615e516a34be02d5895434}{\index{ant\+::spawn\+System@{ant\+::spawn\+System}!set\+Event\+Queue@{set\+Event\+Queue}}
+\index{set\+Event\+Queue@{set\+Event\+Queue}!ant\+::spawn\+System@{ant\+::spawn\+System}}
+\subsubsection[{set\+Event\+Queue}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+System\+::set\+Event\+Queue (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Event\+Queue} $>$}]{eq}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inherited]}}}\label{classant_1_1_system_a1effe9f0e5615e516a34be02d5895434}
+
+
+Setter para la \hyperlink{classant_1_1_event_queue}{Event\+Queue}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em eq} & std\+::shared\+\_\+ptr$<$\+Event\+Queue$>$ \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 19 of file System.\+cpp.
+
+\hypertarget{classant_1_1_system_a231f9fc93b55ee67deb9597ae6be13ba}{\index{ant\+::spawn\+System@{ant\+::spawn\+System}!set\+Name@{set\+Name}}
+\index{set\+Name@{set\+Name}!ant\+::spawn\+System@{ant\+::spawn\+System}}
+\subsubsection[{set\+Name}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+System\+::set\+Name (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inherited]}}}\label{classant_1_1_system_a231f9fc93b55ee67deb9597ae6be13ba}
+
+
+Setter Para el nombre del sistema. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & std\+::string \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 22 of file System.\+cpp.
+
+\hypertarget{classant_1_1_system_a35662ff3739ff4290df1106bfdccfaca}{\index{ant\+::spawn\+System@{ant\+::spawn\+System}!set\+Required\+Components@{set\+Required\+Components}}
+\index{set\+Required\+Components@{set\+Required\+Components}!ant\+::spawn\+System@{ant\+::spawn\+System}}
+\subsubsection[{set\+Required\+Components}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+System\+::set\+Required\+Components (
+\begin{DoxyParamCaption}
+\item[{long int}]{req}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inherited]}}}\label{classant_1_1_system_a35662ff3739ff4290df1106bfdccfaca}
+
+
+Setter para los requisitos necesarios. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em req} & long int \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 16 of file System.\+cpp.
+
+\hypertarget{classant_1_1spawn_system_a39010e5a88525ea18c0524b296ad18bf}{\index{ant\+::spawn\+System@{ant\+::spawn\+System}!set\+States@{set\+States}}
+\index{set\+States@{set\+States}!ant\+::spawn\+System@{ant\+::spawn\+System}}
+\subsubsection[{set\+States}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::spawn\+System\+::set\+States (
+\begin{DoxyParamCaption}
+\item[{long int}]{state}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1spawn_system_a39010e5a88525ea18c0524b296ad18bf}
+
+
+Establece el estado por defecto que pondra a las entidades. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & long int estados de las entidades 
+\begin{DoxyCode}
+\hyperlink{classant_1_1spawn_system_a39010e5a88525ea18c0524b296ad18bf}{setStates}(\hyperlink{class_states_ae464e17ebc3214e3c17186d614e37c54}{States::FALLING} | STATES::ONFIRE);
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 19 of file spawn\+System.\+cpp.
+
+\hypertarget{classant_1_1spawn_system_a080ec242e6f934bea895dbc3429bea9b}{\index{ant\+::spawn\+System@{ant\+::spawn\+System}!update@{update}}
+\index{update@{update}!ant\+::spawn\+System@{ant\+::spawn\+System}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::spawn\+System\+::update (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Time}]{dt}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classant_1_1spawn_system_a080ec242e6f934bea895dbc3429bea9b}
+
+
+Cada x segundos crea un entidad en el sitio establecido. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & sf\+::\+Time delta time \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classant_1_1_system_a4d97de105123df07d4d90ac2914f9e6c}{ant\+::\+System}.
+
+
+
+Definition at line 22 of file spawn\+System.\+cpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/ddf/classant_1_1spawn_system_a080ec242e6f934bea895dbc3429bea9b_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classant_1_1spawn_system_a0ab34f70ff78bd5082faf4555a40a729}{\index{ant\+::spawn\+System@{ant\+::spawn\+System}!clock@{clock}}
+\index{clock@{clock}!ant\+::spawn\+System@{ant\+::spawn\+System}}
+\subsubsection[{clock}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Clock ant\+::spawn\+System\+::clock\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1spawn_system_a0ab34f70ff78bd5082faf4555a40a729}
+
+
+Definition at line 65 of file spawn\+System.\+hpp.
+
+\hypertarget{classant_1_1spawn_system_af01da0544d6bcd40342b87eff15f0e28}{\index{ant\+::spawn\+System@{ant\+::spawn\+System}!created\+Entities@{created\+Entities}}
+\index{created\+Entities@{created\+Entities}!ant\+::spawn\+System@{ant\+::spawn\+System}}
+\subsubsection[{created\+Entities}]{\setlength{\rightskip}{0pt plus 5cm}int ant\+::spawn\+System\+::created\+Entities\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1spawn_system_af01da0544d6bcd40342b87eff15f0e28}
+
+
+Definition at line 61 of file spawn\+System.\+hpp.
+
+\hypertarget{classant_1_1spawn_system_ad9cfddea638866f36562f0c02bf7b789}{\index{ant\+::spawn\+System@{ant\+::spawn\+System}!elapsed\+Time@{elapsed\+Time}}
+\index{elapsed\+Time@{elapsed\+Time}!ant\+::spawn\+System@{ant\+::spawn\+System}}
+\subsubsection[{elapsed\+Time}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Time ant\+::spawn\+System\+::elapsed\+Time\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1spawn_system_ad9cfddea638866f36562f0c02bf7b789}
+
+
+Definition at line 63 of file spawn\+System.\+hpp.
+
+\hypertarget{classant_1_1_system_a5661d872ff769be150bd4e9a9552f6b9}{\index{ant\+::spawn\+System@{ant\+::spawn\+System}!em@{em}}
+\index{em@{em}!ant\+::spawn\+System@{ant\+::spawn\+System}}
+\subsubsection[{em}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Entity\+Manager}$>$ ant\+::\+System\+::em\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{classant_1_1_system_a5661d872ff769be150bd4e9a9552f6b9}
+
+
+Definition at line 86 of file System.\+hpp.
+
+\hypertarget{classant_1_1spawn_system_aa6597a6902da56181752851938ce8356}{\index{ant\+::spawn\+System@{ant\+::spawn\+System}!entity\+Factory@{entity\+Factory}}
+\index{entity\+Factory@{entity\+Factory}!ant\+::spawn\+System@{ant\+::spawn\+System}}
+\subsubsection[{entity\+Factory}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Entity\+Factory}$\ast$ ant\+::spawn\+System\+::entity\+Factory\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1spawn_system_aa6597a6902da56181752851938ce8356}
+
+
+Definition at line 59 of file spawn\+System.\+hpp.
+
+\hypertarget{classant_1_1_system_a27e1814e13d161b5ef0e848e3da16d29}{\index{ant\+::spawn\+System@{ant\+::spawn\+System}!event\+Queue@{event\+Queue}}
+\index{event\+Queue@{event\+Queue}!ant\+::spawn\+System@{ant\+::spawn\+System}}
+\subsubsection[{event\+Queue}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Event\+Queue}$>$ ant\+::\+System\+::event\+Queue\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{classant_1_1_system_a27e1814e13d161b5ef0e848e3da16d29}
+
+
+Definition at line 85 of file System.\+hpp.
+
+\hypertarget{classant_1_1_system_a60b3c00a760a3b4947ab1f1fc534a5b2}{\index{ant\+::spawn\+System@{ant\+::spawn\+System}!name@{name}}
+\index{name@{name}!ant\+::spawn\+System@{ant\+::spawn\+System}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string ant\+::\+System\+::name\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{classant_1_1_system_a60b3c00a760a3b4947ab1f1fc534a5b2}
+
+
+Definition at line 87 of file System.\+hpp.
+
+\hypertarget{classant_1_1spawn_system_ac15adf011d5664cfcecad025ece96c09}{\index{ant\+::spawn\+System@{ant\+::spawn\+System}!n\+Entities@{n\+Entities}}
+\index{n\+Entities@{n\+Entities}!ant\+::spawn\+System@{ant\+::spawn\+System}}
+\subsubsection[{n\+Entities}]{\setlength{\rightskip}{0pt plus 5cm}int ant\+::spawn\+System\+::n\+Entities\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1spawn_system_ac15adf011d5664cfcecad025ece96c09}
+
+
+Definition at line 60 of file spawn\+System.\+hpp.
+
+\hypertarget{classant_1_1spawn_system_a5d716493bd70cb52490152d7075a490e}{\index{ant\+::spawn\+System@{ant\+::spawn\+System}!over\+Time@{over\+Time}}
+\index{over\+Time@{over\+Time}!ant\+::spawn\+System@{ant\+::spawn\+System}}
+\subsubsection[{over\+Time}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Time ant\+::spawn\+System\+::over\+Time\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1spawn_system_a5d716493bd70cb52490152d7075a490e}
+
+
+Definition at line 62 of file spawn\+System.\+hpp.
+
+\hypertarget{classant_1_1_system_a4ef41cfc496e41ac6730f90629524ec7}{\index{ant\+::spawn\+System@{ant\+::spawn\+System}!Required\+Components@{Required\+Components}}
+\index{Required\+Components@{Required\+Components}!ant\+::spawn\+System@{ant\+::spawn\+System}}
+\subsubsection[{Required\+Components}]{\setlength{\rightskip}{0pt plus 5cm}long int ant\+::\+System\+::\+Required\+Components\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}}\label{classant_1_1_system_a4ef41cfc496e41ac6730f90629524ec7}
+
+
+Definition at line 84 of file System.\+hpp.
+
+\hypertarget{classant_1_1spawn_system_ae44b8fd02249453a7c4b4390bc7e32c7}{\index{ant\+::spawn\+System@{ant\+::spawn\+System}!spawn\+Point@{spawn\+Point}}
+\index{spawn\+Point@{spawn\+Point}!ant\+::spawn\+System@{ant\+::spawn\+System}}
+\subsubsection[{spawn\+Point}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Vector2f ant\+::spawn\+System\+::spawn\+Point\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1spawn_system_ae44b8fd02249453a7c4b4390bc7e32c7}
+
+
+Definition at line 64 of file spawn\+System.\+hpp.
+
+\hypertarget{classant_1_1spawn_system_a76dbde294f95b3aadd2b1df30699ebf1}{\index{ant\+::spawn\+System@{ant\+::spawn\+System}!states@{states}}
+\index{states@{states}!ant\+::spawn\+System@{ant\+::spawn\+System}}
+\subsubsection[{states}]{\setlength{\rightskip}{0pt plus 5cm}long int ant\+::spawn\+System\+::states\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1spawn_system_a76dbde294f95b3aadd2b1df30699ebf1}
+
+
+Definition at line 66 of file spawn\+System.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{spawn_system_8hpp}{spawn\+System.\+hpp}\item 
+\hyperlink{spawn_system_8cpp}{spawn\+System.\+cpp}\end{DoxyCompactItemize}

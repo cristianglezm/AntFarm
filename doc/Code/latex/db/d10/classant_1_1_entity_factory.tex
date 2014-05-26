@@ -1,0 +1,425 @@
+\hypertarget{classant_1_1_entity_factory}{\section{ant\+:\+:Entity\+Factory Class Reference}
+\label{classant_1_1_entity_factory}\index{ant\+::\+Entity\+Factory@{ant\+::\+Entity\+Factory}}
+}
+
+
+Clase para crear las entidades del juego.  
+
+
+
+
+{\ttfamily \#include $<$Entity\+Factory.\+hpp$>$}
+
+
+
+Collaboration diagram for ant\+:\+:Entity\+Factory\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{df/d9c/classant_1_1_entity_factory__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classant_1_1_entity_factory_a771bc1c1e76874d157b3a58a8fbed3e2}{Entity\+Factory} ()
+\begin{DoxyCompactList}\small\item\em Constructor por defecto. \end{DoxyCompactList}\item 
+\hyperlink{classant_1_1_entity_factory_af5fe7f4ccf5f3aaea08e5cac7580de64}{Entity\+Factory} (const std\+::string \&json)
+\begin{DoxyCompactList}\small\item\em Constructor que carga los assets del json especificado. \end{DoxyCompactList}\item 
+bool \hyperlink{classant_1_1_entity_factory_a61c45ac377e5a9783cffaca1eeba6973}{load\+Assets} (const std\+::string \&json)
+\begin{DoxyCompactList}\small\item\em Carga los assets especificados en el fichero json. \end{DoxyCompactList}\item 
+bool \hyperlink{classant_1_1_entity_factory_adf142d95b439257857ccc1f98d7baf5e}{unload\+Assets} ()
+\begin{DoxyCompactList}\small\item\em Descarga los assets cargados. \end{DoxyCompactList}\item 
+void \hyperlink{classant_1_1_entity_factory_a3ac763b7d893ee9cd6b64fe00597a928}{set\+Asset\+Manager} (std\+::shared\+\_\+ptr$<$ \hyperlink{classant_1_1_asset_manager}{Asset\+Manager} $>$ assets)
+\begin{DoxyCompactList}\small\item\em Setter del asset\+Manager. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classant_1_1_asset_manager}{Asset\+Manager} $>$ \hyperlink{classant_1_1_entity_factory_ad13969f9c868d06aad4e68d6ff3e61d4}{get\+Asset\+Manager} ()
+\begin{DoxyCompactList}\small\item\em Getter del \hyperlink{classant_1_1_asset_manager}{Asset\+Manager}. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \hyperlink{classant_1_1_entity}{Entity} $>$ \hyperlink{classant_1_1_entity_factory_af02c81d4a737ee3d8ddf6f68ad43deb6}{create\+Entity} (long int mask)
+\begin{DoxyCompactList}\small\item\em Crea la entidad especificada. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \hyperlink{classant_1_1_entity}{Entity} $>$ \hyperlink{classant_1_1_entity_factory_afef96c25d362db4fba4648e1520b98d5}{create\+Entity} (long int mask, \hyperlink{classant_1_1_component_settings}{Component\+Settings} \&cs)
+\begin{DoxyCompactList}\small\item\em Crea la entidad especificada con los datos especificados. \end{DoxyCompactList}\item 
+void \hyperlink{classant_1_1_entity_factory_abf4a24df1840b8ed4a738873f68d8168}{set\+Component\+Factory} (std\+::shared\+\_\+ptr$<$ \hyperlink{classant_1_1_component_factory}{Component\+Factory} $>$ cf)
+\begin{DoxyCompactList}\small\item\em Setter de la fabrica de componentes a utilizar. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classant_1_1_component_factory}{Component\+Factory} $>$ \hyperlink{classant_1_1_entity_factory_a3562d6b2a68372465ec4518070b956d3}{get\+Component\+Factory} ()
+\begin{DoxyCompactList}\small\item\em Getter de la fabrica de componentes utilizada. \end{DoxyCompactList}\item 
+\hyperlink{classant_1_1_entity_factory_a66fee3669089d284296bbfed30e4ff00}{$\sim$\+Entity\+Factory} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const long int \hyperlink{classant_1_1_entity_factory_ac2b28957b185c60643889aafa36badff}{Ant}
+\item 
+static const long int \hyperlink{classant_1_1_entity_factory_a70d75e92457179951ac177df4814467e}{Door}
+\item 
+static const long int \hyperlink{classant_1_1_entity_factory_ad1648971a3f0d3d1ecade497a8e9a54e}{In\+Door}
+\item 
+static const long int \hyperlink{classant_1_1_entity_factory_a2b75fdbea2cc2348e0181380d1c9f7f1}{Out\+Door}
+\item 
+static const long int \hyperlink{classant_1_1_entity_factory_a94033dca09c55b92cc187e64c375c352}{level}
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classant_1_1_component_factory}{Component\+Factory} $>$ \hyperlink{classant_1_1_entity_factory_ae71b738c0a40e8d70b7b97077687dc42}{component\+Factory}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Clase para crear las entidades del juego. 
+
+\begin{DoxyAuthor}{Author}
+Cristian Glez \href{mailto:Cristian.glez.m@gmail.com}{\tt Cristian.\+glez.\+m@gmail.\+com} 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+
+
+Definition at line 14 of file Entity\+Factory.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classant_1_1_entity_factory_a771bc1c1e76874d157b3a58a8fbed3e2}{\index{ant\+::\+Entity\+Factory@{ant\+::\+Entity\+Factory}!Entity\+Factory@{Entity\+Factory}}
+\index{Entity\+Factory@{Entity\+Factory}!ant\+::\+Entity\+Factory@{ant\+::\+Entity\+Factory}}
+\subsubsection[{Entity\+Factory}]{\setlength{\rightskip}{0pt plus 5cm}ant\+::\+Entity\+Factory\+::\+Entity\+Factory (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_entity_factory_a771bc1c1e76874d157b3a58a8fbed3e2}
+
+
+Constructor por defecto. 
+
+
+
+Definition at line 4 of file Entity\+Factory.\+cpp.
+
+\hypertarget{classant_1_1_entity_factory_af5fe7f4ccf5f3aaea08e5cac7580de64}{\index{ant\+::\+Entity\+Factory@{ant\+::\+Entity\+Factory}!Entity\+Factory@{Entity\+Factory}}
+\index{Entity\+Factory@{Entity\+Factory}!ant\+::\+Entity\+Factory@{ant\+::\+Entity\+Factory}}
+\subsubsection[{Entity\+Factory}]{\setlength{\rightskip}{0pt plus 5cm}ant\+::\+Entity\+Factory\+::\+Entity\+Factory (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{json}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_entity_factory_af5fe7f4ccf5f3aaea08e5cac7580de64}
+
+
+Constructor que carga los assets del json especificado. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em json} & std\+::string fichero json a cargar. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 7 of file Entity\+Factory.\+cpp.
+
+\hypertarget{classant_1_1_entity_factory_a66fee3669089d284296bbfed30e4ff00}{\index{ant\+::\+Entity\+Factory@{ant\+::\+Entity\+Factory}!````~Entity\+Factory@{$\sim$\+Entity\+Factory}}
+\index{````~Entity\+Factory@{$\sim$\+Entity\+Factory}!ant\+::\+Entity\+Factory@{ant\+::\+Entity\+Factory}}
+\subsubsection[{$\sim$\+Entity\+Factory}]{\setlength{\rightskip}{0pt plus 5cm}ant\+::\+Entity\+Factory\+::$\sim$\+Entity\+Factory (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_entity_factory_a66fee3669089d284296bbfed30e4ff00}
+
+
+Definition at line 68 of file Entity\+Factory.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classant_1_1_entity_factory_af02c81d4a737ee3d8ddf6f68ad43deb6}{\index{ant\+::\+Entity\+Factory@{ant\+::\+Entity\+Factory}!create\+Entity@{create\+Entity}}
+\index{create\+Entity@{create\+Entity}!ant\+::\+Entity\+Factory@{ant\+::\+Entity\+Factory}}
+\subsubsection[{create\+Entity}]{\setlength{\rightskip}{0pt plus 5cm}std\+::unique\+\_\+ptr$<$ {\bf Entity} $>$ ant\+::\+Entity\+Factory\+::create\+Entity (
+\begin{DoxyParamCaption}
+\item[{long int}]{mask}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_entity_factory_af02c81d4a737ee3d8ddf6f68ad43deb6}
+
+
+Crea la entidad especificada. 
+
+Se puede especificar otros componentes pero tendran los datos por defecto
+
+
+\begin{DoxyParams}{Parameters}
+{\em mask} & long int Mascara de la entidad o componentes. 
+\begin{DoxyCode}
+\hyperlink{classant_1_1_entity_factory_af02c81d4a737ee3d8ddf6f68ad43deb6}{EntityFactory::createEntity}( EntityFactory::ANT | Component::Wings | 
+      Component::Horns); 
+\end{DoxyCode}
+ Creas una entidad Hormiga con los componentes adicionales especificados los cuales tendran valores por defecto. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::unique\+\_\+ptr$<$\+Entity$>$ entidad creada. 
+\end{DoxyReturn}
+
+
+Definition at line 20 of file Entity\+Factory.\+cpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/d10/classant_1_1_entity_factory_af02c81d4a737ee3d8ddf6f68ad43deb6_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{db/d10/classant_1_1_entity_factory_af02c81d4a737ee3d8ddf6f68ad43deb6_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classant_1_1_entity_factory_afef96c25d362db4fba4648e1520b98d5}{\index{ant\+::\+Entity\+Factory@{ant\+::\+Entity\+Factory}!create\+Entity@{create\+Entity}}
+\index{create\+Entity@{create\+Entity}!ant\+::\+Entity\+Factory@{ant\+::\+Entity\+Factory}}
+\subsubsection[{create\+Entity}]{\setlength{\rightskip}{0pt plus 5cm}std\+::unique\+\_\+ptr$<$ {\bf Entity} $>$ ant\+::\+Entity\+Factory\+::create\+Entity (
+\begin{DoxyParamCaption}
+\item[{long int}]{mask, }
+\item[{{\bf Component\+Settings} \&}]{cs}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_entity_factory_afef96c25d362db4fba4648e1520b98d5}
+
+
+Crea la entidad especificada con los datos especificados. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mask} & long int mascara de la entidad o componentes. \\
+\hline
+{\em cs} & \hyperlink{classant_1_1_component_settings}{Component\+Settings} \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 36 of file Entity\+Factory.\+cpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{db/d10/classant_1_1_entity_factory_afef96c25d362db4fba4648e1520b98d5_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classant_1_1_entity_factory_ad13969f9c868d06aad4e68d6ff3e61d4}{\index{ant\+::\+Entity\+Factory@{ant\+::\+Entity\+Factory}!get\+Asset\+Manager@{get\+Asset\+Manager}}
+\index{get\+Asset\+Manager@{get\+Asset\+Manager}!ant\+::\+Entity\+Factory@{ant\+::\+Entity\+Factory}}
+\subsubsection[{get\+Asset\+Manager}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Asset\+Manager}$>$ ant\+::\+Entity\+Factory\+::get\+Asset\+Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classant_1_1_entity_factory_ad13969f9c868d06aad4e68d6ff3e61d4}
+
+
+Getter del \hyperlink{classant_1_1_asset_manager}{Asset\+Manager}. 
+
+\begin{DoxyReturn}{Returns}
+std\+::shared\+\_\+ptr$<$\+Asset\+Manager$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 68 of file Entity\+Factory.\+hpp.
+
+\hypertarget{classant_1_1_entity_factory_a3562d6b2a68372465ec4518070b956d3}{\index{ant\+::\+Entity\+Factory@{ant\+::\+Entity\+Factory}!get\+Component\+Factory@{get\+Component\+Factory}}
+\index{get\+Component\+Factory@{get\+Component\+Factory}!ant\+::\+Entity\+Factory@{ant\+::\+Entity\+Factory}}
+\subsubsection[{get\+Component\+Factory}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Component\+Factory}$>$ ant\+::\+Entity\+Factory\+::get\+Component\+Factory (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classant_1_1_entity_factory_a3562d6b2a68372465ec4518070b956d3}
+
+
+Getter de la fabrica de componentes utilizada. 
+
+\begin{DoxyReturn}{Returns}
+std\+::shared\+\_\+ptr$<$\+Component\+Factory$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 97 of file Entity\+Factory.\+hpp.
+
+\hypertarget{classant_1_1_entity_factory_a61c45ac377e5a9783cffaca1eeba6973}{\index{ant\+::\+Entity\+Factory@{ant\+::\+Entity\+Factory}!load\+Assets@{load\+Assets}}
+\index{load\+Assets@{load\+Assets}!ant\+::\+Entity\+Factory@{ant\+::\+Entity\+Factory}}
+\subsubsection[{load\+Assets}]{\setlength{\rightskip}{0pt plus 5cm}bool ant\+::\+Entity\+Factory\+::load\+Assets (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{json}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_entity_factory_a61c45ac377e5a9783cffaca1eeba6973}
+
+
+Carga los assets especificados en el fichero json. 
+
+Formato del fichero json \hyperlink{classant_1_1_asset_manager_ab67aa137cc51b1052553b35e2e8b0bcd}{Asset\+Manager\+::load\+Assets()}
+
+
+\begin{DoxyParams}{Parameters}
+{\em json} & std\+::string fichero json a cargar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Definition at line 11 of file Entity\+Factory.\+cpp.
+
+\hypertarget{classant_1_1_entity_factory_a3ac763b7d893ee9cd6b64fe00597a928}{\index{ant\+::\+Entity\+Factory@{ant\+::\+Entity\+Factory}!set\+Asset\+Manager@{set\+Asset\+Manager}}
+\index{set\+Asset\+Manager@{set\+Asset\+Manager}!ant\+::\+Entity\+Factory@{ant\+::\+Entity\+Factory}}
+\subsubsection[{set\+Asset\+Manager}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+Entity\+Factory\+::set\+Asset\+Manager (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Asset\+Manager} $>$}]{assets}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_entity_factory_a3ac763b7d893ee9cd6b64fe00597a928}
+
+
+Setter del asset\+Manager. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em assets} & std\+::shared\+\_\+ptr$<$\+Asset\+Manager$>$ assets que utilizara para cargar componentes que los utilicen. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 17 of file Entity\+Factory.\+cpp.
+
+\hypertarget{classant_1_1_entity_factory_abf4a24df1840b8ed4a738873f68d8168}{\index{ant\+::\+Entity\+Factory@{ant\+::\+Entity\+Factory}!set\+Component\+Factory@{set\+Component\+Factory}}
+\index{set\+Component\+Factory@{set\+Component\+Factory}!ant\+::\+Entity\+Factory@{ant\+::\+Entity\+Factory}}
+\subsubsection[{set\+Component\+Factory}]{\setlength{\rightskip}{0pt plus 5cm}void ant\+::\+Entity\+Factory\+::set\+Component\+Factory (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Component\+Factory} $>$}]{cf}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_entity_factory_abf4a24df1840b8ed4a738873f68d8168}
+
+
+Setter de la fabrica de componentes a utilizar. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cf} & std\+::shared\+\_\+ptr$<$\+Component\+Factory$>$ \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 65 of file Entity\+Factory.\+cpp.
+
+\hypertarget{classant_1_1_entity_factory_adf142d95b439257857ccc1f98d7baf5e}{\index{ant\+::\+Entity\+Factory@{ant\+::\+Entity\+Factory}!unload\+Assets@{unload\+Assets}}
+\index{unload\+Assets@{unload\+Assets}!ant\+::\+Entity\+Factory@{ant\+::\+Entity\+Factory}}
+\subsubsection[{unload\+Assets}]{\setlength{\rightskip}{0pt plus 5cm}bool ant\+::\+Entity\+Factory\+::unload\+Assets (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classant_1_1_entity_factory_adf142d95b439257857ccc1f98d7baf5e}
+
+
+Descarga los assets cargados. 
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Definition at line 14 of file Entity\+Factory.\+cpp.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classant_1_1_entity_factory_ac2b28957b185c60643889aafa36badff}{\index{ant\+::\+Entity\+Factory@{ant\+::\+Entity\+Factory}!Ant@{Ant}}
+\index{Ant@{Ant}!ant\+::\+Entity\+Factory@{ant\+::\+Entity\+Factory}}
+\subsubsection[{Ant}]{\setlength{\rightskip}{0pt plus 5cm}const long int ant\+::\+Entity\+Factory\+::\+Ant\hspace{0.3cm}{\ttfamily [static]}}}\label{classant_1_1_entity_factory_ac2b28957b185c60643889aafa36badff}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \hyperlink{class_components_mask_ac7fff00913ea1c8b225c90b02ecd3243}{ComponentsMask::COMPONENT\_VELOCITY}
+                               | \hyperlink{class_components_mask_ab05302f9381801724a58273ff83ad2a6}{ComponentsMask::COMPONENT\_SPRITE}
+                               | \hyperlink{class_components_mask_a3a66579e45c351c13abe63e61f2eaa0a}{ComponentsMask::COMPONENT\_TRANSFORM}
+                               | \hyperlink{class_components_mask_a7a90217e6d5da07c838e12fe2f355448}{ComponentsMask::COMPONENT\_COUNT}
+                               | \hyperlink{class_components_mask_a81ccaf0bf7344c970bc8474df2625ba7}{ComponentsMask::COMPONENT\_BOUNDS}
+\end{DoxyCode}
+
+
+Definition at line 16 of file Entity\+Factory.\+hpp.
+
+\hypertarget{classant_1_1_entity_factory_ae71b738c0a40e8d70b7b97077687dc42}{\index{ant\+::\+Entity\+Factory@{ant\+::\+Entity\+Factory}!component\+Factory@{component\+Factory}}
+\index{component\+Factory@{component\+Factory}!ant\+::\+Entity\+Factory@{ant\+::\+Entity\+Factory}}
+\subsubsection[{component\+Factory}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Component\+Factory}$>$ ant\+::\+Entity\+Factory\+::component\+Factory\hspace{0.3cm}{\ttfamily [private]}}}\label{classant_1_1_entity_factory_ae71b738c0a40e8d70b7b97077687dc42}
+
+
+Definition at line 100 of file Entity\+Factory.\+hpp.
+
+\hypertarget{classant_1_1_entity_factory_a70d75e92457179951ac177df4814467e}{\index{ant\+::\+Entity\+Factory@{ant\+::\+Entity\+Factory}!Door@{Door}}
+\index{Door@{Door}!ant\+::\+Entity\+Factory@{ant\+::\+Entity\+Factory}}
+\subsubsection[{Door}]{\setlength{\rightskip}{0pt plus 5cm}const long int ant\+::\+Entity\+Factory\+::\+Door\hspace{0.3cm}{\ttfamily [static]}}}\label{classant_1_1_entity_factory_a70d75e92457179951ac177df4814467e}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \hyperlink{class_components_mask_a9686a00bbefcd13f5fab9780446733c1}{ComponentsMask::COMPONENT\_PASSAGE}
+                                | \hyperlink{class_components_mask_a3a66579e45c351c13abe63e61f2eaa0a}{ComponentsMask::COMPONENT\_TRANSFORM}
+                                | \hyperlink{class_components_mask_ab05302f9381801724a58273ff83ad2a6}{ComponentsMask::COMPONENT\_SPRITE}
+                                | \hyperlink{class_components_mask_a81ccaf0bf7344c970bc8474df2625ba7}{ComponentsMask::COMPONENT\_BOUNDS}
+\end{DoxyCode}
+
+
+Definition at line 21 of file Entity\+Factory.\+hpp.
+
+\hypertarget{classant_1_1_entity_factory_ad1648971a3f0d3d1ecade497a8e9a54e}{\index{ant\+::\+Entity\+Factory@{ant\+::\+Entity\+Factory}!In\+Door@{In\+Door}}
+\index{In\+Door@{In\+Door}!ant\+::\+Entity\+Factory@{ant\+::\+Entity\+Factory}}
+\subsubsection[{In\+Door}]{\setlength{\rightskip}{0pt plus 5cm}const long int ant\+::\+Entity\+Factory\+::\+In\+Door\hspace{0.3cm}{\ttfamily [static]}}}\label{classant_1_1_entity_factory_ad1648971a3f0d3d1ecade497a8e9a54e}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \hyperlink{class_components_mask_a3a66579e45c351c13abe63e61f2eaa0a}{ComponentsMask::COMPONENT\_TRANSFORM}
+                                | \hyperlink{class_components_mask_ab05302f9381801724a58273ff83ad2a6}{ComponentsMask::COMPONENT\_SPRITE}
+                                | \hyperlink{class_components_mask_a6a8d73981d65f39acb16bbeeced5a95b}{ComponentsMask::COMPONENT\_IN}
+\end{DoxyCode}
+
+
+Definition at line 25 of file Entity\+Factory.\+hpp.
+
+\hypertarget{classant_1_1_entity_factory_a94033dca09c55b92cc187e64c375c352}{\index{ant\+::\+Entity\+Factory@{ant\+::\+Entity\+Factory}!level@{level}}
+\index{level@{level}!ant\+::\+Entity\+Factory@{ant\+::\+Entity\+Factory}}
+\subsubsection[{level}]{\setlength{\rightskip}{0pt plus 5cm}const long int ant\+::\+Entity\+Factory\+::level\hspace{0.3cm}{\ttfamily [static]}}}\label{classant_1_1_entity_factory_a94033dca09c55b92cc187e64c375c352}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \hyperlink{class_components_mask_af9ec785367e18857389d34be89269879}{ComponentsMask::COMPONENT\_DESTRUCTABLE}
+                                | \hyperlink{class_components_mask_a3a66579e45c351c13abe63e61f2eaa0a}{ComponentsMask::COMPONENT\_TRANSFORM}
+                                | \hyperlink{class_components_mask_ab05302f9381801724a58273ff83ad2a6}{ComponentsMask::COMPONENT\_SPRITE}
+\end{DoxyCode}
+
+
+Definition at line 32 of file Entity\+Factory.\+hpp.
+
+\hypertarget{classant_1_1_entity_factory_a2b75fdbea2cc2348e0181380d1c9f7f1}{\index{ant\+::\+Entity\+Factory@{ant\+::\+Entity\+Factory}!Out\+Door@{Out\+Door}}
+\index{Out\+Door@{Out\+Door}!ant\+::\+Entity\+Factory@{ant\+::\+Entity\+Factory}}
+\subsubsection[{Out\+Door}]{\setlength{\rightskip}{0pt plus 5cm}const long int ant\+::\+Entity\+Factory\+::\+Out\+Door\hspace{0.3cm}{\ttfamily [static]}}}\label{classant_1_1_entity_factory_a2b75fdbea2cc2348e0181380d1c9f7f1}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \hyperlink{class_components_mask_a3a66579e45c351c13abe63e61f2eaa0a}{ComponentsMask::COMPONENT\_TRANSFORM}
+                                | \hyperlink{class_components_mask_a81ccaf0bf7344c970bc8474df2625ba7}{ComponentsMask::COMPONENT\_BOUNDS}
+                                | \hyperlink{class_components_mask_ab05302f9381801724a58273ff83ad2a6}{ComponentsMask::COMPONENT\_SPRITE}
+                                | \hyperlink{class_components_mask_ab28458934af33cdf7d3c8e128c4da866}{ComponentsMask::COMPONENT\_OUT}
+\end{DoxyCode}
+
+
+Definition at line 28 of file Entity\+Factory.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_entity_factory_8hpp}{Entity\+Factory.\+hpp}\item 
+\hyperlink{_entity_factory_8cpp}{Entity\+Factory.\+cpp}\end{DoxyCompactItemize}
