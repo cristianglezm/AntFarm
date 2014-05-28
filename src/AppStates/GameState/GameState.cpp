@@ -74,6 +74,13 @@ namespace ant{
                                                     ))
                                  );
                 }
+                if(event.key.code == sf::Keyboard::E){
+                    eventQueue->push(std::shared_ptr<baseEvent>(
+                            new Event<constructorSystem::command>(EventType::CHANGE_COMMAND,
+                                                    Constructions::explosion
+                                                    ))
+                                 );
+                }
                 if(event.key.code == sf::Keyboard::D){
                     eventQueue->push(std::shared_ptr<baseEvent>(
                             new Event<constructorSystem::command>(EventType::CHANGE_COMMAND,

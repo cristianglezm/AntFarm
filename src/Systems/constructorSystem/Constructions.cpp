@@ -315,6 +315,48 @@ namespace ant{
             }
         }
     };
+    constructorSystem::command Constructions::explosion = [](Entity* e, sf::VertexArray* map,sf::FloatRect bounds){
+        auto rm = [map,bounds](const sf::Vector2f& pos){
+            if(bounds.contains(pos)){
+                if((*map)[bounds.height * pos.x + pos.y].color.a == 255){
+                    (*map)[bounds.height * pos.x + pos.y].color.a = 0;
+                }
+            }
+        };
+        if(e->hasComponent(ComponentsMask::COMPONENT_TRANSFORM)){
+            auto& cTrans = e->getComponent(ComponentsMask::COMPONENT_TRANSFORM)
+                                ->getProperties<sf::Vector2f,sf::Vector2f,float>();
+            auto& position = std::get<0>(cTrans);
+            std::function<void(int,const sf::Vector2f&)> explode;
+            explode = [&rm,&explode](int radius,const sf::Vector2f& pos){
+                int x = radius, y = 0;
+                int radiusError = 1-x;
+                while(x >= y){
+                    rm(sf::Vector2f(x + pos.x, y + pos.y));
+                    rm(sf::Vector2f(y + pos.x, x + pos.y));
+                    rm(sf::Vector2f(-x + pos.x, y + pos.y));
+                    rm(sf::Vector2f(-y + pos.x, x + pos.y));
+                    rm(sf::Vector2f(-x + pos.x, -y + pos.y));
+                    rm(sf::Vector2f(-y + pos.x, -x + pos.y));
+                    rm(sf::Vector2f(x + pos.x, -y + pos.y));
+                    rm(sf::Vector2f(y + pos.x, -x + pos.y));
+                    ++y;
+                if(radiusError<0){
+                    radiusError+=2*y+1;
+                }else{
+                    --x;
+                    radiusError+=2*(y-x+1);
+                }
+              }
+              if(radius > 0){
+                --radius;
+                explode(radius,pos);
+              }
+            };
+            explode(40,position);
+            e->addState(States::UNSAVED);
+        }
+    };
     // Colors
     sf::Color Constructions::Grey(128,128,128,255);
     sf::Color Constructions::lightGrey(192,192,192,255);

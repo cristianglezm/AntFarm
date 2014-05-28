@@ -48,6 +48,10 @@ namespace ant{
              * @brief Crea un tunel para arriba.
              */
             static constructorSystem::command uphill;
+            /**
+             * @brief Crea una explosion.
+             */
+            static constructorSystem::command explosion;
             // colors
             static sf::Color Grey;
             static sf::Color lightGrey;
