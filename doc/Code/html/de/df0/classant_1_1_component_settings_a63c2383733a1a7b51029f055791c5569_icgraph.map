@@ -1,6 +1,0 @@
-<map id="ant::ComponentSettings::setSpeed" name="ant::ComponentSettings::setSpeed">
-<area shape="rect" id="node2" href="$de/df0/classant_1_1_component_settings.html#accaca2bae161ce60c84d78817a3864bc" title="Carga la configuracion de la entidad. " alt="" coords="216,64,379,105"/>
-<area shape="rect" id="node3" href="$db/d10/classant_1_1_entity_factory.html#af02c81d4a737ee3d8ddf6f68ad43deb6" title="Crea la entidad especificada. " alt="" coords="431,5,557,47"/>
-<area shape="rect" id="node4" href="$db/ddf/classant_1_1spawn_system.html#a080ec242e6f934bea895dbc3429bea9b" title="Cada x segundos crea un entidad en el sitio establecido. " alt="" coords="609,42,787,69"/>
-<area shape="rect" id="node5" href="$d0/df7/classant_1_1_world_factory.html#aa5be33ba3755dcd849d55f5ac8f64d8e" title="Crea un nivel segun la imagen especificada. " alt="" coords="427,123,561,164"/>
-</map>

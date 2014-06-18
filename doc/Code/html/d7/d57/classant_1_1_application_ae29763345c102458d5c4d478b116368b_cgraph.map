@@ -1,5 +1,0 @@
-<map id="ant::Application::update" name="ant::Application::update">
-<area shape="rect" id="node2" href="$d1/da5/classant_1_1_state_stack.html#a8c86e2280d7093c745d700269b25d064" title="Actualiza los estados que tiene. " alt="" coords="212,13,372,39"/>
-<area shape="rect" id="node3" href="$d1/da5/classant_1_1_state_stack.html#a22b55b41158c41bd7c6ef54ae317a6b7" title="Aplica los cambios pendientes al Stack. " alt="" coords="420,5,619,47"/>
-<area shape="rect" id="node4" href="$d1/da5/classant_1_1_state_stack.html#a616cd23d2b8c0ade57d016ae929001cd" title="Crea el estado especificado. " alt="" coords="667,13,855,39"/>
-</map>

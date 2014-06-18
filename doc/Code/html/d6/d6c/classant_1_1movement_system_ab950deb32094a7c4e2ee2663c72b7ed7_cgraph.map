@@ -1,6 +1,0 @@
-<map id="ant::movementSystem::onNotify" name="ant::movementSystem::onNotify">
-<area shape="rect" id="node2" href="$dc/d73/classant_1_1_entity.html#a78b3cd3f28801cbd21faf67e7dd028e4" title="Obtiene una referencia al componente. " alt="" coords="205,5,380,32"/>
-<area shape="rect" id="node4" href="$d4/dd4/classant_1_1base_component.html#a88bc0531ed99c8978e95257131653efe" title="Getter de las propiedades del componente,. " alt="" coords="221,57,364,98"/>
-<area shape="rect" id="node3" href="$dc/d73/classant_1_1_entity.html#adfd34f851602409da9db04f6488d58eb" title="Devuelve si esta entidad tiene el componente. " alt="" coords="439,5,616,32"/>
-<area shape="rect" id="node5" href="$d3/d70/classant_1_1_component.html#acbf5db9e0be87eba019e193240ea9982" title="Getter de las propiedades del componente,. " alt="" coords="428,64,627,91"/>
-</map>

@@ -1,5 +1,0 @@
-<map id="ant::Entity::removeState" name="ant::Entity::removeState">
-<area shape="rect" id="node2" href="$dc/de8/classant_1_1collision_system.html#a3d90ed206a38d715ba267853d79886d6" title="Comprueba si una entidad y sus bordes estan dentro del mapa. " alt="" coords="225,5,365,47"/>
-<area shape="rect" id="node4" href="$d8/d12/classant_1_1constructor_system.html#aefb0ab92dfd17a7a374660f77434fe3a" title="recibe dos eventos " alt="" coords="216,71,375,112"/>
-<area shape="rect" id="node3" href="$dc/de8/classant_1_1collision_system.html#abef6a9cb5378ddb9ddf6cfdd46b6dbfa" title="Comprueba las colisiones de las entidades. " alt="" coords="423,5,563,47"/>
-</map>

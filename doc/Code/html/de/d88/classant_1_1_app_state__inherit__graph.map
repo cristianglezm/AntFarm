@@ -1,7 +1,0 @@
-<map id="ant::AppState" name="ant::AppState">
-<area shape="rect" id="node2" href="$d0/da0/classant_1_1_game_over_state.html" title="Muestra el mensaje de final de juego. " alt="" coords="5,343,145,494"/>
-<area shape="rect" id="node3" href="$d4/da6/classant_1_1_game_state.html" title="Estado de juego, Inicia el juego. " alt="" coords="169,263,325,575"/>
-<area shape="rect" id="node4" href="$db/d69/classant_1_1_menu_state.html" title="Clase de estado del menu. " alt="" coords="349,314,489,523"/>
-<area shape="rect" id="node5" href="$d4/d89/classant_1_1_pause_state.html" title="Estado de pausa. " alt="" coords="513,329,640,509"/>
-<area shape="rect" id="node6" href="$d0/d6d/classant_1_1_title_state.html" title="Muestra el titulo de la aplicacion. " alt="" coords="664,307,791,531"/>
-</map>

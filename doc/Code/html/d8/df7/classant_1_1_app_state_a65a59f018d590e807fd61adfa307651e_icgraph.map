@@ -1,7 +1,0 @@
-<map id="ant::AppState::requestStackPop" name="ant::AppState::requestStackPop">
-<area shape="rect" id="node2" href="$d0/da0/classant_1_1_game_over_state.html#ac16226e76dac5963ab1a53f506cc17e1" title="Maneja la input. " alt="" coords="291,5,431,47"/>
-<area shape="rect" id="node3" href="$d4/da6/classant_1_1_game_state.html#a379cc1dbbea0e0f559a174676da966fe" title="Maneja el input del juego. " alt="" coords="265,71,457,98"/>
-<area shape="rect" id="node4" href="$db/d69/classant_1_1_menu_state.html#a2ae44edc8d47505675521567e65cbd8d" title="Maneja la input. " alt="" coords="267,122,456,149"/>
-<area shape="rect" id="node5" href="$d4/d89/classant_1_1_pause_state.html#af22b38989f774e2ed557b91531048d42" title="Maneja el input del teclado/raton. " alt="" coords="264,173,459,199"/>
-<area shape="rect" id="node6" href="$d0/d6d/classant_1_1_title_state.html#a89b514fd2b2ae3a55ea49d4ae825d391" title="Maneja el input de teclado/raton. " alt="" coords="271,223,452,250"/>
-</map>

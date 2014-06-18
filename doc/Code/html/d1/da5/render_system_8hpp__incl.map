@@ -1,9 +1,0 @@
-<map id="renderSystem.hpp" name="renderSystem.hpp">
-<area shape="rect" id="node6" href="$d6/def/_system_8hpp.html" title="Systems/System.hpp" alt="" coords="317,80,465,107"/>
-<area shape="rect" id="node22" href="$d7/d5b/_component_mask_8hpp.html" title="Components/ComponentMask.hpp" alt="" coords="1130,80,1353,107"/>
-<area shape="rect" id="node10" href="$d7/d11/_event_queue_8hpp.html" title="EventQueue/EventQueue.hpp" alt="" coords="926,229,1117,256"/>
-<area shape="rect" id="node14" href="$da/d7b/_entity_manager_8hpp.html" title="EntityManager/EntityManager.hpp" alt="" coords="496,155,715,181"/>
-<area shape="rect" id="node12" href="$d6/dc3/_event_8hpp.html" title="Event/Event.hpp" alt="" coords="1028,304,1143,331"/>
-<area shape="rect" id="node17" href="$d2/db6/_entity_8hpp.html" title="Entity/Entity.hpp" alt="" coords="591,229,710,256"/>
-<area shape="rect" id="node20" href="$da/d5c/_component_8hpp.html" title="Components/Component.hpp" alt="" coords="361,304,551,331"/>
-</map>

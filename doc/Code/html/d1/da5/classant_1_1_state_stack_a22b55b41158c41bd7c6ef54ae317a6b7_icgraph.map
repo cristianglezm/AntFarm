@@ -1,8 +1,0 @@
-<map id="ant::StateStack::applyPendingChanges" name="ant::StateStack::applyPendingChanges">
-<area shape="rect" id="node2" href="$d1/da5/classant_1_1_state_stack.html#a8c86e2280d7093c745d700269b25d064" title="Actualiza los estados que tiene. " alt="" coords="267,8,427,35"/>
-<area shape="rect" id="node6" href="$d1/da5/classant_1_1_state_stack.html#ac20f05b7af54c72199a3fef098c9dc2f" title="maneja la input de los estados(teclado/ raton). " alt="" coords="252,60,443,87"/>
-<area shape="rect" id="node3" href="$d7/d57/classant_1_1_application.html#ae29763345c102458d5c4d478b116368b" title="Actualiza el estado de la aplicacion. " alt="" coords="495,5,653,32"/>
-<area shape="rect" id="node4" href="$d7/d57/classant_1_1_application.html#a98b4cb1093562a39e0c95309cec18c48" title="Comienza la aplicacion. " alt="" coords="705,35,844,61"/>
-<area shape="rect" id="node5" href="$df/d0a/main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="892,35,943,61"/>
-<area shape="rect" id="node7" href="$d7/d57/classant_1_1_application.html#ae16ecef2ce89b5c86bcade38e2566528" title="Procesa el input del teclado/raton etc. " alt="" coords="491,57,657,98"/>
-</map>

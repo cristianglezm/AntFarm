@@ -1,5 +1,0 @@
-<map id="ant::Level::Level" name="ant::Level::Level">
-<area shape="rect" id="node2" href="$d0/dcb/classant_1_1_level.html#a8420f52c19063fc012a9b5da62ad823d" title="Inicializa el nivel. " alt="" coords="168,5,271,32"/>
-<area shape="rect" id="node3" href="$d0/dcb/classant_1_1_level.html#a3cb50b7956ecde37e8d9991c32082f1d" title="Carga el nivel de un fichero json. " alt="" coords="319,5,457,32"/>
-<area shape="rect" id="node4" href="$d0/dcb/classant_1_1_level.html#a86bc9422387cfb1502a13649c7fd0f97" title="Devuelve el numero total de niveles que tiene. " alt="" coords="505,5,615,32"/>
-</map>

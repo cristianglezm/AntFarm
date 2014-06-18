@@ -1,6 +1,0 @@
-<map id="ant::GameState" name="ant::GameState">
-<area shape="rect" id="node2" href="$d8/df7/classant_1_1_app_state.html" title="Clase abstracta de estado de aplicacion. " alt="" coords="5,505,153,700"/>
-<area shape="rect" id="node3" href="$d1/da5/classant_1_1_state_stack.html" title="Clase para almacenar los estados del juego. " alt="" coords="148,160,315,443"/>
-<area shape="rect" id="node4" href="$d8/d0b/structant_1_1_app_state_1_1_context.html" title="Clase para compartir datos esenciales a los estados. " alt="" coords="34,5,189,97"/>
-<area shape="rect" id="node5" href="$d4/d50/classant_1_1_observer.html" title="Interfaz para los observadores. " alt="" coords="178,549,279,656"/>
-</map>

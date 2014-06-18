@@ -1,4 +1,0 @@
-<map id="ant::PauseState::handleEvent" name="ant::PauseState::handleEvent">
-<area shape="rect" id="node2" href="$d8/df7/classant_1_1_app_state.html#a65a59f018d590e807fd61adfa307651e" title="Pide al stack que quite el ultimo estado añadido. " alt="" coords="248,5,459,32"/>
-<area shape="rect" id="node3" href="$d1/da5/classant_1_1_state_stack.html#a428daca2badf554f4737a763e576e111" title="Elimina el ultimo estado añadido. " alt="" coords="507,5,680,32"/>
-</map>
