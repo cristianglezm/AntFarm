@@ -28,11 +28,18 @@ if(CMAKE_CONFIGURATION_TYPES)
 	mark_as_advanced(CMAKE_CONFIGURATION_TYPES)
 endif()
 
+# set flags for debug or release
+if(CMAKE_CONFIGURATION_TYPE STREQUAL "Debug")
+	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -g -pg -Wall -Wno-long-long -pedantic")
+elseif(CMAKE_CONFIGURATION_TYPE STREQUAL "Release")
+	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -O3 -fexpensive-optimizations -stdlib=libc++")
+endif()
+
 # Compiler-specific flags and definitions
 if(CMAKE_COMPILER_IS_GNUCXX)
-	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -g -pg -Wall -Wno-long-long -pedantic")
+	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 elseif(CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
-	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -O3 -fexpensive-optimizations -stdlib=libc++")
+	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -stdlib=libc++")
 endif()
 
 SET(SFML_STATIC_LIBRARIES TRUE)
