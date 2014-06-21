@@ -7,48 +7,5 @@ Completar CMake:
 	Falta Completar CMake AntFarm
 		añadir boolean para elegir si compilar los tests o no.
 		Añadir comando para copiar los datos para el juego
-Poner licencia.
-Mejorar README:
-	descripcion proyecto, etc.
-
-
-baseComponent		- Done
-Component		- Done
-ComponentSettings 	-
-	ir Agregando componentes
-ComponentFactory	-
-	ir Agregando componentes
-Entity			- Done
-EntityFactory		-
-	ir Agregando entidades
-EntityManager		- Done
-baseEvent		- Done
-Event			- Done
-EventQueue		- Done
-GameEventDispatcher	-
-	Agregar Subjects segun los sistemas y eventos.
-Subject			- Done
-Observer		- Done
-EventType 		-
-	Agregar eventos segun los sistemas.
-ComponentsMask		-
-	agregar componentes segun se van creando.
-World			- Done
-WorldManager		- Done
-WorldFactory		- 
-	se Pueden añadir nuevas entidades(trampas etc)
-System			- Done
-renderSystem		- Done
-movementSystem		- Done
-outSystem		- Done
-collisionSystem		- Done
-QuadTree		- Done
-gravitySystem		- Done
-Level			- Done
-AssetManager		- Done
-Game			- Done
-Config			-
-	agregar cosas cuando se necesiten
-SystemManager		- Done
-SystemFactory		- Done
+Añadir Features...
 -----------------------------------------------------

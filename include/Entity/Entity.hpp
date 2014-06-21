@@ -113,7 +113,7 @@ namespace ant{
              */
             inline bool hasComponent(long int id){ return ((mask & id) == id); }
             /**
-             * @brief Devuelve los estados que tiene la entidad.
+             * @brief Comprueba si la entidad tiene el estado especificado.
              * @param statesID long int id de los estados.
              * @code
              *  e->is(States::FALLING | States::OnFIRE);
