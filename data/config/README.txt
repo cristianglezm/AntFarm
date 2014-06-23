@@ -14,12 +14,14 @@ GUI
 Definicion de la interfaz
 
 Acciones:
+
 	* climb
 	* stop
 	* dig
 	* stairs
 	* bridge
 	* wall
+Ejemplo de Configuracion:
 
 {
 "GUI":{

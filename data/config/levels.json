@@ -1,8 +1,8 @@
 {
     "levels":[
             {"name":"level1","background":"background3","nEntities":10,"image":"data/levels/level1.png","overtime":1,},
-	    {"name":"level2","background":"background2","nEntities":50,"image":"data/levels/level2.png","overtime":2,},
-	    {"name":"level3","background":"background3","nEntities":50,"image":"data/levels/level3.png","overtime":1,},
-	    {"name":"level4","background":"background1","nEntities":5,"image":"data/levels/level4.png","overtime":5,},
+		{"name":"level2","background":"background2","nEntities":50,"image":"data/levels/level2.png","overtime":2,},
+		{"name":"level3","background":"background3","nEntities":50,"image":"data/levels/level3.png","overtime":1,},
+		{"name":"level4","background":"background1","nEntities":5,"image":"data/levels/level4.png","overtime":5,},
         ]
 }
