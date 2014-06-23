@@ -1,8 +1,8 @@
-AntFarm
-===
+# AntFarm #
 
 AntFarm is a game about ants that are trapped in some place and need to get to the other door to escape.
 
+(Wiki)[https://bitbucket.org/cristian_glez_m/antfarm/wiki]
 
 Requires CMake and one of the following compilers:
 
@@ -10,9 +10,9 @@ Requires CMake and one of the following compilers:
 * Clang 3.3 or newer (Xcode 5.0 or newer on OS X);
 * Visual Studio 2010 or newer;
 
-
 Installing
 ===
+
 AntFarm requires the following dependencies:
 
 * [SFML](http://sfml-dev.org) 2.1 or newer
