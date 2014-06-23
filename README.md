@@ -2,7 +2,7 @@
 
 AntFarm is a game about ants that are trapped in some place and need to get to the other door to escape.
 
-(Wiki)[https://bitbucket.org/cristian_glez_m/antfarm/wiki]
+[Wiki](https://bitbucket.org/cristian_glez_m/antfarm/wiki)
 
 Requires CMake and one of the following compilers:
 
