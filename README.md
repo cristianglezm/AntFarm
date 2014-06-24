@@ -1,6 +1,6 @@
 # AntFarm #
 
-AntFarm is a game about ants that are trapped in some place and need to get to the other door to escape.
+AntFarm es un juego sobre hormigas que tienen que estan atrapadas y tienen que escapar.
 
 [Manual del Juego](https://bitbucket.org/cristian_glez_m/antfarm/wiki/Manual%20de%20Juego)
 
