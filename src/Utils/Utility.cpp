@@ -1,4 +1,4 @@
-#include <Utils/utility.hpp>
+#include <Utils/Utility.hpp>
 #include <SFML/Graphics/Sprite.hpp>
 #include <SFML/Graphics/Text.hpp>
 namespace ant{
