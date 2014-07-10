@@ -3,6 +3,7 @@
 AntFarm es un juego sobre hormigas que están atrapadas y tienen que escapar.
 
 [Manual del Juego](https://bitbucket.org/cristian_glez_m/antfarm/wiki/Manual%20de%20Juego)
+
 [Descarga](https://bitbucket.org/cristian_glez_m/antfarm/downloads)
 
 Requires CMake and one of the following compilers:
