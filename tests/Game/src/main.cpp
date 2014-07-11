@@ -50,10 +50,12 @@ bool CollisionSpeedTest(){
         em.addEntity(std::move(e1));
     }
     for(auto& entity1:em.getEntities()){
+        auto& properties1 = entity1->getComponent(ComponentsMask::COMPONENT_TRANSFORM)
+                                    ->getProperties<sf::FloatRect>();
+        sf::FloatRect eBounds1 = std::get<0>(properties1);
         for(auto& entity2:em.getEntities()){
-            auto& properties1 = entity1->getComponent(ComponentsMask::COMPONENT_TRANSFORM)->getProperties<sf::FloatRect>();
-            sf::FloatRect eBounds1 = std::get<0>(properties1);
-            auto& properties2 = entity2->getComponent(ComponentsMask::COMPONENT_TRANSFORM)->getProperties<sf::FloatRect>();
+            auto& properties2 = entity2->getComponent(ComponentsMask::COMPONENT_TRANSFORM)
+                                        ->getProperties<sf::FloatRect>();
             sf::FloatRect eBounds2 = std::get<0>(properties2);
             if(eBounds1.intersects(eBounds2)){
                std::cout << "Entity 1 and Entity 2 Collide" << std::endl;
