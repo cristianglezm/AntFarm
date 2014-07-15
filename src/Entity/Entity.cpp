@@ -1,19 +1,17 @@
 #include <Entity/Entity.hpp>
 namespace ant{
-        Entity::Entity(){
-            name = "";
-            mask = 0;
-            states = 0;
-        }
-        Entity::Entity(std::string name){
-            this->name = name;
-            mask = 0;
-            states = 0;
-        }
-        Entity::Entity(std::string name,map components){
-            this->name = name;
-            mask = 0;
-            states = 0;
+        Entity::Entity()
+        : name("")
+        , mask(0)
+        , states(0){}
+        Entity::Entity(std::string name)
+        : name(name)
+        , mask(0)
+        , states(0){}
+        Entity::Entity(std::string name,map components)
+        : name(name)
+        , mask(0)
+        , states(0){
             this->Components = std::move(components);
             for(auto& c: Components){
                 this->mask |= c.second->getId();
