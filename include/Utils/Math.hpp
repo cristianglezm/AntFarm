@@ -87,17 +87,10 @@ namespace ant{
          * @return T
          */
         template<typename T>
-        int dot(const sf::Vector2<T>& v1,const sf::Vector2<T>& v2){
+        double dot(const sf::Vector2<T>& v1,const sf::Vector2<T>& v2){
             sf::Vector2f uv1 = normalize(v1);
             sf::Vector2f uv2 = normalize(v2);
-            double r = (uv1.x * uv2.x) + (uv2.y * uv1.y);
-            if(r<0){
-                return -1;
-            }else if(r>0){
-                return 1;
-            }else{
-                return 0;
-            }
+            return (uv1.x * uv2.x) + (uv2.y * uv1.y);
         }
         /**
          * @brief Comprueba que un rectangulo esta completamente dentro de otro.
