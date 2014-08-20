@@ -41,18 +41,25 @@ For example a new action:
 
 * Create a function in Constructions (Systems/constructorSystems/constructions)
 
-	constructorSystem::command Constructions::your_function = [](Entity* e,sf::VertexArray* map,sf::FloatRect bounds){
+```
+#!c++
+
+constructorSystem::command Constructions::your_function = [](Entity* e,sf::VertexArray* map,sf::FloatRect bounds){
 		// do something
 	};
+```
 
 * then add a key to GameState::processInput and send your command With an event.
+
+```
+#!c++
 
 	eventQueue->push(std::shared_ptr<baseEvent>(
                             new Event<constructorSystem::command>(EventType::CHANGE_COMMAND,
                                                     Constructions::your_function
                                                     ))
                                  );
-
+```
 
 Documentation
 ===
