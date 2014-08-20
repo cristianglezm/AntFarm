@@ -78,13 +78,10 @@ namespace ant{
          * @fn dot
          * @brief Obtiene el dot product del vector
          *
-         * behind -1
-         * front 1
-         * right or left 0
-         *
          * @tparam tipo del Vector2
-         * @param v sf::Vector2<T>
-         * @return T
+         * @param v1 sf::Vector2<T>
+         * @param v2 sf::Vector2<T>
+         * @return double
          */
         template<typename T>
         double dot(const sf::Vector2<T>& v1,const sf::Vector2<T>& v2){

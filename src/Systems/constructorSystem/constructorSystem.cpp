@@ -49,7 +49,7 @@ namespace ant{
                     }else{
                         if(!(e->is(States::FALLING))){
                             --count;
-                            (*build)(e.get(),map,boundsMap);
+                            build(e.get(),map,boundsMap);
                         }
                     }
                 }

@@ -39,7 +39,7 @@ You can contribute adding new features from the list.
 
 For example a new action:
 
-* Create a function on Constructions (Systems/constructorSystems/constructions)
+* Create a function in Constructions (Systems/constructorSystems/constructions)
 
 	constructorSystem::command Constructions::your_function = [](Entity* e,sf::VertexArray* map,sf::FloatRect bounds){
 		// do something
