@@ -11,56 +11,41 @@ namespace ant{
        entities.remove(std::move(e));
     }
     EntityManager::iterator EntityManager::removeEntity(const std::string& name){
-        iterator i = entities.begin();
-        while(i != entities.end()){
-            if((*i).get()!=nullptr){
-                if((*i)->getName() == name){
-                    return entities.erase(i++);
-                }
-            }
-            ++i;
-        }
-        return i;
+        return entities.erase(std::remove_if(entities.begin(),entities.end(),
+                    [&](const std::unique_ptr<Entity>& e){
+                                      return (e->getName() == name);
+                                      }));
     }
     EntityManager::iterator EntityManager::removeEntity(EntityManager::iterator it){
         return entities.erase(it);
     }
     Entity* EntityManager::getEntity(const std::string& name){
-        for(auto& entity : entities){
-            if(entity->getName() == name){
-                return entity.get();
-            }
-        }
-        return nullptr;
+        return (*std::find_if(entities.begin(),entities.end(),[&](std::unique_ptr<Entity>& e){
+                            return (e->getName() == name);
+                            })).get();
     }
     void EntityManager::addEntities(std::list<std::unique_ptr<Entity> > e){
         entities = std::move(e);
     }
     std::unique_ptr<Entity> EntityManager::Transfer(const std::string& name){
         std::unique_ptr<Entity> ne;
-        for(auto& entity : entities){
-            if(entity){
-                if(entity->getName()== name){
-                    ne = std::move(entity);
-                    entities.remove(entity);
-                    return std::move(ne);
-                }
-            }
-        }
-        return nullptr;
+        auto it = std::find_if(entities.begin(),entities.end(),
+                [&](std::unique_ptr<Entity>& e){
+                     return (e->getName() == name);
+                     });
+        ne = std::move(*it);
+        entities.erase(it);
+        return std::move(ne);
     }
     std::unique_ptr<Entity> EntityManager::Transfer(const Entity* e){
         std::unique_ptr<Entity> ne;
-        for(auto& entity : entities){
-            if(entity){
-                if(entity.get()== e){
-                    ne = std::move(entity);
-                    entities.remove(entity);
-                    return std::move(ne);
-                }
-            }
-        }
-        return nullptr;
+        auto it = std::find_if(entities.begin(),entities.end(),
+                [&](std::unique_ptr<Entity>& entity){
+                     return (entity.get() == e);
+                     });
+        ne = std::move(*it);
+        entities.erase(it);
+        return std::move(ne);
     }
     EntityManager::~EntityManager(){
 

@@ -29,13 +29,13 @@ namespace ant{
     class EntityManager{
         public:
             /**
-             * @brief Iterador del EntityManager
-             */
-            typedef std::list<std::unique_ptr<Entity>>::iterator iterator;
-            /**
              * @brief Contenedor utilizado por el EntityManager.
              */
-            typedef std::list<std::unique_ptr<Entity>> list;
+            typedef std::list<std::unique_ptr<Entity>> container;
+            /**
+             * @brief Iterador del EntityManager
+             */
+            typedef container::iterator iterator;
             /**
              * @brief Constructor por defecto.
              */
@@ -84,12 +84,12 @@ namespace ant{
              * @brief Añade todas las entidades a la vez.
              * @param e list lista de entidades.
              */
-            void addEntities(list e);
+            void addEntities(container e);
             /**
              * @brief devuelve la lista de las entidades.
-             * @return list &
+             * @return container &
              */
-            inline list& getEntities(){ return this->entities; }
+            inline container& getEntities(){ return this->entities; }
             /**
              * @brief Devuelve el principio de la lista.
              */
@@ -118,7 +118,7 @@ namespace ant{
             std::unique_ptr<Entity> Transfer(const Entity* e);
             ~EntityManager();
         private:
-            list entities;
+            container entities;
     };
 }
 #endif // ENTITY_MANAGER_H
