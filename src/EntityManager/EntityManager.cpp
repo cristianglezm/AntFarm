@@ -12,9 +12,8 @@ namespace ant{
     }
     EntityManager::iterator EntityManager::removeEntity(const std::string& name){
         return entities.erase(std::remove_if(entities.begin(),entities.end(),
-                    [&](const std::unique_ptr<Entity>& e){
-                                      return (e->getName() == name);
-                                      }));
+                    [&](const std::unique_ptr<Entity>& e){return (e->getName() == name);}),
+                    entities.end());
     }
     EntityManager::iterator EntityManager::removeEntity(EntityManager::iterator it){
         return entities.erase(it);
