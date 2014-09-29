@@ -46,17 +46,7 @@ namespace ant{
              */
             void addEntity(std::unique_ptr<Entity> e);
             /**
-             * @brief Elimina una entidad del manager.
-             *
-             * Elimina la primera entidad que sea igual a la proporcionada.
-             * @param e std::unique_ptr<Entity>
-             */
-            void removeEntity(std::unique_ptr<Entity>& e);
-            /**
              * @brief Elimina la primera entidad que coincida el nombre.
-             *
-             * Devuelve un iterador por si estas iterando y
-             * necesitas borrar alguna entidad.
              *
              * @param name std::string nombre de la entidad.
              * @return iterator la posicion siguiente de la entidad eliminada.
@@ -65,9 +55,7 @@ namespace ant{
             /**
              * @brief Elimina la primera entidad que coincida.
              *
-             * Devuelve un iterador por si estas iterando y
-             * necesitas borrar alguna entidad.
-             *
+             * @param it iterator
              * @return iterator la posicion siguiente de la entidad eliminada.
              */
             iterator removeEntity(iterator it);
@@ -82,7 +70,7 @@ namespace ant{
             Entity* getEntity(const std::string& name);
             /**
              * @brief Añade todas las entidades a la vez.
-             * @param e list lista de entidades.
+             * @param e container lista de entidades.
              */
             void addEntities(container e);
             /**

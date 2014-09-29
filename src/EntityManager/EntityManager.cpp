@@ -7,9 +7,6 @@ namespace ant{
     void EntityManager::addEntity(std::unique_ptr<Entity> e){
         entities.push_back(std::move(e));
     }
-    void EntityManager::removeEntity(std::unique_ptr<Entity>& e){
-       entities.remove(std::move(e));
-    }
     EntityManager::iterator EntityManager::removeEntity(const std::string& name){
         return entities.erase(std::remove_if(entities.begin(),entities.end(),
                     [&](const std::unique_ptr<Entity>& e){return (e->getName() == name);}),
