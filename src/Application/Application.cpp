@@ -6,8 +6,8 @@
 #include <AppStates/GameOverState/GameOverState.hpp>
 namespace ant{
     Application::Application()
-    : mWindow(new sf::RenderWindow(sf::VideoMode(Config::screenSize.width,Config::screenSize.height), "AntFarm", sf::Style::Close))
-    , mAssets(new AssetManager())
+    : mWindow(std::make_shared<sf::RenderWindow>(sf::VideoMode(Config::screenSize.width,Config::screenSize.height), "AntFarm", sf::Style::Close))
+    , mAssets(std::make_shared<AssetManager>())
     , mStateStack(AppState::Context(mWindow,mAssets)){
         mAssets->loadAssets(Config::ASSETS_GAME_JSON);
         loadConfig(Config::CONFIG_FILE);

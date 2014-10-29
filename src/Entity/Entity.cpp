@@ -4,11 +4,11 @@ namespace ant{
         : name("")
         , mask(0)
         , states(0){}
-        Entity::Entity(std::string name)
+        Entity::Entity(const std::string& name)
         : name(name)
         , mask(0)
         , states(0){}
-        Entity::Entity(std::string name,map components)
+        Entity::Entity(const std::string& name,map&& components)
         : name(name)
         , mask(0)
         , states(0){

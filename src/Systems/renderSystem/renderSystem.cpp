@@ -31,7 +31,7 @@ namespace ant{
             }
         }
     }
-    void renderSystem::update(sf::Time dt){
+    void renderSystem::update(const sf::Time& dt){
         return;
     }
     renderSystem::~renderSystem(){

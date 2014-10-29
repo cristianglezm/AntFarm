@@ -28,7 +28,7 @@ namespace ant{
      * @author Cristian Glez <Cristian.glez.m@gmail.com>
      * @version 0.1
      */
-    class renderSystem : public System{
+    class renderSystem final : public System{
         public:
             /**
              * @brief Constructor por defecto.
@@ -38,11 +38,11 @@ namespace ant{
              * @brief Renderiza las Entity con los componentes Transform y Sprite, Destructable.
              * @param win sf::RenderWindow & Ventana a la cual dibujar.
              */
-            virtual void render(sf::RenderWindow& win);
+            void render(sf::RenderWindow& win) override;
             /**
              * @brief No hace nada.
              */
-            virtual void update(sf::Time dt);
+            void update(const sf::Time& dt) override;
             ~renderSystem();
     };
 }

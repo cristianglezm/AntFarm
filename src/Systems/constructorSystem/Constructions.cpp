@@ -341,17 +341,16 @@ namespace ant{
                     rm(sf::Vector2f(x + pos.x, -y + pos.y));
                     rm(sf::Vector2f(y + pos.x, -x + pos.y));
                     ++y;
-                if(radiusError<0){
-                    radiusError+=2*y+1;
-                }else{
-                    --x;
-                    radiusError+=2*(y-x+1);
+                    if(radiusError<0){
+                        radiusError+=2*y+1;
+                    }else{
+                        --x;
+                        radiusError+=2*(y-x+1);
+                    }
                 }
-              }
-              if(radius > 0){
-                --radius;
-                explode(radius,pos);
-              }
+                if(radius > 0){
+                    explode(--radius,pos);
+                }
             };
             explode(40,position);
             e->addState(States::UNSAVED);

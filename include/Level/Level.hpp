@@ -32,7 +32,7 @@ namespace ant{
      * @author Cristian Glez <Cristian.glez.m@gmail.com>
      * @version 0.1
      */
-    class Level{
+    class Level final{
         public:
             /**
              * @brief Constructor principal

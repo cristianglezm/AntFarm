@@ -30,7 +30,7 @@ namespace ant{
      * @author Cristian Glez <Cristian.glez.m@gmail.com>
      * @version 0.1
      */
-    class constructorSystem : public System, public Observer{
+    class constructorSystem final : public System, public Observer{
         public:
             /**
              * @brief Comandos que recibe por eventos.
@@ -56,16 +56,16 @@ namespace ant{
              *    -# EventType::SELECT_ENTITY Seleccionara una entidad para aplicarle el comando actual.
              * @param e std::shared_ptr<baseEvent> evento
              */
-            virtual void onNotify(std::shared_ptr<baseEvent> e);
+            void onNotify(std::shared_ptr<baseEvent> e) override;
             /**
              * @brief No hace nada.
              */
-            virtual void render(sf::RenderWindow& win);
+            void render(sf::RenderWindow& win) override;
             /**
              * @brief Gestiona la construccion de los elementos.
              * @param dt sf::Time delta time
              */
-            virtual void update(sf::Time dt);
+            void update(const sf::Time& dt) override;
             ~constructorSystem();
         private:
             sf::FloatRect boundsMap;

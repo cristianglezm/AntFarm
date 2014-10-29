@@ -31,7 +31,7 @@ namespace ant{
      * @author Cristian Glez <Cristian.glez.m@gmail.com>
      * @version 0.1
      */
-    class spawnSystem : public System, public Observer{
+    class spawnSystem final : public System, public Observer{
         public:
             /**
              * @brief constructor por defecto.
@@ -54,23 +54,23 @@ namespace ant{
              * @brief Obtiene los estados que pone por defecto al crear las entidades.
              * @return long int
              */
-            inline const long int getStates() const { return states; }
+            inline const long& getStates() const { return states; }
             /**
              * @brief Cada x segundos crea un entidad en el sitio establecido.
              * @param dt sf::Time delta time
              */
-            void update(sf::Time dt);
+            virtual void update(const sf::Time& dt) override;
             /**
              * @brief no hace nada.
              */
-            void render(sf::RenderWindow& win);
+            virtual void render(sf::RenderWindow& win) override;
             /**
              * @brief Recibe eventos para cambiar el tiempo
              * o el numero de entidades que tiene que crear.
              * @param e std::shared_ptr<baseEvent>
              */
-            void onNotify(std::shared_ptr<baseEvent> e);
-            ~spawnSystem();
+            virtual void onNotify(std::shared_ptr<baseEvent> e) override;
+            virtual ~spawnSystem();
         private:
             EntityFactory* entityFactory;
             int nEntities;

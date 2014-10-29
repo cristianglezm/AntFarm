@@ -33,7 +33,7 @@ namespace ant{
      * @author Cristian Glez <Cristian.glez.m@gmail.com>
      * @version 0.1
      */
-    class SystemFactory{
+    class SystemFactory final{
         public:
             /**
              * @brief Constructor por defecto.

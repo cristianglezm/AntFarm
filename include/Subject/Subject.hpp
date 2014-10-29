@@ -16,7 +16,8 @@
 
 #ifndef SUBJECT_H
 #define SUBJECT_H
-#include <list>
+#include <vector>
+#include <algorithm>
 #include <memory>
 #include <Observer/Observer.hpp>
 namespace ant{
@@ -25,12 +26,8 @@ namespace ant{
      * @author Cristian Glez <Cristian.glez.m@gmail.com>
      * @version 0.1
      */
-    class Subject{
+    class Subject final{
         public:
-            /**
-             * @brief Constructor por defecto.
-             */
-            Subject();
             /**
              * @brief Añade un observador.
              * @param o Observer*
@@ -46,9 +43,8 @@ namespace ant{
              * @param e std::shared_ptr<baseEvent> evento que se envia.
              */
             void notifyObservers(std::shared_ptr<baseEvent> e);
-            ~Subject();
         private:
-            std::list<Observer*> Observers;
+            std::vector<Observer*> Observers;
     };
 }
 #endif // SUBJECT_H

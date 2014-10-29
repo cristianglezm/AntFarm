@@ -38,7 +38,7 @@ namespace ant{
                 break;
         }
     }
-    void constructorSystem::update(sf::Time dt){
+    void constructorSystem::update(const sf::Time& dt){
         if(readyToBuild){
             for(auto& e: em->getEntities()){
                 if(e->is(States::BUILDING) && e->hasComponent(ComponentsMask::COMPONENT_COUNT)){

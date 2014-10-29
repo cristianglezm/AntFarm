@@ -28,7 +28,7 @@ namespace ant{
      * @author Cristian Glez <Cristian.glez.m@gmail.com>
      * @version 0.1
      */
-    class gravitySystem : public System{
+    class gravitySystem final : public System{
         public:
             /**
              * @brief Constructor por defecto.
@@ -48,16 +48,16 @@ namespace ant{
              * @brief Obtiene la gravedad que aplica a las entidades.
              * @return float Gravedad que aplica.
              */
-            inline float getGravity(){ return Gravity; }
+            inline const float& getGravity() const { return Gravity; }
             /**
              * @brief Metodo abstracto para actualizar entidades.
              * @param dt sf::Time delta time para los calculos.
              */
-            virtual void update(sf::Time dt);
+            void update(const sf::Time& dt) override;
             /**
              * @brief No hace nada.
              */
-            virtual void render(sf::RenderWindow& win);
+            void render(sf::RenderWindow& win) override;
             ~gravitySystem();
         private:
             float Gravity;

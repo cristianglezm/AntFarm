@@ -54,7 +54,7 @@ namespace ant{
             /**
              * @brief Getter de los requisitos para el sistema.
              */
-            inline long int getRequiredComponts(){ return RequiredComponents; }
+            inline const long& getRequiredComponts() const { return RequiredComponents; }
             /**
              * @brief Setter para la EventQueue
              * @param eq std::shared_ptr<EventQueue>
@@ -69,12 +69,12 @@ namespace ant{
              * @brief Setter Para el nombre del sistema.
              * @param name std::string
              */
-            void setName(std::string name);
+            void setName(const std::string& name);
             /**
              * @brief Getter para el nombre del sistema
              * @return std::string
              */
-            inline std::string getName() const { return this->name; }
+            inline const std::string& getName() const { return name; }
             /**
              * @brief Setter para el EntityManager
              * @param em std::shared_ptr<EntityManager>
@@ -84,7 +84,7 @@ namespace ant{
              * @brief Getter para el EntityManager
              * @return std::shared_ptr<EntityManager>
              */
-            inline std::shared_ptr<EntityManager> getEntityManager(){ return this->em; }
+            inline std::shared_ptr<EntityManager> getEntityManager(){ return em; }
             /**
              * @brief Metodo abstracto para dibujar en la pantalla.
              * @param win sf::RenderWindow & referencia a la pantalla para dibujar.
@@ -94,7 +94,7 @@ namespace ant{
              * @brief Metodo abstracto para actualizar entidades.
              * @param dt sf::Time delta time para los calculos.
              */
-            virtual void update(sf::Time dt) = 0;
+            virtual void update(const sf::Time& dt) = 0;
             virtual ~System();
         protected:
             long int RequiredComponents;

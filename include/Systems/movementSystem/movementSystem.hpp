@@ -35,7 +35,7 @@ namespace ant{
      * @author Cristian Glez <Cristian.glez.m@gmail.com>
      * @version 0.1
      */
-    class movementSystem : public System, public Observer{
+    class movementSystem final: public System, public Observer{
         public:
             /**
              * @brief Constructor por defecto.
@@ -44,17 +44,17 @@ namespace ant{
             /**
              * @brief No hace nada.
              */
-            virtual void render(sf::RenderWindow& win);
+            void render(sf::RenderWindow& win) override;
             /**
              * @brief Aplica la velocidad a todas las entidades con los componentes necesarios.
              * @param dt sf::Time delta time necesario para que se muevan siempre igual sin tener en cuenta los fps.
              */
-            virtual void update(sf::Time dt);
+            void update(const sf::Time& dt) override;
             /**
              * @brief Cuando recibe Eventos COLLISION_EVENT parara a las entidades si se mueven.
              * @param e std::shared_ptr<baseEvent> evento.
              */
-            void onNotify(std::shared_ptr<baseEvent> e);
+            void onNotify(std::shared_ptr<baseEvent> e) override;
             ~movementSystem();
     };
 }

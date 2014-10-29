@@ -28,12 +28,12 @@ namespace ant{
      * @author Cristian Glez <Cristian.glez.m@gmail.com>
      * @version 0.1
      */
-    class SystemManager{
+    class SystemManager final{
         public:
             /**
              * @brief Contenedor usado por la clase.
              */
-            typedef std::map<std::string,std::shared_ptr<System>> map;
+            typedef std::map<std::string,std::shared_ptr<System>> container;
             /**
              * @brief Constructor por defecto.
              */
@@ -49,22 +49,22 @@ namespace ant{
              * @param name std::string nombre del sistema.
              * @return std::shared_ptr<System>
              */
-            std::shared_ptr<System> getSystem(std::string name);
+            std::shared_ptr<System> getSystem(const std::string& name);
             /**
              * @brief Setter para poner el contenedor con todos los sistemas.
-             * @param systems map
+             * @param systems container
              */
-            void setSystems(map systems);
+            void setSystems(container systems);
             /**
              * @brief Getter para obtener el contenedor de los sistemas.
-             * @return SystemManager::map
+             * @return SystemManager::container
              */
-            inline SystemManager::map& getSystems(){ return systems; }
+            inline SystemManager::container& getSystems(){ return systems; }
             /**
              * @brief Elimina el sistema del manager.
              * @param name std::string nombre del sistema.
              */
-            void removeSystem(std::string name);
+            void removeSystem(const std::string& name);
             /**
              * @brief Establece el mismo EntityManager a todos los sistemas que esten agregados.
              * @param entityManager std::shared_ptr<EntityManager>
@@ -88,9 +88,8 @@ namespace ant{
              * @param win sf::RenderWindow &
              */
             void render(sf::RenderWindow& win);
-            ~SystemManager();
         private:
-             map systems;
+            container systems;
     };
 }
 #endif // SYSTEM_MANAGER_H

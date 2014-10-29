@@ -77,7 +77,7 @@ namespace ant{
              * @brief devuelve la lista de las entidades.
              * @return container &
              */
-            inline container& getEntities(){ return this->entities; }
+            inline container& getEntities(){ return entities; }
             /**
              * @brief Devuelve el principio de la lista.
              */

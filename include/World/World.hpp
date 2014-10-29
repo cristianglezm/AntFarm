@@ -94,9 +94,9 @@ namespace ant{
             void setId(long int id);
             /**
              * @brief Getter del id del mundo
-             * @return const long int
+             * @return const long
              */
-            inline const long int getId() const { return id; }
+            inline const long& getId() const { return id; }
             /**
              * @brief Actualiza todas las entidades del EntityManager con los sistemas que tenga en su SystemManager
              * @param dt sf::Time delta time

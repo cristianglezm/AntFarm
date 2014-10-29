@@ -14,7 +14,7 @@ namespace ant{
     void gravitySystem::setGravity(float g){
         Gravity = g;
     }
-    void gravitySystem::update(sf::Time dt){
+    void gravitySystem::update(const sf::Time& dt){
         for(auto& e : em->getEntities()){
             if(e->hasComponent(RequiredComponents) && e->is(States::FALLING)){
                 auto& properties = e->getComponent(RequiredComponents)

@@ -19,7 +19,7 @@ namespace ant{
     void System::setEventQueue(std::shared_ptr<EventQueue> eventQueue){
         this->eventQueue = eventQueue;
     }
-    void System::setName(std::string name){
+    void System::setName(const std::string& name){
         this->name = name;
     }
     void System::setEntityManager(std::shared_ptr<EntityManager> em){

@@ -73,7 +73,7 @@ namespace ant{
     void movementSystem::render(sf::RenderWindow& win){
         return;
     }
-    void movementSystem::update(sf::Time dt){
+    void movementSystem::update(const sf::Time& dt){
         for(auto& entity: em->getEntities()){
             if(entity->hasComponent(RequiredComponents)){
                 auto& transf = entity->getComponent(ComponentsMask::COMPONENT_TRANSFORM)

@@ -6,13 +6,13 @@ namespace ant{
         auto result = systems.insert(std::make_pair(s->getName(),s));
         return result.second;
     }
-    std::shared_ptr<System> SystemManager::getSystem(std::string name){
-        return systems.at(name);
+    std::shared_ptr<System> SystemManager::getSystem(const std::string& name){
+        return systems[name];
     }
-    void SystemManager::setSystems(map systems){
+    void SystemManager::setSystems(container systems){
         this->systems = systems;
     }
-    void SystemManager::removeSystem(std::string name){
+    void SystemManager::removeSystem(const std::string& name){
         systems.erase(name);
     }
     void SystemManager::setEntityManager(std::shared_ptr<EntityManager> entityManager){
@@ -34,8 +34,5 @@ namespace ant{
         for(auto& system : systems){
             system.second->render(win);
         }
-    }
-    SystemManager::~SystemManager(){
-
     }
 }

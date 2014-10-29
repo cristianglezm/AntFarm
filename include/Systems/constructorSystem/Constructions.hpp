@@ -25,7 +25,7 @@ namespace ant{
      * @author Cristian Glez <cristian.glez.m@gmail.com>
      * @version 0.1
      */
-    class Constructions{
+    class Constructions final{
         public:
             // commands
             /**

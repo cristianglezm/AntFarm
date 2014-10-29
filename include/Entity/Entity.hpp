@@ -29,7 +29,7 @@ namespace ant{
      * @author Cristian Glez <Cristian.glez.m@gmail.com>
      * @version 0.1
      */
-    class Entity{
+    class Entity final{
         public:
             /**
              * Contenedor que utiliza la entidad para los componentes.
@@ -43,13 +43,13 @@ namespace ant{
              * @brief Constructor con nombre.
              * @param name std::string nombre que tendra la entidad.
              */
-            Entity(std::string name);
+            Entity(const std::string& name);
             /**
              * @brief Constructor con nombre y componentes.
              * @param name std::string nombre que tendra la entidad.
              * @param Components Entity::map mapa de los componentes.
              */
-            Entity(std::string name,map Components);
+            Entity(const std::string& name,map&& Components);
             /**
              * @brief Añade un componente a la entidad.
              *
@@ -66,7 +66,7 @@ namespace ant{
              */
             inline baseComponent* getComponent(long int id){
                 if(hasComponent(id)){
-                    return Components.at(id).get();
+                    return Components[id].get();
                 }else{
                     return nullptr;
                 }

@@ -34,7 +34,7 @@ namespace ant{
     void outSystem::render(sf::RenderWindow& win){
         return;
     }
-    void outSystem::update(sf::Time dt){
+    void outSystem::update(const sf::Time& dt){
         EntityManager::iterator i = em->begin();
         while(i != em->end()){
             if((*i)->is(States::UNSAVED)){

@@ -45,18 +45,18 @@ namespace ant{
             /**
              * @brief No hace nada.
              */
-            void render(sf::RenderWindow& win);
+            void render(sf::RenderWindow& win) override;
             /**
              * @brief Actualiza el sistema
              *
              * Comprueba las entidades que han no tienen componentes para eliminarlas.
              *
              */
-            void update(sf::Time dt);
+            void update(const sf::Time& dt) override;
             /**
              * @brief recibe los Out_MAP para eliminar estas entidades.
              */
-            void onNotify(std::shared_ptr<baseEvent> e);
+            void onNotify(std::shared_ptr<baseEvent> e) override;
             ~outSystem();
         private:
             int totalEntities;

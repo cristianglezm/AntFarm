@@ -38,7 +38,7 @@ namespace ant{
      * @author Cristian Glez <Cristian.glez.m@gmail.com>
      * @version 0.1
      */
-    class collisionSystem : public System{
+    class collisionSystem final : public System{
         public:
             /**
              * @brief Constructor por defecto.
@@ -50,7 +50,7 @@ namespace ant{
              * @brief Renderiza el Quadtree si RENDER_QTREE esta definido.
              * si no no hace nada.
              */
-            virtual void render(sf::RenderWindow& win){
+            virtual void render(sf::RenderWindow& win) override{
                 #ifdef RENDER_QTREE
                     qtree.render(win);
                 #else
@@ -60,19 +60,19 @@ namespace ant{
             /**
              * @brief Comprueba las colisiones de las entidades.
              *
-             * Envia eventos de colision y eventos especificos del suelo.
+             * Envia eventos de colision y eventos especificos del terreno.
              *  -# Event<Entity*,Entity*> -> type: COLLISION_EVENT
              *  -# Event<Entity*,int> -> type: TERRAIN_COLLISION
              *  -# Event<Entity*> -> type: OUT_MAP
              * @param dt sf::Time delta time
              */
-            virtual void update(sf::Time dt);
-            virtual ~collisionSystem();
+            virtual void update(const sf::Time& dt) override;
+
         private:
             /**
              * @brief Comprueba si una entidad y sus bordes estan dentro del mapa.
              *
-             * Envia un evento para decir por donde a colisionado la entidad con el suelo.
+             * Envia un evento para decir por donde a colisionado la entidad con el terreno.
              *
              * 1 esquina superior izquierda -> envia evento de colision con pared 0
              * 2 esquina superior derecha -> envia evento de colision con pared 1

@@ -19,7 +19,7 @@ namespace ant{
     void spawnSystem::setStates(long int state){
         states = state;
     }
-    void spawnSystem::update(sf::Time dt){
+    void spawnSystem::update(const sf::Time& dt){
         if(elapsedTime > overTime && createdEntities < nEntities){
             elapsedTime = sf::seconds(0);
             createdEntities +=1;
