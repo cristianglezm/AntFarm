@@ -41,7 +41,6 @@ namespace ant{
              * @endcode
              */
             typedef std::function<void(Entity*,sf::VertexArray*, sf::FloatRect)> command;
-            //typedef void(*command)(Entity*,sf::VertexArray*, sf::FloatRect);
             /**
              * @brief Constructor por defecto.
              * @param map sf::VertexArray * Destructable para construir, etc.
@@ -56,17 +55,16 @@ namespace ant{
              *    -# EventType::SELECT_ENTITY Seleccionara una entidad para aplicarle el comando actual.
              * @param e std::shared_ptr<baseEvent> evento
              */
-            void onNotify(std::shared_ptr<baseEvent> e) override;
+            virtual void onNotify(std::shared_ptr<baseEvent> e) override;
             /**
              * @brief No hace nada.
              */
-            void render(sf::RenderWindow& win) override;
+            virtual void render(sf::RenderWindow& win) override;
             /**
              * @brief Gestiona la construccion de los elementos.
              * @param dt sf::Time delta time
              */
-            void update(const sf::Time& dt) override;
-            ~constructorSystem();
+            virtual void update(const sf::Time& dt) override;
         private:
             sf::FloatRect boundsMap;
             sf::VertexArray* map;

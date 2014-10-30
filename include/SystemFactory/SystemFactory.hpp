@@ -109,7 +109,6 @@ namespace ant{
              * @return std::shared_ptr<outSystem>
              */
             std::shared_ptr<outSystem> createOutSystem(int totalEntities);
-            ~SystemFactory();
         private:
             std::shared_ptr<GameEventDispatcher> gameEventDispatcher;
             std::shared_ptr<EventQueue> eventQueue;

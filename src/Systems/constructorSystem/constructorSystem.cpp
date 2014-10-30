@@ -59,5 +59,4 @@ namespace ant{
     void constructorSystem::render(sf::RenderWindow& win){
         return;
     }
-    constructorSystem::~constructorSystem(){}
 }

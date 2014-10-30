@@ -35,10 +35,6 @@ namespace ant{
              */
             typedef std::map<std::string,std::shared_ptr<System>> container;
             /**
-             * @brief Constructor por defecto.
-             */
-            SystemManager();
-            /**
              * @brief Añade un sistema al manager.
              * @param s std::shared_ptr<System>
              * @return bool
@@ -79,7 +75,7 @@ namespace ant{
              * @brief Hace que todos los sistemas apliquen sus actualizaciones a sus EntityManager.
              * @param dt sf::Time delta time
              */
-            void update(sf::Time dt);
+            void update(const sf::Time& dt);
             /**
              * @brief Hace que todos los sistemas renderizen a las Entidades que tengan que ser renderizadas.
              *

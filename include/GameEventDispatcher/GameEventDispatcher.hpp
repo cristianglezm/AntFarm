@@ -32,10 +32,6 @@ namespace ant{
     class GameEventDispatcher{
         public:
             /**
-             * @brief Constructor por defecto.
-             */
-            GameEventDispatcher();
-            /**
              * @brief lista de observadores del evento onCollision.
              */
             Subject onCollision;
@@ -69,7 +65,6 @@ namespace ant{
              * @return bool
              */
             bool DispatchEvent(std::shared_ptr<baseEvent> e);
-            ~GameEventDispatcher();
     };
 }
 #endif // GAME_EVENT_DISPATCHER_H

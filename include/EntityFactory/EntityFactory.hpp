@@ -20,6 +20,7 @@
 #include <Components/ComponentMask.hpp>
 #include <ComponentSettings/ComponentSettings.hpp>
 #include <Entity/Entity.hpp>
+#include <Utils/Utility.hpp>
 #include <Config.hpp>
 namespace ant{
     /**

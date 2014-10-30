@@ -25,17 +25,13 @@ namespace ant{
      *  @author Cristian Gonzalez Moreno <Cristian.glez.m@gmail.com>
      *  @version 0.1
      */
-    class EventQueue{
+    class EventQueue final{
         public:
-            /**
-             * Constructor por defecto.
-             */
-            EventQueue();
             /**
              * @brief Añade un evento al final de la cola.
              * @param e std::shared_ptr<baseEvent> Evento a añadir.
              */
-            void push(std::shared_ptr<baseEvent> e);
+            void push(std::shared_ptr<baseEvent>&& e);
             /**
              * @brief Elimina el evento de la cola y lo devuelve.
              * @return std::shared_ptr<baseEvent>
@@ -60,7 +56,6 @@ namespace ant{
              * @brief limpia la cola.
              */
             void clear();
-            ~EventQueue();
         private:
             std::queue<std::shared_ptr<baseEvent>> eventQueue;
     };

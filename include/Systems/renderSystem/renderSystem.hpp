@@ -38,12 +38,11 @@ namespace ant{
              * @brief Renderiza las Entity con los componentes Transform y Sprite, Destructable.
              * @param win sf::RenderWindow & Ventana a la cual dibujar.
              */
-            void render(sf::RenderWindow& win) override;
+            virtual void render(sf::RenderWindow& win) override;
             /**
              * @brief No hace nada.
              */
-            void update(const sf::Time& dt) override;
-            ~renderSystem();
+            virtual void update(const sf::Time& dt) override;
     };
 }
 #endif // RENDER_SYSTEM_H

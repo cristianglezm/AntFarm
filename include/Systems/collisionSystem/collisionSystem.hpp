@@ -67,7 +67,6 @@ namespace ant{
              * @param dt sf::Time delta time
              */
             virtual void update(const sf::Time& dt) override;
-
         private:
             /**
              * @brief Comprueba si una entidad y sus bordes estan dentro del mapa.

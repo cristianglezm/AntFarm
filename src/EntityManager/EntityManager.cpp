@@ -16,34 +16,36 @@ namespace ant{
         return entities.erase(it);
     }
     Entity* EntityManager::getEntity(const std::string& name){
-        return (*std::find_if(entities.begin(),entities.end(),[&](std::unique_ptr<Entity>& e){
-                            return (e->getName() == name);
-                            })).get();
+        auto found = std::find_if(entities.begin(),entities.end(),
+                    [&](std::unique_ptr<Entity>& e){ return (e->getName() == name); });
+        if(found != entities.end()){
+            return found->get();
+        }
+        return nullptr;
     }
-    void EntityManager::addEntities(std::list<std::unique_ptr<Entity> > e){
+    void EntityManager::addEntities(container&& e){
         entities = std::move(e);
     }
     std::unique_ptr<Entity> EntityManager::Transfer(const std::string& name){
         std::unique_ptr<Entity> ne;
         auto it = std::find_if(entities.begin(),entities.end(),
-                [&](std::unique_ptr<Entity>& e){
-                     return (e->getName() == name);
-                     });
-        ne = std::move(*it);
-        entities.erase(it);
-        return std::move(ne);
+                [&](std::unique_ptr<Entity>& e){ return (e->getName() == name); });
+        if(it != entities.end()){
+            ne = std::move(*it);
+            entities.erase(it);
+            return std::move(ne);
+        }
+        return std::unique_ptr<Entity>();
     }
     std::unique_ptr<Entity> EntityManager::Transfer(const Entity* e){
         std::unique_ptr<Entity> ne;
         auto it = std::find_if(entities.begin(),entities.end(),
-                [&](std::unique_ptr<Entity>& entity){
-                     return (entity.get() == e);
-                     });
-        ne = std::move(*it);
-        entities.erase(it);
-        return std::move(ne);
-    }
-    EntityManager::~EntityManager(){
-
+                [&](std::unique_ptr<Entity>& entity){ return (entity.get() == e); });
+        if(it != entities.end()){
+            ne = std::move(*it);
+            entities.erase(it);
+            return std::move(ne);
+        }
+        return std::unique_ptr<Entity>();
     }
 }

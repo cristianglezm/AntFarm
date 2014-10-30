@@ -54,7 +54,4 @@ namespace ant{
             eventQueue->push(std::shared_ptr<baseEvent>(new Event<>(EventType::LEVEL_FAILED)));
         }
     }
-    outSystem::~outSystem(){
-
-    }
 }

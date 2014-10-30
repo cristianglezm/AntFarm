@@ -89,7 +89,4 @@ namespace ant{
             }
         }
     }
-    movementSystem::~movementSystem(){
-
-    }
 }

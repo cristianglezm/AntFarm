@@ -53,12 +53,11 @@ namespace ant{
              * @brief Metodo abstracto para actualizar entidades.
              * @param dt sf::Time delta time para los calculos.
              */
-            void update(const sf::Time& dt) override;
+            virtual void update(const sf::Time& dt) override;
             /**
              * @brief No hace nada.
              */
-            void render(sf::RenderWindow& win) override;
-            ~gravitySystem();
+            virtual void render(sf::RenderWindow& win) override;
         private:
             float Gravity;
     };

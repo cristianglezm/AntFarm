@@ -19,6 +19,7 @@
 #include <SFML/System/Time.hpp>
 #include <SFML/Graphics/RenderWindow.hpp>
 #include <memory>
+#include <Utils/Utility.hpp>
 #include <EntityManager/EntityManager.hpp>
 #include <SystemManager/SystemManager.hpp>
 #include <GameEventDispatcher/GameEventDispatcher.hpp>
@@ -28,7 +29,7 @@ namespace ant{
      * @author Cristian Glez <Cristian.glez.m@gmail.com>
      * @version 0.1
      */
-    class World{
+    class World final{
         public:
             /**
              * @brief Constructor por defecto.
@@ -42,16 +43,16 @@ namespace ant{
             /**
              * @brief Constructor con el id del World, EntityManager,SystemManager y EventQueue
              * @param id long int id del mundo
-             * @param entityManager std::shared_ptr<EntityManager>
-             * @param systemManager std::shared_ptr<SystemManager>
-             * @param eventQueue std::shared_ptr<EventQueue>
+             * @param eM std::shared_ptr<EntityManager>
+             * @param sM std::shared_ptr<SystemManager>
+             * @param eQ std::shared_ptr<EventQueue>
              */
-            World(long int id,std::shared_ptr<EntityManager> entityManager,std::unique_ptr<SystemManager> systemManager,std::shared_ptr<EventQueue> eventQueue);
+            World(long int id,std::shared_ptr<EntityManager> eM,std::unique_ptr<SystemManager> sM,std::shared_ptr<EventQueue> eQ);
             /**
              * @brief Setter para el EntityManager
-             * @param entityManager std::shared_ptr<EntityManager>
+             * @param eM std::shared_ptr<EntityManager>
              */
-            void setEntityManager(std::shared_ptr<EntityManager> entityManager);
+            void setEntityManager(std::shared_ptr<EntityManager> eM);
             /**
              * @brief Getter para el EntityManager
              * @return std::shared_ptr<EntityManager>
@@ -59,9 +60,9 @@ namespace ant{
             inline std::shared_ptr<EntityManager> getEntityManager(){ return this->entityManager; }
             /**
              * @brief Setter para el SystemManager
-             * @param systemManager std::unique_ptr<SystemManager>
+             * @param sM std::unique_ptr<SystemManager>
              */
-            void setSystemManager(std::unique_ptr<SystemManager> systemManager);
+            void setSystemManager(std::unique_ptr<SystemManager> sM);
             /**
              * @brief Getter para el SystemManager
              * @return SystemManager *
@@ -69,9 +70,9 @@ namespace ant{
             inline SystemManager* getSystemManager(){ return this->systemManager.get(); }
             /**
              * @brief Setter para la EventQueue
-             * @param eventQueue std::shared_ptr<EventQueue>
+             * @param eQ std::shared_ptr<EventQueue>
              */
-            void setEventQueue(std::shared_ptr<EventQueue> eventQueue);
+            void setEventQueue(std::shared_ptr<EventQueue> eQ);
             /**
              * @brief Getter para el EventQueue
              * @return std::shared_ptr<EventQueue>
@@ -101,19 +102,18 @@ namespace ant{
              * @brief Actualiza todas las entidades del EntityManager con los sistemas que tenga en su SystemManager
              * @param dt sf::Time delta time
              */
-            void update(sf::Time dt);
+            void update(const sf::Time& dt);
             /**
              * @brief Renderiza todas las entidades del EntityManager que tengan los componentes necesarios.
              * @param win sf::RenderWindow &
              */
             void render(sf::RenderWindow& win);
-            ~World();
         private:
-            std::unique_ptr<SystemManager> systemManager;
-            std::shared_ptr<EntityManager> entityManager;
-            std::shared_ptr<EventQueue> eventQueue;
-            std::shared_ptr<GameEventDispatcher> gameEventDispatcher;
             long int id;
+            std::shared_ptr<EventQueue> eventQueue;
+            std::shared_ptr<EntityManager> entityManager;
+            std::unique_ptr<SystemManager> systemManager;
+            std::shared_ptr<GameEventDispatcher> gameEventDispatcher;
     };
 }
 #endif // WORLD_H

@@ -44,18 +44,17 @@ namespace ant{
             /**
              * @brief No hace nada.
              */
-            void render(sf::RenderWindow& win) override;
+            virtual void render(sf::RenderWindow& win) override;
             /**
              * @brief Aplica la velocidad a todas las entidades con los componentes necesarios.
              * @param dt sf::Time delta time necesario para que se muevan siempre igual sin tener en cuenta los fps.
              */
-            void update(const sf::Time& dt) override;
+            virtual void update(const sf::Time& dt) override;
             /**
              * @brief Cuando recibe Eventos COLLISION_EVENT parara a las entidades si se mueven.
              * @param e std::shared_ptr<baseEvent> evento.
              */
-            void onNotify(std::shared_ptr<baseEvent> e) override;
-            ~movementSystem();
+            virtual void onNotify(std::shared_ptr<baseEvent> e) override;
     };
 }
 

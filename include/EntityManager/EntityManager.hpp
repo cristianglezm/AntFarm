@@ -72,7 +72,7 @@ namespace ant{
              * @brief Añade todas las entidades a la vez.
              * @param e container lista de entidades.
              */
-            void addEntities(container e);
+            void addEntities(container&& e);
             /**
              * @brief devuelve la lista de las entidades.
              * @return container &
@@ -104,7 +104,6 @@ namespace ant{
              * @return std::unique_ptr<Entity> entidad transferida o nullptr si no es encontrada.
              */
             std::unique_ptr<Entity> Transfer(const Entity* e);
-            ~EntityManager();
         private:
             container entities;
     };

@@ -2,18 +2,18 @@
 
 namespace ant{
     Level::Level(const std::string& assetsFilename,sf::FloatRect bounds,std::shared_ptr<GameEventDispatcher> ged)
-    :levels(new WorldManager())
-    ,eventQueue(new EventQueue())
+    :levels(std::make_shared<WorldManager>())
+    ,eventQueue(std::make_shared<EventQueue>())
     ,gameEventDispatcher(ged)
-    ,worldFactory(new WorldFactory(ged,eventQueue)){
+    ,worldFactory(std::make_shared<WorldFactory>(ged,eventQueue)){
         worldFactory->loadAssets(assetsFilename);
         init(bounds);
     }
     Level::Level(std::shared_ptr<AssetManager> am,sf::FloatRect bounds,std::shared_ptr<GameEventDispatcher> ged)
-    :levels(new WorldManager())
-    ,eventQueue(new EventQueue())
+    :levels(std::make_shared<WorldManager>())
+    ,eventQueue(std::make_shared<EventQueue>())
     ,gameEventDispatcher(ged)
-    ,worldFactory(new WorldFactory(ged,eventQueue)){
+    ,worldFactory(std::make_shared<WorldFactory>(ged,eventQueue)){
         worldFactory->setAssetManager(am);
         init(bounds);
     }
@@ -57,8 +57,5 @@ namespace ant{
     }
     void Level::render(long int id,sf::RenderWindow& win){
         levels->render(id,win);
-    }
-    Level::~Level(){
-
     }
 }

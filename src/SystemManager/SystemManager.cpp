@@ -1,7 +1,6 @@
 #include <SystemManager/SystemManager.hpp>
 
 namespace ant{
-    SystemManager::SystemManager(){}
     bool SystemManager::addSystem(std::shared_ptr<System> s){
         auto result = systems.insert(std::make_pair(s->getName(),s));
         return result.second;
@@ -25,7 +24,7 @@ namespace ant{
             system.second->setEventQueue(eventQueue);
         }
     }
-    void SystemManager::update(sf::Time dt){
+    void SystemManager::update(const sf::Time& dt){
         for(auto& system : systems){
             system.second->update(dt);
         }

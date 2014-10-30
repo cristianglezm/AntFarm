@@ -26,7 +26,4 @@ namespace ant{
     void gravitySystem::render(sf::RenderWindow& win){
         return;
     }
-    gravitySystem::~gravitySystem(){
-
-    }
 }
