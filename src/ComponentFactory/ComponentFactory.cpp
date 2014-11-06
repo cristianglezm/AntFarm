@@ -26,12 +26,10 @@ namespace ant{
                 }
                 return std::move(destructible);
             }
-            ComponentFactory::ComponentFactory(){
-                assets.reset(new AssetManager());
-            }
-            ComponentFactory::ComponentFactory(std::shared_ptr<AssetManager> assets){
-                this->assets = assets;
-            }
+            ComponentFactory::ComponentFactory()
+            : assets(std::make_shared<AssetManager>()){}
+            ComponentFactory::ComponentFactory(std::shared_ptr<AssetManager> assets)
+            : assets(assets){}
             bool ComponentFactory::loadAssets(const std::string& json){
                 return assets->loadAssets(json);
             }
@@ -41,61 +39,56 @@ namespace ant{
             void ComponentFactory::setAssetManager(std::shared_ptr<AssetManager> assets){
                 this->assets = assets;
             }
-            std::unique_ptr<baseComponent> ComponentFactory::createTransform(sf::Vector2f position,sf::Vector2f scale,float rotation){
-                std::unique_ptr<baseComponent> c(new Component<sf::Vector2f,sf::Vector2f,float>(ComponentsMask::COMPONENT_TRANSFORM,
-                                                                                              position,scale,rotation));
+            std::unique_ptr<baseComponent> ComponentFactory::createTransform(const sf::Vector2f& position,const sf::Vector2f& scale,const float& rotation){
+                auto c = Utils::makeUniquePtr<Component<sf::Vector2f,sf::Vector2f,float>>(ComponentsMask::COMPONENT_TRANSFORM,position,scale,rotation);
                 return std::move(c);
             }
-            std::unique_ptr<baseComponent> ComponentFactory::createVelocity(float speed,float minSpeed,float maxSpeed){
-                if(speed > maxSpeed){
-                    speed = maxSpeed;
-                }else if(speed < minSpeed){
-                    speed = minSpeed;
+            std::unique_ptr<baseComponent> ComponentFactory::createVelocity(const float& speed,const float& minSpeed,const float& maxSpeed){
+                auto spd = speed;
+                if(spd > maxSpeed){
+                    spd = maxSpeed;
+                }else if(spd < minSpeed){
+                    spd = minSpeed;
                 }
-                std::unique_ptr<baseComponent> c(new Component<sf::Vector2f,float,float,float>(ComponentsMask::COMPONENT_VELOCITY,
-                                                                                               sf::Vector2f(0,0),speed,minSpeed,maxSpeed));
+                auto c = Utils::makeUniquePtr<Component<sf::Vector2f,float,float,float>>(ComponentsMask::COMPONENT_VELOCITY,
+                                                                                        sf::Vector2f(0,0),spd,minSpeed,maxSpeed);
                 return std::move(c);
             }
-            std::unique_ptr<baseComponent> ComponentFactory::createBounds(sf::FloatRect bounds){
-                std::unique_ptr<baseComponent> c(new Component<sf::FloatRect>(ComponentsMask::COMPONENT_BOUNDS,bounds));
+            std::unique_ptr<baseComponent> ComponentFactory::createBounds(const sf::FloatRect& bounds){
+                auto c = Utils::makeUniquePtr<Component<sf::FloatRect>>(ComponentsMask::COMPONENT_BOUNDS,bounds);
                 return std::move(c);
             }
             std::unique_ptr<baseComponent> ComponentFactory::createDestructable(sf::Vector2f position,const std::string& imageID){
                 sf::FloatRect bounds;
-                std::unique_ptr<sf::VertexArray> destructable = mapImage(position,assets->getImage(imageID),&bounds);
-                std::unique_ptr<baseComponent> c(new Component<std::string,std::unique_ptr<sf::VertexArray>,sf::FloatRect>(
-                                            ComponentsMask::COMPONENT_DESTRUCTABLE,imageID,std::move(destructable),bounds));
+                auto destructable = mapImage(position,assets->getImage(imageID),&bounds);
+                auto c = Utils::makeUniquePtr<Component<std::string,std::unique_ptr<sf::VertexArray>,sf::FloatRect>>(
+                                            ComponentsMask::COMPONENT_DESTRUCTABLE,imageID,std::move(destructable),bounds);
                 return std::move(c);
             }
-            std::unique_ptr<baseComponent> ComponentFactory::createAnimation(std::vector<std::string> ids){
-                std::unique_ptr<baseComponent> c(new Component<std::vector<std::string>>(
-                                                    ComponentsMask::COMPONENT_ANIMATION,ids));
+            std::unique_ptr<baseComponent> ComponentFactory::createAnimation(const std::vector<std::string>& ids){
+                auto compID = ComponentsMask::COMPONENT_ANIMATION;
+                auto c = Utils::makeUniquePtr<Component<std::vector<std::string>>>(compID,ids);
                 return std::move(c);
             }
-            std::unique_ptr<baseComponent> ComponentFactory::createSprite(std::string id){
-                std::unique_ptr<baseComponent> c(new Component<std::string,std::unique_ptr<sf::Sprite>>(
-                        ComponentsMask::COMPONENT_SPRITE,id,std::unique_ptr<sf::Sprite>(
-                                                            new sf::Sprite((assets->getTexture(id))))));
+            std::unique_ptr<baseComponent> ComponentFactory::createSprite(const std::string& id){
+                auto c = Utils::makeUniquePtr<Component<std::string,std::unique_ptr<sf::Sprite>>>(
+                            ComponentsMask::COMPONENT_SPRITE,id,Utils::makeUniquePtr<sf::Sprite>(assets->getTexture(id)));
                 return std::move(c);
             }
-            std::unique_ptr<baseComponent> ComponentFactory::createPassage(sf::Vector2f dest){
-                std::unique_ptr<baseComponent> c(new Component<sf::Vector2f>(ComponentsMask::COMPONENT_PASSAGE,dest));
+            std::unique_ptr<baseComponent> ComponentFactory::createPassage(const sf::Vector2f& dest){
+                auto c = Utils::makeUniquePtr<Component<sf::Vector2f>>(ComponentsMask::COMPONENT_PASSAGE,dest);
                 return std::move(c);
             }
             std::unique_ptr<baseComponent> ComponentFactory::createIn(){
-                std::unique_ptr<baseComponent> c(new Component<>(ComponentsMask::COMPONENT_IN));
+                auto c = Utils::makeUniquePtr<Component<>>(ComponentsMask::COMPONENT_IN);
                 return std::move(c);
             }
             std::unique_ptr<baseComponent> ComponentFactory::createOut(){
-                std::unique_ptr<baseComponent> c(new Component<>(ComponentsMask::COMPONENT_OUT));
+                auto c = Utils::makeUniquePtr<Component<>>(ComponentsMask::COMPONENT_OUT);
                 return std::move(c);
             }
-            std::unique_ptr<baseComponent> ComponentFactory::createCounter(int count){
-                std::unique_ptr<baseComponent> c(new Component<int>(ComponentsMask::COMPONENT_COUNT,count));
+            std::unique_ptr<baseComponent> ComponentFactory::createCounter(const int& count){
+                auto c = Utils::makeUniquePtr<Component<int>>(ComponentsMask::COMPONENT_COUNT,count);
                 return std::move(c);
             }
-            ComponentFactory::~ComponentFactory(){
-
-            }
-
 }

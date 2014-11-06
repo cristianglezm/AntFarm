@@ -21,16 +21,15 @@
  * @author Cristian Glez <Cristian.glez.m@gmail.com>
  * @version 0.1
  */
-class EventType{
-    public:
-        static const long int COLLISION_EVENT = 0;
-        static const long int TERRAIN_COLLISION = 1;
-        static const long int CHANGE_OVERTIME = 2;
-        static const long int CHANGE_NENTITIES = 3;
-        static const long int CHANGE_COMMAND = 4;
-        static const long int SELECT_ENTITY = 5;
-        static const long int OUT_MAP = 6;
-        static const long int LEVEL_COMPLETE = 7;
-        static const long int LEVEL_FAILED = 8;
+struct EventType final{
+        static constexpr long int COLLISION_EVENT = 0;
+        static constexpr long int TERRAIN_COLLISION = 1;
+        static constexpr long int CHANGE_OVERTIME = 2;
+        static constexpr long int CHANGE_NENTITIES = 3;
+        static constexpr long int CHANGE_COMMAND = 4;
+        static constexpr long int SELECT_ENTITY = 5;
+        static constexpr long int OUT_MAP = 6;
+        static constexpr long int LEVEL_COMPLETE = 7;
+        static constexpr long int LEVEL_FAILED = 8;
 };
 #endif // EVENT_TYPE_H

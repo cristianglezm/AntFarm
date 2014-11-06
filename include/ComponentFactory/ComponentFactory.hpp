@@ -17,10 +17,12 @@
 #ifndef COMPONENT_FACTORY_H
 #define COMPONENT_FACTORY_H
 #include <SFML/Graphics.hpp>
-#include <array>
-#include <AssetManager/AssetManager.hpp>
-#include <Components/Component.hpp>
 #include <Components/ComponentMask.hpp>
+#include <Components/Component.hpp>
+#include <AssetManager/AssetManager.hpp>
+#include <Utils/Utility.hpp>
+#include <array>
+
 namespace ant{
     /**
      * @class ComponentFactory
@@ -28,7 +30,7 @@ namespace ant{
      * @author Cristian Glez <Cristian.glez.m@gmail.com>
      * @version 0.1
      */
-    class ComponentFactory{
+    class ComponentFactory final{
         public:
             /**
              * @brief Constructor sin argumentos.
@@ -80,7 +82,7 @@ namespace ant{
              * @param rotation float rotacion de la entidad.
              * @return std::unique_ptr<baseComponent> componente creado.
              */
-            std::unique_ptr<baseComponent> createTransform(sf::Vector2f position,sf::Vector2f scale,float rotation);
+            std::unique_ptr<baseComponent> createTransform(const sf::Vector2f& position,const sf::Vector2f& scale,const float& rotation);
             /**
              * @brief Crea un componente Tipo Velocity
              *
@@ -94,7 +96,7 @@ namespace ant{
              * @param maxSpeed float Velocidad Maxima a la cual puede ir.
              * @return std::unique_ptr<baseComponent> componente creado.
              */
-            std::unique_ptr<baseComponent> createVelocity(float speed,float minSpeed,float maxSpeed);
+            std::unique_ptr<baseComponent> createVelocity(const float& speed,const float& minSpeed,const float& maxSpeed);
             /**
              * @brief Crea un componente Tipo Bounds.
              *
@@ -105,7 +107,7 @@ namespace ant{
              * @param bounds sf::FloatRect rectangulo de colision.
              * @return std::unique_ptr<baseComponent> componente Creado.
              */
-            std::unique_ptr<baseComponent> createBounds(sf::FloatRect bounds);
+            std::unique_ptr<baseComponent> createBounds(const sf::FloatRect& bounds);
             /**
              * @brief Crea un componente tipo Destructable.
              *
@@ -131,7 +133,7 @@ namespace ant{
              * @param ids std::vector<std::string> id de las texturas para la animacion.
              * @return std::unique_ptr<baseComponent> componente creado.
              */
-            std::unique_ptr<baseComponent> createAnimation(std::vector<std::string> ids);
+            std::unique_ptr<baseComponent> createAnimation(const std::vector<std::string>& ids);
             /**
              * @brief Crea un componente tipo Sprite
              *
@@ -142,7 +144,7 @@ namespace ant{
              * @param id std::string id de la textura.
              * @return std::unique_ptr<baseComponent> componente creado.
              */
-            std::unique_ptr<baseComponent> createSprite(std::string id);
+            std::unique_ptr<baseComponent> createSprite(const std::string& id);
             /**
              * @brief Crea un componente tipo Passage
              *
@@ -152,7 +154,7 @@ namespace ant{
              * @endcode
              * @return std::unique_ptr<baseComponent> componente creado.
              */
-            std::unique_ptr<baseComponent> createPassage(sf::Vector2f dest);
+            std::unique_ptr<baseComponent> createPassage(const sf::Vector2f& dest);
             /**
              * @brief Crea un componente que indica la direccion.
              *
@@ -184,10 +186,7 @@ namespace ant{
              * @endcode
              * @return std::unique_ptr<baseComponent> componente creado.
              */
-            std::unique_ptr<baseComponent> createCounter(int count);
-            ~ComponentFactory();
-        private:
-            std::shared_ptr<AssetManager> assets;
+            std::unique_ptr<baseComponent> createCounter(const int& count);
             /**
              * @brief Sirve para mapear una imagen a un sf::VertexArray.
              *
@@ -200,6 +199,8 @@ namespace ant{
              * @param bounds * sf::FloatRect la posicion y tamaño del destuctible
              */
             std::unique_ptr<sf::VertexArray> mapImage(const sf::Vector2f& position,sf::Image& img,sf::FloatRect* bounds);
+        private:
+            std::shared_ptr<AssetManager> assets;
     };
 }
 

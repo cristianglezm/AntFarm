@@ -19,6 +19,7 @@
 #include <Systems/constructorSystem/constructorSystem.hpp>
 #include <Config.hpp>
 #include <Utils/Math.hpp>
+
 namespace ant{
     /**
      * @brief Clase estatica con los comandos para las hormigas.

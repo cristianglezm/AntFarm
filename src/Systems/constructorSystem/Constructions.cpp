@@ -69,9 +69,10 @@ namespace ant{
                             }
                         }
                     }
-                    position.y -=12;
-                    position.x -=5;
+                    position.y -=10;
+                    position.x -=8;
                 }
+                Constructions::tunnel(e,map,bounds);
             }
         }
     };
@@ -95,7 +96,7 @@ namespace ant{
                             }
                         }
                     }
-                    position.y +=12;
+                    position.y +=10;
                     position.x +=8;
                 }else if(rotation == 90){
                     sf::Vector2f currentPos = sf::Vector2f(position.x,position.y + eBounds.height);
@@ -111,6 +112,7 @@ namespace ant{
                     position.y +=12;
                     position.x -=8;
                 }
+                Constructions::tunnel(e,map,bounds);
             }
         }
     };
