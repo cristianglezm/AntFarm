@@ -73,22 +73,23 @@ namespace ant{
          */
         int gbHeight = (int) gameBounds.height;
         auto& gm = *gameMap;
-        if(gm[gbHeight * ((int)eBounds.left) + ((int)eBounds.top)].color.a == 255){
+        static const auto ground = 255;
+        if(gm[gbHeight * ((int)eBounds.left) + ((int)eBounds.top)].color.a == ground){
             eventQueue->push(std::make_shared<Event<Entity*,int>>(EventType::TERRAIN_COLLISION,entity,0));
-        }else if(gm[gbHeight * ((int)(eBounds.left+eBounds.width)) + ((int)eBounds.top)].color.a == 255){
+        }else if(gm[gbHeight * ((int)(eBounds.left+eBounds.width)) + ((int)eBounds.top)].color.a == ground){
             eventQueue->push(std::make_shared<Event<Entity*,int>>(EventType::TERRAIN_COLLISION,entity,1));
-        }else if(gm[gbHeight * ((int)(eBounds.left)) + ((int)(eBounds.top+eBounds.height/2))].color.a == 255){
+        }else if(gm[gbHeight * ((int)(eBounds.left)) + ((int)(eBounds.top+eBounds.height/2))].color.a == ground){
             eventQueue->push(std::make_shared<Event<Entity*,int>>(EventType::TERRAIN_COLLISION,entity,2));
             // subir escaleras
-        }else if(gm[gbHeight * ((int)eBounds.left) + ((int)(eBounds.top+eBounds.height))].color.a == 255){
+        }else if(gm[gbHeight * ((int)eBounds.left) + ((int)(eBounds.top+eBounds.height))].color.a == ground){
             entity->addState(States::GROUND);
             entity->removeState(States::FALLING);
             // enviamos evento para detectar que esta en una esquina
             eventQueue->push(std::make_shared<Event<Entity*,int>>(EventType::TERRAIN_COLLISION,entity,3));
-        }else if(gm[gbHeight * ((int)(eBounds.left+eBounds.width)) + ((int)(eBounds.top+(eBounds.height/2)))].color.a == 255){
+        }else if(gm[gbHeight * ((int)(eBounds.left+eBounds.width)) + ((int)(eBounds.top+(eBounds.height/2)))].color.a == ground){
             eventQueue->push(std::make_shared<Event<Entity*,int>>(EventType::TERRAIN_COLLISION,entity,2));
             // subir escaleras
-        }else if(gm[gbHeight * ((int)(eBounds.left+eBounds.width)) + ((int)(eBounds.top+eBounds.height))].color.a == 255){
+        }else if(gm[gbHeight * ((int)(eBounds.left+eBounds.width)) + ((int)(eBounds.top+eBounds.height))].color.a == ground){
             entity->addState(States::GROUND);
             entity->removeState(States::FALLING);
             // enviamos evento para detectar que esta en una esquina

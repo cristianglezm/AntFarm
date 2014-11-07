@@ -171,7 +171,7 @@ namespace ant{
              * @brief Crea un componente que indica la direccion.
              *
              * Este componente permite hacer que una entidad haga
-             * desparecer las entidades que colisiones contra ella.
+             * desparecer las entidades que colisionen contra ella.
              *
              * @code
              *  Component<>
@@ -180,7 +180,7 @@ namespace ant{
              */
             std::unique_ptr<baseComponent> createOut();
             /**
-             * @brief Crea un componente que tiene un numero de veces.
+             * @brief Crea un componente que tiene una cuenta.
              * @code
              *  Component<int>
              * @endcode
