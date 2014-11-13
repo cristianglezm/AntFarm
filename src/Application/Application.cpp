@@ -1,9 +1,5 @@
 #include <Application/Application.hpp>
-#include <AppStates/TitleState/TitleState.hpp>
-#include <AppStates/MenuState/MenuState.hpp>
-#include <AppStates/GameState/GameState.hpp>
-#include <AppStates/PauseState/PauseState.hpp>
-#include <AppStates/GameOverState/GameOverState.hpp>
+
 namespace ant{
     Application::Application()
     : mWindow(std::make_shared<sf::RenderWindow>(sf::VideoMode(Config::screenSize.width,Config::screenSize.height), "AntFarm", sf::Style::Close))

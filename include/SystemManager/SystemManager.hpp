@@ -16,7 +16,7 @@
 
 #ifndef SYSTEM_MANAGER_H
 #define SYSTEM_MANAGER_H
-#include <map>
+#include <unordered_map>
 #include <memory>
 #include <Systems/System.hpp>
 #include <SFML/System/Time.hpp>
@@ -33,7 +33,7 @@ namespace ant{
             /**
              * @brief Contenedor usado por la clase.
              */
-            typedef std::map<std::string,std::shared_ptr<System>> container;
+            typedef std::unordered_map<std::string,std::shared_ptr<System>> container;
             /**
              * @brief Añade un sistema al manager.
              * @param s std::shared_ptr<System>

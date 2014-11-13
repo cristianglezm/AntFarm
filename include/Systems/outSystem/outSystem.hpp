@@ -28,7 +28,7 @@ namespace ant{
      * @author Cristian Glez <Cristian.glez.m@gmail.com>
      * @version 0.1
      */
-    class outSystem : public System, public Observer{
+    class outSystem final: public System, public Observer{
         public:
             /**
              * @brief Constructor por defecto.
@@ -41,7 +41,7 @@ namespace ant{
              *
              * @param TotalEntities int
              */
-            outSystem(int TotalEntities);
+            outSystem(const int& TotalEntities);
             /**
              * @brief No hace nada.
              */
@@ -57,6 +57,7 @@ namespace ant{
              * @brief recibe los Out_MAP para eliminar estas entidades.
              */
             virtual void onNotify(std::shared_ptr<baseEvent> e) override;
+            virtual ~outSystem(){}
         private:
             int totalEntities;
             int savedEntities;

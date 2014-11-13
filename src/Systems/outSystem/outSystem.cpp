@@ -1,19 +1,20 @@
 #include <Systems/outSystem/outSystem.hpp>
 
 namespace ant{
-    outSystem::outSystem(){
-        savedEntities = 0;
-        totalEntities = 50;
+    outSystem::outSystem()
+    : totalEntities(50)
+    , savedEntities(0){
+        name = "outSystem";
     }
-    outSystem::outSystem(int TotalEntities){
-        totalEntities = TotalEntities;
-        savedEntities = 0;
+    outSystem::outSystem(const int& TotalEntities)
+    : totalEntities(TotalEntities)
+    , savedEntities(0){
+        name = "outSystem";
     }
     void outSystem::onNotify(std::shared_ptr<baseEvent> e){
         switch(e->getType()){
             case EventType::OUT_MAP:{
                 auto& entity = std::get<0>(e->getAttributes<Entity*>());
-                //entity->clear();
                 entity->addState(States::UNSAVED);
             }
                 break;
@@ -38,20 +39,20 @@ namespace ant{
         EntityManager::iterator i = em->begin();
         while(i != em->end()){
             if((*i)->is(States::UNSAVED)){
-               i = em->removeEntity(i);
-               --totalEntities;
-            }else if((*i)->is(States::SAVED)){
-                ++savedEntities;
                 i = em->removeEntity(i);
+                --totalEntities;
+            }else if((*i)->is(States::SAVED)){
+                i = em->removeEntity(i);
+                ++savedEntities;
             }
             ++i;
         }
         if(totalEntities>0){
             if(savedEntities==totalEntities){
-                eventQueue->push(std::shared_ptr<baseEvent>(new Event<>(EventType::LEVEL_COMPLETE)));
+                eventQueue->push(std::make_shared<Event<>>(EventType::LEVEL_COMPLETE));
             }
         }else{
-            eventQueue->push(std::shared_ptr<baseEvent>(new Event<>(EventType::LEVEL_FAILED)));
+            eventQueue->push(std::make_shared<Event<>>(EventType::LEVEL_FAILED));
         }
     }
 }

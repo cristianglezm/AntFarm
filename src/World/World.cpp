@@ -1,11 +1,10 @@
 #include <World/World.hpp>
 
 namespace ant{
-    World::World(){
-        entityManager.reset(new EntityManager());
-        systemManager.reset(new SystemManager());
-        eventQueue.reset(new EventQueue());
-    }
+    World::World()
+    : eventQueue(std::make_shared<EventQueue>())
+    , entityManager(std::make_shared<EntityManager>())
+    , systemManager(Utils::makeUniquePtr<SystemManager>()){}
     World::World(long int id)
     : id(id)
     , eventQueue(std::make_shared<EventQueue>())

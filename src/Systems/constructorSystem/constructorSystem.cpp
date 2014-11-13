@@ -1,11 +1,11 @@
 #include <Systems/constructorSystem/constructorSystem.hpp>
 
 namespace ant{
-    constructorSystem::constructorSystem(sf::VertexArray* map,sf::FloatRect boundsMap){
+    constructorSystem::constructorSystem(sf::VertexArray* map,sf::FloatRect boundsMap)
+    : boundsMap(boundsMap)
+    , map(map)
+    , readyToBuild(false){
         name = "constructionSystem";
-        this->map = map;
-        this->boundsMap = boundsMap;
-        readyToBuild = false;
     }
     void constructorSystem::onNotify(std::shared_ptr<baseEvent> e){
         switch(e->getType()){

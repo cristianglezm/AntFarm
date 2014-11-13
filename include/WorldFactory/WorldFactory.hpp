@@ -117,9 +117,9 @@ namespace ant{
             ~WorldFactory();
         private:
             std::shared_ptr<EntityFactory> entityFactory;
-            std::shared_ptr<SystemFactory> systemFactory;
             std::shared_ptr<EventQueue> eventQueue;
             std::shared_ptr<GameEventDispatcher> gameEventDispatcher;
+            std::shared_ptr<SystemFactory> systemFactory;
             int lvlID;
     };
 }

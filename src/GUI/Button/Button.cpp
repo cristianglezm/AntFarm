@@ -49,8 +49,5 @@ namespace ant{
             target.draw(image);
             target.draw(text);
         }
-        Button::~Button(){
-
-        }
     }
 }

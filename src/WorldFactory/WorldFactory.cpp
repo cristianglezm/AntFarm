@@ -1,20 +1,18 @@
 #include <WorldFactory/WorldFactory.hpp>
 
 namespace ant{
-    WorldFactory::WorldFactory(){
-        gameEventDispatcher.reset(new GameEventDispatcher());
-        eventQueue.reset(new EventQueue());
-        entityFactory.reset(new EntityFactory());
-        systemFactory.reset(new SystemFactory(gameEventDispatcher,eventQueue));
-        lvlID = 0;
-    }
-    WorldFactory::WorldFactory(std::shared_ptr<GameEventDispatcher> ged,std::shared_ptr<EventQueue> eq){
-        entityFactory.reset(new EntityFactory());
-        gameEventDispatcher = ged;
-        eventQueue = eq;
-        systemFactory.reset(new SystemFactory(gameEventDispatcher,eventQueue));
-        lvlID = 0;
-    }
+    WorldFactory::WorldFactory()
+    : entityFactory(std::make_shared<EntityFactory>())
+    , eventQueue(std::make_shared<EventQueue>())
+    , gameEventDispatcher(std::make_shared<GameEventDispatcher>())
+    , systemFactory(std::make_shared<SystemFactory>(gameEventDispatcher,eventQueue))
+    , lvlID(0){}
+    WorldFactory::WorldFactory(std::shared_ptr<GameEventDispatcher> ged,std::shared_ptr<EventQueue> eq)
+    : entityFactory(std::make_shared<EntityFactory>())
+    , eventQueue(eq)
+    , gameEventDispatcher(ged)
+    , systemFactory(std::make_shared<SystemFactory>(gameEventDispatcher,eventQueue))
+    , lvlID(0){}
     bool WorldFactory::loadAssets(const std::string& json){
         return entityFactory->loadAssets(json);
     }
@@ -25,11 +23,11 @@ namespace ant{
         entityFactory->setAssetManager(assets);
     }
     std::unique_ptr<World> WorldFactory::create(const std::string& name,const std::string& background,const sf::Image& lvl,int nEntities,sf::Time overTime,sf::FloatRect bounds){
-        std::unique_ptr<World> w(new World(lvlID));
+        std::unique_ptr<World> w(Utils::makeUniquePtr<World>(lvlID));
         auto em = w->getEntityManager();
         auto assets = getAssetManager();
-        std::unique_ptr<SystemManager> sm(new SystemManager());
-        std::unique_ptr<sf::Image> img(new sf::Image());
+        std::unique_ptr<SystemManager> sm(Utils::makeUniquePtr<SystemManager>());
+        std::unique_ptr<sf::Image> img(Utils::makeUniquePtr<sf::Image>());
         img->create(bounds.width,bounds.height,sf::Color::Transparent);
         int width = lvl.getSize().x;
         int height = lvl.getSize().y;

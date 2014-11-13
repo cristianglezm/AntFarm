@@ -26,14 +26,13 @@ namespace ant{
         Utils::Quadtree::list entities;
         for(auto& entity1: em->getEntities()){
             entities.clear();
-            if((entity1->hasComponent(RequiredComponents))){
+            if(entity1->hasComponent(RequiredComponents)){
                 qtree.retrieve(entities,entity1.get());
                 auto& properties1 = entity1->getComponent(ComponentsMask::COMPONENT_BOUNDS)
                                             ->getProperties<sf::FloatRect>();
                 auto& eBounds1 = std::get<0>(properties1);
                 if(!Utils::RectContains(eBounds1,gameBounds)){
-                    eventQueue->push(std::shared_ptr<baseEvent>(new Event<Entity*>(
-                                                EventType::OUT_MAP,entity1.get())));
+                    eventQueue->push(std::make_shared<Event<Entity*>>(EventType::OUT_MAP,entity1.get()));
                 }else{
                     testTerrainCollision(entity1.get(),eBounds1);
                 }
@@ -43,18 +42,7 @@ namespace ant{
                                                     ->getProperties<sf::FloatRect>();
                         auto& eBounds2 = std::get<0>(properties2);
                         if(eBounds1.intersects(eBounds2)){
-                            eventQueue->push(std::shared_ptr<baseEvent>(new Event<Entity*,Entity*>(
-                                                EventType::COLLISION_EVENT,entity1.get(),entity2)));
-                        }
-                        if(eBounds2.intersects(eBounds1)){
-                            eventQueue->push(std::shared_ptr<baseEvent>(new Event<Entity*,Entity*>(
-                                                EventType::COLLISION_EVENT,entity1.get(),entity2)));
-                        }
-                        if(!Utils::RectContains(eBounds2,gameBounds)){
-                            eventQueue->push(std::shared_ptr<baseEvent>(new Event<Entity*>(
-                                                EventType::OUT_MAP,entity2)));
-                        }else{
-                            testTerrainCollision(entity2,eBounds2);
+                            eventQueue->push(std::make_shared<Event<Entity*,Entity*>>(EventType::COLLISION_EVENT,entity1.get(),entity2));
                         }
                     }
                 }
