@@ -18,6 +18,7 @@
 #define GRAVITY_SYSTEM_H
 #include <Systems/System.hpp>
 #include <Components/ComponentMask.hpp>
+#include <Components/ComponentsAlias.hpp>
 #include <Entity/States.hpp>
 namespace ant{
     /**
@@ -58,6 +59,7 @@ namespace ant{
              * @brief No hace nada.
              */
             virtual void render(sf::RenderWindow& win) override;
+            ~gravitySystem() = default;
         private:
             float Gravity;
     };

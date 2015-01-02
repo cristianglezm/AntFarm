@@ -15,7 +15,7 @@ SET(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/modules")
 FILE(GLOB_RECURSE AntFarm_SOURCES "src/*.cpp" "src/*")
 
 # find all the files in the includes directory
-FILE(GLOB_RECURSE AntFarm_INCLUDES "include/*.h" "include/*.hpp" "include/*")
+FILE(GLOB_RECURSE AntFarm_INCLUDES "include/*.h" "include/*.hpp")
 
 # Specify default build type if none provided (before project() command)
 if(NOT CMAKE_BUILD_TYPE)

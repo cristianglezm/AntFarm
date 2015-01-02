@@ -19,6 +19,7 @@
 #include <Systems/constructorSystem/constructorSystem.hpp>
 #include <Config.hpp>
 #include <Utils/Math.hpp>
+#include <Components/ComponentsAlias.hpp>
 
 namespace ant{
     /**

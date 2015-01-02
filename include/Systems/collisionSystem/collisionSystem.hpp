@@ -22,6 +22,7 @@
 #include <SFML/Graphics/Rect.hpp>
 #include <SFML/Graphics/VertexArray.hpp>
 #include <Components/ComponentMask.hpp>
+#include <Components/ComponentsAlias.hpp>
 #include <Entity/States.hpp>
 #include <Event/EventType.hpp>
 #include <Utils/Math.hpp>
@@ -53,8 +54,6 @@ namespace ant{
             virtual void render(sf::RenderWindow& win) override{
                 #ifdef RENDER_QTREE
                     qtree.render(win);
-                #else
-                    return;
                 #endif
             }
             /**
@@ -67,6 +66,7 @@ namespace ant{
              * @param dt sf::Time delta time
              */
             virtual void update(const sf::Time& dt) override;
+            ~collisionSystem() = default;
         private:
             /**
              * @brief Comprueba si una entidad y sus bordes estan dentro del mapa.

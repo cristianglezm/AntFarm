@@ -13,10 +13,10 @@ namespace ant{
         for(auto& entity: em->getEntities()){
             if((entity->hasComponent(RequiredComponents))){
                 auto& cBounds = entity->getComponent(ComponentsMask::COMPONENT_BOUNDS)
-                                ->getProperties<sf::FloatRect>();
+                                ->getProperties<ComponentsAlias::bounds>();
                 auto& bounds = std::get<0>(cBounds);
                 auto& cTransf = entity->getComponent(ComponentsMask::COMPONENT_TRANSFORM)
-                                ->getProperties<sf::Vector2f,sf::Vector2f,float>();
+                                ->getProperties<ComponentsAlias::transform>();
                 auto& pos = std::get<0>(cTransf);
                 bounds.left = pos.x;
                 bounds.top = pos.y;
@@ -29,7 +29,7 @@ namespace ant{
             if(entity1->hasComponent(RequiredComponents)){
                 qtree.retrieve(entities,entity1.get());
                 auto& properties1 = entity1->getComponent(ComponentsMask::COMPONENT_BOUNDS)
-                                            ->getProperties<sf::FloatRect>();
+                                            ->getProperties<ComponentsAlias::bounds>();
                 auto& eBounds1 = std::get<0>(properties1);
                 if(!Utils::RectContains(eBounds1,gameBounds)){
                     eventQueue->push(std::make_shared<Event<Entity*>>(EventType::OUT_MAP,entity1.get()));
@@ -39,7 +39,7 @@ namespace ant{
                 for(auto entity2:entities){
                     if(entity1.get() != entity2){
                         auto& properties2 = entity2->getComponent(ComponentsMask::COMPONENT_BOUNDS)
-                                                    ->getProperties<sf::FloatRect>();
+                                                    ->getProperties<ComponentsAlias::bounds>();
                         auto& eBounds2 = std::get<0>(properties2);
                         if(eBounds1.intersects(eBounds2)){
                             eventQueue->push(std::make_shared<Event<Entity*,Entity*>>(EventType::COLLISION_EVENT,entity1.get(),entity2));

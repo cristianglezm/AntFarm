@@ -57,7 +57,7 @@ namespace ant{
              * @brief recibe los Out_MAP para eliminar estas entidades.
              */
             virtual void onNotify(std::shared_ptr<baseEvent> e) override;
-            virtual ~outSystem(){}
+            ~outSystem() = default;
         private:
             int totalEntities;
             int savedEntities;

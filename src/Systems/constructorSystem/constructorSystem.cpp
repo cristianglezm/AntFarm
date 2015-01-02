@@ -19,7 +19,7 @@ namespace ant{
                 for(auto& entity:em->getEntities()){
                     if(entity->hasComponent(ComponentsMask::COMPONENT_BOUNDS)){
                         auto& bounds = std::get<0>(entity->getComponent(ComponentsMask::COMPONENT_BOUNDS)
-                                                            ->getProperties<sf::FloatRect>());
+                                                            ->getProperties<ComponentsAlias::bounds>());
                         if(bounds.contains(clickedPoint.x,clickedPoint.y)){
                             entity->addState(States::BUILDING);
                             return;
@@ -42,7 +42,8 @@ namespace ant{
         if(readyToBuild){
             for(auto& e: em->getEntities()){
                 if(e->is(States::BUILDING) && e->hasComponent(ComponentsMask::COMPONENT_COUNT)){
-                    auto& count = std::get<0>(e->getComponent(ComponentsMask::COMPONENT_COUNT)->getProperties<int>());
+                    auto& count = std::get<0>(e->getComponent(ComponentsMask::COMPONENT_COUNT)
+                                              ->getProperties<ComponentsAlias::count>());
                     if(count <=0){
                         e->removeState(States::BUILDING);
                         count = 10;

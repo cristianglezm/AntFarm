@@ -19,6 +19,19 @@
 #include <tuple>
 #include <memory>
 namespace ant{
+    //  Forward declaration
+    template<typename...T>
+    class Event;
+    namespace priv{
+        // helper
+        template<class T>
+        struct EventHelper;
+        // specialized template
+        template<class... Args>
+        struct EventHelper<ant::Event<Args...>>{
+           using tuple_type = std::tuple<Args...>;
+        };
+    }
     /** @brief Clase Base de eventos
      *  @author Cristian Gonzalez Moreno <Cristian.glez.m@gmail.com>
      *  @version 0.1
@@ -93,6 +106,7 @@ namespace ant{
              * @param attributes std::tuple<T...> attributos del evento.
              */
             void setAttributes(std::tuple<T...> attributes){ this->attributes = std::move(attributes); }
+            ~Event = default;
         private:
             std::tuple<T...> attributes;
     };

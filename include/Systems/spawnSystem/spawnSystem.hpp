@@ -70,6 +70,7 @@ namespace ant{
              * @param e std::shared_ptr<baseEvent>
              */
             virtual void onNotify(std::shared_ptr<baseEvent> e) override;
+            ~spawnSystem() = default;
         private:
             EntityFactory* entityFactory;
             int nEntities;

@@ -8,8 +8,10 @@ namespace ant{
         for(auto& entity: this->em->getEntities()){
             if(entity->hasComponent(RequiredComponents)){
                 // obtenemos las propiedades del componente
-                auto& sprite = entity->getComponent(ComponentsMask::COMPONENT_SPRITE)->getProperties<std::string,std::unique_ptr<sf::Sprite>>();
-                auto& transform = entity->getComponent(ComponentsMask::COMPONENT_TRANSFORM)->getProperties<sf::Vector2f,sf::Vector2f,float>();
+                auto& sprite = entity->getComponent(ComponentsMask::COMPONENT_SPRITE)
+                                        ->getProperties<ComponentsAlias::sprite>();
+                auto& transform = entity->getComponent(ComponentsMask::COMPONENT_TRANSFORM)
+                                        ->getProperties<ComponentsAlias::transform>();
                 // obtenemos la sprite
                 auto& spr = std::get<1>(sprite);
                 sf::Vector2f& position = std::get<0>(transform);
@@ -26,7 +28,7 @@ namespace ant{
             // si tiene el destructable se renderiza tambien.
             if(entity->hasComponent(ComponentsMask::COMPONENT_DESTRUCTABLE)){
                 auto& destructable = entity->getComponent(ComponentsMask::COMPONENT_DESTRUCTABLE)
-                                            ->getProperties<std::string,std::unique_ptr<sf::VertexArray>,sf::FloatRect>();
+                                            ->getProperties<ComponentsAlias::destructable>();
                 win.draw(*std::get<1>(destructable));
             }
         }

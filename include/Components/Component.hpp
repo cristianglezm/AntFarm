@@ -14,12 +14,25 @@
 // limitations under the License.
 ////////////////////////////////////////////////////////////////
 
-#ifndef COMPONENT_H
-#define COMPONENT_H
+#ifndef _COMPONENT_HPP
+#define _COMPONENT_HPP
 #include <tuple>
 #include <memory>
 
 namespace ant{
+    //  Forward declaration
+    template<typename...T>
+    class Component;
+    namespace priv{
+        // helper
+        template<class T>
+        struct ComponentHelper;
+        // specialized template
+        template<class... Args>
+        struct ComponentHelper<ant::Component<Args...>>{
+           using tuple_type = std::tuple<Args...>;
+        };
+    }
     /**
      * @class baseComponent
      * @brief Clase base de componente.
@@ -60,8 +73,8 @@ namespace ant{
              * @endcode
              * @return std::tuple<T...> la tupla con los datos.
              */
-            template<typename...T>
-            std::tuple<T...>& getProperties();
+            template<typename T>
+            typename priv::ComponentHelper<T>::tuple_type& getProperties();
             /**
              * @brief Setter de las propiedades del componente.
              * @tparam ...T tipo de datos que contiene el componente en su orden adecuado.
@@ -70,8 +83,8 @@ namespace ant{
              * setProperties<float,int,int>(std::tuple<float,int,int>(2.4,5,6));
              * @endcode
              */
-            template<typename...T>
-            void setProperties(std::tuple<T...> properties);
+            template<typename T>
+            void setProperties(typename priv::ComponentHelper<T>::tuple_type properties);
         private:
             long int id;
     };
@@ -88,6 +101,7 @@ namespace ant{
     template<typename...T>
     class Component: public baseComponent{
         public:
+            using type = std::tuple<T...>;
             /**
              * @brief Constructor del componente especializado.
              *
@@ -117,20 +131,21 @@ namespace ant{
              * @endcode
              */
              void setProperties(std::tuple<T...> properties){ this->properties = std::move(properties); }
+             ~Component() = default;
         private:
             std::tuple<T...> properties;
     };
 
-    template <typename...T>
-    void baseComponent::setProperties(std::tuple<T...> properties){
-        auto& casted = static_cast<Component<T...>&>(*this);
+    template<typename T>
+    void baseComponent::setProperties(typename priv::ComponentHelper<T>::tuple_type properties){
+        auto& casted = static_cast<T&>(*this);
         casted.setProperties(properties);
     }
 
-    template<typename...T>
-    std::tuple<T...>& baseComponent::getProperties(){
-        auto& casted = static_cast<Component<T...>&>(*this);
+    template<typename T>
+    typename priv::ComponentHelper<T>::tuple_type& baseComponent::getProperties(){
+        auto& casted = static_cast<T&>(*this);
         return casted.getProperties();
     }
 }
-#endif // COMPONENT_H
+#endif // _COMPONENT_HPP

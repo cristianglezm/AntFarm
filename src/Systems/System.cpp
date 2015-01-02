@@ -24,7 +24,4 @@ namespace ant{
     void System::setEntityManager(std::shared_ptr<EntityManager> em){
         this->em = em;
     }
-    System::~System(){
-
-    }
 }

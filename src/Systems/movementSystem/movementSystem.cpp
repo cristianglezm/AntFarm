@@ -32,7 +32,7 @@ namespace ant{
                 auto& type = std::get<1>(attributes);
                 if(entity->hasComponent(ComponentsMask::COMPONENT_TRANSFORM)){
                     auto& properties = entity->getComponent(ComponentsMask::COMPONENT_TRANSFORM)
-                                                 ->getProperties<sf::Vector2f,sf::Vector2f,float>();
+                                                 ->getProperties<ComponentsAlias::transform>();
                     auto& rotation = std::get<2>(properties);
                     auto& position = std::get<0>(properties);
                     switch(type){
@@ -77,9 +77,9 @@ namespace ant{
         for(auto& entity: em->getEntities()){
             if(entity->hasComponent(RequiredComponents)){
                 auto& transf = entity->getComponent(ComponentsMask::COMPONENT_TRANSFORM)
-                                        ->getProperties<sf::Vector2f,sf::Vector2f,float>();
+                                        ->getProperties<ComponentsAlias::transform>();
                 auto& velocity = entity->getComponent(ComponentsMask::COMPONENT_VELOCITY)
-                                        ->getProperties<sf::Vector2f,float,float,float>();
+                                        ->getProperties<ComponentsAlias::velocity>();
                 if(entity->is(States::GROUND)){
                     std::get<0>(velocity) = sf::Vector2f(std::get<1>(velocity) *  -std::sin(Utils::toRadians<float>(std::get<2>(transf))) ,
                                                          std::get<1>(velocity) *  std::cos(Utils::toRadians<float>(std::get<2>(transf))) );
