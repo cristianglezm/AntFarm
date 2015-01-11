@@ -49,7 +49,7 @@ namespace ant{
              * @brief Comienza la aplicacion
              */
             void run();
-            ~Application();
+            ~Application() = default;
         private:
             /**
              * @brief Procesa el input del teclado/raton etc.

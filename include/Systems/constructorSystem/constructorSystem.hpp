@@ -41,7 +41,7 @@ namespace ant{
                                });
              * @endcode
              */
-            typedef std::function<void(Entity*,sf::VertexArray*, sf::FloatRect)> command;
+            using command = std::function<void(Entity*,sf::VertexArray*, sf::FloatRect)>;
             /**
              * @brief Constructor por defecto.
              * @param map sf::VertexArray * Destructable para construir, etc.

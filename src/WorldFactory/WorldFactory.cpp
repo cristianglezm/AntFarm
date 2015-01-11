@@ -23,11 +23,11 @@ namespace ant{
         entityFactory->setAssetManager(assets);
     }
     std::unique_ptr<World> WorldFactory::create(const std::string& name,const std::string& background,const sf::Image& lvl,int nEntities,sf::Time overTime,sf::FloatRect bounds){
-        std::unique_ptr<World> w(Utils::makeUniquePtr<World>(lvlID));
+        std::unique_ptr<World> w(Utils::make_unique<World>(lvlID));
         auto em = w->getEntityManager();
         auto assets = getAssetManager();
-        std::unique_ptr<SystemManager> sm(Utils::makeUniquePtr<SystemManager>());
-        std::unique_ptr<sf::Image> img(Utils::makeUniquePtr<sf::Image>());
+        std::unique_ptr<SystemManager> sm(Utils::make_unique<SystemManager>());
+        std::unique_ptr<sf::Image> img(Utils::make_unique<sf::Image>());
         img->create(bounds.width,bounds.height,sf::Color::Transparent);
         int width = lvl.getSize().x;
         int height = lvl.getSize().y;

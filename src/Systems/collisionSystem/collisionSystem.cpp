@@ -1,4 +1,5 @@
 #include <Systems/collisionSystem/collisionSystem.hpp>
+#include <Event/EventsAlias.hpp>
 
 namespace ant{
     collisionSystem::collisionSystem(sf::FloatRect bounds,sf::VertexArray* GameMap)
@@ -32,7 +33,7 @@ namespace ant{
                                             ->getProperties<ComponentsAlias::bounds>();
                 auto& eBounds1 = std::get<0>(properties1);
                 if(!Utils::RectContains(eBounds1,gameBounds)){
-                    eventQueue->push(std::make_shared<Event<Entity*>>(EventType::OUT_MAP,entity1.get()));
+                    eventQueue->push(std::make_shared<EventsAlias::out_map>(EventType::OUT_MAP,entity1.get()));
                 }else{
                     testTerrainCollision(entity1.get(),eBounds1);
                 }
@@ -42,7 +43,7 @@ namespace ant{
                                                     ->getProperties<ComponentsAlias::bounds>();
                         auto& eBounds2 = std::get<0>(properties2);
                         if(eBounds1.intersects(eBounds2)){
-                            eventQueue->push(std::make_shared<Event<Entity*,Entity*>>(EventType::COLLISION_EVENT,entity1.get(),entity2));
+                            eventQueue->push(std::make_shared<EventsAlias::collision>(EventType::COLLISION_EVENT,entity1.get(),entity2));
                         }
                     }
                 }
@@ -63,25 +64,25 @@ namespace ant{
         auto& gm = *gameMap;
         static const auto ground = 255;
         if(gm[gbHeight * ((int)eBounds.left) + ((int)eBounds.top)].color.a == ground){
-            eventQueue->push(std::make_shared<Event<Entity*,int>>(EventType::TERRAIN_COLLISION,entity,0));
+            eventQueue->push(std::make_shared<EventsAlias::terrain_collision>(EventType::TERRAIN_COLLISION,entity,0));
         }else if(gm[gbHeight * ((int)(eBounds.left+eBounds.width)) + ((int)eBounds.top)].color.a == ground){
-            eventQueue->push(std::make_shared<Event<Entity*,int>>(EventType::TERRAIN_COLLISION,entity,1));
+            eventQueue->push(std::make_shared<EventsAlias::terrain_collision>(EventType::TERRAIN_COLLISION,entity,1));
         }else if(gm[gbHeight * ((int)(eBounds.left)) + ((int)(eBounds.top+eBounds.height/2))].color.a == ground){
-            eventQueue->push(std::make_shared<Event<Entity*,int>>(EventType::TERRAIN_COLLISION,entity,2));
+            eventQueue->push(std::make_shared<EventsAlias::terrain_collision>(EventType::TERRAIN_COLLISION,entity,2));
             // subir escaleras
         }else if(gm[gbHeight * ((int)eBounds.left) + ((int)(eBounds.top+eBounds.height))].color.a == ground){
             entity->addState(States::GROUND);
             entity->removeState(States::FALLING);
             // enviamos evento para detectar que esta en una esquina
-            eventQueue->push(std::make_shared<Event<Entity*,int>>(EventType::TERRAIN_COLLISION,entity,3));
+            eventQueue->push(std::make_shared<EventsAlias::terrain_collision>(EventType::TERRAIN_COLLISION,entity,3));
         }else if(gm[gbHeight * ((int)(eBounds.left+eBounds.width)) + ((int)(eBounds.top+(eBounds.height/2)))].color.a == ground){
-            eventQueue->push(std::make_shared<Event<Entity*,int>>(EventType::TERRAIN_COLLISION,entity,2));
+            eventQueue->push(std::make_shared<EventsAlias::terrain_collision>(EventType::TERRAIN_COLLISION,entity,2));
             // subir escaleras
         }else if(gm[gbHeight * ((int)(eBounds.left+eBounds.width)) + ((int)(eBounds.top+eBounds.height))].color.a == ground){
             entity->addState(States::GROUND);
             entity->removeState(States::FALLING);
             // enviamos evento para detectar que esta en una esquina
-            eventQueue->push(std::make_shared<Event<Entity*,int>>(EventType::TERRAIN_COLLISION,entity,4));
+            eventQueue->push(std::make_shared<EventsAlias::terrain_collision>(EventType::TERRAIN_COLLISION,entity,4));
         }else{
             entity->removeState(States::GROUND);
             entity->addState(States::FALLING);

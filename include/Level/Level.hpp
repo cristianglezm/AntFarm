@@ -111,6 +111,7 @@ namespace ant{
              * @param win sf::RenderWindow & ventana a la cual dibujar.
              */
             void render(long int id,sf::RenderWindow& win);
+            ~Level() = default;
         private:
             std::shared_ptr<WorldManager> levels;
             std::shared_ptr<EventQueue> eventQueue;

@@ -1,4 +1,5 @@
 #include <Systems/outSystem/outSystem.hpp>
+#include <Event/EventsAlias.hpp>
 
 namespace ant{
     outSystem::outSystem()
@@ -14,13 +15,13 @@ namespace ant{
     void outSystem::onNotify(std::shared_ptr<baseEvent> e){
         switch(e->getType()){
             case EventType::OUT_MAP:{
-                auto& entity = std::get<0>(e->getAttributes<Entity*>());
+                auto& entity = std::get<0>(e->getAttributes<EventsAlias::out_map>());
                 entity->addState(States::UNSAVED);
             }
                 break;
             case EventType::COLLISION_EVENT:{
-                auto& entity1 = std::get<0>(e->getAttributes<Entity*,Entity*>());
-                auto& entity2 = std::get<1>(e->getAttributes<Entity*,Entity*>());
+                auto& entity1 = std::get<0>(e->getAttributes<EventsAlias::collision>());
+                auto& entity2 = std::get<1>(e->getAttributes<EventsAlias::collision>());
                 if(entity1->hasComponent(ComponentsMask::COMPONENT_OUT)
                    && !(entity2->hasComponent(ComponentsMask::COMPONENT_OUT))){
                     entity2->addState(States::SAVED);
@@ -49,10 +50,10 @@ namespace ant{
         }
         if(totalEntities>0){
             if(savedEntities==totalEntities){
-                eventQueue->push(std::make_shared<Event<>>(EventType::LEVEL_COMPLETE));
+                eventQueue->push(std::make_shared<EventsAlias::level_complete>(EventType::LEVEL_COMPLETE));
             }
         }else{
-            eventQueue->push(std::make_shared<Event<>>(EventType::LEVEL_FAILED));
+            eventQueue->push(std::make_shared<EventsAlias::level_failed>(EventType::LEVEL_FAILED));
         }
     }
 }

@@ -87,8 +87,5 @@ namespace ant{
         mStateStack.registerState<GameOverState>(AppStates::GameFailed,"Game Failed!");
         mStateStack.registerState<GameOverState>(AppStates::GameSucceed,"Game Succeed!");
     }
-    Application::~Application(){
-
-    }
     const sf::Time Application::TimePerFrame = sf::seconds(1.f/60.f);
 }

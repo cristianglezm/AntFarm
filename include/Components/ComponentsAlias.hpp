@@ -1,6 +1,7 @@
 #ifndef _COMPONENT_ALIAS_HPP
 #define _COMPONENT_ALIAS_HPP
 
+#include <vector>
 #include <memory>
 #include <string>
 #include <Components/Component.hpp>
@@ -25,5 +26,9 @@ namespace ComponentsAlias{
     using velocity = ant::Component<sf::Vector2f,float,float,float>;
     using sprite = ant::Component<std::string,std::unique_ptr<sf::Sprite>>;
     using destructable = ant::Component<std::string,std::unique_ptr<sf::VertexArray>,sf::FloatRect>;
+    using animation = ant::Component<std::vector<std::string>>;
+    using passage = ant::Component<sf::Vector2f>;
+    using in = ant::Component<>;
+    using out = ant::Component<>;
 }
 #endif // _COMPONENT_ALIAS_HPP

@@ -1,4 +1,5 @@
 #include <AppStates/GameState/GameState.hpp>
+#include <Event/EventsAlias.hpp>
 
 namespace ant{
     GameState::GameState(StateStack& stack, Context context)
@@ -36,18 +37,18 @@ namespace ant{
             break;
             case sf::Event::MouseButtonReleased:
                 if(event.mouseButton.button == sf::Mouse::Left){
-                    eventQueue->push(std::make_shared<Event<sf::Vector2i>>(EventType::SELECT_ENTITY,sf::Mouse::getPosition(win)));
+                    eventQueue->push(std::make_shared<EventsAlias::select_entity>(EventType::SELECT_ENTITY,sf::Mouse::getPosition(win)));
                     for(auto i=0u;i<buttons.size();++i){
                         if(buttons[i]->contains((sf::Vector2f)sf::Mouse::getPosition(win))){
-                            eventQueue->push(std::make_shared<Event<constructorSystem::command>>(EventType::CHANGE_COMMAND,
+                            eventQueue->push(std::make_shared<EventsAlias::change_command>(EventType::CHANGE_COMMAND,
                                                     buttons[i]->getAction()));
                         }
                     }
                 }
                 if(event.mouseButton.button == sf::Mouse::Right){
-                    eventQueue->push(std::make_shared<Event<constructorSystem::command>>(EventType::CHANGE_COMMAND,
+                    eventQueue->push(std::make_shared<EventsAlias::change_command>(EventType::CHANGE_COMMAND,
                                                     Constructions::stop));
-                    eventQueue->push(std::make_shared<Event<sf::Vector2i>>(EventType::SELECT_ENTITY,
+                    eventQueue->push(std::make_shared<EventsAlias::select_entity>(EventType::SELECT_ENTITY,
                                                     sf::Mouse::getPosition(win)));
                 }
                 break;
@@ -57,51 +58,51 @@ namespace ant{
                     requestStackPush(AppStates::Menu);
                 }
                 if(event.key.code == sf::Keyboard::S){
-                    eventQueue->push(std::make_shared<Event<constructorSystem::command>>(EventType::CHANGE_COMMAND,
+                    eventQueue->push(std::make_shared<EventsAlias::change_command>(EventType::CHANGE_COMMAND,
                                                     Constructions::stairs));
                 }
                 if(event.key.code == sf::Keyboard::E){
-                    eventQueue->push(std::make_shared<Event<constructorSystem::command>>(EventType::CHANGE_COMMAND,
+                    eventQueue->push(std::make_shared<EventsAlias::change_command>(EventType::CHANGE_COMMAND,
                                                     Constructions::explosion));
                 }
                 if(event.key.code == sf::Keyboard::D){
-                    eventQueue->push(std::make_shared<Event<constructorSystem::command>>(EventType::CHANGE_COMMAND,
+                    eventQueue->push(std::make_shared<EventsAlias::change_command>(EventType::CHANGE_COMMAND,
                                                     Constructions::downhill));
                 }
                 if(event.key.code == sf::Keyboard::U){
-                    eventQueue->push(std::make_shared<Event<constructorSystem::command>>(EventType::CHANGE_COMMAND,
+                    eventQueue->push(std::make_shared<EventsAlias::change_command>(EventType::CHANGE_COMMAND,
                                                     Constructions::uphill));
                 }
                 if(event.key.code == sf::Keyboard::B){
-                    eventQueue->push(std::make_shared<Event<constructorSystem::command>>(EventType::CHANGE_COMMAND,
+                    eventQueue->push(std::make_shared<EventsAlias::change_command>(EventType::CHANGE_COMMAND,
                                                     Constructions::bridge));
                 }
                 if(event.key.code == sf::Keyboard::P){
                     requestStackPush(AppStates::Pause);
                 }
                 if(event.key.code == sf::Keyboard::T){
-                    eventQueue->push(std::make_shared<Event<constructorSystem::command>>(EventType::CHANGE_COMMAND,
+                    eventQueue->push(std::make_shared<EventsAlias::change_command>(EventType::CHANGE_COMMAND,
                                                     Constructions::tunnel));
                 }
                 if(event.key.code == sf::Keyboard::W){
-                    eventQueue->push(std::make_shared<Event<constructorSystem::command>>(EventType::CHANGE_COMMAND,
+                    eventQueue->push(std::make_shared<EventsAlias::change_command>(EventType::CHANGE_COMMAND,
                                                     Constructions::wall));
                 }
                 if(event.key.code == sf::Keyboard::H){
-                    eventQueue->push(std::make_shared<Event<constructorSystem::command>>(EventType::CHANGE_COMMAND,
+                    eventQueue->push(std::make_shared<EventsAlias::change_command>(EventType::CHANGE_COMMAND,
                                                     Constructions::hole));
                 }
                 if(event.key.code == sf::Keyboard::C){
-                    eventQueue->push(std::make_shared<Event<constructorSystem::command>>(EventType::CHANGE_COMMAND,
+                    eventQueue->push(std::make_shared<EventsAlias::change_command>(EventType::CHANGE_COMMAND,
                                                     Constructions::climb));
                 }
                 if(event.key.code == sf::Keyboard::LShift){
                     GameSpeed += 0.1;
-                    eventQueue->push(std::make_shared<Event<sf::Time>>(EventType::CHANGE_OVERTIME,sf::seconds(GameSpeed)));
+                    eventQueue->push(std::make_shared<EventsAlias::change_overtime>(EventType::CHANGE_OVERTIME,sf::seconds(GameSpeed)));
                 }
                 if(event.key.code == sf::Keyboard::LControl){
                     GameSpeed -= 0.1;
-                    eventQueue->push(std::make_shared<Event<sf::Time>>(EventType::CHANGE_OVERTIME,sf::seconds(GameSpeed)));
+                    eventQueue->push(std::make_shared<EventsAlias::change_overtime>(EventType::CHANGE_OVERTIME,sf::seconds(GameSpeed)));
                 }
                 break;
             case sf::Event::KeyPressed:
@@ -172,7 +173,7 @@ namespace ant{
                 }else if(actionID == "explosion"){
                     action = Constructions::explosion;
                 }
-                buttons.push_back(Utils::makeUniquePtr<GUI::Button>(pos,bSize,sprite,t,action));
+                buttons.push_back(Utils::make_unique<GUI::Button>(pos,bSize,sprite,t,action));
             }
         }
     }
