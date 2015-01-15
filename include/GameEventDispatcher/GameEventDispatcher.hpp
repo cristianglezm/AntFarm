@@ -60,6 +60,10 @@ namespace ant{
              */
             Subject LevelFailed;
             /**
+             * @brief El sistema de out envia este evento.
+             */
+            Subject UpdateScore;
+            /**
              * @brief Procesa el evento y lo envia a los observadores que esten subscritos.
              * @param e std::shared_ptr<baseEvent>
              * @return bool

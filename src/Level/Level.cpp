@@ -3,17 +3,23 @@
 namespace ant{
     Level::Level(const std::string& assetsFilename,sf::FloatRect bounds,std::shared_ptr<GameEventDispatcher> ged)
     : levels(std::make_shared<WorldManager>())
-    , eventQueue(std::make_shared<EventQueue>())
-    , gameEventDispatcher(ged)
-    , worldFactory(std::make_shared<WorldFactory>(ged,eventQueue)){
+    , eventQueues()
+    , gameEventDispatchers(){
+        auto eventQueue(std::make_shared<EventQueue>());
+        eventQueues.push_back(eventQueue);
+        gameEventDispatchers.push_back(ged);
+        worldFactory = std::make_shared<WorldFactory>(ged,eventQueue);
         worldFactory->loadAssets(assetsFilename);
         init(bounds);
     }
     Level::Level(std::shared_ptr<AssetManager> am,sf::FloatRect bounds,std::shared_ptr<GameEventDispatcher> ged)
     : levels(std::make_shared<WorldManager>())
-    , eventQueue(std::make_shared<EventQueue>())
-    , gameEventDispatcher(ged)
-    , worldFactory(std::make_shared<WorldFactory>(ged,eventQueue)){
+    , eventQueues()
+    , gameEventDispatchers(){
+        auto eventQueue(std::make_shared<EventQueue>());
+        eventQueues.push_back(eventQueue);
+        gameEventDispatchers.push_back(ged);
+        worldFactory = std::make_shared<WorldFactory>(ged,eventQueue);
         worldFactory->setAssetManager(am);
         init(bounds);
     }
@@ -33,18 +39,30 @@ namespace ant{
                                          + " \nindex: " + Utils::toString<int>(i));
             }
             int nEntities = v["levels"][size_t(i)]["nEntities"].getInt();
-            sf::Time overTime;
-            overTime = sf::seconds(v["levels"][size_t(i)]["overtime"].getInt());
+            sf::Time overTime = sf::seconds(v["levels"][size_t(i)]["overtime"].getInt());
+            setEventQueue(i,eventQueues[i]);
+            setGameEventDispatcher(i,gameEventDispatchers[i]);
             levels->addWorld(worldFactory->create(v["levels"][size_t(i)]["name"].getString(),
                                 v["levels"][size_t(i)]["background"].getString(),
-                                 img,nEntities,overTime,bounds));
+                                img,nEntities,overTime,bounds));
+            addEventQueue(std::make_shared<EventQueue>());
+            addGameEventDispatcher(std::make_shared<GameEventDispatcher>());
         }
         return true;
     }
-    void Level::setEventQueue(std::shared_ptr<EventQueue> eq){
-        eventQueue = eq;
-        worldFactory->setEventQueue(eventQueue);
-        worldFactory->setGameEventDispatcher(gameEventDispatcher);
+    void Level::setEventQueue(int id,std::shared_ptr<EventQueue> eq){
+        eventQueues[id] = eq;
+        worldFactory->setEventQueue(eventQueues[id]);
+    }
+    void Level::addEventQueue(std::shared_ptr<EventQueue> eq){
+        eventQueues.push_back(eq);
+    }
+    void Level::addGameEventDispatcher(std::shared_ptr<GameEventDispatcher> ged){
+        gameEventDispatchers.push_back(ged);
+    }
+    void Level::setGameEventDispatcher(int id,std::shared_ptr<GameEventDispatcher> ged){
+        gameEventDispatchers[id] = ged;
+        worldFactory->setGameEventDispatcher(gameEventDispatchers[id]);
     }
     void Level::setWorldFactory(std::shared_ptr<WorldFactory> wf){
         worldFactory = wf;

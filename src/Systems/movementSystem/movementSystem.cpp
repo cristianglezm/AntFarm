@@ -56,7 +56,7 @@ namespace ant{
                             break;
                         case 2:
                             // subir escaleras
-                            position.y -=5;
+                            position.y -=15;
                             break;
                         case 3:
                             if(rotation == UP){

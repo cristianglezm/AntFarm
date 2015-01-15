@@ -69,8 +69,8 @@ namespace ant{
                             }
                         }
                     }
-                    position.y -=10;
-                    position.x -=8;
+                    position.y -=12;
+                    position.x -=5;
                 }
                 Constructions::tunnel(e,map,bounds);
             }
@@ -96,7 +96,7 @@ namespace ant{
                             }
                         }
                     }
-                    position.y +=10;
+                    position.y +=12;
                     position.x +=8;
                 }else if(rotation == 90){
                     sf::Vector2f currentPos = sf::Vector2f(position.x,position.y + eBounds.height);
@@ -120,7 +120,7 @@ namespace ant{
         if(e->hasComponent(ComponentsMask::COMPONENT_COUNT)){
             auto& count = std::get<0>(e->getComponent(ComponentsMask::COMPONENT_COUNT)->getProperties<ComponentsAlias::count>());
             if(count == 9){
-                count = 20;
+                count = 10;
             }
             if(count <= 0){
                 e->removeState(States::CLIMBING);

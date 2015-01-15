@@ -50,8 +50,8 @@ namespace ant{
                         count = 10;
                     }else{
                         if(!(e->is(States::FALLING))){
-                            --count;
                             build(e.get(),map,boundsMap);
+                            --count;
                         }
                     }
                 }

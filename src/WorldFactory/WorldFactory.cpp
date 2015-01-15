@@ -101,11 +101,10 @@ namespace ant{
     }
     void WorldFactory::setEventQueue(std::shared_ptr<EventQueue> eq){
         eventQueue = eq;
+        systemFactory->setEventQueue(eventQueue);
     }
     void WorldFactory::setGameEventDispatcher(std::shared_ptr<GameEventDispatcher> ged){
         gameEventDispatcher = ged;
-    }
-    WorldFactory::~WorldFactory(){
-
+        systemFactory->setGameEventDispatcher(ged);
     }
 }

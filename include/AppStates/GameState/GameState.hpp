@@ -32,7 +32,7 @@ namespace ant{
      * @author Cristian Glez <Cristian.glez.m@gmail.com>
      * @version 0.1
      */
-    class GameState : public AppState,public Observer{
+    class GameState final: public AppState,public Observer{
         public:
             /**
              * @brief Constructor principal
@@ -60,7 +60,7 @@ namespace ant{
              * -# LEVEL_FAILED vuelve al menu.
              */
             void onNotify(std::shared_ptr<baseEvent> e);
-            virtual ~GameState();
+            ~GameState() = default;
         private:
             /**
              * @brief Carga la configuracion de este estado.
@@ -81,6 +81,8 @@ namespace ant{
             int currentLevel;
             int totalLevels;
             float GameSpeed;
+            sf::Text textScore;
+            int score;
             std::string font;
     };
 }

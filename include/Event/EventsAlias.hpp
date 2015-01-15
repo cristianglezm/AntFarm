@@ -15,6 +15,7 @@ namespace EventsAlias{
     using select_entity = ant::Event<sf::Vector2i>;
     using level_complete = ant::Event<>;
     using level_failed = ant::Event<>;
+    using update_score = ant::Event<int>;
 }
 
 #endif // _EVENTS_ALIAS_HPP

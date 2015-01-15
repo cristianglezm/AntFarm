@@ -31,5 +31,6 @@ struct EventType final{
         static constexpr long int OUT_MAP = 6;
         static constexpr long int LEVEL_COMPLETE = 7;
         static constexpr long int LEVEL_FAILED = 8;
+        static constexpr long int UPDATE_SCORE = 9;
 };
 #endif // EVENT_TYPE_H

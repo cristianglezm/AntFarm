@@ -45,6 +45,7 @@ namespace ant{
             }else if((*i)->is(States::SAVED)){
                 i = em->removeEntity(i);
                 ++savedEntities;
+                eventQueue->push(std::make_shared<EventsAlias::update_score>(EventType::UPDATE_SCORE,1));
             }
             ++i;
         }

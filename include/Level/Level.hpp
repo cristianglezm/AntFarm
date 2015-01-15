@@ -66,12 +66,16 @@ namespace ant{
              * @brief Setter para la cola de eventos.
              * @param eq std::shared_ptr<EventQueue> Cola para que los sistemas añadan los eventos que sucenden en el juego.
              */
-            void setEventQueue(std::shared_ptr<EventQueue> eq);
+            void setEventQueue(int id,std::shared_ptr<EventQueue> eq);
             /**
              * @brief Getter para la cola de eventos
              * @return std::shared_ptr<EventQueue> Devuelve la cola de eventos.
              */
-            inline std::shared_ptr<EventQueue> getEventQueue(){ return this->eventQueue; }
+            inline std::shared_ptr<EventQueue> getEventQueue(int id){ return this->eventQueues[id]; }
+            void addEventQueue(std::shared_ptr<EventQueue> eq);
+            void addGameEventDispatcher(std::shared_ptr<GameEventDispatcher> ged);
+            void setGameEventDispatcher(int id,std::shared_ptr<GameEventDispatcher> ged);
+            inline std::shared_ptr<GameEventDispatcher> getGameEventDispatcher(int id){ return gameEventDispatchers[id]; }
             /**
              * @brief Setter para la fabrica de mundos.
              * @param wf std::shared_ptr<WorldFactory>
@@ -114,8 +118,8 @@ namespace ant{
             ~Level() = default;
         private:
             std::shared_ptr<WorldManager> levels;
-            std::shared_ptr<EventQueue> eventQueue;
-            std::shared_ptr<GameEventDispatcher> gameEventDispatcher;
+            std::vector<std::shared_ptr<EventQueue>> eventQueues;
+            std::vector<std::shared_ptr<GameEventDispatcher>> gameEventDispatchers;
             std::shared_ptr<WorldFactory> worldFactory;
     };
 }

@@ -8,13 +8,20 @@ namespace ant{
     , assets(context.assets)
     , gameEventDispatcher(std::make_shared<GameEventDispatcher>())
     , level(std::make_shared<Level>(context.assets,Config::screenSize,gameEventDispatcher))
-    , eventQueue(level->getEventQueue())
-    , currentLevel(0){
+    , eventQueue(level->getEventQueue(0))
+    , currentLevel(0)
+    , textScore(){
         loadConfig(Config::CONFIG_FILE);
         totalLevels = level->size();
         gameEventDispatcher->LevelComplete.addObserver(this);
         gameEventDispatcher->LevelFailed.addObserver(this);
+        gameEventDispatcher->UpdateScore.addObserver(this);
         GameSpeed = 1;
+        score = 0;
+        textScore.setFont(context.assets->getFont(font));
+        textScore.setPosition(Config::screenSize.width-50,10);
+        textScore.setString(Utils::toString(score));
+        textScore.setColor(sf::Color::Black);
         loadGUIConf(Config::GUI_FILE);
     }
     void GameState::render(){
@@ -22,6 +29,7 @@ namespace ant{
         for(unsigned int i=0;i<buttons.size();++i){
                 win.draw(*buttons[i]);
         }
+        win.draw(textScore);
     }
     bool GameState::update(sf::Time dt){
         level->update(currentLevel,dt);
@@ -117,6 +125,11 @@ namespace ant{
             case EventType::LEVEL_COMPLETE:{
                 if(currentLevel<(totalLevels-1)){
                     ++currentLevel;
+                    eventQueue = level->getEventQueue(currentLevel);
+                    gameEventDispatcher = level->getGameEventDispatcher(currentLevel);
+                    gameEventDispatcher->LevelComplete.addObserver(this);
+                    gameEventDispatcher->LevelFailed.addObserver(this);
+                    gameEventDispatcher->UpdateScore.addObserver(this);
                 }else if(currentLevel == (totalLevels-1)){
                     requestStackPush(AppStates::GameSucceed);
                 }
@@ -125,6 +138,13 @@ namespace ant{
             case EventType::LEVEL_FAILED:{
                 requestStackPush(AppStates::GameFailed);
             }
+                break;
+            case EventType::UPDATE_SCORE:{
+                score += std::get<0>(e->getAttributes<EventsAlias::update_score>());
+                textScore.setString(Utils::toString(score));
+            }
+                break;
+            default:
                 break;
         }
     }
@@ -183,9 +203,5 @@ namespace ant{
         if(v["Config"]["font"].getString() != ""){
             font = v["Config"]["font"].getString();
         }
-    }
-    GameState::~GameState(){
-        // liberamos recursos.
-
     }
 }

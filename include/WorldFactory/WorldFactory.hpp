@@ -114,7 +114,7 @@ namespace ant{
              * @return std::shared_ptr<GameEventDispatcher>
              */
             inline std::shared_ptr<GameEventDispatcher> getGameEventDispatcher(){ return this->gameEventDispatcher; }
-            ~WorldFactory();
+            ~WorldFactory() = default;
         private:
             std::shared_ptr<EntityFactory> entityFactory;
             std::shared_ptr<EventQueue> eventQueue;
