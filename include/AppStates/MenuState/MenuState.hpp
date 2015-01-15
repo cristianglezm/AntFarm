@@ -59,6 +59,7 @@ namespace ant{
         private:
             enum OptionNames{
                 Play,
+                Help,
                 Exit,
             };
         private:

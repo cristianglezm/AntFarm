@@ -19,7 +19,8 @@ namespace ant{
                 "\t\tmouse left: Selects the ant.\n\n" <<
                 "\t\th -> Hole: The selected ant will dig down.\n\n" <<
                 "\t\tp -> Pause: Pauses the game.\n\n" <<
-                "\t\tesc -> return to main menu.\n\n";
+                "\t\tesc -> return to main menu.\n\n" <<
+                "\t\tF1 -> This menu.\n\n";
         mText.setString(help.str());
         mText.setPosition({0,20});
         mText.setCharacterSize(18);

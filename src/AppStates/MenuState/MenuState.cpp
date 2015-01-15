@@ -13,11 +13,17 @@ namespace ant{
         Utils::centerOrigin(playOption);
         playOption.setPosition(context.window->getView().getSize() / 2.f);
         mOptions.push_back(playOption);
+        sf::Text helpOption;
+        helpOption.setFont(context.assets->getFont(font));
+        helpOption.setString("Help");
+        Utils::centerOrigin(helpOption);
+        helpOption.setPosition(playOption.getPosition() + sf::Vector2f(0.f, 30.f));
+        mOptions.push_back(helpOption);
         sf::Text exitOption;
         exitOption.setFont(context.assets->getFont(font));
         exitOption.setString("Exit");
         Utils::centerOrigin(exitOption);
-        exitOption.setPosition(playOption.getPosition() + sf::Vector2f(0.f, 30.f));
+        exitOption.setPosition(helpOption.getPosition() + sf::Vector2f(0.f, 30.f));
         mOptions.push_back(exitOption);
         sf::Text gameTitle;
         gameTitle.setFont(context.assets->getFont(font));
@@ -40,13 +46,15 @@ namespace ant{
         return true;
     }
     bool MenuState::handleEvent(const sf::Event& event){
-        if (event.type != sf::Event::KeyPressed){
+        if (event.type != sf::Event::KeyReleased){
             return false;
         }
         if (event.key.code == sf::Keyboard::Return){
             if (mOptionIndex == Play){
                 requestStackPop();
                 requestStackPush(AppStates::Game);
+            }else if (mOptionIndex == Help){
+                requestStackPush(AppStates::Help);
             }else if (mOptionIndex == Exit){
                 requestStackPop();
             }
