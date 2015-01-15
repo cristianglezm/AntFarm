@@ -54,14 +54,10 @@ constructorSystem::command Constructions::your_function = [](Entity* e,sf::Verte
 ```
 #!c++
 
-	eventQueue->push(std::shared_ptr<baseEvent>(
-                            new Event<constructorSystem::command>(EventType::CHANGE_COMMAND,
-                                                    Constructions::your_function
-                                                    ))
-                                 );
+	eventQueue->push(std::make_shared<EventsAlias::change_command>(EventType::CHANGE_COMMAND, Constructions::your_function));
 ```
 
 Documentation
 ===
 
-The documentation can be found on "doc" or be generated with doxygen(it needs to be configured)
+The documentation can be found on "doc" or be generated with doxygen (it needs to be configured)
