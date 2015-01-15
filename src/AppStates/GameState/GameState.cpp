@@ -65,6 +65,9 @@ namespace ant{
                     requestStackPop();
                     requestStackPush(AppStates::Menu);
                 }
+                if(event.key.code == sf::Keyboard::F1){
+                    requestStackPush(AppStates::Help);
+                }
                 if(event.key.code == sf::Keyboard::S){
                     eventQueue->push(std::make_shared<EventsAlias::change_command>(EventType::CHANGE_COMMAND,
                                                     Constructions::stairs));

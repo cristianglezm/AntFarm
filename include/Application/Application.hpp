@@ -32,6 +32,7 @@
 #include <AppStates/GameState/GameState.hpp>
 #include <AppStates/PauseState/PauseState.hpp>
 #include <AppStates/GameOverState/GameOverState.hpp>
+#include <AppStates/HelpState/HelpState.hpp>
 
 namespace ant{
     /**

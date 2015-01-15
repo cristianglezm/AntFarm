@@ -1,6 +1,6 @@
 {
     "Config":{
-        "font":"OLDFAX",
+          "font":"Outwrite",
 	  "TitleScreen":{
 			"background":"background1",
 	   },
