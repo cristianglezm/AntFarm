@@ -18,7 +18,7 @@ namespace ant{
         for(auto& e : em->getEntities()){
             if(e->hasComponent(RequiredComponents) && e->is(States::FALLING)){
                 auto& properties = e->getComponent(RequiredComponents)
-                                    ->getProperties<sf::Vector2f,float,float,float>();
+                                    ->getProperties<ComponentsAlias::velocity>();
                 std::get<0>(properties).y = Gravity ;
             }
         }

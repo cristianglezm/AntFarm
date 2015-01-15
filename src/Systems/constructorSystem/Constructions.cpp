@@ -4,11 +4,11 @@ namespace ant{
     constructorSystem::command Constructions::tunnel = [](Entity* e,sf::VertexArray* map,sf::FloatRect bounds){
         if(e->hasComponent(ComponentsMask::COMPONENT_BOUNDS) && e->hasComponent(ComponentsMask::COMPONENT_TRANSFORM)){
             auto& cTrans = e->getComponent(ComponentsMask::COMPONENT_TRANSFORM)
-                                ->getProperties<sf::Vector2f,sf::Vector2f,float>();
+                                ->getProperties<ComponentsAlias::transform>();
             auto& position = std::get<0>(cTrans);
             auto& rotation = std::get<2>(cTrans);
             auto& eBounds = std::get<0>(e->getComponent(ComponentsMask::COMPONENT_BOUNDS)
-                                            ->getProperties<sf::FloatRect>());
+                                            ->getProperties<ComponentsAlias::bounds>());
             if(Utils::RectContains(eBounds,Config::screenSize)){
                 if(rotation == -90){
                     sf::Vector2f currentPos = sf::Vector2f(position.x+eBounds.width,position.y + eBounds.height);
@@ -39,11 +39,11 @@ namespace ant{
     constructorSystem::command Constructions::uphill = [](Entity* e,sf::VertexArray* map,sf::FloatRect bounds){
         if(e->hasComponent(ComponentsMask::COMPONENT_BOUNDS) && e->hasComponent(ComponentsMask::COMPONENT_TRANSFORM)){
             auto& cTrans = e->getComponent(ComponentsMask::COMPONENT_TRANSFORM)
-                                ->getProperties<sf::Vector2f,sf::Vector2f,float>();
+                                ->getProperties<ComponentsAlias::transform>();
             auto& position = std::get<0>(cTrans);
             auto& rotation = std::get<2>(cTrans);
             auto& eBounds = std::get<0>(e->getComponent(ComponentsMask::COMPONENT_BOUNDS)
-                                            ->getProperties<sf::FloatRect>());
+                                            ->getProperties<ComponentsAlias::bounds>());
             if(Utils::RectContains(eBounds,Config::screenSize)){
                 if(rotation == -90){
                     sf::Vector2f currentPos = sf::Vector2f(position.x+eBounds.width,position.y + eBounds.height);
@@ -69,8 +69,8 @@ namespace ant{
                             }
                         }
                     }
-                    position.y -=10;
-                    position.x -=8;
+                    position.y -=12;
+                    position.x -=5;
                 }
                 Constructions::tunnel(e,map,bounds);
             }
@@ -79,11 +79,11 @@ namespace ant{
     constructorSystem::command Constructions::downhill = [](Entity* e,sf::VertexArray* map,sf::FloatRect bounds){
         if(e->hasComponent(ComponentsMask::COMPONENT_BOUNDS) && e->hasComponent(ComponentsMask::COMPONENT_TRANSFORM)){
             auto& cTrans = e->getComponent(ComponentsMask::COMPONENT_TRANSFORM)
-                                ->getProperties<sf::Vector2f,sf::Vector2f,float>();
+                                ->getProperties<ComponentsAlias::transform>();
             auto& position = std::get<0>(cTrans);
             auto& rotation = std::get<2>(cTrans);
             auto& eBounds = std::get<0>(e->getComponent(ComponentsMask::COMPONENT_BOUNDS)
-                                            ->getProperties<sf::FloatRect>());
+                                            ->getProperties<ComponentsAlias::bounds>());
             if(Utils::RectContains(eBounds,Config::screenSize)){
                 if(rotation == -90){
                     sf::Vector2f currentPos = sf::Vector2f(position.x+eBounds.width,position.y + eBounds.height);
@@ -96,7 +96,7 @@ namespace ant{
                             }
                         }
                     }
-                    position.y +=10;
+                    position.y +=12;
                     position.x +=8;
                 }else if(rotation == 90){
                     sf::Vector2f currentPos = sf::Vector2f(position.x,position.y + eBounds.height);
@@ -118,9 +118,9 @@ namespace ant{
     };
     constructorSystem::command Constructions::climb = [](Entity* e,sf::VertexArray* map,sf::FloatRect bounds){
         if(e->hasComponent(ComponentsMask::COMPONENT_COUNT)){
-            auto& count = std::get<0>(e->getComponent(ComponentsMask::COMPONENT_COUNT)->getProperties<int>());
+            auto& count = std::get<0>(e->getComponent(ComponentsMask::COMPONENT_COUNT)->getProperties<ComponentsAlias::count>());
             if(count == 9){
-                count = 20;
+                count = 10;
             }
             if(count <= 0){
                 e->removeState(States::CLIMBING);
@@ -131,7 +131,7 @@ namespace ant{
     };
     constructorSystem::command Constructions::stop = [](Entity* e,sf::VertexArray* map,sf::FloatRect bounds){
         if(e->hasComponent(ComponentsMask::COMPONENT_COUNT)){
-            auto& count = std::get<0>(e->getComponent(ComponentsMask::COMPONENT_COUNT)->getProperties<int>());
+            auto& count = std::get<0>(e->getComponent(ComponentsMask::COMPONENT_COUNT)->getProperties<ComponentsAlias::count>());
             if(count <= 0){
                 e->removeState(States::BUILDING);
                 e->removeState(States::CLIMBING);
@@ -141,11 +141,11 @@ namespace ant{
     constructorSystem::command Constructions::wall = [](Entity* e,sf::VertexArray* map,sf::FloatRect bounds){
         if(e->hasComponent(ComponentsMask::COMPONENT_BOUNDS) && e->hasComponent(ComponentsMask::COMPONENT_TRANSFORM)){
             auto& cTrans = e->getComponent(ComponentsMask::COMPONENT_TRANSFORM)
-                                ->getProperties<sf::Vector2f,sf::Vector2f,float>();
+                                ->getProperties<ComponentsAlias::transform>();
             auto& position = std::get<0>(cTrans);
             auto& rotation = std::get<2>(cTrans);
             auto& eBounds = std::get<0>(e->getComponent(ComponentsMask::COMPONENT_BOUNDS)
-                                            ->getProperties<sf::FloatRect>());
+                                            ->getProperties<ComponentsAlias::bounds>());
             if(Utils::RectContains(eBounds,Config::screenSize)){
                 if(rotation == -90){
                     int j;
@@ -190,11 +190,11 @@ namespace ant{
     constructorSystem::command Constructions::bridge = [](Entity* e,sf::VertexArray* map,sf::FloatRect bounds){
         if(e->hasComponent(ComponentsMask::COMPONENT_BOUNDS) && e->hasComponent(ComponentsMask::COMPONENT_TRANSFORM)){
             auto& cTrans = e->getComponent(ComponentsMask::COMPONENT_TRANSFORM)
-                                ->getProperties<sf::Vector2f,sf::Vector2f,float>();
+                                ->getProperties<ComponentsAlias::transform>();
             auto& position = std::get<0>(cTrans);
             auto& rotation = std::get<2>(cTrans);
             auto& eBounds = std::get<0>(e->getComponent(ComponentsMask::COMPONENT_BOUNDS)
-                                            ->getProperties<sf::FloatRect>());
+                                            ->getProperties<ComponentsAlias::bounds>());
             if(Utils::RectContains(eBounds,Config::screenSize)){
                 if(rotation == -90){
                     sf::Vector2f currentPos(position.x+eBounds.width,position.y+eBounds.height);
@@ -249,11 +249,11 @@ namespace ant{
     constructorSystem::command Constructions::stairs = [](Entity* e,sf::VertexArray* map,sf::FloatRect bounds){
         if(e->hasComponent(ComponentsMask::COMPONENT_BOUNDS) && e->hasComponent(ComponentsMask::COMPONENT_TRANSFORM)){
             auto& cTrans = e->getComponent(ComponentsMask::COMPONENT_TRANSFORM)
-                                ->getProperties<sf::Vector2f,sf::Vector2f,float>();
+                                ->getProperties<ComponentsAlias::transform>();
             auto& position = std::get<0>(cTrans);
             auto& rotation = std::get<2>(cTrans);
             auto& eBounds = std::get<0>(e->getComponent(ComponentsMask::COMPONENT_BOUNDS)
-                                            ->getProperties<sf::FloatRect>());
+                                            ->getProperties<ComponentsAlias::bounds>());
             if(Utils::RectContains(eBounds,Config::screenSize)){
                 if(rotation == -90){
                     int j;
@@ -298,10 +298,10 @@ namespace ant{
     constructorSystem::command Constructions::hole = [](Entity* e,sf::VertexArray* map,sf::FloatRect bounds){
         if(e->hasComponent(ComponentsMask::COMPONENT_BOUNDS) && e->hasComponent(ComponentsMask::COMPONENT_TRANSFORM)){
             auto& cTrans = e->getComponent(ComponentsMask::COMPONENT_TRANSFORM)
-                                ->getProperties<sf::Vector2f,sf::Vector2f,float>();
+                                ->getProperties<ComponentsAlias::transform>();
             auto& position = std::get<0>(cTrans);
             auto& eBounds = std::get<0>(e->getComponent(ComponentsMask::COMPONENT_BOUNDS)
-                                            ->getProperties<sf::FloatRect>());
+                                            ->getProperties<ComponentsAlias::bounds>());
             sf::Vector2f currentPos = sf::Vector2f(position.x,
                                                    position.y + eBounds.height);
             if(Utils::RectContains(eBounds,Config::screenSize)){
@@ -327,7 +327,7 @@ namespace ant{
         };
         if(e->hasComponent(ComponentsMask::COMPONENT_TRANSFORM)){
             auto& cTrans = e->getComponent(ComponentsMask::COMPONENT_TRANSFORM)
-                                ->getProperties<sf::Vector2f,sf::Vector2f,float>();
+                                ->getProperties<ComponentsAlias::transform>();
             auto& position = std::get<0>(cTrans);
             std::function<void(int,const sf::Vector2f&)> explode;
             explode = [&rm,&explode](int radius,const sf::Vector2f& pos){

@@ -31,7 +31,8 @@ namespace ant{
             Game,
             Pause,
             GameFailed,
-            GameSucceed
+            GameSucceed,
+            Help
         };
     }
 }

@@ -1,4 +1,5 @@
 #include <Systems/spawnSystem/spawnSystem.hpp>
+#include <Event/EventsAlias.hpp>
 
 namespace ant{
     spawnSystem::spawnSystem(int nEntities, EntityFactory* ef,sf::Time ot,sf::Vector2f spawnPoint,long int state){
@@ -22,7 +23,7 @@ namespace ant{
     void spawnSystem::update(const sf::Time& dt){
         if(elapsedTime > overTime && createdEntities < nEntities){
             elapsedTime = sf::seconds(0);
-            createdEntities +=1;
+            createdEntities += 1;
             ComponentSettings cs;
             cs.loadSettings(Config::ANT_FILE);
             cs.position = spawnPoint + sf::Vector2f(5,5);
@@ -38,7 +39,7 @@ namespace ant{
     void spawnSystem::onNotify(std::shared_ptr<baseEvent> e){
         switch(e->getType()){
             case EventType::CHANGE_OVERTIME:{
-                auto& ot = std::get<0>(e->getAttributes<sf::Time>());
+                auto& ot = std::get<0>(e->getAttributes<EventsAlias::change_overtime>());
                 if(ot.asSeconds() <= 0.0){
                     overTime = sf::seconds(1);
                 }else{
@@ -47,7 +48,7 @@ namespace ant{
                 break;
             }
             case EventType::CHANGE_NENTITIES:{
-                auto& numberOfEntitites = std::get<0>(e->getAttributes<int>());
+                auto& numberOfEntitites = std::get<0>(e->getAttributes<EventsAlias::change_nentities>());
                 nEntities = numberOfEntitites;
                 break;
             }

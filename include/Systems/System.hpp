@@ -95,7 +95,7 @@ namespace ant{
              * @param dt sf::Time delta time para los calculos.
              */
             virtual void update(const sf::Time& dt) = 0;
-            virtual ~System();
+            virtual ~System() = default;
         protected:
             long int RequiredComponents;
             std::shared_ptr<EventQueue> eventQueue;

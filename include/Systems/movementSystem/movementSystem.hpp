@@ -20,6 +20,7 @@
 #include <Observer/Observer.hpp>
 #include <Event/EventType.hpp>
 #include <Components/ComponentMask.hpp>
+#include <Components/ComponentsAlias.hpp>
 #include <Entity/States.hpp>
 #include <Utils/Math.hpp>
 namespace ant{
@@ -55,6 +56,7 @@ namespace ant{
              * @param e std::shared_ptr<baseEvent> evento.
              */
             virtual void onNotify(std::shared_ptr<baseEvent> e) override;
+            ~movementSystem() = default;
     };
 }
 

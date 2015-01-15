@@ -1,12 +1,9 @@
 #include <Application/Application.hpp>
-#include <AppStates/TitleState/TitleState.hpp>
-#include <AppStates/MenuState/MenuState.hpp>
-#include <AppStates/GameState/GameState.hpp>
-#include <AppStates/PauseState/PauseState.hpp>
-#include <AppStates/GameOverState/GameOverState.hpp>
+
 namespace ant{
     Application::Application()
-    : mWindow(std::make_shared<sf::RenderWindow>(sf::VideoMode(Config::screenSize.width,Config::screenSize.height), "AntFarm", sf::Style::Close))
+    : mWindow(std::make_shared<sf::RenderWindow>(sf::VideoMode(Config::screenSize.width,Config::screenSize.height),
+                                                "AntFarm", sf::Style::Fullscreen))
     , mAssets(std::make_shared<AssetManager>())
     , mStateStack(AppState::Context(mWindow,mAssets)){
         mAssets->loadAssets(Config::ASSETS_GAME_JSON);
@@ -89,9 +86,7 @@ namespace ant{
         mStateStack.registerState<PauseState>(AppStates::Pause);
         mStateStack.registerState<GameOverState>(AppStates::GameFailed,"Game Failed!");
         mStateStack.registerState<GameOverState>(AppStates::GameSucceed,"Game Succeed!");
-    }
-    Application::~Application(){
-
+        mStateStack.registerState<HelpState>(AppStates::Help);
     }
     const sf::Time Application::TimePerFrame = sf::seconds(1.f/60.f);
 }

@@ -1,4 +1,5 @@
 #include <Systems/movementSystem/movementSystem.hpp>
+#include <Event/EventsAlias.hpp>
 
 namespace ant{
     movementSystem::movementSystem(){
@@ -9,7 +10,7 @@ namespace ant{
         switch(e->getType()){
             case EventType::COLLISION_EVENT:{
                     /*
-                    auto& attributes = e->getAttributes<Entity*,Entity*>();
+                    auto& attributes = e->getAttributes<EventsAlias::collision>();
                     // obtenemos los atributos del evento.
                     auto& entity1 = std::get<0>(attributes);
                     auto& entity2 = std::get<1>(attributes);
@@ -27,41 +28,44 @@ namespace ant{
             }
                 break;
             case EventType::TERRAIN_COLLISION:{
-                auto& attributes = e->getAttributes<Entity*,int>();
+                static const int UP = 180;
+                static const int LEFT = -90;
+                static const int RIGHT = 90;
+                auto& attributes = e->getAttributes<EventsAlias::terrain_collision>();
                 auto& entity = std::get<0>(attributes);
                 auto& type = std::get<1>(attributes);
                 if(entity->hasComponent(ComponentsMask::COMPONENT_TRANSFORM)){
                     auto& properties = entity->getComponent(ComponentsMask::COMPONENT_TRANSFORM)
-                                                 ->getProperties<sf::Vector2f,sf::Vector2f,float>();
+                                                 ->getProperties<ComponentsAlias::transform>();
                     auto& rotation = std::get<2>(properties);
                     auto& position = std::get<0>(properties);
                     switch(type){
                         case 0:
                             if(entity->is(States::CLIMBING)){
-                                rotation = 180;
+                                rotation = UP;
                             }else{
-                                rotation = -90;
+                                rotation = LEFT;
                             }
                             break;
                         case 1:
                             if(entity->is(States::CLIMBING)){
-                                rotation = 180;
+                                rotation = UP;
                             }else{
-                                rotation = 90;
+                                rotation = RIGHT;
                             }
                             break;
                         case 2:
                             // subir escaleras
-                            position.y -=5;
+                            position.y -=15;
                             break;
                         case 3:
-                            if(rotation == 180){
-                                rotation = 90;
+                            if(rotation == UP){
+                                rotation = RIGHT;
                             }
                             break;
                         case 4:
-                            if(rotation == 180){
-                                rotation = -90;
+                            if(rotation == UP){
+                                rotation = LEFT;
                             }
                             break;
                     }
@@ -70,20 +74,17 @@ namespace ant{
                 break;
         }
     }
-    void movementSystem::render(sf::RenderWindow& win){
-        return;
-    }
+    void movementSystem::render(sf::RenderWindow& win){ return; }
     void movementSystem::update(const sf::Time& dt){
         for(auto& entity: em->getEntities()){
             if(entity->hasComponent(RequiredComponents)){
                 auto& transf = entity->getComponent(ComponentsMask::COMPONENT_TRANSFORM)
-                                        ->getProperties<sf::Vector2f,sf::Vector2f,float>();
+                                        ->getProperties<ComponentsAlias::transform>();
                 auto& velocity = entity->getComponent(ComponentsMask::COMPONENT_VELOCITY)
-                                        ->getProperties<sf::Vector2f,float,float,float>();
+                                        ->getProperties<ComponentsAlias::velocity>();
                 if(entity->is(States::GROUND)){
                     std::get<0>(velocity) = sf::Vector2f(std::get<1>(velocity) *  -std::sin(Utils::toRadians<float>(std::get<2>(transf))) ,
                                                          std::get<1>(velocity) *  std::cos(Utils::toRadians<float>(std::get<2>(transf))) );
-                /// @todo agregar al calculo delta time
                 }
                 std::get<0>(transf) += std::get<0>(velocity);
             }

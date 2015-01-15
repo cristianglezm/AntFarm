@@ -25,6 +25,9 @@ namespace ant{
             case EventType::LEVEL_FAILED:
                 LevelFailed.notifyObservers(e);
                 return true;
+            case EventType::UPDATE_SCORE:
+                UpdateScore.notifyObservers(e);
+                return true;
         }
         return false;
     }

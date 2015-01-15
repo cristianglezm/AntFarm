@@ -18,6 +18,8 @@
 #define ANT_APPLICATION_HPP
 
 #include <Config.hpp>
+#include <Components/ComponentMask.hpp>
+#include <Event/EventType.hpp>
 #include <Utils/String.hpp>
 #include <AssetManager/AssetManager.hpp>
 #include <StateStack/StateStack.hpp>
@@ -25,6 +27,12 @@
 #include <SFML/System/Time.hpp>
 #include <SFML/Graphics/RenderWindow.hpp>
 #include <SFML/Graphics/Text.hpp>
+#include <AppStates/TitleState/TitleState.hpp>
+#include <AppStates/MenuState/MenuState.hpp>
+#include <AppStates/GameState/GameState.hpp>
+#include <AppStates/PauseState/PauseState.hpp>
+#include <AppStates/GameOverState/GameOverState.hpp>
+#include <AppStates/HelpState/HelpState.hpp>
 
 namespace ant{
     /**
@@ -42,7 +50,7 @@ namespace ant{
              * @brief Comienza la aplicacion
              */
             void run();
-            ~Application();
+            ~Application() = default;
         private:
             /**
              * @brief Procesa el input del teclado/raton etc.

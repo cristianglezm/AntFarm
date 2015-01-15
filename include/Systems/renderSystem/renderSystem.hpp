@@ -22,6 +22,8 @@
 #include <SFML/Graphics/VertexArray.hpp>
 #include <Systems/System.hpp>
 #include <Components/ComponentMask.hpp>
+#include <Components/ComponentsAlias.hpp>
+
 namespace ant{
     /**
      * @brief Sistema encargado de mostrar las entidades que tengan los componentes necesarios.
@@ -43,6 +45,7 @@ namespace ant{
              * @brief No hace nada.
              */
             virtual void update(const sf::Time& dt) override;
+            ~renderSystem() = default;
     };
 }
 #endif // RENDER_SYSTEM_H

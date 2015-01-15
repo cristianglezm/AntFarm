@@ -1,20 +1,18 @@
 #include <WorldFactory/WorldFactory.hpp>
 
 namespace ant{
-    WorldFactory::WorldFactory(){
-        gameEventDispatcher.reset(new GameEventDispatcher());
-        eventQueue.reset(new EventQueue());
-        entityFactory.reset(new EntityFactory());
-        systemFactory.reset(new SystemFactory(gameEventDispatcher,eventQueue));
-        lvlID = 0;
-    }
-    WorldFactory::WorldFactory(std::shared_ptr<GameEventDispatcher> ged,std::shared_ptr<EventQueue> eq){
-        entityFactory.reset(new EntityFactory());
-        gameEventDispatcher = ged;
-        eventQueue = eq;
-        systemFactory.reset(new SystemFactory(gameEventDispatcher,eventQueue));
-        lvlID = 0;
-    }
+    WorldFactory::WorldFactory()
+    : entityFactory(std::make_shared<EntityFactory>())
+    , eventQueue(std::make_shared<EventQueue>())
+    , gameEventDispatcher(std::make_shared<GameEventDispatcher>())
+    , systemFactory(std::make_shared<SystemFactory>(gameEventDispatcher,eventQueue))
+    , lvlID(0){}
+    WorldFactory::WorldFactory(std::shared_ptr<GameEventDispatcher> ged,std::shared_ptr<EventQueue> eq)
+    : entityFactory(std::make_shared<EntityFactory>())
+    , eventQueue(eq)
+    , gameEventDispatcher(ged)
+    , systemFactory(std::make_shared<SystemFactory>(gameEventDispatcher,eventQueue))
+    , lvlID(0){}
     bool WorldFactory::loadAssets(const std::string& json){
         return entityFactory->loadAssets(json);
     }
@@ -25,11 +23,11 @@ namespace ant{
         entityFactory->setAssetManager(assets);
     }
     std::unique_ptr<World> WorldFactory::create(const std::string& name,const std::string& background,const sf::Image& lvl,int nEntities,sf::Time overTime,sf::FloatRect bounds){
-        std::unique_ptr<World> w(new World(lvlID));
+        std::unique_ptr<World> w(Utils::make_unique<World>(lvlID));
         auto em = w->getEntityManager();
         auto assets = getAssetManager();
-        std::unique_ptr<SystemManager> sm(new SystemManager());
-        std::unique_ptr<sf::Image> img(new sf::Image());
+        std::unique_ptr<SystemManager> sm(Utils::make_unique<SystemManager>());
+        std::unique_ptr<sf::Image> img(Utils::make_unique<sf::Image>());
         img->create(bounds.width,bounds.height,sf::Color::Transparent);
         int width = lvl.getSize().x;
         int height = lvl.getSize().y;
@@ -86,7 +84,7 @@ namespace ant{
         sm->addSystem(systemFactory->createMovementSystem());
         sm->addSystem(systemFactory->createGravitySystem(1.9));
         auto& properties = em->getEntity(name)->getComponent(ComponentsMask::COMPONENT_DESTRUCTABLE)
-                                        ->getProperties<std::string,std::unique_ptr<sf::VertexArray>,sf::FloatRect>();
+                                        ->getProperties<ComponentsAlias::destructable>();
         auto& destructable = std::get<1>(properties);
         sm->addSystem(systemFactory->createCollisionSystem(bounds,destructable.get()));
         sm->addSystem(systemFactory->createConstructorSystem(destructable.get(),bounds));
@@ -103,11 +101,10 @@ namespace ant{
     }
     void WorldFactory::setEventQueue(std::shared_ptr<EventQueue> eq){
         eventQueue = eq;
+        systemFactory->setEventQueue(eventQueue);
     }
     void WorldFactory::setGameEventDispatcher(std::shared_ptr<GameEventDispatcher> ged){
         gameEventDispatcher = ged;
-    }
-    WorldFactory::~WorldFactory(){
-
+        systemFactory->setGameEventDispatcher(ged);
     }
 }

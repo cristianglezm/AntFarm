@@ -19,6 +19,7 @@
 #include <Systems/System.hpp>
 #include <Observer/Observer.hpp>
 #include <Components/ComponentMask.hpp>
+#include <Components/ComponentsAlias.hpp>
 #include <EntityFactory/EntityFactory.hpp>
 #include <SFML/Graphics/VertexArray.hpp>
 #include <Event/EventType.hpp>
@@ -40,7 +41,7 @@ namespace ant{
                                });
              * @endcode
              */
-            typedef std::function<void(Entity*,sf::VertexArray*, sf::FloatRect)> command;
+            using command = std::function<void(Entity*,sf::VertexArray*, sf::FloatRect)>;
             /**
              * @brief Constructor por defecto.
              * @param map sf::VertexArray * Destructable para construir, etc.
@@ -65,6 +66,7 @@ namespace ant{
              * @param dt sf::Time delta time
              */
             virtual void update(const sf::Time& dt) override;
+            ~constructorSystem() = default;
         private:
             sf::FloatRect boundsMap;
             sf::VertexArray* map;

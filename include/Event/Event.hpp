@@ -19,6 +19,19 @@
 #include <tuple>
 #include <memory>
 namespace ant{
+    //  Forward declaration
+    template<typename...T>
+    class Event;
+    namespace priv{
+        // helper
+        template<class T>
+        struct EventHelper;
+        // specialized template
+        template<class... Args>
+        struct EventHelper<ant::Event<Args...>>{
+           using tuple_type = std::tuple<Args...>;
+        };
+    }
     /** @brief Clase Base de eventos
      *  @author Cristian Gonzalez Moreno <Cristian.glez.m@gmail.com>
      *  @version 0.1
@@ -48,16 +61,16 @@ namespace ant{
              * @tparam ...T tipo de datos que tiene el evento en el orden adecuado.
              * @return std::tuple<T...> & los attributos del evento(solo lectura)
              */
-            template<typename...T>
-            const std::tuple<T...>& getAttributes() const;
+            template<typename T>
+            const typename priv::EventHelper<T>::tuple_type& getAttributes() const;
             /**
              * @brief Setter de los atributos del evento.
              * @code baseEvent::setAttributes<float,int>(5.3,5); @endcode
              * @tparam ...T tipo de datos que tiene el evento en el orden adecuado.
              * @param attributes ...T los parametros de los atributos.
              */
-            template<typename...T>
-            void setAttributes(std::tuple<T...> attributes);
+            template<typename T>
+            void setAttributes(const typename priv::EventHelper<T>::tuple_type& attributes);
         private:
             int type;
     };
@@ -93,18 +106,19 @@ namespace ant{
              * @param attributes std::tuple<T...> attributos del evento.
              */
             void setAttributes(std::tuple<T...> attributes){ this->attributes = std::move(attributes); }
+            ~Event() = default;
         private:
             std::tuple<T...> attributes;
     };
 
-    template<typename...T>
-    void baseEvent::setAttributes(std::tuple<T...> attributes){
-        auto& casted = static_cast<Event<T...>&>(*this);
+    template<typename T>
+    void baseEvent::setAttributes(const typename priv::EventHelper<T>::tuple_type& attributes){
+        auto& casted = static_cast<T&>(*this);
         casted.setAttributes(attributes);
     }
-    template<typename...T>
-    const std::tuple<T...>& baseEvent::getAttributes() const {
-        auto& casted = static_cast<const Event<T...>&>(*this);
+    template<typename T>
+    const typename priv::EventHelper<T>::tuple_type& baseEvent::getAttributes() const {
+        auto& casted = static_cast<const T&>(*this);
         return casted.getAttributes();
     }
 

@@ -1,25 +1,27 @@
 #include <Systems/outSystem/outSystem.hpp>
+#include <Event/EventsAlias.hpp>
 
 namespace ant{
-    outSystem::outSystem(){
-        savedEntities = 0;
-        totalEntities = 50;
+    outSystem::outSystem()
+    : totalEntities(50)
+    , savedEntities(0){
+        name = "outSystem";
     }
-    outSystem::outSystem(int TotalEntities){
-        totalEntities = TotalEntities;
-        savedEntities = 0;
+    outSystem::outSystem(const int& TotalEntities)
+    : totalEntities(TotalEntities)
+    , savedEntities(0){
+        name = "outSystem";
     }
     void outSystem::onNotify(std::shared_ptr<baseEvent> e){
         switch(e->getType()){
             case EventType::OUT_MAP:{
-                auto& entity = std::get<0>(e->getAttributes<Entity*>());
-                //entity->clear();
+                auto& entity = std::get<0>(e->getAttributes<EventsAlias::out_map>());
                 entity->addState(States::UNSAVED);
             }
                 break;
             case EventType::COLLISION_EVENT:{
-                auto& entity1 = std::get<0>(e->getAttributes<Entity*,Entity*>());
-                auto& entity2 = std::get<1>(e->getAttributes<Entity*,Entity*>());
+                auto& entity1 = std::get<0>(e->getAttributes<EventsAlias::collision>());
+                auto& entity2 = std::get<1>(e->getAttributes<EventsAlias::collision>());
                 if(entity1->hasComponent(ComponentsMask::COMPONENT_OUT)
                    && !(entity2->hasComponent(ComponentsMask::COMPONENT_OUT))){
                     entity2->addState(States::SAVED);
@@ -38,20 +40,21 @@ namespace ant{
         EntityManager::iterator i = em->begin();
         while(i != em->end()){
             if((*i)->is(States::UNSAVED)){
-               i = em->removeEntity(i);
-               --totalEntities;
-            }else if((*i)->is(States::SAVED)){
-                ++savedEntities;
                 i = em->removeEntity(i);
+                --totalEntities;
+            }else if((*i)->is(States::SAVED)){
+                i = em->removeEntity(i);
+                ++savedEntities;
+                eventQueue->push(std::make_shared<EventsAlias::update_score>(EventType::UPDATE_SCORE,1));
             }
             ++i;
         }
         if(totalEntities>0){
             if(savedEntities==totalEntities){
-                eventQueue->push(std::shared_ptr<baseEvent>(new Event<>(EventType::LEVEL_COMPLETE)));
+                eventQueue->push(std::make_shared<EventsAlias::level_complete>(EventType::LEVEL_COMPLETE));
             }
         }else{
-            eventQueue->push(std::shared_ptr<baseEvent>(new Event<>(EventType::LEVEL_FAILED)));
+            eventQueue->push(std::make_shared<EventsAlias::level_failed>(EventType::LEVEL_FAILED));
         }
     }
 }
