@@ -38,8 +38,8 @@ namespace ant{
                                          + v["levels"][size_t(i)]["image"].getString()
                                          + " \nindex: " + Utils::toString<int>(i));
             }
-            int nEntities = v["levels"][size_t(i)]["nEntities"].getInt();
-            sf::Time overTime = sf::seconds(v["levels"][size_t(i)]["overtime"].getInt());
+            int nEntities = v["levels"][size_t(i)]["nEntities"].getInteger();
+            sf::Time overTime = sf::seconds(v["levels"][size_t(i)]["overtime"].getInteger());
             setEventQueue(i,eventQueues[i]);
             setGameEventDispatcher(i,gameEventDispatchers[i]);
             levels->addWorld(worldFactory->create(v["levels"][size_t(i)]["name"].getString(),

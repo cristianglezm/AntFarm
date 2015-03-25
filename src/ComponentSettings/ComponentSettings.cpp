@@ -1,21 +1,20 @@
 #include <ComponentSettings/ComponentSettings.hpp>
 
 namespace ant{
-    ComponentSettings::ComponentSettings(){
-        entityName = "";
-        minSpeed = 0;
-        maxSpeed = 0;
-        Speed = 0;
-        scale = sf::Vector2f(1,1);
-        position = sf::Vector2f(0,0);
-        rotation = 0;
-        spriteID = "";
-        dest = sf::Vector2f(0,0);
-        DestructiblePosition = sf::Vector2f(0,0);
-        imageID = "";
-        bounds = sf::FloatRect(0,0,0,0);
-        count = 10;
-    }
+    ComponentSettings::ComponentSettings()
+    : entityName("")
+    , minSpeed(0)
+    , maxSpeed(0)
+    , Speed(0)
+    , scale(sf::Vector2f(1,1))
+    , position(sf::Vector2f(0,0))
+    , rotation(0)
+    , spriteID("")
+    , dest(sf::Vector2f(0,0))
+    , DestructiblePosition(sf::Vector2f(0,0))
+    , imageID("")
+    , bounds(sf::FloatRect(0,0,0,0))
+    , count(10){}
     void ComponentSettings::loadSettings(const std::string& filename){
         std::fstream file(filename);
         JsonBox::Value v(file);
@@ -52,7 +51,7 @@ namespace ant{
                                                             );
                         imageID = v["Entity"]["Components"][size_t(i)]["properties"]["imageID"].getString();
                     }else if(id == "buildCounter"){
-                        count = v["Entity"]["Components"][size_t(i)]["properties"]["count"].getInt();
+                        count = v["Entity"]["Components"][size_t(i)]["properties"]["count"].getInteger();
                     }
                 }
             }
@@ -65,8 +64,5 @@ namespace ant{
         }else if(Speed < minSpeed){
             Speed = minSpeed;
         }
-    }
-    ComponentSettings::~ComponentSettings(){
-
     }
 }

@@ -61,7 +61,7 @@ namespace ant{
              */
             void setSpeed(float speed);
             inline float getSpeed(){ return Speed; }
-             ~ComponentSettings();
+             ~ComponentSettings() = default;
         private:
             float Speed;
     };

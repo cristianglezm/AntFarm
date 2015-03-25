@@ -1,11 +1,10 @@
 #include <EntityFactory/EntityFactory.hpp>
 
 namespace ant{
-    EntityFactory::EntityFactory(){
-        componentFactory.reset(new ComponentFactory());
-    }
-    EntityFactory::EntityFactory(const std::string& json){
-        componentFactory.reset(new ComponentFactory());
+    EntityFactory::EntityFactory()
+    : componentFactory(std::make_shared<ComponentFactory>()){}
+    EntityFactory::EntityFactory(const std::string& json)
+    : componentFactory(std::make_shared<ComponentFactory>()){
         componentFactory->loadAssets(json);
     }
     bool EntityFactory::loadAssets(const std::string& json){
@@ -65,8 +64,4 @@ namespace ant{
     void EntityFactory::setComponentFactory(std::shared_ptr<ComponentFactory> cf){
         this->componentFactory = cf;
     }
-    EntityFactory::~EntityFactory(){
-
-    }
-
 }

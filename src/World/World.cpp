@@ -2,7 +2,8 @@
 
 namespace ant{
     World::World()
-    : eventQueue(std::make_shared<EventQueue>())
+    : id(0)
+    , eventQueue(std::make_shared<EventQueue>())
     , entityManager(std::make_shared<EntityManager>())
     , systemManager(Utils::make_unique<SystemManager>()){}
     World::World(long int id)

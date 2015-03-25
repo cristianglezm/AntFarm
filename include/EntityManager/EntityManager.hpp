@@ -39,7 +39,7 @@ namespace ant{
             /**
              * @brief Constructor por defecto.
              */
-            EntityManager();
+            EntityManager() = default;
             /**
              * @brief Añade una entidad al manager.
              * @param e std::unique_ptr<Entity>
@@ -104,6 +104,7 @@ namespace ant{
              * @return std::unique_ptr<Entity> entidad transferida o nullptr si no es encontrada.
              */
             std::unique_ptr<Entity> Transfer(const Entity* e);
+            ~EntityManager() = default;
         private:
             container entities;
     };

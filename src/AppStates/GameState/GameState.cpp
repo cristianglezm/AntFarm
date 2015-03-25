@@ -157,17 +157,17 @@ namespace ant{
         if(!v["GUI"]["buttons"].isNull()){
             int size = v["GUI"]["buttons"].getArray().size();
             for(int i=0;i<size;++i){
-                sf::Vector2f pos(v["GUI"]["buttons"][size_t(i)]["position"]["x"].getInt(),
-                                 v["GUI"]["buttons"][size_t(i)]["position"]["y"].getInt());
-                sf::Vector2f bSize(v["GUI"]["buttons"][size_t(i)]["size"]["width"].getInt(),
-                                   v["GUI"]["buttons"][size_t(i)]["size"]["height"].getInt());
+                sf::Vector2f pos(v["GUI"]["buttons"][size_t(i)]["position"]["x"].getInteger(),
+                                 v["GUI"]["buttons"][size_t(i)]["position"]["y"].getInteger());
+                sf::Vector2f bSize(v["GUI"]["buttons"][size_t(i)]["size"]["width"].getInteger(),
+                                   v["GUI"]["buttons"][size_t(i)]["size"]["height"].getInteger());
                 sf::Text t;
                 if(v["GUI"]["buttons"][size_t(i)]["text"]["font"].getString() != ""){
                     t.setFont(assets->getFont(v["GUI"]["buttons"][size_t(i)]["text"]["font"].getString()));
                 }
                 t.setString(v["GUI"]["buttons"][size_t(i)]["text"]["string"].getString());
                 t.setPosition(pos);
-                t.setCharacterSize(v["GUI"]["buttons"][size_t(i)]["text"]["size"].getInt());
+                t.setCharacterSize(v["GUI"]["buttons"][size_t(i)]["text"]["size"].getInteger());
                 sf::Sprite sprite;
                 sprite.setPosition(pos);
                 if(v["GUI"]["buttons"][size_t(i)]["imageID"].getString() != ""){

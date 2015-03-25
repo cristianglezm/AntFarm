@@ -30,23 +30,23 @@ namespace ant{
      */
     class EntityFactory final{
         public:
-                static const long int Ant = ComponentsMask::COMPONENT_VELOCITY
+                static constexpr long int Ant = ComponentsMask::COMPONENT_VELOCITY
                                 | ComponentsMask::COMPONENT_SPRITE
                                 | ComponentsMask::COMPONENT_TRANSFORM
                                 | ComponentsMask::COMPONENT_COUNT
                                 | ComponentsMask::COMPONENT_BOUNDS;
-                static const long int Door = ComponentsMask::COMPONENT_PASSAGE
+                static constexpr long int Door = ComponentsMask::COMPONENT_PASSAGE
                                 | ComponentsMask::COMPONENT_TRANSFORM
                                 | ComponentsMask::COMPONENT_SPRITE
                                 | ComponentsMask::COMPONENT_BOUNDS;
-                static const long int InDoor = ComponentsMask::COMPONENT_TRANSFORM
+                static constexpr long int InDoor = ComponentsMask::COMPONENT_TRANSFORM
                                 | ComponentsMask::COMPONENT_SPRITE
                                 | ComponentsMask::COMPONENT_IN;
-                static const long int OutDoor = ComponentsMask::COMPONENT_TRANSFORM
+                static constexpr long int OutDoor = ComponentsMask::COMPONENT_TRANSFORM
                                 | ComponentsMask::COMPONENT_BOUNDS
                                 | ComponentsMask::COMPONENT_SPRITE
                                 | ComponentsMask::COMPONENT_OUT;
-                static const long int level = ComponentsMask::COMPONENT_DESTRUCTABLE
+                static constexpr long int level = ComponentsMask::COMPONENT_DESTRUCTABLE
                                 | ComponentsMask::COMPONENT_TRANSFORM
                                 | ComponentsMask::COMPONENT_SPRITE;
             /**
@@ -112,7 +112,7 @@ namespace ant{
              * @return std::shared_ptr<ComponentFactory>
              */
             inline std::shared_ptr<ComponentFactory> getComponentFactory(){ return componentFactory; }
-            ~EntityFactory();
+            ~EntityFactory() = default;
         private:
             std::shared_ptr<ComponentFactory> componentFactory;
     };
