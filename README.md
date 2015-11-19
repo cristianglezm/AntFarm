@@ -25,12 +25,13 @@ AntFarm requires the following dependencies:
 
 Use CMake to build the project.
 
-* select the root directory of JsonBox
+```
+mkdir build && cd build
+cmake -G"MinGW Makefiles" -DSFML_ROOT=<baseDir> -DJSONBOX_ROOT=<baseDir> ..
+make
+make install
 
-* select the root directory of SFML
-
-* press configure and then generate Project.
-
+```
 
 Contributions
 ===
