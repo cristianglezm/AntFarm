@@ -1,0 +1,19 @@
+language: cpp
+
+
+compiler:
+	- gcc
+	- clang
+
+
+install:
+	- git clone https://github.com/SFML/SFML && cd SFML && mkdir build && cd build
+	- cmake .. && make && make install
+	- git clone https://github.com/anhero/JsonBox && cd JsonBox && mkdir build && cd build
+	- cmake .. && make && make install
+
+
+script:
+	- cmake .
+	- make
+	- make install
