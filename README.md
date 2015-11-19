@@ -21,7 +21,7 @@ AntFarm requires the following dependencies:
 
 * [SFML](http://sfml-dev.org) 2.1 or newer
 
-* [JsonBox](https://github.com/anhero/JsonBox) 0.4.4 or newer
+* [JsonBox](https://github.com/anhero/JsonBox) 0.6.2 or newer
 
 Use CMake to build the project.
 
