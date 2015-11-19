@@ -26,7 +26,7 @@ endif(JSONBOX_ROOT)
 
 find_path(JSONBOX_INCLUDE_DIR JsonBox/include/JsonBox.h
           PATH_SUFFIXES include
-          PATHS ${FIND_SFML_PATHS})
+          PATHS ${FIND_JSONBOX_PATHS})
 
 find_library(JSONBOX_LIBRARY
 		NAMES JsonBox
@@ -41,7 +41,7 @@ set(JSONBOX_LIBRARIES "${JSONBOX_LIBRARY}")
 
 if(NOT JSONBOX_FOUND)
 	set(FIND_JSONBOX_ERROR "Could NOT find JSONBOX")
-	if(SFML_FIND_REQUIRED)
-		message(FATAL_ERROR ${FIND_SFML_ERROR})
+	if(JSONBOX_FIND_REQUIRED)
+		message(FATAL_ERROR ${FIND_JSONBOX_ERROR})
 	endif()
 endif()
