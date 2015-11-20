@@ -50,12 +50,11 @@ install:
 - $cmake34 -DCMAKE_INSTALL_PREFIX=$(pwd)/install .. && make && make install && cd ..
 - git clone https://github.com/anhero/JsonBox && cd JsonBox && mkdir build && cd build
 - export JSONBOX_ROOT=$(pwd)/install
-- $cmake34 -DCMAKE_INSTALL_PREFIX=$JSONBOX_ROOT .. && make && make install && cd ../..
+- $cmake34 -DCMAKE_INSTALL_PREFIX=$JSONBOX_ROOT .. && make && make install
 
 
 script:
-- cd ../.. && mkdir build && cd build
-- pwd
+- cd ../../.. && mkdir build && cd build
 - $cmake34 -DSFML_ROOT=$SFML_ROOT -DJSONBOX_ROOT=$JSONBOX_ROOT -DCMAKE_INSTALL_PREFIX=$(pwd)/install ..
 - make
 - make install
