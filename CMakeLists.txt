@@ -24,9 +24,11 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/Modules/")
 
 FILE(GLOB_RECURSE AntFarm_SOURCES "src/*.cpp" "src/*")
 FILE(GLOB_RECURSE AntFarm_INCLUDES "include/*.h" "include/*.hpp")
-FILE(GLOB_RECURSE SFML_DEBUG_DLLS "${SFML_ROOT}/bin/sfml-*-d-2.dll")
-FILE(GLOB_RECURSE SFML_RELEASE_DLLS "${SFML_ROOT}/bin/*-2.dll")
-LIST(REMOVE_ITEM SFML_RELEASE_DLLS ${SFML_DEBUG_DLLS})
+if(WIN32)
+	FILE(GLOB_RECURSE SFML_DEBUG_DLLS "${SFML_ROOT}/bin/sfml-*-d-2.dll")
+	FILE(GLOB_RECURSE SFML_RELEASE_DLLS "${SFML_ROOT}/bin/*-2.dll")
+	LIST(REMOVE_ITEM SFML_RELEASE_DLLS ${SFML_DEBUG_DLLS})
+endif(WIN32)
 
 add_executable(AntFarm ${AntFarm_SOURCES} ${AntFarm_INCLUDES})
 
@@ -41,7 +43,7 @@ add_executable(AntFarm ${AntFarm_SOURCES} ${AntFarm_INCLUDES})
 ################################################################################
 
 #sfml
-find_package(SFML 2.3 COMPONENTS graphics window system network audio REQUIRED)
+find_package(SFML 2.1 COMPONENTS graphics window system network audio REQUIRED)
 if(SFML_FOUND)
 	include_directories(${SFML_INCLUDE_DIR})
 	target_link_libraries(AntFarm ${SFML_LIBRARIES})
@@ -59,7 +61,9 @@ endif(JSONBOX_FOUND)
 ################################################################################
 
 SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14 -Wall")
-SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -static-libgcc -static-libstdc++ -static")
+if(WIN32)
+	SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -static-libgcc -static-libstdc++ -static")
+endif(WIN32)
 
 if(NOT CMAKE_BUILD_TYPE)
 	set(CMAKE_BUILD_TYPE Release CACHE STRING "Choose the type of build (Debug or Release)" FORCE)
@@ -76,12 +80,12 @@ endif()
 #################################################################################
 install(TARGETS AntFarm RUNTIME DESTINATION .
 			ARCHIVE DESTINATION .)
-if(NOT BUILD_STATIC)
+if(NOT BUILD_STATIC AND WIN32)
 	if(CMAKE_BUILD_TYPE STREQUAL "Debug")
 		install(FILES ${SFML_DEBUG_DLLS} DESTINATION .)
 	elseif(CMAKE_BUILD_TYPE STREQUAL "Release")
 		install(FILES ${SFML_RELEASE_DLLS} DESTINATION .)
 	endif()
-endif(NOT BUILD_STATIC)
+endif(NOT BUILD_STATIC AND WIN32)
 
 install(DIRECTORY data DESTINATION .)
