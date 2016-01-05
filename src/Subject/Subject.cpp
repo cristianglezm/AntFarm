@@ -2,7 +2,7 @@
 
 namespace ant{
     void Subject::addObserver(Observer* o){
-        Observers.push_back(o);
+        Observers.emplace_back(o);
     }
     void Subject::removeObserver(Observer* o){
         Observers.erase(std::remove(Observers.begin(),Observers.end(),o),Observers.end());

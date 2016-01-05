@@ -47,7 +47,7 @@ namespace ant{
                 inline sf::Text getText(){ return text; }
                 bool contains(sf::Vector2f point);
                 virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
-                virtual ~Button(){}
+                virtual ~Button() = default;
             private:
                 constructorSystem::command action;
                 sf::Vector2f position;

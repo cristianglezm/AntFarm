@@ -64,7 +64,7 @@ namespace ant{
                  *        la entidad especificada a la lista(la misma entidad especificada es agregada tambien)
                  *
                  * @param entities Quadtree::list& lista a la que agregan las entidades del mismo sector de la especificada.
-                 * @param e Entity * Entidad a comprobar.
+                 * @param e Entity* Entidad a comprobar.
                  * @return Quadtree::list lista de entidades
                  */
                 list retrieve(list& entities,Entity* e);
@@ -73,7 +73,7 @@ namespace ant{
                  * @param win sf::RenderWindow& ventana a la cual dibujar.
                  */
                 void render(sf::RenderWindow& win);
-                ~Quadtree();
+                ~Quadtree() = default;
             private:
                 const static unsigned int MAX_CAPACITY = 10;
                 const static unsigned int MAX_LEVEL = 1000;

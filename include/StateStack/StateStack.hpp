@@ -77,12 +77,12 @@ namespace ant{
              */
             void handleEvent(const sf::Event& event);
             /**
-             * @brief Añade un estado al Stack
+             * @brief AÃ±ade un estado al Stack
              * @param stateID AppStates::ID
              */
             void pushState(AppStates::ID stateID);
             /**
-             * @brief Elimina el ultimo estado añadido.
+             * @brief Elimina el ultimo estado aÃ±adido.
              */
             void popState();
             /**
@@ -120,13 +120,13 @@ namespace ant{
         template <typename T>
         void StateStack::registerState(AppStates::ID stateID){
             mFactories[stateID] = [this] (){
-                return AppState::uPtr(new T(*this, mContext));
+                return AppState::uPtr(std::make_unique<T>(*this, mContext));
             };
         }
         template <typename T>
         void StateStack::registerState(AppStates::ID stateID,std::string msg){
             mFactories[stateID] = [this,msg] (){
-                return AppState::uPtr(new T(*this, mContext,msg));
+                return AppState::uPtr(std::make_unique<T>(*this, mContext,msg));
             };
         }
 }

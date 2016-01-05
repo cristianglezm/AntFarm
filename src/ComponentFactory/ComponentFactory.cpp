@@ -9,7 +9,7 @@ namespace ant{
                 bounds->width = xWidth;
                 bounds->left = position.x;
                 bounds->top = position.y;
-                auto destructible = Utils::make_unique<sf::VertexArray>(sf::Points,xWidth*yHeight);
+                auto destructible = std::make_unique<sf::VertexArray>(sf::Points,xWidth*yHeight);
                 // map the image to vertexArray
                 for(auto x=0u;x<xWidth;++x){
                     for(auto y=0u;y<yHeight;++y){
@@ -21,8 +21,8 @@ namespace ant{
                 if(position.x != 0 && position.y != 0){
                     xWidth += position.x;
                     yHeight += position.y;
-                    for(int x=position.x;x<xWidth;++x){
-                        for(int y=position.y;y<yHeight;++y){
+                    for(unsigned int x=position.x;x<xWidth;++x){
+                        for(unsigned int y=position.y;y<yHeight;++y){
                             (*destructible)[(yHeight-position.y)*(x-position.x)+(y-position.y)].position = sf::Vector2f(x,y);
                         }
                     }
@@ -43,7 +43,7 @@ namespace ant{
                 this->assets = assets;
             }
             std::unique_ptr<baseComponent> ComponentFactory::createTransform(const sf::Vector2f& position,const sf::Vector2f& scale,const float& rotation){
-                auto c = Utils::make_unique<ComponentsAlias::transform>(ComponentsMask::COMPONENT_TRANSFORM,position,scale,rotation);
+                auto c = std::make_unique<ComponentsAlias::transform>(ComponentsMask::COMPONENT_TRANSFORM,position,scale,rotation);
                 return std::move(c);
             }
             std::unique_ptr<baseComponent> ComponentFactory::createVelocity(const float& speed,const float& minSpeed,const float& maxSpeed){
@@ -53,45 +53,45 @@ namespace ant{
                 }else if(spd < minSpeed){
                     spd = minSpeed;
                 }
-                auto c = Utils::make_unique<ComponentsAlias::velocity>(ComponentsMask::COMPONENT_VELOCITY,
+                auto c = std::make_unique<ComponentsAlias::velocity>(ComponentsMask::COMPONENT_VELOCITY,
                                                                             sf::Vector2f(0,0),spd,minSpeed,maxSpeed);
                 return std::move(c);
             }
             std::unique_ptr<baseComponent> ComponentFactory::createBounds(const sf::FloatRect& bounds){
-                auto c = Utils::make_unique<ComponentsAlias::bounds>(ComponentsMask::COMPONENT_BOUNDS,bounds);
+                auto c = std::make_unique<ComponentsAlias::bounds>(ComponentsMask::COMPONENT_BOUNDS,bounds);
                 return std::move(c);
             }
             std::unique_ptr<baseComponent> ComponentFactory::createDestructable(sf::Vector2f position,const std::string& imageID){
                 sf::FloatRect bounds;
                 auto destructable = mapImage(position,assets->getImage(imageID),&bounds);
-                auto c = Utils::make_unique<ComponentsAlias::destructable>(
+                auto c = std::make_unique<ComponentsAlias::destructable>(
                                             ComponentsMask::COMPONENT_DESTRUCTABLE,imageID,std::move(destructable),bounds);
                 return std::move(c);
             }
             std::unique_ptr<baseComponent> ComponentFactory::createAnimation(const std::vector<std::string>& ids){
                 auto compID = ComponentsMask::COMPONENT_ANIMATION;
-                auto c = Utils::make_unique<ComponentsAlias::animation>(compID,ids);
+                auto c = std::make_unique<ComponentsAlias::animation>(compID,ids);
                 return std::move(c);
             }
             std::unique_ptr<baseComponent> ComponentFactory::createSprite(const std::string& id){
-                auto c = Utils::make_unique<ComponentsAlias::sprite>(
-                            ComponentsMask::COMPONENT_SPRITE,id,Utils::make_unique<sf::Sprite>(assets->getTexture(id)));
+                auto c = std::make_unique<ComponentsAlias::sprite>(
+                            ComponentsMask::COMPONENT_SPRITE,id,std::make_unique<sf::Sprite>(assets->getTexture(id)));
                 return std::move(c);
             }
             std::unique_ptr<baseComponent> ComponentFactory::createPassage(const sf::Vector2f& dest){
-                auto c = Utils::make_unique<ComponentsAlias::passage>(ComponentsMask::COMPONENT_PASSAGE,dest);
+                auto c = std::make_unique<ComponentsAlias::passage>(ComponentsMask::COMPONENT_PASSAGE,dest);
                 return std::move(c);
             }
             std::unique_ptr<baseComponent> ComponentFactory::createIn(){
-                auto c = Utils::make_unique<ComponentsAlias::in>(ComponentsMask::COMPONENT_IN);
+                auto c = std::make_unique<ComponentsAlias::in>(ComponentsMask::COMPONENT_IN);
                 return std::move(c);
             }
             std::unique_ptr<baseComponent> ComponentFactory::createOut(){
-                auto c = Utils::make_unique<ComponentsAlias::out>(ComponentsMask::COMPONENT_OUT);
+                auto c = std::make_unique<ComponentsAlias::out>(ComponentsMask::COMPONENT_OUT);
                 return std::move(c);
             }
             std::unique_ptr<baseComponent> ComponentFactory::createCounter(const int& count){
-                auto c = Utils::make_unique<ComponentsAlias::count>(ComponentsMask::COMPONENT_COUNT,count);
+                auto c = std::make_unique<ComponentsAlias::count>(ComponentsMask::COMPONENT_COUNT,count);
                 return std::move(c);
             }
 }

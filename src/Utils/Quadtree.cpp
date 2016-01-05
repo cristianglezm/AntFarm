@@ -66,7 +66,7 @@ namespace ant{
                         return;
                     }
                 }
-                entities.push_back(e);
+                entities.emplace_back(e);
 
                 if(entities.size() > this->MAX_CAPACITY && level < this->MAX_LEVEL){
                     if(nodes[0] == nullptr) {
@@ -123,9 +123,6 @@ namespace ant{
             boundsShape.setFillColor(sf::Color::Transparent);
             boundsShape.setOutlineColor(color);
             win.draw(boundsShape);
-        }
-        Quadtree::~Quadtree(){
-
         }
     }
 }

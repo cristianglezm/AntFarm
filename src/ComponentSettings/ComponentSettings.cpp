@@ -5,16 +5,17 @@ namespace ant{
     : entityName("")
     , minSpeed(0)
     , maxSpeed(0)
-    , Speed(0)
     , scale(sf::Vector2f(1,1))
     , position(sf::Vector2f(0,0))
     , rotation(0)
     , spriteID("")
+    , animation()
     , dest(sf::Vector2f(0,0))
     , DestructiblePosition(sf::Vector2f(0,0))
     , imageID("")
     , bounds(sf::FloatRect(0,0,0,0))
-    , count(10){}
+    , count(10)
+    , Speed(0){}
     void ComponentSettings::loadSettings(const std::string& filename){
         std::fstream file(filename);
         JsonBox::Value v(file);

@@ -196,7 +196,7 @@ namespace ant{
                 }else if(actionID == "explosion"){
                     action = Constructions::explosion;
                 }
-                buttons.push_back(Utils::make_unique<GUI::Button>(pos,bSize,sprite,t,action));
+                buttons.emplace_back(std::make_unique<GUI::Button>(pos,bSize,sprite,t,action));
             }
         }
     }

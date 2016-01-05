@@ -30,7 +30,7 @@ namespace ant{
         return true;
     }
     void AssetManager::addTexture(const std::string& id,const std::string& filename){
-        std::unique_ptr<sf::Texture> texture(new sf::Texture());
+        std::unique_ptr<sf::Texture> texture(std::make_unique<sf::Texture>());
         if(!texture->loadFromFile(filename)){
             throw std::runtime_error("Failed to load texture " + filename);
         }
@@ -47,7 +47,7 @@ namespace ant{
         textures.erase(id);
     }
     void AssetManager::addImage(const std::string& id,const std::string& filename){
-        std::unique_ptr<sf::Image> image(new sf::Image());
+        std::unique_ptr<sf::Image> image(std::make_unique<sf::Image>());
         if(!image->loadFromFile(filename)){
             throw std::runtime_error("Failed to load image " + filename);
         }
@@ -64,7 +64,7 @@ namespace ant{
         images.erase(id);
     }
     void AssetManager::addFont(const std::string& id,const std::string& filename){
-        std::unique_ptr<sf::Font> font(new sf::Font());
+        std::unique_ptr<sf::Font> font(std::make_unique<sf::Font>());
         if(!font->loadFromFile(filename)){
             throw std::runtime_error("Failed to load Font " + filename);
         }

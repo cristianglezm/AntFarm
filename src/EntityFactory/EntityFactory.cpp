@@ -33,7 +33,7 @@ namespace ant{
         return createEntity(mask,cs);
     }
     std::unique_ptr<Entity> EntityFactory::createEntity(long int mask, ComponentSettings& cs){
-        auto e = Utils::make_unique<Entity>();
+        auto e = std::make_unique<Entity>();
         e->setName(cs.entityName);
         if((mask & ComponentsMask::COMPONENT_TRANSFORM) == ComponentsMask::COMPONENT_TRANSFORM){
             e->addComponent(componentFactory->createTransform(cs.position,cs.scale,cs.rotation));

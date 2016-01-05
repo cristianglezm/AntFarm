@@ -28,13 +28,13 @@ namespace ant{
         applyPendingChanges();
     }
     void StateStack::pushState(AppStates::ID stateID){
-        mPendingList.push_back(PendingChange(Push, stateID));
+        mPendingList.emplace_back(PendingChange(Push, stateID));
     }
     void StateStack::popState(){
-        mPendingList.push_back(PendingChange(Pop));
+        mPendingList.emplace_back(PendingChange(Pop));
     }
     void StateStack::clearStates(){
-        mPendingList.push_back(PendingChange(Clear));
+        mPendingList.emplace_back(PendingChange(Clear));
     }
     bool StateStack::isEmpty() const{
         return mStack.empty();
@@ -48,7 +48,7 @@ namespace ant{
         for(auto& change: mPendingList){
             switch(change.action){
                 case Push:
-                    mStack.push_back(createState(change.stateID));
+                    mStack.emplace_back(createState(change.stateID));
                     break;
                 case Pop:
                     mStack.pop_back();

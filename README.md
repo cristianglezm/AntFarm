@@ -1,10 +1,10 @@
-﻿# AntFarm #
+# AntFarm #
 
 [![Build Status](https://travis-ci.org/cristianglezm/AntFarm.svg)](https://travis-ci.org/cristianglezm/AntFarm)
 
-AntFarm is a game about ants that are trapped and they need to escape.
+AntFarm is a game about ants that are trapped and they have to escape.
 
-[Manual del Juego](https://bitbucket.org/cristian_glez_m/antfarm/wiki/Manual%20de%20Juego)
+[Game Manual(Spanish)](https://bitbucket.org/cristian_glez_m/antfarm/wiki/Manual%20de%20Juego)
 
 [Video](https://www.youtube.com/watch?v=o17TOI_zKAY)
 
@@ -12,7 +12,7 @@ AntFarm is a game about ants that are trapped and they need to escape.
 
 Requires CMake and one of the following compilers:
 
-* GCC 4.8 or newer;
+* GCC 4.9 or newer;
 * Clang 3.3 or newer (Xcode 5.0 or newer on OS X);
 * Visual Studio 2010 or newer;
 
@@ -42,7 +42,7 @@ You can contribute adding new features from the list.
 
 For example a new action:
 
-* Create a function in Constructions (Systems/constructorSystems/constructions)
+* Create a function in [Constructions](https://github.com/cristianglezm/AntFarm/blob/master/src/Systems/constructorSystem/Constructions.cpp)
 
 ```
 #!c++

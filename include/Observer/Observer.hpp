@@ -35,7 +35,7 @@ namespace ant{
              * @param e std::shared_ptr<baseEvent> evento.
              */
             virtual void onNotify(std::shared_ptr<baseEvent> e) = 0;
-            virtual ~Observer(){};
+            virtual ~Observer() = default;
     };
 }
 #endif // OBSERVER_H

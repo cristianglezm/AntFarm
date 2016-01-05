@@ -12,26 +12,26 @@ namespace ant{
         playOption.setString("Play");
         Utils::centerOrigin(playOption);
         playOption.setPosition(context.window->getView().getSize() / 2.f);
-        mOptions.push_back(playOption);
+        mOptions.emplace_back(playOption);
         sf::Text helpOption;
         helpOption.setFont(context.assets->getFont(font));
         helpOption.setString("Help");
         Utils::centerOrigin(helpOption);
         helpOption.setPosition(playOption.getPosition() + sf::Vector2f(0.f, 30.f));
-        mOptions.push_back(helpOption);
+        mOptions.emplace_back(helpOption);
         sf::Text exitOption;
         exitOption.setFont(context.assets->getFont(font));
         exitOption.setString("Exit");
         Utils::centerOrigin(exitOption);
         exitOption.setPosition(helpOption.getPosition() + sf::Vector2f(0.f, 30.f));
-        mOptions.push_back(exitOption);
+        mOptions.emplace_back(exitOption);
         sf::Text gameTitle;
         gameTitle.setFont(context.assets->getFont(font));
         gameTitle.setString("AntFarm");
         gameTitle.setCharacterSize(50);
         Utils::centerOrigin(gameTitle);
         gameTitle.setPosition(playOption.getPosition() - sf::Vector2f(0.f, 100.f));
-        mOptions.push_back(gameTitle);
+        mOptions.emplace_back(gameTitle);
         updateOptionText();
     }
     void MenuState::render(){

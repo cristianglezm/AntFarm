@@ -6,6 +6,5 @@ Completar CMake:
 	Falta completar CMake AntFarm/Tests
 	Falta Completar CMake AntFarm
 		añadir boolean para elegir si compilar los tests o no.
-		Añadir comando para copiar los datos para el juego
 Añadir Features...
 -----------------------------------------------------

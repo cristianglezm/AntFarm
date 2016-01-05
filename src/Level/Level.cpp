@@ -6,8 +6,8 @@ namespace ant{
     , eventQueues()
     , gameEventDispatchers(){
         auto eventQueue(std::make_shared<EventQueue>());
-        eventQueues.push_back(eventQueue);
-        gameEventDispatchers.push_back(ged);
+        eventQueues.emplace_back(eventQueue);
+        gameEventDispatchers.emplace_back(ged);
         worldFactory = std::make_shared<WorldFactory>(ged,eventQueue);
         worldFactory->loadAssets(assetsFilename);
         init(bounds);
@@ -17,8 +17,8 @@ namespace ant{
     , eventQueues()
     , gameEventDispatchers(){
         auto eventQueue(std::make_shared<EventQueue>());
-        eventQueues.push_back(eventQueue);
-        gameEventDispatchers.push_back(ged);
+        eventQueues.emplace_back(eventQueue);
+        gameEventDispatchers.emplace_back(ged);
         worldFactory = std::make_shared<WorldFactory>(ged,eventQueue);
         worldFactory->setAssetManager(am);
         init(bounds);
@@ -55,10 +55,10 @@ namespace ant{
         worldFactory->setEventQueue(eventQueues[id]);
     }
     void Level::addEventQueue(std::shared_ptr<EventQueue> eq){
-        eventQueues.push_back(eq);
+        eventQueues.emplace_back(eq);
     }
     void Level::addGameEventDispatcher(std::shared_ptr<GameEventDispatcher> ged){
-        gameEventDispatchers.push_back(ged);
+        gameEventDispatchers.emplace_back(ged);
     }
     void Level::setGameEventDispatcher(int id,std::shared_ptr<GameEventDispatcher> ged){
         gameEventDispatchers[id] = ged;
