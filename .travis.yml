@@ -21,6 +21,8 @@ addons:
     #SFML dependencies:
     - libopenal-dev
     - libjpeg-dev
+    - libvorbis-dev
+    - libflac-dev
     - libglew-dev
     - libudev-dev
     - libxrandr-dev
@@ -44,7 +46,7 @@ install:
 - wget --no-check-certificate  https://cmake.org/files/v3.4/cmake-3.4.0.tar.gz
 - tar -zxf cmake-3.4.0.tar.gz && cd cmake-3.4.0 && ./bootstrap --prefix=$(pwd)
 - make && make install && export cmake34=$(pwd)/bin/cmake && cd ..
-- git clone https://github.com/SFML/SFML && cd SFML && git checkout 2.2
+- git clone https://github.com/SFML/SFML && cd SFML && git checkout 2.3.2
 - export SFML_ROOT=$(pwd)/build/install
 - mkdir build && cd build
 - $cmake34 -DCMAKE_INSTALL_PREFIX=$(pwd)/install .. && make && make install && cd ..

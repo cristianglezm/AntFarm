@@ -12,16 +12,16 @@ AntFarm is a game about ants that are trapped and they have to escape.
 
 Requires CMake and one of the following compilers:
 
-* GCC 4.9 or newer;
-* Clang 3.3 or newer (Xcode 5.0 or newer on OS X);
-* Visual Studio 2010 or newer;
+* GCC 5.0 or newer;
+* Clang 3.3 or newer (Not Tested);
+* Visual Studio 2010 or newer (Not Tested);
 
 Building
 ===
 
 AntFarm requires the following dependencies:
 
-* [SFML](http://sfml-dev.org) 2.1 or newer
+* [SFML](http://sfml-dev.org) 2.3.2 or newer
 
 * [JsonBox](https://github.com/anhero/JsonBox) 0.6.2 or newer
 
