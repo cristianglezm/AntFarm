@@ -21,7 +21,7 @@ namespace ant{
         textScore.setFont(context.assets->getFont(font));
         textScore.setPosition(Config::screenSize.width-50,10);
         textScore.setString(Utils::toString(score));
-        textScore.setColor(sf::Color::Black);
+        textScore.setFillColor(sf::Color::Black);
         loadGUIConf(Config::GUI_FILE);
     }
     void GameState::render(){

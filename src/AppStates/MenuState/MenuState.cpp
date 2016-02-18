@@ -92,8 +92,8 @@ namespace ant{
             return;
         }
         for(auto& text : mOptions){
-            text.setColor(sf::Color::White);
+            text.setFillColor(sf::Color::White);
         }
-        mOptions[mOptionIndex].setColor(sf::Color::Red);
+        mOptions[mOptionIndex].setFillColor(sf::Color::Red);
     }
 }

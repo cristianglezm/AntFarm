@@ -8,7 +8,7 @@ option(BUILD_STATIC "TRUE to statically link to the standard libraries and depen
 if(BUILD_STATIC)
 	SET(SFML_STATIC_LIBRARIES TRUE)
 	SET(BUILD_SHARED_LIBS FALSE)
-	SET(SFML_USE_STATIC_STD_LIBS TRUE)
+	SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -static -lpthread -static-libgcc -static-libstdc++ -mwindows")
 endif(BUILD_STATIC)
 
 ################################################################################
@@ -24,10 +24,13 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/Modules/")
 
 FILE(GLOB_RECURSE AntFarm_SOURCES "src/*.cpp" "src/*")
 FILE(GLOB_RECURSE AntFarm_INCLUDES "include/*.h" "include/*.hpp")
+
 if(WIN32)
 	FILE(GLOB_RECURSE SFML_DEBUG_DLLS "${SFML_ROOT}/bin/sfml-*-d-2.dll")
 	FILE(GLOB_RECURSE SFML_RELEASE_DLLS "${SFML_ROOT}/bin/*-2.dll")
-	LIST(REMOVE_ITEM SFML_RELEASE_DLLS ${SFML_DEBUG_DLLS})
+	if(NOT SFML_DEBUG_DLLS STREQUAL "")
+		LIST(REMOVE_ITEM SFML_RELEASE_DLLS ${SFML_DEBUG_DLLS})
+	endif()
 endif(WIN32)
 
 add_executable(AntFarm ${AntFarm_SOURCES} ${AntFarm_INCLUDES})
@@ -62,7 +65,7 @@ endif(JSONBOX_FOUND)
 
 SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14 -Wall")
 if(WIN32)
-	SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -static-libgcc -static-libstdc++ -static")
+	SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -static -lpthread -static-libgcc -static-libstdc++ -mwindows")
 endif(WIN32)
 
 if(NOT CMAKE_BUILD_TYPE)
@@ -80,6 +83,8 @@ endif()
 #################################################################################
 install(TARGETS AntFarm RUNTIME DESTINATION .
 			ARCHIVE DESTINATION .)
+install(FILES LICENSE.txt README.md DESTINATION .)
+
 if(NOT BUILD_STATIC AND WIN32)
 	if(CMAKE_BUILD_TYPE STREQUAL "Debug")
 		install(FILES ${SFML_DEBUG_DLLS} DESTINATION .)

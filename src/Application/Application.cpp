@@ -68,11 +68,11 @@ namespace ant{
         mStatisticsNumFrames += 1;
         if (mStatisticsUpdateTime >= sf::seconds(1.0f)){
             if(mStatisticsNumFrames < 10){
-                mStatisticsText.setColor(sf::Color::Red);
+                mStatisticsText.setFillColor(sf::Color::Red);
             }else if(mStatisticsNumFrames > 59){
-                mStatisticsText.setColor(sf::Color::Green);
+                mStatisticsText.setFillColor(sf::Color::Green);
             }else if(mStatisticsNumFrames < 30){
-                mStatisticsText.setColor(sf::Color::Yellow);
+                mStatisticsText.setFillColor(sf::Color::Yellow);
             }
             mStatisticsText.setString(Utils::toString(mStatisticsNumFrames));
             mStatisticsUpdateTime -= sf::seconds(1.0f);
