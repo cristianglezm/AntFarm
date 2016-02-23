@@ -152,8 +152,8 @@ namespace ant{
         }
     }
     void GameState::loadGUIConf(const std::string& filename){
-        std::fstream file(filename);
-        JsonBox::Value v(file);
+        JsonBox::Value v;
+        v.loadFromFile(filename);
         if(!v["GUI"]["buttons"].isNull()){
             int size = v["GUI"]["buttons"].getArray().size();
             for(int i=0;i<size;++i){
@@ -201,8 +201,8 @@ namespace ant{
         }
     }
     void GameState::loadConfig(const std::string& filename){
-        std::fstream file(filename);
-        JsonBox::Value v(file);
+        JsonBox::Value v;
+        v.loadFromFile(filename);
         if(v["Config"]["font"].getString() != ""){
             font = v["Config"]["font"].getString();
         }

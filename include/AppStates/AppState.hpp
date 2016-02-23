@@ -22,6 +22,7 @@
 #include <SFML/System/Time.hpp>
 #include <memory>
 #include <functional>
+#include <Utils/Utility.hpp>
 
 namespace ant{
     class StateStack;

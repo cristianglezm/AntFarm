@@ -1,6 +1,7 @@
 #include <Utils/Utility.hpp>
 #include <SFML/Graphics/Sprite.hpp>
 #include <SFML/Graphics/Text.hpp>
+
 namespace ant{
     namespace Utils{
         void centerOrigin(sf::Sprite& sprite){

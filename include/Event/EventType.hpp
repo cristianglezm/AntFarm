@@ -21,7 +21,7 @@
  * @author Cristian Glez <Cristian.glez.m@gmail.com>
  * @version 0.1
  */
-struct EventType final{
+namespace EventType{
         static constexpr long int COLLISION_EVENT = 0;
         static constexpr long int TERRAIN_COLLISION = 1;
         static constexpr long int CHANGE_OVERTIME = 2;
@@ -32,5 +32,5 @@ struct EventType final{
         static constexpr long int LEVEL_COMPLETE = 7;
         static constexpr long int LEVEL_FAILED = 8;
         static constexpr long int UPDATE_SCORE = 9;
-};
+}
 #endif // EVENT_TYPE_H

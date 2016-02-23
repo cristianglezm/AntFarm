@@ -16,11 +16,13 @@
 
 #ifndef COMPONENT_SETTINGS_H
 #define COMPONENT_SETTINGS_H
+
 #include <string>
 #include <fstream>
 #include <SFML/Graphics/Rect.hpp>
 #include <SFML/System/Vector2.hpp>
 #include <JsonBox.h>
+
 namespace ant{
     /**
      * @brief Clase para la configuracion de los componentes en EntityFactory.

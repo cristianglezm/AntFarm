@@ -22,7 +22,7 @@
  * @author Cristian Glez <Cristian.glez.m@gmail.com>
  * @version 0.1
  */
-struct ComponentsMask final{
+namespace ComponentsMask{
         static constexpr long int COMPONENT_NONE = 0;
         static constexpr long int COMPONENT_SPRITE = 1 << 0;
         static constexpr long int COMPONENT_ANIMATION = 1 << 1;
@@ -34,5 +34,5 @@ struct ComponentsMask final{
         static constexpr long int COMPONENT_OUT = 1 << 7;
         static constexpr long int COMPONENT_IN = 1 << 8;
         static constexpr long int COMPONENT_COUNT = 1 << 9;
-};
+}
 #endif // COMPONENT_MASK_H

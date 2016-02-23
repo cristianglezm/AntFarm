@@ -46,7 +46,7 @@ add_executable(AntFarm ${AntFarm_SOURCES} ${AntFarm_INCLUDES})
 ################################################################################
 
 #sfml
-find_package(SFML 2.1 COMPONENTS graphics window system network audio REQUIRED)
+find_package(SFML 2.3 COMPONENTS graphics window system network audio REQUIRED)
 if(SFML_FOUND)
 	include_directories(${SFML_INCLUDE_DIR})
 	target_link_libraries(AntFarm ${SFML_LIBRARIES})
@@ -93,4 +93,4 @@ if(NOT BUILD_STATIC AND WIN32)
 	endif()
 endif(NOT BUILD_STATIC AND WIN32)
 
-install(DIRECTORY data DESTINATION .)
+install(DIRECTORY android/assets/data DESTINATION .)

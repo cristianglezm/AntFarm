@@ -4,8 +4,8 @@ namespace ant{
 
     }
     bool AssetManager::loadAssets(const std::string& filename){
-        std::fstream file(filename);
-        JsonBox::Value v(file);
+        JsonBox::Value v;
+        v.loadFromFile(filename);
         if(!v["textures"].isNull()){
             int size = v["textures"].getArray().size();
             for(int i=0;i<size;++i){

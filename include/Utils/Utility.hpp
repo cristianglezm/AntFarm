@@ -14,23 +14,14 @@
 // limitations under the License.
 ////////////////////////////////////////////////////////////////
 
-#ifndef ANT_UTILITY_H
-#define ANT_UTILITY_H
+#ifndef ANT_UTILITY_HPP
+#define ANT_UTILITY_HPP
 #include <memory>
+#include <utility>
 #include <SFML/Graphics/Sprite.hpp>
 #include <SFML/Graphics/Text.hpp>
 namespace ant{
     namespace Utils{
-        /**
-         * @brief Utilidad para crear un puntero unico.
-         * @tparam T clase para crear el puntero
-         * @tparam args Args argumentos
-         * @return std::unique_ptr<T<Args>>
-         */
-        template<typename T, typename... Args>
-        std::unique_ptr<T> make_unique(Args&&... args) {
-            return std::unique_ptr<T>(new T(std::forward<Args>(args)...));
-        }
         /**
          * @brief Utilidad para crear un puntero Compartido.
          * @tparam T clase para crear el puntero
@@ -53,4 +44,18 @@ namespace ant{
         void centerOrigin(sf::Sprite& sprite);
     }
 }
-#endif // ANT_UTILITY_H
+#if defined ANDROID && USE_MAKE_UNIQUE
+    namespace std{
+        /**
+         * @brief Utilidad para crear un puntero unico.
+         * @tparam T clase para crear el puntero
+         * @tparam args Args argumentos
+         * @return unique_ptr<T<Args>>
+         */
+        template<typename T, typename... Args>
+        unique_ptr<T> make_unique(Args&&... args) {
+            return unique_ptr<T>(new T(forward<Args>(args)...));
+        }
+    }
+#endif
+#endif // ANT_UTILITY_HPP

@@ -1,4 +1,4 @@
-////////////////////////////////////////////////////////////////
+﻿////////////////////////////////////////////////////////////////
 // Copyright 2014 Cristian Glez <Cristian.glez.m@gmail.com>
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -22,6 +22,7 @@
 #include <map>
 #include <AppStates/AppStates.hpp>
 #include <AppStates/AppState.hpp>
+#include <Utils/Utility.hpp>
 #include <SFML/System/Time.hpp>
 #include <SFML/Window/Event.hpp>
 
@@ -94,7 +95,7 @@ namespace ant{
              * @return bool
              */
             bool isEmpty() const;
-            ~StateStack();
+            ~StateStack() = default;
         private:
             /**
              * @brief Crea el estado especificado

@@ -16,6 +16,7 @@
 
 #ifndef ASSET_MANAGER_H
 #define ASSET_MANAGER_H
+
 #include <stdexcept>
 #include <map>
 #include <memory>
@@ -24,6 +25,7 @@
 #include <SFML/Graphics/Texture.hpp>
 #include <SFML/Graphics/Font.hpp>
 #include <SFML/Graphics/Image.hpp>
+#include <Utils/Utility.hpp>
 
 namespace ant{
     /**

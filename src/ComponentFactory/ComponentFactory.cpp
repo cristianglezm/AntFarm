@@ -1,5 +1,4 @@
 #include <ComponentFactory/ComponentFactory.hpp>
-#include <Components/ComponentsAlias.hpp>
 
 namespace ant{
             std::unique_ptr<sf::VertexArray> ComponentFactory::mapImage(const sf::Vector2f& position,sf::Image& img,sf::FloatRect* bounds){

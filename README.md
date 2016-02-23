@@ -1,4 +1,4 @@
-# AntFarm #
+# AntFarm
 
 [![Build Status](https://travis-ci.org/cristianglezm/AntFarm.svg)](https://travis-ci.org/cristianglezm/AntFarm)
 
@@ -35,6 +35,16 @@ make install
 
 ```
 
+Android
+==
+
+```
+cd android
+android update project --name AntFarm --target android-19 --path .
+ndk-build
+ant debug
+```
+
 Contributions
 ===
 
@@ -52,7 +62,7 @@ constructorSystem::command Constructions::your_function = [](Entity* e,sf::Verte
 	};
 ```
 
-* then add a key to GameState::processInput and send your command With an event.
+* then add a key to GameState::handleEvent and send your command With an event.
 
 ```
 #!c++

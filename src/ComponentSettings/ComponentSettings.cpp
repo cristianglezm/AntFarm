@@ -17,8 +17,8 @@ namespace ant{
     , count(10)
     , Speed(0){}
     void ComponentSettings::loadSettings(const std::string& filename){
-        std::fstream file(filename);
-        JsonBox::Value v(file);
+        JsonBox::Value v;
+        v.loadFromFile(filename);
         entityName = v["Entity"]["name"].getString();
         if(!v["Entity"]["Components"].isNull()){
             int size = v["Entity"]["Components"].getArray().size();

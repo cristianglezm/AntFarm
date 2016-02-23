@@ -16,7 +16,9 @@
 
 #ifndef SYSTEM_FACTORY_H
 #define SYSTEM_FACTORY_H
+
 #include <memory>
+#include <Utils/Utility.hpp>
 #include <EntityManager/EntityManager.hpp>
 #include <GameEventDispatcher/GameEventDispatcher.hpp>
 #include <EventQueue/EventQueue.hpp>
@@ -27,6 +29,7 @@
 #include <Systems/gravitySystem/gravitySystem.hpp>
 #include <Systems/spawnSystem/spawnSystem.hpp>
 #include <Systems/outSystem/outSystem.hpp>
+
 namespace ant{
     /**
      * @brief Clase para crear sistemas.

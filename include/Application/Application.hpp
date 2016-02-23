@@ -33,6 +33,8 @@
 #include <AppStates/PauseState/PauseState.hpp>
 #include <AppStates/GameOverState/GameOverState.hpp>
 #include <AppStates/HelpState/HelpState.hpp>
+#include <Utils/Utility.hpp>
+#include <JsonBox.h>
 
 namespace ant{
     /**

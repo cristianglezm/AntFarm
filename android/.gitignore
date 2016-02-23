@@ -1,0 +1,9 @@
+#############
+## Android
+#############
+bin/*
+libs/*
+obj/*
+build.*
+local.properties
+pro*

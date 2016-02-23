@@ -1,4 +1,5 @@
 #include <Level/Level.hpp>
+#include <JsonBox.h>
 
 namespace ant{
     Level::Level(const std::string& assetsFilename,sf::FloatRect bounds,std::shared_ptr<GameEventDispatcher> ged)
@@ -28,8 +29,8 @@ namespace ant{
         loadLevel(bounds,Config::LEVELS_FILE);
     }
     bool Level::loadLevel(const sf::FloatRect& bounds,const std::string& filename){
-        std::fstream file(filename);
-        JsonBox::Value v(file);
+        JsonBox::Value v;
+        v.loadFromFile(filename);
         int size = v["levels"].getArray().size();
         for(int i=0;i<size;++i){
             sf::Image img;

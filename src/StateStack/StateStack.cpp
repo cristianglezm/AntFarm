@@ -63,7 +63,4 @@ namespace ant{
     StateStack::PendingChange::PendingChange(Action action, AppStates::ID stateID)
     : action(action)
     , stateID(stateID){}
-    StateStack::~StateStack(){
-
-    }
 }

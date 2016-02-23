@@ -16,11 +16,13 @@
 
 #ifndef COMPONENT_FACTORY_H
 #define COMPONENT_FACTORY_H
-#include <SFML/Graphics.hpp>
+
 #include <Components/ComponentMask.hpp>
+#include <Components/ComponentsAlias.hpp>
 #include <Components/Component.hpp>
 #include <AssetManager/AssetManager.hpp>
 #include <Utils/Utility.hpp>
+#include <SFML/Graphics.hpp>
 #include <array>
 
 namespace ant{

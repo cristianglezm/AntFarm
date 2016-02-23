@@ -78,8 +78,8 @@ namespace ant{
         return true;
     }
     void MenuState::loadConfig(const std::string& filename){
-        std::fstream file(filename);
-        JsonBox::Value v(file);
+        JsonBox::Value v;
+        v.loadFromFile(filename);
         if(v["Config"]["font"].getString() != ""){
             font = v["Config"]["font"].getString();
         }
