@@ -1,11 +1,21 @@
 #include <AssetManager/AssetManager.hpp>
-namespace ant{
-    AssetManager::AssetManager(){
+#if defined ANDROID
+    #include <android/log.h>
+    #include<Utils/Utility.hpp>
+#endif
 
-    }
+namespace ant{
+    AssetManager::AssetManager()
+    : textures()
+    , images()
+    , fonts(){}
     bool AssetManager::loadAssets(const std::string& filename){
         JsonBox::Value v;
-        v.loadFromFile(filename);
+        #if defined ANDROID
+            v.loadFromString(android::readAssetsFile(filename));
+        #else
+            v.loadFromFile(filename);
+        #endif
         if(!v["textures"].isNull()){
             int size = v["textures"].getArray().size();
             for(int i=0;i<size;++i){
@@ -53,6 +63,9 @@ namespace ant{
         }
         images.insert(std::make_pair(id,std::move(image)));
     }
+    void AssetManager::addImage(const std::string& id, std::unique_ptr<sf::Image>&& img){
+        images.insert(std::make_pair(id,std::move(img)));
+    }
     sf::Image& AssetManager::getImage(const std::string& id){
         return *(images.at(id));
     }
@@ -85,8 +98,5 @@ namespace ant{
         textures.clear();
         fonts.clear();
         return true;
-    }
-    AssetManager::~AssetManager(){
-
     }
 }

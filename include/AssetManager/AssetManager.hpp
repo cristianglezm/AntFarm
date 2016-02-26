@@ -56,7 +56,7 @@ namespace ant{
              */
             bool loadAssets(const std::string& filename);
             /**
-             * @brief A�ade una textura con el id proporcionado.
+             * @brief Añade una textura con el id proporcionado.
              *
              * @param id std::string Id de la textura cargada.
              * @param filename std::string Textura a cargar.
@@ -81,11 +81,17 @@ namespace ant{
              */
             void removeTexture(const std::string& id);
             /**
-             * @brief A�ade una imagen con el id especificado.
+             * @brief Añade una imagen con el id especificado.
              * @param id std::string id de la imagen.
              * @param filename std::string imagen a cargar.
              */
             void addImage(const std::string& id,const std::string& filename);
+            /**
+             * @brief Añade una imagen con el id especificado.
+             * @param id std::string id de la imagen.
+             * @param img std::unique_ptr<sf::Image> image para añadir
+             */
+            void addImage(const std::string& id, std::unique_ptr<sf::Image>&& img);
             /**
              * @brief Devuelve una referencia a la imagen, si no existe
              *        tira excepcion.
@@ -105,7 +111,7 @@ namespace ant{
              */
             void removeImage(const std::string& id);
             /**
-             * @brief A�ade un tipo de letra.
+             * @brief Añade un tipo de letra.
              * @param id std::string
              * @param filename std::string
              */
@@ -130,7 +136,7 @@ namespace ant{
              * @return true si los descargo correctamente, false si no.
              */
             bool clear();
-            ~AssetManager();
+            ~AssetManager() = default;
             private:
                 std::map<std::string,std::unique_ptr<sf::Texture>> textures;
                 std::map<std::string,std::unique_ptr<sf::Image>> images;
