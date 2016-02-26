@@ -16,10 +16,15 @@
 
 #ifndef ANT_UTILITY_HPP
 #define ANT_UTILITY_HPP
+
 #include <memory>
 #include <utility>
 #include <SFML/Graphics/Sprite.hpp>
 #include <SFML/Graphics/Text.hpp>
+#if defined ANDROID
+    #include <android/log.h>
+#endif
+
 namespace ant{
     namespace Utils{
         /**
@@ -57,5 +62,21 @@ namespace ant{
             return unique_ptr<T>(new T(forward<Args>(args)...));
         }
     }
+#endif
+#if defined ANDROID
+        namespace android{
+            /**
+             * @brief helper function to load json data for android.
+             * @param filename
+             * @return std::string
+             */
+            std::string readAssetsFile(std::string filename);
+            /**
+             * @brief Helper function to log android info.
+             * @param tag
+             * @param info
+             */
+            void log(std::string tag,std::string info);
+        }
 #endif
 #endif // ANT_UTILITY_HPP
