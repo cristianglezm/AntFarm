@@ -46,40 +46,62 @@ namespace ant{
         return true;
     }
     bool MenuState::handleEvent(const sf::Event& event){
-        if (event.type != sf::Event::KeyReleased){
+    #if defined ANDROID
+        auto& window = *getContext().window;
+        if(event.type == sf::Event::TouchEnded){
+            sf::Vector2f pos = static_cast<sf::Vector2f>(window.mapCoordsToPixel(sf::Vector2f(event.touch.x, event.touch.y),window.getView()));
+            for(const auto& text:mOptions){
+                if(text.getGlobalBounds().contains(pos)){
+                    if(text.getString() == "Play"){
+                        requestStackPop();
+                        requestStackPush(AppStates::Game);
+                    }else if(text.getString() == "Help"){
+                        requestStackPush(AppStates::Help);
+                    }else if(text.getString() == "Exit"){
+                        requestStackPop();
+                    }
+                }
+            }
+        }
+    #else
+        if(event.type != sf::Event::KeyReleased){
             return false;
         }
-        if (event.key.code == sf::Keyboard::Return){
-            if (mOptionIndex == Play){
+        if(event.key.code == sf::Keyboard::Return){
+            if(mOptionIndex == Play){
                 requestStackPop();
                 requestStackPush(AppStates::Game);
-            }else if (mOptionIndex == Help){
+            }else if(mOptionIndex == Help){
                 requestStackPush(AppStates::Help);
-            }else if (mOptionIndex == Exit){
+            }else if(mOptionIndex == Exit){
                 requestStackPop();
             }
-        }else if (event.key.code == sf::Keyboard::Up){
-            if (mOptionIndex > 0){
+        }else if(event.key.code == sf::Keyboard::Up){
+            if(mOptionIndex > 0){
                 mOptionIndex--;
             }
             else{
                 mOptionIndex = mOptions.size() - 2;
             }
             updateOptionText();
-        }else if (event.key.code == sf::Keyboard::Down){
-            if (mOptionIndex < mOptions.size() - 2){
+        }else if(event.key.code == sf::Keyboard::Down){
+            if(mOptionIndex < mOptions.size() - 2){
                 mOptionIndex++;
             }else{
                 mOptionIndex = 0;
             }
             updateOptionText();
         }
-
+    #endif
         return true;
     }
     void MenuState::loadConfig(const std::string& filename){
         JsonBox::Value v;
+    #if defined ANDROID
+        v.loadFromString(android::readAssetsFile(filename));
+    #else
         v.loadFromFile(filename);
+    #endif
         if(v["Config"]["font"].getString() != ""){
             font = v["Config"]["font"].getString();
         }

@@ -22,7 +22,9 @@ namespace ant{
         textScore.setPosition(Config::screenSize.width-50,10);
         textScore.setString(Utils::toString(score));
         textScore.setFillColor(sf::Color::Black);
+    #if defined ANDROID or TEST_GUI
         loadGUIConf(Config::GUI_FILE);
+    #endif
     }
     void GameState::render(){
         level->render(currentLevel,win);
@@ -40,9 +42,26 @@ namespace ant{
     }
     bool GameState::handleEvent(const sf::Event& event){
         switch(event.type){
+        #if defined ANDROID
             case sf::Event::LostFocus:
                 requestStackPush(AppStates::Pause);
-            break;
+                break;
+            case sf::Event::TouchEnded:
+                if(event.mouseButton.button == sf::Mouse::Left){
+                    eventQueue->push(std::make_shared<EventsAlias::select_entity>(EventType::SELECT_ENTITY,
+                                     win.mapCoordsToPixel(sf::Vector2f(event.touch.x, event.touch.y), win.getView())));
+                    for(auto i=0u;i<buttons.size();++i){
+                        if(buttons[i]->contains((sf::Vector2f)win.mapCoordsToPixel(sf::Vector2f(event.touch.x, event.touch.y),win.getView()))){
+                            eventQueue->push(std::make_shared<EventsAlias::change_command>(EventType::CHANGE_COMMAND,
+                                                    buttons[i]->getAction()));
+                        }
+                    }
+                }
+                break;
+        #else
+            case sf::Event::LostFocus:
+                requestStackPush(AppStates::Pause);
+                break;
             case sf::Event::MouseButtonReleased:
                 if(event.mouseButton.button == sf::Mouse::Left){
                     eventQueue->push(std::make_shared<EventsAlias::select_entity>(EventType::SELECT_ENTITY,sf::Mouse::getPosition(win)));
@@ -118,6 +137,7 @@ namespace ant{
                 break;
             case sf::Event::KeyPressed:
                 break;
+            #endif
             default:
                 break;
         }
@@ -153,7 +173,11 @@ namespace ant{
     }
     void GameState::loadGUIConf(const std::string& filename){
         JsonBox::Value v;
+    #if defined ANDROID
+        v.loadFromString(android::readAssetsFile(filename));
+    #else
         v.loadFromFile(filename);
+    #endif
         if(!v["GUI"]["buttons"].isNull()){
             int size = v["GUI"]["buttons"].getArray().size();
             for(int i=0;i<size;++i){
@@ -202,7 +226,11 @@ namespace ant{
     }
     void GameState::loadConfig(const std::string& filename){
         JsonBox::Value v;
+    #if defined ANDROID
+        v.loadFromString(android::readAssetsFile(filename));
+    #else
         v.loadFromFile(filename);
+    #endif
         if(v["Config"]["font"].getString() != ""){
             font = v["Config"]["font"].getString();
         }

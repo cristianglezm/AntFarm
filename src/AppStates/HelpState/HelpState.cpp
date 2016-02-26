@@ -32,7 +32,11 @@ namespace ant{
     }
     void HelpState::loadConfig(const std::string& filename){
         JsonBox::Value v;
+    #if defined ANDROID
+        v.loadFromString(android::readAssetsFile(filename));
+    #else
         v.loadFromFile(filename);
+    #endif
         if(v["Config"]["font"].getString() != ""){
             font = v["Config"]["font"].getString();
         }
@@ -41,9 +45,15 @@ namespace ant{
         return false;
     }
     bool HelpState::handleEvent(const sf::Event& event){
+    #if defined ANDROID
+        if(event.type == sf::Event::TouchEnded){
+            requestStackPop();
+        }
+    #else
         if(event.type == sf::Event::KeyReleased){
             requestStackPop();
         }
+    #endif
         return false;
     }
 }

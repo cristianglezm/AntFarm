@@ -16,7 +16,11 @@ namespace ant{
     }
     void GameOverState::loadConfig(const std::string& filename){
         JsonBox::Value v;
+    #if defined ANDROID
+        v.loadFromString(android::readAssetsFile(filename));
+    #else
         v.loadFromFile(filename);
+    #endif
         if(v["Config"]["font"].getString() != ""){
             font = v["Config"]["font"].getString();
         }
@@ -25,10 +29,17 @@ namespace ant{
         return false;
     }
     bool GameOverState::handleEvent(const sf::Event& event){
+    #if defined ANDROID
+        if(event.type == sf::Event::TouchEnded){
+            requestStateClear();
+            requestStackPush(AppStates::Menu);
+        }
+    #else
         if(event.type == sf::Event::KeyPressed){
             requestStateClear();
             requestStackPush(AppStates::Menu);
         }
+    #endif
         return false;
     }
 }

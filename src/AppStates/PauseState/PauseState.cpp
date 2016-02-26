@@ -19,7 +19,11 @@ namespace ant{
     }
     void PauseState::loadConfig(const std::string& filename){
         JsonBox::Value v;
+    #if defined ANDROID
+        v.loadFromString(android::readAssetsFile(filename));
+    #else
         v.loadFromFile(filename);
+    #endif
         if(v["Config"]["font"].getString() != ""){
             font = v["Config"]["font"].getString();
         }

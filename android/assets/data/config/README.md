@@ -21,7 +21,7 @@ Acciones:
 	* stairs
 	* bridge
 	* wall
-	* Explode
+	* explosion
 Ejemplo de Configuracion:
 
 {

@@ -22,6 +22,9 @@
 #include <SFML/Graphics/Rect.hpp>
 #include <SFML/System/Vector2.hpp>
 #include <JsonBox.h>
+#if defined ANDROID
+    #include <Utils/Utility.hpp>
+#endif
 
 namespace ant{
     /**

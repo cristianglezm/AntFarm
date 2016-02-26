@@ -20,12 +20,11 @@
 #include <SFML/Graphics/Rect.hpp>
 namespace ant{
     /**
-     * @brief Clase de configuracion con constantes de ficheros.
+     * @brief clase de configuracion con constantes de ficheros.
      * @author Cristian Glez <Cristian.glez.m@gmail.com>
      * @version 0.1
      */
-    class Config{
-        private:
+    class Config final{
         public:
             static const std::string VERSION;
             static const std::string ASSETS_GAME_JSON;
@@ -37,7 +36,6 @@ namespace ant{
             static const std::string LEVELS_FILE;
             static const std::string CONFIG_FILE;
             static const sf::FloatRect screenSize;
-
     };
 }
 #endif // CONFIG_H

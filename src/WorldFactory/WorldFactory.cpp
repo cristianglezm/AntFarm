@@ -63,9 +63,7 @@ namespace ant{
         cs.imageID = name;
         cs.spriteID = background;
         cs.entityName = name;
-        img->saveToFile("tmp.png");
-        assets->addImage(name,"tmp.png");
-        remove("tmp.png");
+        assets->addImage(name,std::move(img));
         em->addEntity(entityFactory->createEntity(EntityFactory::level,cs));
         if(hasEnteredInDoor){
             ComponentSettings cs;

@@ -6,12 +6,14 @@ namespace ant{
                                                 "AntFarm", sf::Style::Fullscreen))
     , mAssets(std::make_shared<AssetManager>())
     , mStateStack(AppState::Context(mWindow,mAssets)){
+    #ifndef ANDROID
         sf::Image icon;
         std::string iconFilename = "data/antfarm_logo.png";
         if(!icon.loadFromFile(iconFilename)){
             throw std::runtime_error("Failed to load image " + iconFilename);
         }
         mWindow->setIcon(icon.getSize().x,icon.getSize().y,icon.getPixelsPtr());
+    #endif
         mAssets->loadAssets(Config::ASSETS_GAME_JSON);
         loadConfig(Config::CONFIG_FILE);
         mStatisticsText.setFont(mAssets->getFont(font));
@@ -44,16 +46,20 @@ namespace ant{
     }
     void Application::loadConfig(const std::string& filename){
         JsonBox::Value v;
+    #if defined ANDROID
+        v.loadFromString(android::readAssetsFile(filename));
+    #else
         v.loadFromFile(filename);
+    #endif
         if(v["Config"]["font"].getString() != ""){
             font = v["Config"]["font"].getString();
         }
     }
     void Application::processInput(){
         sf::Event event;
-        while (mWindow->pollEvent(event)){
+        while(mWindow->pollEvent(event)){
             mStateStack.handleEvent(event);
-            if (event.type == sf::Event::Closed){
+            if(event.type == sf::Event::Closed){
                 mWindow->close();
             }
         }

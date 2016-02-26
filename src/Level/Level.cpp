@@ -30,7 +30,11 @@ namespace ant{
     }
     bool Level::loadLevel(const sf::FloatRect& bounds,const std::string& filename){
         JsonBox::Value v;
+    #if defined ANDROID
+        v.loadFromString(android::readAssetsFile(filename));
+    #else
         v.loadFromFile(filename);
+    #endif
         int size = v["levels"].getArray().size();
         for(int i=0;i<size;++i){
             sf::Image img;

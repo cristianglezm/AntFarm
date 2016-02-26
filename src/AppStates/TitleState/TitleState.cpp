@@ -29,7 +29,11 @@ namespace ant{
     }
     void TitleState::loadConfig(const std::string& filename){
         JsonBox::Value v;
+    #if defined ANDROID
+        v.loadFromString(android::readAssetsFile(filename));
+    #else
         v.loadFromFile(filename);
+    #endif
         if(v["Config"]["font"].getString() != ""){
             font = v["Config"]["font"].getString();
         }
@@ -46,10 +50,17 @@ namespace ant{
         return true;
     }
     bool TitleState::handleEvent(const sf::Event& event){
+    #if defined ANDROID
+        if(event.type == sf::Event::TouchEnded){
+            requestStackPop();
+            requestStackPush(AppStates::Menu);
+        }
+    #else
         if(event.type == sf::Event::KeyPressed){
             requestStackPop();
             requestStackPush(AppStates::Menu);
         }
+    #endif
         return true;
     }
 }

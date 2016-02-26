@@ -18,7 +18,11 @@ namespace ant{
     , Speed(0){}
     void ComponentSettings::loadSettings(const std::string& filename){
         JsonBox::Value v;
+    #if defined ANDROID
+        v.loadFromString(android::readAssetsFile(filename));
+    #else
         v.loadFromFile(filename);
+    #endif
         entityName = v["Entity"]["name"].getString();
         if(!v["Entity"]["Components"].isNull()){
             int size = v["Entity"]["Components"].getArray().size();
