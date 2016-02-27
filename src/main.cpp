@@ -8,7 +8,7 @@ int main(){
     #if defined ANDROID
         __android_log_write(ANDROID_LOG_INFO,"AntFarm",e.what()); // REMOMVE TODO
     #else
-        std::cout << e.what() << std::end;
+        std::cout << e.what() << std::endl;
     #endif
     }
     return EXIT_SUCCESS;
