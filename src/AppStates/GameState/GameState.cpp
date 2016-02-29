@@ -22,7 +22,7 @@ namespace ant{
         textScore.setPosition(Config::screenSize.width-50,10);
         textScore.setString(Utils::toString(score));
         textScore.setFillColor(sf::Color::Black);
-    #if defined ANDROID or TEST_GUI
+    #if defined ANDROID || TEST_GUI
         loadGUIConf(Config::GUI_FILE);
     #endif
     }
