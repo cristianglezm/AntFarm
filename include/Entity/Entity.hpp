@@ -16,12 +16,14 @@
 
 #ifndef ENTITY_H
 #define ENTITY_H
+
 #include <string>
 #include <stdexcept>
 #include <memory>
 #include <map>
 #include <Components/Component.hpp>
 #include <iostream>
+
 namespace ant{
     /**
      * @class Entity
@@ -51,9 +53,9 @@ namespace ant{
              */
             Entity(const std::string& name,map&& Components);
             /**
-             * @brief Añade un componente a la entidad.
+             * @brief AÃ±ade un componente a la entidad.
              *
-             * @param component std::unique_ptr<baseComponent> componente para añadir.
+             * @param component std::unique_ptr<baseComponent> componente para aÃ±adir.
              */
             void addComponent(std::unique_ptr<baseComponent> component);
             /**
@@ -122,8 +124,8 @@ namespace ant{
              */
             inline bool is(long int statesID){ return ((states & statesID) == statesID ); }
             /**
-             * @brief Añade un estado a la entidad.
-             * @param state long int estado a añadir.
+             * @brief AÃ±ade un estado a la entidad.
+             * @param state long int estado a aÃ±adir.
              */
             void addState(long int state);
             /**
@@ -158,7 +160,7 @@ namespace ant{
              * @return bool
              */
             bool operator==(const std::string& name) const;
-            ~Entity();
+            ~Entity() = default;
         private:
             std::string name;
             long int mask;

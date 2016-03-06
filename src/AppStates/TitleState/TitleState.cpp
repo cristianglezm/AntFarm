@@ -54,6 +54,12 @@ namespace ant{
         if(event.type == sf::Event::TouchEnded){
             requestStackPop();
             requestStackPush(AppStates::Menu);
+        }else if(event.type == sf::Event::KeyReleased){
+            if(event.key.code == sf::Keyboard::Escape){
+                requestStackPop();
+            }
+        }else if(event.type == sf::Event::LostFocus){
+            requestStackPop();
         }
     #else
         if(event.type == sf::Event::KeyPressed){

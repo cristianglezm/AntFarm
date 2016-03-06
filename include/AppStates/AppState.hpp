@@ -75,15 +75,15 @@ namespace ant{
              * @return bool retorna true para que los demas tambien manejen eventos.
              */
             virtual bool handleEvent(const sf::Event& event) = 0;
-            virtual ~AppState();
+            virtual ~AppState() = default;
         protected:
             /**
-             * @brief Pide al stack que añada un estado nuevo.
+             * @brief Pide al stack que aÃ±ada un estado nuevo.
              * @param stateID AppStates::ID id del estado.
              */
             void requestStackPush(AppStates::ID stateID);
             /**
-             * @brief Pide al stack que quite el ultimo estado añadido.
+             * @brief Pide al stack que quite el ultimo estado aÃ±adido.
              */
             void requestStackPop();
             /**

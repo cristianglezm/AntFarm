@@ -24,16 +24,17 @@ namespace ant{
                     throw std::runtime_error("Could not open file: " + filename);
                 }
                 std::string data;
-                std::vector<char> buffer(1024);
                 int readed = 0;
                 int count = 0;
                 do{
+                    std::vector<char> buffer(1024);
                     readed = fis.read(buffer.data(), 1024);
                     count += readed;
                     data += std::string(buffer.data());
                     fis.seek(count);
                 }while(readed != 0);
                 data += "\0";
+                android::log("AntFarm",data); /// REMOVE TODO
                 return data;
             }
             void log(std::string tag,std::string info){

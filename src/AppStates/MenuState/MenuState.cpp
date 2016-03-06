@@ -49,7 +49,7 @@ namespace ant{
     #if defined ANDROID
         auto& window = *getContext().window;
         if(event.type == sf::Event::TouchEnded){
-            sf::Vector2f pos = static_cast<sf::Vector2f>(window.mapCoordsToPixel(sf::Vector2f(event.touch.x, event.touch.y),window.getView()));
+            sf::Vector2f pos = static_cast<sf::Vector2f>(window.mapPixelToCoords(sf::Vector2i(event.touch.x, event.touch.y), window.getView()));
             for(const auto& text:mOptions){
                 if(text.getGlobalBounds().contains(pos)){
                     if(text.getString() == "Play"){
@@ -62,6 +62,12 @@ namespace ant{
                     }
                 }
             }
+        }else if(event.type == sf::Event::KeyReleased){
+            if(event.key.code == sf::Keyboard::Escape){
+                requestStackPop();
+            }
+        }else if(event.type == sf::Event::LostFocus){
+            requestStackPop();
         }
     #else
         if(event.type != sf::Event::KeyReleased){

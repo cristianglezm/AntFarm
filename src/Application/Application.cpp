@@ -2,8 +2,7 @@
 
 namespace ant{
     Application::Application()
-    : mWindow(std::make_shared<sf::RenderWindow>(sf::VideoMode(Config::screenSize.width,Config::screenSize.height),
-                                                "AntFarm", sf::Style::Fullscreen))
+    : mWindow(std::make_shared<sf::RenderWindow>(sf::VideoMode(Config::screenSize.width,Config::screenSize.height), "AntFarm", sf::Style::Close))
     , mAssets(std::make_shared<AssetManager>())
     , mStateStack(AppState::Context(mWindow,mAssets)){
     #ifndef ANDROID
@@ -21,7 +20,7 @@ namespace ant{
         mStatisticsText.setCharacterSize(25u);
         version.setFont(mAssets->getFont(font));
         version.setCharacterSize(25u);
-        version.setPosition(Config::screenSize.width-Config::screenSize.width+5,Config::screenSize.height-50);
+        version.setPosition(5,Config::screenSize.height-50);
         version.setString(Config::VERSION);
         registerStates();
         mStateStack.pushState(AppStates::Title);

@@ -19,7 +19,7 @@ namespace ant{
             if(e->hasComponent(RequiredComponents) && e->is(States::FALLING)){
                 auto& properties = e->getComponent(RequiredComponents)
                                     ->getProperties<ComponentsAlias::velocity>();
-                std::get<0>(properties).y = Gravity ;
+                std::get<0>(properties).y = Gravity;
             }
         }
     }

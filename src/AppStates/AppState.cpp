@@ -6,9 +6,7 @@ namespace ant{
     , assets(assets){}
     AppState::AppState(StateStack& Stack, AppState::Context context)
     : mStack(&Stack)
-    , mContext(context){
-
-    }
+    , mContext(context){}
     void AppState::requestStackPush(AppStates::ID stateID){
         mStack->pushState(stateID);
     }
@@ -20,8 +18,5 @@ namespace ant{
     }
     AppState::Context AppState::getContext() const{
         return mContext;
-    }
-    AppState::~AppState(){
-
     }
 }

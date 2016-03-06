@@ -49,14 +49,23 @@ namespace ant{
             case sf::Event::TouchEnded:
                 if(event.mouseButton.button == sf::Mouse::Left){
                     eventQueue->push(std::make_shared<EventsAlias::select_entity>(EventType::SELECT_ENTITY,
-                                     win.mapCoordsToPixel(sf::Vector2f(event.touch.x, event.touch.y), win.getView())));
+                                    (sf::Vector2i)win.mapPixelToCoords(sf::Vector2i(event.touch.x, event.touch.y), win.getView())));
                     for(auto i=0u;i<buttons.size();++i){
-                        if(buttons[i]->contains((sf::Vector2f)win.mapCoordsToPixel(sf::Vector2f(event.touch.x, event.touch.y),win.getView()))){
+                        auto clickedPos = static_cast<sf::Vector2f>(win.mapPixelToCoords(sf::Vector2i(event.touch.x, event.touch.y),win.getView()));
+                        if(buttons[i]->contains(clickedPos)){
                             eventQueue->push(std::make_shared<EventsAlias::change_command>(EventType::CHANGE_COMMAND,
                                                     buttons[i]->getAction()));
                         }
                     }
                 }
+                break;
+            case sf::Event::KeyReleased:
+                    if(event.key.code == sf::Keyboard::Escape){
+                        requestStackPop();
+                    }
+                break;
+            case sf::Event::MouseLeft:
+                    requestStackPush(AppStates::Pause);
                 break;
         #else
             case sf::Event::LostFocus:

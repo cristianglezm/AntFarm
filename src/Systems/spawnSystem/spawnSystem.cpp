@@ -23,7 +23,7 @@ namespace ant{
     void spawnSystem::update(const sf::Time& dt){
         if(elapsedTime > overTime && createdEntities < nEntities){
             elapsedTime = sf::seconds(0);
-            createdEntities += 1;
+            ++createdEntities;
             ComponentSettings cs;
             cs.loadSettings(Config::ANT_FILE);
             cs.position = spawnPoint + sf::Vector2f(5,5);

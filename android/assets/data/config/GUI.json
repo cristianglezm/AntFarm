@@ -1,15 +1,16 @@
-"GUI":{
+{
+    "GUI":{
         "buttons":[
-                    {"position":{"x":5,"y":450,},"text":{"string":"climb","size":15,"font":"Outwrite",},"imageID":"defaultButton","size":{"width":100,"height":100,},"action":"climb"},
-                    {"position":{"x":105,"y":450,},"text":{"string":"bridge","size":15,"font":"Outwrite",},"imageID":"defaultButton","size":{"width":100,"height":100,},"action":"bridge"},
-                    {"position":{"x":205,"y":450,},"text":{"string":"stairs","size":15,"font":"Outwrite",},"imageID":"defaultButton","size":{"width":100,"height":100,},"action":"stairs"},
-                    {"position":{"x":305,"y":450,},"text":{"string":"dig","size":15,"font":"Outwrite",},"imageID":"defaultButton","size":{"width":100,"height":100,},"action":"dig"},
-                    {"position":{"x":405,"y":450,},"text":{"string":"tunnel","size":15,"font":"Outwrite",},"imageID":"defaultButton","size":{"width":100,"height":100,},"action":"tunnel"},
-                    {"position":{"x":505,"y":450,},"text":{"string":"wall","size":15,"font":"Outwrite",},"imageID":"defaultButton","size":{"width":100,"height":100,},"action":"wall"},
-                    {"position":{"x":605,"y":450,},"text":{"string":"stop","size":15,"font":"Outwrite",},"imageID":"defaultButton","size":{"width":100,"height":100,},"action":"stop"},
-                    {"position":{"x":705,"y":450,},"text":{"string":"downhill","size":15,"font":"Outwrite",},"imageID":"defaultButton","size":{"width":100,"height":100,},"action":"downhill"},
-                    {"position":{"x":805,"y":450,},"text":{"string":"uphill","size":15,"font":"Outwrite",},"imageID":"defaultButton","size":{"width":100,"height":100,},"action":"uphill"},
-                    {"position":{"x":805,"y":350,},"text":{"string":"explosion","size":15,"font":"Outwrite",},"imageID":"defaultButton","size":{"width":100,"height":100,},"action":"explosion"}
-                ],
-       },
+                    {"position":{"x":20,"y":5,},"text":{"string":"","size":15,"font":"Outwrite",},"imageID":"climbButton","size":{"width":100,"height":100,},"action":"climb"},
+                    {"position":{"x":73,"y":5,},"text":{"string":"","size":15,"font":"Outwrite",},"imageID":"bridgeButton","size":{"width":100,"height":100,},"action":"bridge"},
+                    {"position":{"x":126,"y":5,},"text":{"string":"","size":15,"font":"Outwrite",},"imageID":"stairsButton","size":{"width":100,"height":100,},"action":"stairs"},
+                    {"position":{"x":179,"y":5,},"text":{"string":"","size":15,"font":"Outwrite",},"imageID":"digButton","size":{"width":100,"height":100,},"action":"dig"},
+                    {"position":{"x":232,"y":5,},"text":{"string":"","size":15,"font":"Outwrite",},"imageID":"tunnelButton","size":{"width":100,"height":100,},"action":"tunnel"},
+                    {"position":{"x":285,"y":5,},"text":{"string":"","size":15,"font":"Outwrite",},"imageID":"wallButton","size":{"width":100,"height":100,},"action":"wall"},
+                    {"position":{"x":338,"y":5,},"text":{"string":"","size":15,"font":"Outwrite",},"imageID":"stopButton","size":{"width":100,"height":100,},"action":"stop"},
+                    {"position":{"x":391,"y":5,},"text":{"string":"","size":15,"font":"Outwrite",},"imageID":"downHillButton","size":{"width":100,"height":100,},"action":"downhill"},
+                    {"position":{"x":444,"y":5,},"text":{"string":"","size":15,"font":"Outwrite",},"imageID":"upHillButton","size":{"width":100,"height":100,},"action":"uphill"},
+                    {"position":{"x":497,"y":5,},"text":{"string":"","size":15,"font":"Outwrite",},"imageID":"explodeButton","size":{"width":100,"height":100,},"action":"explosion"}
+                ]
+       }
 }

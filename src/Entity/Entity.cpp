@@ -1,4 +1,5 @@
 #include <Entity/Entity.hpp>
+
 namespace ant{
         Entity::Entity()
         : name("")
@@ -57,8 +58,5 @@ namespace ant{
         }
         bool Entity::operator==(const std::string& name) const{
             return (this->name == name);
-        }
-        Entity::~Entity(){
-
         }
 }
