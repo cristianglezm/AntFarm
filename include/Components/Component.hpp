@@ -14,8 +14,9 @@
 // limitations under the License.
 ////////////////////////////////////////////////////////////////
 
-#ifndef _COMPONENT_HPP
-#define _COMPONENT_HPP
+#ifndef COMPONENT_HPP
+#define COMPONENT_HPP
+
 #include <tuple>
 #include <memory>
 
@@ -148,4 +149,4 @@ namespace ant{
         return casted.getProperties();
     }
 }
-#endif // _COMPONENT_HPP
+#endif // COMPONENT_HPP

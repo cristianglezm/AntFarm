@@ -5,11 +5,22 @@ cmake_minimum_required(VERSION 3.1)
 ################################################################################
 
 option(BUILD_STATIC "TRUE to statically link to the standard libraries and dependencies, FALSE to use them as DLLs" FALSE)
+option(WITH_GUI "TRUE to use the GUI" FALSE)
+option(WITH_FULLSCREEN "TRUE to launch with fullscreen" FALSE)
+
 if(BUILD_STATIC)
 	SET(SFML_STATIC_LIBRARIES TRUE)
 	SET(BUILD_SHARED_LIBS FALSE)
 	SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -static -lpthread -static-libgcc -static-libstdc++ -mwindows")
 endif(BUILD_STATIC)
+
+if(WITH_GUI)
+    add_definitions("-DWITH_GUI")
+endif(WITH_GUI)
+
+if(WITH_FULLSCREEN)
+    add_definitions("-DWITH_FULLSCREEN")
+endif(WITH_FULLSCREEN)
 
 ################################################################################
 ### Project files.
@@ -81,6 +92,7 @@ endif()
 #################################################################################
 ### Installing Game
 #################################################################################
+
 install(TARGETS AntFarm RUNTIME DESTINATION .
 			ARCHIVE DESTINATION .)
 install(FILES LICENSE.md README.md DESTINATION .)

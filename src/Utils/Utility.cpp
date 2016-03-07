@@ -34,7 +34,6 @@ namespace ant{
                     fis.seek(count);
                 }while(readed != 0);
                 data += "\0";
-                android::log("AntFarm",data); /// REMOVE TODO
                 return data;
             }
             void log(std::string tag,std::string info){

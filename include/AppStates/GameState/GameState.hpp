@@ -16,6 +16,7 @@
 
 #ifndef ANT_GAME_STATE_HPP
 #define ANT_GAME_STATE_HPP
+
 #include <AppStates/AppState.hpp>
 #include <AppStates/AppStates.hpp>
 #include <Level/Level.hpp>

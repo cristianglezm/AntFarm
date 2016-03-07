@@ -2,7 +2,13 @@
 
 namespace ant{
     Application::Application()
+    #if defined ANDROID
     : mWindow(std::make_shared<sf::RenderWindow>(sf::VideoMode(Config::screenSize.width,Config::screenSize.height), "AntFarm", sf::Style::Close))
+    #elif defined WITH_FULLSCREEN
+    : mWindow(std::make_shared<sf::RenderWindow>(sf::VideoMode(Config::screenSize.width,Config::screenSize.height), "AntFarm", sf::Style::Fullscreen))
+    #else
+    : mWindow(std::make_shared<sf::RenderWindow>(sf::VideoMode(Config::screenSize.width,Config::screenSize.height), "AntFarm", sf::Style::Close))
+    #endif
     , mAssets(std::make_shared<AssetManager>())
     , mStateStack(AppState::Context(mWindow,mAssets)){
     #ifndef ANDROID

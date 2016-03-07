@@ -29,7 +29,7 @@ Use CMake to build the project.
 
 ```
 mkdir build && cd build
-cmake -G"MinGW Makefiles" -DSFML_ROOT=<baseDir> -DJSONBOX_ROOT=<baseDir> ..
+cmake -G"MinGW Makefiles" -DSFML_ROOT=<baseDir> -DJSONBOX_ROOT=<baseDir> -DWITH_FULLSCREEN=FALSE -DWITH_GUI=FALSE ..
 make
 make install
 

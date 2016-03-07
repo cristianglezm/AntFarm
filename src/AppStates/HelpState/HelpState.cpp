@@ -7,6 +7,10 @@ namespace ant{
         loadConfig(Config::CONFIG_FILE);
         mText.setFont(context.assets->getFont(font));
         std::ostringstream help;
+    #if defined ANDROID
+        help << "HELP\n" <<
+                "\tUse the buttons and click the ants to make them do that action.\n\n";
+    #else
         help << "HELP\n" <<
                 "\tKEYS:\n" <<
                 "\t\tw -> wall: The selected ant Will build a wall.\n\n" <<
@@ -21,6 +25,7 @@ namespace ant{
                 "\t\tp -> Pause: Pauses the game.\n\n" <<
                 "\t\tesc -> return to main menu.\n\n" <<
                 "\t\tF1 -> This menu.\n\n";
+    #endif
         mText.setString(help.str());
         mText.setPosition({0,20});
         mText.setCharacterSize(18);

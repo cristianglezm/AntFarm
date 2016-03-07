@@ -22,13 +22,13 @@ namespace ant{
         textScore.setPosition(Config::screenSize.width-50,10);
         textScore.setString(Utils::toString(score));
         textScore.setFillColor(sf::Color::Black);
-    #if defined ANDROID || TEST_GUI
+    #if defined ANDROID || WITH_GUI
         loadGUIConf(Config::GUI_FILE);
     #endif
     }
     void GameState::render(){
         level->render(currentLevel,win);
-        for(unsigned int i=0;i<buttons.size();++i){
+        for(auto i=0u;i<buttons.size();++i){
                 win.draw(*buttons[i]);
         }
         win.draw(textScore);
@@ -192,8 +192,8 @@ namespace ant{
             for(int i=0;i<size;++i){
                 sf::Vector2f pos(v["GUI"]["buttons"][size_t(i)]["position"]["x"].getInteger(),
                                  v["GUI"]["buttons"][size_t(i)]["position"]["y"].getInteger());
-                sf::Vector2f bSize(v["GUI"]["buttons"][size_t(i)]["size"]["width"].getInteger(),
-                                   v["GUI"]["buttons"][size_t(i)]["size"]["height"].getInteger());
+                sf::Vector2f bSize(v["GUI"]["buttons"][size_t(i)]["scale"]["width"].getInteger(),
+                                   v["GUI"]["buttons"][size_t(i)]["scale"]["height"].getInteger());
                 sf::Text t;
                 if(v["GUI"]["buttons"][size_t(i)]["text"]["font"].getString() != ""){
                     t.setFont(assets->getFont(v["GUI"]["buttons"][size_t(i)]["text"]["font"].getString()));
@@ -229,7 +229,7 @@ namespace ant{
                 }else if(actionID == "explosion"){
                     action = Constructions::explosion;
                 }
-                buttons.emplace_back(std::make_unique<GUI::Button>(pos,bSize,sprite,t,action));
+                buttons.emplace_back(std::make_unique<GUI::Button>(pos,sprite,t,action));
             }
         }
     }

@@ -16,8 +16,10 @@
 
 #ifndef EVENT_H
 #define EVENT_H
+
 #include <tuple>
 #include <memory>
+
 namespace ant{
     //  Forward declaration
     template<typename...T>
@@ -54,7 +56,7 @@ namespace ant{
              * @brief Getter del tipo de evento.
              * @return int tipo del evento.
              */
-            inline int getType()const{ return type; }
+            inline int getType() const{ return type; }
             /**
              * @brief Getter de los atributos del evento.
              * @code baseEvent::getAttributes<float,int>(); @endcode

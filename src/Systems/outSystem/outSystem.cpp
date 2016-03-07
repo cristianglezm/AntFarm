@@ -42,37 +42,22 @@ namespace ant{
                                         [&](std::unique_ptr<Entity>& e){
                                            if(e->is(States::UNSAVED)){
                                                 --totalEntities;
-                                            #if defined ANDROID
-                                                android::log("AntFarm","OutSystem: Removing UNSAVED");/// REMOVE TODO
-                                            #endif
                                                 return true;
                                             }else if(e->is(States::SAVED)){
                                                 ++savedEntities;
-                                            #if defined ANDROID
-                                                android::log("AntFarm","OutSystem: Removing SAVED");/// REMOVE TODO
-                                            #endif
                                                 eventQueue->push(std::make_shared<EventsAlias::update_score>(EventType::UPDATE_SCORE,1));
                                                 return true;
                                             }
                                             return false;
                                         });
         if(removed != std::end(entities)){
-            #if defined ANDROID
-                android::log("AntFarm","OutSystem: Removing Removed"); /// REMOVE TODO
-            #endif
             entities.erase(removed,std::end(entities));
         }
         if(totalEntities>0){
             if(savedEntities==totalEntities){
-                #if defined ANDROID
-                    android::log("AntFarm","OutSystem: Sending Event level complete");/// REMOVE TODO
-                #endif
                 eventQueue->push(std::make_shared<EventsAlias::level_complete>(EventType::LEVEL_COMPLETE));
             }
         }else{
-            #if defined ANDROID
-                android::log("AntFarm","OutSystem: Sending Event level Failed");/// REMOVE TODO
-            #endif
             eventQueue->push(std::make_shared<EventsAlias::level_failed>(EventType::LEVEL_FAILED));
         }
     }
