@@ -1,5 +1,4 @@
 #include <GameEventDispatcher/GameEventDispatcher.hpp>
-#include <Utils/Utility.hpp> /// REMOVE TODO
 
 namespace ant{
     bool GameEventDispatcher::DispatchEvent(std::shared_ptr<baseEvent> e){

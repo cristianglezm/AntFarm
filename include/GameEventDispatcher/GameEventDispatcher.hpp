@@ -16,9 +16,11 @@
 
 #ifndef GAME_EVENT_DISPATCHER_H
 #define GAME_EVENT_DISPATCHER_H
+
 #include <Event/Event.hpp>
 #include <Event/EventType.hpp>
 #include <Subject/Subject.hpp>
+
 namespace ant{
     /**
      * @brief Clase encargada de processar eventos.
