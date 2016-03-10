@@ -39,7 +39,7 @@ namespace ant{
     void outSystem::update(const sf::Time& dt){
         auto& entities = em->getEntities();
         auto removed = std::remove_if(std::begin(entities),std::end(entities),
-                                        [&](std::unique_ptr<Entity>& e){
+                                        [this](std::unique_ptr<Entity>& e){
                                            if(e->is(States::UNSAVED)){
                                                 --totalEntities;
                                                 return true;

@@ -64,6 +64,7 @@ namespace ant{
             case sf::Event::KeyReleased:
                     if(event.key.code == sf::Keyboard::Escape){
                         requestStackPop();
+                        requestStackPush(AppStates::Menu);
                     }
                 break;
             case sf::Event::MouseLeft:
@@ -208,7 +209,12 @@ namespace ant{
                 sf::Sprite sprite;
                 sprite.setPosition(pos);
                 if(v["GUI"]["buttons"][size_t(i)]["imageID"].getString() != ""){
-                    sprite.setTexture(assets->getTexture(v["GUI"]["buttons"][size_t(i)]["imageID"].getString()));
+                    auto textureID = v["GUI"]["buttons"][size_t(i)]["imageID"].getString();
+                    if(assets->hasTexture(textureID)){
+                        sprite.setTexture(assets->getTexture(textureID));
+                    }else{
+                        throw std::runtime_error("The " + textureID + " ID doesn't exists, add it to assets.json");
+                    }
                 }
                 std::string actionID = v["GUI"]["buttons"][size_t(i)]["action"].getString();
                 constructorSystem::command action = [](Entity* e,sf::VertexArray* va,sf::FloatRect bounds){};

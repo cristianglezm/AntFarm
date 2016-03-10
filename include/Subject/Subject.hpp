@@ -16,10 +16,12 @@
 
 #ifndef SUBJECT_H
 #define SUBJECT_H
+
 #include <vector>
 #include <algorithm>
 #include <memory>
 #include <Observer/Observer.hpp>
+
 namespace ant{
     /**
      * @brief Tema al cual se suscriben los observadores Observer.
@@ -29,7 +31,7 @@ namespace ant{
     class Subject final{
         public:
             /**
-             * @brief Añade un observador.
+             * @brief AÃ±ade un observador.
              * @param o Observer*
              */
             void addObserver(Observer* o);

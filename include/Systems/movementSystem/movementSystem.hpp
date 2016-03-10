@@ -14,8 +14,9 @@
 // limitations under the License.
 ////////////////////////////////////////////////////////////////
 
-#ifndef MOVEMENT_SYSTEM_H
-#define MOVEMENT_SYSTEM_H
+#ifndef MOVEMENT_SYSTEM_HPP
+#define MOVEMENT_SYSTEM_HPP
+
 #include <Systems/System.hpp>
 #include <Observer/Observer.hpp>
 #include <Event/EventType.hpp>
@@ -23,6 +24,7 @@
 #include <Components/ComponentsAlias.hpp>
 #include <Entity/States.hpp>
 #include <Utils/Math.hpp>
+
 namespace ant{
     /**
      * @brief Sistema encargado de hacer que las entidades se muevan.
@@ -60,4 +62,4 @@ namespace ant{
     };
 }
 
-#endif // MOVEMENT_SYSTEM_H
+#endif // MOVEMENT_SYSTEM_HPP

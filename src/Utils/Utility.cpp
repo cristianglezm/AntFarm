@@ -26,14 +26,14 @@ namespace ant{
                 std::string data;
                 int readed = 0;
                 int count = 0;
+                auto bufferSize = 2048;
                 do{
-                    std::vector<char> buffer(1024);
-                    readed = fis.read(buffer.data(), 1024);
+                    std::vector<char> buffer(bufferSize,'\0');
+                    readed = fis.read(buffer.data(), bufferSize);
                     count += readed;
                     data += std::string(buffer.data());
                     fis.seek(count);
-                }while(readed != 0);
-                data += "\0";
+                }while(readed != 0 && readed != -1);
                 return data;
             }
             void log(std::string tag,std::string info){

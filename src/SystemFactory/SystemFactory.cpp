@@ -18,7 +18,7 @@ namespace ant{
         s->setEventQueue(eventQueue);
         return s;
     }
-    std::shared_ptr<collisionSystem> SystemFactory::createCollisionSystem(sf::FloatRect bounds,sf::VertexArray * GameMap){
+    std::shared_ptr<collisionSystem> SystemFactory::createCollisionSystem(sf::FloatRect bounds,sf::VertexArray* GameMap){
         auto cs = std::make_shared<collisionSystem>(bounds,GameMap);
         cs->setEventQueue(eventQueue);
         return cs;
