@@ -32,17 +32,17 @@ namespace ant{
             /**
              * @brief Contenedor usado por WorldManager
              */
-            typedef std::map<long int,std::unique_ptr<World>> map;
+            using map = std::map<long int,std::unique_ptr<World>>;
             /**
              * @brief Iterador del Contenedor
              */
-            typedef map::iterator iterator;
+            using iterator = map::iterator;
             /**
              * @brief Constructor por defecto
              */
             WorldManager();
             /**
-             * @brief Añade un World al contenedor.
+             * @brief AÃ±ade un World al contenedor.
              * @param w std::unique_ptr<World>
              */
             void addWorld(std::unique_ptr<World> w);
@@ -94,7 +94,7 @@ namespace ant{
              * @brief Limpia los mundos que contiene.
              */
             void clear();
-            ~WorldManager();
+            ~WorldManager() = default;
         private:
             map worlds;
     };

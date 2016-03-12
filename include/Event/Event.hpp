@@ -51,7 +51,9 @@ namespace ant{
              * @brief Setter para poner el tipo al evento.
              * @param type int tipo de evento.
              */
-            void setType(int type){ this->type=type;}
+            void setType(int type){
+                this->type = type;
+            }
             /**
              * @brief Getter del tipo de evento.
              * @return int tipo del evento.

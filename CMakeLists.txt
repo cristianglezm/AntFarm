@@ -7,6 +7,7 @@ cmake_minimum_required(VERSION 3.1)
 option(BUILD_STATIC "TRUE to statically link to the standard libraries and dependencies, FALSE to use them as DLLs" FALSE)
 option(WITH_GUI "TRUE to use the GUI" FALSE)
 option(WITH_FULLSCREEN "TRUE to launch with fullscreen" FALSE)
+option(RENDER_QTREE "TRUE to Render QuadTree Borders" FALSE)
 
 if(BUILD_STATIC)
 	SET(SFML_STATIC_LIBRARIES TRUE)
@@ -21,6 +22,10 @@ endif(WITH_GUI)
 if(WITH_FULLSCREEN)
     add_definitions("-DWITH_FULLSCREEN")
 endif(WITH_FULLSCREEN)
+
+if(RENDER_QTREE)
+    add_definitions("-DRENDER_QTREE")
+endif(RENDER_QTREE)
 
 ################################################################################
 ### Project files.

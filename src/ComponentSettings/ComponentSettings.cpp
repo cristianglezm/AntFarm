@@ -19,7 +19,7 @@ namespace ant{
     void ComponentSettings::loadSettings(const std::string& filename){
         JsonBox::Value v;
     #if defined ANDROID
-        v.loadFromString(android::readAssetsFile(filename));
+        v.loadFromString(std::string(android::readAssetsFile(filename).data()));
     #else
         v.loadFromFile(filename);
     #endif

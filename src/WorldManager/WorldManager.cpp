@@ -1,9 +1,7 @@
 #include <WorldManager/WorldManager.hpp>
 
 namespace ant{
-    WorldManager::WorldManager(){
-
-    }
+    WorldManager::WorldManager(){}
     void WorldManager::addWorld(std::unique_ptr<World> w){
         worlds.insert(std::make_pair(w->getId(),std::move(w)));
     }
@@ -36,8 +34,5 @@ namespace ant{
     }
     void WorldManager::clear(){
         worlds.clear();
-    }
-    WorldManager::~WorldManager(){
-
     }
 }

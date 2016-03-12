@@ -69,9 +69,8 @@ namespace ant{
             inline baseComponent* getComponent(long int id){
                 if(hasComponent(id)){
                     return Components[id].get();
-                }else{
-                    return nullptr;
                 }
+                return nullptr;
             }
             /**
              * @brief Elimina el componente de la entidad.
@@ -113,7 +112,7 @@ namespace ant{
              * @param id long int Id del componente.
              * @return bool
              */
-            inline bool hasComponent(long int id){ return ((mask & id) == id); }
+            inline bool hasComponent(long int id) const{ return ((mask & id) == id); }
             /**
              * @brief Comprueba si la entidad tiene el estado especificado.
              * @param statesID long int id de los estados.
@@ -122,7 +121,7 @@ namespace ant{
              * @endcode
              * @return bool
              */
-            inline bool is(long int statesID){ return ((states & statesID) == statesID ); }
+            inline bool is(long int statesID) const{ return ((states & statesID) == statesID ); }
             /**
              * @brief Añade un estado a la entidad.
              * @param state long int estado a añadir.
@@ -137,7 +136,7 @@ namespace ant{
              * @brief devuelve los estados de la entidad.
              * @return long int Estados de la entidad.
              */
-             inline long int getStates(){ return states; }
+             inline long int getStates() const{ return states; }
              /**
               * @brief Limpia los componentes de la entidad
               */

@@ -8,25 +8,6 @@ namespace ant{
     }
     void movementSystem::onNotify(std::shared_ptr<baseEvent> e){
         switch(e->getType()){
-            case EventType::COLLISION_EVENT:{
-                    /*
-                    auto& attributes = e->getAttributes<EventsAlias::collision>();
-                    // obtenemos los atributos del evento.
-                    auto& entity1 = std::get<0>(attributes);
-                    auto& entity2 = std::get<1>(attributes);
-                    if(entity1->hasComponent(ComponentsMask::COMPONENT_VELOCITY)){
-                        auto& velocity1 = entity1->getComponent(ComponentsMask::COMPONENT_VELOCITY)
-                                                    ->getProperties<sf::Vector2f,float,float,float>();
-                        std::get<1>(velocity1) = 0;
-                    }
-                    if(entity2->hasComponent(ComponentsMask::COMPONENT_VELOCITY)){
-                        auto& velocity2 = entity2->getComponent(ComponentsMask::COMPONENT_VELOCITY)
-                                                    ->getProperties<sf::Vector2f,float,float,float>();
-                        std::get<1>(velocity2) = 0;
-                    }
-                    */
-            }
-                break;
             case EventType::TERRAIN_COLLISION:{
                 static const int UP = 180;
                 static const int LEFT = -90;
@@ -35,39 +16,41 @@ namespace ant{
                 auto& entity = std::get<0>(attributes);
                 auto& type = std::get<1>(attributes);
                 if(entity->hasComponent(ComponentsMask::COMPONENT_TRANSFORM)){
-                    auto& properties = entity->getComponent(ComponentsMask::COMPONENT_TRANSFORM)
-                                                 ->getProperties<ComponentsAlias::transform>();
-                    auto& rotation = std::get<2>(properties);
-                    auto& position = std::get<0>(properties);
-                    switch(type){
-                        case 0:
-                            if(entity->is(States::CLIMBING)){
-                                rotation = UP;
-                            }else{
-                                rotation = LEFT;
-                            }
-                            break;
-                        case 1:
-                            if(entity->is(States::CLIMBING)){
-                                rotation = UP;
-                            }else{
-                                rotation = RIGHT;
-                            }
-                            break;
-                        case 2:
-                            // subir escaleras
-                            position.y -=15;
-                            break;
-                        case 3:
-                            if(rotation == UP){
-                                rotation = RIGHT;
-                            }
-                            break;
-                        case 4:
-                            if(rotation == UP){
-                                rotation = LEFT;
-                            }
-                            break;
+                    auto component = entity->getComponent(ComponentsMask::COMPONENT_TRANSFORM);
+                    if(component){
+                        auto& properties = component->getProperties<ComponentsAlias::transform>();
+                        auto& rotation = std::get<2>(properties);
+                        auto& position = std::get<0>(properties);
+                        switch(type){
+                            case 0:
+                                if(entity->is(States::CLIMBING)){
+                                    rotation = UP;
+                                }else{
+                                    rotation = LEFT;
+                                }
+                                break;
+                            case 1:
+                                if(entity->is(States::CLIMBING)){
+                                    rotation = UP;
+                                }else{
+                                    rotation = RIGHT;
+                                }
+                                break;
+                            case 2:
+                                // climbing stairs
+                                position.y -= 15;
+                                break;
+                            case 3:
+                                if(rotation == UP){
+                                    rotation = RIGHT;
+                                }
+                                break;
+                            case 4:
+                                if(rotation == UP){
+                                    rotation = LEFT;
+                                }
+                                break;
+                        }
                     }
                 }
             }

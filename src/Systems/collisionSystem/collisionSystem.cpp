@@ -3,9 +3,9 @@
 
 namespace ant{
     collisionSystem::collisionSystem(sf::FloatRect bounds,sf::VertexArray* GameMap)
-    :qtree(bounds)
-    ,gameBounds(bounds)
-    ,gameMap(GameMap){
+    : qtree(bounds)
+    , gameBounds(bounds)
+    , gameMap(GameMap){
         name = "collisionSystem";
         RequiredComponents = ComponentsMask::COMPONENT_TRANSFORM | ComponentsMask::COMPONENT_BOUNDS;
     }

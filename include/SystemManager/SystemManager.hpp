@@ -14,8 +14,9 @@
 // limitations under the License.
 ////////////////////////////////////////////////////////////////
 
-#ifndef SYSTEM_MANAGER_H
-#define SYSTEM_MANAGER_H
+#ifndef SYSTEM_MANAGER_HPP
+#define SYSTEM_MANAGER_HPP
+
 #include <unordered_map>
 #include <memory>
 #include <Systems/System.hpp>
@@ -33,9 +34,9 @@ namespace ant{
             /**
              * @brief Contenedor usado por la clase.
              */
-            typedef std::unordered_map<std::string,std::shared_ptr<System>> container;
+            using container = std::unordered_map<std::string,std::shared_ptr<System>>;
             /**
-             * @brief Añade un sistema al manager.
+             * @brief AÃ±ade un sistema al manager.
              * @param s std::shared_ptr<System>
              * @return bool
              */
@@ -88,4 +89,4 @@ namespace ant{
             container systems;
     };
 }
-#endif // SYSTEM_MANAGER_H
+#endif // SYSTEM_MANAGER_HPP

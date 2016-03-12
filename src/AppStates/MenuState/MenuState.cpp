@@ -17,13 +17,13 @@ namespace ant{
         helpOption.setFont(context.assets->getFont(font));
         helpOption.setString("Help");
         Utils::centerOrigin(helpOption);
-        helpOption.setPosition(playOption.getPosition() + sf::Vector2f(0.f, 30.f));
+        helpOption.setPosition(playOption.getPosition() + sf::Vector2f(0.f, 40.f));
         mOptions.emplace_back(helpOption);
         sf::Text exitOption;
         exitOption.setFont(context.assets->getFont(font));
         exitOption.setString("Exit");
         Utils::centerOrigin(exitOption);
-        exitOption.setPosition(helpOption.getPosition() + sf::Vector2f(0.f, 30.f));
+        exitOption.setPosition(helpOption.getPosition() + sf::Vector2f(0.f, 40.f));
         mOptions.emplace_back(exitOption);
         sf::Text gameTitle;
         gameTitle.setFont(context.assets->getFont(font));
@@ -104,7 +104,7 @@ namespace ant{
     void MenuState::loadConfig(const std::string& filename){
         JsonBox::Value v;
     #if defined ANDROID
-        v.loadFromString(android::readAssetsFile(filename));
+        v.loadFromString(std::string(android::readAssetsFile(filename).data()));
     #else
         v.loadFromFile(filename);
     #endif

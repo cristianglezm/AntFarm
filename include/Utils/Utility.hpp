@@ -70,7 +70,7 @@ namespace ant{
              * @param filename
              * @return std::string
              */
-            std::string readAssetsFile(std::string filename);
+            std::vector<char> readAssetsFile(std::string filename);
             /**
              * @brief Helper function to log android info.
              * @param tag

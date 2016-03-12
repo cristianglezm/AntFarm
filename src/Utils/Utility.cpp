@@ -18,12 +18,13 @@ namespace ant{
 
 #if defined ANDROID
         namespace android{
-            std::string readAssetsFile(std::string filename){
+            std::vector<char> readAssetsFile(std::string filename){
                 sf::FileInputStream fis;
                 if(!fis.open(filename)){
                     throw std::runtime_error("Could not open file: " + filename);
                 }
-                std::string data;
+                std::vector<char> data;
+                data.reserve(fis.getSize());
                 int readed = 0;
                 int count = 0;
                 auto bufferSize = 2048;
@@ -31,7 +32,9 @@ namespace ant{
                     std::vector<char> buffer(bufferSize,'\0');
                     readed = fis.read(buffer.data(), bufferSize);
                     count += readed;
-                    data += std::string(buffer.data());
+                    for(auto& byte:buffer){
+                        data.emplace_back(byte);
+                    }
                     fis.seek(count);
                 }while(readed != 0 && readed != -1);
                 return data;

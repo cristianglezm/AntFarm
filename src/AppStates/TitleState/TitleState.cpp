@@ -30,7 +30,7 @@ namespace ant{
     void TitleState::loadConfig(const std::string& filename){
         JsonBox::Value v;
     #if defined ANDROID
-        v.loadFromString(android::readAssetsFile(filename));
+        v.loadFromString(std::string(android::readAssetsFile(filename).data()));
     #else
         v.loadFromFile(filename);
     #endif

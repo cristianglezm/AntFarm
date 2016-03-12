@@ -1,6 +1,5 @@
 #include <AssetManager/AssetManager.hpp>
 #if defined ANDROID
-    #include <android/log.h>
     #include<Utils/Utility.hpp>
 #endif
 
@@ -12,7 +11,7 @@ namespace ant{
     bool AssetManager::loadAssets(const std::string& filename){
         JsonBox::Value v;
         #if defined ANDROID
-            v.loadFromString(android::readAssetsFile(filename));
+            v.loadFromString(std::string(android::readAssetsFile(filename).data()));
         #else
             v.loadFromFile(filename);
         #endif

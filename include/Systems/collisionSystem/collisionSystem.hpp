@@ -14,8 +14,9 @@
 // limitations under the License.
 ////////////////////////////////////////////////////////////////
 
-#ifndef COLLISION_SYSTEM_H
-#define COLLISION_SYSTEM_H
+#ifndef COLLISION_SYSTEM_HPP
+#define COLLISION_SYSTEM_HPP
+
 #include <Systems/System.hpp>
 #include <Utils/Quadtree.hpp>
 #include <SFML/System/Vector2.hpp>
@@ -32,7 +33,7 @@ namespace ant{
      * @class collisionSystem
      * @brief Sistema que comprueba las colisiones entre entidades.
      *
-     * Cuando detecta una colision añade un evento a la EventQueue con las dos entidades que colisionaron.
+     * Cuando detecta una colision aÃ±ade un evento a la EventQueue con las dos entidades que colisionaron.
      *  -# Event<Entity*,Entity*> -> type: COLLISION_EVENT
      *  -# Event<Entity*,int> -> type: TERRAIN_COLLISION
      *  -# Event<Entity*> -> type: OUT_MAP
@@ -54,6 +55,8 @@ namespace ant{
             virtual void render(sf::RenderWindow& win) override{
                 #ifdef RENDER_QTREE
                     qtree.render(win);
+                #else
+                    return;
                 #endif
             }
             /**
@@ -91,4 +94,4 @@ namespace ant{
             sf::VertexArray* gameMap;
     };
 }
-#endif // COLLISION_SYSTEM_H
+#endif // COLLISION_SYSTEM_HPP
