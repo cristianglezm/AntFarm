@@ -1,5 +1,6 @@
 #include <AppStates/TitleState/TitleState.hpp>
 #include <Utils/Utility.hpp>
+
 namespace ant{
     TitleState::TitleState(StateStack& stack, Context context)
     : AppState(stack,context)
@@ -62,7 +63,7 @@ namespace ant{
             requestStackPop();
         }
     #else
-        if(event.type == sf::Event::KeyPressed){
+        if(event.type == sf::Event::KeyReleased){
             requestStackPop();
             requestStackPush(AppStates::Menu);
         }
