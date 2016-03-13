@@ -2,20 +2,25 @@
 #include <Event/EventsAlias.hpp>
 
 namespace ant{
-    spawnSystem::spawnSystem(int nEntities, EntityFactory* ef,sf::Time ot,sf::Vector2f spawnPoint,long int state){
+    spawnSystem::spawnSystem(int nEntities, EntityFactory* ef,sf::Time ot,sf::Vector2f spawnPoint,long int state)
+    : entityFactory(ef)
+    , nEntities(nEntities)
+    , createdEntities(0)
+    , overTime(sf::seconds(1))
+    , elapsedTime(sf::seconds(0))
+    , spawnPoint(spawnPoint)
+    , clock()
+    , states(state)
+    , cs(){
         name = "spawnSystem";
         RequiredComponents = ComponentsMask::COMPONENT_IN | ComponentsMask::COMPONENT_TRANSFORM;
-        this->nEntities = nEntities;
-        entityFactory = ef;
         if(ot.asSeconds()<=0.0){
             overTime = sf::seconds(1);
         }else{
             overTime = ot;
         }
-        elapsedTime = sf::seconds(0);
-        this->spawnPoint = spawnPoint;
-        createdEntities = 0;
-        states = state;
+        cs.loadSettings(Config::ANT_FILE);
+        cs.position = spawnPoint + sf::Vector2f(5,5);
     }
     void spawnSystem::setStates(long int state){
         states = state;
@@ -24,9 +29,6 @@ namespace ant{
         if(elapsedTime > overTime && createdEntities < nEntities){
             elapsedTime = sf::seconds(0);
             ++createdEntities;
-            ComponentSettings cs;
-            cs.loadSettings(Config::ANT_FILE);
-            cs.position = spawnPoint + sf::Vector2f(5,5);
             auto ant = entityFactory->createEntity(EntityFactory::Ant,cs);
             ant->addState(states);
             em->addEntity(std::move(ant));

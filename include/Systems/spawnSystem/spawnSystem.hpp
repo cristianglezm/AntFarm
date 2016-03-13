@@ -14,14 +14,16 @@
 // limitations under the License.
 ////////////////////////////////////////////////////////////////
 
-#ifndef SPAWN_SYSTEM_H
-#define SPAWN_SYSTEM_H
+#ifndef SPAWN_SYSTEM_HPP
+#define SPAWN_SYSTEM_HPP
+
 #include <Systems/System.hpp>
 #include <Observer/Observer.hpp>
 #include <Event/EventType.hpp>
 #include <EntityFactory/EntityFactory.hpp>
 #include <Entity/States.hpp>
 #include <Config.hpp>
+
 namespace ant{
     /**
      * @brief Sistema encargado de crear las entidades sobre el tiempo establecido.
@@ -80,6 +82,7 @@ namespace ant{
             sf::Vector2f spawnPoint;
             sf::Clock clock;
             long int states;
+            ComponentSettings cs;
     };
 }
 #endif // SPAWN_SYSTEM_H
