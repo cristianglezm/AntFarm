@@ -73,4 +73,5 @@ constructorSystem::command Constructions::your_function = [](Entity* e,sf::Verte
 Documentation
 ===
 
-The documentation can be found on "doc" or be generated with doxygen (it needs to be configured)
+The documentation can be generated with cmake adding the option -DAntFarm_BUILD_DOCS=TRUE
+
