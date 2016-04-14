@@ -31,9 +31,9 @@ namespace ant{
         if(it != entities.end()){
             ne = std::move(*it);
             entities.erase(it);
-            return std::move(ne);
+            return ne;
         }
-        return std::unique_ptr<Entity>();
+        return ne;
     }
     std::unique_ptr<Entity> EntityManager::Transfer(const Entity* e){
         std::unique_ptr<Entity> ne;
@@ -42,8 +42,8 @@ namespace ant{
         if(it != entities.end()){
             ne = std::move(*it);
             entities.erase(it);
-            return std::move(ne);
+            return ne;
         }
-        return std::unique_ptr<Entity>();
+        return ne;
     }
 }

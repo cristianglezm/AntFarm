@@ -5,9 +5,7 @@ int main(){
         ant::Application app;
         app.run();
     }catch(std::exception& e){
-    #if defined ANDROID
-        __android_log_write(ANDROID_LOG_INFO,"AntFarm",e.what()); // REMOMVE TODO
-    #else
+    #ifndef ANDROID
         std::cout << e.what() << std::endl;
     #endif
     }

@@ -53,7 +53,7 @@ namespace ant{
             /**
              * @brief Inicializa el nivel.
              *
-             * Añade los mundos iniciales al nivel.
+             * AÃ±ade los mundos iniciales al nivel.
              * @param bounds sf::FloatRect rectangulo con los limites del nivel.
              */
             void init(const sf::FloatRect& bounds);
@@ -64,7 +64,8 @@ namespace ant{
             bool loadLevel(const sf::FloatRect& bounds,const std::string& filename);
             /**
              * @brief Setter para la cola de eventos.
-             * @param eq std::shared_ptr<EventQueue> Cola para que los sistemas añadan los eventos que sucenden en el juego.
+             * @param id level id
+             * @param eq std::shared_ptr<EventQueue> Cola para que los sistemas aÃ±adan los eventos que sucenden en el juego.
              */
             void setEventQueue(int id,std::shared_ptr<EventQueue> eq);
             /**
@@ -72,9 +73,27 @@ namespace ant{
              * @return std::shared_ptr<EventQueue> Devuelve la cola de eventos.
              */
             inline std::shared_ptr<EventQueue> getEventQueue(int id){ return this->eventQueues[id]; }
+            /**
+             * @brief adds a event queue
+             * @param eq EventQueue
+             */
             void addEventQueue(std::shared_ptr<EventQueue> eq);
+            /**
+             * @brief adds a GameEventDispatcher
+             * @param ged GameEventDispatcher
+             */
             void addGameEventDispatcher(std::shared_ptr<GameEventDispatcher> ged);
+            /**
+             * @brief changes a GameEventDispatcher
+             * @param id world id
+             * @param ged GameEventDispatcher
+             */
             void setGameEventDispatcher(int id,std::shared_ptr<GameEventDispatcher> ged);
+            /**
+             * @brief Getter for GameEventDispatcher
+             * @param id
+             * @return std::shared_ptr<GameEventDispatcher>
+             */
             inline std::shared_ptr<GameEventDispatcher> getGameEventDispatcher(int id){ return gameEventDispatchers[id]; }
             /**
              * @brief Setter para la fabrica de mundos.

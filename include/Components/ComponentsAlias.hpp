@@ -26,11 +26,29 @@ namespace ComponentsAlias{
     using count = ant::Component<int>;
     /**
      * @brief component velocity
-     * @param
+     * @param sf::Vector2f velocity
+     * @param float speed
+     * @param float minSpeed
+     * @param float maxSpeed
      */
     using velocity = ant::Component<sf::Vector2f,float,float,float>;
+    /**
+     * @brief component Sprite
+     * @param std::string id of the sprite
+     * @param std::unique_ptr<sf::Sprite>
+     */
     using sprite = ant::Component<std::string,std::unique_ptr<sf::Sprite>>;
+    /**
+     * @brief component Destructable
+     * @param std::string destructable id
+     * @param std::unique_ptr<sf::VertexArray> array of vertices
+     * @param sf::FloatRect bounds of destructable
+     */
     using destructable = ant::Component<std::string,std::unique_ptr<sf::VertexArray>,sf::FloatRect>;
+    /**
+     * @brief component animation
+     * @param std::vector<std::string> vector for the id of sprites.
+     */
     using animation = ant::Component<std::vector<std::string>>;
     using passage = ant::Component<sf::Vector2f>;
     using in = ant::Component<>;
