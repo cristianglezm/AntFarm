@@ -1,14 +1,17 @@
 #include <Systems/System.hpp>
+
 namespace ant{
     System::System()
-    : RequiredComponents(0)
+    : RequiredComponents(0) // ComponentsMask::COMPONENT_NONE
     , eventQueue(std::make_shared<EventQueue>())
-    , em(std::make_shared<EntityManager>()){}
+    , em(std::make_shared<EntityManager>())
+    , name("baseSystem"){}
     System::System(long int req)
     : RequiredComponents(req)
     , eventQueue(std::make_shared<EventQueue>())
-    , em(std::make_shared<EntityManager>()){}
-    System::System(long int req,std::shared_ptr<EntityManager> em,std::shared_ptr<EventQueue> eventQueue)
+    , em(std::make_shared<EntityManager>())
+    , name("baseSystem"){}
+    System::System(long int req,std::shared_ptr<EntityManager> em, std::shared_ptr<EventQueue> eventQueue)
     : RequiredComponents(req)
     , eventQueue(eventQueue)
     , em(em){}

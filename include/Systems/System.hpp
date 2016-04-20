@@ -14,14 +14,18 @@
 // limitations under the License.
 ////////////////////////////////////////////////////////////////
 
-#ifndef SYSTEM_H
-#define SYSTEM_H
-#include <SFML/System/Time.hpp>
+#ifndef SYSTEM_HPP
+#define SYSTEM_HPP
+
 #include <string>
 #include <memory>
+
 #include <EventQueue/EventQueue.hpp>
 #include <EntityManager/EntityManager.hpp>
+
+#include <SFML/System/Time.hpp>
 #include <SFML/Graphics/RenderWindow.hpp>
+
 namespace ant{
     /**
      * @brief Clase base para los sistemas.
@@ -103,4 +107,4 @@ namespace ant{
             std::string name;
     };
 }
-#endif // SYSTEM_H
+#endif // SYSTEM_HPP

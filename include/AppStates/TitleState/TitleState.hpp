@@ -16,11 +16,15 @@
 
 #ifndef ANT_TITLESTATE_HPP
 #define ANT_TITLESTATE_HPP
-#include <AppStates/AppState.hpp>
+
 #include <string>
-#include <Config.hpp>
+
 #include <SFML/Graphics/Sprite.hpp>
 #include <SFML/Graphics/Text.hpp>
+
+#include <AppStates/AppState.hpp>
+#include <Config.hpp>
+
 namespace ant{
     /**
      * @brief Muestra el titulo de la aplicacion

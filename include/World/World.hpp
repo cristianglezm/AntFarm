@@ -14,11 +14,14 @@
 // limitations under the License.
 ////////////////////////////////////////////////////////////////
 
-#ifndef WORLD_H
-#define WORLD_H
+#ifndef WORLD_HPP
+#define WORLD_HPP
+
 #include <SFML/System/Time.hpp>
 #include <SFML/Graphics/RenderWindow.hpp>
+
 #include <memory>
+
 #include <Utils/Utility.hpp>
 #include <EntityManager/EntityManager.hpp>
 #include <SystemManager/SystemManager.hpp>
@@ -116,4 +119,4 @@ namespace ant{
             std::shared_ptr<GameEventDispatcher> gameEventDispatcher;
     };
 }
-#endif // WORLD_H
+#endif // WORLD_HPP
