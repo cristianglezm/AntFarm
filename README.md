@@ -29,10 +29,11 @@ Use CMake to build the project.
 
 ```
 mkdir build && cd build
-cmake -G"MinGW Makefiles" -DSFML_ROOT=<baseDir> -DJSONBOX_ROOT=<baseDir> -DWITH_FULLSCREEN=FALSE -DWITH_GUI=FALSE ..
+cmake -G"MinGW Makefiles" -DSFML_ROOT=<baseDir> -DJSONBOX_ROOT=<baseDir> \ 
+	-DAntFarm_WITH_FULLSCREEN=FALSE -DAntFarm_WITH_GUI=FALSE \
+	-DAntFarm_RENDER_QTREE=FALSE ..
 make
 make install
-
 ```
 
 Android
