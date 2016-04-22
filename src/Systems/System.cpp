@@ -6,16 +6,17 @@ namespace ant{
     , eventQueue(std::make_shared<EventQueue>())
     , em(std::make_shared<EntityManager>())
     , name("baseSystem"){}
-    System::System(long int req)
+    System::System(ComponentsMask::Mask& req)
     : RequiredComponents(req)
     , eventQueue(std::make_shared<EventQueue>())
     , em(std::make_shared<EntityManager>())
     , name("baseSystem"){}
-    System::System(long int req,std::shared_ptr<EntityManager> em, std::shared_ptr<EventQueue> eventQueue)
+    System::System(ComponentsMask::Mask& req,std::shared_ptr<EntityManager> em, std::shared_ptr<EventQueue> eventQueue)
     : RequiredComponents(req)
     , eventQueue(eventQueue)
-    , em(em){}
-    void System::setRequiredComponents(long int req){
+    , em(em)
+    , name("baseSystem"){}
+    void System::setRequiredComponents(ComponentsMask::Mask& req){
         RequiredComponents = req;
     }
     void System::setEventQueue(std::shared_ptr<EventQueue> eventQueue){

@@ -14,8 +14,8 @@
 // limitations under the License.
 ////////////////////////////////////////////////////////////////
 
-#ifndef EVENT_H
-#define EVENT_H
+#ifndef EVENT_HPP
+#define EVENT_HPP
 
 #include <tuple>
 #include <memory>
@@ -58,7 +58,7 @@ namespace ant{
              * @brief Getter del tipo de evento.
              * @return int tipo del evento.
              */
-            inline int getType() const{ return type; }
+            inline const int& getType() const noexcept{ return type; }
             /**
              * @brief Getter de los atributos del evento.
              * @code baseEvent::getAttributes<float,int>(); @endcode
@@ -127,4 +127,4 @@ namespace ant{
     }
 
 }
-#endif // EVENT_H
+#endif // EVENT_HPP

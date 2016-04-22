@@ -4,5 +4,5 @@ FEATURES
 Things that can be added to the game:
 
 * Traps
-* Enemys
+* Enemies
 * Indestructible Walls

@@ -41,22 +41,22 @@ namespace ant{
              * @param ot sf::Time Tiempo para crear las entidades cada X tiempo.
              * @param ef EntityFactory * Para crear las entidades.
              * @param spawnPoint sf::Vector2f sitio donde saldran las entidades.
-             * @param state long int Estados iniciales para cuando las entidades son creadas.
+             * @param state ComponentsMask::Mask Estados iniciales para cuando las entidades son creadas.
              */
-            spawnSystem(int nEntities, EntityFactory* ef,sf::Time ot,sf::Vector2f spawnPoint,long int state);
+            spawnSystem(int nEntities, EntityFactory* ef,sf::Time ot,sf::Vector2f spawnPoint,ComponentsMask::Mask& state);
             /**
              * @brief Establece el estado por defecto que pondra a las entidades.
-             * @param state long int estados de las entidades
+             * @param state ComponentsMask::Mask estados de las entidades
              * @code
              *  setStates(States::FALLING | STATES::ONFIRE);
              * @endcode
              */
-            void setStates(long int state);
+            void setStates(ComponentsMask::Mask& state);
             /**
              * @brief Obtiene los estados que pone por defecto al crear las entidades.
-             * @return long int
+             * @return ComponentsMask::Mask
              */
-            inline const long& getStates() const { return states; }
+            inline const ComponentsMask::Mask& getStates() const noexcept{ return states; }
             /**
              * @brief Cada x segundos crea un entidad en el sitio establecido.
              * @param dt sf::Time delta time
@@ -81,7 +81,7 @@ namespace ant{
             sf::Time elapsedTime;
             sf::Vector2f spawnPoint;
             sf::Clock clock;
-            long int states;
+            ComponentsMask::Mask states;
             ComponentSettings cs;
     };
 }

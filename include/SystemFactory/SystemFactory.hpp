@@ -99,7 +99,7 @@ namespace ant{
              * @see spawnSystem::spawnSystem
              * @return std::shared_ptr<spawnSystem>
              */
-            std::shared_ptr<spawnSystem> createSpawnSystem(int nEntities,EntityFactory* ef,sf::Time ot,sf::Vector2f spawnPoint,long int state);
+            std::shared_ptr<spawnSystem> createSpawnSystem(int nEntities,EntityFactory* ef,sf::Time ot,sf::Vector2f spawnPoint,ComponentsMask::Mask state);
             /**
              * @brief Crea un sistema de construccion.
              * @see constructorSystem::constructorSystem

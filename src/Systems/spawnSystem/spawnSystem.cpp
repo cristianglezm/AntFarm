@@ -2,7 +2,7 @@
 #include <Event/EventsAlias.hpp>
 
 namespace ant{
-    spawnSystem::spawnSystem(int nEntities, EntityFactory* ef,sf::Time ot,sf::Vector2f spawnPoint,long int state)
+    spawnSystem::spawnSystem(int nEntities, EntityFactory* ef,sf::Time ot,sf::Vector2f spawnPoint,ComponentsMask::Mask& state)
     : entityFactory(ef)
     , nEntities(nEntities)
     , createdEntities(0)
@@ -22,7 +22,7 @@ namespace ant{
         cs.loadSettings(Config::ANT_FILE);
         cs.position = spawnPoint + sf::Vector2f(5,5);
     }
-    void spawnSystem::setStates(long int state){
+    void spawnSystem::setStates(ComponentsMask::Mask& state){
         states = state;
     }
     void spawnSystem::update(const sf::Time& dt){

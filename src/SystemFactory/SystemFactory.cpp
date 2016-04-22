@@ -34,7 +34,7 @@ namespace ant{
         g->setEventQueue(eventQueue);
         return g;
     }
-    std::shared_ptr<spawnSystem> SystemFactory::createSpawnSystem(int nEntities,EntityFactory* ef,sf::Time ot,sf::Vector2f spawnPoint,long int state){
+    std::shared_ptr<spawnSystem> SystemFactory::createSpawnSystem(int nEntities,EntityFactory* ef,sf::Time ot,sf::Vector2f spawnPoint,ComponentsMask::Mask state){
         auto sp = std::make_shared<spawnSystem>(nEntities,ef,ot,spawnPoint,state);
         gameEventDispatcher->spawnEvents.addObserver(sp.get());
         sp->setEventQueue(eventQueue);

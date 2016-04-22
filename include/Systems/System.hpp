@@ -40,25 +40,25 @@ namespace ant{
             System();
             /**
              * @brief Constructor con los requisitos de este sistema.
-             * @param req long int
+             * @param req ComponentsMask::Mask
              */
-            System(long int req);
+            System(ComponentsMask::Mask& req);
             /**
              * @brief Constructor con los requisitos, EventQueue y EntityManager
-             * @param req long int
+             * @param req ComponentsMask::Mask
              * @param em std::shared_ptr<EntityManager>
              * @param eventQueue std::shared_ptr<EventQueue>
              */
-            System(long int req,std::shared_ptr<EntityManager> em,std::shared_ptr<EventQueue> eventQueue);
+            System(ComponentsMask::Mask& req,std::shared_ptr<EntityManager> em,std::shared_ptr<EventQueue> eventQueue);
             /**
              * @brief Setter para los requisitos necesarios.
-             * @param req long int
+             * @param req ComponentsMask::Mask
              */
-            void setRequiredComponents(long int req);
+            void setRequiredComponents(ComponentsMask::Mask& req);
             /**
              * @brief Getter de los requisitos para el sistema.
              */
-            inline const long& getRequiredComponts() const { return RequiredComponents; }
+            inline const ComponentsMask::Mask& getRequiredComponts() const noexcept{ return RequiredComponents; }
             /**
              * @brief Setter para la EventQueue
              * @param eq std::shared_ptr<EventQueue>
@@ -68,7 +68,7 @@ namespace ant{
              * @brief Getter para la EventQueue
              * @return std::shared_ptr<EventQueue>
              */
-            inline std::shared_ptr<EventQueue> getEventQueue(){ return eventQueue; }
+            inline std::shared_ptr<EventQueue> getEventQueue() noexcept{ return eventQueue; }
             /**
              * @brief Setter Para el nombre del sistema.
              * @param name std::string
@@ -101,7 +101,7 @@ namespace ant{
             virtual void update(const sf::Time& dt) = 0;
             virtual ~System() = default;
         protected:
-            long int RequiredComponents;
+            ComponentsMask::Mask RequiredComponents;
             std::shared_ptr<EventQueue> eventQueue;
             std::shared_ptr<EntityManager> em;
             std::string name;

@@ -17,20 +17,23 @@
 #ifndef STATES_HPP
 #define STATES_HPP
 
+#include <bitset>
+
 /**
  * @brief Estados de las entidades
  * @author Cristian Glez <Cristian.glez.m@gmail.com>
  * @version 0.1
  */
-struct States final{
-        static constexpr long int NONE = 0;
-        static constexpr long int GROUND = 1 << 0;
-        static constexpr long int FALLING = 1 << 1;
-        static constexpr long int CLIMBING = 1 << 2;
-        static constexpr long int BUILDING = 1 << 3;
-        static constexpr long int ONFIRE = 1 << 4;
-        static constexpr long int SAVED = 1 << 5;
-        static constexpr long int UNSAVED = 1 << 6;
-};
+namespace States{
+    using Mask = std::bitset<32>;
+    static constexpr Mask NONE = 0;
+    static constexpr Mask GROUND = 1 << 0;
+    static constexpr Mask FALLING = 1 << 1;
+    static constexpr Mask CLIMBING = 1 << 2;
+    static constexpr Mask BUILDING = 1 << 3;
+    static constexpr Mask ONFIRE = 1 << 4;
+    static constexpr Mask SAVED = 1 << 5;
+    static constexpr Mask UNSAVED = 1 << 6;
+}
 
 #endif // STATES_HPP

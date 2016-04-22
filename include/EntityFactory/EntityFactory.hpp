@@ -14,14 +14,16 @@
 // limitations under the License.
 ////////////////////////////////////////////////////////////////
 
-#ifndef ENTITY_FACTORY_H
-#define ENTITY_FACTORY_H
+#ifndef ENTITY_FACTORY_HPP
+#define ENTITY_FACTORY_HPP
+
 #include <ComponentFactory/ComponentFactory.hpp>
 #include <Components/ComponentMask.hpp>
 #include <ComponentSettings/ComponentSettings.hpp>
 #include <Entity/Entity.hpp>
 #include <Utils/Utility.hpp>
 #include <Config.hpp>
+
 namespace ant{
     /**
      * @brief Clase para crear las entidades del juego.
@@ -30,25 +32,11 @@ namespace ant{
      */
     class EntityFactory final{
         public:
-                static constexpr long int Ant = ComponentsMask::COMPONENT_VELOCITY
-                                | ComponentsMask::COMPONENT_SPRITE
-                                | ComponentsMask::COMPONENT_TRANSFORM
-                                | ComponentsMask::COMPONENT_COUNT
-                                | ComponentsMask::COMPONENT_BOUNDS;
-                static constexpr long int Door = ComponentsMask::COMPONENT_PASSAGE
-                                | ComponentsMask::COMPONENT_TRANSFORM
-                                | ComponentsMask::COMPONENT_SPRITE
-                                | ComponentsMask::COMPONENT_BOUNDS;
-                static constexpr long int InDoor = ComponentsMask::COMPONENT_TRANSFORM
-                                | ComponentsMask::COMPONENT_SPRITE
-                                | ComponentsMask::COMPONENT_IN;
-                static constexpr long int OutDoor = ComponentsMask::COMPONENT_TRANSFORM
-                                | ComponentsMask::COMPONENT_BOUNDS
-                                | ComponentsMask::COMPONENT_SPRITE
-                                | ComponentsMask::COMPONENT_OUT;
-                static constexpr long int level = ComponentsMask::COMPONENT_DESTRUCTABLE
-                                | ComponentsMask::COMPONENT_TRANSFORM
-                                | ComponentsMask::COMPONENT_SPRITE;
+            static const ComponentsMask::Mask Ant;
+            static const ComponentsMask::Mask Door;
+            static const ComponentsMask::Mask InDoor;
+            static const ComponentsMask::Mask OutDoor;
+            static const ComponentsMask::Mask level;
             /**
              * @brief Constructor por defecto.
              */
@@ -82,26 +70,27 @@ namespace ant{
              * @brief Getter del AssetManager.
              * @return std::shared_ptr<AssetManager>
              */
-            inline std::shared_ptr<AssetManager> getAssetManager(){ return componentFactory->getAssetManager(); }
+            inline std::shared_ptr<AssetManager> getAssetManager() noexcept{ return componentFactory->getAssetManager(); }
             /**
              * @brief Crea la entidad especificada.
              *
              * Se puede especificar otros componentes pero tendran los datos por defecto
              *
-             * @param mask long int Mascara de la entidad o componentes.
+             * @param mask ComponentsMask::Mask Mascara de la entidad o componentes.
              *        @code EntityFactory::createEntity( EntityFactory::ANT | Component::Wings | Component::Horns); @endcode
              *        Creas una entidad Hormiga con los componentes adicionales especificados los cuales tendran
              *        valores por defecto.
              * @return std::unique_ptr<Entity> entidad creada.
              */
-            std::unique_ptr<Entity> createEntity(long int mask);
+            std::unique_ptr<Entity> createEntity(ComponentsMask::Mask mask);
             /**
              * @brief Crea la entidad especificada con los datos especificados.
              *
-             * @param mask long int mascara de la entidad o componentes.
+             * @param mask ComponentsMask::Mask mascara de la entidad o componentes.
              * @param cs ComponentSettings
+             * @return std::unique_ptr<Entity>
              */
-            std::unique_ptr<Entity> createEntity(long int mask, ComponentSettings& cs);
+            std::unique_ptr<Entity> createEntity(ComponentsMask::Mask mask, ComponentSettings& cs);
             /**
              * @brief Setter de la fabrica de componentes a utilizar.
              * @param cf std::shared_ptr<ComponentFactory>
@@ -111,11 +100,11 @@ namespace ant{
              * @brief Getter de la fabrica de componentes utilizada.
              * @return std::shared_ptr<ComponentFactory>
              */
-            inline std::shared_ptr<ComponentFactory> getComponentFactory(){ return componentFactory; }
+            inline std::shared_ptr<ComponentFactory> getComponentFactory() noexcept{ return componentFactory; }
             ~EntityFactory() = default;
         private:
             std::shared_ptr<ComponentFactory> componentFactory;
     };
 }
 
-#endif // ENTITY_FACTORY_H
+#endif // ENTITY_FACTORY_HPP

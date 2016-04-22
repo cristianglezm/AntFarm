@@ -1,6 +1,25 @@
 #include <EntityFactory/EntityFactory.hpp>
 
 namespace ant{
+    const ComponentsMask::Mask EntityFactory::Ant = ComponentsMask::COMPONENT_VELOCITY
+                    | ComponentsMask::COMPONENT_SPRITE
+                    | ComponentsMask::COMPONENT_TRANSFORM
+                    | ComponentsMask::COMPONENT_COUNT
+                    | ComponentsMask::COMPONENT_BOUNDS;
+    const ComponentsMask::Mask EntityFactory::Door = ComponentsMask::COMPONENT_PASSAGE
+                    | ComponentsMask::COMPONENT_TRANSFORM
+                    | ComponentsMask::COMPONENT_SPRITE
+                    | ComponentsMask::COMPONENT_BOUNDS;
+    const ComponentsMask::Mask EntityFactory::InDoor = ComponentsMask::COMPONENT_TRANSFORM
+                    | ComponentsMask::COMPONENT_SPRITE
+                    | ComponentsMask::COMPONENT_IN;
+    const ComponentsMask::Mask EntityFactory::OutDoor = ComponentsMask::COMPONENT_TRANSFORM
+                    | ComponentsMask::COMPONENT_BOUNDS
+                    | ComponentsMask::COMPONENT_SPRITE
+                    | ComponentsMask::COMPONENT_OUT;
+    const ComponentsMask::Mask EntityFactory::level = ComponentsMask::COMPONENT_DESTRUCTABLE
+                    | ComponentsMask::COMPONENT_TRANSFORM
+                    | ComponentsMask::COMPONENT_SPRITE;
     EntityFactory::EntityFactory()
     : componentFactory(std::make_shared<ComponentFactory>()){}
     EntityFactory::EntityFactory(const std::string& json)
@@ -16,7 +35,7 @@ namespace ant{
     void EntityFactory::setAssetManager(std::shared_ptr<AssetManager> assets){
         componentFactory->setAssetManager(assets);
     }
-    std::unique_ptr<Entity> EntityFactory::createEntity(long int mask){
+    std::unique_ptr<Entity> EntityFactory::createEntity(ComponentsMask::Mask mask){
         ComponentSettings cs;
         if((mask & Ant) == Ant){
             cs.loadSettings(Config::ANT_FILE);
@@ -32,7 +51,7 @@ namespace ant{
         }
         return createEntity(mask,cs);
     }
-    std::unique_ptr<Entity> EntityFactory::createEntity(long int mask, ComponentSettings& cs){
+    std::unique_ptr<Entity> EntityFactory::createEntity(ComponentsMask::Mask mask, ComponentSettings& cs){
         auto e = std::make_unique<Entity>();
         e->setName(cs.entityName);
         if((mask & ComponentsMask::COMPONENT_TRANSFORM) == ComponentsMask::COMPONENT_TRANSFORM){

@@ -14,8 +14,10 @@
 // limitations under the License.
 ////////////////////////////////////////////////////////////////
 
-#ifndef COMPONENT_MASK_H
-#define COMPONENT_MASK_H
+#ifndef COMPONENT_MASK_HPP
+#define COMPONENT_MASK_HPP
+
+#include <bitset>
 
 /**
  * @brief tipos de componentes.
@@ -23,16 +25,17 @@
  * @version 0.1
  */
 namespace ComponentsMask{
-        static constexpr long int COMPONENT_NONE = 0;
-        static constexpr long int COMPONENT_SPRITE = 1 << 0;
-        static constexpr long int COMPONENT_ANIMATION = 1 << 1;
-        static constexpr long int COMPONENT_VELOCITY = 1 << 2;
-        static constexpr long int COMPONENT_TRANSFORM = 1 << 3;
-        static constexpr long int COMPONENT_DESTRUCTABLE = 1 << 4;
-        static constexpr long int COMPONENT_BOUNDS = 1 << 5;
-        static constexpr long int COMPONENT_PASSAGE = 1 << 6;
-        static constexpr long int COMPONENT_OUT = 1 << 7;
-        static constexpr long int COMPONENT_IN = 1 << 8;
-        static constexpr long int COMPONENT_COUNT = 1 << 9;
+        using Mask = std::bitset<32>;
+        static constexpr Mask COMPONENT_NONE = 0;
+        static constexpr Mask COMPONENT_SPRITE = 1 << 0;
+        static constexpr Mask COMPONENT_ANIMATION = 1 << 1;
+        static constexpr Mask COMPONENT_VELOCITY = 1 << 2;
+        static constexpr Mask COMPONENT_TRANSFORM = 1 << 3;
+        static constexpr Mask COMPONENT_DESTRUCTABLE = 1 << 4;
+        static constexpr Mask COMPONENT_BOUNDS = 1 << 5;
+        static constexpr Mask COMPONENT_PASSAGE = 1 << 6;
+        static constexpr Mask COMPONENT_OUT = 1 << 7;
+        static constexpr Mask COMPONENT_IN = 1 << 8;
+        static constexpr Mask COMPONENT_COUNT = 1 << 9;
 }
-#endif // COMPONENT_MASK_H
+#endif // COMPONENT_MASK_HPP

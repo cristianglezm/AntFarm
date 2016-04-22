@@ -88,7 +88,7 @@ namespace ant{
              * @param entity Entity * puntero de la entidad
              * @param eBounds sf::FloatRect bordes de la entidad
              */
-            void testTerrainCollision(Entity* entity,const sf::FloatRect& eBounds);
+            void testTerrainCollision(Entity* entity, const sf::FloatRect& eBounds);
             Utils::Quadtree qtree;
             sf::FloatRect gameBounds;
             sf::VertexArray* gameMap;

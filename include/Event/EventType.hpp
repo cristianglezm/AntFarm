@@ -14,23 +14,23 @@
 // limitations under the License.
 ////////////////////////////////////////////////////////////////
 
-#ifndef EVENT_TYPE_H
-#define EVENT_TYPE_H
+#ifndef EVENT_TYPE_HPP
+#define EVENT_TYPE_HPP
 /**
  * @brief Tipos de eventos.
  * @author Cristian Glez <Cristian.glez.m@gmail.com>
  * @version 0.1
  */
 namespace EventType{
-        static constexpr long int COLLISION_EVENT = 0;
-        static constexpr long int TERRAIN_COLLISION = 1;
-        static constexpr long int CHANGE_OVERTIME = 2;
-        static constexpr long int CHANGE_NENTITIES = 3;
-        static constexpr long int CHANGE_COMMAND = 4;
-        static constexpr long int SELECT_ENTITY = 5;
-        static constexpr long int OUT_MAP = 6;
-        static constexpr long int LEVEL_COMPLETE = 7;
-        static constexpr long int LEVEL_FAILED = 8;
-        static constexpr long int UPDATE_SCORE = 9;
+        static constexpr int COLLISION_EVENT = 0;
+        static constexpr int TERRAIN_COLLISION = 1;
+        static constexpr int CHANGE_OVERTIME = 2;
+        static constexpr int CHANGE_NENTITIES = 3;
+        static constexpr int CHANGE_COMMAND = 4;
+        static constexpr int SELECT_ENTITY = 5;
+        static constexpr int OUT_MAP = 6;
+        static constexpr int LEVEL_COMPLETE = 7;
+        static constexpr int LEVEL_FAILED = 8;
+        static constexpr int UPDATE_SCORE = 9;
 }
-#endif // EVENT_TYPE_H
+#endif // EVENT_TYPE_HPP

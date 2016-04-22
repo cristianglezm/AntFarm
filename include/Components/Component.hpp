@@ -20,6 +20,8 @@
 #include <tuple>
 #include <memory>
 
+#include <Components/ComponentMask.hpp>
+
 namespace ant{
     //  Forward declaration
     template<typename...T>
@@ -45,24 +47,21 @@ namespace ant{
         protected:
             /**
              * @brief Contructor para la clase derivada.
-             *
-             * @todo posible cambio en el id de long int a bitset<NBits>
-             *
-             * @param id long int id del componente.
+             * @param id ComponentsMask::Mask id del componente.
              */
-            baseComponent(long int id):id(id){}
+            baseComponent(ComponentsMask::Mask id):id(id){}
         public:
             virtual ~baseComponent() = default;
             /**
              * @brief Setter para el id.
-             * @param id long int id para el componente.
+             * @param id ComponentsMask::Mask id para el componente.
              */
-            void setId(long int id){ this->id=id;}
+            void setId(ComponentsMask::Mask id){ this->id=id;}
             /**
              * @brief Getter para el id.
-             * @return long int id del componente.
+             * @return ComponentsMask::Mask id del componente.
              */
-            inline const long int& getId() const{ return id; }
+            inline const ComponentsMask::Mask& getId() const{ return id; }
             /**
              * @brief Getter de las propiedades del componente,
              *
@@ -87,7 +86,7 @@ namespace ant{
             template<typename T>
             void setProperties(typename priv::ComponentHelper<T>::tuple_type properties);
         private:
-            long int id;
+            ComponentsMask::Mask id;
     };
     /**
      * @class Component
@@ -106,10 +105,10 @@ namespace ant{
             /**
              * @brief Constructor del componente especializado.
              *
-             * @param id long int id del componente.
+             * @param id ComponentsMask::Mask id del componente.
              * @param data T... propiedades del componente.
              */
-            Component(long int id,T...data)
+            Component(ComponentsMask::Mask id,T...data)
             : baseComponent{id}
             , properties{std::move(data)...}{}
             /**

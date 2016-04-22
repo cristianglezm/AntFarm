@@ -14,15 +14,15 @@
 // limitations under the License.
 ////////////////////////////////////////////////////////////////
 
-#ifndef ENTITY_H
-#define ENTITY_H
+#ifndef ENTITY_HPP
+#define ENTITY_HPP
 
 #include <string>
 #include <stdexcept>
 #include <memory>
-#include <map>
+#include <unordered_map>
 #include <Components/Component.hpp>
-#include <iostream>
+#include <Entity/States.hpp>
 
 namespace ant{
     /**
@@ -36,7 +36,7 @@ namespace ant{
             /**
              * Contenedor que utiliza la entidad para los componentes.
              */
-            typedef std::map<long int,std::unique_ptr<baseComponent>> map;
+            typedef std::unordered_map<ComponentsMask::Mask,std::unique_ptr<baseComponent>> map;
             /**
              * @brief Constructor por defecto.
              */
@@ -63,10 +63,10 @@ namespace ant{
              *
              * Si el componente no se encuentra devuelve un nullptr.
              *
-             * @param id long int id del componente.
+             * @param id ComponentsMask::Mask id del componente.
              * @return baseComponent * puntero al componente.
              */
-            inline baseComponent* getComponent(long int id){
+            inline baseComponent* getComponent(const ComponentsMask::Mask& id) noexcept{
                 if(hasComponent(id)){
                     return Components[id].get();
                 }
@@ -74,9 +74,9 @@ namespace ant{
             }
             /**
              * @brief Elimina el componente de la entidad.
-             * @param id long int
+             * @param id ComponentsMask::Mask
              */
-            void removeComponent(long int id);
+            void removeComponent(const ComponentsMask::Mask& id);
             /**
              * @brief Getter del nombre de la entidad.
              * @return std::string nombre de la entidad.
@@ -91,12 +91,12 @@ namespace ant{
              * @brief Setter de los componentes de la entidad.
              * @param Components Entity::map
              */
-            void setComponents(map Components);
+            void setComponents(map&& Components);
             /**
              * @brief Getter de los componentes.
              * @return Entity::map referencia a los componentes.
              */
-            inline map& getComponents(){ return Components; }
+            inline map& getComponents() noexcept{ return Components; }
             /**
              * @brief Getter de la mascara de la entidad.
              *
@@ -104,39 +104,39 @@ namespace ant{
              * que necesitas antes de utilizar el getComponent(Component::ID);
              * @code if((e.getMask() & Component:ID) == Component::ID) @endcode
              *
-             * @return long int
+             * @return ComponentsMask::Mask
              */
-            inline long int getMask() const { return mask; }
+            inline const ComponentsMask::Mask& getMask() const noexcept{ return mask; }
             /**
              * @brief Devuelve si esta entidad tiene el componente.
-             * @param id long int Id del componente.
+             * @param id ComponentsMask::Mask Id del componente.
              * @return bool
              */
-            inline bool hasComponent(long int id) const{ return ((mask & id) == id); }
+            inline bool hasComponent(const ComponentsMask::Mask& id) const noexcept{ return ((mask & id) == id); }
             /**
              * @brief Comprueba si la entidad tiene el estado especificado.
-             * @param statesID long int id de los estados.
+             * @param statesID ComponentsMask::Mask id de los estados.
              * @code
              *  e->is(States::FALLING | States::OnFIRE);
              * @endcode
              * @return bool
              */
-            inline bool is(long int statesID) const{ return ((states & statesID) == statesID ); }
+            inline bool is(const States::Mask& statesID) const noexcept{ return ((states & statesID) == statesID ); }
             /**
              * @brief Añade un estado a la entidad.
-             * @param state long int estado a añadir.
+             * @param state ComponentsMask::Mask estado a añadir.
              */
-            void addState(long int state);
+            void addState(const States::Mask& state);
             /**
              * @brief Elimina un estado de la entidad.
-             * @param state long int estado a eliminar.
+             * @param state ComponentsMask::Mask estado a eliminar.
              */
-            void removeState(long int state);
+            void removeState(const States::Mask& state);
             /**
              * @brief devuelve los estados de la entidad.
-             * @return long int Estados de la entidad.
+             * @return ComponentsMask::Mask Estados de la entidad.
              */
-             inline long int getStates() const{ return states; }
+             inline const States::Mask& getStates() const noexcept{ return states; }
              /**
               * @brief Limpia los componentes de la entidad
               */
@@ -146,25 +146,25 @@ namespace ant{
              * @param e Entity entidad a la cual compararse.
              * @return bool
              */
-            bool operator==(const Entity& e) const;
+            bool operator==(const Entity& e) const noexcept;
             /**
              * @brief Operator overload para comparar la entidad contra otra entidad
              * @param e Entity entidad a la cual se compara.
              * @return bool
              */
-            bool operator!=(const Entity& e) const;
+            bool operator!=(const Entity& e) const noexcept;
             /**
              * @brief Operator overload para comparar la entidad por nombre.
              * @param name std::string nombre con el cual comparar.
              * @return bool
              */
-            bool operator==(const std::string& name) const;
+            bool operator==(const std::string& name) const noexcept;
             ~Entity() = default;
         private:
             std::string name;
-            long int mask;
-            long int states;
+            ComponentsMask::Mask mask;
+            ComponentsMask::Mask states;
             map Components;
     };
 }
-#endif // ENTITY_H
+#endif // ENTITY_HPP
