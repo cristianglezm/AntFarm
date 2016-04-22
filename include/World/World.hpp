@@ -26,6 +26,7 @@
 #include <EntityManager/EntityManager.hpp>
 #include <SystemManager/SystemManager.hpp>
 #include <GameEventDispatcher/GameEventDispatcher.hpp>
+
 namespace ant{
     /**
      * @brief Clase para crear escenarios.
@@ -40,17 +41,17 @@ namespace ant{
             World();
             /**
              * @brief Constructor con el id del World.
-             * @param id long int id para este World.
+             * @param id int id para este World.
              */
-            World(long int id);
+            World(int id);
             /**
              * @brief Constructor con el id del World, EntityManager,SystemManager y EventQueue
-             * @param id long int id del mundo
+             * @param id int id del mundo
              * @param eM std::shared_ptr<EntityManager>
              * @param sM std::shared_ptr<SystemManager>
              * @param eQ std::shared_ptr<EventQueue>
              */
-            World(long int id,std::shared_ptr<EntityManager> eM,std::unique_ptr<SystemManager> sM,std::shared_ptr<EventQueue> eQ);
+            World(int id,std::shared_ptr<EntityManager> eM,std::unique_ptr<SystemManager> sM,std::shared_ptr<EventQueue> eQ);
             /**
              * @brief Setter para el EntityManager
              * @param eM std::shared_ptr<EntityManager>
@@ -60,7 +61,7 @@ namespace ant{
              * @brief Getter para el EntityManager
              * @return std::shared_ptr<EntityManager>
              */
-            inline std::shared_ptr<EntityManager> getEntityManager(){ return this->entityManager; }
+            inline std::shared_ptr<EntityManager> getEntityManager() noexcept{ return entityManager; }
             /**
              * @brief Setter para el SystemManager
              * @param sM std::unique_ptr<SystemManager>
@@ -70,7 +71,7 @@ namespace ant{
              * @brief Getter para el SystemManager
              * @return SystemManager *
              */
-            inline SystemManager* getSystemManager(){ return this->systemManager.get(); }
+            inline SystemManager* getSystemManager() noexcept{ return systemManager.get(); }
             /**
              * @brief Setter para la EventQueue
              * @param eQ std::shared_ptr<EventQueue>
@@ -80,7 +81,7 @@ namespace ant{
              * @brief Getter para el EventQueue
              * @return std::shared_ptr<EventQueue>
              */
-            inline std::shared_ptr<EventQueue> getEventQueue(){ return this->eventQueue; }
+            inline std::shared_ptr<EventQueue> getEventQueue() noexcept{ return eventQueue; }
             /**
              * @brief Setter para el GameEventDispatcher
              * @param ged std::shared_ptr<GameEventDispatcher>
@@ -90,17 +91,17 @@ namespace ant{
              * @brief Getter para el GameEventDispatcher
              * @return std::shared_ptr<GameEventDispatcher>
              */
-            inline std::shared_ptr<GameEventDispatcher> getGameEventDispatcher(){ return this->gameEventDispatcher; }
+            inline std::shared_ptr<GameEventDispatcher> getGameEventDispatcher() noexcept{ return gameEventDispatcher; }
             /**
              * @brief Setter para el id del mundo.
-             * @param id long int
+             * @param id int
              */
-            void setId(long int id);
+            void setId(int id);
             /**
              * @brief Getter del id del mundo
-             * @return const long
+             * @return const int&
              */
-            inline const long& getId() const { return id; }
+            inline const int& getId() const noexcept{ return id; }
             /**
              * @brief Actualiza todas las entidades del EntityManager con los sistemas que tenga en su SystemManager
              * @param dt sf::Time delta time
@@ -112,7 +113,7 @@ namespace ant{
              */
             void render(sf::RenderWindow& win);
         private:
-            long int id;
+            int id;
             std::shared_ptr<EventQueue> eventQueue;
             std::shared_ptr<EntityManager> entityManager;
             std::unique_ptr<SystemManager> systemManager;

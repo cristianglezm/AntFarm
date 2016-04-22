@@ -6,12 +6,12 @@ namespace ant{
     , eventQueue(std::make_shared<EventQueue>())
     , entityManager(std::make_shared<EntityManager>())
     , systemManager(std::make_unique<SystemManager>()){}
-    World::World(long int id)
+    World::World(int id)
     : id(id)
     , eventQueue(std::make_shared<EventQueue>())
     , entityManager(std::make_shared<EntityManager>())
     , systemManager(std::make_unique<SystemManager>()){}
-    World::World(long int id,std::shared_ptr<EntityManager> eM,std::unique_ptr<SystemManager> sM,std::shared_ptr<EventQueue> eQ)
+    World::World(int id,std::shared_ptr<EntityManager> eM,std::unique_ptr<SystemManager> sM,std::shared_ptr<EventQueue> eQ)
     : id(id)
     , eventQueue(eQ)
     , entityManager(eM)
@@ -31,7 +31,7 @@ namespace ant{
     void World::setGameEventDispatcher(std::shared_ptr<GameEventDispatcher> ged){
         gameEventDispatcher = ged;
     }
-    void World::setId(long int id){
+    void World::setId(int id){
         this->id = id;
     }
     void World::update(const sf::Time& dt){

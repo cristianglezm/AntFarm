@@ -55,7 +55,7 @@ namespace ant{
         }
         return true;
     }
-    void Level::setEventQueue(int id,std::shared_ptr<EventQueue> eq){
+    void Level::setEventQueue(std::size_t id,std::shared_ptr<EventQueue> eq){
         eventQueues[id] = eq;
         worldFactory->setEventQueue(eventQueues[id]);
     }
@@ -65,7 +65,7 @@ namespace ant{
     void Level::addGameEventDispatcher(std::shared_ptr<GameEventDispatcher> ged){
         gameEventDispatchers.emplace_back(ged);
     }
-    void Level::setGameEventDispatcher(int id,std::shared_ptr<GameEventDispatcher> ged){
+    void Level::setGameEventDispatcher(std::size_t id,std::shared_ptr<GameEventDispatcher> ged){
         gameEventDispatchers[id] = ged;
         worldFactory->setGameEventDispatcher(gameEventDispatchers[id]);
     }
@@ -75,10 +75,10 @@ namespace ant{
     void Level::setAssetManager(std::shared_ptr<AssetManager> assets){
         worldFactory->setAssetManager(assets);
     }
-    void Level::update(long int id,sf::Time dt){
-        levels->update(id,dt);
+    void Level::update(int id,sf::Time dt){
+        levels->update(id, dt);
     }
-    void Level::render(long int id,sf::RenderWindow& win){
-        levels->render(id,win);
+    void Level::render(int id,sf::RenderWindow& win){
+        levels->render(id, win);
     }
 }

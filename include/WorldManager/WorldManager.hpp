@@ -32,7 +32,7 @@ namespace ant{
             /**
              * @brief Contenedor usado por WorldManager
              */
-            using map = std::map<long int,std::unique_ptr<World>>;
+            using map = std::map<int,std::unique_ptr<World>>;
             /**
              * @brief Iterador del Contenedor
              */
@@ -49,15 +49,15 @@ namespace ant{
             /**
              * @brief Obtiene un "naked Pointer" del mundo especificado.
              *        Si no se encuentra devuelve un nullptr.
-             * @param id long int id del mundo
+             * @param id int id del mundo
              * @return World *
              */
-            World* getWorld(long int id);
+            World* getWorld(int id);
             /**
              * @brief Elimina el mundo especificado.
-             * @param id long int
+             * @param id int
              */
-            void removeWorld(long int id);
+            void removeWorld(int id);
             /**
              * @brief Devuelve el contendor usado.
              * @return map
@@ -73,10 +73,10 @@ namespace ant{
              *
              * Si se pone -1 actualiza a todos los mundos que contenga.
              *
-             * @param id long int id del mundo (-1 para actualizar todos)
+             * @param id int id del mundo (-1 para actualizar todos)
              * @param dt sf::Time delta time
              */
-            void update(long int id,sf::Time dt);
+            void update(int id,sf::Time dt);
             /**
              * @brief Devuelve el numero de mundos que tiene.
              */
@@ -86,10 +86,10 @@ namespace ant{
              *
              * Si se pone -1 Renderizara todos los mundos, en pantalla se vera el ultimo.
              *
-             * @param id long int id del mundo (-1 para renderizar a todos)
+             * @param id int id del mundo (-1 para renderizar a todos)
              * @param win sf::RenderWindow & ventana a la cual dibujar.
              */
-            void render(long int id,sf::RenderWindow& win);
+            void render(int id,sf::RenderWindow& win);
             /**
              * @brief Limpia los mundos que contiene.
              */

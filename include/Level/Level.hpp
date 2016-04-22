@@ -61,18 +61,18 @@ namespace ant{
              * @brief Carga el nivel de un fichero json.
              * @return bool
              */
-            bool loadLevel(const sf::FloatRect& bounds,const std::string& filename);
+            bool loadLevel(const sf::FloatRect& bounds, const std::string& filename);
             /**
              * @brief Setter para la cola de eventos.
              * @param id level id
              * @param eq std::shared_ptr<EventQueue> Cola para que los sistemas añadan los eventos que sucenden en el juego.
              */
-            void setEventQueue(int id,std::shared_ptr<EventQueue> eq);
+            void setEventQueue(std::size_t id, std::shared_ptr<EventQueue> eq);
             /**
              * @brief Getter para la cola de eventos
              * @return std::shared_ptr<EventQueue> Devuelve la cola de eventos.
              */
-            inline std::shared_ptr<EventQueue> getEventQueue(int id){ return this->eventQueues[id]; }
+            inline std::shared_ptr<EventQueue> getEventQueue(std::size_t id) noexcept{ return this->eventQueues[id]; }
             /**
              * @brief adds a event queue
              * @param eq EventQueue
@@ -88,13 +88,13 @@ namespace ant{
              * @param id world id
              * @param ged GameEventDispatcher
              */
-            void setGameEventDispatcher(int id,std::shared_ptr<GameEventDispatcher> ged);
+            void setGameEventDispatcher(std::size_t id,std::shared_ptr<GameEventDispatcher> ged);
             /**
              * @brief Getter for GameEventDispatcher
              * @param id
              * @return std::shared_ptr<GameEventDispatcher>
              */
-            inline std::shared_ptr<GameEventDispatcher> getGameEventDispatcher(int id){ return gameEventDispatchers[id]; }
+            inline std::shared_ptr<GameEventDispatcher> getGameEventDispatcher(std::size_t id) noexcept{ return gameEventDispatchers[id]; }
             /**
              * @brief Setter para la fabrica de mundos.
              * @param wf std::shared_ptr<WorldFactory>
@@ -104,7 +104,7 @@ namespace ant{
              * @brief Getter de la fabrica de mundos.
              * @return std::shared_ptr<WorldFactory>
              */
-            inline std::shared_ptr<WorldFactory> getWorldFactory(){ return worldFactory; }
+            inline std::shared_ptr<WorldFactory> getWorldFactory() noexcept{ return worldFactory; }
             /**
              * @brief Setter para el AssetManager
              * @param assets std::shared_ptr<AssetManager>
@@ -114,26 +114,27 @@ namespace ant{
              * @brief Getter para el AssetManager
              * @return std::shared_ptr<AssetManager>
              */
-             inline std::shared_ptr<AssetManager> getAssetManager(){ return worldFactory->getAssetManager(); }
+             inline std::shared_ptr<AssetManager> getAssetManager() noexcept{ return worldFactory->getAssetManager(); }
              /**
               * @brief Devuelve el numero total de niveles que tiene.
+              * @return std::size_t number of levels.
               */
-             inline int size(){ return levels->size(); }
+             inline std::size_t size(){ return levels->size(); }
             /**
              * @brief Actualiza el mundo especificado.
              *
              * Actualiza el mundo especificado, si se pone un -1 se actualizaran todos.
-             * @param id long int Mundo a actualizar
+             * @param id int Mundo a actualizar
              * @param dt sf::Time delta time.
              */
-            void update(long int id,sf::Time dt);
+            void update(int id,sf::Time dt);
             /**
              * @brief Renderiza el mundo especificado.
              *
-             * @param id long int Mundo a actualizar
+             * @param id int Mundo a actualizar
              * @param win sf::RenderWindow & ventana a la cual dibujar.
              */
-            void render(long int id,sf::RenderWindow& win);
+            void render(int id,sf::RenderWindow& win);
             ~Level() = default;
         private:
             std::shared_ptr<WorldManager> levels;

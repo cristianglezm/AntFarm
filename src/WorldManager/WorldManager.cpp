@@ -5,16 +5,16 @@ namespace ant{
     void WorldManager::addWorld(std::unique_ptr<World> w){
         worlds.insert(std::make_pair(w->getId(),std::move(w)));
     }
-    World* WorldManager::getWorld(long int id){
+    World* WorldManager::getWorld(int id){
         return worlds.at(id).get();
     }
-    void WorldManager::removeWorld(long int id){
+    void WorldManager::removeWorld(int id){
         worlds.erase(id);
     }
-    void WorldManager::setWorlds(std::map<long int,std::unique_ptr<World>> worlds){
+    void WorldManager::setWorlds(std::map<int,std::unique_ptr<World>> worlds){
         this->worlds = std::move(worlds);
     }
-    void WorldManager::update(long int id,sf::Time dt){
+    void WorldManager::update(int id,sf::Time dt){
         if(id==-1){
             for(auto& world:worlds){
                 world.second->update(dt);
@@ -23,7 +23,7 @@ namespace ant{
             worlds.at(id)->update(dt);
         }
     }
-    void WorldManager::render(long int id,sf::RenderWindow& win){
+    void WorldManager::render(int id, sf::RenderWindow& win){
         if(id==-1){
             for(auto& world:worlds){
                 world.second->render(win);
