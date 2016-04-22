@@ -22,7 +22,7 @@
 /**
  * @brief tipos de componentes.
  * @author Cristian Glez <Cristian.glez.m@gmail.com>
- * @version 0.1
+ * @version 1.0
  */
 namespace ComponentsMask{
         using Mask = std::bitset<32>;
