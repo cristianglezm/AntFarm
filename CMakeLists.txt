@@ -102,8 +102,10 @@ endif()
 if(AntFarm_BUILD_DOCS)
     find_package(Doxygen)
     IF(DOXYGEN_FOUND)
-        SET(DOXYGEN_INPUT "${CMAKE_SOURCE_DIR}/doc/doxyfile")
-        SET(DOXYGEN_OUTPUT "${CMAKE_BINARY_DIR}/docs/")
+	configure_file(${CMAKE_CURRENT_SOURCE_DIR}/doc/doxyfile.in 
+			${CMAKE_CURRENT_BINARY_DIR}/doxyfile @ONLY)
+        SET(DOXYGEN_INPUT "${CMAKE_CURRENT_BINARY_DIR}/doxyfile")
+        SET(DOXYGEN_OUTPUT "${CMAKE_SOURCE_DIR}/doc")
 
         ADD_CUSTOM_COMMAND(
           OUTPUT ${DOXYGEN_OUTPUT}
