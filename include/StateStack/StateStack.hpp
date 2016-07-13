@@ -1,4 +1,4 @@
-﻿////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
 // Copyright 2014 Cristian Glez <Cristian.glez.m@gmail.com>
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,6 +16,7 @@
 
 #ifndef ANT_STATE_STACK_HPP
 #define ANT_STATE_STACK_HPP
+
 #include <vector>
 #include <utility>
 #include <functional>

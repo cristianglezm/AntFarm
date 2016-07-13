@@ -14,17 +14,21 @@
 // limitations under the License.
 ////////////////////////////////////////////////////////////////
 
-#ifndef ASSET_MANAGER_H
-#define ASSET_MANAGER_H
+#ifndef ASSET_MANAGER_HPP
+#define ASSET_MANAGER_HPP
 
 #include <stdexcept>
 #include <map>
 #include <memory>
 #include <fstream>
+
 #include <JsonBox.h>
+
 #include <SFML/Graphics/Texture.hpp>
 #include <SFML/Graphics/Font.hpp>
 #include <SFML/Graphics/Image.hpp>
+#include <SFML/Audio.hpp>
+
 #include <Utils/Utility.hpp>
 
 namespace ant{
@@ -48,6 +52,12 @@ namespace ant{
              *      "textures":[ {"id":"TEXTURE_ID","filepath":"data/entities/Example.png"},
              *                 ],
              *      "images":[ {"id":"IMAGE_ID","filepath":"data/entities/Example.png"},
+             *               ],
+             *      "fonts":[ {"id":"FONT_ID","filepath":"data/entities/Example.ttf"},
+             *               ],
+             *      "sounds":[ {"id":"SOUND_ID","filepath":"data/entities/Example.ogg"},
+             *               ],
+             *      "songs":[ {"id":"SONG_ID","filepath":"data/entities/Example.ogg"},
              *               ],
              * }
              * @endcode
@@ -74,7 +84,7 @@ namespace ant{
              * @brief Comprueba si tiene la textura.
              * @param id const std::string & id de la textura.
              */
-             bool hasTexture(const std::string& id);
+            bool hasTexture(const std::string& id) const;
             /**
              * @brief Elimina la textura.
              * @param id std::string id de la textura a eliminar.
@@ -104,7 +114,7 @@ namespace ant{
              * @brief Comprueba si tiene la imagen.
              * @param id std::string & id de la imagen.
              */
-             bool hasImage(const std::string& id);
+            bool hasImage(const std::string& id) const;
             /**
              * @brief Elimina la imagen por el id especificado.
              * @param id std::string id de la imagen a eliminar.
@@ -125,22 +135,70 @@ namespace ant{
              * @brief Comprueba si tiene la fuente especificada.
              * @param id const std::string & id de la fuente
              */
-             bool hasFont(const std::string& id);
+            bool hasFont(const std::string& id) const;
             /**
              * @brief Elimina un tipo de letra.
              * @param id std::string
              */
             void removeFont(const std::string& id);
             /**
+             * @brief Añade un sonido
+             * @param id const std::string&
+             * @param filename const std::string&
+             */
+            void addSound(const std::string& id, const std::string& filename);
+            /**
+             * @brief Añade un sonido
+             * @param id const std::string&
+             * @param std::unique_ptr<sf::SoundBuffer>&&
+             */
+            void addSound(const std::string& id, std::unique_ptr<sf::SoundBuffer>&& sound);
+            /**
+             * @brief Comprueba si tiene un sonido
+             * @param id const std::string&
+             * @return bool
+             */
+            bool hasSound(const std::string& id) const;
+            /**
+             * @brief elimina la canción.
+             * @param id const std::string&
+             */
+            void removeSound(const std::string& id);
+            /**
+             * @brief Añade una canción.
+             * @param id const std::string&
+             * @param filename const std::string&
+             */
+            void addSong(const std::string& id, const std::string& filename);
+            /**
+             * @brief añade una canción
+             * @param id const std::string&
+             * @param std::unique_ptr<sf::Music>
+             */
+            void addSong(const std::string& id, std::unique_ptr<sf::Music>&& song);
+            /**
+             * @brief comprueba si existe
+             * @param id const std::string&
+             * @return bool
+             */
+            bool hasSong(const std::string& id) const;
+            /**
+             * @brief elimina la canción
+             * @param id const std::string&
+             */
+            void removeSong(const std::string id);
+            /**
              * @brief Descarga todos los recursos cargados.
              * @return true si los descargo correctamente, false si no.
              */
             bool clear();
             ~AssetManager() = default;
-            private:
-                std::map<std::string,std::unique_ptr<sf::Texture>> textures;
-                std::map<std::string,std::unique_ptr<sf::Image>> images;
-                std::map<std::string,std::unique_ptr<sf::Font>> fonts;
+        private:
+            std::map<std::string,std::unique_ptr<sf::Texture>> textures;
+            std::map<std::string,std::unique_ptr<sf::Image>> images;
+            std::map<std::string,std::unique_ptr<sf::Font>> fonts;
+            std::map<std::string,std::unique_ptr<sf::SoundBuffer>> sounds;
+            std::map<std::string,std::unique_ptr<sf::Music>> songs;
     };
 }
-#endif // ASSET_MANAGER_H
+#endif // ASSET_MANAGER_HPP

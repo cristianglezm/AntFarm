@@ -1,5 +1,6 @@
 #include <StateStack/StateStack.hpp>
 #include <cassert>
+
 namespace ant{
     StateStack::StateStack(AppState::Context context)
     : mStack()

@@ -1,6 +1,6 @@
 #include <AssetManager/AssetManager.hpp>
 #if defined ANDROID
-    #include<Utils/Utility.hpp>
+    #include <Utils/Utility.hpp>
 #endif
 
 namespace ant{
@@ -16,24 +16,28 @@ namespace ant{
             v.loadFromFile(filename);
         #endif
         if(!v["textures"].isNull()){
-            int size = v["textures"].getArray().size();
-            for(int i=0;i<size;++i){
-                addTexture(v["textures"][size_t(i)]["id"].getString(),
-                           v["textures"][size_t(i)]["filepath"].getString());
+            for(auto t:v["textures"].getArray()){
+                addTexture(t["id"].getString(),t["filepath"].getString());
             }
         }
         if(!v["images"].isNull()){
-            int size = v["images"].getArray().size();
-            for(int i=0;i<size;++i){
-                addImage(v["images"][size_t(i)]["id"].getString(),
-                           v["images"][size_t(i)]["filepath"].getString());
+            for(auto i:v["images"].getArray()){
+                addImage(i["id"].getString(),i["filepath"].getString());
             }
         }
         if(!v["fonts"].isNull()){
-            int size = v["fonts"].getArray().size();
-            for(int i=0;i<size;++i){
-                addFont(v["fonts"][size_t(i)]["id"].getString(),
-                           v["fonts"][size_t(i)]["filepath"].getString());
+            for(auto f:v["fonts"].getArray()){
+                addFont(f["id"].getString(),f["filepath"].getString());
+            }
+        }
+        if(!v["sounds"].isNull()){
+            for(auto s:v["sounds"].getArray()){
+                addSound(s["id"].getString(),s["filepath"].getString());
+            }
+        }
+        if(!v["songs"].isNull()){
+            for(auto s:v["songs"].getArray()){
+                addSound(s["id"].getString(),s["filepath"].getString());
             }
         }
         return true;
@@ -48,7 +52,7 @@ namespace ant{
     sf::Texture& AssetManager::getTexture(const std::string& id){
         return *(textures.at(id));
     }
-    bool AssetManager::hasTexture(const std::string& id){
+    bool AssetManager::hasTexture(const std::string& id) const{
         auto found = textures.find(id);
         return (found != textures.end());
     }
@@ -68,7 +72,7 @@ namespace ant{
     sf::Image& AssetManager::getImage(const std::string& id){
         return *(images.at(id));
     }
-    bool AssetManager::hasImage(const std::string& id){
+    bool AssetManager::hasImage(const std::string& id) const{
         auto found = images.find(id);
         return (found != images.end());
     }
@@ -85,17 +89,53 @@ namespace ant{
     sf::Font& AssetManager::getFont(const std::string& id){
         return *(fonts.at(id));
     }
-    bool AssetManager::hasFont(const std::string& id){
+    bool AssetManager::hasFont(const std::string& id) const{
         auto found = fonts.find(id);
         return (found != fonts.end());
     }
     void AssetManager::removeFont(const std::string& id){
         fonts.erase(id);
     }
+    void AssetManager::addSound(const std::string& id, const std::string& filename){
+        auto sound = std::make_unique<sf::SoundBuffer>();
+        if(!sound->loadFromFile(filename)){
+            throw std::runtime_error("Failed to load Sound " + filename);
+        }
+        sounds.insert(std::make_pair(id,std::move(sound)));
+    }
+    void AssetManager::addSound(const std::string& id, std::unique_ptr<sf::SoundBuffer>&& sound){
+        sounds.insert(std::make_pair(id,std::move(sound)));
+    }
+    bool AssetManager::hasSound(const std::string& id) const{
+        auto found = sounds.find(id);
+        return (found != sounds.end());
+    }
+    void AssetManager::removeSound(const std::string& id){
+        sounds.erase(id);
+    }
+    void AssetManager::addSong(const std::string& id, const std::string& filename){
+        auto song = std::make_unique<sf::Music>();
+        if(!song->openFromFile(filename)){
+            throw std::runtime_error("Failed to load Sound " + filename);
+        }
+        songs.insert(std::make_pair(id,std::move(song)));
+    }
+    void AssetManager::addSong(const std::string& id, std::unique_ptr<sf::Music>&& song){
+        songs.insert(std::make_pair(id,std::move(song)));
+    }
+    bool AssetManager::hasSong(const std::string& id) const{
+        auto found = songs.find(id);
+        return (found != songs.end());
+    }
+    void AssetManager::removeSong(const std::string id){
+        songs.erase(id);
+    }
     bool AssetManager::clear(){
         images.clear();
         textures.clear();
         fonts.clear();
+        sounds.clear();
+        songs.clear();
         return true;
     }
 }
