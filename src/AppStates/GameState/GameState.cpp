@@ -48,9 +48,9 @@ namespace ant{
                 break;
             case sf::Event::TouchEnded:
                 if(event.mouseButton.button == sf::Mouse::Left){
-                    eventQueue->push(std::make_shared<EventsAlias::select_entity>(EventType::SELECT_ENTITY, sf::Touch::getPosition(0,win)));
+                    auto clickedPos = win.mapPixelToCoords({event.touch.x,event.touch.y},win.getView());
+                    eventQueue->push(std::make_shared<EventsAlias::select_entity>(EventType::SELECT_ENTITY, static_cast<sf::Vector2i>(clickedPos)));
                     for(auto i=0u;i<buttons.size();++i){
-                        auto clickedPos = static_cast<sf::Vector2f>(sf::Touch::getPosition(0,win));
                         buttons[i]->setScale(sf::Vector2f(1.0f,1.0f));
                         if(buttons[i]->contains(clickedPos)){
                             buttons[i]->setScale(sf::Vector2f(1.1f,1.1f));
@@ -74,10 +74,11 @@ namespace ant{
                 break;
             case sf::Event::MouseButtonReleased:
                 if(event.mouseButton.button == sf::Mouse::Left){
-                    eventQueue->push(std::make_shared<EventsAlias::select_entity>(EventType::SELECT_ENTITY, sf::Mouse::getPosition(win)));
+                    auto clickedPos = win.mapPixelToCoords({event.mouseButton.x,event.mouseButton.y},win.getView());
+                    eventQueue->push(std::make_shared<EventsAlias::select_entity>(EventType::SELECT_ENTITY, static_cast<sf::Vector2i>(clickedPos)));
                     for(auto i=0u;i<buttons.size();++i){
                         buttons[i]->setScale(sf::Vector2f(1.0f,1.0f));
-                        if(buttons[i]->contains(static_cast<sf::Vector2f>(sf::Mouse::getPosition(win)))){
+                        if(buttons[i]->contains(clickedPos)){
                             buttons[i]->setScale(sf::Vector2f(1.1f,1.1f));
                             eventQueue->push(std::make_shared<EventsAlias::change_command>(EventType::CHANGE_COMMAND, buttons[i]->getAction()));
                         }
