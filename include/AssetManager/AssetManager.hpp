@@ -154,6 +154,12 @@ namespace ant{
              */
             void addSound(const std::string& id, std::unique_ptr<sf::SoundBuffer>&& sound);
             /**
+             * @brief devuelve un sonidp
+             * @param id const std::string&
+             * @return sf::SoundBuffer&
+             */
+            sf::SoundBuffer& getSound(const std::string& id);
+            /**
              * @brief Comprueba si tiene un sonido
              * @param id const std::string&
              * @return bool
@@ -176,6 +182,12 @@ namespace ant{
              * @param std::unique_ptr<sf::Music>
              */
             void addSong(const std::string& id, std::unique_ptr<sf::Music>&& song);
+            /**
+             * @brief devuelve una canción
+             * @param id const std::string&
+             * @return sf::Music&
+             */
+            sf::Music& getSong(const std::string& id);
             /**
              * @brief comprueba si existe
              * @param id const std::string&

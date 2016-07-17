@@ -106,6 +106,9 @@ namespace ant{
     void AssetManager::addSound(const std::string& id, std::unique_ptr<sf::SoundBuffer>&& sound){
         sounds.insert(std::make_pair(id,std::move(sound)));
     }
+    sf::SoundBuffer& AssetManager::getSound(const std::string& id){
+        return *(sounds.at(id));
+    }
     bool AssetManager::hasSound(const std::string& id) const{
         auto found = sounds.find(id);
         return (found != sounds.end());
@@ -122,6 +125,9 @@ namespace ant{
     }
     void AssetManager::addSong(const std::string& id, std::unique_ptr<sf::Music>&& song){
         songs.insert(std::make_pair(id,std::move(song)));
+    }
+    sf::Music& AssetManager::getSong(const std::string& id){
+        return *(songs.at(id));
     }
     bool AssetManager::hasSong(const std::string& id) const{
         auto found = songs.find(id);
