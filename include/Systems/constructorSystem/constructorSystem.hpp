@@ -16,6 +16,7 @@
 
 #ifndef CONSTRUCTOR_SYSTEM_H
 #define CONSTRUCTOR_SYSTEM_H
+#include <functional>
 #include <Systems/System.hpp>
 #include <Observer/Observer.hpp>
 #include <Components/ComponentMask.hpp>
