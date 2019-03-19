@@ -2,6 +2,8 @@
 #include <iostream>
 #include <cassert>
 #include <memory>
+#include <random>
+#include <functional>
 #include <WorldManager/WorldManager.hpp>
 #include <Utils/String.hpp>
 #include <../include/SystemTest.hpp>
@@ -53,8 +55,9 @@ bool WorldManagerTest(){
             }
         em->addEntity(std::move(e));
         }
+        auto masks = ComponentsMask::COMPONENT_ANIMATION | ComponentsMask::COMPONENT_VELOCITY;
         for(int k=0;k<1;++k){
-            std::shared_ptr<testSystem> ts(new testSystem(ComponentsMask::COMPONENT_ANIMATION | ComponentsMask::COMPONENT_VELOCITY));
+            std::shared_ptr<testSystem> ts(new testSystem(masks));
             ts->setName("test-" + ant::Utils::toString(k));
             ts->setEntityManager(em);
             ts->setEventQueue(eq);

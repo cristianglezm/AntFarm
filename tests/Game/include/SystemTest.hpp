@@ -6,8 +6,8 @@
  */
 class testSystem : public ant::System{
     public:
-        testSystem(long int req);
-        virtual void update(sf::Time dt);
+        testSystem(ComponentsMask::Mask& req);
+        virtual void update(const sf::Time& dt);
         virtual void render(sf::RenderWindow& win);
 };
 /**

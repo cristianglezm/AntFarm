@@ -1,18 +1,19 @@
 #include <../include/SystemTest.hpp>
 #include <Components/ComponentMask.hpp>
 #include <iostream>
+#include <utility>
 #include <Utils/Utility.hpp>
-    testSystem::testSystem(long int req):ant::System(req){
+    testSystem::testSystem(ComponentsMask::Mask& req):ant::System(req){
         name = "testSystem";
     }
-    void testSystem::update(sf::Time dt){
+    void testSystem::update(const sf::Time& dt){
         std::cout << "Update" << std::endl;
         for(auto& entity : em->getEntities()){
             if((entity->getMask() & RequiredComponents) == RequiredComponents){
-                std::cout << "Entity has the requeriments." << std::endl;
-                eventQueue->push(ant::Utils::makeSharedPtr<ant::Event<int,std::string>>(3,3,"Test de evento con templates"));
+                std::cout << "Entity has the requirements." << std::endl;
+                eventQueue->push(std::make_shared<ant::Event<int,std::string>>(3,3,"Test de evento con templates"));
             }else{
-                std::cout << "Entity hasnt the requeriments." << std::endl;
+                std::cout << "Entity hasn't the requirements." << std::endl;
             }
         }
     }
@@ -22,7 +23,8 @@
 bool SystemTest(){
     std::shared_ptr<ant::EventQueue> eq(new ant::EventQueue());
     std::cout << "System Test------------------------"<< std::endl;
-    testSystem s(ComponentsMask::COMPONENT_ANIMATION | ComponentsMask::COMPONENT_VELOCITY);
+    auto masks = ComponentsMask::COMPONENT_ANIMATION | ComponentsMask::COMPONENT_VELOCITY;
+    testSystem s(masks);
     s.setEventQueue(eq);
     std::cout << "Required Components: " << s.getRequiredComponts() << std::endl;
     std::cout << "Creamos entityManager y agregamos al sistema. " << std::endl;
@@ -43,7 +45,8 @@ bool SystemTest(){
     std::cout << "S Update: " << std::endl;
     s.update(sf::Time());
     std::cout << "Creamos otro sistema, agregamos el em y eventqueue" << std::endl;
-    testSystem s1(0);
+    auto n=ComponentsMask::COMPONENT_NONE;
+    testSystem s1(n);
     for(int i=0;i<2;++i){
         std::unique_ptr<ant::Entity> e1(new ant::Entity());
         std::unique_ptr<ant::baseComponent> c1(new ant::Component<int>(ComponentsMask::COMPONENT_PASSAGE,3));

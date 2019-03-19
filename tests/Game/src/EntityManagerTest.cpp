@@ -4,7 +4,9 @@
 #include <Components/ComponentMask.hpp>
 #include <iostream>
 #include <cassert>
+#include <functional>
 #include <random>
+
 bool EntityManagerTest(){
     std::cout << "Entity Manager Test:-------------------------------- "  << std::endl;
     ant::EntityManager em;

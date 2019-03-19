@@ -6,8 +6,9 @@
 bool SystemManagerTest(){
     std::cout << "System Manager Test---------------" << std::endl;
     ant::SystemManager sm;
+    auto cv = ComponentsMask::COMPONENT_VELOCITY;
     for(int i=0;i<10;i++){
-    std::shared_ptr<ant::System> s(new testSystem(ComponentsMask::COMPONENT_VELOCITY));
+    std::shared_ptr<ant::System> s(new testSystem(cv));
     s->setName("testSystem");
     for(int i=0;i<3;++i){
         std::unique_ptr<ant::Entity> e1(new ant::Entity());

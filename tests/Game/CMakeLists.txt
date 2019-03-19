@@ -1,55 +1,47 @@
-cmake_minimum_required(VERSION 2.8)
+SET(SRC_TEST_ROOT "${PROJECT_SOURCE_DIR}/tests/Game")
 
-project(AntFarm_UnitTest)
+# all source files
+FILE(GLOB_RECURSE UNITTEST_SOURCES "${SRC_TEST_ROOT}/src/*.cpp")
+FILE(GLOB_RECURSE UNITTEST_INCLUDES "${SRC_TEST_ROOT}/include/*.hpp")
 
-# Set the include directory
-INCLUDE_DIRECTORIES("${CMAKE_SOURCE_DIR}../../include" "${CMAKE_SOURCE_DIR}/include")
+# define the UNITTEST target
+set(UNITTEST_SRC ${UNITTEST_SOURCES} ${UNITTEST_INCLUDES})
+set(antfarm_SRC ${AntFarm_SOURCES} ${AntFarm_INCLUDES})
 
-# Set the cmake search paths
-SET(CMAKE_INCLUDE_PATH ${CMAKE_SOURCE_DIR})
+LIST(REMOVE_ITEM antfarm_SRC "${PROJECT_SOURCE_DIR}/src/main.cpp")
 
-# Set the directory of Find<Library>.cmake modules
-SET(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}../../modules")
+add_executable(UnitTests ${UNITTEST_SRC} ${antfarm_SRC})
 
-# find all source files in the src directory
-FILE(GLOB_RECURSE AntFarm_UnitTest_SOURCES "../../src/*.cpp" "../../src/*")
+target_include_directories(UnitTests PUBLIC "${SRC_TEST_ROOT}/include")
 
-# find all the files in the includes directory
-FILE(GLOB_RECURSE AntFarm_UnitTest_INCLUDES "include/*" "include/*.hpp" "../../include/*.hpp" "../../include/*")
+find_package(SFML 2.4 COMPONENTS graphics window system network audio REQUIRED)
+if(SFML_FOUND)
+    target_include_directories(UnitTests PUBLIC ${SFML_INCLUDE_DIR})
+    target_link_libraries(UnitTests ${SFML_LIBRARIES})
+endif(SFML_FOUND)
 
-# Specify default build type if none provided (before project() command)
+find_package(JSONBOX REQUIRED)
+if(JSONBOX_FOUND)
+    target_include_directories(UnitTests PUBLIC ${JSONBOX_INCLUDE_DIR})
+    target_link_libraries(UnitTests ${JSONBOX_LIBRARIES})
+endif(JSONBOX_FOUND)
+
+SET(CMAKE_CXX_STANDARD 17)
+SET(CMAKE_CXX_STANDARD_REQUIRED ON)
+SET(CMAKE_CXX_EXTENSIONS OFF)
+
+if(WIN32)
+	SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -static -lpthread -static-libgcc -static-libstdc++ -mwindows -Wall")
+endif(WIN32)
+
 if(NOT CMAKE_BUILD_TYPE)
 	set(CMAKE_BUILD_TYPE Release CACHE STRING "Choose the type of build (Debug or Release)" FORCE)
 endif()
 
-# For generators with multiple configurations (like VS), only allow Debug and Release
-if(CMAKE_CONFIGURATION_TYPES)
-	set(CMAKE_CONFIGURATION_TYPES "Debug;Release" CACHE STRING "Limited configurations" FORCE)
-	mark_as_advanced(CMAKE_CONFIGURATION_TYPES)
+if(CMAKE_BUILD_TYPE STREQUAL "Debug")
+	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -pg")
+elseif(CMAKE_BUILD_TYPE STREQUAL "Release")
+	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3 -fexpensive-optimizations")
 endif()
 
-# Compiler-specific flags and definitions
-if(CMAKE_COMPILER_IS_GNUCXX)
-	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -Wall -Wno-long-long -pedantic")
-elseif(CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
-	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -stdlib=libc++")
-endif()
-
-SET(SFML_STATIC_LIBRARIES TRUE)
-
-SET(SFML_ROOT -1 CACHE PATH "SELECT THE ROOT DIR OF SFML")
-if(SFML_ROOT LESS 0)
-  message("SELECT THE ROOT DIRECTORY OF SFML")
-endif()
-
-add_executable(AntFarm_UnitTest ${AntFarm_UnitTest_SOURCES} ${AntFarm_UnitTest_INCLUDES})
-
-# Add External libraries
-# Detect and add SFML
-#Find any version 2.X of SFML
-find_package(SFML 2.1 COMPONENTS graphics window system network audio REQUIRED)
-if(SFML_FOUND)
-  include_directories(${SFML_INCLUDE_DIR})
-  target_link_libraries(AntFarm_UnitTest ${SFML_LIBRARIES})
-endif()
-
+add_test(UnitTests UnitTests)

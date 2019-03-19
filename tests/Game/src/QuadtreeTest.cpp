@@ -4,10 +4,12 @@
 #include <Entity/Entity.hpp>
 #include <Components/Component.hpp>
 #include <Components/ComponentMask.hpp>
+#include <Event/EventsAlias.hpp>
 #include <EntityManager/EntityManager.hpp>
 #include <cassert>
 #include <list>
 #include <iostream>
+
 bool QuadtreeTest(){
     std::cout << "QuadtreeTest -----------------"<<std::endl;
     ant::Utils::Quadtree qtree(sf::FloatRect(0,0,500,500));
@@ -29,9 +31,11 @@ bool QuadtreeTest(){
             entities.clear();
         qtree.retrieve(entities,entity.get());
         for(auto entity1:entities){
-            auto& properties = entity->getComponent(ComponentsMask::COMPONENT_BOUNDS)->getProperties<sf::FloatRect>();
+            auto& properties = entity->getComponent(ComponentsMask::COMPONENT_BOUNDS)
+                                ->getProperties<ComponentsAlias::bounds>();
             sf::FloatRect eBounds = std::get<0>(properties);
-            auto& properties1 = entity1->getComponent(ComponentsMask::COMPONENT_BOUNDS)->getProperties<sf::FloatRect>();
+            auto& properties1 = entity1->getComponent(ComponentsMask::COMPONENT_BOUNDS)
+                                ->getProperties<ComponentsAlias::bounds>();
             sf::FloatRect eBounds1 = std::get<0>(properties1);
             if(eBounds.intersects(eBounds1)){
                 std::cout << "Entity 1 and Entity 2 Collide" << std::endl;

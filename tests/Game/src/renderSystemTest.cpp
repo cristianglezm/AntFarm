@@ -50,9 +50,9 @@ std::cout << "renderSystemTest Test -----------" << std::endl;
         }
         {
             auto& gameMap = std::get<1>(em->getEntity("red")->getComponent(ComponentsMask::COMPONENT_DESTRUCTABLE)
-                                        ->getProperties<std::string,std::unique_ptr<sf::VertexArray>,sf::FloatRect>());
+                                        ->getProperties<ComponentsAlias::destructable>());
             auto& bounds = std::get<2>(em->getEntity("red")->getComponent(ComponentsMask::COMPONENT_DESTRUCTABLE)
-                                        ->getProperties<std::string,std::unique_ptr<sf::VertexArray>,sf::FloatRect>());
+                                        ->getProperties<ComponentsAlias::destructable>());
             std::shared_ptr<ant::collisionSystem> ts(new ant::collisionSystem(bounds,gameMap.get()));
             ts->setEntityManager(em);
             ts->setEventQueue(eq);
@@ -69,7 +69,7 @@ std::cout << "renderSystemTest Test -----------" << std::endl;
         wm.addWorld(std::move(w1));
     }
     bool running=true;
-    auto& prop = em->getEntity("black0")->getComponent(ComponentsMask::COMPONENT_BOUNDS)->getProperties<sf::FloatRect>();
+    auto& prop = em->getEntity("black0")->getComponent(ComponentsMask::COMPONENT_BOUNDS)->getProperties<ComponentsAlias::bounds>();
     auto& bounds = std::get<0>(prop);
     while(running){
         while(!eq->isEmpty()){
@@ -84,7 +84,7 @@ std::cout << "renderSystemTest Test -----------" << std::endl;
                 case sf::Event::MouseButtonPressed:
                     if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
                         auto& properties1 = em->getEntity("black0")->getComponent(ComponentsMask::COMPONENT_VELOCITY)
-                                                                    ->getProperties<sf::Vector2f,float,float,float>();
+                                                                    ->getProperties<ComponentsAlias::velocity>();
                         std::get<1>(properties1) +=0.1;
                     }
                     break;
@@ -92,7 +92,7 @@ std::cout << "renderSystemTest Test -----------" << std::endl;
         }
         for(auto& e : em->getEntities()){
             auto& properties = e->getComponent(ComponentsMask::COMPONENT_TRANSFORM)
-                                    ->getProperties<sf::Vector2f,sf::Vector2f,float>();
+                                    ->getProperties<ComponentsAlias::transform>();
             auto& pos = std::get<0>(properties);
             auto& rotation = std::get<2>(properties);
             auto mousePos = sf::Mouse::getPosition(win);

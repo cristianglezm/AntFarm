@@ -1,4 +1,6 @@
-cmake_minimum_required(VERSION 3.1)
+cmake_minimum_required(VERSION 3.1...3.14)
+
+cmake_policy(SET CMP0074 NEW)
 
 ################################################################################
 ### User options.
@@ -9,6 +11,7 @@ option(AntFarm_WITH_GUI "TRUE to use the GUI" FALSE)
 option(AntFarm_WITH_FULLSCREEN "TRUE to launch with fullscreen" FALSE)
 option(AntFarm_RENDER_QTREE "TRUE to Render QuadTree Borders" FALSE)
 option(AntFarm_BUILD_DOCS "TRUE to generate docs" FALSE)
+option(AntFarm_BUILD_TESTS "TRUE to build tests" FALSE)
 
 if(AntFarm_BUILD_STATIC)
 	SET(SFML_STATIC_LIBRARIES TRUE)
@@ -56,7 +59,11 @@ add_executable(AntFarm ${AntFarm_SOURCES} ${AntFarm_INCLUDES})
 ### Testing
 ################################################################################
 
-#enable_testing()
+# not working
+if(AntFarm_BUILD_TESTS)
+	enable_testing()
+	add_subdirectory(tests/Game)
+endif(AntFarm_BUILD_TESTS)
 
 ################################################################################
 ### Dependencies.
@@ -77,12 +84,15 @@ if(JSONBOX_FOUND)
 endif(JSONBOX_FOUND)
 
 ################################################################################
-### Enable C++14 and warnings
+### Enable C++17 and warnings
 ################################################################################
 
-SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14 -Wall")
+SET(CMAKE_CXX_STANDARD 17)
+SET(CMAKE_CXX_STANDARD_REQUIRED ON)
+SET(CMAKE_CXX_EXTENSIONS OFF)
+
 if(WIN32)
-	SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -static -lpthread -static-libgcc -static-libstdc++ -mwindows")
+	SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -static -lpthread -static-libgcc -static-libstdc++ -mwindows -Wall")
 endif(WIN32)
 
 if(NOT CMAKE_BUILD_TYPE)
@@ -105,7 +115,7 @@ if(AntFarm_BUILD_DOCS)
 	configure_file(${CMAKE_CURRENT_SOURCE_DIR}/doc/doxyfile.in 
 			${CMAKE_CURRENT_BINARY_DIR}/doxyfile @ONLY)
         SET(DOXYGEN_INPUT "${CMAKE_CURRENT_BINARY_DIR}/doxyfile")
-        SET(DOXYGEN_OUTPUT "${CMAKE_SOURCE_DIR}/doc")
+        SET(DOXYGEN_OUTPUT "${CMAKE_SOURCE_DIR}/build/docs")
 
         ADD_CUSTOM_COMMAND(
           OUTPUT ${DOXYGEN_OUTPUT}
