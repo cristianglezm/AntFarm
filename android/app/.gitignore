@@ -2,7 +2,6 @@ local.properties
 .idea
 .gradle
 build
-buildandmove.sh
 android.iml
 app/build
 app/.externalNativeBuild

@@ -149,4 +149,4 @@ if(NOT AntFarm_BUILD_STATIC AND WIN32)
 	endif()
 endif(NOT AntFarm_BUILD_STATIC AND WIN32)
 
-install(DIRECTORY android/assets/data DESTINATION .)
+install(DIRECTORY android/app/src/main/assets/data DESTINATION .)

@@ -40,11 +40,31 @@ Android
 ==
 
 ```
-cd android
-android update project --name AntFarm --target android-19 --path .
-ndk-build
-ant debug
+git clone https://github.com/SFML/SFML SFML
+cd SFML
+mkdir build && cd build && mkdir armeabi-v7a && cd armeabi-v7a
+cmake -DCMAKE_SYSTEM_NAME=Android -DCMAKE_ANDROID_NDK=<android_ndk> \
+        -DCMAKE_ANDROID_ARCH_ABI=armeabi-v7a -DCMAKE_ANDROID_STL_TYPE=c++_static \ 
+        -DCMAKE_BUILD_TYPE=Release -DCMAKE_ANDROID_NDK_TOOLCHAIN_VERSION=clang \ 
+        -DCMAKE_INSTALL_PREFIX=<android_ndk>/sources/third_party/sfml ../..
+make install
+cd ../../..
+git clone https://github.com/cristianglezm/JsonBox JsonBox
+cd JsonBox && mkdir build && cd build && mkdir armeabi-v7a && cd armeabi-v7a
+cmake -DCMAKE_SYSTEM_NAME=Android -DCMAKE_ANDROID_NDK=<android_ndk> \
+        -DCMAKE_ANDROID_ARCH_ABI=armeabi-v7a -DCMAKE_ANDROID_STL_TYPE=c++_static \ 
+        -DCMAKE_BUILD_TYPE=Release -DCMAKE_ANDROID_NDK_TOOLCHAIN_VERSION=clang \ 
+        -DCMAKE_INSTALL_PREFIX=<android_ndk>/sources/third_party/JsonBox ../..
+make install
+cd ../../..
+git clone https://github.com/cristianglezm/antfarm Antfarm
+cd Antfarm && cd android
+gradle build
+[gradle installDebug]
+
 ```
+
+You should replace <android_ndk> with the actual folder.
 
 Contributions
 ===
