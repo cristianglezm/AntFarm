@@ -27,7 +27,7 @@ AntFarm requires the following dependencies:
 
 Use CMake to build the project.
 
-```
+```cmake
 mkdir build && cd build
 cmake -G"MinGW Makefiles" -DSFML_ROOT=<baseDir> -DJSONBOX_ROOT=<baseDir> \ 
 	-DAntFarm_WITH_FULLSCREEN=FALSE -DAntFarm_WITH_GUI=FALSE \
@@ -39,7 +39,7 @@ make install
 Android
 ==
 
-```
+```cmake
 git clone https://github.com/SFML/SFML SFML
 cd SFML
 mkdir build && cd build && mkdir armeabi-v7a && cd armeabi-v7a
@@ -75,20 +75,17 @@ For example a new action:
 
 * Create a function in [Constructions](https://github.com/cristianglezm/AntFarm/blob/master/src/Systems/constructorSystem/Constructions.cpp)
 
-```
-#!c++
-
-constructorSystem::command Constructions::your_function = [](Entity* e,sf::VertexArray* map,sf::FloatRect bounds){
+```cpp
+constructorSystem::command Constructions::your_function = [](Entity* e,sf::VertexArray* map, sf::FloatRect bounds){
 		// do something
 	};
 ```
 
 * then add a key to GameState::handleEvent and send your command With an event.
 
-```
-#!c++
-
-	eventQueue->push(std::make_shared<EventsAlias::change_command>(EventType::CHANGE_COMMAND, Constructions::your_function));
+```cpp
+	eventQueue->push(std::make_shared<EventsAlias::change_command>(EventType::CHANGE_COMMAND,
+				Constructions::your_function));
 ```
 
 Documentation
