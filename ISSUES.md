@@ -1,7 +1,7 @@
 ISSUES
 ===
 
-* Las hormigas se quedan atascadas y a veces caen colisionando.
-* Si se borra un System del SystemManager y este esta suscrito a algun evento, el juego crashea.
-* Las hormigas NO responden a los clicks de raton cuando estan muy juntas.
-* Android Crash
+* Ants get stuck and sometimes fall through walls.
+* if a system is removed from SystemManager and is subscribed to some event, the game will crash.
+* Ants don't respond to clicks when they are too close.
+* Android level completion will crash the game.
