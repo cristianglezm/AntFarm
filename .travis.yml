@@ -2,10 +2,12 @@ language: cpp
 sudo: false
 compiler:
   - gcc
+services:
+  - xvfb
 
 env:
   global:
-    - GCC_VERSION="6"
+    - GCC_VERSION="9"
 
 addons:
   apt:
@@ -15,8 +17,8 @@ addons:
     #Build dependencies:
     - cmake
     - p7zip-full
-    - g++-6
-    - gcc-6
+    - g++-9
+    - gcc-9
     - cmake
     #SFML dependencies:
     - libopenal-dev
@@ -37,25 +39,21 @@ addons:
     - libxcb-util0-dev
     - libxcb1-dev
 
-before_install:
-- "export DISPLAY=:99.0"
-- "sh -e /etc/init.d/xvfb start"
-
 install:
 - if [ "$CXX" = "g++" ]; then export CXX="g++-${GCC_VERSION}" CC="gcc-${GCC_VERSION}"; fi
-- wget --no-check-certificate  https://cmake.org/files/v3.4/cmake-3.4.0.tar.gz
-- tar -zxf cmake-3.4.0.tar.gz && cd cmake-3.4.0 && ./bootstrap --prefix=$(pwd)
-- make && make install && export cmake34=$(pwd)/bin/cmake && cd ..
+#- wget --no-check-certificate  https://cmake.org/files/v3.4/cmake-3.4.0.tar.gz
+#- tar -zxf cmake-3.4.0.tar.gz && cd cmake-3.4.0 && ./bootstrap --prefix=$(pwd)
+#- make && make install && export cmake34=$(pwd)/bin/cmake && cd ..
 - git clone https://github.com/SFML/SFML && cd SFML
 - export SFML_ROOT=$(pwd)/build/install
 - mkdir build && cd build
-- $cmake34 -DCMAKE_INSTALL_PREFIX=$(pwd)/install .. && make && make install && cd ..
+- cmake -DCMAKE_INSTALL_PREFIX=$(pwd)/install .. && make && make install && cd ..
 - git clone https://github.com/anhero/JsonBox && cd JsonBox && mkdir build && cd build
 - export JSONBOX_ROOT=$(pwd)/install
-- $cmake34 -DCMAKE_INSTALL_PREFIX=$JSONBOX_ROOT .. && make && make install
+- cmake -DCMAKE_INSTALL_PREFIX=$JSONBOX_ROOT .. && make && make install
 
 script:
 - cd ../../.. && mkdir build && cd build
-- $cmake34 -DSFML_ROOT=$SFML_ROOT -DJSONBOX_ROOT=$JSONBOX_ROOT -DCMAKE_INSTALL_PREFIX=$(pwd)/install ..
+- cmake -DSFML_ROOT=$SFML_ROOT -DJSONBOX_ROOT=$JSONBOX_ROOT -DCMAKE_INSTALL_PREFIX=$(pwd)/install ..
 - make
 - make install
