@@ -15,7 +15,7 @@ LOCAL_SRC_FILES += $(FILE_LIST:$(LOCAL_PATH)/%=%)
 FILE_LIST := $(wildcard $(LOCAL_PATH)/../../../../../src/*/*/*.cpp)
 LOCAL_SRC_FILES += $(FILE_LIST:$(LOCAL_PATH)/%=%)
 
-LOCAL_STATIC_LIBRARIES := jsonbox
+LOCAL_STATIC_LIBRARIES := JsonBox
 LOCAL_SHARED_LIBRARIES := sfml-system
 LOCAL_SHARED_LIBRARIES += sfml-window
 LOCAL_SHARED_LIBRARIES += sfml-graphics
@@ -31,5 +31,5 @@ LOCAL_CFLAGS += -Wall -std=c++14 -DANDROID
 
 include $(BUILD_SHARED_LIBRARY)
 
-$(call import-module, third_party/jsonbox)
+$(call import-module, third_party/JsonBox)
 $(call import-module, third_party/sfml)
