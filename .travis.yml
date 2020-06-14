@@ -11,8 +11,6 @@ addons:
     - p7zip-full
     - g++-9
     - gcc-9
-    - clang
-    - gradle
     #SFML dependencies:
     - libopenal-dev
     - libjpeg-dev
@@ -56,7 +54,6 @@ jobs:
     script:
       - mkdir build && cd build
       - cmake -DSFML_ROOT=$SFML_ROOT -DJSONBOX_ROOT=$JSONBOX_ROOT -DCMAKE_INSTALL_PREFIX=$(pwd)/install ..
-      - make
       - make install
     
   - name: "Android armeabi-v7a"
@@ -75,8 +72,8 @@ jobs:
         - 'google-gdk-license-.+'
     env:
       - ANDROID_SDK=/usr/local/android-sdk
-      #- ANDROID_NDK=$TRAVIS_BUILD_DIR/android-ndk-r18b
-      - ANDROID_NDK=$ANDROID_SDK/ndk-bundle
+      - ANDROID_NDK=$TRAVIS_BUILD_DIR/android-ndk-r18b
+      #- ANDROID_NDK=$ANDROID_SDK/ndk-bundle
       - ANDROID_FLAGS="-DCMAKE_SYSTEM_NAME=Android -DCMAKE_ANDROID_NDK=$ANDROID_NDK -DCMAKE_ANDROID_ARCH_ABI=armeabi-v7a -DCMAKE_ANDROID_NDK_TOOLCHAIN_VERSION=clang -DCMAKE_ANDROID_STL_TYPE=c++_shared -DCMAKE_ANDROID_API=26"
 
     before_cache:
@@ -90,17 +87,17 @@ jobs:
 
     install:
       - echo y | sdkmanager "cmake;3.10.2.4988404"
-      - echo y | sdkmanager "ndk-bundle"
+      #- echo y | sdkmanager "ndk-bundle"
       - sudo ln -sf /usr/local/android-sdk/cmake/3.10.2.4988404/bin/cmake /usr/bin/cmake
-      #- wget https://dl.google.com/android/repository/android-ndk-r18b-linux-x86_64.zip
-      #- unzip -qq android-ndk-r18b-linux-x86_64.zip
+      - wget https://dl.google.com/android/repository/android-ndk-r18b-linux-x86_64.zip
+      - unzip -qq android-ndk-r18b-linux-x86_64.zip
       - git clone https://github.com/SFML/SFML && cd SFML && mkdir build && cd build
-      - export SFML_ANDROID_ROOT=$ANDROID_NDK/sources/third_party/SFML
-      - cmake $ANDROID_FLAGS -DCMAKE_INSTALL_PREFIX=$SFML_ANDROID_ROOT .. && make install && cd ../..
+      - export SFML_ANDROID_ROOT=${ANDROID_NDK}/sources/third_party/SFML
+      - cmake $ANDROID_FLAGS -DCMAKE_INSTALL_PREFIX=${SFML_ANDROID_ROOT} .. && make install && cd ../..
       - git clone https://github.com/cristianglezm/JsonBox && cd JsonBox && mkdir build && cd build
       - export JsonBox_ANDROID_ROOT=$ANDROID_NDK/sources/third_party/JsonBox
-      - cmake $ANDROID_FLAGS -DCMAKE_INSTALL_PREFIX=$JsonBox_ANDROID_ROOT .. && make install && cd ../..
-      - cd android && echo "sdk.dir=$ANDROID_SDK/" > local.properties && echo "ndk.dir=$ANDROID_NDK/" >> local.properties
+      - cmake $ANDROID_FLAGS -DCMAKE_INSTALL_PREFIX=${JsonBox_ANDROID_ROOT} .. && make install && cd ../..
+      - cd android && echo "sdk.dir=${ANDROID_SDK}/" > local.properties && echo "ndk.dir=${ANDROID_NDK}/" >> local.properties
       
     script:
       - ./gradlew build
