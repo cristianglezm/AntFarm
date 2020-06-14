@@ -94,9 +94,12 @@ jobs:
       - export SFML_ANDROID_ROOT=$TRAVIS_BUILD_DIR/android-ndk-r18b/sources/third_party/SFML
       - cmake $ANDROID_FLAGS -DCMAKE_BUILD_INSTALL=$SFML_ANDROID_ROOT .. && make install && cd ../..
       - git clone https://github.com/cristianglezm/JsonBox && cd JsonBox && mkdir build && cd build
+      - 
       - export JsonBox_ANDROID_ROOT=$TRAVIS_BUILD_DIR/android-ndk-r18b/sources/third_party/JsonBox
+      - export NDK_MODULE_PATH=$TRAVIS_BUILD_DIR/android-ndk-r18b/sources/ 
+      - export ANDROID_NDK_HOME=$TRAVIS_BUILD_DIR/android-ndk-r18b/
       - cmake $ANDROID_FLAGS -DCMAKE_BUILD_INSTALL=$JsonBox_ANDROID_ROOT .. && make install && cd ../..
 
     script:
-      - cd android && echo "ndk.dir=$TRAVIS_BUILD_DIR/android-ndk-r18b/" >> local.properties
+      - cd android && echo "ndk.dir=$TRAVIS_BUILD_DIR/android-ndk-r18b" >> local.properties
       - ./gradlew build
