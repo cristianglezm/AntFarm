@@ -1,6 +1,8 @@
 # AntFarm
 
-[![Build Status](https://travis-ci.org/cristianglezm/AntFarm.svg)](https://travis-ci.org/cristianglezm/AntFarm)
+|Linux | [![Build Status](https://travis-ci.org/cristianglezm/AntFarm.svg)](https://travis-ci.org/cristianglezm/AntFarm)|
+|---|---|
+|Android |[![Build Status](https://travis-ci.org/cristianglezm/AntFarm.svg)](https://travis-ci.org/cristianglezm/AntFarm)|
 
 AntFarm is a game about ants that are trapped and they have to escape.
 
@@ -44,21 +46,25 @@ git clone https://github.com/SFML/SFML SFML
 cd SFML
 mkdir build && cd build && mkdir armeabi-v7a && cd armeabi-v7a
 cmake -DCMAKE_SYSTEM_NAME=Android -DCMAKE_ANDROID_NDK=<android_ndk> \
-        -DCMAKE_ANDROID_ARCH_ABI=armeabi-v7a -DCMAKE_ANDROID_STL_TYPE=c++_static \ 
-        -DCMAKE_BUILD_TYPE=Release -DCMAKE_ANDROID_NDK_TOOLCHAIN_VERSION=clang \ 
+        -DCMAKE_ANDROID_ARCH_ABI=armeabi-v7a -DCMAKE_ANDROID_STL_TYPE=c++_shared \ 
+        -DCMAKE_BUILD_TYPE=Release -DCMAKE_ANDROID_NDK_TOOLCHAIN_VERSION=clang -DCMAKE_ANDROID_API=26 \ 
         -DCMAKE_INSTALL_PREFIX=<android_ndk>/sources/third_party/sfml ../..
 make install
 cd ../../..
 git clone https://github.com/cristianglezm/JsonBox JsonBox
 cd JsonBox && mkdir build && cd build && mkdir armeabi-v7a && cd armeabi-v7a
 cmake -DCMAKE_SYSTEM_NAME=Android -DCMAKE_ANDROID_NDK=<android_ndk> \
-        -DCMAKE_ANDROID_ARCH_ABI=armeabi-v7a -DCMAKE_ANDROID_STL_TYPE=c++_static \ 
-        -DCMAKE_BUILD_TYPE=Release -DCMAKE_ANDROID_NDK_TOOLCHAIN_VERSION=clang \ 
+        -DCMAKE_ANDROID_ARCH_ABI=armeabi-v7a -DCMAKE_ANDROID_STL_TYPE=c++_shared \ 
+        -DCMAKE_BUILD_TYPE=Release -DCMAKE_ANDROID_NDK_TOOLCHAIN_VERSION=clang -DCMAKE_ANDROID_API=26 \ 
         -DCMAKE_INSTALL_PREFIX=<android_ndk>/sources/third_party/JsonBox ../..
 make install
 cd ../../..
 git clone https://github.com/cristianglezm/antfarm Antfarm
 cd Antfarm && cd android
+export SDK_DIR=<android_sdk>
+export NDK_DIR=<android_ndk>
+echo "sdk.dir=$SDK_DIR" > local.properties
+echo "ndk.dir=$NDK_DIR" >> local.properties
 gradle build
 [gradle installDebug]
 
