@@ -31,5 +31,5 @@ LOCAL_CFLAGS += -Wall -std=c++14 -DANDROID
 
 include $(BUILD_SHARED_LIBRARY)
 
-$(call import-module, third_party/JsonBox)
+$(call import-module, third_party/jsonbox)
 $(call import-module, third_party/sfml)
