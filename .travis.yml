@@ -75,7 +75,7 @@ jobs:
       - git clone https://github.com/SFML/SFML && cd SFML && mkdir build && cd build
       - export SFML_ANDROID_ROOT=$TRAVIS_BUILD_DIR/android-ndk-r18b/sources/third_party/SFML
       - cmake $ANDROID_FLAGS -DCMAKE_BUILD_INSTALL=$SFML_ANDROID_ROOT .. && make install && cd ../..
-      - git clone https://github.com/cristianglezm/JsonBox && Cd JsonBox && mkdir build && cd build
+      - git clone https://github.com/cristianglezm/JsonBox && cd JsonBox && mkdir build && cd build
       - export JsonBox_ANDROID_ROOT=$TRAVIS_BUILD_DIR/android-ndk-r18b/sources/third_party/JsonBox
       - cmake $ANDROID_FLAGS -DCMAKE_BUILD_INSTALL=$JsonBox_ANDROID_ROOT .. && make install && cd ../..
 
