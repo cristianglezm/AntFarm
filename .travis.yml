@@ -1,3 +1,6 @@
+language: cpp
+dist: xenial
+os: linux
 addons:
   apt:
     sources:
