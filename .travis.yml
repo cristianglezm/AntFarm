@@ -1,14 +1,4 @@
 language: cpp
-os: linux
-dist: xenial
-compiler:
-  - gcc
-services:
-  - xvfb
-
-env:
-  global:
-    - GCC_VERSION="9"
 
 addons:
   apt:
@@ -20,7 +10,8 @@ addons:
     - p7zip-full
     - g++-9
     - gcc-9
-    - cmake
+    - clang
+    - gradle
     #SFML dependencies:
     - libopenal-dev
     - libjpeg-dev
@@ -40,18 +31,53 @@ addons:
     - libxcb-util0-dev
     - libxcb1-dev
 
-install:
-- if [ "$CXX" = "g++" ]; then export CXX="g++-${GCC_VERSION}" CC="gcc-${GCC_VERSION}"; fi
-- git clone https://github.com/SFML/SFML && cd SFML
-- export SFML_ROOT=$(pwd)/build/install
-- mkdir build && cd build
-- cmake -DCMAKE_INSTALL_PREFIX=$(pwd)/install .. && make && make install && cd ../..
-- git clone https://github.com/cristianglezm/JsonBox && cd JsonBox && mkdir build && cd build
-- export JSONBOX_ROOT=$(pwd)/install
-- cmake -DCMAKE_INSTALL_PREFIX=$JSONBOX_ROOT .. && make && make install && cd ../..
+jobs:
+  - name: "linux gcc dynamic"
+    os: linux
+    dist: xenial
+    compiler:
+      - gcc
+    services:
+      - xvfb
+    env:
+      - GCC_VERSION="9"
+    install:
+      - if [ "$CXX" = "g++" ]; then export CXX="g++-${GCC_VERSION}" CC="gcc-${GCC_VERSION}"; fi
+      - git clone https://github.com/SFML/SFML && cd SFML
+      - export SFML_ROOT=$(pwd)/build/install
+      - mkdir build && cd build
+      - cmake -DCMAKE_INSTALL_PREFIX=$(pwd)/install .. && make install && cd ../..
+      - git clone https://github.com/cristianglezm/JsonBox && cd JsonBox && mkdir build && cd build
+      - export JSONBOX_ROOT=$(pwd)/install
+      - cmake -DCMAKE_INSTALL_PREFIX=$JSONBOX_ROOT .. && make install && cd ../..
 
-script:
-- mkdir build && cd build
-- cmake -DSFML_ROOT=$SFML_ROOT -DJSONBOX_ROOT=$JSONBOX_ROOT -DCMAKE_INSTALL_PREFIX=$(pwd)/install ..
-- make
-- make install
+    script:
+      - mkdir build && cd build
+      - cmake -DSFML_ROOT=$SFML_ROOT -DJSONBOX_ROOT=$JSONBOX_ROOT -DCMAKE_INSTALL_PREFIX=$(pwd)/install ..
+      - make
+      - make install
+    
+  - name: "Android armeabi-v7a"
+    language: android
+    android:
+      components:
+        - tools
+        - platform-tools
+        - build-tools-26.0.1
+    env:
+      - ANDROID_FLAGS="-DCMAKE_SYSTEM_NAME=Android -DCMAKE_ANDROID_NDK=$TRAVIS_BUILD_DIR/android-ndk-r18b -DCMAKE_ANDROID_ARCH_ABI=armeabi-v7a -DCMAKE_ANDROID_NDK_TOOLCHAIN_VERSION=clang -DCMAKE_ANDROID_STL_TYPE=c++_shared -DCMAKE_ANDROID_API=26"
+    
+    install:
+      - echo y | sdkmanager "cmake;3.10.2.4988404" 
+      - sudo ln -sf /usr/local/android-sdk/cmake/3.10.2.4988404/bin/cmake /usr/bin/cmake
+      - wget https://dl.google.com/android/repository/android-ndk-r18b-linux-x86_64.zip
+      - unzip -qq android-ndk-r18b-linux-x86_64.zip
+      - git clone https://github.com/SFML/SFML && cd SFML && mkdir build && cd build
+      - export SFML_ANDROID_ROOT=$TRAVIS_BUILD_DIR/android-ndk-r18b/sources/third_party/SFML
+      - cmake $ANDROID_FLAGS -DCMAKE_BUILD_INSTALL=$SFML_ANDROID_ROOT .. && make install && cd ../..
+      - git clone https://github.com/cristianglezm/JsonBox && Cd JsonBox && mkdir build && cd build
+      - export JsonBox_ANDROID_ROOT=$TRAVIS_BUILD_DIR/android-ndk-r18b/sources/third_party/JsonBox
+      - cmake $ANDROID_FLAGS -DCMAKE_BUILD_INSTALL=$JsonBox_ANDROID_ROOT .. && make install && cd ../..
+
+    script:
+      - cd android && echo && gradle build
