@@ -1,7 +1,6 @@
 #include <EntityManager/EntityManager.hpp>
 
 namespace ant{
-
     void EntityManager::addEntity(std::unique_ptr<Entity> e){
         entities.emplace_back(std::move(e));
     }

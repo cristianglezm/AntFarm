@@ -27,7 +27,7 @@ LOCAL_WHOLE_STATIC_LIBRARIES := sfml-main
 APP_OPTIM := release
 LOCAL_LDLIBS += -llog
 LOCAL_CPP_FEATURES += rtti exceptions
-LOCAL_CFLAGS += -Wall -std=c++11 -DANDROID -DUSE_MAKE_UNIQUE
+LOCAL_CFLAGS += -Wall -std=c++14 -DANDROID
 
 include $(BUILD_SHARED_LIBRARY)
 

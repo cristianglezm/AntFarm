@@ -78,7 +78,7 @@ namespace ant{
         if((mask & ComponentsMask::COMPONENT_COUNT) == ComponentsMask::COMPONENT_COUNT){
             e->addComponent(componentFactory->createCounter(cs.count));
         }
-        return std::move(e);
+        return e;
     }
     void EntityFactory::setComponentFactory(std::shared_ptr<ComponentFactory> cf){
         this->componentFactory = cf;

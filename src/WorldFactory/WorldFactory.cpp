@@ -42,22 +42,22 @@ namespace ant{
         for(int x=0;x<width;++x){
             for(int y=0;y<height;++y){
                 sf::Color color = lvl.getPixel(x,y);
-                    if(color == sf::Color::Black){
-                            for(int i=0;i<10;++i){
-                                    for(int j=0;j<10;++j){
-                                        img->setPixel(x*10+i, y*10+j, dice(engine) ? Brown:lightBrown);
-                                        img->setPixel(x*10, y*10+j, dice(engine) ? Brown:lightBrown);
-                                        img->setPixel(x*10+i, y*10, dice(engine) ? Brown:lightBrown);
-                                    }
-                            }
-                            img->setPixel(x*10,y*10,lightBrown);
-                    }else if(color == sf::Color::Red){
-                        hasEnteredInDoor = true;
-                        inDoor = sf::Vector2f(x*10,y*10);
-                    }else if(color == sf::Color::Green){
-                        hasEnteredOutDoor = true;
-                        outDoor = sf::Vector2f(x*10,y*10);
+                if(color == sf::Color::Black){
+                    for(int i=0;i<10;++i){
+                        for(int j=0;j<10;++j){
+                            img->setPixel(x*10+i, y*10+j, dice(engine) ? Brown:lightBrown);
+                            img->setPixel(x*10, y*10+j, dice(engine) ? Brown:lightBrown);
+                            img->setPixel(x*10+i, y*10, dice(engine) ? Brown:lightBrown);
+                        }
                     }
+                        img->setPixel(x*10,y*10,lightBrown);
+                }else if(color == sf::Color::Red){
+                    hasEnteredInDoor = true;
+                    inDoor = sf::Vector2f(x*10,y*10);
+                }else if(color == sf::Color::Green){
+                    hasEnteredOutDoor = true;
+                    outDoor = sf::Vector2f(x*10,y*10);
+                }
             }
         }
         ComponentSettings cs;

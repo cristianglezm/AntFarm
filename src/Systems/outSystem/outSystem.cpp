@@ -18,7 +18,7 @@ namespace ant{
                 auto& entity = std::get<0>(e->getAttributes<EventsAlias::out_map>());
                 entity->addState(States::UNSAVED);
             }
-                break;
+            break;
             case EventType::COLLISION_EVENT:{
                 auto& entity1 = std::get<0>(e->getAttributes<EventsAlias::collision>());
                 auto& entity2 = std::get<1>(e->getAttributes<EventsAlias::collision>());
@@ -30,7 +30,7 @@ namespace ant{
                     entity1->addState(States::SAVED);
                 }
             }
-                break;
+            break;
         }
     }
     void outSystem::render(sf::RenderWindow& win){
@@ -38,7 +38,7 @@ namespace ant{
     }
     void outSystem::update(const sf::Time& dt){
         auto& entities = em->getEntities();
-        auto removed = std::remove_if(std::begin(entities),std::end(entities),
+        auto removed = std::remove_if(std::begin(entities), std::end(entities),
                                         [this](std::unique_ptr<Entity>& e){
                                            if(e->is(States::UNSAVED)){
                                                 --totalEntities;

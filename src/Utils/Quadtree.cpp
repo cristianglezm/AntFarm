@@ -15,32 +15,32 @@ namespace ant{
             nodes[3].reset(new Quadtree((level+1), sf::FloatRect(x + subWidth, y + subHeight, subWidth, subHeight)));
         }
         int Quadtree::getIndex(Entity* e){
-                int index = -1;
-                double verticalMidpoint = bounds.left + (bounds.width / 2);
-                double horizontalMidpoint = bounds.top + (bounds.height / 2);
-                // Object can completely fit within the top quadrants
-                auto& properties = e->getComponent(ComponentsMask::COMPONENT_BOUNDS)->getProperties<ComponentsAlias::bounds>();
-                sf::FloatRect eBounds = std::get<0>(properties);
-                bool topQuadrant = (eBounds.top < horizontalMidpoint && eBounds.top + eBounds.height < horizontalMidpoint);
-                // Object can completely fit within the bottom quadrants
-                bool bottomQuadrant = (eBounds.top > horizontalMidpoint);
-                // Object can completely fit within the left quadrants
-                if (eBounds.left < verticalMidpoint && eBounds.left + eBounds.width < verticalMidpoint) {
-                    if(topQuadrant) {
-                        index = 1;
-                    }else if(bottomQuadrant) {
-                        index = 2;
-                    }
+            int index = -1;
+            double verticalMidpoint = bounds.left + (bounds.width / 2);
+            double horizontalMidpoint = bounds.top + (bounds.height / 2);
+            // Object can completely fit within the top quadrants
+            auto& properties = e->getComponent(ComponentsMask::COMPONENT_BOUNDS)->getProperties<ComponentsAlias::bounds>();
+            sf::FloatRect eBounds = std::get<0>(properties);
+            bool topQuadrant = (eBounds.top < horizontalMidpoint && eBounds.top + eBounds.height < horizontalMidpoint);
+            // Object can completely fit within the bottom quadrants
+            bool bottomQuadrant = (eBounds.top > horizontalMidpoint);
+            // Object can completely fit within the left quadrants
+            if (eBounds.left < verticalMidpoint && eBounds.left + eBounds.width < verticalMidpoint) {
+                if(topQuadrant) {
+                    index = 1;
+                }else if(bottomQuadrant) {
+                    index = 2;
                 }
-                // Object can completely fit within the right quadrants
-                else if (eBounds.left > verticalMidpoint) {
-                    if (topQuadrant) {
-                        index = 0;
-                    }else if(bottomQuadrant){
-                        index = 3;
-                    }
+            }
+            // Object can completely fit within the right quadrants
+            else if (eBounds.left > verticalMidpoint) {
+                if (topQuadrant) {
+                    index = 0;
+                }else if(bottomQuadrant){
+                    index = 3;
                 }
-                return index;
+            }
+            return index;
         }
         Quadtree::Quadtree(int level,sf::FloatRect bounds){
             this->level = level;
@@ -59,30 +59,30 @@ namespace ant{
             nodes[3] = nullptr;
         }
         void Quadtree::insert(Entity* e){
-               if (nodes[0] != nullptr) {
-                    int index = this->getIndex(e);
-                    if (index != -1) {
-                        nodes[index]->insert(e);
-                        return;
-                    }
+           if (nodes[0] != nullptr) {
+                int index = this->getIndex(e);
+                if (index != -1) {
+                    nodes[index]->insert(e);
+                    return;
                 }
-                entities.emplace_back(e);
+            }
+            entities.emplace_back(e);
 
-                if(entities.size() > this->MAX_CAPACITY && level < this->MAX_LEVEL){
-                    if(nodes[0] == nullptr) {
-                        this->split();
-                    }
-                    std::list<Entity*>::iterator i = entities.begin();
-                    while(i != entities.end()){
-                        int index = getIndex(*i);
-                        if(index != -1){
-                            nodes[index]->insert(*i);
-                            entities.erase(i++);
-                        }else{
-                            ++i;
-                        }
+            if(entities.size() > this->MAX_CAPACITY && level < this->MAX_LEVEL){
+                if(nodes[0] == nullptr) {
+                    this->split();
+                }
+                std::list<Entity*>::iterator i = entities.begin();
+                while(i != entities.end()){
+                    int index = getIndex(*i);
+                    if(index != -1){
+                        nodes[index]->insert(*i);
+                        entities.erase(i++);
+                    }else{
+                        ++i;
                     }
                 }
+            }
         }
         void Quadtree::clear(){
             entities.clear();
@@ -94,14 +94,14 @@ namespace ant{
             }
         }
         Quadtree::list Quadtree::retrieve(list& entities,Entity* e){
-               int index = this->getIndex(e);
-               entities.sort();
-               this->entities.sort();
-               if (index != -1 && nodes[0] != nullptr) {
-                 nodes[index]->retrieve(entities, e);
-               }
-               entities.merge(this->entities);
-               return entities;
+            int index = this->getIndex(e);
+            entities.sort();
+            this->entities.sort();
+            if(index != -1 && nodes[0] != nullptr){
+                nodes[index]->retrieve(entities, e);
+            }
+            entities.merge(this->entities);
+            return entities;
         }
         void Quadtree::render(sf::RenderWindow& win){
             for(unsigned int i=0;i<nodes.size();++i){
@@ -115,9 +115,11 @@ namespace ant{
             b = level > 255 ? 255: level+bounds.left;
             g = level > 255 ? 255: level+bounds.top;
             r = level > 255 ? 255: level+(bounds.top+bounds.height);
-            if(b> 255 || b <0){b=255;}
-            if(g> 255 || g <0){g=255;}
-            if(r> 255 || r <0){r=255;}
+            
+            b = std::max(0, std::min(b, 255));
+            g = std::max(0, std::min(g, 255));
+            r = std::max(0, std::min(r, 255));
+            
             sf::Color color(r,b,g,255);
             boundsShape.setOutlineThickness(0.5);
             boundsShape.setFillColor(sf::Color::Transparent);

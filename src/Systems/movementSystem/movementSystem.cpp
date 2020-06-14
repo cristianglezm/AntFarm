@@ -28,36 +28,38 @@ namespace ant{
                                 }else{
                                     rotation = LEFT;
                                 }
-                                break;
+                            break;
                             case 1:
                                 if(entity->is(States::CLIMBING)){
                                     rotation = UP;
                                 }else{
                                     rotation = RIGHT;
                                 }
-                                break;
+                            break;
                             case 2:
                                 // climbing stairs
                                 position.y -= 15;
-                                break;
+                            break;
                             case 3:
                                 if(rotation == UP){
                                     rotation = RIGHT;
                                 }
-                                break;
+                            break;
                             case 4:
                                 if(rotation == UP){
                                     rotation = LEFT;
                                 }
-                                break;
+                            break;
                         }
                     }
                 }
             }
-                break;
+            break;
         }
     }
-    void movementSystem::render(sf::RenderWindow& win){ return; }
+    void movementSystem::render(sf::RenderWindow& win){
+        return;
+    }
     void movementSystem::update(const sf::Time& dt){
         for(auto& entity: em->getEntities()){
             if(entity->hasComponent(RequiredComponents)){
