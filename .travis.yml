@@ -96,9 +96,10 @@ jobs:
       - export SFML_ANDROID_ROOT=$ANDROID_NDK/sources/third_party/SFML
       - cmake $ANDROID_FLAGS -DCMAKE_INSTALL_PREFIX=$SFML_ANDROID_ROOT .. && make install && cd ../..
       - git clone https://github.com/cristianglezm/JsonBox && cd JsonBox && mkdir build && cd build
-      - export JsonBox_ANDROID_ROOT=$ANDROID_NDK/sources/third_party/JsonBox
-      - cmake $ANDROID_FLAGS -DCMAKE_INSTALL_PREFIX=$JsonBox_ANDROID_ROOT .. && make install && cd ../..
+      - export JSONBOX_ANDROID_ROOT=$ANDROID_NDK/sources/third_party/JSONBOX
+      - cmake $ANDROID_FLAGS -DCMAKE_INSTALL_PREFIX=$JSONBOX_ANDROID_ROOT .. && make install && cd ../..
 
     script:
       - cd android && echo "sdk.dir=$ANDROID_SDK" > local.properties && echo "ndk.dir=$ANDROID_NDK" >> local.properties
+      - cat local.properties && pwd #testing remove after
       - ./gradlew build
