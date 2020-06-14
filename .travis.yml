@@ -73,8 +73,7 @@ jobs:
     env:
       - ANDROID_SDK=/usr/local/android-sdk
       - ANDROID_NDK=$TRAVIS_BUILD_DIR/android-ndk-r18b
-      #- ANDROID_NDK=$ANDROID_SDK/ndk-bundle
-      - ANDROID_FLAGS="-DCMAKE_SYSTEM_NAME=Android -DCMAKE_ANDROID_NDK=$ANDROID_NDK -DCMAKE_ANDROID_ARCH_ABI=armeabi-v7a -DCMAKE_ANDROID_NDK_TOOLCHAIN_VERSION=clang -DCMAKE_ANDROID_STL_TYPE=c++_shared -DCMAKE_ANDROID_API=26"
+      - ANDROID_FLAGS="-DCMAKE_BUILD_TYPE=Release -DCMAKE_SYSTEM_NAME=Android -DCMAKE_ANDROID_NDK=$ANDROID_NDK -DCMAKE_ANDROID_ARCH_ABI=armeabi-v7a -DCMAKE_ANDROID_NDK_TOOLCHAIN_VERSION=clang -DCMAKE_ANDROID_STL_TYPE=c++_shared -DCMAKE_ANDROID_API=26"
 
     before_cache:
       - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
@@ -87,7 +86,6 @@ jobs:
 
     install:
       - echo y | sdkmanager "cmake;3.10.2.4988404"
-      #- echo y | sdkmanager "ndk-bundle"
       - sudo ln -sf /usr/local/android-sdk/cmake/3.10.2.4988404/bin/cmake /usr/bin/cmake
       - wget https://dl.google.com/android/repository/android-ndk-r18b-linux-x86_64.zip
       - unzip -qq android-ndk-r18b-linux-x86_64.zip
@@ -98,6 +96,7 @@ jobs:
       - export JsonBox_ANDROID_ROOT=$ANDROID_NDK/sources/third_party/JsonBox
       - cmake $ANDROID_FLAGS -DCMAKE_INSTALL_PREFIX=${JsonBox_ANDROID_ROOT} .. && make install && cd ../..
       - cd android && echo "sdk.dir=${ANDROID_SDK}/" > local.properties && echo "ndk.dir=${ANDROID_NDK}/" >> local.properties
+      - export NDK_MODULE_PATH=${ANDROID_NDK}/sources/
       
     script:
       - ./gradlew build
