@@ -74,7 +74,9 @@ jobs:
         - 'android-sdk-license-.+'
         - 'google-gdk-license-.+'
     env:
-      - ANDROID_FLAGS="-DCMAKE_SYSTEM_NAME=Android -DCMAKE_ANDROID_NDK=$TRAVIS_BUILD_DIR/android-ndk-r18b -DCMAKE_ANDROID_ARCH_ABI=armeabi-v7a -DCMAKE_ANDROID_NDK_TOOLCHAIN_VERSION=clang -DCMAKE_ANDROID_STL_TYPE=c++_shared -DCMAKE_ANDROID_API=26"
+      - ANDROID_SDK=/usr/local/android-sdk
+      - ANDROID_NDK=$TRAVIS_BUILD_DIR/android-ndk-r18b
+      - ANDROID_FLAGS="-DCMAKE_SYSTEM_NAME=Android -DCMAKE_ANDROID_NDK=$ANDROID_NDK -DCMAKE_ANDROID_ARCH_ABI=armeabi-v7a -DCMAKE_ANDROID_NDK_TOOLCHAIN_VERSION=clang -DCMAKE_ANDROID_STL_TYPE=c++_shared -DCMAKE_ANDROID_API=26"
 
     before_cache:
       - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
@@ -94,12 +96,9 @@ jobs:
       - export SFML_ANDROID_ROOT=$TRAVIS_BUILD_DIR/android-ndk-r18b/sources/third_party/SFML
       - cmake $ANDROID_FLAGS -DCMAKE_BUILD_INSTALL=$SFML_ANDROID_ROOT .. && make install && cd ../..
       - git clone https://github.com/cristianglezm/JsonBox && cd JsonBox && mkdir build && cd build
-      - 
       - export JsonBox_ANDROID_ROOT=$TRAVIS_BUILD_DIR/android-ndk-r18b/sources/third_party/JsonBox
-      - export NDK_MODULE_PATH=$TRAVIS_BUILD_DIR/android-ndk-r18b/sources/ 
-      - export ANDROID_NDK_HOME=$TRAVIS_BUILD_DIR/android-ndk-r18b/
       - cmake $ANDROID_FLAGS -DCMAKE_BUILD_INSTALL=$JsonBox_ANDROID_ROOT .. && make install && cd ../..
 
     script:
-      - cd android && echo "ndk.dir=$TRAVIS_BUILD_DIR/android-ndk-r18b" >> local.properties
+      - cd android && echo "sdk.dir=$ANDROID_SDK" > local.properties && echo "ndk.dir=$ANDROID_NDK" >> local.properties
       - ./gradlew build
