@@ -1,6 +1,6 @@
 # AntFarm
 
-|Linux | [![Build Status](https://travis-ci.org/cristianglezm/AntFarm.svg)](https://travis-ci.org/cristianglezm/AntFarm)|
+|Linux \| windows(MinGW) | [![Build Status](https://travis-ci.org/cristianglezm/AntFarm.svg)](https://travis-ci.org/cristianglezm/AntFarm)|
 |---|---|
 |Android |[![Build Status](https://travis-ci.org/cristianglezm/AntFarm.svg)](https://travis-ci.org/cristianglezm/AntFarm)|
 
