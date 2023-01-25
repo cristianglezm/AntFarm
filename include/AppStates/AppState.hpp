@@ -16,7 +16,7 @@
 
 #ifndef ANT_APPSTATE_HPP
 #define ANT_APPSTATE_HPP
-#include <AssetManager/AssetManager.hpp>
+#include <AssetManager.hpp>
 #include <AppStates/AppStates.hpp>
 #include <SFML/Graphics/RenderWindow.hpp>
 #include <SFML/System/Time.hpp>
@@ -100,5 +100,5 @@ namespace ant{
             Context	mContext;
     };
 }
-#include <StateStack/StateStack.hpp>
+#include <StateStack.hpp>
 #endif // ANT_APPSTATE_HPP

@@ -18,10 +18,10 @@
 #define CONSTRUCTOR_SYSTEM_H
 #include <functional>
 #include <Systems/System.hpp>
-#include <Observer/Observer.hpp>
+#include <Observer.hpp>
 #include <Components/ComponentMask.hpp>
 #include <Components/ComponentsAlias.hpp>
-#include <EntityFactory/EntityFactory.hpp>
+#include <EntityFactory.hpp>
 #include <SFML/Graphics/VertexArray.hpp>
 #include <Event/EventType.hpp>
 #include <Entity/States.hpp>

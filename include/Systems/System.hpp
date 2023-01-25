@@ -20,8 +20,8 @@
 #include <string>
 #include <memory>
 
-#include <EventQueue/EventQueue.hpp>
-#include <EntityManager/EntityManager.hpp>
+#include <EventQueue.hpp>
+#include <EntityManager.hpp>
 
 #include <SFML/System/Time.hpp>
 #include <SFML/Graphics/RenderWindow.hpp>
