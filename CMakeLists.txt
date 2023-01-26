@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.1...3.14)
+cmake_minimum_required(VERSION 3.1...3.21)
 
 #cmake_policy(SET CMP0074 NEW)
 
@@ -70,7 +70,7 @@ endif(AntFarm_BUILD_TESTS)
 ################################################################################
 
 #sfml
-find_package(SFML 2.4 COMPONENTS graphics window system network audio REQUIRED)
+find_package(SFML 2.5.1 COMPONENTS graphics window system network audio REQUIRED)
 if(SFML_FOUND)
 	include_directories(${SFML_INCLUDE_DIR})
 	target_link_libraries(AntFarm ${SFML_LIBRARIES})

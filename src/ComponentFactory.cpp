@@ -42,8 +42,7 @@ namespace ant{
         this->assets = assets;
     }
     std::unique_ptr<baseComponent> ComponentFactory::createTransform(const sf::Vector2f& position,const sf::Vector2f& scale,const float& rotation){
-        auto c = std::make_unique<ComponentsAlias::transform>(ComponentsMask::COMPONENT_TRANSFORM,position,scale,rotation);
-        return std::move(c);
+        return std::make_unique<ComponentsAlias::transform>(ComponentsMask::COMPONENT_TRANSFORM,position,scale,rotation);
     }
     std::unique_ptr<baseComponent> ComponentFactory::createVelocity(const float& speed,const float& minSpeed,const float& maxSpeed){
         auto spd = speed;

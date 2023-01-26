@@ -29,7 +29,7 @@ find_path(JSONBOX_INCLUDE_DIR JsonBox/include/JsonBox.h
           PATHS ${FIND_JSONBOX_PATHS})
 
 find_library(JSONBOX_LIBRARY
-		NAMES JsonBox
+		NAMES JsonBox JsonBox_d
 		PATH_SUFFIXES lib
 		PATHS ${FIND_JSONBOX_PATHS})
 
