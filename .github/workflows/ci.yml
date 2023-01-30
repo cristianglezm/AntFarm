@@ -62,4 +62,4 @@ jobs:
          cmake $ANDROID_FLAGS -DCMAKE_INSTALL_PREFIX=${JsonBox_ANDROID_ROOT} .. && make install && cd ../..
          cd android && echo "sdk.dir=${ANDROID_SDK}/" > local.properties && echo "ndk.dir=${ANDROID_NDK}/" >> local.properties
          export NDK_MODULE_PATH=${ANDROID_NDK}/sources/
-         ./gradlew build
+         ./gradlew assemble${{ matrix.type.name }}
