@@ -38,7 +38,7 @@ else
     LOCAL_SHARED_LIBRARIES += sfml-activity
     LOCAL_SHARED_LIBRARIES += openal
     LOCAL_WHOLE_STATIC_LIBRARIES := sfml-main
-    LOCAL_CFLAGS += -DNDEBUG
+    LOCAL_CFLAGS += -DNDEBUG -O3
 endif
 
 LOCAL_CPP_FEATURES += rtti exceptions
