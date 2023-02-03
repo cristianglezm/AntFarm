@@ -25,27 +25,46 @@ jobs:
     - name: checkout code
       uses: actions/checkout@v3
 
+    - name: cache linux
+      id: cache-linux
+      uses: actions/cache@v3.2.4
+      with:
+        path: |
+          SFML/build/install
+          JsonBox/build/install
+        key: ${{ matrix.platform.name }}-${{ matrix.type.name }}-${{ matrix.config.name }}
+
     - name: install linux dependencies
       if: runner.os == 'Linux' && matrix.platform.name != 'Android'
-      run: |
-            sudo apt-get update && sudo apt-get install xorg-dev libxrandr-dev libxcursor-dev libudev-dev libopenal-dev libflac-dev libvorbis-dev libgl1-mesa-dev libegl1-mesa-dev libdrm-dev libgbm-dev
-            git clone https://github.com/SFML/SFML && cd SFML && git checkout 2.6.x
-            export SFML_ROOT=$(pwd)/build/install
-            mkdir build && cd build
-            cmake -DCMAKE_INSTALL_PREFIX=$(pwd)/install -DCMAKE_BUILD_TYPE=${{ matrix.type.name }} .. && make -j4 install && cd ../..
-            git clone https://github.com/cristianglezm/JsonBox && cd JsonBox && mkdir build && cd build
-            export JSONBOX_ROOT=$(pwd)/install
-            cmake -DCMAKE_INSTALL_PREFIX=$JSONBOX_ROOT -DCMAKE_BUILD_TYPE=${{ matrix.type.name }} .. && make -j 4 install && cd ../..
+      run: sudo apt-get update && sudo apt-get install xorg-dev libxrandr-dev libxcursor-dev libudev-dev libopenal-dev libflac-dev libvorbis-dev libgl1-mesa-dev libegl1-mesa-dev libdrm-dev libgbm-dev
 
-    - name: configure and build linux
+    - name: build sfml and jsonbox
+      if: runner.os == 'Linux' && matrix.platform.name != 'Android' && steps.cache-linux.outputs.cache-hit != 'true'
+      run |
+        git clone https://github.com/SFML/SFML && cd SFML && git checkout 2.6.x
+        export SFML_ROOT=$(pwd)/build/install
+        mkdir build && cd build
+        cmake -DCMAKE_INSTALL_PREFIX=$(pwd)/install -DCMAKE_BUILD_TYPE=${{ matrix.type.name }} .. && make -j4 install && cd ../..
+        git clone https://github.com/cristianglezm/JsonBox && cd JsonBox && mkdir build && cd build
+        export JSONBOX_ROOT=$(pwd)/install
+        cmake -DCMAKE_INSTALL_PREFIX=$JSONBOX_ROOT -DCMAKE_BUILD_TYPE=${{ matrix.type.name }} .. && make -j 4 install && cd ../..
+
+    - name: configure and build AntFarm
       if: matrix.platform.name == 'LinuxGCC'
       shell: bash
       run: |
         cmake -S $GITHUB_WORKSPACE -B $GITHUB_WORKSPACE/build -DCMAKE_INSTALL_PREFIX=$GITHUB_WORKSPACE/install -DSFML_ROOT=$GITHUB_WORKSPACE/SFML/build/install -DJSONBOX_ROOT=$GITHUB_WORKSPACE/JsonBox/build/install ${{matrix.platform.flags}} ${{matrix.config.flags}} ${{matrix.type.flags}}
-        ${{matrix.platform.prefix}} cmake --build $GITHUB_WORKSPACE/build --config ${{ matrix.type.name == 'Debug' && 'Debug' || 'Release' }} --target install
+        ${{ matrix.platform.prefix}} cmake --build $GITHUB_WORKSPACE/build --config ${{ matrix.type.name == 'Debug' && 'Debug' || 'Release' }} --target install
+
+    - name: cache android
+      id: cache-android
+      uses: actions/cache@v3.2.4
+      with:
+         path: /usr/local/lib/android/sdk/ndk/21.4.7075529
+         key: ${{ matrix.platform.name }}-${{ matrix.type.name }}-${{ matrix.config.name }}
 
     - name: install android and build apk
-      if: matrix.platform.name == 'Android'
+      if: matrix.platform.name == 'Android' && steps.cache-android.outputs.cache-hit != 'true'
       run: |
          echo "y" | /usr/local/lib/android/sdk/tools/bin/sdkmanager --install "ndk;21.4.7075529" --channel=0 --sdk_root=/usr/local/lib/android/sdk | grep -v = || true
          export ANDROID_SDK=/usr/local/lib/android/sdk
@@ -68,6 +87,12 @@ jobs:
              rm -R *
          done
          cd ../..
+
+     - name: build apk
+       if: matrix.platform.name == 'Android'
+       run: |
+         export ANDROID_SDK=/usr/local/lib/android/sdk
+         export ANDROID_NDK=/usr/local/lib/android/sdk/ndk/21.4.7075529
          cd android && echo "sdk.dir=${ANDROID_SDK}/" > local.properties && echo "ndk.dir=${ANDROID_NDK}/" >> local.properties
          export NDK_MODULE_PATH=${ANDROID_NDK}/sources/
          ./gradlew assemble${{ matrix.type.name }} --parallel
