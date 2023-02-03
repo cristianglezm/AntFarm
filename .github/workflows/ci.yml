@@ -40,7 +40,7 @@ jobs:
 
     - name: build sfml and jsonbox
       if: runner.os == 'Linux' && matrix.platform.name != 'Android' && steps.cache-linux.outputs.cache-hit != 'true'
-      run |
+      run: |
         git clone https://github.com/SFML/SFML && cd SFML && git checkout 2.6.x
         export SFML_ROOT=$(pwd)/build/install
         mkdir build && cd build
@@ -88,11 +88,11 @@ jobs:
          done
          cd ../..
 
-     - name: build apk
-       if: matrix.platform.name == 'Android'
-       run: |
-         export ANDROID_SDK=/usr/local/lib/android/sdk
-         export ANDROID_NDK=/usr/local/lib/android/sdk/ndk/21.4.7075529
-         cd android && echo "sdk.dir=${ANDROID_SDK}/" > local.properties && echo "ndk.dir=${ANDROID_NDK}/" >> local.properties
-         export NDK_MODULE_PATH=${ANDROID_NDK}/sources/
-         ./gradlew assemble${{ matrix.type.name }} --parallel
+    - name: build apk
+      if: matrix.platform.name == 'Android'
+      run: |
+        export ANDROID_SDK=/usr/local/lib/android/sdk
+        export ANDROID_NDK=/usr/local/lib/android/sdk/ndk/21.4.7075529
+        cd android && echo "sdk.dir=${ANDROID_SDK}/" > local.properties && echo "ndk.dir=${ANDROID_NDK}/" >> local.properties
+        export NDK_MODULE_PATH=${ANDROID_NDK}/sources/
+        ./gradlew assemble${{ matrix.type.name }} --parallel
