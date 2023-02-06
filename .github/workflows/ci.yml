@@ -63,7 +63,7 @@ jobs:
          path: /usr/local/lib/android/sdk/ndk/21.4.7075529
          key: ${{ matrix.platform.name }}-${{ matrix.type.name }}-${{ matrix.config.name }}
 
-    - name: install android and build apk
+    - name: install android dependencies
       if: matrix.platform.name == 'Android' && steps.cache-android.outputs.cache-hit != 'true'
       run: |
          echo "y" | /usr/local/lib/android/sdk/tools/bin/sdkmanager --install "ndk;21.4.7075529" --channel=0 --sdk_root=/usr/local/lib/android/sdk | grep -v = || true
