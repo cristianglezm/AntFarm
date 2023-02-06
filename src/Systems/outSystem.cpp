@@ -33,10 +33,10 @@ namespace ant{
             break;
         }
     }
-    void outSystem::render(sf::RenderWindow& win){
+    void outSystem::render([[maybe_unused]] sf::RenderWindow& win){
         return;
     }
-    void outSystem::update(const sf::Time& dt){
+    void outSystem::update([[maybe_unused]] const sf::Time& dt){
         auto& entities = em->getEntities();
         auto removed = std::remove_if(std::begin(entities), std::end(entities),
                                         [this](std::unique_ptr<Entity>& e){

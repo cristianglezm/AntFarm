@@ -215,7 +215,7 @@ namespace ant{
                     }
                 }
                 std::string actionID = v["GUI"]["buttons"][size_t(i)]["action"].getString();
-                constructorSystem::command action = [](Entity* e,sf::VertexArray* va,sf::FloatRect bounds){};
+                constructorSystem::command action = []([[maybe_unused]] Entity* e, [[maybe_unused]] sf::VertexArray* va, [[maybe_unused]] sf::FloatRect bounds){};
                 if(actionID == "climb"){
                     action = Constructions::climb;
                 }else if(actionID == "dig"){

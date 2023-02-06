@@ -39,7 +39,7 @@ namespace ant{
                 break;
         }
     }
-    void constructorSystem::update(const sf::Time& dt){
+    void constructorSystem::update([[maybe_unused]] const sf::Time& dt){
         if(readyToBuild){
             for(auto& e: em->getEntities()){
                 if(e->is(States::BUILDING) && e->hasComponent(ComponentsMask::COMPONENT_COUNT)){
@@ -58,7 +58,7 @@ namespace ant{
             }
         }
     }
-    void constructorSystem::render(sf::RenderWindow& win){
+    void constructorSystem::render([[maybe_unused]] sf::RenderWindow& win){
         return;
     }
 }

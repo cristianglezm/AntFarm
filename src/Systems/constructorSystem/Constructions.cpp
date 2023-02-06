@@ -116,7 +116,7 @@ namespace ant{
             }
         }
     };
-    constructorSystem::command Constructions::climb = [](Entity* e,sf::VertexArray* map,sf::FloatRect bounds){
+    constructorSystem::command Constructions::climb = [](Entity* e, [[maybe_unused]] sf::VertexArray* map,[[maybe_unused]] sf::FloatRect bounds){
         if(e->hasComponent(ComponentsMask::COMPONENT_COUNT)){
             auto& count = std::get<0>(e->getComponent(ComponentsMask::COMPONENT_COUNT)->getProperties<ComponentsAlias::count>());
             if(count == 9){
@@ -129,7 +129,7 @@ namespace ant{
             }
         }
     };
-    constructorSystem::command Constructions::stop = [](Entity* e,sf::VertexArray* map,sf::FloatRect bounds){
+    constructorSystem::command Constructions::stop = [](Entity* e,[[maybe_unused]] sf::VertexArray* map, [[maybe_unused]] sf::FloatRect bounds){
         if(e->hasComponent(ComponentsMask::COMPONENT_COUNT)){
             auto& count = std::get<0>(e->getComponent(ComponentsMask::COMPONENT_COUNT)->getProperties<ComponentsAlias::count>());
             if(count <= 0){

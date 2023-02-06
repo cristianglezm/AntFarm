@@ -32,7 +32,7 @@ namespace ant{
             }
         }
     }
-    void renderSystem::update(const sf::Time& dt){
+    void renderSystem::update([[maybe_unused]] const sf::Time& dt){
         return;
     }
 }

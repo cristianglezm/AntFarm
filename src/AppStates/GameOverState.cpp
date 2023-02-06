@@ -25,7 +25,7 @@ namespace ant{
             font = v["Config"]["font"].getString();
         }
     }
-    bool GameOverState::update(sf::Time dt){
+    bool GameOverState::update([[maybe_unused]] sf::Time dt){
         return false;
     }
     bool GameOverState::handleEvent(const sf::Event& event){

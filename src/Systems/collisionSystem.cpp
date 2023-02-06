@@ -9,7 +9,7 @@ namespace ant{
         name = "collisionSystem";
         RequiredComponents = ComponentsMask::COMPONENT_TRANSFORM | ComponentsMask::COMPONENT_BOUNDS;
     }
-    void collisionSystem::update(const sf::Time& dt){
+    void collisionSystem::update([[maybe_unused]] const sf::Time& dt){
         qtree.clear();
         for(auto& entity: em->getEntities()){
             if((entity->hasComponent(RequiredComponents))){

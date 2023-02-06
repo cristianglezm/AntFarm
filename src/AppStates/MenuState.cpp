@@ -42,7 +42,7 @@ namespace ant{
             window.draw(text);
         }
     }
-    bool MenuState::update(sf::Time dt){
+    bool MenuState::update([[maybe_unused]] sf::Time dt){
         return true;
     }
     bool MenuState::handleEvent(const sf::Event& event){

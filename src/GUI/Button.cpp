@@ -7,7 +7,7 @@ namespace ant{
         , scale(1.f,1.f)
         , image()
         , text(){
-            action = [](Entity* e,sf::VertexArray* map, sf::FloatRect bounds){};
+            action = []([[maybe_unused]] Entity* e, [[maybe_unused]] sf::VertexArray* map, [[maybe_unused]] sf::FloatRect bounds){};
         }
         Button::Button(sf::Vector2f position, sf::Text text)
         : position(position)
@@ -15,7 +15,7 @@ namespace ant{
         , image()
         , text(text){
             this->text.setPosition(position);
-            this->action = [](Entity* e,sf::VertexArray* map, sf::FloatRect bounds){};
+            this->action = []([[maybe_unused]] Entity* e, [[maybe_unused]] sf::VertexArray* map, [[maybe_unused]] sf::FloatRect bounds){};
         }
         Button::Button(sf::Vector2f position, sf::Text text, constructorSystem::command action)
         : position(position)
@@ -32,7 +32,7 @@ namespace ant{
         , text(){
             this->image.setPosition(position);
             this->image.setScale(scale);
-            this->action = [](Entity* e,sf::VertexArray* map, sf::FloatRect bounds){};
+            this->action = []([[maybe_unused]] Entity* e,[[maybe_unused]] sf::VertexArray* map, [[maybe_unused]] sf::FloatRect bounds){};
         }
         Button::Button(sf::Vector2f position, sf::Sprite image, constructorSystem::command action)
         : position(position)
@@ -87,7 +87,7 @@ namespace ant{
         bool Button::contains(sf::Vector2f point) const{
             return image.getGlobalBounds().contains(point);
         }
-        void Button::draw(sf::RenderTarget& target, sf::RenderStates states) const{
+        void Button::draw(sf::RenderTarget& target, [[maybe_unused]] sf::RenderStates states) const{
             target.draw(image);
             target.draw(text);
         }

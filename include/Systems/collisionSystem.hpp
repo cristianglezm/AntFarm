@@ -52,7 +52,7 @@ namespace ant{
              * @brief Renderiza el Quadtree si RENDER_QTREE esta definido.
              * si no no hace nada.
              */
-            virtual void render(sf::RenderWindow& win) override{
+            virtual void render([[maybe_unused]] sf::RenderWindow& win) override{
                 #ifdef RENDER_QTREE
                     qtree.render(win);
                 #else

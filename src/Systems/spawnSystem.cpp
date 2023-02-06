@@ -25,7 +25,7 @@ namespace ant{
     void spawnSystem::setStates(ComponentsMask::Mask& state){
         states = state;
     }
-    void spawnSystem::update(const sf::Time& dt){
+    void spawnSystem::update([[maybe_unused]] const sf::Time& dt){
         if(elapsedTime > overTime && createdEntities < nEntities){
             elapsedTime = sf::seconds(0);
             ++createdEntities;
@@ -35,7 +35,7 @@ namespace ant{
         }
         elapsedTime += clock.restart();
     }
-    void spawnSystem::render(sf::RenderWindow& win){
+    void spawnSystem::render([[maybe_unused]] sf::RenderWindow& win){
         return;
     }
     void spawnSystem::onNotify(std::shared_ptr<baseEvent> e){

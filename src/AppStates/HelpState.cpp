@@ -46,7 +46,7 @@ namespace ant{
             font = v["Config"]["font"].getString();
         }
     }
-    bool HelpState::update(sf::Time dt){
+    bool HelpState::update([[maybe_unused]] sf::Time dt){
         return false;
     }
     bool HelpState::handleEvent(const sf::Event& event){
