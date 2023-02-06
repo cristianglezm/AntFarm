@@ -21,8 +21,11 @@
 #include <utility>
 #include <SFML/Graphics/Sprite.hpp>
 #include <SFML/Graphics/Text.hpp>
+
 #if defined ANDROID
     #include <android/log.h>
+#else
+    #include <iostream>
 #endif
 
 namespace ant{
@@ -47,6 +50,12 @@ namespace ant{
          * @param sprite sf::Sprite & referencia al sprite.
          */
         void centerOrigin(sf::Sprite& sprite);
+       /**
+        * @brief Helper function to log info.
+        * @param tag
+        * @param info
+        */
+        void log(const std::string& tag, const std::string& info);
     }
 }
 #if defined ANDROID && USE_MAKE_UNIQUE
@@ -71,12 +80,6 @@ namespace ant{
              * @return std::string
              */
             std::vector<char> readAssetsFile(std::string filename);
-            /**
-             * @brief Helper function to log android info.
-             * @param tag
-             * @param info
-             */
-            void log(std::string tag,std::string info);
         }
 #endif
 #endif // ANT_UTILITY_HPP

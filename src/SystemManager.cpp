@@ -2,17 +2,24 @@
 
 namespace ant{
     bool SystemManager::addSystem(std::shared_ptr<System> s){
-        auto result = systems.insert(std::make_pair(s->getName(),s));
-        return result.second;
+        systems.emplace_back(std::make_pair(s->getName(), s));
+        return true;
     }
     std::shared_ptr<System> SystemManager::getSystem(const std::string& name){
-        return systems[name];
+        auto result = std::find_if(std::begin(systems), std::end(systems), 
+	    [&](auto& pair){
+                return pair.first == name;
+        });
+        return result->second;
     }
     void SystemManager::setSystems(container systems){
         this->systems = systems;
     }
     void SystemManager::removeSystem(const std::string& name){
-        systems.erase(name);
+        systems.erase(std::remove_if(std::begin(systems), std::end(systems), 
+            [&](auto& pair){
+                return pair.first == name;
+        }), std::end(systems));
     }
     void SystemManager::setEntityManager(std::shared_ptr<EntityManager> entityManager){
         for(auto& system : systems){

@@ -13,34 +13,38 @@ namespace ant{
             sf::FloatRect bounds = text.getLocalBounds();
             text.setOrigin(bounds.width / 2.f, bounds.height / 2.f);
         }
+        void log(const std::string& tag, const std::string& info){
+#if defined ANDROID
+           __android_log_write(ANDROID_LOG_INFO, tag.c_str(), info.c_str());
+#else
+           std::cout << tag << " - " << info << std::endl;
+#endif
+        }
     }
 }
 
 #if defined ANDROID
-        namespace android{
-            std::vector<char> readAssetsFile(std::string filename){
-                sf::FileInputStream fis;
-                if(!fis.open(filename)){
-                    throw std::runtime_error("Could not open file: " + filename);
-                }
-                std::vector<char> data;
-                data.reserve(fis.getSize());
-                int readed = 0;
-                int count = 0;
-                auto bufferSize = 2048;
-                do{
-                    std::vector<char> buffer(bufferSize,'\0');
-                    readed = fis.read(buffer.data(), bufferSize);
+    namespace android{
+        std::vector<char> readAssetsFile(std::string filename){
+            sf::FileInputStream fis;
+            if(!fis.open(filename)){
+                throw std::runtime_error("Could not open file: " + filename);
+            }
+            std::vector<char> data;
+            data.reserve(fis.getSize());
+            int readed = 0;
+            int count = 0;
+            constexpr std::size_t bufferSize = 2048ull;
+            std::vector<char> buffer(bufferSize, '\0');
+            do{
+                readed = fis.read(buffer.data(), bufferSize);
+                if(readed){
                     count += readed;
-                    for(auto& byte:buffer){
-                        data.emplace_back(byte);
-                    }
-                    fis.seek(count);
-                }while(readed != 0 && readed != -1);
-                return data;
-            }
-            void log(std::string tag,std::string info){
-                __android_log_write(ANDROID_LOG_INFO, tag.c_str(), info.c_str());
-            }
+                    std::copy_n(std::begin(buffer), readed, std::back_inserter(data));
+                }
+                fis.seek(count);
+            }while(readed != 0 && readed != -1);
+            return data;
         }
+    }
 #endif

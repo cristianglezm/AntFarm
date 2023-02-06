@@ -51,7 +51,7 @@ namespace ant{
                                             return false;
                                         });
         if(removed != std::end(entities)){
-            entities.erase(removed,std::end(entities));
+            entities.erase(removed, std::end(entities));
         }
         if(totalEntities>0){
             if(savedEntities==totalEntities){

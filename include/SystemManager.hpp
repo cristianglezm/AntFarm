@@ -34,7 +34,7 @@ namespace ant{
             /**
              * @brief Contenedor usado por la clase.
              */
-            using container = std::unordered_map<std::string,std::shared_ptr<System>>;
+            using container = std::vector<std::pair<std::string, std::shared_ptr<System>>>;
             /**
              * @brief Añade un sistema al manager.
              * @param s std::shared_ptr<System>

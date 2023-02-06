@@ -45,6 +45,7 @@ namespace ant{
                 if(color == sf::Color::Black){
                     for(int i=0;i<10;++i){
                         for(int j=0;j<10;++j){
+///@TODO scale lvl to dpi screen
                             img->setPixel(x*10+i, y*10+j, dice(engine) ? Brown:lightBrown);
                             img->setPixel(x*10, y*10+j, dice(engine) ? Brown:lightBrown);
                             img->setPixel(x*10+i, y*10, dice(engine) ? Brown:lightBrown);
@@ -67,6 +68,16 @@ namespace ant{
         cs.entityName = name;
         assets->addImage(name,std::move(img));
         em->addEntity(entityFactory->createEntity(EntityFactory::level,cs));
+	// systems need to keep this order or events from deleted entities will seg fault
+        sm->addSystem(systemFactory->createRenderSystem());
+        sm->addSystem(systemFactory->createOutSystem(nEntities));
+        auto& properties = em->getEntity(name)->getComponent(ComponentsMask::COMPONENT_DESTRUCTABLE)
+                                        ->getProperties<ComponentsAlias::destructable>();
+        auto& destructable = std::get<1>(properties);
+        sm->addSystem(systemFactory->createConstructorSystem(destructable.get(),bounds));
+        sm->addSystem(systemFactory->createCollisionSystem(bounds,destructable.get()));
+        sm->addSystem(systemFactory->createGravitySystem(1.9));
+        sm->addSystem(systemFactory->createMovementSystem());
         if(hasEnteredInDoor){
             ComponentSettings cs;
             cs.loadSettings(Config::INDOOR_FILE);
@@ -82,15 +93,6 @@ namespace ant{
             cs.position = outDoor - sf::Vector2f(cs.bounds.width,cs.bounds.height-10);
             em->addEntity(entityFactory->createEntity(EntityFactory::OutDoor,cs));
         }
-        sm->addSystem(systemFactory->createMovementSystem());
-        sm->addSystem(systemFactory->createGravitySystem(1.9));
-        auto& properties = em->getEntity(name)->getComponent(ComponentsMask::COMPONENT_DESTRUCTABLE)
-                                        ->getProperties<ComponentsAlias::destructable>();
-        auto& destructable = std::get<1>(properties);
-        sm->addSystem(systemFactory->createCollisionSystem(bounds,destructable.get()));
-        sm->addSystem(systemFactory->createConstructorSystem(destructable.get(),bounds));
-        sm->addSystem(systemFactory->createOutSystem(nEntities));
-        sm->addSystem(systemFactory->createRenderSystem());
         w->setEventQueue(eventQueue);
         w->setEntityManager(em);
         w->setSystemManager(std::move(sm));
