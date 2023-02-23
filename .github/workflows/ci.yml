@@ -96,3 +96,11 @@ jobs:
         cd android && echo "sdk.dir=${ANDROID_SDK}/" > local.properties && echo "ndk.dir=${ANDROID_NDK}/" >> local.properties
         export NDK_MODULE_PATH=${ANDROID_NDK}/sources/
         ./gradlew assemble${{ matrix.type.name }} --parallel
+
+    - name: upload apk debug
+      if: matrix.platform.name == 'Android' && matrix.type.name == 'Debug'
+      uses: actions/upload-artifact@v3
+      with:
+        name: Antfarm-android-debug-apk
+        path: android/app/build/outputs/apk/debug/app-debug.apk
+
