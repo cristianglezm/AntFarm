@@ -1,6 +1,6 @@
 #include <../include/EventQueueTest.hpp>
 #include <iostream>
-#include <EventQueue/EventQueue.hpp>
+#include <EventQueue.hpp>
 #include <utility>
 #include <Utils/Utility.hpp>
 

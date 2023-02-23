@@ -15,7 +15,7 @@
 #include <Components/Component.hpp>
 #include <Components/ComponentMask.hpp>
 #include <Components/ComponentsAlias.hpp>
-#include <EntityManager/EntityManager.hpp>
+#include <EntityManager.hpp>
 #include <assetManagerTest.hpp>
 #include <cassert>
 #include <list>

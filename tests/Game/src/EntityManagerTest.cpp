@@ -1,5 +1,5 @@
 #include <../include/EntityManagerTest.hpp>
-#include <EntityManager/EntityManager.hpp>
+#include <EntityManager.hpp>
 #include <Utils/String.hpp>
 #include <Components/ComponentMask.hpp>
 #include <iostream>

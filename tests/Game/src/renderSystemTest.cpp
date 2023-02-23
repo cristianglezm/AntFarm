@@ -1,16 +1,16 @@
 #include <../include/renderSystemTest.hpp>
-#include <Systems/renderSystem/renderSystem.hpp>
+#include <Systems/renderSystem.hpp>
 #include <Entity/Entity.hpp>
 #include <memory>
-#include <ComponentFactory/ComponentFactory.hpp>
+#include <ComponentFactory.hpp>
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include <cassert>
-#include <WorldManager/WorldManager.hpp>
+#include <WorldManager.hpp>
 #include <Utils/String.hpp>
 #include <Components/ComponentMask.hpp>
-#include <Systems/collisionSystem/collisionSystem.hpp>
-#include <Systems/movementSystem/movementSystem.hpp>
+#include <Systems/collisionSystem.hpp>
+#include <Systems/movementSystem.hpp>
 #include <Utils/Math.hpp>
 bool renderSystemTest(){
 std::cout << "renderSystemTest Test -----------" << std::endl;

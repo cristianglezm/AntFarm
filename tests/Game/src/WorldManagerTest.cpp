@@ -4,7 +4,7 @@
 #include <memory>
 #include <random>
 #include <functional>
-#include <WorldManager/WorldManager.hpp>
+#include <WorldManager.hpp>
 #include <Utils/String.hpp>
 #include <../include/SystemTest.hpp>
 #include <Components/ComponentMask.hpp>

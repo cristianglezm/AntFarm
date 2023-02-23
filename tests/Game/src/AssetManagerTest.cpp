@@ -1,6 +1,6 @@
 #include <AssetManagerTest.hpp>
 #include <iostream>
-#include <AssetManager/AssetManager.hpp>
+#include <AssetManager.hpp>
 
 bool assetManagerTest(){
     std::cout << "AssetManager Test------------" << std::endl;
