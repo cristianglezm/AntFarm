@@ -85,6 +85,7 @@ namespace ant{
             static const sf::Time TimePerFrame;
             std::shared_ptr<sf::RenderWindow> mWindow;
             std::shared_ptr<AssetManager> mAssets;
+            bool active;
             StateStack mStateStack;
             sf::Text mStatisticsText;
             sf::Time mStatisticsUpdateTime;

@@ -13,7 +13,7 @@
                             "id":"transform",
                             "properties":{
                                             "position":{"x":0.0,"y":0.0,},
-                                            "scale":{"x":0.5,"y":0.5,},
+                                            "scale":{"x":1.0,"y":1.0,},
                                             "rotation":-90.0,
                                         },
                         },
@@ -22,8 +22,8 @@
                             "properties":{
                                             "left":0.0,
                                             "top":0.0,
-                                            "width":15.0,
-                                            "height":15.0,
+                                            "width":32.0,
+                                            "height":32.0,
                                         },
                         },
                         {
@@ -35,7 +35,7 @@
                         {
                             "id":"buildCounter",
                             "properties":{
-                                            "count":5,
+                                            "count":10,
                                         },
                         },
                     ],

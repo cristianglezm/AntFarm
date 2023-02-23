@@ -1,5 +1,5 @@
 ////////////////////////////////////////////////////////////////
-// Copyright 2014 Cristian Glez <Cristian.glez.m@gmail.com>
+// Copyright 2023 Cristian Glez <Cristian.glez.m@gmail.com>
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -89,6 +89,30 @@ namespace ant{
              * @param eBounds sf::FloatRect bordes de la entidad
              */
             void testTerrainCollision(Entity* entity, const sf::FloatRect& eBounds);
+            inline int topLeft(int gameMapHeight, const sf::IntRect& bounds, int offset = 0) noexcept{
+                return static_cast<int>((gameMapHeight * bounds.left) + bounds.top) - offset;
+            }
+            inline int topRight(int gameMapHeight, const sf::IntRect& bounds, int offset = 0) noexcept{
+                return static_cast<int>((gameMapHeight * (bounds.left + bounds.width)) + bounds.top) + offset;
+            }
+            inline int middleLeft(int gameMapHeight, const sf::IntRect& bounds, int offset = 0) noexcept{
+                return static_cast<int>((gameMapHeight * bounds.left) + (bounds.top + (bounds.height / 2))) - offset;
+            }
+            inline int bottomLeft(int gameMapHeight, const sf::IntRect& bounds, int offset = 0) noexcept{
+                return static_cast<int>((gameMapHeight * bounds.left) + (bounds.top + bounds.height)) - offset;
+            }
+            inline int middleRight(int gameMapHeight, const sf::IntRect& bounds, int offset = 0) noexcept{
+                return static_cast<int>((gameMapHeight * (bounds.left + bounds.width)) + (bounds.top+(bounds.height / 2))) + offset;
+            }
+            inline int bottomRight(int gameMapHeight, const sf::IntRect& bounds, int offset = 0) noexcept{
+                return static_cast<int>((gameMapHeight * (bounds.left+bounds.width)) + (bounds.top + bounds.height)) + offset;
+            }
+            inline bool isGround(int index) noexcept{
+               auto& gm = *gameMap;
+               return gm[index].color.a == ground;
+            }
+       private:
+            static const auto ground = 255;
             Utils::Quadtree qtree;
             sf::FloatRect gameBounds;
             sf::VertexArray* gameMap;

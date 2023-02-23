@@ -10,6 +10,8 @@ namespace ant{
     , mTextEffectTime(sf::Time::Zero){
         loadConfig(Config::CONFIG_FILE);
         mBackground.setTexture(context.assets->getTexture(background));
+        mBackground.setScale(Utils::calcScale(mBackground, {0.0, 0.0, static_cast<float>(getContext().window->getSize().x), 
+                                                                      static_cast<float>(getContext().window->getSize().y)}));
         mText.setFont(context.assets->getFont(font));
         mText.setString("Press any key to start");
         Utils::centerOrigin(mText);
@@ -24,7 +26,7 @@ namespace ant{
         sf::RenderWindow& window = *getContext().window;
         window.draw(mBackground);
         window.draw(mTitle);
-        if (mShowText){
+        if(mShowText){
             window.draw(mText);
         }
     }

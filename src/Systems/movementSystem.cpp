@@ -15,7 +15,7 @@ namespace ant{
                 auto& attributes = e->getAttributes<EventsAlias::terrain_collision>();
                 auto& entity = std::get<0>(attributes);
                 auto& type = std::get<1>(attributes);
-                if(entity->hasComponent(ComponentsMask::COMPONENT_TRANSFORM)){
+                if(entity->hasComponent(ComponentsMask::COMPONENT_TRANSFORM | ComponentsMask::COMPONENT_BOUNDS)){
                     auto component = entity->getComponent(ComponentsMask::COMPONENT_TRANSFORM);
                     if(component){
                         auto& properties = component->getProperties<ComponentsAlias::transform>();
@@ -36,9 +36,13 @@ namespace ant{
                                     rotation = RIGHT;
                                 }
                             break;
-                            case 2:
+                            case 2:{
+                                auto& cBounds = entity->getComponent(ComponentsMask::COMPONENT_BOUNDS)
+                                                            ->getProperties<ComponentsAlias::bounds>();
+                                auto& bounds = std::get<0>(cBounds);
                                 // climbing stairs
-                                position.y -= 15;
+                                position.y -= (bounds.height / 2.0);
+                            }
                             break;
                             case 3:
                                 if(rotation == UP){

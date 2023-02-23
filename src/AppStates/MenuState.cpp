@@ -7,6 +7,8 @@ namespace ant{
     , mOptionIndex(0){
         loadConfig(Config::CONFIG_FILE);
         mBackground.setTexture(context.assets->getTexture(strBackground));
+        mBackground.setScale(Utils::calcScale(mBackground, {0.0, 0.0, static_cast<float>(getContext().window->getSize().x),
+                                                                      static_cast<float>(getContext().window->getSize().y)}));
         sf::Text playOption;
         playOption.setFont(context.assets->getFont(font));
         playOption.setString("Play");

@@ -30,14 +30,16 @@ namespace ant{
     }
     bool PauseState::update(sf::Time dt){
     	mTextEffectTime += dt;
-        if (mTextEffectTime >= sf::seconds(0.5f)){
+        if(mTextEffectTime >= sf::seconds(0.5f)){
             mShowText = !mShowText;
             mTextEffectTime = sf::Time::Zero;
         }
         return false;
     }
     bool PauseState::handleEvent(const sf::Event& event){
-        if(event.type == sf::Event::KeyReleased){
+        *getContext().active = false;
+        if(event.type == sf::Event::KeyReleased || event.type == sf::Event::MouseEntered){
+            *getContext().active = true;
             requestStackPop();
         }
         return false;

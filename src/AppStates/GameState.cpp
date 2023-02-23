@@ -7,7 +7,7 @@ namespace ant{
     , win((*context.window))
     , assets(context.assets)
     , gameEventDispatcher(std::make_shared<GameEventDispatcher>())
-    , level(std::make_shared<Level>(context.assets,Config::screenSize,gameEventDispatcher))
+    , level(std::make_shared<Level>(context.assets, sf::FloatRect{0.0, 0.0, static_cast<float>(win.getSize().x), static_cast<float>(win.getSize().y)}, gameEventDispatcher))
     , eventQueue(level->getEventQueue(0))
     , currentLevel(0)
     , textScore(){
@@ -19,7 +19,7 @@ namespace ant{
         GameSpeed = 1;
         score = 0;
         textScore.setFont(context.assets->getFont(font));
-        textScore.setPosition(Config::screenSize.width-50,10);
+        textScore.setPosition(win.getSize().x-50,10);
         textScore.setString(Utils::toString(score));
         textScore.setFillColor(sf::Color::Black);
     #if defined ANDROID || WITH_GUI

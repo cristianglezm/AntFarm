@@ -35,7 +35,6 @@ namespace ant{
             static const std::string LEVEL_FILE;
             static const std::string LEVELS_FILE;
             static const std::string CONFIG_FILE;
-            static const sf::FloatRect screenSize;
     };
 }
 #endif // CONFIG_H

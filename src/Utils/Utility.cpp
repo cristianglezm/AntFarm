@@ -13,6 +13,14 @@ namespace ant{
             sf::FloatRect bounds = text.getLocalBounds();
             text.setOrigin(bounds.width / 2.f, bounds.height / 2.f);
         }
+        sf::Vector2f calcScale(const sf::Sprite& spr, const sf::FloatRect& bounds) noexcept{
+            auto lBounds = spr.getLocalBounds();
+            return {bounds.width / lBounds.width, bounds.height / lBounds.height};
+        }
+        sf::Vector2f calcScale(const sf::Text& txt, const sf::FloatRect& bounds) noexcept{
+            auto lBounds = txt.getLocalBounds();
+            return {bounds.width / lBounds.width, bounds.height / lBounds.height};
+        }
         void log(const std::string& tag, const std::string& info){
 #if defined ANDROID
            __android_log_write(ANDROID_LOG_INFO, tag.c_str(), info.c_str());

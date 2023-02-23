@@ -49,9 +49,10 @@ namespace ant{
                 /**
                  * @brief Constructor Principal.
                  */
-                Context(std::shared_ptr<sf::RenderWindow> window, std::shared_ptr<AssetManager> assets);
+                Context(std::shared_ptr<sf::RenderWindow> window, std::shared_ptr<AssetManager> assets, bool* active);
                 std::shared_ptr<sf::RenderWindow> window;
                 std::shared_ptr<AssetManager> assets;
+                bool* active;
             };
         public:
             /**
@@ -94,7 +95,7 @@ namespace ant{
              * @brief Devuelve el contexto.
              * @return AppState::Context
              */
-            Context	getContext() const;
+            Context& getContext();
         private:
             StateStack* mStack;
             Context	mContext;

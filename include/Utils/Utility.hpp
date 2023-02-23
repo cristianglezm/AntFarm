@@ -51,6 +51,18 @@ namespace ant{
          */
         void centerOrigin(sf::Sprite& sprite);
        /**
+        * @brief calculates the scale with respect to bounds
+        * @param spr const sf::Sprite&
+        * @param bounds const sf::FloatRect&
+        */
+        sf::Vector2f calcScale(const sf::Sprite& spr, const sf::FloatRect& bounds) noexcept;
+       /**
+        * @brief calculates the scale with respect to bounds
+        * @param txt const sf::Text&
+        * @param bounds const sf::FloatRect&
+        */
+        sf::Vector2f calcScale(const sf::Text& txt, const sf::FloatRect& bounds) noexcept;
+       /**
         * @brief Helper function to log info.
         * @param tag
         * @param info

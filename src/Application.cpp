@@ -3,14 +3,15 @@
 namespace ant{
     Application::Application()
     #if defined ANDROID
-    : mWindow(std::make_shared<sf::RenderWindow>(sf::VideoMode(Config::screenSize.width,Config::screenSize.height), "AntFarm", sf::Style::Close))
+    : mWindow(std::make_shared<sf::RenderWindow>(sf::VideoMode::getDesktopMode(),"AntFarm", sf::Style::Close))
     #elif defined WITH_FULLSCREEN
-    : mWindow(std::make_shared<sf::RenderWindow>(sf::VideoMode(Config::screenSize.width,Config::screenSize.height), "AntFarm", sf::Style::Fullscreen))
+    : mWindow(std::make_shared<sf::RenderWindow>(sf::VideoMode::getDesktopMode(),"AntFarm", sf::Style::Fullscreen))
     #else
-    : mWindow(std::make_shared<sf::RenderWindow>(sf::VideoMode(Config::screenSize.width,Config::screenSize.height), "AntFarm", sf::Style::Close))
+    : mWindow(std::make_shared<sf::RenderWindow>(sf::VideoMode(1280, 720), "AntFarm", sf::Style::Close))
     #endif
     , mAssets(std::make_shared<AssetManager>())
-    , mStateStack(AppState::Context(mWindow,mAssets)){
+    , active(true)
+    , mStateStack(AppState::Context(mWindow,mAssets, &active)){
     #ifndef ANDROID
         sf::Image icon;
         std::string iconFilename = "data/antfarm_logo.png";
@@ -22,11 +23,11 @@ namespace ant{
         mAssets->loadAssets(Config::ASSETS_GAME_JSON);
         loadConfig(Config::CONFIG_FILE);
         mStatisticsText.setFont(mAssets->getFont(font));
-        mStatisticsText.setPosition(Config::screenSize.width-55,Config::screenSize.height-45);
+        mStatisticsText.setPosition(mWindow->getSize().x-55, mWindow->getSize().y-45);
         mStatisticsText.setCharacterSize(25u);
         version.setFont(mAssets->getFont(font));
         version.setCharacterSize(25u);
-        version.setPosition(5,Config::screenSize.height-50);
+        version.setPosition(5, mWindow->getSize().y-50);
         version.setString(Config::VERSION);
         registerStates();
         mStateStack.pushState(AppStates::Title);
@@ -62,7 +63,7 @@ namespace ant{
     }
     void Application::processInput(){
         sf::Event event;
-        while(mWindow->pollEvent(event)){
+        while(active ? mWindow->pollEvent(event) : mWindow->waitEvent(event)){
             mStateStack.handleEvent(event);
             if(event.type == sf::Event::Closed){
                 mWindow->close();
@@ -73,17 +74,19 @@ namespace ant{
         mStateStack.update(dt);
     }
     void Application::render(){
-        mWindow->clear();
-        mStateStack.render();
-        mWindow->setView(mWindow->getDefaultView());
-        mWindow->draw(mStatisticsText);
-        mWindow->draw(version);
-        mWindow->display();
+        if(active){
+           mWindow->clear();
+           mStateStack.render();
+//           mWindow->setView(mWindow->getDefaultView());
+           mWindow->draw(mStatisticsText);
+           mWindow->draw(version);
+           mWindow->display();
+        }
     }
     void Application::updateStatistics(sf::Time dt){
         mStatisticsUpdateTime += dt;
         mStatisticsNumFrames += 1;
-        if (mStatisticsUpdateTime >= sf::seconds(1.0f)){
+        if(mStatisticsUpdateTime >= sf::seconds(1.0f)){
             if(mStatisticsNumFrames < 10){
                 mStatisticsText.setFillColor(sf::Color::Red);
             }else if(mStatisticsNumFrames > 59){
