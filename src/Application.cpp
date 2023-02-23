@@ -77,7 +77,7 @@ namespace ant{
         if(active){
            mWindow->clear();
            mStateStack.render();
-//           mWindow->setView(mWindow->getDefaultView());
+           mWindow->setView(mWindow->getDefaultView());
            mWindow->draw(mStatisticsText);
            mWindow->draw(version);
            mWindow->display();
