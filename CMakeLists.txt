@@ -70,7 +70,7 @@ endif(AntFarm_BUILD_TESTS)
 ################################################################################
 
 #sfml
-find_package(SFML 2.5.1 COMPONENTS graphics window system network audio REQUIRED)
+find_package(SFML 2.6 COMPONENTS graphics window system network audio REQUIRED)
 if(SFML_FOUND)
 	include_directories(${SFML_INCLUDE_DIR})
 	target_link_libraries(AntFarm ${SFML_LIBRARIES})
