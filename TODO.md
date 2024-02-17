@@ -1,7 +1,12 @@
 TODO
 ===
 
-* modernize CMake
+* modernize
+    - CMake
+    - Android
+* refactor AssetManager, SpawnSystem
+* add options, optionsState
+    - resolution, music, scale for (ants, doors)
 * Add Features...
 
 FEATURES
