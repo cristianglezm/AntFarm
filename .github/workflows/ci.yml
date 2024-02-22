@@ -90,6 +90,10 @@ jobs:
 
     - name: build apk
       if: matrix.platform.name == 'Android'
+      uses: actions/setup-java@v4
+      with:
+        distribution: 'oracle'
+        java-version: '18'
       run: |
         export ANDROID_SDK=${ANDROID_SDK_ROOT}
         export ANDROID_NDK=${ANDROID_SDK_ROOT}/ndk/26.2.11394342
