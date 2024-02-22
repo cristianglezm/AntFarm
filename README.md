@@ -6,11 +6,11 @@
 
 AntFarm is a game about ants that are trapped and they have to escape.
 
-[Game Manual(Spanish)](https://bitbucket.org/cristian_glez_m/antfarm/wiki/Manual%20de%20Juego)
+[Game Manual(Spanish)](https://bitbucket.org/cristianglezm/antfarm/wiki/Manual%20de%20Juego)
 
 [Video](https://www.youtube.com/watch?v=o17TOI_zKAY)
 
-[Download](https://bitbucket.org/cristian_glez_m/antfarm/downloads)
+[Download](https://bitbucket.org/cristianglezm/antfarm/downloads)
 
 Requires CMake and one of the following compilers:
 
