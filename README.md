@@ -8,7 +8,7 @@ AntFarm is a game about ants that are trapped and they have to escape.
 
 [Game Manual(Spanish)](https://bitbucket.org/cristianglezm/antfarm/wiki/Manual%20de%20Juego)
 
-[Video](https://www.youtube.com/watch?v=o17TOI_zKAY)
+[![video](https://i1.ytimg.com/vi/o17TOI_zKAY/hqdefault.jpg)](https://www.youtube.com/watch?v=o17TOI_zKAY)
 
 [Download](https://bitbucket.org/cristianglezm/antfarm/downloads)
 
@@ -34,8 +34,7 @@ mkdir build && cd build
 cmake -G"MinGW Makefiles" -DSFML_ROOT=<baseDir> -DJSONBOX_ROOT=<baseDir> \ 
 	-DAntFarm_WITH_FULLSCREEN=FALSE -DAntFarm_WITH_GUI=FALSE \
 	-DAntFarm_RENDER_QTREE=FALSE ..
-make
-make install
+make -j4 install
 ```
 
 Android
@@ -53,7 +52,7 @@ cmake -DCMAKE_SYSTEM_NAME=Android -DCMAKE_ANDROID_NDK=$NDK_DIR \
         -DCMAKE_ANDROID_ARCH_ABI=armeabi-v7a -DCMAKE_ANDROID_STL_TYPE=c++_shared \
         -DCMAKE_BUILD_TYPE=Release -DCMAKE_ANDROID_NDK_TOOLCHAIN_VERSION=clang -DCMAKE_ANDROID_API=27 \
         -DCMAKE_INSTALL_PREFIX=$NDK_DIR/sources/third_party/sfml ../..
-make install
+make -j4 install
 cd ../../..
 git clone https://github.com/cristianglezm/JsonBox JsonBox
 cd JsonBox && mkdir build && cd build && mkdir armeabi-v7a && cd armeabi-v7a
@@ -61,14 +60,12 @@ cmake -DCMAKE_SYSTEM_NAME=Android -DCMAKE_ANDROID_NDK=$NDK_DIR \
         -DCMAKE_ANDROID_ARCH_ABI=armeabi-v7a -DCMAKE_ANDROID_STL_TYPE=c++_shared \
         -DCMAKE_BUILD_TYPE=Release -DCMAKE_ANDROID_NDK_TOOLCHAIN_VERSION=clang -DCMAKE_ANDROID_API=27 \
         -DCMAKE_INSTALL_PREFIX=$NDK_DIR/sources/third_party/JsonBox ../..
-make install
+make -j4 install
 cd ../../..
 git clone https://github.com/cristianglezm/antfarm Antfarm
 cd Antfarm && cd android
-echo "sdk.dir=$SDK_DIR" > local.properties
-echo "ndk.dir=$NDK_DIR" >> local.properties
-gradle build
-[gradle installDebug]
+./gradlew build
+[./gradlew installDebug]
 
 ```
 
