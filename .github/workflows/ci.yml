@@ -84,7 +84,7 @@ jobs:
          git clone https://github.com/cristianglezm/JsonBox && cd JsonBox && mkdir build && cd build
          export JsonBox_ANDROID_ROOT=$ANDROID_NDK/sources/third_party/JsonBox
          for arch in $ARCH_ABIS;do
-             cmake $ANDROID_FLAGS -DCMAKE_ANDROID_ARCH_ABI=${arch} -DCMAKE_INSTALL_PREFIX=${JsonBox_ANDROID_ROOT} ..
+             cmake $ANDROID_FLAGS -DCMAKE_ANDROID_ARCH_ABI=${arch} -DCMAKE_INSTALL_PREFIX=${JsonBox_ANDROID_ROOT} -DBUILD_SHARED_LIBS=TRUE ..
              make -j4 install
              rm -R *
          done
