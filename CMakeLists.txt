@@ -1,5 +1,4 @@
 cmake_minimum_required(VERSION 3.1...3.21)
-
 #cmake_policy(SET CMP0074 NEW)
 
 ################################################################################
@@ -46,14 +45,21 @@ FILE(GLOB_RECURSE AntFarm_SOURCES "src/*.cpp" "src/*")
 FILE(GLOB_RECURSE AntFarm_INCLUDES "include/*.h" "include/*.hpp")
 
 if(WIN32)
+    message(STATUS "Looking for SFML DLLs in: ${SFML_ROOT}/bin")
 	FILE(GLOB_RECURSE SFML_DEBUG_DLLS "${SFML_ROOT}/bin/sfml-*-d-2.dll")
 	FILE(GLOB_RECURSE SFML_RELEASE_DLLS "${SFML_ROOT}/bin/*-2.dll")
+    FILE(GLOB_RECURSE OPENAL_DLL "${SFML_ROOT}/bin/openal32.dll")
+
 	if(NOT SFML_DEBUG_DLLS STREQUAL "")
 		LIST(REMOVE_ITEM SFML_RELEASE_DLLS ${SFML_DEBUG_DLLS})
 	endif()
 endif(WIN32)
 
-add_executable(AntFarm ${AntFarm_SOURCES} ${AntFarm_INCLUDES})
+if(APPLE)
+    add_executable(AntFarm MACOSX_BUNDLE ${AntFarm_SOURCES} ${AntFarm_INCLUDES})
+else()
+    add_executable(AntFarm ${AntFarm_SOURCES} ${AntFarm_INCLUDES})
+endif()
 
 ################################################################################
 ### Testing
@@ -84,13 +90,12 @@ if(JSONBOX_FOUND)
 endif(JSONBOX_FOUND)
 
 ################################################################################
-### Enable C++17 and warnings
+### Compiler Flags
 ################################################################################
 
 SET(CMAKE_CXX_STANDARD 17)
 SET(CMAKE_CXX_STANDARD_REQUIRED ON)
 SET(CMAKE_CXX_EXTENSIONS OFF)
-
 SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -std=c++17")
 
 if(WIN32)
@@ -102,7 +107,7 @@ if(NOT CMAKE_BUILD_TYPE)
 endif()
 
 if(CMAKE_BUILD_TYPE STREQUAL "Debug")
-	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -pg")
+	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -g")
 elseif(CMAKE_BUILD_TYPE STREQUAL "Release")
 	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3 -fexpensive-optimizations")
 endif()
@@ -139,16 +144,20 @@ endif(AntFarm_BUILD_DOCS)
 ### Installing Game
 #################################################################################
 
-install(TARGETS AntFarm RUNTIME DESTINATION .
-			ARCHIVE DESTINATION .)
+install(TARGETS AntFarm
+        BUNDLE DESTINATION .
+        RUNTIME DESTINATION .
+        ARCHIVE DESTINATION .
+)
+
 install(FILES LICENSE.md README.md DESTINATION .)
 
 if(NOT AntFarm_BUILD_STATIC AND WIN32)
 	if(CMAKE_BUILD_TYPE STREQUAL "Debug")
-		install(FILES ${SFML_DEBUG_DLLS} DESTINATION .)
+		install(FILES ${SFML_DEBUG_DLLS} ${OPENAL_DLL} DESTINATION .)
 	elseif(CMAKE_BUILD_TYPE STREQUAL "Release")
-		install(FILES ${SFML_RELEASE_DLLS} DESTINATION .)
+		install(FILES ${SFML_RELEASE_DLLS} ${OPENAL_DLL} DESTINATION .)
 	endif()
-endif(NOT AntFarm_BUILD_STATIC AND WIN32)
+endif()
 
 install(DIRECTORY android/app/src/main/assets/data DESTINATION .)

@@ -1,102 +1,124 @@
 name: ci
-on: push
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+defaults:
+  run:
+    shell: bash
 
 jobs:
   build:
-    name: ${{ matrix.platform.name }} ${{ matrix.config.name }} ${{ matrix.type.name }}
+    name: ${{ matrix.platform.name }} ${{ matrix.type.name }}
     runs-on: ${{ matrix.platform.os }}
 
     strategy:
       fail-fast: false
       matrix:
         platform:
-        - { name: LinuxGCC, os: ubuntu-latest, prefix: xvfb-run -a }
-        - { name: Android,  os: ubuntu-latest }
-        config:
-        - { name: Shared, flags: -DAntFarm_BUILD_STATIC=FALSE }
-        #- { name: Static, flags: -DAntFarm_BUILD_STATIC=TRUE }
+        - { name: "Windows MinGW", os: windows-2022, flags: -GNinja -DCMAKE_C_COMPILER=gcc -DCMAKE_CXX_COMPILER=g++ }
+        - { name: "Linux GCC",     os: ubuntu-22.04, flags: -G"Unix Makefiles" }
+        - { name: "macOS ARM64",   os: macos-14,     flags: -GNinja }
         type:
-        - { name: Release }
-        - { name: Debug, flags: -DCMAKE_BUILD_TYPE=Debug -DJSONBOX_LIBRARY=/home/runner/work/AntFarm/AntFarm/JsonBox/build/install/lib/libJsonBox_d.a }
-        include:
-        - platform: { name: LinuxGCC, os: ubuntu-latest }
-          config: { name: Shared, flags: -DAntFarm_BUILD_STATIC=FALSE }
-    steps:
-    - name: checkout code
-      uses: actions/checkout@v4
+        - { name: Release, flags: -DCMAKE_BUILD_TYPE=Release }
+        - { name: Debug, flags: -DCMAKE_BUILD_TYPE=Debug }
 
-    - name: cache linux
+        include:
+        - platform: { name: Android, os: ubuntu-22.04 }
+          type: { name: Release }
+        - platform: { name: Android, os: ubuntu-22.04 }
+          type: { name: Debug }
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v5
+
+    - name: Set up MSYS2
+      if: matrix.platform.name == 'Windows MinGW'
+      uses: msys2/setup-msys2@v2
+      with:
+        msystem: MINGW64
+        update: true
+        install: >-
+          git
+          base-devel
+          mingw-w64-x86_64-toolchain
+          mingw-w64-x86_64-cmake
+          mingw-w64-x86_64-ninja
+
+    - name: Get CMake and Ninja
+      if: matrix.platform.name != 'Windows MinGW'
+      uses: lukka/get-cmake@latest
+      with:
+        cmakeVersion: '3.28'
+        ninjaVersion: latest
+
+    - name: Install Linux Dependencies
       if: runner.os == 'Linux' && matrix.platform.name != 'Android'
-      id: cache-linux
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y xorg-dev libxrandr-dev libxcursor-dev libudev-dev libopenal-dev libflac-dev libvorbis-dev libgl1-mesa-dev libegl1-mesa-dev libdrm-dev libgbm-dev xvfb
+
+    - name: Cache Deps (Desktop)
+      if: matrix.platform.name != 'Android'
+      id: cache-deps
       uses: actions/cache@v4
       with:
         path: |
-          SFML/build/install
-          JsonBox/build/install
-        key: ${{ matrix.platform.name }}-${{ matrix.type.name }}-${{ matrix.config.name }}
+          $GITHUB_WORKSPACE/JsonBox/build/install
+          $GITHUB_WORKSPACE/SFML/build/install
+        key: ${{ matrix.platform.name }}-${{ matrix.type.name }}-sfml2.6
 
-    - name: install linux dependencies
-      if: runner.os == 'Linux' && matrix.platform.name != 'Android'
-      run: sudo apt-get update && sudo apt-get install xorg-dev libxrandr-dev libxcursor-dev libudev-dev libopenal-dev libflac-dev libvorbis-dev libgl1-mesa-dev libegl1-mesa-dev libdrm-dev libgbm-dev
-
-    - name: build sfml and jsonbox
-      if: runner.os == 'Linux' && matrix.platform.name != 'Android' && steps.cache-linux.outputs.cache-hit != 'true'
-      run: |
-        git clone https://github.com/SFML/SFML && cd SFML && git checkout 2.6.x
-        export SFML_ROOT=$(pwd)/build/install
-        mkdir build && cd build
-        cmake -DCMAKE_INSTALL_PREFIX=$(pwd)/install -DCMAKE_BUILD_TYPE=${{ matrix.type.name }} .. && make -j4 install && cd ../..
-        git clone https://github.com/cristianglezm/JsonBox && cd JsonBox && mkdir build && cd build
-        export JSONBOX_ROOT=$(pwd)/install
-        cmake -DCMAKE_INSTALL_PREFIX=$JSONBOX_ROOT -DCMAKE_BUILD_TYPE=${{ matrix.type.name }} .. && make -j 4 install && cd ../..
-
-    - name: configure and build AntFarm
-      if: matrix.platform.name == 'LinuxGCC'
-      shell: bash
-      run: |
-        cmake -S $GITHUB_WORKSPACE -B $GITHUB_WORKSPACE/build -DCMAKE_INSTALL_PREFIX=$GITHUB_WORKSPACE/install -DSFML_ROOT=$GITHUB_WORKSPACE/SFML/build/install -DJSONBOX_ROOT=$GITHUB_WORKSPACE/JsonBox/build/install ${{matrix.platform.flags}} ${{matrix.config.flags}} ${{matrix.type.flags}}
-        ${{ matrix.platform.prefix}} cmake --build $GITHUB_WORKSPACE/build --config ${{ matrix.type.name == 'Debug' && 'Debug' || 'Release' }} --target install
-
-    - name: cache android
+    - name: Cache Android NDK
       if: matrix.platform.name == 'Android'
       id: cache-android
       uses: actions/cache@v4
       with:
-         path: /usr/local/lib/android/sdk/ndk/26.2.11394342
-         key: ${{ matrix.platform.name }}-${{ matrix.type.name }}-${{ matrix.config.name }}
+        path: ${{ env.ANDROID_SDK_ROOT }}/ndk/26.2.11394342
+        key: android-ndk-26.2.11394342
 
-    - name: install android dependencies
+    - name: Install Android Components
       if: matrix.platform.name == 'Android' && steps.cache-android.outputs.cache-hit != 'true'
       run: |
-         echo "y" | ${ANDROID_SDK_ROOT}/cmdline-tools/latest/bin/sdkmanager --install "ndk;26.2.11394342"
-         export ANDROID_SDK=${ANDROID_SDK_ROOT}
-         export ANDROID_NDK=${ANDROID_SDK}/ndk/26.2.11394342
-         export ANDROID_FLAGS="-DCMAKE_BUILD_TYPE=${{ matrix.type.name }} -DCMAKE_SYSTEM_NAME=Android -DCMAKE_ANDROID_NDK=$ANDROID_NDK -DCMAKE_ANDROID_NDK_TOOLCHAIN_VERSION=clang -DCMAKE_ANDROID_STL_TYPE=c++_shared -DCMAKE_ANDROID_API=33"
-         export ARCH_ABIS="armeabi-v7a arm64-v8a x86 x86_64"
-         git clone https://github.com/SFML/SFML && cd SFML && git checkout 2.6.x && mkdir build && cd build
-         export SFML_ANDROID_ROOT=${ANDROID_NDK}/sources/third_party/SFML
-         for arch in $ARCH_ABIS;do
-             cmake ${ANDROID_FLAGS} -DCMAKE_ANDROID_ARCH_ABI=${arch} -DCMAKE_INSTALL_PREFIX=${SFML_ANDROID_ROOT} ..
-             make -j4 install
-             rm -R *
-         done
-         cd ../..
-         git clone https://github.com/cristianglezm/JsonBox && cd JsonBox && mkdir build && cd build
-         export JsonBox_ANDROID_ROOT=$ANDROID_NDK/sources/third_party/JsonBox
-         for arch in $ARCH_ABIS;do
-             cmake $ANDROID_FLAGS -DCMAKE_ANDROID_ARCH_ABI=${arch} -DCMAKE_INSTALL_PREFIX=${JsonBox_ANDROID_ROOT} -DBUILD_SHARED_LIBS=TRUE ..
-             make -j4 install
-             rm -R *
-         done
-         cd ../..
-    - name: setup-java
+        echo "y" | ${ANDROID_SDK_ROOT}/cmdline-tools/latest/bin/sdkmanager --install "build-tools;33.0.2"
+        echo "y" | ${ANDROID_SDK_ROOT}/cmdline-tools/latest/bin/sdkmanager --install "ndk;26.2.11394342"
+
+    - name: Build Dependencies
+      if: steps.cache-deps.outputs.cache-hit != 'true'
+      run: |
+        chmod +x .devops/install_dependencies.sh
+        bash .devops/install_dependencies.sh "${{ matrix.platform.name }}" ${{ matrix.type.name }}
+
+    - name: Configure and Build (Desktop)
+      if: matrix.platform.name != 'Android'
+      run: |
+        export SFML_ROOT=$GITHUB_WORKSPACE/SFML/build/install
+        export JSONBOX_ROOT=$GITHUB_WORKSPACE/JsonBox/build/install
+        mkdir build && cd build
+        cmake ${{ matrix.platform.flags }} ${{ matrix.type.flags }} \
+              -DCMAKE_INSTALL_PREFIX=$GITHUB_WORKSPACE/install \
+              -DSFML_ROOT=$SFML_ROOT \
+              -DJSONBOX_ROOT=$JSONBOX_ROOT \
+              -DAntFarm_WITH_GUI=TRUE \
+              -DAntFarm_BUILD_TESTS=FALSE \
+              ..
+        cmake --build . --config ${{ matrix.type.name }} -j 4 --target install
+
+    - name: Setup Java
       if: matrix.platform.name == 'Android'
       uses: actions/setup-java@v4
       with:
         distribution: 'oracle'
         java-version: '18'
 
-    - name: build apk
+    - name: Build Android APK
       if: matrix.platform.name == 'Android'
       run: |
         export ANDROID_SDK=${ANDROID_SDK_ROOT}
@@ -105,10 +127,64 @@ jobs:
         export NDK_MODULE_PATH=${ANDROID_NDK}/sources/
         ./gradlew assemble${{ matrix.type.name }} --parallel
 
-    - name: upload apk debug
+    - name: Package Windows Release
+      if: matrix.platform.name == 'Windows MinGW' && matrix.type.name == 'Release'
+      run: |
+        cp $GITHUB_WORKSPACE/SFML/build/install/bin/*.dll install/bin/ || true
+        cp $GITHUB_WORKSPACE/SFML/build/install/bin/openal32.dll install/bin/ || true
+        cp $GITHUB_WORKSPACE/SFML/build/install/share/doc/SFML/license.md install/SFML-license.md || true
+        cp $GITHUB_WORKSPACE/JsonBox/license.txt install/JsonBox-license.md || true
+        cp $(dirname $(which gcc))/libstdc++-6.dll install/bin/ || true
+        cp $(dirname $(which gcc))/libgcc_s_*.dll install/bin/ || true
+        cp $(dirname $(which gcc))/libwinpthread-1.dll install/bin/ || true
+        cd install
+        7z a ../AntFarm-Windows-Release.zip .
+
+    - name: Upload Windows Release
+      if: matrix.platform.name == 'Windows MinGW' && matrix.type.name == 'Release'
+      uses: actions/upload-artifact@v4
+      with:
+        name: AntFarm-Windows-Release
+        path: AntFarm-Windows-Release.zip
+
+    - name: Package Linux Release
+      if: matrix.platform.name == 'Linux GCC' && matrix.type.name == 'Release'
+      run: |
+        cd install
+        cp $GITHUB_WORKSPACE/SFML/build/install/license.md SFML-license.md || true
+        cp $GITHUB_WORKSPACE/JsonBox/license.txt JsonBox-license.md || true
+        tar -czvf ../AntFarm-Linux-Release.tar.gz .
+
+    - name: Upload Linux Release
+      if: matrix.platform.name == 'Linux GCC' && matrix.type.name == 'Release'
+      uses: actions/upload-artifact@v4
+      with:
+        name: AntFarm-Linux-Release
+        path: AntFarm-Linux-Release.tar.gz
+
+    - name: Package macOS Release
+      if: contains(matrix.platform.name, 'macOS') && matrix.type.name == 'Release'
+      run: |
+        cd install
+        tar -czvf ../AntFarm-macOS-Release.tar.gz .
+
+    - name: Upload macOS Release
+      if: contains(matrix.platform.name, 'macOS') && matrix.type.name == 'Release'
+      uses: actions/upload-artifact@v4
+      with:
+        name: AntFarm-macOS-Release
+        path: AntFarm-macOS-Release.tar.gz
+
+    - name: Upload Android Debug
       if: matrix.platform.name == 'Android' && matrix.type.name == 'Debug'
       uses: actions/upload-artifact@v4
       with:
-        name: Antfarm-android-debug-apk
+        name: AntFarm-Android-Debug
         path: android/app/build/outputs/apk/debug/app-debug.apk
 
+    - name: Upload Android Unsigned Release
+      if: matrix.platform.name == 'Android' && matrix.type.name == 'Release'
+      uses: actions/upload-artifact@v4
+      with:
+        name: AntFarm-Android-Release
+        path: android/app/build/outputs/apk/release/app-release-unsigned.apk

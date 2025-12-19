@@ -1,11 +1,12 @@
 TODO
 ===
 
-* modernize
-    - CMake
-    - Android
-* refactor AssetManager, SpawnSystem
-* add options, optionsState
+* [ ] modernize
+    - [ ] CMake
+    - [ ] Android
+* [ ] migrate to sfml 3
+* [ ] refactor AssetManager, SpawnSystem
+* [ ] add options, optionsState
     - resolution, music, scale for (ants, doors)
 * Add Features...
 
