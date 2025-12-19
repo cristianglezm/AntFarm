@@ -1,8 +1,11 @@
 # AntFarm
 
-|Linux \| windows(MinGW) | ![Build Status](https://github.com/cristianglezm/antfarm/actions/workflows/ci.yml/badge.svg)|
-|---|---|
-|Android |![Build Status](https://github.com/cristianglezm/antfarm/actions/workflows/ci.yml/badge.svg)|
+| Platform | Architecture | CI Status |
+| :--- | :--- | :--- |
+| **Linux** (Ubuntu 22.04) | x64 | [![Build Status](https://github.com/cristianglezm/antfarm/actions/workflows/ci.yml/badge.svg)](https://github.com/cristianglezm/antfarm/actions/workflows/ci.yml) |
+| **Windows** (MinGW) | x64 | [![Build Status](https://github.com/cristianglezm/antfarm/actions/workflows/ci.yml/badge.svg)](https://github.com/cristianglezm/antfarm/actions/workflows/ci.yml) |
+| **macOS** | ARM64 (M1/M2) | [![Build Status](https://github.com/cristianglezm/antfarm/actions/workflows/ci.yml/badge.svg)](https://github.com/cristianglezm/antfarm/actions/workflows/ci.yml) |
+| **Android** (API 33) | x86, armv7, arm64 | [![Build Status](https://github.com/cristianglezm/antfarm/actions/workflows/ci.yml/badge.svg)](https://github.com/cristianglezm/antfarm/actions/workflows/ci.yml) |
 
 AntFarm is a game about ants that are trapped and they have to escape.
 
